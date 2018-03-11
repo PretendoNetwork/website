@@ -1,17 +1,22 @@
 {
   "name": "pretendo_website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The official website for the Pretendo Network.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "The Pretendo Network (@PretendoNetwork)",
+  "authors": [
+    "@superwhiskers",
+    "@lukeeey"
+  ],
   "license": "ISC",
   "dependencies": {
     "colors": "^1.1.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0",
-    "pug": "^2.0.0-rc.4"
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6"
   }
 }
