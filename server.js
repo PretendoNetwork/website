@@ -1,30 +1,64 @@
-const express = require('express');
-const exphbs  = require('express-handlebars');
-const app = express();
-const config = require('./config.json');
-require('colors');
+/*
 
-const ROUTES = {
-	HOME: require('./routes/home'),
-	ACCOUNT: require('./routes/account')
-};
+server.js -
+the file that contains the code to run the server
 
-app.engine('.hbs', exphbs({
-        extname: '.hbs',
-        layoutsDir: 'views',
-        partialsDir: 'views/partials'
-}));
-app.set('view engine', '.hbs');
+*/
 
-app.use('/assets', express.static('assets'));
+// module imports, and
+// some important variable defs
+const 	express     = require("express"),
+		handlebars  = require("express-handlebars"),
+		config      = require("./config.json"),
+		app         = express()
 
-app.use('/account', ROUTES.ACCOUNT);
-app.use('/', ROUTES.HOME);
+// import the colors module
+require("colors")
 
+// locations for some files
+const locations = {
+
+	home: require("./routes/home"),
+
+}
+
+// load the handlebars module
+app.engine(".hbs", handlebars({
+
+        extname: ".hbs",
+        layoutsDir: "views",
+		partialsDir: "views/partials"
+		
+}))
+
+// set express to use handlebars
+// as the templating engine
+app.set("view engine", ".hbs")
+
+// set some routes on the server
+
+// assets folder serving
+app.use("/assets", express.static("assets"))
+
+// website root
+app.use('/', locations.home)
+
+// send a 404 on a file not
+// being found
 app.use((req, res) => {
-	res.render('404');
-});
 
+	// set the status to that
+	// of a 404
+	res.status("404")
+
+	// send the 404 template
+	res.render("404")
+
+})
+
+// start the server
 app.listen(config.http.port, () => {
-	console.log('Started '.green + 'on port '.red + new String(config.http.port).yellow);
-});
+
+	console.log(`started the server on port: ${ new String(config.http.port).green }`)
+
+})
