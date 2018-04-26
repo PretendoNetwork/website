@@ -1,25 +1,46 @@
+<!--
+
+home.hbs -
+the front page of the pretendo website
+
+-->
+
 <html lang="en">
 
     <head>
+				
+				 {{> head }}
 
-        {{> head }}
+        <title>pretendo</title>
 
     </head>
 
     <body class="hp-container">
 
-        <img class="hp-background" src="/assets/images/bg.gif">
+        <img id="hp-bg" class="hp-background" src="">
 
         <div class="hp-container">
 
-            <h1 class="title"><img class="icon" src="/assets/images/pretendo-logo.svg">pretendo</h1>
+            <h1 class="title"><i class="pretendo-icon-pretendo-logo"></i>pretendo</h1>
+            
             <div class="text">
                 an accurate-as-possible server emulation project for<br>
                 nintendo consoles that use nintendo network
+            </div>
+            
+            <div class="icons">
+              
+              <a href="https://github.com/PretendoNetwork"><i class="fab fa-github-alt icon"></i></a>
+              <a href="https://www.npmjs.com/search?q=%40pretendo"><i class="fab fa-npm icon"></i></a>
+              <a href="https://discord.gg/rxekqVJ"><i class="fab fa-discord icon"></i></a>
+              <a href="https://twitter.com/pretendonetwork"><i class="fab fa-twitter icon"></i></a>
+              
             </div>
 
         </div>
 
     </body>
+    
+    <script src="/assets/js/index.js" type="text/javascript"></script>
 
 </html>

@@ -1,3 +1,4 @@
+
 /*
 
 pretendo.css -
@@ -13,8 +14,8 @@ sets the background
 */
 .hp-background {
 
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    -webkit-filter: brightness(30%) grayscale(100%);
+    filter: brightness(30%) grayscale(100%);
     min-height: 100%;
     min-width: 100%;
     width: 100%;
@@ -52,6 +53,7 @@ title text
     font-family: "Overpass Mono", monospace;
     font-size: 500%;
     line-height: 0;
+    color: white;
 
 }
 
@@ -64,19 +66,40 @@ main text
 
     font-family: "Space Mono", monospace;
     font-size: 150%;
+    color: white;
 
 }
 
 /*
 
-icon
+font awesome icon container stylings
 
 */
+.icons {
+    
+    margin-top: 10px;
+    font-size: 1.75em;
+  
+}
+
+.icons > a:not(:first-child) > .icon, .icons > .icon:not(:first-child) {
+  
+  margin-left: 20px;
+  
+}
+
 .icon {
+  
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  color: white;
+  border: 0;
+  
+}
 
-    position: relative;
-    height: 10%;
-    width: 10%;
-
+.icon:hover {
+  
+  color: black;
+  
 }
   
