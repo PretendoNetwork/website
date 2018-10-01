@@ -57,5 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-# keep config out of this
+# keep config and blog posts out of this
 config.json
+posts/
