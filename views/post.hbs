@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> head }}
+    <body>
+        {{> navbar }}
+
+        <h1>blog post</h1>
+        <p>{{ date }}</p>
+        <p>{{ category }}</p>
+
+        <article>
+            {{{ content }}}
+        </article>
+
+        <p>{{ author.name }} - {{ author.description }}</p>
+        <img src="{{ author.image }}">
+
+        {{> footer }}
+    </body>
+</html>
