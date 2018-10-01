@@ -18,7 +18,7 @@ router.get('/news/:id', async (req, res) => {
         return;
     }
 
-    const hbsObject = await blogHelper.getBlogPostExpressReady(req.params.id);
+    const hbsObject = blogHelper.getBlogPostExpressReady(req.params.id);
 
     if (!hbsObject) {
         res.statusCode = 404;

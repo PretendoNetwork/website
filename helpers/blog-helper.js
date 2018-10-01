@@ -28,13 +28,13 @@ function getBlogPostAsMarkdown(postId) {
     }
 }
 
-async function getBlogPostAsHtml(postId) {
+function getBlogPostAsHtml(postId) {
     const markdown = getBlogPostAsMarkdown(postId);
     if (!markdown) return;
     return converter.makeHtml(markdown);
 }
 
-async function getBlogPostExpressReady(postId) {
+function getBlogPostExpressReady(postId) {
     const markdown = getBlogPostAsMarkdown(postId);
     if (!markdown) return;
     const html = converter.makeHtml(markdown);
@@ -49,9 +49,15 @@ async function getBlogPostExpressReady(postId) {
     return hbsObject;
 }
 
+function writeMarkdownToFile(text) {
+    fs.writeFileSync("posts/" + fs.readdirSync("posts").length + ".md", text);
+}
+
 // export the router
 module.exports = {
     getBlogPostAsHtml,
     getBlogPostAsMarkdown,
-    getBlogPostExpressReady
+    getBlogPostExpressReady,
+    getAuthorByID,
+    writeMarkdownToFile
 };

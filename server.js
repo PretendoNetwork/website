@@ -18,7 +18,8 @@ require("colors");
 // locations for some files
 const locations = {
 	home: require("./routes/home"),
-	posts: require("./routes/blog")
+	posts: require("./routes/blog"),
+	admin: require("./routes/admin")
 };
 
 // load the handlebars module
@@ -44,6 +45,9 @@ app.use('/', locations.home);
 
 // blog posts
 app.use('/', locations.posts);
+
+// admin panel
+app.use('/', locations.admin);
 
 // send a 404 on a file not
 // being found
