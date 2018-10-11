@@ -9,9 +9,9 @@ file for handling admin panel routes
 const router = require('express').Router();
 
 // import dependencies
-const common = require('../helpers/common'),
-	adminUserMiddleware = require("../middleware/admin-authentication"),
-	adminUser = require("../models/admin-user");
+const common = require('../helpers/common');
+const adminUserMiddleware = require('../middleware/admin-authentication');
+const adminUser = require('../models/admin-user');
 
 // display admin panel
 router.get('/admin', (req, res) => {
@@ -54,7 +54,7 @@ router.post('/admin/register', (req, res) => {
 router.post('/admin/api/v1/ping', (req, res) => {
 	res.json({
 		success: true,
-		messsage: "pong!"
+		messsage: 'pong!'
 	});
 });
 
