@@ -10,5 +10,11 @@
                 "image": "https://img00.deviantart.net/a0f8/i/2012/356/3/3/generic_anime_girl__1_by_light1523-d5ou547.png"
             }
         ]
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/pretendo_website"
+    },
+    "secrets": {
+        "session": "abcdef"
     }
 }
