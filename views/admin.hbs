@@ -6,6 +6,19 @@
         {{> navbar }}
 
         <h1>Admin panel here</h1>
+        <h2>register</h2>
+        <form action="/admin/register" method="POST">
+            <input type="text" name="username">
+            <input type="text" name="password">
+            <button>submit register</button>
+        </form>
+        
+        <h2>login</h2>
+        <form action="/admin/login" method="POST">
+            <input type="text" name="username">
+            <input type="text" name="password">
+            <button>submit login</button>
+        </form>
 
         {{> footer }}
     </body>
