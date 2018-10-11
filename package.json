@@ -4,8 +4,9 @@
   "description": "The official website for the Pretendo Network.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint-fix": "./node_modules/.bin/eslint . --fix"
   },
   "author": "The Pretendo Network (@PretendoNetwork)",
   "authors": [
@@ -25,5 +26,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "showdown": "^1.8.6"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1"
   }
 }
