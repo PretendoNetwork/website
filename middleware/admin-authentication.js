@@ -1,11 +1,19 @@
 const common = require('../helpers/common');
 
-function adminUserAuthenticationMiddleware(req, res, next) {
+function authenticationRequired(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();
+	} else {
+		console.log('sending auth error');
+		common.sendApiAuthError(req, res);
 	}
-
-	common.sendApiAuthError(req, res);
 }
 
-module.exports = adminUserAuthenticationMiddleware;
+function authenticationOptional(req, res, next) {
+	return next();
+}
+
+module.exports = {
+	authenticationRequired,
+	authenticationOptional
+};

@@ -10,8 +10,9 @@ the file that contains the code to run the server
 const express = require('express');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
+const mongoStore = require('connect-mongo')(session);
 const passport = require('passport');
-const LocalStrategy = require('passport').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -41,7 +42,18 @@ connection.on('error', console.error.bind(console, 'connection error:'));
 // setup session
 app.use(session({
 	secret: config.secrets.session,
-	//cookie: { secure: true } // use when https is enabled
+	saveUninitialized: true,
+	resave: true,
+	cookie: {
+		maxAge: 3600000,
+		httpOnly: true//, // remove on production
+		/*secure: true*/
+	},
+	// using store session on MongoDB using express-session + connect
+	store: new mongoStore({
+		mongooseConnection: connection,
+		collection: 'sessions'
+	})
 }));
 
 // setup authentication
@@ -62,6 +74,7 @@ passport.use('adminUserStrategy', new LocalStrategy(
 					return done(null, false);
 				}
 
+				console.log('info correct');
 				// password is correct, return user
 				return done(null, user);
 
@@ -74,6 +87,16 @@ passport.use('adminUserStrategy', new LocalStrategy(
 		});
 	}
 ));
+//Configuring app to have sessions 
+passport.serializeUser(function(user, done) {
+	done(null, user.id);
+});
+	
+passport.deserializeUser(function(id, done) {
+	adminUserModel.findById(id, function(err, user) {
+		done(err, user);
+	});
+});
 
 // load the handlebars module
 app.engine('.hbs', handlebars({
