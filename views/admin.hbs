@@ -7,18 +7,20 @@
 
         <h1>Admin panel here</h1>
         <h2>register</h2>
-        <form action="/admin/register" method="POST">
+        <form action="/admin/api/v1/register" method="POST">
             <input type="text" name="username">
             <input type="text" name="password">
             <button>submit register</button>
         </form>
         
         <h2>login</h2>
-        <form action="/admin/login" method="POST">
+        <form action="/admin/api/v1/login" method="POST">
             <input type="text" name="username">
             <input type="text" name="password">
             <button>submit login</button>
         </form>
+
+        <a href="/admin/api/v1/check">Check if logged in</a>
 
         {{> footer }}
     </body>
