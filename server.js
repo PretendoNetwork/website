@@ -11,15 +11,12 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('./config.json');
 const app = express();
 const common = require('./helpers/common');
-const adminUserModel = require('./models/admin-user').adminUserModel;
+const passportconfig = require('./passport.config.js');
 
 // import the colors module
 require('colors');
@@ -57,46 +54,7 @@ app.use(session({
 }));
 
 // setup authentication
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use('adminUserStrategy', new LocalStrategy(
-	(username, password, done) => {
-		// find user in database
-		adminUserModel.findByUsername(username).then((user) => {
-			if (!user) {
-				// user doesnt exist
-				return done(null, false);
-			}
-
-			bcrypt.compare(password, user.password, (err, res) => {
-				if (err || !res) {
-					// error comparing hashes
-					return done(null, false);
-				}
-
-				console.log('info correct');
-				// password is correct, return user
-				return done(null, user);
-
-			});
-		}).catch((err) => {
-			if (err) {
-				// error finding in database
-				return done(null, false);
-			}
-		});
-	}
-));
-//Configuring app to have sessions 
-passport.serializeUser(function(user, done) {
-	done(null, user.id);
-});
-	
-passport.deserializeUser(function(id, done) {
-	adminUserModel.findById(id, function(err, user) {
-		done(err, user);
-	});
-});
+passportconfig(app);
 
 // load the handlebars module
 app.engine('.hbs', handlebars({
