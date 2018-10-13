@@ -19,8 +19,10 @@ const passportconfig = require('./passport.config.js');
 // setup console colors
 require('colors');
 
-
-// setup database
+// fix database deprecation warnings
+mongoose.set('useCreateIndex', true);
+mongoose.set('useNewUrlParser', true);
+// setup database connection
 mongoose.connect(config.database.url);
 const connection = mongoose.connection;
 connection.on('error', console.error.bind(console, 'connection error:'));
