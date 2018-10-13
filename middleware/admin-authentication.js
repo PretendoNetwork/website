@@ -13,8 +13,7 @@ function adminAuthenticationRequired(req, res, next) {
 	if (req.isAuthenticated() && req.user.role && req.user.role === 'admin') {
 		return next();
 	} else {
-		console.log('sending auth error');
-		common.sendApiAuthError(req, res);
+		common.sendApiAuthError(res);
 	}
 }
 

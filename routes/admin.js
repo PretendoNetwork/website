@@ -101,10 +101,9 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 *	}
 */
 router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (req, res) => {
-	if (!req.user) req.user = {}; 
 	common.sendApiReturn(res, {
-		IsAuthed: req.isAuthenticated(),
-		role: req.user.role ? req.user.role : undefined
+		isAuthed: req.user ? true : false,
+		role: req.user ? (req.user.role ? req.user.role : undefined) : undefined
 	});
 });
 
