@@ -21,16 +21,15 @@ module.exports = (app) => {
 			adminUserModel.findByUsername(username).then((user) => {
 				if (!user) {
 					// user doesnt exist
-					return done(null, false);
+					return done(null, false, {message: 'Incorrect user'});
 				}
 
 				bcrypt.compare(password, user.password, (err, res) => {
 					if (err || !res) {
 						// error comparing hashes
-						return done(null, false);
+						return done(null, false, {message: 'Incorrect password'});
 					}
 
-					console.log('info correct');
 					// password is correct, return user
 					return done(null, user);
 
@@ -38,7 +37,7 @@ module.exports = (app) => {
 			}).catch((err) => {
 				if (err) {
 					// error finding in database
-					return done(null, false);
+					return done(null, false, {code: 500});
 				}
 			});
 		}

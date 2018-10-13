@@ -68,7 +68,9 @@ app.use('/assets', express.static('assets'));
 app.use('/', locations.home);
 app.use('/', locations.posts);
 app.use('/', locations.admin);
-app.use(common.sendDefault404);
+app.use((req, res) => {
+	common.sendDefault404(res);
+});
 
 // startup
 app.listen(config.http.port, () => {

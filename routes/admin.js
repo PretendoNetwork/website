@@ -29,13 +29,16 @@ router.get('/admin', (req, res) => {
 *	return {
 *		code: http code
 *		success: boolean - true if login succesfull
-*		errors: Strings[messages]
+*		username: undefined | string - username if login was successfull
+*		role: undefined | string - role of user if login was successfull
+*		errors: Strings[messages] - not yet :(
 *	}
 */
+// TODO make login somehow display errors in correct format.
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
-	res.json({
-		message: 'sucessfull I guess',
-		isAuthed: req.isAuthenticated()
+	common.sendApiReturn(res, {
+		username: req.user.username,
+		role: req.user.role ? req.user.role : undefined
 	});
 });
 
@@ -50,15 +53,17 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), f
 *		password - password of new admin account
 *	}
 *	return {
-*		code: httpcode,
-*		success: boolean,
+*		code: httpcode
+*		success: boolean - true if register was successull
+*		username: undefined | string - username if register was successfull
+*		role: undefined | string - role of user if register was successfull
 *		errors: Strings[messages]
 *	}
 */
 router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
 	if (!req.body) {
 		// no post body
-		common.sendApiGenericError(req, res);
+		common.sendApiGenericError(res);
 		return;
 	}
 
@@ -71,11 +76,12 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 	newUser.save().then(() => {
 		// successfull
 		common.sendApiReturn(res, {
-			// TODO return some data
+			username: req.user.username,
 			role: req.user.role ? req.user.role : undefined
 		});
 		return;
 	}).catch((rejection) => {
+		// TODO format exception so it doesnt have a huge list of errors
 		common.sendApiError(res, 500, [rejection]);
 		return;
 	});
@@ -88,15 +94,34 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 *
 *	return {
 *		code: httpcode
-*		success: boolean - true if admin logged in
+*		success: boolean - true if request was without errors
+*		isAuthed: boolean - true if logged in
+*		role: undefined | string - returns user role
 *		errors: Strings[messages]
 *	}
 */
 router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (req, res) => {
+	if (!req.user) req.user = {}; 
 	common.sendApiReturn(res, {
 		IsAuthed: req.isAuthenticated(),
 		role: req.user.role ? req.user.role : undefined
 	});
+});
+
+/* 
+*	/admin/api/v1/logout
+*
+*	logs out admin user
+*
+*	return {
+*		code: httpcode
+*		success: boolean - true if logout is successfull
+*		errors: Strings[messages]
+*	}
+*/
+router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+	req.logout();
+	common.sendApiReturn(res, {});
 });
 
 // export the router

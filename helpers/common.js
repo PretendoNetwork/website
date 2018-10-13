@@ -12,11 +12,14 @@ function sendDefault404(res) {
 
 // use for any api return. it has basic layout used for every return.
 function sendApiReturn(res, data, errors) {
-	res.status(200).json({
-		code: 200,
-		success: true,
-		errors: [] + errors
-	} + data);
+	res.status(200).json(
+		// combine 2 objects
+		Object.assign({
+			code: 200,
+			success: true,
+			errors: [] +  (errors ? errors : [])
+		}, data)
+	);
 }
 
 
