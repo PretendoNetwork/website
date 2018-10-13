@@ -123,5 +123,10 @@ router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequir
 	common.sendApiReturn(res, {});
 });
 
+// configure api 404
+router.use('/admin/api', (req, res) => {
+	common.sendApi404(res);
+});
+
 // export the router
 module.exports = router;
