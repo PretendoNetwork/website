@@ -6,7 +6,7 @@ for routes on the root path
 
 */
 
-// import express' router
+// imports
 const router = require('express').Router();
 
 // display home page

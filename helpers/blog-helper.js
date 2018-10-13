@@ -5,13 +5,9 @@ blog post helper functionality
 
 */
 
-//import filesystem
+// imports
 const fs = require('fs');
-
-//import author list
 const authors = require('../config.json').blog.authors;
-
-//import markdown converter
 const showdown  = require('showdown');
 const converter = new showdown.Converter({metadata: true});
 
@@ -54,7 +50,6 @@ function writeMarkdownToFile(text) {
 	fs.writeFileSync(`posts/${length}.md`, text);
 }
 
-// export the router
 module.exports = {
 	getBlogPostAsHtml,
 	getBlogPostAsMarkdown,

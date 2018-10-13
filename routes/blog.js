@@ -5,7 +5,7 @@ file for handling routes regarding blog posts.
 
 */
 
-// import express' router
+// imports
 const router = require('express').Router();
 const blogHelper = require('../helpers/blog-helper.js');
 
@@ -28,5 +28,5 @@ router.get('/news/:id', async (req, res) => {
 	res.render('post', hbsObject);
 });
 
-// export the router
+// export router
 module.exports = router;

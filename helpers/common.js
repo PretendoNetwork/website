@@ -5,48 +5,67 @@ common page functionality.
 
 */
 
-function sendDefault404(req, res) {
+// shows 404 template.
+function sendDefault404(res) {
 	res.status(404).send('404');
 }
 
-function sendApi404(req, res) {
+// use for any api return. it has basic layout used for every return.
+function sendApiReturn(res, data, errors) {
+	res.status(200).json(
+		// combine 2 objects
+		Object.assign({
+			code: 200,
+			success: true,
+			errors: [] +  (errors ? errors : [])
+		}, data)
+	);
+}
+
+
+// use if api endpoint doesnt exist
+function sendApi404(res) {
 	res.status(404).json({
-		error: {
-			code: 404,
-			message: 'Endpoint not in use'
-		}
+		code: 404,
+		errors: [
+			'Endpoint not in use'
+		]
 	});
 }
 
-function sendApiAuthError(req, res) {
+// use if not logged in and is required (handled with middleware)
+function sendApiAuthError(res) {
 	res.status(401).json({
-		error: {
-			code: 401,
-			message: 'Not authenticated'
-		}
+		code: 401,
+		errors: [
+			'Not authenticated'
+		]
 	});
 }
 
-function sendApiGenericError(req, res) {
+// use for completely broken requests
+function sendApiGenericError(res) {
 	res.status(400).json({
-		error: {
-			code: 400,
-			message: 'Bad request'
-		}
+		code: 400,
+		success: false,
+		errors: [
+			'Bad request'
+		]
 	});
 }
 
-function sendApiError(res, code, message) {
+// use for any api not successfull
+function sendApiError(res, code, errors) {
 	res.status(code).json({
-		error: {
-			code,
-			message
-		}
+		code,
+		success: false,
+		errors
 	});
 }
 
 module.exports = {
 	sendDefault404,
+	sendApiReturn,
 	sendApi404,
 	sendApiGenericError,
 	sendApiError,

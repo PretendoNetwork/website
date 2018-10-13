@@ -15,6 +15,6 @@
         "url": "mongodb://localhost:27017/pretendo_website"
     },
     "secrets": {
-        "session": "abcdef"
+        "session": "session secret here"
     }
 }

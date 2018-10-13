@@ -1,11 +1,28 @@
+/*
+
+admin-authentication.js -
+Middleware file for authentication checking
+
+*/
+
+// imports
 const common = require('../helpers/common');
 
-function adminUserAuthenticationMiddleware(req, res, next) {
-	if (req.isAuthenticated()) {
+// middleware to use if admin authentication is required
+function adminAuthenticationRequired(req, res, next) {
+	if (req.isAuthenticated() && req.user.role && req.user.role === 'admin') {
 		return next();
+	} else {
+		common.sendApiAuthError(res);
 	}
-
-	common.sendApiAuthError(req, res);
 }
 
-module.exports = adminUserAuthenticationMiddleware;
+// middleware to use if authentication
+function authenticationOptional(req, res, next) {
+	return next();
+}
+
+module.exports = {
+	adminAuthenticationRequired,
+	authenticationOptional
+};
