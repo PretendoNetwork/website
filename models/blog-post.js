@@ -7,9 +7,11 @@ file containing the model file for a blog post
 
 // imports
 const mongoose = require('mongoose');
-const postAuthor = require('./post-author').postAuthorModel;
+const common = require('../helpers/common');
+//const postAuthor = require('./post-author').postAuthorModel;
 const showdown  = require('showdown');
 const converter = new showdown.Converter();
+converter.setFlavor('github');
 
 // admin user database layout
 const blogPostSchema = new mongoose.Schema({
@@ -36,7 +38,9 @@ const blogPostSchema = new mongoose.Schema({
 		},
 		date: {
 			type: Date,
-			default: Date.now
+			default: () => {
+				return new Date(common.convertDateToString(new Date()));
+			}
 		},
 		category: {
 			type: String,
@@ -54,8 +58,8 @@ blogPostSchema.methods.getBlogPostTemplateReady = function() {
 		content: this.content,
 		title: this.name,
 		date: this.meta.date,
-		category: this.meta.category,
-		author: postAuthor.findById(this.meta.author).getPostAuthorTemplateReady()
+		category: this.meta.category/*,
+		author: postAuthor.findById(this.meta.author).getPostAuthorTemplateReady()*/
 	};
 };
 
@@ -64,10 +68,8 @@ blogPostSchema.statics.convertMarkdownToHtml = function(markdown) {
 };
 blogPostSchema.statics.getPost = function(date, urlTitle, callback) {
 	return blogPostModel.findOne({
-		meta: {
-			date,
-			urlTitle
-		}
+		'meta.date': date,
+		'meta.urlTitle': urlTitle
 	}, callback);
 };
 

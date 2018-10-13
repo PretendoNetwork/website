@@ -20,7 +20,22 @@
             <button>submit login</button>
         </form>
 
+        <h2>create blog post</h2>
+        <form action="/admin/api/v1/newpost" method="POST">
+            <p>content</p>
+            <textarea name="content" cols="30" rows="10"></textarea>
+            <p>category</p>
+            <input type="text" name="category">
+            <p>title</p>
+            <input type="text" name="title">
+            <p>author id - yea, authors dont work yet. just ignore</p>
+            <input type="text" name="author">
+            <button>submit login</button>
+        </form>
+        <br>    
         <a href="/admin/api/v1/check">Check if logged in</a>
+        <br>    
+        <a href="/admin/api/v1/logout">Logout</a>
 
         {{> footer }}
     </body>

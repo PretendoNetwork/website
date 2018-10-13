@@ -11,6 +11,7 @@ const passport = require('passport');
 const common = require('../helpers/common');
 const adminUserMiddleware = require('../middleware/admin-authentication');
 const adminUser = require('../models/admin-user');
+const blogPost = require('../models/blog-post');
 
 // display admin panel
 router.get('/admin', (req, res) => {
@@ -121,6 +122,56 @@ router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (r
 router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
 	req.logout();
 	common.sendApiReturn(res, {});
+});
+
+/* 
+*	/admin/api/v1/newpost
+*
+*	posts a new blog post
+*
+*	post {
+*		content - content of the blog post in markdown
+*		title - title of the blog post
+*		author - id of the author
+*		category - category name of the blog post
+*		
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if login succesfull
+*		url: string | undefined - url of the blog post if successfull
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { content, title, author, category } = req.body;
+	const newBlogPost = new blogPost.blogPostModel({
+		content: blogPost.blogPostModel.convertMarkdownToHtml(content),
+		name: title,
+		meta: {
+			author,
+			category,
+			urlTitle: title
+				.trim()
+				.replace(/\s/g, '-')
+				.replace(/[^A-z0-9-]/g, '')
+				.toLowerCase()
+		}
+	});
+	
+	newBlogPost.save().then((post) => {
+		// successfull
+		common.sendApiReturn(res, {
+			url: common.convertDateToString(post.meta.date) + '/' + post.meta.urlTitle
+		});
+	}).catch((rejection) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		common.sendApiError(res, 500, [rejection]);
+		return;
+	});
 });
 
 // configure api 404

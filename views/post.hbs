@@ -6,15 +6,15 @@
         {{> navbar }}
 
         <h1>blog post</h1>
-        <p>{{ date }}</p>
-        <p>{{ category }}</p>
+        <p>{{ post.date }}</p>
+        <p>{{ post.category }}</p>
 
         <article>
-            {{{ content }}}
+            {{{ post.content }}}
         </article>
 
-        <p>{{ author.name }} - {{ author.description }}</p>
-        <img src="{{ author.image }}">
+        <!--<p>{{ author.name }} - {{ author.description }}</p>
+        <img src="{{ author.image }}">-->
 
         {{> footer }}
     </body>
