@@ -5,10 +5,12 @@ file containing the model file for admin user
 
 */
 
+// imports
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require('bcrypt');
 
+// admin user database layout
 const adminUserSchema = new mongoose.Schema({
 	username: {
 		type: String,
@@ -16,26 +18,31 @@ const adminUserSchema = new mongoose.Schema({
 		minlength: [1, 'Username must be at-least 1 character.'],
 		maxlength: [42, 'Username cannot be more than 42 characters long.'],
 		unique: true,
-		trim: true,
+		trim: true
 	},
 	password: {
 		type: String,
 		required: [true, 'Password is required.'],
 		minlength: [7, 'Password must be at-least 7 characters.'],
 		maxlength: [256, 'Password cannot be more than 256 characters long.'],
-		trim: true,
+		trim: true
+	},
+	role: {
+		type: String,
+		required: true
 	}
 });
 
 adminUserSchema.plugin(uniqueValidator, {message: '{PATH} already in use.'});
 
+// hashing password
 adminUserSchema.pre('save', function(next) {
-	// only hash the password if it has been modified (or is new)
+	// only if modified
 	if (!this.isModified('password')) {
 		return next();
 	}
 
-	// Hash the password with 10 rounds.
+	// hashing
 	bcrypt.hash(this.get('password'), 10, (err, hash) => {
 		if (err) {
 			return next(err);

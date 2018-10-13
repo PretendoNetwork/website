@@ -1,4 +1,11 @@
-// import dependencies
+/*
+
+passport.config.js -
+Passport setup file. handles authentication strategy and session setup
+
+*/
+
+// imports
 const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
 const bcrypt = require('bcrypt');

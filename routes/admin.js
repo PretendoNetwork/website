@@ -5,10 +5,8 @@ file for handling admin panel routes
 
 */
 
-// import express' router
+// imports
 const router = require('express').Router();
-
-// import dependencies
 const passport = require('passport');
 const common = require('../helpers/common');
 const adminUserMiddleware = require('../middleware/admin-authentication');
@@ -57,14 +55,14 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), f
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/register', adminUserMiddleware.authenticationRequired, (req, res) => {
-	if (!req.body || !req.body.username || !req.body.password) {
-		// no/wrong post body
+router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+	if (!req.body) {
+		// no post body
 		common.sendApiGenericError(req, res);
 		return;
 	}
+
 	const { username, password } = req.body;
-	
 	const newUser = new adminUser.adminUserModel({
 		username,
 		password
@@ -72,12 +70,13 @@ router.post('/admin/api/v1/register', adminUserMiddleware.authenticationRequired
 	
 	newUser.save().then(() => {
 		// successfull
-		res.status(201).json({
-			success: true
+		common.sendApiReturn(res, {
+			// TODO return some data
+			role: req.user.role ? req.user.role : undefined
 		});
 		return;
 	}).catch((rejection) => {
-		res.status(500).json(rejection);
+		common.sendApiError(res, 500, [rejection]);
 		return;
 	});
 });
@@ -94,9 +93,9 @@ router.post('/admin/api/v1/register', adminUserMiddleware.authenticationRequired
 *	}
 */
 router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (req, res) => {
-	res.status(200).json({
-		code: 200,
-		success: req.isAuthenticated()
+	common.sendApiReturn(res, {
+		IsAuthed: req.isAuthenticated(),
+		role: req.user.role ? req.user.role : undefined
 	});
 });
 

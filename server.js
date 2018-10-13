@@ -1,12 +1,11 @@
 /*
 
 server.js -
-the file that contains the code to run the server
+the file that contains the startup code
 
 */
 
-// module imports, and
-// some important variable defs
+// imports
 const express = require('express');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
@@ -14,29 +13,21 @@ const mongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('./config.json');
-const app = express();
 const common = require('./helpers/common');
 const passportconfig = require('./passport.config.js');
 
-// import the colors module
+// setup console colors
 require('colors');
 
-// locations for some files
-const locations = {
-	home: require('./routes/home'),
-	posts: require('./routes/blog'),
-	admin: require('./routes/admin')
-};
-
-// setup body parser
-app.use(bodyParser.urlencoded({ extended: false }));
 
 // setup database
 mongoose.connect(config.database.url);
 const connection = mongoose.connection;
 connection.on('error', console.error.bind(console, 'connection error:'));
 
-// setup session
+// setup express
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
 	secret: config.secrets.session,
 	saveUninitialized: true,
@@ -44,48 +35,40 @@ app.use(session({
 	cookie: {
 		maxAge: 3600000,
 		httpOnly: true//, // remove on production
-		/*secure: true*/
+		/*secure: true*/ // uncomment on production
 	},
-	// using store session on MongoDB using express-session + connect
+	// permanent session storing for MongoDB
 	store: new mongoStore({
 		mongooseConnection: connection,
 		collection: 'sessions'
 	})
 }));
-
-// setup authentication
 passportconfig(app);
 
-// load the handlebars module
+// handlebars templating setup
 app.engine('.hbs', handlebars({
 	extname: '.hbs',
 	layoutsDir: 'views',
 	partialsDir: 'views/partials'
 }));
-
-// set express to use handlebars
-// as the templating engine
 app.set('view engine', '.hbs');
 
-// set some routes on the server
+// locations and routes setup
+const locations = {
+	home: require('./routes/home'),
+	posts: require('./routes/blog'),
+	admin: require('./routes/admin')
+};
 
-// assets folder serving
+// static files
 app.use('/assets', express.static('assets'));
-
-// website root
+// page map
 app.use('/', locations.home);
-
-// blog posts
 app.use('/', locations.posts);
-
-// admin panel
 app.use('/', locations.admin);
-
-// send a 404 on a file not
-// being found
 app.use(common.sendDefault404);
 
-// start the server
+// startup
 app.listen(config.http.port, () => {
 	console.log(`started the server on port: ${new String(config.http.port).green}`);
 });
