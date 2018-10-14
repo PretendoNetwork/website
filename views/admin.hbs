@@ -24,11 +24,13 @@
         <form action="/admin/api/v1/newpost" method="POST">
             <p>content</p>
             <textarea name="content" cols="30" rows="10"></textarea>
+            <p>short version</p>
+            <textarea name="short" cols="30" rows="10"></textarea>
             <p>category</p>
             <input type="text" name="category">
             <p>title</p>
             <input type="text" name="title">
-            <p>author id - yea, authors dont work yet. just ignore</p>
+            <p>author id</p>
             <input type="text" name="author">
             <button>create post</button>
         </form>
@@ -37,13 +39,15 @@
         <form action="/admin/api/v1/editpost" method="POST">
             <p>content</p>
             <textarea name="content" cols="30" rows="10"></textarea>
+            <p>short version</p>
+            <textarea name="short" cols="30" rows="10"></textarea>
             <p>id</p>
             <input type="text" name="id">
             <p>category</p>
             <input type="text" name="category">
             <p>title</p>
             <input type="text" name="title">
-            <p>author id - yea, authors dont work yet. just ignore</p>
+            <p>author id</p>
             <input type="text" name="author">
             <button>edit post</button>
         </form>

@@ -135,6 +135,7 @@ router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequir
 *		content - content of the blog post in markdown
 *		title - title of the blog post
 *		author - id of the author
+*		short - short description of content in plain text
 *		category - category name of the blog post
 *		
 *	}
@@ -149,10 +150,11 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 	
 	if (!req.body) return common.sendApiGenericError(res);
 
-	const { content, title, author, category } = req.body;
+	const { content, title, author, category, short } = req.body;
 	const newBlogPost = new blogPost.blogPostModel({
 		content: blogPost.blogPostModel.convertMarkdownToHtml(content),
 		name: title,
+		short,
 		meta: {
 			author,
 			category,
@@ -186,6 +188,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 *		content - content of the blog post IN HTML
 *		title - title of the blog post
 *		author - id of the author
+*		short - short description of content in plain text
 *		category - category name of the blog post
 *	}
 *	return {
@@ -199,10 +202,11 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationReq
 	
 	if (!req.body) return common.sendApiGenericError(res);
 
-	const { id, content, title, author, category } = req.body;
+	const { id, content, title, author, category, short } = req.body;
 	blogPost.blogPostModel.findByIdAndUpdate(id, {
 		'content': content,
 		'name': title,
+		'short': short,
 		'meta.author': author,
 		'meta.category': category
 	}, (err, post) => {

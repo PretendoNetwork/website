@@ -11,7 +11,7 @@ const common = require('../helpers/common');
 const blogPostModel = require('../models/blog-post').blogPostModel;
 const postAuthorModel = require('../models/post-author').postAuthorModel;
 
-// display blog post
+// display single blog post
 router.get('/news/:date/:title', (req, res) => {
 	// date format DD-MM-YYY
 	if (/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(req.params.date) && /([a-z]|[0-9]|-)+/.test(req.params.title.toLowerCase())) {
@@ -35,6 +35,24 @@ router.get('/news/:date/:title', (req, res) => {
 		// params are incorrect
 		common.sendDefault404(res);
 	}
+});
+
+// display latest blogposts
+router.get('/news', (req, res) => {
+	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
+		if (err || !posts) {
+			return common.sendDefault404(res);
+		}
+
+		const postCollection = [];
+		for (let i = 0, l = posts.length; i < l; i++) {
+			postCollection.push(posts[i].getBlogPostShortTemplateReady());
+		}
+
+		res.render('post-collection', {
+			posts: postCollection
+		});
+	});
 });
 
 /* 

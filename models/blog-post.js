@@ -25,6 +25,10 @@ const blogPostSchema = new mongoose.Schema({
 		type: String,
 		required: [true, 'Name is required']
 	},
+	short: {
+		type: String,
+		required: [true, 'Short version is required']
+	},
 	meta: {
 		urlTitle: {
 			type: String,
@@ -65,6 +69,13 @@ blogPostSchema.methods.getBlogPostTemplateReady = function(callback) {
 		});
 	});
 };
+blogPostSchema.methods.getBlogPostShortTemplateReady = function() {
+	return {
+		content: this.short,
+		title: this.name,
+		url: common.convertDateToString(this.meta.date) + '/' + this.meta.urlTitle
+	};
+};
 
 blogPostSchema.statics.convertMarkdownToHtml = function(markdown) {
 	return converter.makeHtml(markdown);
@@ -74,6 +85,16 @@ blogPostSchema.statics.getPost = function(date, urlTitle, callback) {
 		'meta.date': date,
 		'meta.urlTitle': urlTitle
 	}, callback);
+};
+// not tested
+blogPostSchema.statics.getLatestBlogPostShortTemplateReady = function(amount, callback) {
+	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
+		if (err) return callback(err);
+		let out = [];
+		for (let i = 0, l = posts.length; i < ( amount+1 < l ? amount+1 : l); i++)
+			out += posts[i].getBlogPostShortTemplateReady();
+		callback(err, out);
+	});
 };
 
 const blogPostModel = mongoose.model('blogPost', blogPostSchema);
