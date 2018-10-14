@@ -60,6 +60,7 @@ const locations = {
 	home: require('./routes/home'),
 	posts: require('./routes/blog'),
 	admin: require('./routes/admin'),
+	contact: require('./routes/contact'),
 	progress: require('./routes/progress')
 };
 
@@ -67,6 +68,7 @@ const locations = {
 app.use('/assets', express.static('assets'));
 // page map
 app.use('/', locations.home);
+app.use('/', locations.contact);
 app.use('/', locations.posts);
 app.use('/', locations.admin);
 app.use('/', locations.progress);

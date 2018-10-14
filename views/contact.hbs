@@ -5,7 +5,16 @@
     <body>
         {{> navbar }}
 
-        <h1>contact form here</h1>
+        <h1>contact form</h1>
+        <form action="/api/v1/sendmessage" method="POST">
+            <p>content</p>
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <p>subject</p>
+            <input type="text" name="subject">
+            <p>email</p>
+            <input type="text" name="email">
+            <button>send message</button>
+        </form>
 
         {{> footer }}
     </body>
