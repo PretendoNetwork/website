@@ -20,6 +20,13 @@
             <button>submit login</button>
         </form>
 
+        <h2>delete admin</h2>
+        <form action="/admin/api/v1/removeadmin" method="POST">
+            <p>id</p>
+            <input type="text" name="id">
+            <button>delete admin</button>
+        </form>
+
         <h2>create blog post</h2>
         <form action="/admin/api/v1/newpost" method="POST">
             <p>content</p>
@@ -102,6 +109,8 @@
             <button>edit progress</button>
         </form>
 
+        <br>    
+        <a href="/admin/api/v1/listadmins">List of admin users</a>
         <br>    
         <a href="/api/v1/listblog">List of blog posts</a>
         <br>    

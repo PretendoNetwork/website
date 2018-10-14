@@ -91,6 +91,63 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 });
 
 /* 
+*	/admin/api/v1/removeadmin
+*	- requires admin auth
+*
+*	registers a new admin user
+*
+*	post {
+*		id - id of the admin user
+*	}
+*	return {
+*		code: httpcode
+*		success: boolean - true if delete was successull
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+	if (!req.body) {
+		common.sendApiGenericError(res);
+		return;
+	}
+
+	const { id } = req.body;
+	adminUser.adminUserModel.findByIdAndDelete(id, (err) => {
+		if (err) return common.sendApiError(res, 500, [err]);
+		// successfull
+		common.sendApiReturn(res, {});
+	});
+});
+
+/* 
+*	/admin/api/v1/listadmins
+*	- requires admin auth
+*
+*	gets list of admins
+*
+*	return {
+*		code: httpcode
+*		success: boolean - true if delete was successull
+*		errors: Strings[messages]
+*	}
+*/
+router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+	adminUser.adminUserModel.find({}, (err, admins) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		if (err) return common.sendApiError(res, 500, [err]);
+
+		const output = [];
+		for (let i = 0, l = admins.length; i < l; i++) {
+			admins[i].password = undefined;
+			output.push(admins[i]);
+		}
+		common.sendApiReturn(res, {
+			admins: output
+		});
+	});
+});
+
+/* 
 *	/admin/api/v1/check
 *
 *	checks if admin logged in
