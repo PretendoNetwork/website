@@ -16,16 +16,10 @@ router.get('/progress', (req, res) => {
 	
 	progressListModel.find({}, (err, progress) => {
 		if (err) return common.sendDefault404(res);
-		console.log(progress);
-		let games = [];
-		let backends = [];
-		for (const i in progress) {
-			if (progress[i].isGame) 
-				games += progress[i];
-			else 
-				backends += progress[i];
-		}
-		console.log(games + backends);
+		
+		const games = progress.filter(i => i.isGame);
+		const backends = progress.filter(i => !i.isGame);
+
 		res.render('progress', {
 			games,
 			backends,
