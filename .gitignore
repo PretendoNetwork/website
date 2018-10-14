@@ -59,4 +59,4 @@ typings/
 
 # keep config and blog posts out of this
 config.json
-posts/
+static-text.json
