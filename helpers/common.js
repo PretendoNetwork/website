@@ -63,11 +63,19 @@ function sendApiError(res, code, errors) {
 	});
 }
 
+// convert date to string 
+function convertDateToString(date) {
+	return date.getUTCFullYear() + '-' +
+		('0' + (date.getUTCMonth()+1)).slice(-2) + '-' +
+		('0' + date.getUTCDate()).slice(-2);
+}
+
 module.exports = {
 	sendDefault404,
 	sendApiReturn,
 	sendApi404,
 	sendApiGenericError,
 	sendApiError,
-	sendApiAuthError
+	sendApiAuthError,
+	convertDateToString
 };
