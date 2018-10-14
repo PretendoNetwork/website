@@ -30,8 +30,80 @@
             <input type="text" name="title">
             <p>author id - yea, authors dont work yet. just ignore</p>
             <input type="text" name="author">
-            <button>submit login</button>
+            <button>create post</button>
         </form>
+
+        <h2>edit blog post</h2>
+        <form action="/admin/api/v1/editpost" method="POST">
+            <p>content</p>
+            <textarea name="content" cols="30" rows="10"></textarea>
+            <p>id</p>
+            <input type="text" name="id">
+            <p>category</p>
+            <input type="text" name="category">
+            <p>title</p>
+            <input type="text" name="title">
+            <p>author id - yea, authors dont work yet. just ignore</p>
+            <input type="text" name="author">
+            <button>edit post</button>
+        </form>
+
+        <h2>new author</h2>
+        <form action="/admin/api/v1/newauthor" method="POST">
+            <p>name</p>
+            <input type="text" name="name">
+            <p>description</p>
+            <input type="text" name="description">
+            <p>image link</p>
+            <input type="text" name="image">
+            <button>submit author</button>
+        </form>
+
+        <h2>edit author</h2>
+        <form action="/admin/api/v1/editauthor" method="POST">
+            <p>id</p>
+            <input type="text" name="id">
+            <p>name</p>
+            <input type="text" name="name">
+            <p>description</p>
+            <input type="text" name="description">
+            <p>image link</p>
+            <input type="text" name="image">
+            <button>edit author</button>
+        </form>
+
+        <h2>new progress entry</h2>
+        <form action="/admin/api/v1/newprogress" method="POST">
+            <p>title</p>
+            <input type="text" name="title">
+            <p>description</p>
+            <input type="text" name="description">
+            <p>state</p>
+            <p>0 - backend service<br>1 - no support<br>2 - partial support<br>3 - fully working</p>
+            <input type="text" name="state">
+            <button>submit progress</button>
+        </form>
+
+        <h2>edit progress entry</h2>
+        <form action="/admin/api/v1/editprogress" method="POST">
+            <p>id</p>
+            <input type="text" name="id">
+            <p>title</p>
+            <input type="text" name="title">
+            <p>description</p>
+            <input type="text" name="description">
+            <p>state</p>
+            <p>0 - backend service<br>1 - no support<br>2 - partial support<br>3 - fully working</p>
+            <input type="text" name="state">
+            <button>edit progress</button>
+        </form>
+
+        <br>    
+        <a href="/api/v1/listblog">List of blog posts</a>
+        <br>    
+        <a href="/api/v1/listprogress">List of progress</a>
+        <br>    
+        <a href="/api/v1/listauthors">List of authors</a>
         <br>    
         <a href="/admin/api/v1/check">Check if logged in</a>
         <br>    

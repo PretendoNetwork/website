@@ -59,7 +59,8 @@ app.set('view engine', '.hbs');
 const locations = {
 	home: require('./routes/home'),
 	posts: require('./routes/blog'),
-	admin: require('./routes/admin')
+	admin: require('./routes/admin'),
+	progress: require('./routes/progress')
 };
 
 // static files
@@ -68,6 +69,7 @@ app.use('/assets', express.static('assets'));
 app.use('/', locations.home);
 app.use('/', locations.posts);
 app.use('/', locations.admin);
+app.use('/', locations.progress);
 app.use((req, res) => {
 	common.sendDefault404(res);
 });

@@ -12,6 +12,8 @@ const common = require('../helpers/common');
 const adminUserMiddleware = require('../middleware/admin-authentication');
 const adminUser = require('../models/admin-user');
 const blogPost = require('../models/blog-post');
+const postAuthor = require('../models/post-author');
+const progressList = require('../models/progress-list');
 
 // display admin panel
 router.get('/admin', (req, res) => {
@@ -171,6 +173,216 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 		// TODO format exception so it doesnt have a huge list of errors
 		common.sendApiError(res, 500, [rejection]);
 		return;
+	});
+});
+
+/* 
+*	/admin/api/v1/editpost
+*
+*	edits a blog post
+*
+*	post {
+*		id - id of the blog post to be edited
+*		content - content of the blog post IN HTML
+*		title - title of the blog post
+*		author - id of the author
+*		category - category name of the blog post
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if login succesfull
+*		url: string | undefined - url of the blog post if successfull
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { id, content, title, author, category } = req.body;
+	blogPost.blogPostModel.findByIdAndUpdate(id, {
+		'content': content,
+		'name': title,
+		'meta.author': author,
+		'meta.category': category
+	}, (err, post) => {
+		if (err) return common.sendApiError(res, 500, [err]);
+		common.sendApiReturn(res, {
+			url: common.convertDateToString(post.meta.date) + '/' + post.meta.urlTitle
+		});
+	});
+});
+
+/* 
+*	/admin/api/v1/newauthor
+*
+*	creates new author
+*
+*	post {
+*		name - author name
+*		description - author description
+*		image - image url for profile picture
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if author succesfull
+*		id: string | undefined - id of the new author if successfull
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { name, description, image } = req.body;
+	const newAuthor = new postAuthor.postAuthorModel({
+		name,
+		description,
+		image
+	});
+	
+	newAuthor.save().then((author) => {
+		// successfull
+		common.sendApiReturn(res, {
+			id: author.id
+		});
+	}).catch((rejection) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		common.sendApiError(res, 500, [rejection]);
+		return;
+	});
+});
+
+/* 
+*	/admin/api/v1/editauthor
+*
+*	edit an existing author
+*
+*	post {
+*		id - id of author to edit
+*		name - author name
+*		description - author description
+*		image - image url for profile picture
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if author succesfull
+*		id: String - id of the edited author
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { id, name, description, image } = req.body;
+
+	postAuthor.postAuthorModel.findByIdAndUpdate(id, {
+		name,
+		description,
+		image
+	}, (err, author) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		if (err) return common.sendApiError(res, 500, [err]);
+		common.sendApiReturn(res, {
+			id: author.id
+		});
+	});
+});
+
+/* 
+*	/admin/api/v1/newprogress
+*
+*	creates a new progress entry
+*
+*	post {
+*		title - progress entry name
+*		description - progress entry description
+*		state - 0: backend service entry, 1: no support, 2: partial support, 3: fullly working
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if progress succesfull
+*		id: String | undefined - sends if successfull
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { title, description } = req.body;
+	let { state } = req.body;
+	let isGame = false;
+	if (state != '1' && state != '2' && state != '3') {
+		state = undefined;
+	} else {
+		state = parseInt(state);
+		isGame = true;
+	}
+
+	const newProgress = new progressList.progressListModel({
+		title,
+		description,
+		isGame,
+		state
+	});
+	
+	newProgress.save().then((progress) => {
+		// successfull
+		common.sendApiReturn(res, {
+			id: progress.id
+		});
+	}).catch((rejection) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		common.sendApiError(res, 500, [rejection]);
+		return;
+	});
+});
+
+/* 
+*	/admin/api/v1/editprogress
+*
+*	edit an existing progress entry
+*
+*	post {
+*		title - progress entry name
+*		description - progress entry description
+*		state - 0: backend service entry, 1: no support, 2: partial support, 3: fullly working
+*		id - id of entry you want to edit
+*	}
+*	return {
+*		code: http code
+*		success: boolean - true if progress succesfull
+*		id: String - id of the edited progress entry
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+	
+	if (!req.body) return common.sendApiGenericError(res);
+
+	const { title, description, id } = req.body;
+	let { state } = req.body;
+	let isGame = false;
+	if (state != '1' && state != '2' && state != '3') {
+		state = undefined;
+	} else {
+		state = parseInt(state);
+		isGame = true;
+	}
+
+	progressList.progressListModel.findByIdAndUpdate(id, {
+		title,
+		description,
+		state,
+		isGame
+	}, (err, progress) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		if (err) return common.sendApiError(res, 500, [err]);
+		common.sendApiReturn(res, {
+			id: progress.id
+		});
 	});
 });
 

@@ -1,7 +1,7 @@
 /*
 
-blog-post.js -
-file containing the model file for a blog post
+post-author.js -
+file containing the model for authors
 
 */
 
@@ -28,9 +28,9 @@ const postAuthorSchema = new mongoose.Schema({
 
 postAuthorSchema.methods.getPostAuthorTemplateReady = function() {
 	return {
-		authorName: this.name,
-		authorDescription: this.description,
-		authorProfilePicture: this.image
+		name: this.name,
+		description: this.description,
+		profilePicture: this.image
 	};
 };
 

@@ -8,7 +8,7 @@ file containing the model file for a blog post
 // imports
 const mongoose = require('mongoose');
 const common = require('../helpers/common');
-//const postAuthor = require('./post-author').postAuthorModel;
+const postAuthor = require('./post-author').postAuthorModel;
 const showdown  = require('showdown');
 const converter = new showdown.Converter();
 converter.setFlavor('github');
@@ -53,14 +53,17 @@ const blogPostSchema = new mongoose.Schema({
 blogPostSchema.methods.getContentAsHTML = function() {
 	return this.content;
 };
-blogPostSchema.methods.getBlogPostTemplateReady = function() {
-	return {
-		content: this.content,
-		title: this.name,
-		date: this.meta.date,
-		category: this.meta.category/*,
-		author: postAuthor.findById(this.meta.author).getPostAuthorTemplateReady()*/
-	};
+blogPostSchema.methods.getBlogPostTemplateReady = function(callback) {
+	const self = this;
+	postAuthor.findById(this.meta.author, function (err, author) {
+		callback(err, {
+			content: self.content,
+			title: self.name,
+			date: self.meta.date,
+			category: self.meta.category,
+			author: author.getPostAuthorTemplateReady()
+		});
+	});
 };
 
 blogPostSchema.statics.convertMarkdownToHtml = function(markdown) {

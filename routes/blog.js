@@ -9,6 +9,7 @@ file for handling routes regarding blog posts.
 const router = require('express').Router();
 const common = require('../helpers/common');
 const blogPostModel = require('../models/blog-post').blogPostModel;
+const postAuthorModel = require('../models/post-author').postAuthorModel;
 
 // display blog post
 router.get('/news/:date/:title', (req, res) => {
@@ -23,14 +24,61 @@ router.get('/news/:date/:title', (req, res) => {
 			}
 			
 			// render blogpost
-			res.render('post', {
-				post: post.getBlogPostTemplateReady()
+			post.getBlogPostTemplateReady((err, postTemplate) => {
+				if (err) return common.sendDefault404(res);
+				res.render('post', {
+					post: postTemplate
+				});
 			});
 		});
 	} else {
 		// params are incorrect
 		common.sendDefault404(res);
 	}
+});
+
+/* 
+*	/api/v1/listauthors
+*
+*	gets a list of all authors
+*
+*	return {
+*		code: http code
+*		success: boolean - true if author succesfull
+*		authorList: Objects[{_id, name, description, image}] - list of authors with information
+*		errors: Strings[messages]
+*	}
+*/
+router.get('/api/v1/listauthors', function (req, res) {
+	postAuthorModel.find({}, (err, authors) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		if (err) return common.sendApiError(res, 500, [err]);
+		common.sendApiReturn(res, {
+			authorList: authors
+		});
+	});
+});
+
+/* 
+*	/api/v1/listblog
+*
+*	gets a list of all posts
+*
+*	return {
+*		code: http code
+*		success: boolean - true if post succesfull
+*		postList: Objects[{_id, content, meta}] - list of posts with information
+*		errors: Strings[messages]
+*	}
+*/
+router.get('/api/v1/listblog', function (req, res) {
+	blogPostModel.find({}, (err, posts) => {
+		// TODO format exception so it doesnt have a huge list of errors
+		if (err) return common.sendApiError(res, 500, [err]);
+		common.sendApiReturn(res, {
+			postList: posts
+		});
+	});
 });
 
 // export router
