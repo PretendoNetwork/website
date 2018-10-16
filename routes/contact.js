@@ -7,7 +7,7 @@ file for handling routes regarding contact
 
 // imports
 const router = require('express').Router();
-const common = require('../helpers/common');
+const apiHelper = require('../helpers/api');
 const config = require('../config.json');
 const https = require('https');
 
@@ -33,7 +33,7 @@ router.get('/contact', (req, res) => {
 *	}
 */
 router.post('/api/v1/sendmessage', function (req, res) {
-	if (!req.body) return common.sendApiGenericError(res);
+	if (!req.body) return apiHelper.sendApiGenericError(res);
 
 	const { email, subject, message } = req.body;
 	if (email && subject && message && message.length < 2000) {
@@ -53,11 +53,11 @@ router.post('/api/v1/sendmessage', function (req, res) {
 				'Content-Length': postData.length
 			}
 		}, () => {
-			common.sendApiReturn(res, {}); 
+			apiHelper.sendApiReturn(res, {}); 
 		});
 
 		request.on('error', (e) => {
-			common.sendApiGenericError(res);
+			apiHelper.sendApiGenericError(res);
 			console.log('request errored' + e);
 		});
 
@@ -65,7 +65,7 @@ router.post('/api/v1/sendmessage', function (req, res) {
 		request.end();
 	} else {
 		// TODO give more detailed response
-		return common.sendApiGenericError(res);
+		return apiHelper.sendApiGenericError(res);
 	}
 
 });

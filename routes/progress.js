@@ -7,7 +7,8 @@ file for handling routes regarding progress
 
 // imports
 const router = require('express').Router();
-const common = require('../helpers/common');
+const apiHelper = require('../helpers/api');
+const utilHelper = require('../helpers/util');
 const staticText = require('../static-text.json');
 const progressListModel = require('../models/progress-list').progressListModel;
 
@@ -15,7 +16,7 @@ const progressListModel = require('../models/progress-list').progressListModel;
 router.get('/progress', (req, res) => {
 	
 	progressListModel.find({}, (err, progress) => {
-		if (err) return common.sendDefault404(res);
+		if (err) return apiHelper.sendDefault404(res);
 		
 		const games = progress.filter(i => i.isGame);
 		const backends = progress.filter(i => !i.isGame);
@@ -43,8 +44,8 @@ router.get('/progress', (req, res) => {
 router.get('/api/v1/listprogress', function (req, res) {
 	progressListModel.find({}, (err, progress) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return common.sendApiError(res, 500, [err]);
-		common.sendApiReturn(res, {
+		if (err) return apiHelper.sendApiError(res, 500, [err]);
+		apiHelper.sendApiReturn(res, {
 			progressList: progress
 		});
 	});

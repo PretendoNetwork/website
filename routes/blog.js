@@ -7,7 +7,8 @@ file for handling routes regarding blog posts.
 
 // imports
 const router = require('express').Router();
-const common = require('../helpers/common');
+const apiHelper = require('../helpers/api');
+const utilHelper = require('../helpers/util');
 const blogPostModel = require('../models/blog-post').blogPostModel;
 const postAuthorModel = require('../models/post-author').postAuthorModel;
 
@@ -20,12 +21,12 @@ router.get('/news/:date/:title', (req, res) => {
 			// error exists or no post exists with the date and name
 			if (err || !post) {
 				console.log('error: ' + err + ' and post: ' + post);
-				return common.sendDefault404(res);
+				return utilHelper.sendDefault404(res);
 			}
 			
 			// render blogpost
 			post.getBlogPostTemplateReady((err, postTemplate) => {
-				if (err) return common.sendDefault404(res);
+				if (err) return utilHelper.sendDefault404(res);
 				res.render('post', {
 					post: postTemplate
 				});
@@ -33,7 +34,7 @@ router.get('/news/:date/:title', (req, res) => {
 		});
 	} else {
 		// params are incorrect
-		common.sendDefault404(res);
+		utilHelper.sendDefault404(res);
 	}
 });
 
@@ -41,7 +42,7 @@ router.get('/news/:date/:title', (req, res) => {
 router.get('/news', (req, res) => {
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err || !posts) {
-			return common.sendDefault404(res);
+			return utilHelper.sendDefault404(res);
 		}
 
 		const postCollection = [];
@@ -70,8 +71,8 @@ router.get('/news', (req, res) => {
 router.get('/api/v1/listauthors', function (req, res) {
 	postAuthorModel.find({}, (err, authors) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return common.sendApiError(res, 500, [err]);
-		common.sendApiReturn(res, {
+		if (err) return apiHelper.sendApiError(res, 500, [err]);
+		apiHelper.sendApiReturn(res, {
 			authorList: authors
 		});
 	});
@@ -92,8 +93,8 @@ router.get('/api/v1/listauthors', function (req, res) {
 router.get('/api/v1/listblog', function (req, res) {
 	blogPostModel.find({}, (err, posts) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return common.sendApiError(res, 500, [err]);
-		common.sendApiReturn(res, {
+		if (err) return apiHelper.sendApiError(res, 500, [err]);
+		apiHelper.sendApiReturn(res, {
 			postList: posts
 		});
 	});

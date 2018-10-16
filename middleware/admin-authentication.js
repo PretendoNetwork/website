@@ -6,14 +6,14 @@ Middleware file for authentication checking
 */
 
 // imports
-const common = require('../helpers/common');
+const apiHelper = require('../helpers/api');
 
 // middleware to use if admin authentication is required
 function adminAuthenticationRequired(req, res, next) {
 	if (req.isAuthenticated() && req.user.role && req.user.role === 'admin') {
 		return next();
 	} else {
-		common.sendApiAuthError(res);
+		apiHelper.sendApiAuthError(res);
 	}
 }
 

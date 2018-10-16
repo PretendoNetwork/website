@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const common = require('../helpers/common');
 const postAuthor = require('./post-author').postAuthorModel;
 const showdown  = require('showdown');
+const moment = require('moment');
 const converter = new showdown.Converter();
 converter.setFlavor('github');
 
@@ -43,7 +44,7 @@ const blogPostSchema = new mongoose.Schema({
 		date: {
 			type: Date,
 			default: () => {
-				return new Date(common.convertDateToString(new Date()));
+				return new Date(moment(new Date(), 'YYYY-MM-DD'));
 			}
 		},
 		category: {
@@ -73,7 +74,7 @@ blogPostSchema.methods.getBlogPostShortTemplateReady = function() {
 	return {
 		content: this.short,
 		title: this.name,
-		url: common.convertDateToString(this.meta.date) + '/' + this.meta.slug
+		url: moment(this.meta.date, 'YYYY-MM-DD') + '/' + this.meta.slug
 	};
 };
 

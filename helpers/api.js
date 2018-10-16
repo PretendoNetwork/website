@@ -1,15 +1,3 @@
-/*
-
-common.js -
-common page functionality.
-
-*/
-
-// shows 404 template.
-function sendDefault404(res) {
-	res.status(404).send('404');
-}
-
 // use for any api return. it has basic layout used for every return.
 function sendApiReturn(res, data, errors) {
 	res.status(200).json(
@@ -63,19 +51,10 @@ function sendApiError(res, code, errors) {
 	});
 }
 
-// convert date to string 
-function convertDateToString(date) {
-	return date.getUTCFullYear() + '-' +
-		('0' + (date.getUTCMonth()+1)).slice(-2) + '-' +
-		('0' + date.getUTCDate()).slice(-2);
-}
-
 module.exports = {
-	sendDefault404,
 	sendApiReturn,
 	sendApi404,
 	sendApiGenericError,
 	sendApiError,
-	sendApiAuthError,
-	convertDateToString
+	sendApiAuthError
 };

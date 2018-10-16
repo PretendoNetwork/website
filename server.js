@@ -13,7 +13,7 @@ const mongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('./config.json');
-const common = require('./helpers/common');
+const utilHelper = require('./helpers/util');
 const passportconfig = require('./passport.config.js');
 
 // setup console colors
@@ -73,7 +73,7 @@ app.use('/', locations.posts);
 app.use('/', locations.admin);
 app.use('/', locations.progress);
 app.use((req, res) => {
-	common.sendDefault404(res);
+	utilHelper.sendDefault404(res);
 });
 
 // TODO improve error handling
