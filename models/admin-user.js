@@ -20,6 +20,7 @@ const adminUserSchema = new mongoose.Schema({
 		unique: true,
 		trim: true
 	},
+	// non hashed, gets hashed at save
 	password: {
 		type: String,
 		required: [true, 'Password is required.'],

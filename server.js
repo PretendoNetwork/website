@@ -13,7 +13,7 @@ const mongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('./config.json');
-const common = require('./helpers/common');
+const utilHelper = require('./helpers/util');
 const passportconfig = require('./passport.config.js');
 
 // setup console colors
@@ -45,6 +45,7 @@ app.use(session({
 		collection: 'sessions'
 	})
 }));
+// setups up passportjs authentication
 passportconfig(app);
 
 // handlebars templating setup
@@ -59,17 +60,29 @@ app.set('view engine', '.hbs');
 const locations = {
 	home: require('./routes/home'),
 	posts: require('./routes/blog'),
-	admin: require('./routes/admin')
+	admin: require('./routes/admin'),
+	contact: require('./routes/contact'),
+	progress: require('./routes/progress')
 };
 
 // static files
 app.use('/assets', express.static('assets'));
 // page map
 app.use('/', locations.home);
+app.use('/', locations.contact);
 app.use('/', locations.posts);
 app.use('/', locations.admin);
+app.use('/', locations.progress);
 app.use((req, res) => {
-	common.sendDefault404(res);
+	utilHelper.send404(res);
+});
+
+// TODO improve error handling
+// TODO remove param decoding errors from logs example: "host/test/%"
+// 4 parameters required to read the error, cant help the eslint error
+app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+	console.error(err.stack);
+	return res.status(500).send('Something broke!');
 });
 
 // startup

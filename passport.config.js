@@ -42,7 +42,7 @@ module.exports = (app) => {
 			});
 		}
 	));
-	//Configuring app to have sessions 
+	//Configuring app to have sessions, dont change since it would break everything
 	passport.serializeUser(function(user, done) {
 		done(null, user.id);
 	});

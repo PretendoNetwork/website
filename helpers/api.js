@@ -1,17 +1,12 @@
 /*
 
-common.js -
-common page functionality.
+api.js -
+common api returns
 
 */
 
-// shows 404 template.
-function sendDefault404(res) {
-	res.status(404).send('404');
-}
-
 // use for any api return. it has basic layout used for every return.
-function sendApiReturn(res, data, errors) {
+function sendReturn(res, data, errors) {
 	res.status(200).json(
 		// combine 2 objects
 		Object.assign({
@@ -64,8 +59,7 @@ function sendApiError(res, code, errors) {
 }
 
 module.exports = {
-	sendDefault404,
-	sendApiReturn,
+	sendReturn,
 	sendApi404,
 	sendApiGenericError,
 	sendApiError,
