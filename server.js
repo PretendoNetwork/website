@@ -74,7 +74,7 @@ app.use('/', locations.posts);
 app.use('/', locations.admin);
 app.use('/', locations.progress);
 app.use((req, res) => {
-	utilHelper.sendDefault404(res);
+	utilHelper.send404(res);
 });
 
 // TODO improve error handling

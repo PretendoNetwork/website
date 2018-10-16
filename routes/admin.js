@@ -43,7 +43,7 @@ router.get('/admin', (req, res) => {
 // TODO make login somehow display errors in correct format.
 // middleware does the authentication work. this just returns a success
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
-	apiHelper.sendApiReturn(res, {
+	apiHelper.sendReturn(res, {
 		username: req.user.username,
 		role: req.user.role ? req.user.role : undefined
 	});
@@ -67,7 +67,7 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), f
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthNeeded, (req, res) => {
 	if (!req.body) {
 		// no post body
 		apiHelper.sendApiGenericError(res);
@@ -82,7 +82,7 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 	
 	// saving to database
 	newUser.save().then(() => {
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			username: req.user.username,
 			role: req.user.role ? req.user.role : undefined
 		});
@@ -109,7 +109,7 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthNeeded, (req, res) => {
 	if (!req.body) {
 		// no post body
 		apiHelper.sendApiGenericError(res);
@@ -120,7 +120,7 @@ router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthentication
 	adminUser.adminUserModel.findByIdAndDelete(id, (err) => {
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
 		// successfull
-		apiHelper.sendApiReturn(res, {});
+		apiHelper.sendReturn(res, {});
 	});
 });
 
@@ -136,7 +136,7 @@ router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthentication
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthNeeded, (req, res) => {
 	adminUser.adminUserModel.find({}, (err, admins) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
@@ -148,7 +148,7 @@ router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthenticationRe
 			output.push(admins[i]);
 		}
 
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			admins: output
 		});
 	});
@@ -167,8 +167,8 @@ router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthenticationRe
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (req, res) => {
-	apiHelper.sendApiReturn(res, {
+router.get('/admin/api/v1/check', adminUserMiddleware.authOptional, (req, res) => {
+	apiHelper.sendReturn(res, {
 		isAuthed: req.user ? true : false,
 		role: req.user ? (req.user.role ? req.user.role : undefined) : undefined
 	});
@@ -185,9 +185,9 @@ router.get('/admin/api/v1/check', adminUserMiddleware.authenticationOptional, (r
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
+router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthNeeded, (req, res) => {
 	req.logout();
-	apiHelper.sendApiReturn(res, {});
+	apiHelper.sendReturn(res, {});
 });
 
 /* 
@@ -210,13 +210,13 @@ router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthenticationRequir
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
 	const { content, title, author, category, short } = req.body;
 	const newBlogPost = new blogPost.blogPostModel({
-		content: blogPost.blogPostModel.convertMarkdownToHtml(content),
+		content: blogPost.blogPostModel.markdownToHtml(content),
 		name: title,
 		short,
 		meta: {
@@ -232,7 +232,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 	
 	// saving post to database
 	newBlogPost.save().then((post) => {
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	}).catch((rejection) => {
@@ -262,7 +262,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -276,7 +276,7 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationReq
 	}, (err, post) => {
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
 
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	});
@@ -299,7 +299,7 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationReq
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -312,7 +312,7 @@ router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthenticationRe
 	
 	// saving author to database
 	newAuthor.save().then((author) => {
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			id: author.id
 		});
 	}).catch((rejection) => {
@@ -340,7 +340,7 @@ router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthenticationRe
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -354,7 +354,7 @@ router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthenticationR
 	}, (err, author) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			id: author.id
 		});
 	});
@@ -377,7 +377,7 @@ router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthenticationR
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -401,7 +401,7 @@ router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthentication
 	
 	// saving progress to database
 	newProgress.save().then((progress) => {
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			id: progress.id
 		});
 	}).catch((rejection) => {
@@ -429,7 +429,7 @@ router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthentication
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticationRequired, function (req, res) {
+router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -453,7 +453,7 @@ router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticatio
 	}, (err, progress) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			id: progress.id
 		});
 	});

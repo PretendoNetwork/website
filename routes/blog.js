@@ -21,12 +21,12 @@ router.get('/news/:date/:title', (req, res) => {
 			// error exists or no post exists with the date and name
 			if (err || !post) {
 				console.log('error: ' + err + ' and post: ' + post);
-				return utilHelper.sendDefault404(res);
+				return utilHelper.send404(res);
 			}
 			
 			// render blogpost
-			post.getBlogPostTemplateReady((err, postTemplate) => {
-				if (err) return utilHelper.sendDefault404(res);
+			post.postTemplate((err, postTemplate) => {
+				if (err) return utilHelper.send404(res);
 				res.render('post', {
 					post: postTemplate
 				});
@@ -34,7 +34,7 @@ router.get('/news/:date/:title', (req, res) => {
 		});
 	} else {
 		// params are incorrect
-		utilHelper.sendDefault404(res);
+		utilHelper.send404(res);
 	}
 });
 
@@ -43,13 +43,13 @@ router.get('/news', (req, res) => {
 	// sort blogposts on date descending
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err || !posts) {
-			return utilHelper.sendDefault404(res);
+			return utilHelper.send404(res);
 		}
 
 		// makes posts template ready
 		const postCollection = [];
 		for (let i = 0, l = posts.length; i < l; i++) {
-			postCollection.push(posts[i].getBlogPostShortTemplateReady());
+			postCollection.push(posts[i].postShortTemplate());
 		}
 
 		res.render('post-collection', {
@@ -74,7 +74,7 @@ router.get('/api/v1/listauthors', function (req, res) {
 	postAuthorModel.find({}, (err, authors) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			authorList: authors
 		});
 	});
@@ -96,7 +96,7 @@ router.get('/api/v1/listblog', function (req, res) {
 	blogPostModel.find({}, (err, posts) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendApiReturn(res, {
+		apiHelper.sendReturn(res, {
 			postList: posts
 		});
 	});

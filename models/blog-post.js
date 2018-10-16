@@ -56,10 +56,7 @@ const blogPostSchema = new mongoose.Schema({
 	}
 });
 
-blogPostSchema.methods.getContentAsHTML = function() {
-	return this.content;
-};
-blogPostSchema.methods.getBlogPostTemplateReady = function(callback) {
+blogPostSchema.methods.postTemplate = function(callback) {
 	const self = this;
 	postAuthor.findById(this.meta.author, function (err, author) {
 		callback(err, {
@@ -67,11 +64,11 @@ blogPostSchema.methods.getBlogPostTemplateReady = function(callback) {
 			title: self.name,
 			date: self.meta.date,
 			category: self.meta.category,
-			author: author.getPostAuthorTemplateReady()
+			author: author.authorTemplate()
 		});
 	});
 };
-blogPostSchema.methods.getBlogPostShortTemplateReady = function() {
+blogPostSchema.methods.postShortTemplate = function() {
 	return {
 		content: this.short,
 		title: this.name,
@@ -79,7 +76,7 @@ blogPostSchema.methods.getBlogPostShortTemplateReady = function() {
 	};
 };
 
-blogPostSchema.statics.convertMarkdownToHtml = function(markdown) {
+blogPostSchema.statics.markdownToHtml = function(markdown) {
 	return converter.makeHtml(markdown);
 };
 blogPostSchema.statics.getPost = function(date, slug, callback) {
@@ -89,12 +86,12 @@ blogPostSchema.statics.getPost = function(date, slug, callback) {
 	}, callback);
 };
 // not tested
-blogPostSchema.statics.getLatestBlogPostShortTemplateReady = function(amount, callback) {
+blogPostSchema.statics.latestPostsShortTemlate = function(amount, callback) {
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err) return callback(err);
 		let out = [];
 		for (let i = 0, l = posts.length; i < ( amount+1 < l ? amount+1 : l); i++)
-			out += posts[i].getBlogPostShortTemplateReady();
+			out += posts[i].postShortTemplate();
 		callback(err, out);
 	});
 };

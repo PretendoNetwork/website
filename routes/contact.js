@@ -56,7 +56,7 @@ router.post('/api/v1/sendmessage', function (req, res) {
 			}
 		}, () => {
 			// sends success
-			apiHelper.sendApiReturn(res, {}); 
+			apiHelper.sendReturn(res, {}); 
 		});
 
 		// error handling

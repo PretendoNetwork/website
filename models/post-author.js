@@ -27,7 +27,7 @@ const postAuthorSchema = new mongoose.Schema({
 	}
 });
 
-postAuthorSchema.methods.getPostAuthorTemplateReady = function() {
+postAuthorSchema.methods.authorTemplate = function() {
 	return {
 		name: this.name,
 		description: this.description,
