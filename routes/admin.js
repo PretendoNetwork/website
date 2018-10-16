@@ -215,7 +215,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 		meta: {
 			author,
 			category,
-			urlTitle: title
+			slug: title
 				.trim()
 				.replace(/\s/g, '-')
 				.replace(/[^A-z0-9-]/g, '')
@@ -226,7 +226,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 	newBlogPost.save().then((post) => {
 		// successfull
 		common.sendApiReturn(res, {
-			url: common.convertDateToString(post.meta.date) + '/' + post.meta.urlTitle
+			url: common.convertDateToString(post.meta.date) + '/' + post.meta.slug
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
@@ -269,7 +269,7 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationReq
 	}, (err, post) => {
 		if (err) return common.sendApiError(res, 500, [err]);
 		common.sendApiReturn(res, {
-			url: common.convertDateToString(post.meta.date) + '/' + post.meta.urlTitle
+			url: common.convertDateToString(post.meta.date) + '/' + post.meta.slug
 		});
 	});
 });

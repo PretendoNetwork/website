@@ -30,7 +30,7 @@ const blogPostSchema = new mongoose.Schema({
 		required: [true, 'Short version is required']
 	},
 	meta: {
-		urlTitle: {
+		slug: {
 			type: String,
 			required: [true, 'Author is required'],
 			trim: true
@@ -73,17 +73,17 @@ blogPostSchema.methods.getBlogPostShortTemplateReady = function() {
 	return {
 		content: this.short,
 		title: this.name,
-		url: common.convertDateToString(this.meta.date) + '/' + this.meta.urlTitle
+		url: common.convertDateToString(this.meta.date) + '/' + this.meta.slug
 	};
 };
 
 blogPostSchema.statics.convertMarkdownToHtml = function(markdown) {
 	return converter.makeHtml(markdown);
 };
-blogPostSchema.statics.getPost = function(date, urlTitle, callback) {
+blogPostSchema.statics.getPost = function(date, slug, callback) {
 	return blogPostModel.findOne({
 		'meta.date': date,
-		'meta.urlTitle': urlTitle
+		'meta.slug': slug
 	}, callback);
 };
 // not tested
