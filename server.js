@@ -45,6 +45,7 @@ app.use(session({
 		collection: 'sessions'
 	})
 }));
+// setups up passportjs authentication
 passportconfig(app);
 
 // handlebars templating setup

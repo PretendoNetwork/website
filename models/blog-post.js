@@ -21,10 +21,12 @@ const blogPostSchema = new mongoose.Schema({
 		required: [true, 'Content is required.'],
 		trim: true
 	},
+	// title of blog post
 	name: {
 		type: String,
 		required: [true, 'Name is required']
 	},
+	// short description of blog post
 	short: {
 		type: String,
 		required: [true, 'Short version is required']

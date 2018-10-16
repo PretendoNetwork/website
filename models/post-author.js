@@ -20,6 +20,7 @@ const postAuthorSchema = new mongoose.Schema({
 		required: [true, 'Description is required'],
 		trim: true
 	},
+	// profile picture image link
 	image: {
 		type: String,
 		trim: true

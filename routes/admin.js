@@ -1,7 +1,7 @@
 /*
 
 admin.js -
-file for handling admin panel routes
+file for handling admin api.
 
 */
 
@@ -11,12 +11,14 @@ const passport = require('passport');
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
 const adminUserMiddleware = require('../middleware/admin-authentication');
+
+// database models
 const adminUser = require('../models/admin-user');
 const blogPost = require('../models/blog-post');
 const postAuthor = require('../models/post-author');
 const progressList = require('../models/progress-list');
 
-// display admin panel
+// renders admin.hbs
 router.get('/admin', (req, res) => {
 	res.render('admin');
 });
@@ -27,18 +29,19 @@ router.get('/admin', (req, res) => {
 *	signs admin user in
 *
 *	post {
-*		username - username of admin account
-*		password - password of admin account
+*		username
+*		password
 *	}
 *	return {
 *		code: http code
-*		success: boolean - true if login succesfull
-*		username: undefined | string - username if login was successfull
+*		success: boolean
+*		username: undefined | string - only if login was successfull
 *		role: undefined | string - role of user if login was successfull
 *		errors: Strings[messages] - not yet :(
 *	}
 */
 // TODO make login somehow display errors in correct format.
+// middleware does the authentication work. this just returns a success
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
 	apiHelper.sendApiReturn(res, {
 		username: req.user.username,
@@ -77,8 +80,8 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 		password
 	});
 	
+	// saving to database
 	newUser.save().then(() => {
-		// successfull
 		apiHelper.sendApiReturn(res, {
 			username: req.user.username,
 			role: req.user.role ? req.user.role : undefined
@@ -108,6 +111,7 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthenticationReq
 */
 router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthenticationRequired, (req, res) => {
 	if (!req.body) {
+		// no post body
 		apiHelper.sendApiGenericError(res);
 		return;
 	}
@@ -137,11 +141,13 @@ router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthenticationRe
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
 
+		// formats admin list and removes password hash
 		const output = [];
 		for (let i = 0, l = admins.length; i < l; i++) {
 			admins[i].password = undefined;
 			output.push(admins[i]);
 		}
+
 		apiHelper.sendApiReturn(res, {
 			admins: output
 		});
@@ -216,7 +222,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 		meta: {
 			author,
 			category,
-			slug: title
+			slug: title // convert title to slug
 				.trim()
 				.replace(/\s/g, '-')
 				.replace(/[^A-z0-9-]/g, '')
@@ -224,8 +230,8 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthenticationRequ
 		}
 	});
 	
+	// saving post to database
 	newBlogPost.save().then((post) => {
-		// successfull
 		apiHelper.sendApiReturn(res, {
 			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
 		});
@@ -269,6 +275,7 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthenticationReq
 		'meta.category': category
 	}, (err, post) => {
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
+
 		apiHelper.sendApiReturn(res, {
 			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
 		});
@@ -303,8 +310,8 @@ router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthenticationRe
 		image
 	});
 	
+	// saving author to database
 	newAuthor.save().then((author) => {
-		// successfull
 		apiHelper.sendApiReturn(res, {
 			id: author.id
 		});
@@ -339,6 +346,7 @@ router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthenticationR
 
 	const { id, name, description, image } = req.body;
 
+	// updating author in database
 	postAuthor.postAuthorModel.findByIdAndUpdate(id, {
 		name,
 		description,
@@ -373,6 +381,7 @@ router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthentication
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
+	// parses state and isGame to be valid
 	const { title, description } = req.body;
 	let { state } = req.body;
 	let isGame = false;
@@ -390,8 +399,8 @@ router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthentication
 		state
 	});
 	
+	// saving progress to database
 	newProgress.save().then((progress) => {
-		// successfull
 		apiHelper.sendApiReturn(res, {
 			id: progress.id
 		});
@@ -424,6 +433,7 @@ router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticatio
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
+	// parsing state and isGame to be valid
 	const { title, description, id } = req.body;
 	let { state } = req.body;
 	let isGame = false;
@@ -434,6 +444,7 @@ router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticatio
 		isGame = true;
 	}
 
+	// updating progress in database
 	progressList.progressListModel.findByIdAndUpdate(id, {
 		title,
 		description,
@@ -448,7 +459,7 @@ router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthenticatio
 	});
 });
 
-// configure api 404
+// api 404
 router.use('/admin/api', (req, res) => {
 	apiHelper.sendApi404(res);
 });

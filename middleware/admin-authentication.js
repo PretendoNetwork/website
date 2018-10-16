@@ -17,7 +17,7 @@ function adminAuthenticationRequired(req, res, next) {
 	}
 }
 
-// middleware to use if authentication
+// middleware to use if authentication is optional
 function authenticationOptional(req, res, next) {
 	return next();
 }

@@ -15,7 +15,7 @@ const progressListSchema = new mongoose.Schema({
 		default: 0
 	},
 	isGame: {
-		type: Boolean, /* true - is game list, false - is backend service */
+		type: Boolean, /* true - is game, false - is backend service */
 		required: [true, 'isGame is required']
 	},
 	title: {

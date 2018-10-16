@@ -18,6 +18,7 @@ router.get('/progress', (req, res) => {
 	progressListModel.find({}, (err, progress) => {
 		if (err) return utilHelper.sendDefault404(res);
 		
+		// filtering games and backend
 		const games = progress.filter(i => i.isGame);
 		const backends = progress.filter(i => !i.isGame);
 

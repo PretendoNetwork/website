@@ -14,7 +14,7 @@ const postAuthorModel = require('../models/post-author').postAuthorModel;
 
 // display single blog post
 router.get('/news/:date/:title', (req, res) => {
-	// date format DD-MM-YYY
+	// date format YYYY-MM-DD
 	if (/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(req.params.date) && /([a-z]|[0-9]|-)+/.test(req.params.title.toLowerCase())) {
 		// params are correct format
 		blogPostModel.getPost(new Date(req.params.date), req.params.title.toLowerCase(), (err, post) => {
@@ -40,11 +40,13 @@ router.get('/news/:date/:title', (req, res) => {
 
 // display latest blogposts
 router.get('/news', (req, res) => {
+	// sort blogposts on date descending
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err || !posts) {
 			return utilHelper.sendDefault404(res);
 		}
 
+		// makes posts template ready
 		const postCollection = [];
 		for (let i = 0, l = posts.length; i < l; i++) {
 			postCollection.push(posts[i].getBlogPostShortTemplateReady());

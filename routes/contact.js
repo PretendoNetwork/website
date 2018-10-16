@@ -35,13 +35,15 @@ router.get('/contact', (req, res) => {
 router.post('/api/v1/sendmessage', function (req, res) {
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
+
 	const { email, subject, message } = req.body;
 	if (email && subject && message && message.length < 2000) {
-		console.log('checks passed');
+		// request body has everything
 		const postData = JSON.stringify({
 			content: 'email: ' + email + ' \n subject: ' + subject + ' \n\n' + message
 		});
 		
+		// request object
 		const request = https.request({
 			hostname: config.contactWebhook.host,
 			port: config.contactWebhook.port,
@@ -53,14 +55,17 @@ router.post('/api/v1/sendmessage', function (req, res) {
 				'Content-Length': postData.length
 			}
 		}, () => {
+			// sends success
 			apiHelper.sendApiReturn(res, {}); 
 		});
 
+		// error handling
 		request.on('error', (e) => {
 			apiHelper.sendApiGenericError(res);
 			console.log('request errored' + e);
 		});
 
+		// write post data to request
 		request.write(postData);
 		request.end();
 	} else {

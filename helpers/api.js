@@ -1,3 +1,10 @@
+/*
+
+api.js -
+common api returns
+
+*/
+
 // use for any api return. it has basic layout used for every return.
 function sendApiReturn(res, data, errors) {
 	res.status(200).json(
