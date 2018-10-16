@@ -7,7 +7,6 @@ file containing the model file for a blog post
 
 // imports
 const mongoose = require('mongoose');
-const common = require('../helpers/common');
 const postAuthor = require('./post-author').postAuthorModel;
 const showdown  = require('showdown');
 const moment = require('moment');

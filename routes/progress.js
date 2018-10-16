@@ -16,7 +16,7 @@ const progressListModel = require('../models/progress-list').progressListModel;
 router.get('/progress', (req, res) => {
 	
 	progressListModel.find({}, (err, progress) => {
-		if (err) return apiHelper.sendDefault404(res);
+		if (err) return utilHelper.sendDefault404(res);
 		
 		const games = progress.filter(i => i.isGame);
 		const backends = progress.filter(i => !i.isGame);
