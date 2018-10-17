@@ -1,0 +1,52 @@
+{
+	"nav": {
+		"brand": "Pretendo",
+		"links": {
+			"news": "News",
+			"progress": "Progress",
+			"contact": "Contact",
+			"login": "Login",
+			"register": "Register",
+			"logout": "Logout"
+		}
+	},
+	"about": {
+		"title": "About",
+		"text": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS family of console games to their fullest capacity."
+	},
+	"credits": {
+		"title": "Credits"
+	},
+	"contact": {
+		"title": "Contact Us",
+		"button_text": "Send Message",
+		"email_placeholder": "email@provider.com",
+		"subject_placeholder": "Subject",
+		"message_placeholder": "Message"
+	},
+	"login_card": {
+		"title": "Login",
+		"email_text": "Username or Email",
+		"password_text": "Password",
+		"email_placeholder": "email@provider.com",
+		"password_placeholder": "••••••••",
+		"button_text": "Sign In"
+	},
+	"register_card": {
+		"title": "Register",
+		"email_text": "Email Address",
+		"username_text": "Username",
+		"password_text": "Password",
+		"password_confirm_text": "Confirm Password",
+		"email_placeholder": "email@provider.com",
+		"password_placeholder": "••••••••",
+		"caption": "Sign Up"
+	},
+	"errors": {
+		"invalid_login": "Invalid username/password combination",
+		"account_exists": "An account with that username already exists!"
+	},
+	"footer": {
+		"text": "Copyright 2018 PretendoNetwork - Site designed and developed by MrJVS and Jip"
+	}
+}
