@@ -54,6 +54,7 @@ PNIDSchema.pre('save', function(next) {
 		return next();
 	}
 
+	// TODO make security all weird with double hash.
 	// hashing
 	bcrypt.hash(this.get('password'), 10, (err, hash) => {
 		if (err) {

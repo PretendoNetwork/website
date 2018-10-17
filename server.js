@@ -29,6 +29,7 @@ connection.on('error', console.error.bind(console, 'connection error:'));
 
 // setup express
 const app = express();
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
 	secret: config.secrets.session,
@@ -62,7 +63,8 @@ const locations = {
 	posts: require('./routes/blog'),
 	admin: require('./routes/admin'),
 	contact: require('./routes/contact'),
-	progress: require('./routes/progress')
+	progress: require('./routes/progress'),
+	pnid: require('./routes/pnid')
 };
 
 // static files
@@ -73,6 +75,7 @@ app.use('/', locations.contact);
 app.use('/', locations.posts);
 app.use('/', locations.admin);
 app.use('/', locations.progress);
+app.use('/', locations.pnid);
 app.use((req, res) => {
 	utilHelper.send404(res);
 });
