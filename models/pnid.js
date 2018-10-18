@@ -34,6 +34,10 @@ const PNIDSchema = new mongoose.Schema({
 	pnid: {
 		key: {
 			type: String // not sure what this should be
+		},
+		pid: {
+			type: String,
+			unique: true
 		}
 	},
 	consoles: []
@@ -48,15 +52,14 @@ function validateEmail(email) {
 PNIDSchema.plugin(uniqueValidator, {message: '{PATH} already in use.'});
 
 // hashing password
-PNIDSchema.pre('save', function(next) {
+PNIDSchema.pre('save', async function(next) {
 	// only if modified
 	if (!this.isModified('password')) {
 		return next();
 	}
-
-	// TODO make security all weird with double hash.
 	// hashing
-	bcrypt.hash(this.get('password'), 10, (err, hash) => {
+	const primaryhash = PNIDModel.hashPasswordPrimary(this.get('password'), this.get('pid'));
+	bcrypt.hash(primaryhash, 10, (err, hash) => {
 		if (err) {
 			return next(err);
 		}
@@ -70,6 +73,41 @@ PNIDSchema.statics.findByEmail = function(username) {
 	return this.model('pnid').findOne({
 		username
 	});
+};
+
+PNIDSchema.statics.hashPasswordPrimary = function(password, pid) {
+	const buff1 = require('python-struct').pack('<I', pid);
+	const buff2 = Buffer.from(password).toString('ascii');
+
+	const unpacked = new Buffer(bufferToHex(buff1) + '\x02eCF' + buff2, 'ascii');
+	const hashed = require('crypto').createHash('sha256').update(unpacked).digest().toString('hex');
+
+	return hashed;
+};
+
+function bufferToHex(buff) {
+	let result = '';
+	const arr = buff.toString('hex').match(/.{1,2}/g);
+	for (let i=0;i<arr.length;i++) {
+		const char = arr[i];
+		result += String.fromCharCode(parseInt(char, 16));
+	}
+	result.replace(/\\/g, '&#92;');
+	return result;
+}
+
+PNIDSchema.statics.generatePID  = async function() {
+	// Quick, dirty fix for PIDs
+	const pid = Math.floor(Math.random() * (4294967295 - 1000000000) + 1000000000);
+	const does_pid_inuse = await PNIDModel.findOne({
+		'pnid.pid': pid
+	});
+
+	if (does_pid_inuse) {
+		return await PNIDModel.generatePID();
+	}
+
+	return pid;
 };
 
 const PNIDModel = mongoose.model('pnid', PNIDSchema);

@@ -26,9 +26,9 @@ router.get('/pnid/login', (req, res) => {
 });
 
 /* 
-*	/admin/api/v1/login
+*	/api/v1/login
 *
-*	signs admin user in
+*	signs user in
 *
 *	post {
 *		email
@@ -53,24 +53,22 @@ router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (re
 });
 
 /* 
-*	/admin/api/v1/register
-*	- requires admin auth
+*	/api/v1/register
 *
 *	registers a new admin user
 *
 *	post {
-*		username - username of new admin account
-*		password - password of new admin account
+*		username
+*		password
 *	}
 *	return {
 *		code: httpcode
 *		success: boolean - true if register was successull
-*		username: undefined | string - username if register was successfull
-*		role: undefined | string - role of user if register was successfull
+*		username: undefined | string - username if register was successfullW
 *		errors: Strings[messages]
 *	}
 */
-router.post('/api/v1/register', recaptcha.middleware.verify, (req, res) => {
+router.post('/api/v1/register', recaptcha.middleware.verify, async (req, res) => {
 	if (!req.body) {
 		// no post body
 		apiHelper.sendApiGenericError(res);
@@ -84,7 +82,11 @@ router.post('/api/v1/register', recaptcha.middleware.verify, (req, res) => {
 	const { email, password } = req.body;
 	const newUser = new PNID.PNIDModel({
 		email,
-		password
+		password,
+		pnid: {
+			key: 'abcd',
+			pid: PNID.PNIDModel.generatePID()
+		}
 	});
 
 	// TODO verify password
