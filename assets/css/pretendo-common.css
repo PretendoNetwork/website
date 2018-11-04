@@ -1,0 +1,177 @@
+/*******************************************************/
+/* copyrighted by pretendo.                            */
+/* website design by jipfr, mrjvs and benthehuman      */
+/*******************************************************/
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+/* setup */
+body {
+	margin: 0;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	background: #eeeeef;
+	overflow-x: hidden;
+}
+
+/* common header */
+nav.navWrapper {
+	background: #673db6;
+	color: white;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+nav.navWrapper .navItem {
+	flex: 0;
+	padding: 20px;
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	font-size: 1em;
+}
+nav.navWrapper .navItem.brand {
+	font-weight: 600;
+	background: #5231a7;
+	padding: 20px 40px;
+	color: white;
+}
+nav.navWrapper .navSpread {
+	flex: 1;
+}
+
+/* content wrapper */
+.contentWrapper {
+	position: relative;
+	width: 100%;
+}
+nav.navWrapper ~ .contentWrapper:nth-child(2) {
+	margin-top: 3.7rem;
+}
+.contentWrapper .bgExtrude {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #673db6;
+	height: 10rem;
+	z-index: 2;
+}
+.contentWrapper.bgLines::before, .contentWrapper.bgLines::after {
+	content: "";
+	position: absolute;
+	z-index: 3;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 100vh 0 0 200vw;
+	border-color: transparent transparent transparent #673db6;
+	left: 0;
+	bottom: 0;
+}
+.contentWrapper.bgLines::after {
+	border-width: 0 0 100vh 200vw;
+	border-color: transparent transparent #9575CD transparent;
+	right: 0;
+	left: auto;
+	z-index: 2;
+}
+.contentWrapper > * {
+	z-index: 3;
+	position: relative;
+}
+
+/* footer */
+footer {
+	background: #673db6;
+	padding: 2em 1em;
+}
+footer .content {
+	background: white;
+	border-radius: 5px;
+	padding: 1em;
+	text-align: center;
+	box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.07);
+	color: #707070;
+}
+footer .content span {
+	color: black;
+}
+
+/* big card */
+section.bigCardWrapper {
+	padding: 20px;
+}
+section.bigCardWrapper .bigCard {
+	max-width: 80vw;
+	margin: auto;
+	background-color: white;
+	box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.07);
+	padding: 5vw 12vw;
+	box-sizing: border-box;
+	color: #707070;
+}
+section.bigCardWrapper .bigCard.lessPadding {
+	padding: 5vw;
+}
+section.bigCardWrapper .bigCard.bigCardPartWrapper {
+	display: flex;
+}
+
+
+/* text styles */
+.txt-highlight {
+	color: #673db6;
+	margin-bottom: 0;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.txt-title {
+	color: #191919;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 2.5em;
+}
+.txt-smallHeading {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #383838;
+}
+
+/* components - buttons */
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	font-family: 'Roboto';
+	font-size: 1em;
+}
+button.btn {
+	background: #673db6;
+	color: white;
+	padding: 12px 80px;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.17);
+}
+button.btn-alt {
+	background: white;
+	padding: 10px 45px;
+	color: #673db6;
+	border: 1px solid #673db6;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
+	position: absolute;
+	bottom: 20px;
+}
+
+/* helper classes */
+.cont-flex {
+	display: flex;
+}
+.flex-item {
+	flex: 1;
+}

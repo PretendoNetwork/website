@@ -1,0 +1,80 @@
+/* home header */
+
+header {
+    text-align: center;
+    color: white;
+    background: #673db6;
+    padding: 5rem;
+}
+header hr {
+    width: 175px;
+	height: 2px;
+    background: white;
+    display: inline-block;
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}
+header h1 {
+    font-size: 3.5em;
+	font-weight: 400;
+	letter-spacing: 0.25em;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+header h3 {
+    font-weight: normal;
+    max-width: 80%;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+/* profiles */
+.cardProfiles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.profile {
+	min-width: 250px;
+	width: 50%;
+	max-width: 550px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.profile .profileIcon {
+    margin-right: 10px;
+    width: 80px; height: 80px;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.profileText {
+	width: calc(100% - 130px);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profileText h2 {
+    margin: 0;
+}
+.profileText p {
+	margin-top: 5px;
+}
+
+/* news cards */
+.smallCard {
+	width: 100%;
+    max-width: 250px;
+    height: 350px;
+	padding: 20px;
+	border: 1px solid #9474cc; border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    position: relative;
+    margin-left: 3em;
+}
+.smallCard h3 {
+	font-size: 1.5em !important;
+	margin: 0;
+}

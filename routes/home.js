@@ -14,5 +14,10 @@ router.get('/', (req, res) => {
 	res.render('home');
 });
 
+router.get('/newhome', (req, res) => {
+	res.render('newhome');
+});
+
+
 // export the router
 module.exports = router;
