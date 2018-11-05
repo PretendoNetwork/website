@@ -32,7 +32,14 @@ nav.navWrapper .navItem {
 	color: rgba(255, 255, 255, 0.8);
 	text-decoration: none;
 	font-size: 1em;
+	cursor: pointer;
 }
+nav.navWrapper .navItem:hover {
+	color: white;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.07);
+}
+
 nav.navWrapper .navItem.brand {
 	font-weight: 600;
 	background: #5231a7;
@@ -41,6 +48,26 @@ nav.navWrapper .navItem.brand {
 }
 nav.navWrapper .navSpread {
 	flex: 1;
+}
+
+/* mobile nav */
+nav.navWrapper .navItem.hamburger {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+@media screen and (max-width: 720px) {
+	nav.navWrapper {
+		flex-direction: column;
+		box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.07);
+	}
+	nav.navWrapper .navItem:not(.brand) {
+		display: none;
+	}
+	nav.navWrapper.open .navItem, nav.navWrapper .navItem.hamburger {
+		display: block;
+	}
 }
 
 /* content wrapper */
