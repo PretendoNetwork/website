@@ -65,9 +65,6 @@ header h3 {
 
 /* news cards */
 .smallCard {
-	width: 100%;
-    max-width: 250px;
-    height: 350px;
 	padding: 20px;
 	border: 1px solid #9474cc; border-radius: 10px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
@@ -77,4 +74,45 @@ header h3 {
 .smallCard h3 {
 	font-size: 1.5em !important;
 	margin: 0;
+}
+
+/* specific */
+.smallCardWidth {
+    width: 100%;
+	max-width: 300px;
+}
+
+@media screen and (max-width: 1050px) {
+	.bigCard.cont-flex {
+        flex-direction: column;
+    }
+    .bigCard > .flex-item {
+        margin-bottom: 3em;
+    }
+    .smallCardWidth .smallCard {
+        margin-left: 0;
+        margin: 1em;
+    }
+    .bigCard.cont-flex > .cont-flex {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 888px) {
+	.profile {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .smallCard {
+        width: 100%;
+        max-width: 250px;
+    }
+    .smallCardWidth {
+        
+    }
+    .bigCard.cont-flex > .cont-flex {
+        flex-direction: column;
+    }
 }
