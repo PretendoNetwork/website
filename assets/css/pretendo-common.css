@@ -189,7 +189,7 @@ section.bigCardWrapper .bigCard.bigCardPartWrapper {
 }
 
 /* components - buttons */
-button {
+button, .btn, .btn-alt {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -198,14 +198,14 @@ button {
 	font-size: 1em;
 	cursor: pointer;
 }
-button.btn {
+.btn, button {
 	background: #673db6;
 	color: white;
 	padding: 12px 80px;
 	border-radius: 10px;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.17);
 }
-button.btn-alt {
+.btn-alt {
 	background: white;
 	padding: 10px 45px;
 	color: #673db6;
@@ -213,8 +213,9 @@ button.btn-alt {
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 	border-radius: 5px;
 }
-button.btn:hover, button.btn-alt:hover {
+.btn:hover, button:hover, .btn-alt:hover {
 	background: #553099;
+	color: white;
 }
 
 /* components - inputs */

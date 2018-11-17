@@ -81,10 +81,10 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthNeeded, (req,
 	});
 	
 	// saving to database
-	newUser.save().then(() => {
+	newUser.save().then((user) => {
 		apiHelper.sendReturn(res, {
-			username: req.user.username,
-			role: req.user.role ? req.user.role : undefined
+			username: user.username,
+			role: user.role ? user.role : undefined
 		});
 		return;
 	}).catch((rejection) => {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{> head }}
+        {{> head-common }}
     <body>
-        {{> navbar }}
-
+        {{> nav-default }}
+        <div>
         <h1>Admin panel here</h1>
         <h2>register</h2>
         <form action="/admin/api/v1/register" method="POST">
@@ -122,6 +122,6 @@
         <br>    
         <a href="/admin/api/v1/logout">Logout</a>
 
-        {{> footer }}
+        {{> footer-default }}
     </body>
 </html>

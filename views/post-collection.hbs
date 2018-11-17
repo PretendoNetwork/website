@@ -1,7 +1,29 @@
-<h1>Latest posts</h1>
-{{#each posts }}
-<strong>{{ this.title }}</strong>
-<p>{{ this.content }}</p>
-<a href="{{ this.url }}">link</a>
-<br><br>
-{{/each}}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> head-common }}
+        <!-- page specific -->
+        <link rel="stylesheet" href="/assets/css/pretendo-news.css">
+    </head>
+    <body class="flex">
+        {{> nav-default }}
+        <div class="contentWrapper bgLinesSmall">
+            <div class="bgExtrude"></div>
+            <section class="bigCardWrapper">
+                <div class="bigCard">
+                    <p class="txt-highlight">Litteral fuck ton</p>
+				    <h1 class="txt-title">All updates</h1><!--
+                    {{#each posts }}
+                    --><article class="smallCard">
+                        <h3 class="txt-smallHeading">{{ this.title }}</h3>
+                        <p>{{ this.content }}</p>
+                        <a class="btn-alt" href="{{ this.url }}">Read more</a>
+                    </article><!--
+                    {{/each}}
+                    -->
+                </div>
+            </section>
+
+        {{> footer-default }}
+    </body>
+</html>
