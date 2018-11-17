@@ -14,6 +14,16 @@ body {
 	background: #eeeeef;
 	overflow-x: hidden;
 }
+body.flex {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body.flex .contentWrapper {
+	flex: 1;
+}
+
 
 /* common header */
 nav.navWrapper {
@@ -87,7 +97,8 @@ nav.navWrapper ~ .contentWrapper:nth-child(2) {
 	height: 10rem;
 	z-index: 2;
 }
-.contentWrapper.bgLines::before, .contentWrapper.bgLines::after {
+.contentWrapper.bgLines::before, .contentWrapper.bgLines::after,
+.contentWrapper.bgLinesSmall::before, .contentWrapper.bgLinesSmall::after {
 	content: "";
 	position: absolute;
 	z-index: 3;
@@ -99,12 +110,18 @@ nav.navWrapper ~ .contentWrapper:nth-child(2) {
 	left: 0;
 	bottom: 0;
 }
-.contentWrapper.bgLines::after {
+.contentWrapper.bgLines::after, .contentWrapper.bgLinesSmall::after {
 	border-width: 0 0 100vh 200vw;
 	border-color: transparent transparent #9575CD transparent;
 	right: 0;
 	left: auto;
 	z-index: 2;
+}
+.contentWrapper.bgLinesSmall::after {
+	border-width: 0 0 18vh 150vw;
+}
+.contentWrapper.bgLinesSmall::before {
+	border-width: 20vh 0 0 150vw;
 }
 .contentWrapper > * {
 	z-index: 3;
@@ -167,6 +184,9 @@ section.bigCardWrapper .bigCard.bigCardPartWrapper {
 	font-weight: bold;
 	color: #383838;
 }
+.txt-center {
+	text-align: center;
+}
 
 /* components - buttons */
 button {
@@ -176,6 +196,7 @@ button {
 	border-radius: 0;
 	font-family: 'Roboto';
 	font-size: 1em;
+	cursor: pointer;
 }
 button.btn {
 	background: #673db6;
@@ -191,6 +212,43 @@ button.btn-alt {
 	border: 1px solid #673db6;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 	border-radius: 5px;
+}
+button.btn:hover, button.btn-alt:hover {
+	background: #553099;
+}
+
+/* components - inputs */
+
+input::placeholder, textarea::placeholder {
+	color: #bebebe;
+	opacity: 1;
+}
+
+input[type="text"], textarea {
+	display: inline-block;
+	width: 100%;
+	padding: 1em 2em;
+	border-style: solid;
+	border-color: rgb(165, 165, 165);
+	border-width: 1px;
+	border-radius: 8px;
+	margin: 1em 0;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.07);
+	transition: border-color .1s;
+	box-sizing: border-box;
+	resize: none;
+}
+
+textarea {
+	height: 12rem;
+}
+
+input[type="text"]:focus, textarea:focus {
+	border-color: rgb(103, 61, 182);
+	box-shadow: 0 3px 10px 0px rgba(103, 61, 182, 0.07);
 }
 
 /* helper classes */
