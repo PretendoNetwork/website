@@ -10,6 +10,17 @@ function send404(res) {
 	res.status(404).send('404');
 }
 
+function templateReadyUser(req) {
+	// normal user logged in
+	const isLoggedIn = req.user ? req.user.role != 'admin' : false;
+	const user = req.user;
+	return {
+		isLoggedIn,
+		user
+	};
+}
+
 module.exports = {
-	send404
+	send404,
+	templateReadyUser
 };

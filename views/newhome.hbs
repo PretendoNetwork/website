@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <!-- meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Pretendo</title>
-        <!-- css files -->
-        <link rel="stylesheet" href="/assets/css/pretendo-common.css">
+        {{> head-common }}
+        <!-- page specific -->
         <link rel="stylesheet" href="/assets/css/pretendo-home.css">
-        <!-- scripts -->
-        <script src="/assets/js/nav.js" defer></script>
 	</head>
 	<body>
-		<nav class="navWrapper" id="nav">
-			<a class="navItem brand" href="/">PRETENDO</a>
-			<a class="navItem" href="#">News</a>
-			<a class="navItem" href="#">Progress</a>
-			<a class="navItem" href="#">Contact</a>
-            <div class="navSpread"></div>
-            <a class="navItem" href="#">smth</a>
-            <a class="navItem hamburger" id="navToggle">ICON</a>
-			</div>
-        </nav>
-        <div class="contentWrapper">
-            <header>
-                <h1>Pretendo</h1>
-                <hr>
-				<h3>A work-in-progress Nintendo Service replacement for Wii U and 3DS. Fully open source.</h3>
-            </header>
+		{{> nav-default }}
+        <header>
+            <h1>Pretendo</h1>
+            <hr>
+			<h3>A work-in-progress Nintendo Service replacement for Wii U and 3DS. Fully open source.</h3>
+        </header>
         </div>
         <div class="contentWrapper bgLines">
             <div class="bgExtrude"></div>
@@ -123,11 +106,6 @@
                     </div>
                 </div>
             </section>
-        </div>
-        <footer>
-            <div class="content">
-                <p>copyright <span>2018</span> PretendoNetwork &mdash; Website designed by mrjvs, jipfr and benthehuman</p>
-            </div>
-        </footer>
+        {{> footer-default }}
 	</body>
 </html>
