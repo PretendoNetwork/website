@@ -30,39 +30,6 @@ header h3 {
     font-size: 1.1rem;
 }
 
-/* profiles */
-.cardProfiles {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.profile {
-	min-width: 250px;
-	width: 50%;
-	max-width: 550px;
-    margin-bottom: 10px;
-    display: flex;
-}
-.profile .profileIcon {
-    margin-right: 10px;
-    width: 80px; height: 80px;
-	border-radius: 50%;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-}
-.profileText {
-	width: calc(100% - 130px);
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.profileText h2 {
-    margin: 0;
-}
-.profileText p {
-	margin-top: 5px;
-}
-
 /* news cards */
 .smallCard {
 	padding: 20px;
