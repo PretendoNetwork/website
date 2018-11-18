@@ -52,13 +52,13 @@ function validateEmail(email) {
 PNIDSchema.plugin(uniqueValidator, {message: '{PATH} already in use.'});
 
 // hashing password
-PNIDSchema.pre('save', async function(next) {
+PNIDSchema.pre('save', function(next) {
 	// only if modified
 	if (!this.isModified('password')) {
 		return next();
 	}
 	// hashing
-	const primaryhash = PNIDModel.hashPasswordPrimary(this.get('password'), this.get('pid'));
+	const primaryhash = PNIDModel.hashPasswordPrimary(this.get('password'), this.get('pnid.pid'));
 	bcrypt.hash(primaryhash, 10, (err, hash) => {
 		if (err) {
 			return next(err);
@@ -69,9 +69,9 @@ PNIDSchema.pre('save', async function(next) {
 	});
 });
 
-PNIDSchema.statics.findByEmail = function(username) {
+PNIDSchema.statics.findByEmail = function(email) {
 	return this.model('pnid').findOne({
-		username
+		email
 	});
 };
 
@@ -104,10 +104,10 @@ PNIDSchema.statics.generatePID  = async function() {
 	});
 
 	if (does_pid_inuse) {
-		return await PNIDModel.generatePID();
+		return '' + await PNIDModel.generatePID();
 	}
 
-	return pid;
+	return '' + pid;
 };
 
 const PNIDModel = mongoose.model('pnid', PNIDSchema);

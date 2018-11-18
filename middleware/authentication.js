@@ -17,6 +17,15 @@ function adminAuthNeeded(req, res, next) {
 	}
 }
 
+// middleware to use if pnid authentication is required
+function pnidAuthNeeded(req, res, next) {
+	if (req.isAuthenticated() && !req.user.role) {
+		return next();
+	} else {
+		apiHelper.sendApiAuthError(res);
+	}
+}
+
 // middleware to use if authentication is optional
 function authOptional(req, res, next) {
 	return next();
@@ -24,5 +33,6 @@ function authOptional(req, res, next) {
 
 module.exports = {
 	adminAuthNeeded,
+	pnidAuthNeeded,
 	authOptional
 };

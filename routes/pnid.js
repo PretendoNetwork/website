@@ -8,6 +8,7 @@ file for handling admin api.
 // imports
 const router = require('express').Router();
 const passport = require('passport');
+const userMiddleware = require('../middleware/authentication');
 const apiHelper = require('../helpers/api');
 const config = require('../config.json');
 const Recaptcha = require('express-recaptcha').Recaptcha;
@@ -23,6 +24,10 @@ router.get('/pnid/register', recaptcha.middleware.render, (req, res) => {
 // renders login page
 router.get('/pnid/login', (req, res) => {
 	res.render('login');
+});
+// renders pnid dashboard
+router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
+	res.render('dashboard');
 });
 
 /* 
@@ -85,7 +90,7 @@ router.post('/api/v1/register', recaptcha.middleware.verify, async (req, res) =>
 		password,
 		pnid: {
 			key: 'abcd',
-			pid: PNID.PNIDModel.generatePID()
+			pid: await PNID.PNIDModel.generatePID()
 		}
 	});
 

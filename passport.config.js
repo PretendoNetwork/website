@@ -53,14 +53,25 @@ module.exports = (app) => {
 				// user doesnt exist
 				return done(null, false, {message: 'Incorrect email'});
 			}
-
 			bcrypt.compare(password, user.password, (err, res) => {
 				if (err || !res) {
 					// error comparing hashes
-					return done(null, false, {message: 'Incorrect password'});
+					// try primary hash on password and checking again.
+					bcrypt.compare(PNIDModel.hashPasswordPrimary(password, user.pnid.pid), user.password, (err, res) => {
+						if (err || !res) {
+							// error comparing hashes
+							// password hashed and non hashed both incorrect.
+							return done(null, false, {message: 'Incorrect password'});
+						}
+						// password is correct, return user
+						console.log('found user and correct pass');
+						return done(null, user);
+					});
+				} else {
+					// password is correct, return user
+					console.log('found user and correct pass');
+					return done(null, user);					
 				}
-				// password is correct, return user
-				return done(null, user);
 			});
 		}).catch((err) => {
 			if (err) {
@@ -76,9 +87,16 @@ module.exports = (app) => {
 		done(null, user.id);
 	});
 		
+	//SERIOUSLY. DONT TOUCH THIS SPAGHETTI, IT TOOK ME FOREVER TO GET THIS TO WORK!!!!1!!
 	passport.deserializeUser(function(id, done) {
 		adminUserModel.findById(id, function(err, user) {
-			done(err, user);
+			if (err || !user) {
+				PNIDModel.findById(id, function(err, user) { 
+					done(err, user);
+				});
+			} else {
+				done(err, user);					
+			}
 		});
 	});
 };
