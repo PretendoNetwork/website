@@ -45,7 +45,7 @@ const blogPostSchema = new mongoose.Schema({
 		date: {
 			type: Date,
 			default: () => {
-				return new Date(moment(new Date(), 'YYYY-MM-DD'));
+				return moment(moment().format('YYYY-MM-DD'));
 			}
 		},
 		category: {
@@ -72,7 +72,7 @@ blogPostSchema.methods.postShortTemplate = function() {
 	return {
 		content: this.short,
 		title: this.name,
-		url: moment(this.meta.date, 'YYYY-MM-DD') + '/' + this.meta.slug
+		url: moment(this.meta.date).format('YYYY-MM-DD') + '/' + this.meta.slug
 	};
 };
 

@@ -7,6 +7,7 @@ file for handling routes regarding blog posts.
 
 // imports
 const router = require('express').Router();
+const moment = require('moment');
 const apiHelper = require('../helpers/api');
 const utilHelper = require('../helpers/util');
 const blogPostModel = require('../models/blog-post').blogPostModel;
@@ -17,7 +18,7 @@ router.get('/news/:date/:title', (req, res) => {
 	// date format YYYY-MM-DD
 	if (/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(req.params.date) && /([a-z]|[0-9]|-)+/.test(req.params.title.toLowerCase())) {
 		// params are correct format
-		blogPostModel.getPost(new Date(req.params.date), req.params.title.toLowerCase(), (err, post) => {
+		blogPostModel.getPost(moment(req.params.date), req.params.title.toLowerCase(), (err, post) => {
 			// error exists or no post exists with the date and name
 			if (err || !post) {
 				console.log('error: ' + err + ' and post: ' + post);

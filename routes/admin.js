@@ -233,7 +233,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthNeeded, functi
 	// saving post to database
 	newBlogPost.save().then((post) => {
 		apiHelper.sendReturn(res, {
-			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
+			url: moment(post.meta.date).format('YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
