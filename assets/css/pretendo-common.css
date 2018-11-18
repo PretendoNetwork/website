@@ -159,7 +159,7 @@ section.bigCardWrapper .bigCard {
 	color: #707070;
 }
 section.bigCardWrapper .bigCard.lessPadding {
-	padding: 5vw;
+	padding: 4vw 5vw;
 }
 section.bigCardWrapper .bigCard.bigCardPartWrapper {
 	display: flex;
@@ -189,6 +189,11 @@ section.bigCardWrapper .bigCard.bigCardPartWrapper {
 }
 
 /* components - buttons */
+a.btn, a.btn-alt,
+a.btn:focus, a.btn-alt:focus,
+a.btn:hover, a.btn-alt:hover {
+	text-decoration: none;
+}
 button, .btn, .btn-alt {
 	margin: 0;
 	padding: 0;

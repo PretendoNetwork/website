@@ -1,6 +1,6 @@
 /* news cards */
 .smallCard {
-	padding: 20px;
+	padding: 2em;
 	border: 1px solid rgb(165, 165, 165);
 	border-radius: 10px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
@@ -13,4 +13,7 @@
 .smallCard h3 {
 	font-size: 1.5em;
 	margin: 0;
+}
+.smallCard a {
+	display: inline-block;
 }
