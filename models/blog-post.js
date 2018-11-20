@@ -85,7 +85,7 @@ blogPostSchema.statics.getPost = function(date, slug, callback) {
 		'meta.slug': slug
 	}, callback);
 };
-// not tested
+
 blogPostSchema.statics.latestPostsShortTemlate = function(amount, callback) {
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err) return callback(err);
