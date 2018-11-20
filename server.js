@@ -56,16 +56,12 @@ const hbsEngine = handlebars({
 	partialsDir: 'views/partials',
 	helpers: {
 		'if_eq': function(a, b, opts) {
-			if(a == b) // Or === depending on your needs
-				return opts.fn(this);
-			else
-				return opts.inverse(this);
+			if(a == b) return opts.fn(this);
+			else return opts.inverse(this);
 		},
 		'if_neq': function(a, b, opts) {
-			if(a != b) // Or === depending on your needs
-				return opts.fn(this);
-			else
-				return opts.inverse(this);
+			if(a != b) return opts.fn(this);
+			else return opts.inverse(this);
 		}
 	}
 });
