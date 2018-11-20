@@ -222,6 +222,9 @@ section.bigCardWrapper .bigCard.bigCardPartWrapper {
 	margin-bottom: 15px;
 	font-size: 2.5em;
 }
+.txt-title.small {
+	font-size: 2em;
+}
 .txt-smallHeading {
 	font-size: 1.2em;
 	font-weight: bold;
