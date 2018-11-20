@@ -10,6 +10,7 @@ const router = require('express').Router();
 const passport = require('passport');
 const userMiddleware = require('../middleware/authentication');
 const apiHelper = require('../helpers/api');
+const utilHelper = require('../helpers/util');
 const config = require('../config.json');
 const Recaptcha = require('express-recaptcha').Recaptcha;
 const recaptcha = new Recaptcha(config.recaptcha.siteKey, config.recaptcha.secretKey);
@@ -27,7 +28,9 @@ router.get('/pnid/login', (req, res) => {
 });
 // renders pnid dashboard
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
-	res.render('dashboard');
+	res.render('dashboard', {
+		user: utilHelper.templateReadyUser(req)
+	});
 });
 
 /* 

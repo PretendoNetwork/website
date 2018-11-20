@@ -50,11 +50,26 @@ app.use(session({
 passportconfig(app);
 
 // handlebars templating setup
-app.engine('.hbs', handlebars({
+const hbsEngine = handlebars({
 	extname: '.hbs',
 	layoutsDir: 'views',
-	partialsDir: 'views/partials'
-}));
+	partialsDir: 'views/partials',
+	helpers: {
+		'if_eq': function(a, b, opts) {
+			if(a == b) // Or === depending on your needs
+				return opts.fn(this);
+			else
+				return opts.inverse(this);
+		},
+		'if_neq': function(a, b, opts) {
+			if(a != b) // Or === depending on your needs
+				return opts.fn(this);
+			else
+				return opts.inverse(this);
+		}
+	}
+});
+app.engine('.hbs', hbsEngine);
 app.set('view engine', '.hbs');
 
 // locations and routes setup

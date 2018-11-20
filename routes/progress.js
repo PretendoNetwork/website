@@ -24,7 +24,8 @@ router.get('/progress', (req, res) => {
 		res.render('progress', {
 			games,
 			backends,
-			user: utilHelper.templateReadyUser(req)
+			user: utilHelper.templateReadyUser(req),
+			page: 'progress'
 		});
 	});
 });

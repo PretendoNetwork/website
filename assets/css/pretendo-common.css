@@ -11,7 +11,7 @@ body {
 	margin: 0;
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 	font-weight: 400;
-	background: #eeeeef;
+	background: #efefef;
 	overflow-x: hidden;
 }
 body.flex {
@@ -35,26 +35,69 @@ nav.navWrapper {
 	left: 0;
 	width: 100%;
 	z-index: 10;
+	justify-content: center;
 }
 nav.navWrapper .navItem {
 	flex: 0;
-	padding: 20px;
+	padding: 15px 20px;
 	color: rgba(255, 255, 255, 0.8);
 	text-decoration: none;
 	font-size: 1em;
 	cursor: pointer;
+	align-self: stretch;
 }
-nav.navWrapper .navItem:hover {
+nav.navWrapper .navItem:hover, nav.navWrapper .navItem.active {
 	color: white;
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.07);
 }
-
 nav.navWrapper .navItem.brand {
 	font-weight: 600;
 	background: #5231a7;
-	padding: 20px 40px;
+	padding: 15px 40px;
 	color: white;
+}
+nav.navWrapper .navBtn, nav.navWrapper .navBtnAlt {
+	flex: 0;
+	align-self: center;
+	padding: 5px 30px;
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	cursor: pointer;
+	background-color: #512da8;
+	border-radius: 5px;
+	margin: 0 10px;
+	box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.07);
+}
+nav.navWrapper .navBtnAlt {
+	color: #3d1c8a;
+	background-color: white;
+}
+nav.navWrapper .navBtn:hover {
+	background-color: #52339b;
+}
+nav.navWrapper .navBtnAlt:hover {
+	background-color: rgba(255, 255, 255, 0.745);
+	color: #54359b;
+}
+nav.navWrapper .navItem:nth-last-child(2) {
+	margin-right: 20px;
+}
+nav.navWrapper .navProfile {
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+nav.navWrapper .navProfile img {
+	border-radius: 50%;
+	width: 2em; height: 2em;
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+nav.navWrapper .navProfile p {
+	padding: 0 0 0 10px;
 }
 nav.navWrapper .navSpread {
 	flex: 1;
@@ -86,7 +129,7 @@ nav.navWrapper .navItem.hamburger {
 	width: 100%;
 }
 nav.navWrapper ~ .contentWrapper:nth-child(2) {
-	margin-top: 3.7rem;
+	margin-top: 3rem;
 }
 .contentWrapper .bgExtrude {
 	position: absolute;
@@ -237,7 +280,7 @@ button, .btn, .btn-alt {
     margin-bottom: 10px;
     display: flex;
 }
-.profile .profileIcon {
+.profileIcon {
     margin-right: 10px;
     width: 80px; height: 80px;
 	border-radius: 50%;

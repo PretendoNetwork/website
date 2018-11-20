@@ -17,12 +17,21 @@ function adminAuthNeeded(req, res, next) {
 	}
 }
 
+// middleware to use if pnid auth authentication is required
+function pnidApiAuthNeeded(req, res, next) {
+	if (req.isAuthenticated() && !req.user.role) { // having no role means its a normal account. only admin accounts have roles
+		return next();
+	} else {
+		apiHelper.sendApiAuthError(res);
+	}
+}
+
 // middleware to use if pnid authentication is required
 function pnidAuthNeeded(req, res, next) {
 	if (req.isAuthenticated() && !req.user.role) { // having no role means its a normal account. only admin accounts have roles
 		return next();
 	} else {
-		apiHelper.sendApiAuthError(res);
+		res.redirect('/pnid/login');
 	}
 }
 
@@ -34,5 +43,6 @@ function authOptional(req, res, next) {
 module.exports = {
 	adminAuthNeeded,
 	pnidAuthNeeded,
+	pnidApiAuthNeeded,
 	authOptional
 };

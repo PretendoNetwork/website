@@ -29,7 +29,8 @@ router.get('/news/:date/:title', (req, res) => {
 			post.postTemplate((err, postTemplate) => {
 				if (err) return utilHelper.send404(res);
 				res.render('post', {
-					post: postTemplate
+					post: postTemplate,
+					user: utilHelper.templateReadyUser(req)
 				});
 			});
 		});
@@ -54,7 +55,9 @@ router.get('/news', (req, res) => {
 		}
 
 		res.render('post-collection', {
-			posts: postCollection
+			posts: postCollection,
+			user: utilHelper.templateReadyUser(req),
+			page: 'news'
 		});
 	});
 });
