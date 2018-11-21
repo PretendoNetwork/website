@@ -10,6 +10,7 @@ const router = require('express').Router();
 const passport = require('passport');
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
+const utilHelper = require('../helpers/util');
 const userMiddleware = require('../middleware/authentication');
 
 // database models
@@ -45,6 +46,7 @@ router.get('/admin', (req, res) => {
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
 	apiHelper.sendReturn(res, {
 		username: req.user.username,
+		locales: utilHelper.getLocales(),
 		role: req.user.role ? req.user.role : undefined
 	});
 });
