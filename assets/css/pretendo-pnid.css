@@ -25,5 +25,48 @@ body footer .content {
 
 /* aside navigation */
 nav.userNav {
-    padding: 1em;
+    padding: 1em 3em 1em 1em;
+}
+nav.userNav .userNavProfile {
+    text-align: center;
+}
+nav.userNav .userNavProfile::after {
+    content: "";
+    width: 10em;
+    display: inline-block;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);;
+}
+nav.userNav .userNavProfile img {
+    width: 7em;
+    height: 7em;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+}
+nav.userNav .userNavProfile .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #353535;
+    margin: .5em 1em 0 1em;
+}
+nav.userNav .links {
+    padding: .7em 0;
+}
+nav.userNav .links .navItem {
+    display: block;
+    margin: .3em .5em;
+    font-size: 1em;
+    color: #707070;
+    text-decoration: none;
+}
+nav.userNav .links .navItem:hover {
+    color: #505050;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav.userNav .links .navItem.active {
+    color: #673ab7;
+    font-weight: bold;
 }

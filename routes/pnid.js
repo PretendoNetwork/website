@@ -20,15 +20,21 @@ const PNID = require('../models/pnid');
 
 // renders register page
 router.get('/pnid/register', recaptcha.middleware.render, (req, res) => {
-	res.render('register', { captcha: res.recaptcha });
+	res.render('register', {
+		captcha: res.recaptcha,
+		locales: utilHelper.getLocales()
+	});
 });
 // renders login page
 router.get('/pnid/login', (req, res) => {
-	res.render('login');
+	res.render('login', {
+		locales: utilHelper.getLocales()
+	});
 });
 // renders pnid dashboard
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
 	res.render('dashboard', {
+		locales: utilHelper.getLocales(),
 		user: utilHelper.templateReadyUser(req)
 	});
 });

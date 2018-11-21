@@ -20,7 +20,12 @@ function templateReadyUser(req) {
 	};
 }
 
+function getLocales() {
+	return require('../locales/US_en.json');
+}
+
 module.exports = {
 	send404,
-	templateReadyUser
+	templateReadyUser,
+	getLocales
 };

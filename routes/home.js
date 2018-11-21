@@ -14,6 +14,7 @@ const utilHelper = require('../helpers/util');
 router.get('/', (req, res) => {
 	res.render('home', {
 		user: utilHelper.templateReadyUser(req),
+		locales: utilHelper.getLocales(),
 		page: 'home'
 	});
 });

@@ -25,6 +25,7 @@ router.get('/progress', (req, res) => {
 			games,
 			backends,
 			user: utilHelper.templateReadyUser(req),
+			locales: utilHelper.getLocales(),
 			page: 'progress'
 		});
 	});

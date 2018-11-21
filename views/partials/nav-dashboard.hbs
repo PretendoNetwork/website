@@ -1,0 +1,31 @@
+<nav class="navWrapper" id="nav">
+	<a class="navItem brand{{#if_eq page 'home'}} active{{/if_eq}}" {{#if_neq page 'home'}}href="/"{{/if_neq}}>PRETENDO</a>
+	<a class="navItem{{#if_eq page 'news'}} active{{/if_eq}}" {{#if_neq page 'news'}}href="/news"{{/if_neq}}>News</a>
+	<a class="navItem{{#if_eq page 'progress'}} active{{/if_eq}}" {{#if_neq page 'progress'}}href="/progress"{{/if_neq}}>Progress</a>
+	<a class="navItem{{#if_eq page 'contact'}} active{{/if_eq}}" {{#if_neq page 'contact'}}href="/contact"{{/if_neq}}>Contact</a>
+    <div class="navSpread"></div>
+{{#if user.isLoggedIn }}
+    <a class="navItem navProfile" href="/pnid/dashboard">
+        <img src="#" alt="">
+        <p>mrjvs@gmail.com</p>
+    </a>
+    <a class="navItem navBtn" href="/pnid/logout">logout</a>
+{{else}}
+    <a class="navItem navBtnAlt" href="/pnid/login">Login</a>
+    <a class="navItem navBtn" href="/pnid/register">Register</a>
+{{/if}}
+    <a class="navItem hamburger" id="navToggle">ICON</a>
+</nav>
+
+<nav class="userNav">
+    <div class="userNavProfile">
+        <img src="" alt="">
+        <p class="name">Mrjvs</p>
+    </div>
+    <div class="links">
+       <a class="navItem active" href="#">User profile</a>
+       <a class="navItem" href="#">User files</a>
+       <a class="navItem" href="#">Security settings</a>
+       <a class="navItem" href="#">other settings</a>
+    </div>
+</nav>

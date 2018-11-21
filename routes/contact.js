@@ -16,6 +16,7 @@ const https = require('https');
 router.get('/contact', (req, res) => {
 	res.render('contact', {
 		user: utilHelper.templateReadyUser(req),
+		locales: utilHelper.getLocales(),
 		page: 'contact'
 	});
 });

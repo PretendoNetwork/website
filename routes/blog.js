@@ -30,7 +30,8 @@ router.get('/news/:date/:title', (req, res) => {
 				if (err) return utilHelper.send404(res);
 				res.render('post', {
 					post: postTemplate,
-					user: utilHelper.templateReadyUser(req)
+					user: utilHelper.templateReadyUser(req),
+					locales: utilHelper.getLocales()
 				});
 			});
 		});
@@ -57,6 +58,7 @@ router.get('/news', (req, res) => {
 		res.render('post-collection', {
 			posts: postCollection,
 			user: utilHelper.templateReadyUser(req),
+			locales: utilHelper.getLocales(),
 			page: 'news'
 		});
 	});
