@@ -1,6 +1,26 @@
-<h1>login page</h1>
-<form action="/api/v1/login" method="POST">
-    <input type="text" name="email">
-    <input type="text" name="password">
-    <button>submit login</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> head-common }}
+        <!-- page specific -->
+        <link rel="stylesheet" href="/assets/css/pretendo-auth.css">
+        <script src="/assets/js/auth.js" defer></script>
+    </head>
+    <body class="flex center">
+        <div class="card">
+            <h2 class="head">{{ locales.nav.brand }}</h2>
+            <div class="content">
+                <p class="txt-highlight">ERROR</p>
+                <h1 class="txt-title small">{{ locales.login_card.title }}</h1>
+                <form action="/api/v1/sendmessage" method="POST">
+                    <label for="email">{{ locales.login_card.email_text }}</label>
+                    <input type="text" class="hasLabel" id="email" name="email">
+                    <label for="email">{{ locales.login_card.password_text }}</label>
+                    <input type="password" class="hasLabel" id="password" name="password">
+                </form>
+                <button class="btn btnMargin">{{ locales.login_card.button_text }}</button>
+                <p class="lowText">ERROR <a href="#">ERROR</a></p>
+            </div>
+        </div>
+    </body>
+</html>

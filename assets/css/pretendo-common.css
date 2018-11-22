@@ -309,7 +309,7 @@ input::placeholder, textarea::placeholder {
 	opacity: 1;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="password"], textarea {
 	display: inline-block;
 	width: 100%;
 	padding: 1em 2em;
@@ -327,11 +327,21 @@ input[type="text"], textarea {
 	resize: none;
 }
 
+label {
+	font-size: 1em;
+	margin: 2em 0 .2em .2em;
+	display: block;
+}
+
+input[type="text"].hasLabel, input[type="password"].hasLabel {
+	margin: 0;
+}
+
 textarea {
 	height: 12rem;
 }
 
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 	border-color: rgb(103, 61, 182);
 	box-shadow: 0 3px 10px 0px rgba(103, 61, 182, 0.07);
 }
