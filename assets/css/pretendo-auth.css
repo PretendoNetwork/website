@@ -3,6 +3,19 @@ body.flex.center {
     align-items: center;
 }
 
+body footer {
+    padding: 0;
+    background-color: transparent;
+}
+body footer .content {
+    border-radius: 0;
+    background-color: transparent;
+    padding: 1em 0;
+    box-shadow: none;
+    width: 30rem;
+    max-width: 100vw;
+}
+
 /* login/register card */
 .card {
     background-color: white;

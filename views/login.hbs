@@ -14,13 +14,14 @@
                 <h1 class="txt-title small">{{ locales.login_card.title }}</h1>
                 <form action="/api/v1/sendmessage" method="POST">
                     <label for="email">{{ locales.login_card.email_text }}</label>
-                    <input type="text" class="hasLabel" id="email" name="email">
+                    <input type="text" class="hasLabel" id="email_input" name="email">
                     <label for="email">{{ locales.login_card.password_text }}</label>
-                    <input type="password" class="hasLabel" id="password" name="password">
+                    <input type="password" class="hasLabel" id="password_input" name="password">
                 </form>
-                <button class="btn btnMargin">{{ locales.login_card.button_text }}</button>
+                <button class="btn btnMargin" onclick="login()">{{ locales.login_card.button_text }}</button>
                 <p class="lowText">ERROR <a href="#">ERROR</a></p>
             </div>
         </div>
+        {{> footer-default }}
     </body>
 </html>
