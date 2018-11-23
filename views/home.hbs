@@ -85,20 +85,15 @@
                         <button class="btn">ERROR</button>
                     </div>
                     <div class="cont-flex">
+                        {{#each posts }}
                         <div class="smallCardWidth">
                             <div class="smallCard">
-                                <h3 class="txt-smallHeading">Super cool</h3>
-                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea</p>
-                                <button class="btn-alt">ERROR</button>
+                                <h3 class="txt-smallHeading">{{ this.title }}</h3>
+                                <p>{{ this.content }}</p>
+                                <a href="/news/{{ this.url }}" class="btn-alt">ERROR</a>
                             </div>
                         </div>
-                        <div class="smallCardWidth">
-                            <div class="smallCard">
-                                <h3 class="txt-smallHeading">Super cool</h3>
-                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea</p>
-                                <button class="btn-alt">ERROR</button>
-                            </div>
-                        </div>
+                        {{/each }}
                     </div>
                 </div>
             </section>
