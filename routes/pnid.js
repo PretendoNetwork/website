@@ -31,6 +31,11 @@ router.get('/pnid/login', (req, res) => {
 		locales: utilHelper.getLocales()
 	});
 });
+// logout
+router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (req, res) => {
+	req.logout();
+	res.redirect('/');
+});
 // renders pnid dashboard
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
 	res.render('dashboard', {
