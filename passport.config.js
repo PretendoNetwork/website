@@ -64,12 +64,10 @@ module.exports = (app) => {
 							return done(null, false, {message: 'Incorrect password'});
 						}
 						// password is correct, return user
-						console.log('found user and correct pass');
 						return done(null, user);
 					});
 				} else {
 					// password is correct, return user
-					console.log('found user and correct pass');
 					return done(null, user);					
 				}
 			});

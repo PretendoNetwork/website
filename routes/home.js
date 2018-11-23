@@ -15,7 +15,6 @@ const blogPostModel = require('../models/blog-post').blogPostModel;
 router.get('/', (req, res) => {
 	// needs callback because mongoose is inconsistent
 	blogPostModel.latestPostsShortTemlate(2, (err, result) => {
-		console.log(typeof result);
 		res.render('home', {
 			user: utilHelper.templateReadyUser(req),
 			locales: utilHelper.getLocales(),
