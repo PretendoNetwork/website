@@ -17,3 +17,10 @@
 .smallCard a {
 	display: inline-block;
 }
+
+@media screen and (max-width: 720px) {
+	.smallCard {
+		width: 100%;
+		display: block;
+	}
+}

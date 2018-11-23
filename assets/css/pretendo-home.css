@@ -82,6 +82,7 @@ header h3 {
     .smallCard {
         width: 100%;
         max-width: 250px;
+        height: auto;
     }
     .bigCard.cont-flex > .cont-flex {
         flex-direction: column;

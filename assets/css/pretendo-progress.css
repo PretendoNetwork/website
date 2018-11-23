@@ -42,3 +42,27 @@ section.bigCardWrapper.double > .bigCard:first-child {
 .listItem.state3::before {
     background-color: #58ef81; /* state 3: full support/working */
 }
+
+@media screen and (max-width: 1000px) {
+    section.bigCardWrapper.double {
+        display: flex;
+        flex-direction: column;
+    }
+    section.bigCardWrapper.double > .bigCard {
+        flex: 0;
+    }
+    section.bigCardWrapper.double > .bigCard:first-child {
+        margin-right: 0;
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section.bigCardWrapper.double {
+        max-width: 100vw;
+        margin: 0;
+    }
+    section.bigCardWrapper.double > .bigCard {
+        padding: 50px;
+    }
+}

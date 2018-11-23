@@ -8,3 +8,8 @@
 .input-container > *:first-child {
     margin-right: 3em;
 }
+@media screen and (max-width: 1000px) {
+    .input-container {
+        flex-direction: column;
+    }
+}

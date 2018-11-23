@@ -120,6 +120,19 @@ nav.navWrapper .navItem.hamburger {
 	nav.navWrapper.open .navItem, nav.navWrapper .navItem.hamburger {
 		display: block;
 	}
+	nav.navWrapper.open .navItem.navBtn, nav.navWrapper.open .navItem.navBtnAlt {
+		padding: .5em 0;
+		width: 12em;
+		text-align: center;
+		margin: .5em 0;
+	}
+	nav.navWrapper .navItem:nth-last-child(2) {
+		margin-right: 0;
+	}
+	nav.navWrapper.open .navItem.navProfile {
+		align-self: center;
+		display: flex;
+	}
 }
 
 /* content wrapper */
