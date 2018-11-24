@@ -13,10 +13,10 @@ const config = require('../config.json');
 const https = require('https');
 
 // display contact page
-router.get('/contact', (req, res) => {
-	res.render('contact', {
+router.get('/contact', (request, response) => {
+	return response.render('contact', {
 		title: 'Pretendo | Contact',
-		user: utilHelper.templateReadyUser(req),
+		user: utilHelper.templateReadyUser(request),
 		locale: utilHelper.getLocale('US', 'en'),
 		page: 'contact'
 	});
@@ -38,8 +38,10 @@ router.get('/contact', (req, res) => {
 *		errors: Strings[messages]
 *	}
 */
-router.post('/api/v1/sendmessage', function (req, res) {
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+router.post('/api/v1/sendmessage', (req, response) => {
+	if (!req.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
 
 	const { email, subject, message } = req.body;
@@ -62,13 +64,13 @@ router.post('/api/v1/sendmessage', function (req, res) {
 			}
 		}, () => {
 			// sends success
-			apiHelper.sendReturn(res, {}); 
+			return apiHelper.sendReturn(response, {}); 
 		});
 
 		// error handling
-		request.on('error', (e) => {
-			apiHelper.sendApiGenericError(res);
-			console.log('request errored' + e);
+		request.on('error', (error) => {
+			console.warn('request errored' + error);
+			return apiHelper.sendApiGenericError(response);
 		});
 
 		// write post data to request
@@ -76,7 +78,7 @@ router.post('/api/v1/sendmessage', function (req, res) {
 		request.end();
 	} else {
 		// TODO give more detailed response
-		return apiHelper.sendApiGenericError(res);
+		return apiHelper.sendApiGenericError(response);
 	}
 
 });

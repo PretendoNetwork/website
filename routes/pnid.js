@@ -19,31 +19,31 @@ const recaptcha = new Recaptcha(config.recaptcha.siteKey, config.recaptcha.secre
 const PNID = require('../models/pnid');
 
 // renders register page
-router.get('/pnid/register', recaptcha.middleware.render, (req, res) => {
-	res.render('register', {
+router.get('/pnid/register', recaptcha.middleware.render, (request, response) => {
+	return response.render('register', {
 		title: 'Pretendo | Register',
-		captcha: res.recaptcha,
+		captcha: response.recaptcha,
 		locale: utilHelper.getLocale('US', 'en')
 	});
 });
 // renders login page
-router.get('/pnid/login', (req, res) => {
-	res.render('login', {
+router.get('/pnid/login', (request, response) => {
+	return response.render('login', {
 		title: 'Pretendo | Login',
 		locale: utilHelper.getLocale('US', 'en')
 	});
 });
 // logout
-router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (req, res) => {
-	req.logout();
-	res.redirect('/');
+router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (request, response) => {
+	request.logout();
+	return response.redirect('/');
 });
 // renders pnid dashboard
-router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
-	res.render('dashboard', {
+router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (request, response) => {
+	return response.render('dashboard', {
 		title: 'Pretendo | Dash',
 		locale: utilHelper.getLocale('US', 'en'),
-		user: utilHelper.templateReadyUser(req)
+		user: utilHelper.templateReadyUser(request)
 	});
 });
 
@@ -66,11 +66,11 @@ router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
 */
 // TODO make login somehow display errors in correct format.
 // middleware does the authentication work. this just returns a success
-router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (req, res) {
-	apiHelper.sendReturn(res, {
-		email: req.user.email,
-		email_validated: req.user.email_validated,
-		pnid: req.user.pnid.key
+router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (request, response) {
+	return apiHelper.sendReturn(response, {
+		email: request.user.email,
+		email_validated: request.user.email_validated,
+		pnid: request.user.pnid.key
 	});
 });
 
@@ -90,18 +90,17 @@ router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (re
 *		errors: Strings[messages]
 *	}
 */
-router.post('/api/v1/register', recaptcha.middleware.verify, async (req, res) => {
-	if (!req.body) {
+router.post('/api/v1/register', recaptcha.middleware.verify, async (request, response) => {
+	if (!request.body) {
 		// no post body
-		apiHelper.sendApiGenericError(res);
-		return;
+		return apiHelper.sendApiGenericError(response);
 	}
-	/*if (req.recaptcha.error) {
-		apiHelper.sendApiError(res, 500, ['Captcha error']);
+	/*if (request.recaptcha.error) {
+		apiHelper.sendApiError(response, 500, ['Captcha error']);
 		return;
 	}*/
 
-	const { email, password } = req.body;
+	const { email, password } = request.body;
 	const newUser = new PNID.PNIDModel({
 		email,
 		password,
@@ -115,17 +114,15 @@ router.post('/api/v1/register', recaptcha.middleware.verify, async (req, res) =>
 	
 	// saving to database
 	newUser.save().then((user) => {
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			email: user.email,
 			email_validated: user.email_validated,
 			pnid: user.pnid.key
 		});
-		return;
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		console.log(rejection);
-		apiHelper.sendApiError(res, 500, [rejection]);
-		return;
+		console.warn(rejection);
+		return apiHelper.sendApiError(response, 500, [rejection]);
 	});
 });
 
