@@ -15,8 +15,9 @@ const https = require('https');
 // display contact page
 router.get('/contact', (req, res) => {
 	res.render('contact', {
+		title: 'Pretendo | Contact',
 		user: utilHelper.templateReadyUser(req),
-		locales: utilHelper.getLocales(),
+		locale: utilHelper.getLocale('US', 'en'),
 		page: 'contact'
 	});
 });

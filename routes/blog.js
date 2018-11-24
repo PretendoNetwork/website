@@ -29,9 +29,10 @@ router.get('/news/:date/:title', (req, res) => {
 			post.postTemplate((err, postTemplate) => {
 				if (err) return utilHelper.send404(res);
 				res.render('post', {
+					title: req.params.title,
 					post: postTemplate,
 					user: utilHelper.templateReadyUser(req),
-					locales: utilHelper.getLocales()
+					locale: utilHelper.getLocale('US', 'en')
 				});
 			});
 		});
@@ -56,9 +57,10 @@ router.get('/news', (req, res) => {
 		}
 
 		res.render('post-collection', {
+			title: 'Pretendo | News',
 			posts: postCollection,
 			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+			locale: utilHelper.getLocale('US', 'en'),
 			page: 'news'
 		});
 	});

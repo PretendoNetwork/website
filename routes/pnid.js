@@ -21,14 +21,16 @@ const PNID = require('../models/pnid');
 // renders register page
 router.get('/pnid/register', recaptcha.middleware.render, (req, res) => {
 	res.render('register', {
+		title: 'Pretendo | Register',
 		captcha: res.recaptcha,
-		locales: utilHelper.getLocales()
+		locale: utilHelper.getLocale('US', 'en')
 	});
 });
 // renders login page
 router.get('/pnid/login', (req, res) => {
 	res.render('login', {
-		locales: utilHelper.getLocales()
+		title: 'Pretendo | Login',
+		locale: utilHelper.getLocale('US', 'en')
 	});
 });
 // logout
@@ -39,7 +41,8 @@ router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (req, res) => {
 // renders pnid dashboard
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (req, res) => {
 	res.render('dashboard', {
-		locales: utilHelper.getLocales(),
+		title: 'Pretendo | Dash',
+		locale: utilHelper.getLocale('US', 'en'),
 		user: utilHelper.templateReadyUser(req)
 	});
 });

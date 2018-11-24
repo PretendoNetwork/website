@@ -10,7 +10,6 @@ const router = require('express').Router();
 const passport = require('passport');
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
-const utilHelper = require('../helpers/util');
 const userMiddleware = require('../middleware/authentication');
 
 // database models
@@ -21,7 +20,9 @@ const progressList = require('../models/progress-list');
 
 // renders admin.hbs
 router.get('/admin', (req, res) => {
-	res.render('admin');
+	res.render('admin', {
+		title: 'Pretendo | Admin',
+	});
 });
 
 /* 
@@ -44,10 +45,11 @@ router.get('/admin', (req, res) => {
 // TODO make login somehow display errors in correct format.
 // middleware does the authentication work. this just returns a success
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
+	const user = req.user;
 	apiHelper.sendReturn(res, {
-		username: req.user.username,
-		locales: utilHelper.getLocales(),
-		role: req.user.role ? req.user.role : undefined
+		username: user.username,
+		locale: user.getLocale(), // calls 'utilHelper.getLocale(user.region, user.language)' maybe?
+		role: user.role ? user.role : undefined
 	});
 });
 

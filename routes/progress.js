@@ -22,10 +22,11 @@ router.get('/progress', (req, res) => {
 		const backends = progress.filter(i => !i.isGame);
 
 		res.render('progress', {
+			title: 'Pretendo | Progress',
 			games,
 			backends,
 			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+			locale: utilHelper.getLocale('US', 'en'),
 			page: 'progress'
 		});
 	});

@@ -8,17 +8,17 @@
     </head>
     <body class="flex center">
         <div class="card">
-            <h2 class="head">{{ locales.nav.brand }}</h2>
+            <h2 class="head">{{ locale.nav.brand }}</h2>
             <div class="content">
                 <p class="txt-highlight">ERROR</p>
-                <h1 class="txt-title small">{{ locales.login_card.title }}</h1>
+                <h1 class="txt-title small">{{ locale.login.card.title }}</h1>
                 <form action="/api/v1/sendmessage" method="POST">
-                    <label for="email">{{ locales.login_card.email_text }}</label>
+                    <label for="email">{{ locale.login.card.email_text }}</label>
                     <input type="text" class="hasLabel" id="email_input" name="email">
-                    <label for="email">{{ locales.login_card.password_text }}</label>
+                    <label for="email">{{ locale.login.card.password_text }}</label>
                     <input type="password" class="hasLabel" id="password_input" name="password">
                 </form>
-                <button class="btn btnMargin" onclick="login()">{{ locales.login_card.button_text }}</button>
+                <button class="btn btnMargin" onclick="login()">{{ locale.login.card.button_text }}</button>
                 <p class="lowText">ERROR <a href="#">ERROR</a></p>
             </div>
         </div>

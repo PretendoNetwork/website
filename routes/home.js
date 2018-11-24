@@ -16,8 +16,9 @@ router.get('/', (req, res) => {
 	// needs callback because mongoose is inconsistent
 	blogPostModel.latestPostsShortTemlate(2, (err, result) => {
 		res.render('home', {
+			title: 'Pretendo | Home',
 			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+			locale: utilHelper.getLocale('US', 'en'),
 			posts: result,
 			page: 'home'
 		});
