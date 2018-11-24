@@ -45,7 +45,7 @@ const blogPostSchema = new mongoose.Schema({
 		date: {
 			type: Date,
 			default: () => {
-				return new Date(moment(new Date(), 'YYYY-MM-DD'));
+				return moment(moment().format('YYYY-MM-DD'));
 			}
 		},
 		category: {
@@ -72,7 +72,7 @@ blogPostSchema.methods.postShortTemplate = function() {
 	return {
 		content: this.short,
 		title: this.name,
-		url: moment(this.meta.date, 'YYYY-MM-DD') + '/' + this.meta.slug
+		url: moment(this.meta.date).format('YYYY-MM-DD') + '/' + this.meta.slug
 	};
 };
 
@@ -85,13 +85,13 @@ blogPostSchema.statics.getPost = function(date, slug, callback) {
 		'meta.slug': slug
 	}, callback);
 };
-// not tested
+
 blogPostSchema.statics.latestPostsShortTemlate = function(amount, callback) {
 	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
 		if (err) return callback(err);
-		let out = [];
-		for (let i = 0, l = posts.length; i < ( amount+1 < l ? amount+1 : l); i++)
-			out += posts[i].postShortTemplate();
+		const out = [];
+		for (let i = 0, l = posts.length; i < ( amount+1 < l ? amount : l); i++)
+			out.push(posts[i].postShortTemplate());
 		callback(err, out);
 	});
 };

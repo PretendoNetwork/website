@@ -10,7 +10,8 @@ const router = require('express').Router();
 const passport = require('passport');
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
-const adminUserMiddleware = require('../middleware/admin-authentication');
+const utilHelper = require('../helpers/util');
+const userMiddleware = require('../middleware/authentication');
 
 // database models
 const adminUser = require('../models/admin-user');
@@ -45,6 +46,7 @@ router.get('/admin', (req, res) => {
 router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
 	apiHelper.sendReturn(res, {
 		username: req.user.username,
+		locales: utilHelper.getLocales(),
 		role: req.user.role ? req.user.role : undefined
 	});
 });
@@ -67,7 +69,7 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), f
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthNeeded, (req, res) => {
+router.post('/admin/api/v1/register', userMiddleware.adminAuthNeeded, (req, res) => {
 	if (!req.body) {
 		// no post body
 		apiHelper.sendApiGenericError(res);
@@ -81,10 +83,10 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthNeeded, (req,
 	});
 	
 	// saving to database
-	newUser.save().then(() => {
+	newUser.save().then((user) => {
 		apiHelper.sendReturn(res, {
-			username: req.user.username,
-			role: req.user.role ? req.user.role : undefined
+			username: user.username,
+			role: user.role ? user.role : undefined
 		});
 		return;
 	}).catch((rejection) => {
@@ -109,7 +111,7 @@ router.post('/admin/api/v1/register', adminUserMiddleware.adminAuthNeeded, (req,
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthNeeded, (req, res) => {
+router.post('/admin/api/v1/removeadmin', userMiddleware.adminAuthNeeded, (req, res) => {
 	if (!req.body) {
 		// no post body
 		apiHelper.sendApiGenericError(res);
@@ -136,7 +138,7 @@ router.post('/admin/api/v1/removeadmin', adminUserMiddleware.adminAuthNeeded, (r
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthNeeded, (req, res) => {
+router.get('/admin/api/v1/listadmins', userMiddleware.adminAuthNeeded, (req, res) => {
 	adminUser.adminUserModel.find({}, (err, admins) => {
 		// TODO format exception so it doesnt have a huge list of errors
 		if (err) return apiHelper.sendApiError(res, 500, [err]);
@@ -167,7 +169,7 @@ router.get('/admin/api/v1/listadmins', adminUserMiddleware.adminAuthNeeded, (req
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/check', adminUserMiddleware.authOptional, (req, res) => {
+router.get('/admin/api/v1/check', userMiddleware.authOptional, (req, res) => {
 	apiHelper.sendReturn(res, {
 		isAuthed: req.user ? true : false,
 		role: req.user ? (req.user.role ? req.user.role : undefined) : undefined
@@ -185,7 +187,7 @@ router.get('/admin/api/v1/check', adminUserMiddleware.authOptional, (req, res) =
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthNeeded, (req, res) => {
+router.get('/admin/api/v1/logout', userMiddleware.adminAuthNeeded, (req, res) => {
 	req.logout();
 	apiHelper.sendReturn(res, {});
 });
@@ -210,7 +212,7 @@ router.get('/admin/api/v1/logout', adminUserMiddleware.adminAuthNeeded, (req, re
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newpost', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -233,7 +235,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthNeeded, functi
 	// saving post to database
 	newBlogPost.save().then((post) => {
 		apiHelper.sendReturn(res, {
-			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
+			url: moment(post.meta.date).format('YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
@@ -262,7 +264,7 @@ router.post('/admin/api/v1/newpost', adminUserMiddleware.adminAuthNeeded, functi
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editpost', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -299,7 +301,7 @@ router.post('/admin/api/v1/editpost', adminUserMiddleware.adminAuthNeeded, funct
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newauthor', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -340,7 +342,7 @@ router.post('/admin/api/v1/newauthor', adminUserMiddleware.adminAuthNeeded, func
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editauthor', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -377,7 +379,7 @@ router.post('/admin/api/v1/editauthor', adminUserMiddleware.adminAuthNeeded, fun
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newprogress', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 
@@ -429,7 +431,7 @@ router.post('/admin/api/v1/newprogress', adminUserMiddleware.adminAuthNeeded, fu
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editprogress', adminUserMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editprogress', userMiddleware.adminAuthNeeded, function (req, res) {
 	
 	if (!req.body) return apiHelper.sendApiGenericError(res);
 

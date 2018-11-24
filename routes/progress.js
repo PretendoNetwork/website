@@ -9,7 +9,6 @@ file for handling routes regarding progress
 const router = require('express').Router();
 const apiHelper = require('../helpers/api');
 const utilHelper = require('../helpers/util');
-const staticText = require('../static-text.json');
 const progressListModel = require('../models/progress-list').progressListModel;
 
 // display progress
@@ -25,7 +24,9 @@ router.get('/progress', (req, res) => {
 		res.render('progress', {
 			games,
 			backends,
-			summary: staticText.progressSummary
+			user: utilHelper.templateReadyUser(req),
+			locales: utilHelper.getLocales(),
+			page: 'progress'
 		});
 	});
 });

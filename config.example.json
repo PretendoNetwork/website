@@ -12,5 +12,9 @@
     },
     "secrets": {
         "session": "session secret here"
+    },
+    "recaptcha": {
+        "siteKey": "abcd",
+        "secretKey": "1234"
     }
 }

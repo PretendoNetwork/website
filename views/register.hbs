@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> head-common }}
+        <!-- page specific -->
+        <link rel="stylesheet" href="/assets/css/pretendo-auth.css">
+        <script src="/assets/js/auth.js" defer></script>
+    </head>
+    <body class="flex center">
+        <div class="card">
+            <h2 class="head">{{ locales.nav.brand }}</h2>
+            <div class="content">
+                <p class="txt-highlight">{{ locales.register_card.caption }}</p>
+                <h1 class="txt-title small">{{ locales.register_card.title }}</h1>
+                <form action="/api/v1/sendmessage" method="POST">
+                    <label for="email">{{ locales.register_card.email_text }}</label>
+                    <input type="text" class="hasLabel" id="email_input" name="email">
+                    <label for="email">{{ locales.register_card.username_text }}</label>
+                    <input type="text" class="hasLabel" id="username_input" name="username">
+                    <label for="email">{{ locales.register_card.password_text }}</label>
+                    <input type="password" class="hasLabel" id="password_input" name="password">
+                    <label for="email">{{ locales.register_card.password_confirm_text }}</label>
+                    <input type="password" class="hasLabel" id="password_confirm_input" name="confirm_password">
+                </form>
+                <button class="btn btnMargin" onclick="register()">ERROR</button>
+                <p class="lowText">ERROR <a href="#">ERROR</a></p>
+            </div>
+        </div>
+        {{> footer-default }}
+    </body>
+</html>

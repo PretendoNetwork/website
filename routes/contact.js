@@ -8,12 +8,17 @@ file for handling routes regarding contact
 // imports
 const router = require('express').Router();
 const apiHelper = require('../helpers/api');
+const utilHelper = require('../helpers/util');
 const config = require('../config.json');
 const https = require('https');
 
 // display contact page
 router.get('/contact', (req, res) => {
-	res.render('contact');
+	res.render('contact', {
+		user: utilHelper.templateReadyUser(req),
+		locales: utilHelper.getLocales(),
+		page: 'contact'
+	});
 });
 
 /* 

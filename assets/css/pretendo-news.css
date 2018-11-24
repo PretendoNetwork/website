@@ -1,0 +1,26 @@
+/* news cards */
+.smallCard {
+	padding: 2em;
+	border: 1px solid rgb(165, 165, 165);
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    position: relative;
+	margin: .5em;
+	width: calc(50% - 1em );
+	box-sizing: border-box;
+	display: inline-block;
+}
+.smallCard h3 {
+	font-size: 1.5em;
+	margin: 0;
+}
+.smallCard a {
+	display: inline-block;
+}
+
+@media screen and (max-width: 720px) {
+	.smallCard {
+		width: 100%;
+		display: block;
+	}
+}
