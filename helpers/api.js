@@ -17,11 +17,6 @@ function sendReturn(response, data, errors) {
 	);
 }
 
-// shows 404 template. takes express response object
-function send404(res) {
-	res.status(404).send('404');
-}
-
 // use if api endpoint doesnt exist
 function sendApi404(response) {
 	response.status(404).json({
