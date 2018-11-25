@@ -1,0 +1,74 @@
+{
+	"nav": {
+		"brand": "ERROR",
+		"links": {
+			"news": "ERROR",
+			"progress": "ERROR",
+			"contact": "ERROR",
+			"login": "ERROR",
+			"register": "ERROR",
+			"logout": "ERROR"
+		}
+	},
+	"home": {
+		"header": {
+			"title": "ERROR",
+			"text": "ERROR"
+		}
+	},
+	"progress": {
+		"summary": {
+			"title": "ERROR",
+			"text": "ERROR"
+		},
+		"compatability": {
+			"title": "ERROR"
+		},
+		"misc": {
+			"title": "ERROR"
+		}
+	},
+	"contact": {
+		"title": "ERROR",
+		"button_text": "ERROR",
+		"email_placeholder": "ERROR",
+		"subject_placeholder": "ERROR",
+		"message_placeholder": "ERROR"
+	},
+	"login": {
+		"card": {
+			"title": "ERROR",
+			"email_text": "ERROR",
+			"password_text": "ERROR",
+			"email_placeholder": "ERROR",
+			"password_placeholder": "ERROR",
+			"button_text": "Sign In"
+		}
+	},
+	"register": {
+		"card": {
+			"title": "ERROR",
+			"email_text": "ERROR",
+			"username_text": "ERROR",
+			"password_text": "ERROR",
+			"password_confirm_text": "ERROR",
+			"email_placeholder": "ERROR",
+			"password_placeholder": "ERROR",
+			"caption": "ERROR"
+		}
+	},
+	"about": {
+		"title": "ERROR",
+		"text": "ERROR"
+	},
+	"credits": {
+		"title": "ERROR"
+	},
+	"errors": {
+		"invalid_login": "ERROR",
+		"account_exists": "ERROR"
+	},
+	"footer": {
+		"text": "ERROR"
+	}
+}

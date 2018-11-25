@@ -11,7 +11,7 @@ const handlebars = require('express-handlebars');
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const config = require('./config.json');
 const utilHelper = require('./helpers/util');
 const passportconfig = require('./passport.config.js');
@@ -29,8 +29,11 @@ connection.on('error', console.error.bind(console, 'connection error:'));
 
 // setup express
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({
+	extended: true
+}));
 app.use(session({
 	secret: config.secrets.session,
 	saveUninitialized: true,
@@ -87,16 +90,16 @@ app.use('/', locations.posts);
 app.use('/', locations.admin);
 app.use('/', locations.progress);
 app.use('/', locations.pnid);
-app.use((req, res) => {
-	utilHelper.send404(res);
+app.use((request, response) => {
+	return utilHelper.send404(response);
 });
 
 // TODO improve error handling
 // TODO remove param decoding errors from logs example: "host/test/%"
 // 4 parameters required to read the error, cant help the eslint error
-app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
-	console.error(err.stack);
-	return res.status(500).send('Something broke!');
+app.use((error, request, response, next) => { // eslint-disable-line no-unused-vars
+	console.warn(error.stack);
+	return response.status(500).send('Something broke!');
 });
 
 // startup

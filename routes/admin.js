@@ -10,7 +10,6 @@ const router = require('express').Router();
 const passport = require('passport');
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
-const utilHelper = require('../helpers/util');
 const userMiddleware = require('../middleware/authentication');
 
 // database models
@@ -20,8 +19,10 @@ const postAuthor = require('../models/post-author');
 const progressList = require('../models/progress-list');
 
 // renders admin.hbs
-router.get('/admin', (req, res) => {
-	res.render('admin');
+router.get('/admin', (request, response) => {
+	response.render('admin', {
+		title: 'Pretendo | Admin',
+	});
 });
 
 /* 
@@ -43,11 +44,13 @@ router.get('/admin', (req, res) => {
 */
 // TODO make login somehow display errors in correct format.
 // middleware does the authentication work. this just returns a success
-router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), function (req, res) {
-	apiHelper.sendReturn(res, {
-		username: req.user.username,
-		locales: utilHelper.getLocales(),
-		role: req.user.role ? req.user.role : undefined
+router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), (request, response) => {
+	const user = request.user;
+
+	return apiHelper.sendReturn(response, {
+		username: user.username,
+		locale: user.getLocale(), // calls 'utilHelper.getLocale(user.region, user.language)' maybe?
+		role: user.role ? user.role : undefined
 	});
 });
 
@@ -69,14 +72,13 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), f
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/register', userMiddleware.adminAuthNeeded, (req, res) => {
-	if (!req.body) {
+router.post('/admin/api/v1/register', userMiddleware.adminAuthNeeded, (request, response) => {
+	if (!request.body) {
 		// no post body
-		apiHelper.sendApiGenericError(res);
-		return;
+		return apiHelper.sendApiGenericError(response);
 	}
 
-	const { username, password } = req.body;
+	const { username, password } = request.body;
 	const newUser = new adminUser.adminUserModel({
 		username,
 		password
@@ -84,15 +86,13 @@ router.post('/admin/api/v1/register', userMiddleware.adminAuthNeeded, (req, res)
 	
 	// saving to database
 	newUser.save().then((user) => {
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			username: user.username,
 			role: user.role ? user.role : undefined
 		});
-		return;
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		apiHelper.sendApiError(res, 500, [rejection]);
-		return;
+		return apiHelper.sendApiError(response, 500, [rejection]);
 	});
 });
 
@@ -111,18 +111,19 @@ router.post('/admin/api/v1/register', userMiddleware.adminAuthNeeded, (req, res)
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/removeadmin', userMiddleware.adminAuthNeeded, (req, res) => {
-	if (!req.body) {
+router.post('/admin/api/v1/removeadmin', userMiddleware.adminAuthNeeded, (request, response) => {
+	if (!request.body) {
 		// no post body
-		apiHelper.sendApiGenericError(res);
-		return;
+		return apiHelper.sendApiGenericError(response);
 	}
 
-	const { id } = req.body;
-	adminUser.adminUserModel.findByIdAndDelete(id, (err) => {
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
+	const { id } = request.body;
+	adminUser.adminUserModel.findByIdAndDelete(id, (error) => {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
 		// successfull
-		apiHelper.sendReturn(res, {});
+		return apiHelper.sendReturn(response, {});
 	});
 });
 
@@ -138,10 +139,12 @@ router.post('/admin/api/v1/removeadmin', userMiddleware.adminAuthNeeded, (req, r
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/listadmins', userMiddleware.adminAuthNeeded, (req, res) => {
-	adminUser.adminUserModel.find({}, (err, admins) => {
+router.get('/admin/api/v1/listadmins', userMiddleware.adminAuthNeeded, (request, response) => {
+	adminUser.adminUserModel.find({}, (error, admins) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
 
 		// formats admin list and removes password hash
 		const output = [];
@@ -150,7 +153,7 @@ router.get('/admin/api/v1/listadmins', userMiddleware.adminAuthNeeded, (req, res
 			output.push(admins[i]);
 		}
 
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			admins: output
 		});
 	});
@@ -169,10 +172,12 @@ router.get('/admin/api/v1/listadmins', userMiddleware.adminAuthNeeded, (req, res
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/check', userMiddleware.authOptional, (req, res) => {
-	apiHelper.sendReturn(res, {
-		isAuthed: req.user ? true : false,
-		role: req.user ? (req.user.role ? req.user.role : undefined) : undefined
+router.get('/admin/api/v1/check', userMiddleware.authOptional, (request, response) => {
+	const user = request.user;
+
+	return apiHelper.sendReturn(response, {
+		isAuthed: user ? true : false,
+		role: user ? (user.role ? user.role : undefined) : undefined
 	});
 });
 
@@ -187,9 +192,9 @@ router.get('/admin/api/v1/check', userMiddleware.authOptional, (req, res) => {
 *		errors: Strings[messages]
 *	}
 */
-router.get('/admin/api/v1/logout', userMiddleware.adminAuthNeeded, (req, res) => {
-	req.logout();
-	apiHelper.sendReturn(res, {});
+router.get('/admin/api/v1/logout', userMiddleware.adminAuthNeeded, (request, response) => {
+	request.logout();
+	return apiHelper.sendReturn(response, {});
 });
 
 /* 
@@ -212,11 +217,13 @@ router.get('/admin/api/v1/logout', userMiddleware.adminAuthNeeded, (req, res) =>
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newpost', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newpost', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
-	const { content, title, author, category, short } = req.body;
+	const { content, title, author, category, short } = request.body;
 	const newBlogPost = new blogPost.blogPostModel({
 		content: blogPost.blogPostModel.markdownToHtml(content),
 		name: title,
@@ -234,13 +241,12 @@ router.post('/admin/api/v1/newpost', userMiddleware.adminAuthNeeded, function (r
 	
 	// saving post to database
 	newBlogPost.save().then((post) => {
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			url: moment(post.meta.date).format('YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		apiHelper.sendApiError(res, 500, [rejection]);
-		return;
+		return apiHelper.sendApiError(response, 500, [rejection]);
 	});
 });
 
@@ -264,21 +270,25 @@ router.post('/admin/api/v1/newpost', userMiddleware.adminAuthNeeded, function (r
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editpost', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editpost', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
-	const { id, content, title, author, category, short } = req.body;
+	const { id, content, title, author, category, short } = request.body;
 	blogPost.blogPostModel.findByIdAndUpdate(id, {
 		'content': content,
 		'name': title,
 		'short': short,
 		'meta.author': author,
 		'meta.category': category
-	}, (err, post) => {
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
+	}, (error, post) => {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
 
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			url: moment(post.meta.date, 'YYYY-MM-DD') + '/' + post.meta.slug
 		});
 	});
@@ -301,11 +311,13 @@ router.post('/admin/api/v1/editpost', userMiddleware.adminAuthNeeded, function (
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newauthor', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newauthor', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
-	const { name, description, image } = req.body;
+	const { name, description, image } = request.body;
 	const newAuthor = new postAuthor.postAuthorModel({
 		name,
 		description,
@@ -314,13 +326,12 @@ router.post('/admin/api/v1/newauthor', userMiddleware.adminAuthNeeded, function 
 	
 	// saving author to database
 	newAuthor.save().then((author) => {
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			id: author.id
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		apiHelper.sendApiError(res, 500, [rejection]);
-		return;
+		return apiHelper.sendApiError(response, 500, [rejection]);
 	});
 });
 
@@ -342,21 +353,26 @@ router.post('/admin/api/v1/newauthor', userMiddleware.adminAuthNeeded, function 
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editauthor', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editauthor', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
-	const { id, name, description, image } = req.body;
+	const { id, name, description, image } = request.body;
 
 	// updating author in database
 	postAuthor.postAuthorModel.findByIdAndUpdate(id, {
 		name,
 		description,
 		image
-	}, (err, author) => {
+	}, (error, author) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendReturn(res, {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
+
+		return apiHelper.sendReturn(response, {
 			id: author.id
 		});
 	});
@@ -379,13 +395,15 @@ router.post('/admin/api/v1/editauthor', userMiddleware.adminAuthNeeded, function
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/newprogress', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/newprogress', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
 	// parses state and isGame to be valid
-	const { title, description } = req.body;
-	let { state } = req.body;
+	const { title, description } = request.body;
+	let { state } = request.body;
 	let isGame = false;
 	if (state != '1' && state != '2' && state != '3') {
 		state = undefined;
@@ -403,13 +421,12 @@ router.post('/admin/api/v1/newprogress', userMiddleware.adminAuthNeeded, functio
 	
 	// saving progress to database
 	newProgress.save().then((progress) => {
-		apiHelper.sendReturn(res, {
+		return apiHelper.sendReturn(response, {
 			id: progress.id
 		});
 	}).catch((rejection) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		apiHelper.sendApiError(res, 500, [rejection]);
-		return;
+		return apiHelper.sendApiError(response, 500, [rejection]);
 	});
 });
 
@@ -431,13 +448,15 @@ router.post('/admin/api/v1/newprogress', userMiddleware.adminAuthNeeded, functio
 *		errors: Strings[messages]
 *	}
 */
-router.post('/admin/api/v1/editprogress', userMiddleware.adminAuthNeeded, function (req, res) {
+router.post('/admin/api/v1/editprogress', userMiddleware.adminAuthNeeded, (request, response) => {
 	
-	if (!req.body) return apiHelper.sendApiGenericError(res);
+	if (!request.body) {
+		return apiHelper.sendApiGenericError(response);
+	}
 
 	// parsing state and isGame to be valid
-	const { title, description, id } = req.body;
-	let { state } = req.body;
+	const { title, description, id } = request.body;
+	let { state } = request.body;
 	let isGame = false;
 	if (state != '1' && state != '2' && state != '3') {
 		state = undefined;
@@ -452,18 +471,21 @@ router.post('/admin/api/v1/editprogress', userMiddleware.adminAuthNeeded, functi
 		description,
 		state,
 		isGame
-	}, (err, progress) => {
+	}, (error, progress) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendReturn(res, {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
+
+		return apiHelper.sendReturn(response, {
 			id: progress.id
 		});
 	});
 });
 
 // api 404
-router.use('/admin/api', (req, res) => {
-	apiHelper.sendApi404(res);
+router.use('/admin/api', (request, response) => {
+	return apiHelper.sendApi404(response);
 });
 
 // export the router

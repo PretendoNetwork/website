@@ -12,20 +12,23 @@ const utilHelper = require('../helpers/util');
 const progressListModel = require('../models/progress-list').progressListModel;
 
 // display progress
-router.get('/progress', (req, res) => {
+router.get('/progress', (request, response) => {
 	
-	progressListModel.find({}, (err, progress) => {
-		if (err) return utilHelper.send404(res);
+	progressListModel.find({}, (error, progress) => {
+		if (error) {
+			return utilHelper.send404(response);
+		}
 		
 		// filtering games and backend
 		const games = progress.filter(i => i.isGame);
 		const backends = progress.filter(i => !i.isGame);
 
-		res.render('progress', {
+		return response.render('progress', {
+			title: 'Pretendo | Progress',
 			games,
 			backends,
-			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+			user: utilHelper.templateReadyUser(request),
+			locale: utilHelper.getLocale('US', 'en'),
 			page: 'progress'
 		});
 	});
@@ -43,11 +46,14 @@ router.get('/progress', (req, res) => {
 *		errors: Strings[messages]
 *	}
 */
-router.get('/api/v1/listprogress', function (req, res) {
-	progressListModel.find({}, (err, progress) => {
+router.get('/api/v1/listprogress', (request, response) => {
+	progressListModel.find({}, (error, progress) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendReturn(res, {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
+
+		apiHelper.sendReturn(response, {
 			progressList: progress
 		});
 	});

@@ -6,8 +6,8 @@ common api returns
 */
 
 // use for any api return. it has basic layout used for every return.
-function sendReturn(res, data, errors) {
-	res.status(200).json(
+function sendReturn(response, data, errors) {
+	response.status(200).json(
 		// combine 2 objects
 		Object.assign({
 			code: 200,
@@ -17,10 +17,9 @@ function sendReturn(res, data, errors) {
 	);
 }
 
-
 // use if api endpoint doesnt exist
-function sendApi404(res) {
-	res.status(404).json({
+function sendApi404(response) {
+	response.status(404).json({
 		code: 404,
 		errors: [
 			'Endpoint not in use'
@@ -29,8 +28,8 @@ function sendApi404(res) {
 }
 
 // use if not logged in and is required (handled with middleware)
-function sendApiAuthError(res) {
-	res.status(401).json({
+function sendApiAuthError(response) {
+	response.status(401).json({
 		code: 401,
 		errors: [
 			'Not authenticated'
@@ -39,8 +38,8 @@ function sendApiAuthError(res) {
 }
 
 // use for completely broken requests
-function sendApiGenericError(res) {
-	res.status(400).json({
+function sendApiGenericError(response) {
+	response.status(400).json({
 		code: 400,
 		success: false,
 		errors: [
@@ -50,8 +49,8 @@ function sendApiGenericError(res) {
 }
 
 // use for any api not successfull
-function sendApiError(res, code, errors) {
-	res.status(code).json({
+function sendApiError(response, code, errors) {
+	response.status(code).json({
 		code,
 		success: false,
 		errors

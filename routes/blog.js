@@ -14,39 +14,47 @@ const blogPostModel = require('../models/blog-post').blogPostModel;
 const postAuthorModel = require('../models/post-author').postAuthorModel;
 
 // display single blog post
-router.get('/news/:date/:title', (req, res) => {
+router.get('/news/:date/:title', (request, response) => {
+	const date = request.params.date;
+	const title = request.params.title;
+	const title_lower = title.toLowerCase();
+
 	// date format YYYY-MM-DD
-	if (/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(req.params.date) && /([a-z]|[0-9]|-)+/.test(req.params.title.toLowerCase())) {
+	if (/[0-9]{4}-[0-9]{2}-[0-9]{2}/.test(date) && /([a-z]|[0-9]|-)+/.test(title_lower)) {
 		// params are correct format
-		blogPostModel.getPost(moment(req.params.date), req.params.title.toLowerCase(), (err, post) => {
+		blogPostModel.getPost(moment(date), title_lower, (error, post) => {
 			// error exists or no post exists with the date and name
-			if (err || !post) {
-				console.log('error: ' + err + ' and post: ' + post);
-				return utilHelper.send404(res);
+			if (error || !post) {
+				console.warn(`'error: ${error} and post: ${post}`);
+				return utilHelper.send404(response);
 			}
 			
 			// render blogpost
-			post.postTemplate((err, postTemplate) => {
-				if (err) return utilHelper.send404(res);
-				res.render('post', {
+			post.postTemplate((error, postTemplate) => {
+				if (error) {
+					return utilHelper.send404(response);
+				}
+				
+				return response.render('post', {
+					title,
 					post: postTemplate,
-					user: utilHelper.templateReadyUser(req),
-					locales: utilHelper.getLocales()
+					user: utilHelper.templateReadyUser(request),
+					locale: utilHelper.getLocale('US', 'en')
 				});
 			});
 		});
 	} else {
 		// params are incorrect
-		utilHelper.send404(res);
+		return utilHelper.send404(response);
 	}
 });
 
 // display latest blogposts
-router.get('/news', (req, res) => {
+router.get('/news', (request, response) => {
 	// sort blogposts on date descending
-	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec(function(err, posts) {
-		if (err || !posts) {
-			return utilHelper.send404(res);
+	blogPostModel.find({}).sort({'meta.date': 'desc'}).exec((error, posts) => {
+		if (error || !posts) {
+			return utilHelper.send404(response);
 		}
 
 		// makes posts template ready
@@ -55,10 +63,11 @@ router.get('/news', (req, res) => {
 			postCollection.push(posts[i].postShortTemplate());
 		}
 
-		res.render('post-collection', {
+		return response.render('post-collection', {
+			title: 'Pretendo | News',
 			posts: postCollection,
-			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+			user: utilHelper.templateReadyUser(request),
+			locale: utilHelper.getLocale('US', 'en'),
 			page: 'news'
 		});
 	});
@@ -76,11 +85,14 @@ router.get('/news', (req, res) => {
 *		errors: Strings[messages]
 *	}
 */
-router.get('/api/v1/listauthors', function (req, res) {
-	postAuthorModel.find({}, (err, authors) => {
+router.get('/api/v1/listauthors', (request, response) => {
+	postAuthorModel.find({}, (error, authors) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendReturn(res, {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
+
+		return apiHelper.sendReturn(response, {
 			authorList: authors
 		});
 	});
@@ -98,11 +110,14 @@ router.get('/api/v1/listauthors', function (req, res) {
 *		errors: Strings[messages]
 *	}
 */
-router.get('/api/v1/listblog', function (req, res) {
-	blogPostModel.find({}, (err, posts) => {
+router.get('/api/v1/listblog', (request, response) => {
+	blogPostModel.find({}, (error, posts) => {
 		// TODO format exception so it doesnt have a huge list of errors
-		if (err) return apiHelper.sendApiError(res, 500, [err]);
-		apiHelper.sendReturn(res, {
+		if (error) {
+			return apiHelper.sendApiError(response, 500, [error]);
+		}
+		
+		apiHelper.sendReturn(response, {
 			postList: posts
 		});
 	});

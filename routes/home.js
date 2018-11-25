@@ -12,12 +12,13 @@ const utilHelper = require('../helpers/util');
 const blogPostModel = require('../models/blog-post').blogPostModel;
 
 // display home page
-router.get('/', (req, res) => {
+router.get('/', (request, response) => {
 	// needs callback because mongoose is inconsistent
-	blogPostModel.latestPostsShortTemlate(2, (err, result) => {
-		res.render('home', {
-			user: utilHelper.templateReadyUser(req),
-			locales: utilHelper.getLocales(),
+	blogPostModel.latestPostsShortTemlate(2, (error, result) => {
+		return response.render('home', {
+			title: 'Pretendo | Home',
+			user: utilHelper.templateReadyUser(request),
+			locale: utilHelper.getLocale('US', 'en'),
 			posts: result,
 			page: 'home'
 		});
