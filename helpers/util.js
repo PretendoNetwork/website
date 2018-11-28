@@ -6,6 +6,7 @@ small commonly used utilities
 */
 
 const fs = require('fs-extra');
+const logger = require('winston');
 
 // shows 404 template. takes express response object
 function send404(res) {
@@ -46,7 +47,7 @@ function getLocale(region, language) {
 		return require(path);
 	}
 
-	console.warn(`Could not find locale ${region}_${language}! Loading default`);
+	logger.log('warn', `Could not find locale ${region}_${language}! Loading default`);
 
 	return getDefaultLocale();
 }
@@ -56,10 +57,15 @@ function getDefaultLocale(locale='default') {
 	return require(`${__dirname}/../locales/${locale}.json`);
 }
 
+function generateRandomInt(length = 4) {
+	return Math.floor(Math.pow(10, length-1) + Math.random() * 9 * Math.pow(10, length-1));
+}
+
 module.exports = {
 	send404,
 	templateReadyUser,
 	getLocales,
 	getLocale,
-	getDefaultLocale
+	getDefaultLocale,
+	generateRandomInt
 };

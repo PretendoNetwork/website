@@ -8,7 +8,9 @@ file containing the model for pretendo network id's
 // imports
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
+const randtoken = require('rand-token');
 const bcrypt = require('bcrypt');
+const utilHelper = require('../helpers/util');
 
 // admin user database layout
 const PNIDSchema = new mongoose.Schema({
@@ -23,6 +25,14 @@ const PNIDSchema = new mongoose.Schema({
 		type: Boolean,
 		default: false
 	},
+	email_validation_code: {
+		type: Number,
+		required: [true, 'Email validation code is required.'],
+	},
+	email_validation_token: {
+		type: String,
+		required: [true, 'Email validation token is required.'],
+	},
 	// non hashed, gets hashed at save
 	password: {
 		type: String,
@@ -32,10 +42,15 @@ const PNIDSchema = new mongoose.Schema({
 		trim: true
 	},
 	pnid: {
-		key: {
-			type: String // not sure what this should be
-		},
 		pid: {
+			type: Number,
+			unique: true
+		},
+		username: {
+			type: String,
+			unique: true
+		},
+		username_lower: {
 			type: String,
 			unique: true
 		}
@@ -79,7 +94,7 @@ PNIDSchema.statics.hashPasswordPrimary = function(password, pid) {
 	const buff1 = require('python-struct').pack('<I', pid);
 	const buff2 = Buffer.from(password).toString('ascii');
 
-	const unpacked = new Buffer(bufferToHex(buff1) + '\x02eCF' + buff2, 'ascii');
+	const unpacked = Buffer.from(bufferToHex(buff1) + '\x02eCF' + buff2, 'ascii');
 	const hashed = require('crypto').createHash('sha256').update(unpacked).digest().toString('hex');
 
 	return hashed;
@@ -96,18 +111,44 @@ function bufferToHex(buff) {
 	return result;
 }
 
-PNIDSchema.statics.generatePID  = async function() {
+PNIDSchema.statics.generatePID = async function() {
 	// Quick, dirty fix for PIDs
 	const pid = Math.floor(Math.random() * (4294967295 - 1000000000) + 1000000000);
-	const does_pid_inuse = await PNIDModel.findOne({
+	const pid_inuse = await PNIDModel.findOne({
 		'pnid.pid': pid
 	});
 
-	if (does_pid_inuse) {
-		return '' + await PNIDModel.generatePID();
+	if (pid_inuse) {
+		return await PNIDModel.generatePID();
 	}
 
-	return '' + pid;
+	return pid;
+};
+
+PNIDSchema.statics.generateEmailValidationCode = async function() {
+	const code = utilHelper.generateRandomInt(6);
+	const code_inuse = await PNIDModel.findOne({
+		'email_validation_code': code
+	});
+		
+	if (code_inuse) {
+		return await PNIDModel.generateEmailValidationCode();
+	}
+
+	return code;
+};
+
+PNIDSchema.statics.generateEmailValidationToken = async function() {
+	const token = randtoken.generate(32);
+	const token_inuse = await PNIDModel.findOne({
+		'email_validation_token': token
+	});
+		
+	if (token_inuse) {
+		return await PNIDModel.generateEmailValidationToken();
+	}
+
+	return token;
 };
 
 const PNIDModel = mongoose.model('pnid', PNIDSchema);

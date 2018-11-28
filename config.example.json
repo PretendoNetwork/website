@@ -13,6 +13,13 @@
     "secrets": {
         "session": "session secret here"
     },
+    "email": {
+        "service": "gmail",
+        "auth": {
+            "user": "example@email.com",
+            "pass": "password"
+        }
+    },
     "recaptcha": {
         "siteKey": "abcd",
         "secretKey": "1234"

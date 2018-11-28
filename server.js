@@ -6,6 +6,7 @@ the file that contains the startup code
 */
 
 // imports
+const logger = require('./logger');
 const express = require('express');
 const handlebars = require('express-handlebars');
 const session = require('express-session');
@@ -98,11 +99,12 @@ app.use((request, response) => {
 // TODO remove param decoding errors from logs example: "host/test/%"
 // 4 parameters required to read the error, cant help the eslint error
 app.use((error, request, response, next) => { // eslint-disable-line no-unused-vars
-	console.warn(error.stack);
+	logger.log('warn', error.stack);
 	return response.status(500).send('Something broke!');
 });
 
 // startup
 app.listen(config.http.port, () => {
+	logger.log('debug', `started the server on port: ${config.http.port}`);
 	console.log(`started the server on port: ${new String(config.http.port).green}`);
 });
