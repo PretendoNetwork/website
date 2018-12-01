@@ -6,6 +6,7 @@ file for handling routes regarding blog posts.
 */
 
 // imports
+const logger = require('winston');
 const router = require('express').Router();
 const moment = require('moment');
 const apiHelper = require('../helpers/api');
@@ -25,7 +26,7 @@ router.get('/news/:date/:title', (request, response) => {
 		blogPostModel.getPost(moment(date), title_lower, (error, post) => {
 			// error exists or no post exists with the date and name
 			if (error || !post) {
-				console.warn(`'error: ${error} and post: ${post}`);
+				logger.log('warn', `error: ${error} and post: ${post}`);
 				return utilHelper.send404(response);
 			}
 			

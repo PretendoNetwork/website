@@ -6,6 +6,7 @@ file for handling routes regarding contact
 */
 
 // imports
+const logger = require('winston');
 const router = require('express').Router();
 const apiHelper = require('../helpers/api');
 const utilHelper = require('../helpers/util');
@@ -69,7 +70,7 @@ router.post('/api/v1/sendmessage', (req, response) => {
 
 		// error handling
 		request.on('error', (error) => {
-			console.warn('request errored' + error);
+			logger.log('warn', 'request errored' + error);
 			return apiHelper.sendApiGenericError(response);
 		});
 

@@ -4,6 +4,8 @@
         {{> head-common }}
         <!-- page specific -->
         <link rel="stylesheet" href="/assets/css/pretendo-auth.css">
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="/assets/js/auth.js" defer></script>
     </head>
     <body class="flex center">
@@ -12,17 +14,20 @@
             <div class="content">
                 <p class="txt-highlight">{{ locale.register.card.caption }}</p>
                 <h1 class="txt-title small">{{ locale.register.card.title }}</h1>
-                <form action="/api/v1/sendmessage" method="POST">
+                <form action="/api/v1/register" method="POST">
                     <label for="email">{{ locale.register.card.email_text }}</label>
                     <input type="text" class="hasLabel" id="email_input" name="email">
-                    <label for="email">{{ locale.register.card.username_text }}</label>
+                    <label for="username">{{ locale.register.card.username_text }}</label>
                     <input type="text" class="hasLabel" id="username_input" name="username">
-                    <label for="email">{{ locale.register.card.password_text }}</label>
+                    <label for="password">{{ locale.register.card.password_text }}</label>
                     <input type="password" class="hasLabel" id="password_input" name="password">
-                    <label for="email">{{ locale.register.card.password_confirm_text }}</label>
+                    <label for="confirm_password">{{ locale.register.card.password_confirm_text }}</label>
                     <input type="password" class="hasLabel" id="password_confirm_input" name="confirm_password">
+
+                    <div class="g-recaptcha" data-sitekey="{{ recaptcha_sitekey }}"></div>
+
+                    <button type="submit" class="btn btnMargin">ERROR</button>
                 </form>
-                <button class="btn btnMargin" onclick="register()">ERROR</button>
                 <p class="lowText">ERROR <a href="#">ERROR</a></p>
             </div>
         </div>

@@ -5,10 +5,14 @@ common api returns
 
 */
 
-// use for any api return. it has basic layout used for every return.
+/**
+ * Send generic API response
+ * @param {ServerResponse} response An express ServerResponse response
+ * @param {Object} data Response data
+ * @param {Array} errors Request errors
+ */
 function sendReturn(response, data, errors) {
-	response.status(200).json(
-		// combine 2 objects
+	return response.status(data.code || 200).json(
 		Object.assign({
 			code: 200,
 			success: true,
@@ -17,44 +21,45 @@ function sendReturn(response, data, errors) {
 	);
 }
 
-// use if api endpoint doesnt exist
+/**
+ * Send API 404
+ * @param {ServerResponse} response An express ServerResponse response
+ */
 function sendApi404(response) {
-	response.status(404).json({
-		code: 404,
-		errors: [
-			'Endpoint not in use'
-		]
-	});
+	return sendApiError(response, 404, [
+		'Endpoint not in use'
+	]);
 }
 
-// use if not logged in and is required (handled with middleware)
+/**
+ * Send user not authenticated error
+ * @param {ServerResponse} response An express ServerResponse response
+ */
 function sendApiAuthError(response) {
-	response.status(401).json({
-		code: 401,
-		errors: [
-			'Not authenticated'
-		]
-	});
+	return sendApiError(response, 401, [
+		'Not authenticated'
+	]);
 }
 
-// use for completely broken requests
+/**
+ * Send a generic API error
+ * @param {ServerResponse} response An express ServerResponse response
+ */
 function sendApiGenericError(response) {
-	response.status(400).json({
-		code: 400,
-		success: false,
-		errors: [
-			'Bad request'
-		]
-	});
+	return sendApiError(response, 400, [
+		'Bad request'
+	]);
 }
 
-// use for any api not successfull
+/**
+ * Send an API error
+ * @param {ServerResponse} response An express ServerResponse response
+ */
 function sendApiError(response, code, errors) {
-	response.status(code).json({
+	return sendReturn(response, {
 		code,
-		success: false,
-		errors
-	});
+		success: false
+	}, errors);
 }
 
 module.exports = {
