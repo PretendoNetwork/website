@@ -95,8 +95,6 @@ app.use((request, response) => {
 	return utilHelper.send404(response);
 });
 
-// TODO improve error handling
-// TODO remove param decoding errors from logs example: "host/test/%"
 // 4 parameters required to read the error, cant help the eslint error
 app.use((error, request, response, next) => { // eslint-disable-line no-unused-vars
 	logger.log('warn', error.stack);

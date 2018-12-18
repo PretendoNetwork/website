@@ -19,6 +19,7 @@ const PNIDSchema = new mongoose.Schema({
 		required: [true, 'Email is required.'],
 		unique: true,
 		trim: true,
+		uppercase: true,
 		validate: [validateEmail, 'Please fill a valid email address']
 	},
 	email_validated: {
@@ -48,11 +49,17 @@ const PNIDSchema = new mongoose.Schema({
 		},
 		username: {
 			type: String,
-			unique: true
+			unique: true,
+			validate: [validateUsername, 'Please fill a valid username'],
+			required: true
 		},
 		username_lower: {
 			type: String,
 			unique: true
+		},
+		avatar_url: {
+			type: String,
+			default: '/assets/images/default_avatar.png'
 		}
 	},
 	consoles: []
@@ -62,6 +69,12 @@ function validateEmail(email) {
 	// eslint throws "unnecesary character escape"
 	const re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; // eslint-disable-line
 	return re.test(email);
+}
+
+function validateUsername(username) {
+	// eslint throws "unnecesary character escape"
+	const re = /^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/; // eslint-disable-line
+	return re.test(username);
 }
 
 PNIDSchema.plugin(uniqueValidator, {message: '{PATH} already in use.'});
@@ -86,8 +99,20 @@ PNIDSchema.pre('save', function(next) {
 
 PNIDSchema.statics.findByEmail = function(email) {
 	return this.model('pnid').findOne({
-		email
+		email: email.toUpperCase()
 	});
+};
+
+PNIDSchema.statics.findUser = async function(key) {
+	const user = await this.model('pnid').findOne({
+		email: key.toUpperCase()
+	});
+	if (!user) {
+		return await this.model('pnid').findOne({
+			'pnid.username_lower': key.toLowerCase()
+		});
+	}
+	return user;
 };
 
 PNIDSchema.statics.hashPasswordPrimary = function(password, pid) {

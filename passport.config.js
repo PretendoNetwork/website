@@ -47,8 +47,8 @@ module.exports = (app) => {
 	passport.use('PNIDStrategy', new LocalStrategy({
 		usernameField: 'email'
 	}, (email, password, done) => {
-		// find user in database
-		PNIDModel.findByEmail(email).then((user) => {
+		// find user in database, email = username or email
+		PNIDModel.findUser(email).then((user) => {
 			if (!user) {
 				// user doesnt exist
 				return done(null, false, {message: 'Incorrect email'});

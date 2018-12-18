@@ -10,13 +10,13 @@ const logger = require('winston');
 
 // shows 404 template. takes express response object
 function send404(res) {
-	res.status(404).send('404');
+	res.status(404).render('404');
 }
 
 function templateReadyUser(req) {
 	// normal user logged in
 	const isLoggedIn = req.user ? req.user.role != 'admin' : false;
-	const user = req.user;
+	const user = req.user ? req.user.toObject() : undefined;
 	return {
 		isLoggedIn,
 		user

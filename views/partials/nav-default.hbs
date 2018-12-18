@@ -6,8 +6,8 @@
     <div class="navSpread"></div>
 {{#if user.isLoggedIn }}
     <a class="navItem navProfile" href="/pnid/dashboard">
-        <img src="#" alt="">
-        <p>mrjvs@gmail.com</p>
+        <img src="{{ user.user.pnid.avatar_url }}" alt="{{ user.user.pnid.username }}">
+        <p>{{ user.user.pnid.username }}</p>
     </a>
     <a class="navItem navBtn" href="/pnid/logout">logout</a>
 {{else}}

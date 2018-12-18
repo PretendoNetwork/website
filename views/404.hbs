@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {{> head }}
-    <body>
-        {{> navbar }}
-
-        <h1>haha-yes</h1>
-
-        file not found!
-
-        {{> footer }}
+        {{> head-common }}
+        <!-- page specific -->
+        <link rel="stylesheet" href="/assets/css/pretendo-contact.css">
+    </head>
+    <body class="flex">
+        <div class="contentWrapper bgLinesSmall">
+            <div class="bgExtrude"></div>
+            <section class="bigCardWrapper">
+                <div class="bigCard">
+                    <p class="txt-highlight">ERROR</p>
+				    <h1 class="txt-title">{{ locale.404.title }}</h1>
+                </div>
+            </section>
+        </div>
+        {{> footer-default }}
     </body>
 </html>
