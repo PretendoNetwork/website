@@ -70,3 +70,51 @@ nav.userNav .links .navItem.active {
     color: #673ab7;
     font-weight: bold;
 }
+
+@media screen and (max-width: 950px) {
+    body .contentWrapper.userPage {
+        flex-direction: column;
+    }
+    nav.userNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .contentCard {
+        display: block;
+        margin: auto;
+    }
+    nav.userNav .links {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    nav.userNav .links .navItem {
+        display: inline-block;
+    }
+    nav.userNav .userNavProfile::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contentCard {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav.userNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav.userNav .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.userNav .userNavProfile::after {
+        display: inline-block;
+    }
+}
