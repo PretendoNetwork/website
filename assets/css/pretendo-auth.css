@@ -43,3 +43,13 @@ body footer .content {
     text-align: right;
     color: #707070;
 }
+
+.error {
+    background-color: #eea9a9;
+    border-left: 3px solid #d83434;
+    padding: 1em;
+    color: rgba(0, 0, 0, 0.7);
+}
+.error.hide {
+    display: none;
+}

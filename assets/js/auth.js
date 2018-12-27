@@ -12,7 +12,9 @@ function postAjax(url, data, success) {
 }
 
 function showErrorPopup(errorText) {
-	console.log(errorText)
+	console.log(errorText);
+	document.getElementById('errorBox').innerHTML = errorText;
+	document.getElementById('errorBox').classList.remove('hide');
 }
 
 function login() {
