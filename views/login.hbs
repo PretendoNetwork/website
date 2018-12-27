@@ -12,13 +12,13 @@
             <div class="content">
                 <p class="txt-highlight">ERROR</p>
                 <h1 class="txt-title small">{{ locale.login.card.title }}</h1>
-                <form action="/api/v1/sendmessage" method="POST">
+                <form method="POST">
                     <label for="email">{{ locale.login.card.email_text }}</label>
                     <input type="text" class="hasLabel" id="email_input" name="email">
                     <label for="email">{{ locale.login.card.password_text }}</label>
                     <input type="password" class="hasLabel" id="password_input" name="password">
                 </form>
-                <button class="btn btnMargin" onclick="login()">{{ locale.login.card.button_text }}</button>
+                <button class="btn btnMargin" onclick="login();">{{ locale.login.card.button_text }}</button>
                 <p class="lowText">ERROR <a href="#">ERROR</a></p>
             </div>
         </div>
