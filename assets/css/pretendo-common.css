@@ -108,6 +108,21 @@ nav.navWrapper .navItem.hamburger {
 	position: absolute;
 	right: 0;
 	top: 0;
+	width: 60px;
+	height: 49px;
+	box-sizing: border-box;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: .5em .8em;
+}
+nav.navWrapper .navItem.hamburger span {
+	height: 2px;
+	width: 100%;
+	background-color: white;
+	border-radius: 2px;
+}
+nav.navWrapper.open .navItem.hamburger {
+	background: rgba(0, 0, 0, 0.07);
 }
 @media screen and (max-width: 720px) {
 	nav.navWrapper {
@@ -117,8 +132,11 @@ nav.navWrapper .navItem.hamburger {
 	nav.navWrapper .navItem:not(.brand) {
 		display: none;
 	}
-	nav.navWrapper.open .navItem, nav.navWrapper .navItem.hamburger {
+	nav.navWrapper.open .navItem {
 		display: block;
+	}
+	nav.navWrapper .navItem.hamburger {
+		display: flex;
 	}
 	nav.navWrapper.open .navItem.navBtn, nav.navWrapper.open .navItem.navBtnAlt {
 		padding: .5em 0;
