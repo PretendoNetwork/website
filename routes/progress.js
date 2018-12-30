@@ -25,6 +25,9 @@ router.get('/progress', (request, response) => {
 
 		return response.render('progress', {
 			title: 'Pretendo | Progress',
+			description: 'The Pretendo progress page shows the progress the Pretendo developer team made. It shows how much is working and if it can be used for the end user yet.',
+			url: request.protocol + '://' + request.get('host') + request.originalUrl,
+			baseurl: request.protocol + '://' + request.get('host'),
 			games,
 			backends,
 			user: utilHelper.templateReadyUser(request),

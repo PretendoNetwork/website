@@ -38,6 +38,9 @@ router.get('/news/:date/:title', (request, response) => {
 				
 				return response.render('post', {
 					title,
+					description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+					url: request.protocol + '://' + request.get('host') + request.originalUrl,
+					baseurl: request.protocol + '://' + request.get('host'),
 					post: postTemplate,
 					user: utilHelper.templateReadyUser(request),
 					locale: utilHelper.getLocale('US', 'en')
@@ -66,6 +69,9 @@ router.get('/news', (request, response) => {
 
 		return response.render('post-collection', {
 			title: 'Pretendo | News',
+			description: 'The Pretendo news page has a place for all of the update posts the Pretendo developer team has made. It contains everything you need to know about pretendo.',
+			url: request.protocol + '://' + request.get('host') + request.originalUrl,
+			baseurl: request.protocol + '://' + request.get('host'),
 			posts: postCollection,
 			user: utilHelper.templateReadyUser(request),
 			locale: utilHelper.getLocale('US', 'en'),

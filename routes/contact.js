@@ -17,6 +17,9 @@ const https = require('https');
 router.get('/contact', (request, response) => {
 	return response.render('contact', {
 		title: 'Pretendo | Contact',
+		description: 'The Pretendo Contact page offers a way to ask questions and communicate with the Pretendo developer team. Its the perfect place to get answers.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
 		user: utilHelper.templateReadyUser(request),
 		locale: utilHelper.getLocale('US', 'en'),
 		page: 'contact'

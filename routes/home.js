@@ -17,6 +17,9 @@ router.get('/', (request, response) => {
 	blogPostModel.latestPostsShortTemlate(2, (error, result) => {
 		return response.render('home', {
 			title: 'Pretendo | Home',
+			description: 'Pretendo is a as close as possible recreation of the original Nintendo Network for 3ds and Wiiu. It is an replacement for if the original servers shut down.',
+			url: request.protocol + '://' + request.get('host') + request.originalUrl,
+			baseurl: request.protocol + '://' + request.get('host'),
 			user: utilHelper.templateReadyUser(request),
 			locale: utilHelper.getLocale('US', 'en'),
 			posts: result,

@@ -22,6 +22,9 @@ const progressList = require('../models/progress-list');
 router.get('/admin', (request, response) => {
 	response.render('admin', {
 		title: 'Pretendo | Admin',
+		description: '',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
 	});
 });
 

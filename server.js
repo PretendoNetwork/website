@@ -84,6 +84,7 @@ const locations = {
 
 // static files
 app.use('/assets', express.static('assets'));
+app.use('/', express.static('public'));
 // page map
 app.use('/', locations.home);
 app.use('/', locations.contact);

@@ -24,6 +24,9 @@ const PNID = require('../models/pnid');
 router.get('/pnid/register', (request, response) => {
 	return response.render('register', {
 		title: 'Pretendo | Register',
+		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
 		locale: utilHelper.getLocale('US', 'en'),
 		recaptcha_sitekey: config.recaptcha.siteKey
 	});
@@ -32,6 +35,9 @@ router.get('/pnid/register', (request, response) => {
 router.get('/pnid/login', (request, response) => {
 	return response.render('login', {
 		title: 'Pretendo | Login',
+		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
 		locale: utilHelper.getLocale('US', 'en')
 	});
 });
@@ -44,6 +50,9 @@ router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (request, response) =>
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (request, response) => {
 	return response.render('dashboard', {
 		title: 'Pretendo | Dash',
+		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
 		locale: utilHelper.getLocale('US', 'en'),
 		user: utilHelper.templateReadyUser(request)
 	});
