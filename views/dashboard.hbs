@@ -7,12 +7,12 @@
     </head>
     <body class="flex">
         {{> nav-default }}
-        <div id="email_validation_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>Your email has not been validated yet. You are restricted from certain features.</p><span><button class="btn-alt small">Change email</button> <button class="btn small">Send again</button></span></div>
+        <div id="email_validation_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>{{ locale.validate_email_popup.text }}</p><span><button class="btn-alt small">{{ locale.validate_email_popup.change_button_text }}</button> <button class="btn small">{{ locale.validate_email_popup.repeat_button_text }}</button></span></div>
         <div class="contentWrapper userPage">
             {{> nav-dashboard }}
             <section class="contentCard">
-                <p class="txt-highlight">ERROR</p>
-                <h1 class="txt-title small">ERROR</h1>
+                <p class="txt-highlight">{{ locale.dashboard.account.caption }}</p>
+                <h1 class="txt-title small">{{ locale.dashboard.account.title }}</h1>
             </section>
         </div>  
         {{> footer-default }}

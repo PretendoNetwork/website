@@ -18,7 +18,7 @@
             <div class="bgExtrude"></div>
             <section class="bigCardWrapper">
                 <div class="bigCard">
-                    <p class="txt-highlight">ERROR</p>
+                    <p class="txt-highlight">{{ locale.about.caption }}</p>
 				    <h1 class="txt-title">{{ locale.about.title }}</h1>
 				    <p>{{ locale.about.text }}</p>
                 </div>
@@ -26,7 +26,7 @@
 
             <section class="bigCardWrapper">
                 <div class="bigCard">
-                    <p class="txt-highlight">ERROR</p>
+                    <p class="txt-highlight">{{ locale.about.caption }}</p>
 				    <h1 class="txt-title">{{ locale.credits.title }}</h1>
 				    <div class="cardProfiles">
                         <!-- profile -->
@@ -79,18 +79,18 @@
             <section class="bigCardWrapper">
                 <div class="bigCard lessPadding cont-flex">
                     <div class="flex-item">
-                        <p class="txt-highlight">ERROR</p>
-					    <h1 class="txt-title">ERROR</h1>
-					    <p>ERROR</p>
-                        <button class="btn">ERROR</button>
+                        <p class="txt-highlight">{{ locale.latest_news.caption }}</p>
+					    <h1 class="txt-title">{{ locale.latest_news.title }}</h1>
+					    <p>{{ locale.latest_news.description }}</p>
+                        <a href="/news" class="btn">{{ locale.latest_news.button_text }}</a>
                     </div>
                     <div class="cont-flex">
-                        {{#each posts }}
+                        {{#each posts as |post| }}
                         <div class="smallCardWidth">
                             <div class="smallCard">
-                                <h3 class="txt-smallHeading">{{ this.title }}</h3>
-                                <p>{{ this.content }}</p>
-                                <a href="/news/{{ this.url }}" class="btn-alt">ERROR</a>
+                                <h3 class="txt-smallHeading">{{ post.title }}</h3>
+                                <p>{{ post.content }}</p>
+                                <a href="/news/{{ post.url }}" class="btn-alt">{{ ../locale.latest_news.news_button_text }}</a>
                             </div>
                         </div>
                         {{/each }}

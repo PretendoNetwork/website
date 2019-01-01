@@ -30,8 +30,8 @@
 
                     <div class="g-recaptcha" data-sitekey="{{ recaptcha_sitekey }}"></div>
                 </form>
-                <button class="btn btnMargin" onclick="register()">ERROR</button>
-                <p class="lowText">ERROR <a href="#">ERROR</a></p>
+                <button class="btn btnMargin" onclick="register()">{{ locale.register.card.button_text }}</button>
+                <p class="lowText">{{ locale.register.card.link_introduction }} <a href="/pnid/login">{{ locale.register.card.link_text }}</a></p>
             </div>
         </div>
         {{> footer-default }}

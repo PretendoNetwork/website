@@ -11,15 +11,15 @@
             <div class="bgExtrude"></div>
             <section class="bigCardWrapper">
                 <div class="bigCard">
-                    <p class="txt-highlight">ERROR</p>
-				    <h1 class="txt-title">ERROR</h1>
-                    <p>{{ summary }}</p>
+                    <p class="txt-highlight">{{ locale.progress.summary.caption }}</p>
+				    <h1 class="txt-title">{{ locale.progress.summary.title }}</h1>
+                    <p>{{ locale.progress.summary.text }}</p>
                 </div>
             </section>
             <section class="bigCardWrapper double">
                 <div class="bigCard">
-                    <p class="txt-highlight">ERROR</p>
-				    <h1 class="txt-title">ERROR</h1>
+                    <p class="txt-highlight">{{ locale.progress.compatability.caption }}</p>
+				    <h1 class="txt-title">{{ locale.progress.compatability.title }}</h1>
                     {{#each games }}
                     <div class="listItem state{{ this.state }}">
                         <h2>{{ this.title }}</h2>
@@ -28,8 +28,8 @@
                     {{/each}}
                 </div>
                 <div class="bigCard">
-                    <p class="txt-highlight">ERROR</p>
-				    <h1 class="txt-title">ERROR</h1>
+                    <p class="txt-highlight">{{ locale.progress.misc.caption }}</p>
+				    <h1 class="txt-title">{{ locale.progress.misc.title }}</h1>
                     {{#each backends }}
                     <div class="listItem">
                         <h2>{{ this.title }}</h2>

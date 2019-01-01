@@ -269,6 +269,7 @@ a.btn, a.btn-alt,
 a.btn:focus, a.btn-alt:focus,
 a.btn:hover, a.btn-alt:hover {
 	text-decoration: none;
+	display: inline-block;
 }
 button, .btn, .btn-alt {
 	margin: 0;

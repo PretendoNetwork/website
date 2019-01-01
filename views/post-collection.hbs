@@ -11,13 +11,13 @@
             <div class="bgExtrude"></div>
             <section class="bigCardWrapper">
                 <div class="bigCard lessPadding">
-                    <p class="txt-highlight">ERROR</p>
-				    <h1 class="txt-title">ERROR</h1><!--
-                    {{#each posts }}
+                    <p class="txt-highlight">{{ locale.news.caption }}</p>
+				    <h1 class="txt-title">{{ locale.news.title }}</h1><!--
+                    {{#each posts as |post| }}
                     --><article class="smallCard">
-                        <h3 class="txt-smallHeading">{{ this.title }}</h3>
-                        <p>{{ this.content }}</p>
-                        <a class="btn-alt" href="/news/{{ this.url }}">ERROR</a>
+                        <h3 class="txt-smallHeading">{{ post.title }}</h3>
+                        <p>{{ post.content }}</p>
+                        <a class="btn-alt" href="/news/{{ post.url }}">{{ ../locale.news.button_text }}</a>
                     </article><!--
                     {{/each}}
                     -->

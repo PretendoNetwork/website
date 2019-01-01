@@ -13,7 +13,7 @@
         <div class="card">
             <h2 class="head">{{ locale.nav.brand }}</h2>
             <div class="content">
-                <p class="txt-highlight">ERROR</p>
+                <p class="txt-highlight">{{ locale.login.card.caption }}</p>
                 <h1 class="txt-title small">{{ locale.login.card.title }}</h1>
                 <div id="errorBox" class="error hide"></div>
                 <form method="POST">
@@ -23,7 +23,7 @@
                     <input type="password" class="hasLabel" id="password_input" name="password">
                 </form>
                 <button class="btn btnMargin" onclick="login();">{{ locale.login.card.button_text }}</button>
-                <p class="lowText">ERROR <a href="#">ERROR</a></p>
+                <p class="lowText">{{ locale.login.card.link_introduction }} <a href="/pnid/register">{{ locale.login.card.link_text }}</a></p>
             </div>
         </div>
         {{> footer-default }}

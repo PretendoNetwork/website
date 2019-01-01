@@ -52,7 +52,6 @@ router.post('/admin/api/v1/login', passport.authenticate('adminUserStrategy'), (
 
 	return apiHelper.sendReturn(response, {
 		username: user.username,
-		locale: user.getLocale(), // calls 'utilHelper.getLocale(user.region, user.language)' maybe?
 		role: user.role ? user.role : undefined
 	});
 });

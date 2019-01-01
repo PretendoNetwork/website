@@ -18,17 +18,26 @@
 	},
 	"progress": {
 		"summary": {
+			"caption": "All in one",
 			"title": "Progress Summary",
 			"text": "We should probably pull this from a database ngl"
 		},
 		"compatability": {
+			"caption": "Usefull info",
 			"title": "Game Compatability"
 		},
 		"misc": {
+			"caption": "Less usefull info",
 			"title": "Other"
 		}
 	},
+	"news": {
+		"caption": "Read up",
+		"title": "All news",
+		"button_text": "Read more"
+	},
 	"contact": {
+		"caption": "Have a question?",
 		"title": "Contact Us",
 		"button_text": "Send Message",
 		"email_placeholder": "email@provider.com",
@@ -37,12 +46,13 @@
 	},
 	"login": {
 		"card": {
+			"caption": "Sign in",
 			"title": "Login",
 			"email_text": "Username or Email",
 			"password_text": "Password",
-			"email_placeholder": "email@provider.com",
-			"password_placeholder": "••••••••",
-			"button_text": "Sign In"
+			"button_text": "Sign In",
+			"link_introduction": "Don't have an account yet?",
+			"link_text": "Click here to register."
 		}
 	},
 	"register": {
@@ -52,23 +62,50 @@
 			"username_text": "Username",
 			"password_text": "Password",
 			"password_confirm_text": "Confirm Password",
-			"email_placeholder": "email@provider.com",
-			"password_placeholder": "••••••••",
-			"caption": "Sign Up"
+			"caption": "Sign Up",
+			"button_text": "Sign up",
+			"link_introduction": "Already have an account?",
+			"link_text": "Click here to login."
 		}
 	},
 	"about": {
+		"caption": "What is this?",
 		"title": "About",
 		"text": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS/2DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS/2DS games to their fullest capacity."
 	},
 	"credits": {
+		"caption": "Who are responsible?",
 		"title": "Credits"
+	},
+	"latest_news": {
+		"caption": "Catch up",
+		"title": "Latest news",
+		"description": "Pretendo is constantly evolving to create the best possible servers. We release posts to showcase what we have been working on and how far we got with certain things.",
+		"button_text": "All posts",
+		"news_button_text": "Read more"
 	},
 	"errors": {
 		"invalid_login": "Invalid username/password combination",
 		"account_exists": "An account with that username already exists!"
 	},
+	"validate_email_popup": {
+		"text": "Your email has not been validated yet. You are restricted from certain features.",
+		"change_button_text": "Change email",
+		"repeat_button_text": "Send again"
+	},
+	"dashboard": {
+		"navigation": {
+			"links": {
+				"account": "Account",
+				"soon": "Coming soon"
+			}
+		},
+		"account": {
+			"caption": "Pretendo Network ID",
+			"title": "Account information"
+		}
+	},
 	"footer": {
-		"text": "Copyright 2018 PretendoNetwork - Site designed and developed by MrJVS and Jip"
+		"text": "Copyright 2018 PretendoNetwork - Site designed and developed by MrJVS, ben and Jip"
 	}
 }
