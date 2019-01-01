@@ -283,7 +283,7 @@ button, .btn, .btn-alt {
 	background: #673db6;
 	color: white;
 	padding: 12px 80px;
-	border-radius: 10px;
+	border-radius: 5px;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.17);
 }
 .btn-alt {
@@ -297,6 +297,10 @@ button, .btn, .btn-alt {
 .btn:hover, button:hover, .btn-alt:hover {
 	background: #553099;
 	color: white;
+}
+
+.btn-alt.small, .btn.small {
+	padding: .5em 1.5em;
 }
 
 /* components - profiles */

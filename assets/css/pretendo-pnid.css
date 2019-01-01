@@ -71,6 +71,25 @@ nav.userNav .links .navItem.active {
     font-weight: bold;
 }
 
+/* email popup */
+.email_popup {
+    margin: 10px 4em;
+    margin-top: 55px;
+    background-color: white;
+    border: 1px solid #d1d1d1;
+    padding: 1em 2em;
+}
+.email_popup p {
+    padding: 0;
+    display: inline-block;
+}
+.email_popup span {
+    float: right;
+}
+.email_popup button {
+    margin: .4em;
+}
+
 @media screen and (max-width: 950px) {
     body .contentWrapper.userPage {
         flex-direction: column;
@@ -79,6 +98,10 @@ nav.userNav .links .navItem.active {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    .email_popup {
+        margin: 10px;
+        margin-top: 55px;
     }
     .contentCard {
         display: block;

@@ -7,6 +7,7 @@
     </head>
     <body class="flex">
         {{> nav-default }}
+        <div id="email_validation_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>Your email has not been validated yet. You are restricted from certain features.</p><span><button class="btn-alt small">Change email</button> <button class="btn small">Send again</button></span></div>
         <div class="contentWrapper userPage">
             {{> nav-dashboard }}
             <section class="contentCard">
