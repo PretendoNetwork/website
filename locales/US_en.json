@@ -22,12 +22,12 @@
 			"title": "Progress Summary",
 			"text": "We should probably pull this from a database ngl"
 		},
-		"compatability": {
-			"caption": "Usefull info",
-			"title": "Game Compatability"
+		"compatibility": {
+			"caption": "Useful info",
+			"title": "Game Compatibility"
 		},
 		"misc": {
-			"caption": "Less usefull info",
+			"caption": "Less useful info",
 			"title": "Other"
 		}
 	},
@@ -88,8 +88,8 @@
 		"invalid_login": "Invalid username/password combination",
 		"account_exists": "An account with that username already exists!"
 	},
-	"validate_email_popup": {
-		"text": "Your email has not been validated yet. You are restricted from certain features.",
+	"verify_email_popup": {
+		"text": "Your email has not been verified yet. You are restricted from certain features.",
 		"change_button_text": "Change email",
 		"repeat_button_text": "Send again"
 	},
