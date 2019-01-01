@@ -17,6 +17,11 @@ function showErrorPopup(errorText) {
 	document.getElementById('errorBox').classList.remove('hide');
 }
 
+function showSuccessPopup(successText) {
+	document.getElementById('successBox').innerHTML = successText;
+	document.getElementById('successBox').classList.remove('hide');
+}
+
 function login() {
 	var xhr = postAjax('/api/v1/login', {
 		email: document.getElementById('email_input').value,
@@ -49,6 +54,28 @@ function register() {
 		response = JSON.parse(xhr.responseText);
 		if (response.success === true) {
 			login();
+		} else if (response.errors) {
+			showErrorPopup(response.errors);
+		}
+	}
+}
+
+function sendMessage() {
+	var xhr = postAjax('/api/v1/sendmessage', {
+		email: document.getElementById('email_input').value,
+		subject: document.getElementById('subject_input').value,
+		message: document.getElementById('message_input').value
+	});
+	xhr.onload = function () {
+		if (xhr.responseText.charAt(0) !== "{") {
+			return showErrorPopup('Whoops, something went wrong. Try again later.');
+		}
+		response = JSON.parse(xhr.responseText);
+		if (response.success === true) {
+			document.getElementById('email_input').value = '';
+			document.getElementById('subject_input').value = '';
+			document.getElementById('message_input').value = '';
+			return showSuccessPopup('Your message has been sent.');
 		} else if (response.errors) {
 			showErrorPopup(response.errors);
 		}

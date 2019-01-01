@@ -63,6 +63,7 @@ blogPostSchema.methods.postTemplate = function(callback) {
 			content: self.content,
 			title: self.name,
 			date: self.meta.date,
+			dateString: moment(self.meta.date).format('YYYY-MM-DD'),
 			category: self.meta.category,
 			author: author.authorTemplate()
 		});

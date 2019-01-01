@@ -4,6 +4,8 @@
         {{> head-common }}
         <!-- page specific -->
         <link rel="stylesheet" href="/assets/css/pretendo-contact.css">
+        <!-- scripts -->
+        <script src="/assets/js/api.js" defer></script>
     </head>
     <body class="flex">
         {{> nav-default }}
@@ -13,16 +15,18 @@
                 <div class="bigCard">
                     <p class="txt-highlight">ERROR</p>
 				    <h1 class="txt-title">{{ locale.contact.title }}</h1>
+                    <div id="errorBox" class="error hide"></div>
+                    <div id="successBox" class="success hide"></div>
                     <form action="/api/v1/sendmessage" method="POST">
                         <div class="input-container">
-                            <input type="text" name="email" placeholder="{{ locale.contact.email_placeholder }}">
-                            <input type="text" name="subject" placeholder="{{ locale.contact.subject_placeholder }}">
+                            <input type="text" id="email_input" name="email" placeholder="{{ locale.contact.email_placeholder }}">
+                            <input type="text" id="subject_input" name="subject" placeholder="{{ locale.contact.subject_placeholder }}">
                         </div>
-                        <textarea name="message" placeholder="{{ locale.contact.message_placeholder }}"></textarea>
-                        <div class="txt-center">
-                            <button class="btn">{{ locale.contact.button_text }}</button>
-                        </div>
+                        <textarea name="message" id="message_input" placeholder="{{ locale.contact.message_placeholder }}"></textarea>
                     </form>
+                    <div class="txt-center">
+                        <button onclick="sendMessage()" class="btn">{{ locale.contact.button_text }}</button>
+                    </div>
                 </div>
             </section>
         </div>

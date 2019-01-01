@@ -101,15 +101,15 @@ router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (re
 *		errors: Strings[messages]
 *	}
 */
-router.post('/api/v1/register'/*, recaptcha.middleware.verify*/, async (request, response) => {
+router.post('/api/v1/register', recaptcha.middleware.verify, async (request, response) => {
 	if (!request.body) {
 		return apiHelper.sendApiGenericError(response);
 	}
 
-	/*if (request.recaptcha.error) {
+	if (request.recaptcha.error) {
 		logger.log('warn', `[reCaptcha ERROR] ${request.recaptcha.error} | IP: ${request.ip} | Data: ${JSON.stringify(request.body)}`);
 		return apiHelper.sendApiError(response, 500, ['Captcha error']);
-	}*/
+	}
 
 	const { email, password, confirm_password, username } = request.body;
 
