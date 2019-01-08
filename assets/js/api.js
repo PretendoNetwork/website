@@ -99,3 +99,8 @@ function sendMessage() {
 		}
 	}
 }
+
+function email_resend() {
+	var xhr = postAjax('/api/v1/resendemail', {});
+	document.getElementById('email_verification_popup').classList.add('closed');
+}
