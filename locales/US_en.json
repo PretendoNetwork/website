@@ -68,6 +68,15 @@
 			"link_text": "Click here to login."
 		}
 	},
+	"password": {
+		"card": {
+			"caption": "Forgot password?",
+			"title": "Reset password",
+			"password_text": "New password",
+			"password_confirm_text": "Confirm password",
+			"button_text": "Reset password"
+		}
+	},
 	"about": {
 		"caption": "What is this?",
 		"title": "About",

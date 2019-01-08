@@ -41,6 +41,17 @@ router.get('/pnid/login', (request, response) => {
 		locale: utilHelper.getLocale('US', 'en')
 	});
 });
+// renders password reset page
+router.get('/pnid/passwordreset', (request, response) => {
+	return response.render('password', {
+		title: 'Pretendo | Password reset',
+		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
+		locale: utilHelper.getLocale('US', 'en'),
+		user: utilHelper.templateReadyUser(request)
+	});
+});
 // logout
 router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (request, response) => {
 	request.logout();
@@ -83,6 +94,26 @@ router.post('/api/v1/login', passport.authenticate('PNIDStrategy'), function (re
 		email_validated: request.user.email_validated,
 		pnid: request.user.pnid.key
 	});
+});
+
+/* 
+*	/api/v1/passwordreset
+*
+*	signs user in
+*
+*	post {
+*		password
+*		password_confirm
+*	}
+*	return {
+*		code: http code
+*		success: boolean
+*		errors: Strings[messages]
+*	}
+*/
+router.post('/api/v1/passwordreset', function (request, response) {
+	//TODO make the actual password change
+	return apiHelper.sendReturn(response, {});
 });
 
 /* 

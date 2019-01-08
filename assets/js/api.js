@@ -40,6 +40,24 @@ function login() {
 	}
 }
 
+function passwordReset() {
+	var xhr = postAjax('/api/v1/passwordreset', {
+		password: document.getElementById('password_input').value,
+		password_confirm: document.getElementById('password_confirm').value
+	});
+	xhr.onload = function () {
+		if (xhr.responseText.charAt(0) !== "{") {
+			return showErrorPopup('Whoops, something went wrong. Try again later.');
+		}
+		response = JSON.parse(xhr.responseText);
+		if (response.success === true) {
+			location.pathname = '/pnid/login';
+		} else if (response.errors) {
+			showErrorPopup(response.errors);
+		}
+	}
+}
+
 function register() {
 	var xhr = postAjax('/api/v1/register', {
 		email: document.getElementById('email_input').value,
