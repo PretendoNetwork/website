@@ -51,6 +51,8 @@
 			"email_text": "Username or Email",
 			"password_text": "Password",
 			"button_text": "Sign In",
+			"forgotpass_introduction": "Forgot password?",
+			"forgotpass_text": "Click here to reset it.",
 			"link_introduction": "Don't have an account yet?",
 			"link_text": "Click here to register."
 		}
@@ -75,6 +77,14 @@
 			"password_text": "New password",
 			"password_confirm_text": "Confirm password",
 			"button_text": "Reset password"
+		}
+	},
+	"forgot": {
+		"card": {
+			"caption": "Did you forget something?",
+			"title": "Forgot password",
+			"email_text": "Email address",
+			"button_text": "Send email"
 		}
 	},
 	"about": {

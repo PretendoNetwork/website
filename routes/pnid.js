@@ -41,6 +41,17 @@ router.get('/pnid/login', (request, response) => {
 		locale: utilHelper.getLocale('US', 'en')
 	});
 });
+// renders password forget
+router.get('/pnid/forgotpassword', (request, response) => {
+	return response.render('forgot', {
+		title: 'Pretendo | Forgot password',
+		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
+		url: request.protocol + '://' + request.get('host') + request.originalUrl,
+		baseurl: request.protocol + '://' + request.get('host'),
+		locale: utilHelper.getLocale('US', 'en'),
+		user: utilHelper.templateReadyUser(request)
+	});
+});
 // renders password reset page
 router.get('/pnid/passwordreset', (request, response) => {
 	return response.render('password', {
