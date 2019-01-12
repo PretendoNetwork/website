@@ -9,7 +9,7 @@
     </head>
     <body class="flex">
         {{> nav-default }}
-        <div id="email_verification_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>{{ locale.verify_email_popup.text }}</p><span><button class="btn-alt small">{{ locale.validate_email_popup.change_button_text }}</button> <button class="btn small" onclick="email_resend();">{{ locale.verify_email_popup.repeat_button_text }}</button></span></div>
+        <div id="email_verification_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>{{ locale.verify_email_popup.text }}</p><span><button class="btn-alt small">{{ locale.verify_email_popup.change_button_text }}</button> <button class="btn small" onclick="email_resend();">{{ locale.verify_email_popup.repeat_button_text }}</button></span></div>
         <div class="contentWrapper userPage">
             {{> nav-dashboard }}
             <section class="contentCard">
