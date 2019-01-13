@@ -22,6 +22,31 @@ body footer .content {
     max-width: 100vw;
     padding: 3rem 4rem;
 }
+.infoContainer.hide {
+    display: none;
+}
+.infoList {
+    display: block;
+    padding: 1em 0;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+.infoList span {
+    font-weight: normal;
+    display: inline-block;
+    color: #707070;
+    width: 6em;
+}
+.infoList + .infoList {
+    border-top: 1px solid #afafaf;
+}
+.infoContainer .btn {
+    margin-top: 1em;
+}
+.link-margin {
+    margin: 0 1em;
+}
 
 /* aside navigation */
 nav.userNav {

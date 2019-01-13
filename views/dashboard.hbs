@@ -6,15 +6,31 @@
         <link rel="stylesheet" href="/assets/css/pretendo-pnid.css">
         <!-- scripts -->
         <script src="/assets/js/api.js"></script>
+        <script src="/assets/js/pnid.js"></script>
     </head>
     <body class="flex">
         {{> nav-default }}
-        <div id="email_verification_popup" class="email_popup{{#if_eq user.email_validated true}} hide{{/if_eq}}"><p>{{ locale.verify_email_popup.text }}</p><span><button class="btn-alt small">{{ locale.verify_email_popup.change_button_text }}</button> <button class="btn small" onclick="email_resend();">{{ locale.verify_email_popup.repeat_button_text }}</button></span></div>
+        <div id="email_verification_popup" class="email_popup{{#if_eq user.user.email_validated true}} hide{{/if_eq}}"><p>{{ locale.verify_email_popup.text }}</p><span><button class="btn-alt small" onclick="toggleEditInfo();">{{ locale.verify_email_popup.change_button_text }}</button> <button class="btn small" onclick="email_resend();">{{ locale.verify_email_popup.repeat_button_text }}</button></span></div>
         <div class="contentWrapper userPage">
             {{> nav-dashboard }}
             <section class="contentCard">
                 <p class="txt-highlight">{{ locale.dashboard.account.caption }}</p>
                 <h1 class="txt-title small">{{ locale.dashboard.account.title }}</h1>
+                <div class="infoContainer" id="userInfo">
+                    <p class="infoList"><span>Username:</span> {{ user.user.pnid.username }}</p>
+                    <p class="infoList"><span>Email:</span> {{ user.user.email }}</p>
+                    <button class="btn small btn-alt" onclick="toggleEditInfo();">Edit</button>
+                </div>
+                <div class="infoContainer hide" id="editInfo">
+                    <div id="errorBox" class="error hide"></div>
+                    <p class="infoList"><span>Username:</span>
+                        <input type="text" class="inline" name="username_input" id="username_input" value="{{ user.user.pnid.username }}">
+                    </p>
+                    <p class="infoList"><span>Email:</span>
+                        <input type="text" class="inline" name="email_input" id="email_input" value="{{ user.user.email }}">
+                    </p>
+                    <button class="btn small" onclick="editInfo();">Save</button><a href="#" class="link-margin" onclick="toggleEditInfo();">Cancel</a>
+                </div>
             </section>
         </div>  
         {{> footer-default }}

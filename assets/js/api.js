@@ -40,6 +40,24 @@ function login() {
 	}
 }
 
+function editInfo() {
+	var xhr = postAjax('/api/v1/editaccount', {
+		email: document.getElementById('email_input').value,
+		username: document.getElementById('username_input').value
+	});
+	xhr.onload = function () {
+		if (xhr.responseText.charAt(0) !== "{") {
+			return showErrorPopup('Whoops, something went wrong. Try again later.');
+		}
+		response = JSON.parse(xhr.responseText);
+		if (response.success === true) {
+			location.pathname = '/pnid/dashboard';
+		} else if (response.errors) {
+			showErrorPopup(response.errors);
+		}
+	}
+}
+
 function passwordForgot() {
 	var xhr = postAjax('/api/v1/passwordforgot', {
 		email: document.getElementById('email_input').value

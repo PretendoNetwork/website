@@ -362,6 +362,9 @@ input[type="text"], input[type="password"], textarea {
 	box-sizing: border-box;
 	resize: none;
 }
+input[type="text"].inline, input[type="password"].inline, textarea.inline {
+	width: auto;
+}
 
 label {
 	font-size: 1em;
