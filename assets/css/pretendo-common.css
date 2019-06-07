@@ -304,6 +304,11 @@ button, .btn, .btn-alt {
 	padding: .5em 1.5em;
 }
 
+button:disabled, .btn:disabled, .btn-alt:disabled {
+	cursor: not-allowed;
+	background: #bbacd6;
+}
+
 /* components - profiles */
 /* profiles */
 .cardProfiles {
@@ -315,24 +320,24 @@ button, .btn, .btn-alt {
 	min-width: 250px;
 	width: 50%;
 	max-width: 550px;
-    margin-bottom: 10px;
-    display: flex;
+	margin-bottom: 10px;
+	display: flex;
 }
 .profileIcon {
-    margin-right: 10px;
-    width: 80px; height: 80px;
+	margin-right: 10px;
+	width: 80px; height: 80px;
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .profileText {
 	width: calc(100% - 130px);
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .profileText h2 {
-    margin: 0;
+	margin: 0;
 }
 .profileText p {
 	margin-top: 5px;
@@ -394,22 +399,22 @@ input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
 }
 
 .error {
-    background-color: #eea9a9;
-    border-left: 3px solid #d83434;
-    padding: 1em;
-    color: rgba(0, 0, 0, 0.7);
+	background-color: #eea9a9;
+	border-left: 3px solid #d83434;
+	padding: 1em;
+	color: rgba(0, 0, 0, 0.7);
 }
 .error.hide {
-    display: none;
+	display: none;
 }
 .success {
-    background-color: #9fc983;
-    border-left: 3px solid #337419;
-    padding: 1em;
-    color: rgba(0, 0, 0, 0.7);
+	background-color: #9fc983;
+	border-left: 3px solid #337419;
+	padding: 1em;
+	color: rgba(0, 0, 0, 0.7);
 }
 .success.hide {
-    display: none;
+	display: none;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{> metatags }}
+		<title>{{ title }}</title>
+		<!-- css files -->
+		<link rel="stylesheet" href="/assets/css/pretendo-common.css">
+		<!-- page specific -->
+		<link rel="stylesheet" href="/assets/css/pretendo-auth.css">
+
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src="/assets/js/api.js" defer></script>
+
+		<!-- date picker -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css">
+	</head>
+	<body class="flex center">
+		<div class="card">
+			<h2 class="head">{{ locale.nav.brand }}</h2>
+			<div class="content">
+				<p class="txt-highlight">{{ locale.register.card.caption }}</p>
+				<h1 class="txt-title small">{{ locale.register.card.title }}</h1>
+				<div id="errorBox" class="error hide"></div>
+
+				<form id="registerForm" method="POST" action="http://account.pretendo.cc/v1/api/people/registerwp">
+					<label for="birthdate">{{ locale.register.card.birthdate_text }}</label>
+					<input required type="text" class="hasLabel" id="birthdate_input" name="birthdate">
+					<label for="gender">{{ locale.register.card.gender_text }}</label>
+					<input required type="text" class="hasLabel" id="gender_input" name="gender" list="gender-list" autocomplete="new-password">
+					<datalist id="gender-list">
+						<option value="M"></option>
+						<option value="F"></option>
+					</datalist>
+					<label for="email">{{ locale.register.card.email_text }}</label>
+					<input required type="text" class="hasLabel" id="email_input" name="email">
+					<label for="username">{{ locale.register.card.username_text }}</label>
+					<input required type="text" class="hasLabel" id="username_input" name="username" minlength="6" maxlength="16">
+					<label for="password">{{ locale.register.card.password_text }}</label>
+					<input required type="password" class="hasLabel" id="password_input" name="password">
+					<label for="confirm_password">{{ locale.register.card.password_confirm_text }}</label>
+					<input required type="password" class="hasLabel" id="confirm_password_input" name="confirm_password">
+
+					<div class="g-recaptcha"
+						data-callback="capchaFilled"
+						data-expired-callback="capchaExpired"
+						data-sitekey="{{ recaptcha_sitekey }}"></div>
+
+					<input disabled type="submit" value="{{ locale.register.card.button_text }}" class="btn btnMargin"></input>
+				</form>
+
+				<p class="lowText">{{ locale.register.card.link_introduction }} <a href="/pnid/login">{{ locale.register.card.link_text }}</a></p>
+			</div>
+		</div>
+
+		<script>
+			$('#birthdate_input').datepicker({
+				autoPick: true,
+				format: 'yyyy-mm-dd',
+				startView: 2
+			});
+
+			const form = document.getElementById('registerForm');
+			form.addEventListener('submit', async e => {
+				e.preventDefault();
+
+				// https://stackoverflow.com/a/34296482
+				const elements = [].filter.call(form.elements, element => {
+						return !(element.type in ['checkbox', 'radio']) || element.checked;
+					})
+					.filter(element => { return !!element.name })
+					.filter(element => { return !element.disabled });
+
+				const data = {};
+				for ({name, value} of elements) {
+					data[name] = value;
+				}
+
+				if (!data['g-recaptcha-response'] || data['g-recaptcha-response'].trim() === '') {
+					alert('Fill in the captcha');
+					return false;
+				}
+
+				if (
+					!data.email ||
+					!data.username ||
+					!data.password ||
+					!data.confirm_password ||
+					data.email.trim() === '' ||
+					data.username.trim() === '' ||
+					data.password.trim() === '' ||
+					data.confirm_password.trim() === ''
+				) {
+					// Handle error, there are missing fields
+					console.log(data);
+					alert('error')
+					return false;
+				}
+
+				if (data.password.trim() !== data.confirm_password.trim()) {
+					alert('Passwords do not match');
+					return false;
+				}
+
+				const response = await fetch(`http://account.pretendo.cc/v1/api/people/${data.username}`, {
+					headers: {
+						'x-nintendo-client-id': 'a2efa818a34fa16b8afbc8a74eba3eda',
+						'x-nintendo-client-secret': 'c91cdb5658bd4954ade78533a339cf9a'
+					}
+				});
+				const text = await response.text();
+				
+				if (text.trim() !== '') {
+					const body = (new window.DOMParser()).parseFromString(text, 'text/xml');
+					const error = body;
+					alert('Username already in use');
+					return; // Handle errors here
+				}
+
+				const params = elements.map(({name, value}) => {
+					return encodeURIComponent(name) + '=' + encodeURIComponent(value);
+				}).join('&');
+
+				console.log(params);
+				
+				postAjax(form.action, params, {
+					load: event => {
+						console.log(event.target.responseText)
+					},
+					error: event => {
+						console.log(event)
+					}
+				});
+			});
+
+			function capchaFilled() {
+				document.querySelector('input[type="submit"]').removeAttribute('disabled');
+			}
+
+			function capchaExpired() {
+				document.querySelector('input[type="submit"]').setAttribute('disabled', true);
+			}
+		</script>
+		{{> footer-default }}
+	</body>
+</html>

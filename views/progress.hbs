@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {{> head-common }}
-        <!-- page specific -->
-        <link rel="stylesheet" href="/assets/css/pretendo-progress.css">
-    </head>
-    <body class="flex">
-        {{> nav-default }}
-        <div class="contentWrapper bgLinesSmall">
-            <div class="bgExtrude"></div>
-            <section class="bigCardWrapper">
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ locale.progress.summary.caption }}</p>
-				    <h1 class="txt-title">{{ locale.progress.summary.title }}</h1>
-                    <p>{{ locale.progress.summary.text }}</p>
-                </div>
-            </section>
-            <section class="bigCardWrapper double">
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ locale.progress.compatibility.caption }}</p>
-				    <h1 class="txt-title">{{ locale.progress.compatibility.title }}</h1>
-                    {{#each games }}
-                    <div class="listItem state{{ this.state }}">
-                        <h2>{{ this.title }}</h2>
-                        <p>{{ this.description }}</p>
-                    </div>
-                    {{/each}}
-                </div>
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ locale.progress.misc.caption }}</p>
-				    <h1 class="txt-title">{{ locale.progress.misc.title }}</h1>
-                    {{#each backends }}
-                    <div class="listItem">
-                        <h2>{{ this.title }}</h2>
-                        <p>{{ this.description }}</p>
-                    </div>
-                    {{/each}}
-                </div>
-            </section>
-        </div>
-        {{> footer-default }}
-    </body>
+	<head>
+		{{> head-common }}
+		<!-- page specific -->
+		<link rel="stylesheet" href="/assets/css/pretendo-progress.css">
+	</head>
+	<body class="flex">
+		{{> nav-default }}
+		<div class="contentWrapper bgLinesSmall">
+			<div class="bgExtrude"></div>
+			<section class="bigCardWrapper">
+				<div class="bigCard">
+					<p class="txt-highlight">{{ locale.progress.summary.caption }}</p>
+					<h1 class="txt-title">{{ locale.progress.summary.title }}</h1>
+					<p>{{ locale.progress.summary.text }}</p>
+				</div>
+			</section>
+			<section class="bigCardWrapper double">
+				<div class="bigCard">
+					<p class="txt-highlight">{{ locale.progress.compatibility.caption }}</p>
+					<h1 class="txt-title">{{ locale.progress.compatibility.title }}</h1>
+					{{#each games }}
+					<div class="listItem state{{ this.state }}">
+						<h2>{{ this.title }}</h2>
+						<p>{{ this.description }}</p>
+					</div>
+					{{/each}}
+				</div>
+				<div class="bigCard">
+					<p class="txt-highlight">{{ locale.progress.misc.caption }}</p>
+					<h1 class="txt-title">{{ locale.progress.misc.title }}</h1>
+					{{#each backends }}
+					<div class="listItem">
+						<h2>{{ this.title }}</h2>
+						<p>{{ this.description }}</p>
+					</div>
+					{{/each}}
+				</div>
+			</section>
+		</div>
+		{{> footer-default }}
+	</body>
 </html>

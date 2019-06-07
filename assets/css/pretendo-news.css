@@ -4,7 +4,7 @@
 	border: 1px solid rgb(165, 165, 165);
 	border-radius: 10px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    position: relative;
+	position: relative;
 	margin: .5em;
 	width: calc(50% - 1em );
 	box-sizing: border-box;

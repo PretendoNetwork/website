@@ -1,103 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        {{> head-common }}
-        <!-- page specific -->
-        <link rel="stylesheet" href="/assets/css/pretendo-home.css">
+		{{> head-common }}
+		<!-- page specific -->
+		<link rel="stylesheet" href="/assets/css/pretendo-home.css">
 	</head>
 	<body>
 		{{> nav-default }}
-        <div class="contentWrapper">
-            <header>
-                <h1>{{ locale.home.header.title }}</h1>
-                <hr>
-			    <h3>{{ locale.home.header.text }}</h3>
-            </header>
-        </div>
-        <div class="contentWrapper bgLines">
-            <div class="bgExtrude"></div>
-            <section class="bigCardWrapper">
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ locale.about.caption }}</p>
-				    <h1 class="txt-title">{{ locale.about.title }}</h1>
-				    <p>{{ locale.about.text }}</p>
-                </div>
-            </section>
+		<div class="contentWrapper">
+			<header>
+				<h1>{{ locale.home.header.title }}</h1>
+				<hr>
+				<h3>{{ locale.home.header.text }}</h3>
+			</header>
+		</div>
+		<div class="contentWrapper bgLines">
+			<div class="bgExtrude"></div>
+			<section class="bigCardWrapper">
+				<div class="bigCard">
+					<p class="txt-highlight">{{ locale.about.caption }}</p>
+					<h1 class="txt-title">{{ locale.about.title }}</h1>
+					<p>{{ locale.about.text }}</p>
+				</div>
+			</section>
 
-            <section class="bigCardWrapper">
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ locale.about.caption }}</p>
-				    <h1 class="txt-title">{{ locale.credits.title }}</h1>
-				    <div class="cardProfiles">
-                        <!-- profile -->
-					    <div class="profile">
+			<section class="bigCardWrapper">
+				<div class="bigCard">
+					<p class="txt-highlight">{{ locale.about.caption }}</p>
+					<h1 class="txt-title">{{ locale.credits.title }}</h1>
+					<div class="cardProfiles">
+						<!-- profile -->
+						<div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div><!--
-                        --><div class="profile">
+							</div>
+						</div><!--
+						--><div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div><!--
-                        --><div class="profile">
+							</div>
+						</div><!--
+						--><div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div><!--
-                        --><div class="profile">
+							</div>
+						</div><!--
+						--><div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div><!--
-                        --><div class="profile">
+							</div>
+						</div><!--
+						--><div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div><!--
-                        --><div class="profile">
+							</div>
+						</div><!--
+						--><div class="profile">
 							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/117261997619412996/c0e34de348b8d45e7a16c0260173bc8c.webp?size=256">
-						    <div class="profileText">
+							<div class="profileText">
 								<h2 class="txt-smallHeading">RedDucks</h2>
 								<p>Project owner, lead developer, very violent young man. Splatoon obsessed as well.</p>
-						    </div>
-					    </div>
-				    </div>
-                </div>
-            </section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <section class="bigCardWrapper">
-                <div class="bigCard lessPadding cont-flex">
-                    <div class="flex-item">
-                        <p class="txt-highlight">{{ locale.latest_news.caption }}</p>
-					    <h1 class="txt-title">{{ locale.latest_news.title }}</h1>
-					    <p>{{ locale.latest_news.description }}</p>
-                        <a href="/news" class="btn">{{ locale.latest_news.button_text }}</a>
-                    </div>
-                    <div class="cont-flex">
-                        {{#each posts as |post| }}
-                        <div class="smallCardWidth">
-                            <div class="smallCard">
-                                <h3 class="txt-smallHeading">{{ post.title }}</h3>
-                                <p>{{ post.content }}</p>
-                                <a href="/news/{{ post.url }}" class="btn-alt">{{ ../locale.latest_news.news_button_text }}</a>
-                            </div>
-                        </div>
-                        {{/each }}
-                    </div>
-                </div>
-            </section>
-        </div>
-        {{> footer-default }}
+			<section class="bigCardWrapper">
+				<div class="bigCard lessPadding cont-flex">
+					<div class="flex-item">
+						<p class="txt-highlight">{{ locale.latest_news.caption }}</p>
+						<h1 class="txt-title">{{ locale.latest_news.title }}</h1>
+						<p>{{ locale.latest_news.description }}</p>
+						<a href="/news" class="btn">{{ locale.latest_news.button_text }}</a>
+					</div>
+					<div class="cont-flex">
+						{{#each posts as |post| }}
+						<div class="smallCardWidth">
+							<div class="smallCard">
+								<h3 class="txt-smallHeading">{{ post.title }}</h3>
+								<p>{{ post.content }}</p>
+								<a href="/news/{{ post.url }}" class="btn-alt">{{ ../locale.latest_news.news_button_text }}</a>
+							</div>
+						</div>
+						{{/each }}
+					</div>
+				</div>
+			</section>
+		</div>
+		{{> footer-default }}
 	</body>
 </html>

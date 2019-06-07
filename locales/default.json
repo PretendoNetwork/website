@@ -48,6 +48,8 @@
 	"register": {
 		"card": {
 			"title": "ERROR",
+			"birthdate_text": "ERROR",
+			"gender_text": "ERROR",
 			"email_text": "ERROR",
 			"username_text": "ERROR",
 			"password_text": "ERROR",

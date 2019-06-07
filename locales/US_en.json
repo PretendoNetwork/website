@@ -60,6 +60,8 @@
 	"register": {
 		"card": {
 			"title": "Register",
+			"birthdate_text": "Birthday",
+			"gender_text": "Gender",
 			"email_text": "Email Address",
 			"username_text": "Username",
 			"password_text": "Password",
@@ -125,6 +127,6 @@
 		}
 	},
 	"footer": {
-		"text": "Copyright 2018 PretendoNetwork - Site designed and developed by MrJVS, ben and Jip"
+		"text": "Copyright 2019 PretendoNetwork - Site designed and developed by MrJVS, ben and Jip"
 	}
 }

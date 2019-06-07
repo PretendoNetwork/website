@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {{> head-common }}
-        <!-- page specific -->
-        <link rel="stylesheet" href="/assets/css/pretendo-news.css">
-    </head>
-    <body class="flex">
-        {{> nav-default }}
-        <div class="contentWrapper bgLinesSmall">
-            <div class="bgExtrude"></div>
-            <section class="bigCardWrapper">
-                <div class="bigCard lessPadding">
-                    <p class="txt-highlight">{{ locale.news.caption }}</p>
-				    <h1 class="txt-title">{{ locale.news.title }}</h1><!--
-                    {{#each posts as |post| }}
-                    --><article class="smallCard">
-                        <h3 class="txt-smallHeading">{{ post.title }}</h3>
-                        <p>{{ post.content }}</p>
-                        <a class="btn-alt" href="/news/{{ post.url }}">{{ ../locale.news.button_text }}</a>
-                    </article><!--
-                    {{/each}}
-                    -->
-                </div>
-            </section>
-        </div>
-        {{> footer-default }}
-    </body>
+	<head>
+		{{> head-common }}
+		<!-- page specific -->
+		<link rel="stylesheet" href="/assets/css/pretendo-news.css">
+	</head>
+	<body class="flex">
+		{{> nav-default }}
+		<div class="contentWrapper bgLinesSmall">
+			<div class="bgExtrude"></div>
+			<section class="bigCardWrapper">
+				<div class="bigCard lessPadding">
+					<p class="txt-highlight">{{ locale.news.caption }}</p>
+					<h1 class="txt-title">{{ locale.news.title }}</h1><!--
+					{{#each posts as |post| }}
+					--><article class="smallCard">
+						<h3 class="txt-smallHeading">{{ post.title }}</h3>
+						<p>{{ post.content }}</p>
+						<a class="btn-alt" href="/news/{{ post.url }}">{{ ../locale.news.button_text }}</a>
+					</article><!--
+					{{/each}}
+					-->
+				</div>
+			</section>
+		</div>
+		{{> footer-default }}
+	</body>
 </html>

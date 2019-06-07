@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {{> head-common }}
-        <!-- page specific -->
-    </head>
-    <body class="flex">
-        {{> nav-default }}
-        <div class="contentWrapper bgLinesSmall">
-            <div class="bgExtrude"></div>
-            <section class="bigCardWrapper">
-                <div class="bigCard">
-                    <p class="txt-highlight">{{ post.category }} &mdash; {{ post.dateString }}</p>
-				    <h1 class="txt-title">{{ post.title }}</h1>
-                    {{{ post.content }}}
-                    <div class="profile">
+	<head>
+		{{> head-common }}
+		<!-- page specific -->
+	</head>
+	<body class="flex">
+		{{> nav-default }}
+		<div class="contentWrapper bgLinesSmall">
+			<div class="bgExtrude"></div>
+			<section class="bigCardWrapper">
+				<div class="bigCard">
+					<p class="txt-highlight">{{ post.category }} &mdash; {{ post.dateString }}</p>
+					<h1 class="txt-title">{{ post.title }}</h1>
+					{{{ post.content }}}
+					<div class="profile">
 						<img class="profileIcon" src="{{ post.author.profilePicture }}">
 						<div class="profileText">
 							<h2 class="txt-smallHeading">{{ post.author.name }}</h2>
 							<p>{{ post.author.description }}</p>
 						</div>
 					</div>
-                </div>
-            </section>
-        </div>
-        {{> footer-default }}
-    </body>
+				</div>
+			</section>
+		</div>
+		{{> footer-default }}
+	</body>
 </html>

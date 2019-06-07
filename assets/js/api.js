@@ -1,13 +1,21 @@
-function postAjax(url, data, success) {
-	var params = (typeof data == 'string') ? data : Object.keys(data).map(function (k) {
+function postAjax(url, data, callbacks={}) {
+	const params = (typeof data == 'string') ? data : Object.keys(data).map(function (k) {
 		return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) 
 	}).join('&');
 
-	var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+	const xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+	for (const event in callbacks) {
+		const handler = callbacks[event];
+
+		if (handler instanceof Function) {
+			xhr.addEventListener(event, handler);
+		}
+	}
+	
 	xhr.open('POST', url);
 	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-	xhr.send(params);
+	xhr.send(data);
 	return xhr;
 }
 

@@ -22,7 +22,7 @@ const PNID = require('../models/pnid');
 
 // renders register page
 router.get('/pnid/register', (request, response) => {
-	return response.render('register', {
+	return response.render('pnid/register', {
 		title: 'Pretendo | Register',
 		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
 		url: request.protocol + '://' + request.get('host') + request.originalUrl,
@@ -33,7 +33,7 @@ router.get('/pnid/register', (request, response) => {
 });
 // renders login page
 router.get('/pnid/login', (request, response) => {
-	return response.render('login', {
+	return response.render('pnid/login', {
 		title: 'Pretendo | Login',
 		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
 		url: request.protocol + '://' + request.get('host') + request.originalUrl,
@@ -43,7 +43,7 @@ router.get('/pnid/login', (request, response) => {
 });
 // renders password forget
 router.get('/pnid/forgotpassword', (request, response) => {
-	return response.render('forgot', {
+	return response.render('pnid/forgotpassword', {
 		title: 'Pretendo | Forgot password',
 		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
 		url: request.protocol + '://' + request.get('host') + request.originalUrl,
@@ -54,7 +54,7 @@ router.get('/pnid/forgotpassword', (request, response) => {
 });
 // renders password reset page
 router.get('/pnid/passwordreset', (request, response) => {
-	return response.render('password', {
+	return response.render('passwordreset', {
 		title: 'Pretendo | Password reset',
 		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
 		url: request.protocol + '://' + request.get('host') + request.originalUrl,
@@ -70,7 +70,7 @@ router.get('/pnid/logout', userMiddleware.pnidAuthNeeded, (request, response) =>
 });
 // renders pnid dashboard
 router.get('/pnid/dashboard', userMiddleware.pnidAuthNeeded, (request, response) => {
-	return response.render('dashboard', {
+	return response.render('pnid/dashboard', {
 		title: 'Pretendo | Dash',
 		description: 'On the Pretendo Network ID Dashboard you can manage your personal information and make new virtual consoles to use for login on your home console.',
 		url: request.protocol + '://' + request.get('host') + request.originalUrl,
@@ -143,10 +143,17 @@ router.post('/api/v1/passwordreset', function (request, response) {
 *		errors: Strings[messages]
 *	}
 */
-router.post('/api/v1/register', recaptcha.middleware.verify, async (request, response) => {
+
+const multer = require('multer')();
+
+router.post('/api/v1/register', multer.none(), recaptcha.middleware.verify, async (request, response) => {
 	if (!request.body) {
 		return apiHelper.sendApiGenericError(response);
 	}
+
+	console.log(request.body);
+
+	return response.send(request.body);
 
 	if (request.recaptcha.error) {
 		logger.log('warn', `[reCaptcha ERROR] ${request.recaptcha.error} | IP: ${request.ip} | Data: ${JSON.stringify(request.body)}`);
