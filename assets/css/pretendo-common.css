@@ -51,6 +51,7 @@ nav.navWrapper .navItem svg {
 	width: 1.1rem;
 	height: 1.1rem;
 	margin-right: 5px;
+	display: block;
 }
 nav.navWrapper .navItem:hover, nav.navWrapper .navItem.active {
 	color: white;
@@ -141,7 +142,7 @@ nav.navWrapper.open .navItem.hamburger {
 		display: none;
 	}
 	nav.navWrapper.open .navItem {
-		display: block;
+		display: flex;
 	}
 	nav.navWrapper .navItem.hamburger {
 		display: flex;
