@@ -1,16 +1,5 @@
 {
-    "http": {
-        "port": 8080
-    },
-    "database": {
-        "url": "mongodb://localhost:27017/pretendo_website"
-    },
-    "contactWebhook": {
-        "port": 443,
-        "host": "host.com",
-        "path": "/webhookurl"
-    },
-    "secrets": {
-        "session": "session secret here"
-    }
+	"http": {
+		"port": 8080
+	}
 }

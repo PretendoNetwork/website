@@ -1,0 +1,23 @@
+{
+	"nav": {
+		"brand": "ERROR"
+	},
+	"home": {
+		"header": {
+			"title": "ERROR",
+			"text": "ERROR"
+		}
+	},
+	"about": {
+		"caption": "ERROR",
+		"title": "ERROR",
+		"text": "ERROR"
+	},
+	"credits": {
+		"caption": "ERROR",
+		"title": "ERROR"
+	},
+	"footer": {
+		"text": "ERROR"
+	}
+}

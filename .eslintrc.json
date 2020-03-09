@@ -3,7 +3,10 @@
         "node": true,
         "commonjs": true,
         "es6": true
-	},
+    },
+    "globals": {
+        "document": true
+    },
 	"parserOptions": {
         "ecmaVersion": 2017
     },

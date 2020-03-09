@@ -1,0 +1,29 @@
+::-webkit-details-marker {
+	float: right;
+	margin-top: 3px;
+}
+
+details {
+	background: #f6f6f6;
+	border-radius: 7px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+details[open] summary {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+details summary {
+	border-radius: 7px;
+	padding: 10px 20px;
+	background: #673db6;
+	color: white;
+	outline: none;
+}
+
+details .text {
+	margin-left: 10px;
+	padding-bottom: 10px;
+}
