@@ -1,41 +1,54 @@
-const winston = require('winston');
+const fs = require('fs-extra');
+require('colors');
 
-const logger = winston.createLogger({
-	level: 'verbose',
-	format: winston.format.combine(
-		winston.format.timestamp(),
-		winston.format.printf(log => {
-			return `${log.timestamp} | ${log.level}: ${log.message}`;
-		})
-	),
-	transports: [
-		new winston.transports.Console({ colorize: true }),
-		new winston.transports.File({
-			colorize: false,
-			json: false,
-			filename: `${__dirname}/logs/events.log`
-		}),
-		new winston.transports.File({
-			colorize: false,
-			json: false,
-			filename: `${__dirname}/logs/error.log`,
-			level: 'error'
-		}),
-		new winston.transports.File({
-			colorize: false,
-			json: false,
-			filename: `${__dirname}/logs/warn.log`,
-			level: 'warn'
-		}),
-		new winston.transports.File({
-			colorize: false,
-			json: false,
-			filename: `${__dirname}/logs/debug.log`,
-			level: 'debug'
-		})
-	]
-});
+class Logger {
+	constructor(root = '') {
+		fs.ensureDirSync(`${root}/logs`);
 
-winston.add(logger);
+		this.root = root;
+		this.streams = {
+			latest: fs.createWriteStream(`${this.root}/logs/latest.log`),
+			success: fs.createWriteStream(`${this.root}/logs/success.log`),
+			error: fs.createWriteStream(`${this.root}/logs/error.log`),
+			warn: fs.createWriteStream(`${this.root}/logs/warn.log`),
+			info: fs.createWriteStream(`${this.root}/logs/info.log`)
+		};
+	}
+	
 
-module.exports = winston;
+	success(input) {
+		const time = new Date();
+		input = `[${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}] [SUCCESS]: ${input}`;
+		this.streams.success.write(`${input}\n`);
+
+		console.log(`${input}`.green.bold);
+	}
+
+	error(input) {
+		const time = new Date();
+		input = `[${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}] [ERROR]: ${input}`;
+		this.streams.error.write(`${input}\n`);
+
+		console.log(`${input}`.red.bold);
+	}
+
+	warn(input) {
+		const time = new Date();
+		input = `[${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}] [WARN]: ${input}`;
+		this.streams.warn.write(`${input}\n`);
+
+		console.log(`${input}`.yellow.bold);
+	}
+
+	info(input) {
+		const time = new Date();
+		input = `[${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}] [INFO]: ${input}`;
+		this.streams.info.write(`${input}\n`);
+
+		console.log(`${input}`.cyan.bold);
+	}
+}
+
+const logger = new Logger(__dirname);
+
+module.exports = logger;

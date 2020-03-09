@@ -91,7 +91,8 @@ nav.navWrapper .navProfile {
 }
 nav.navWrapper .navProfile img {
 	border-radius: 50%;
-	width: 2em; height: 2em;
+	width: 2em;
+	height: 2em;
 	background-color: white;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -156,7 +157,8 @@ nav.navWrapper.open .navItem.hamburger {
 /* content wrapper */
 .contentWrapper {
 	position: relative;
-	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 nav.navWrapper ~ .contentWrapper:nth-child(2) {
 	margin-top: 3rem;

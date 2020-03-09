@@ -1,14 +1,6 @@
 {
 	"nav": {
-		"brand": "Pretendo",
-		"links": {
-			"news": "News",
-			"progress": "Progress",
-			"contact": "Contact",
-			"login": "Login",
-			"register": "Register",
-			"logout": "Logout"
-		}
+		"brand": "Pretendo"
 	},
 	"home": {
 		"header": {
@@ -16,117 +8,16 @@
 			"text": "An open source Nintendo Network replacement service"
 		}
 	},
-	"progress": {
-		"summary": {
-			"caption": "All in one",
-			"title": "Progress Summary",
-			"text": "We should probably pull this from a database ngl"
-		},
-		"compatibility": {
-			"caption": "Useful info",
-			"title": "Game Compatibility"
-		},
-		"misc": {
-			"caption": "Less useful info",
-			"title": "Other"
-		}
-	},
-	"news": {
-		"caption": "Read up",
-		"title": "All news",
-		"button_text": "Read more"
-	},
-	"contact": {
-		"caption": "Have a question?",
-		"title": "Contact Us",
-		"button_text": "Send Message",
-		"email_placeholder": "email@provider.com",
-		"subject_placeholder": "Subject",
-		"message_placeholder": "Message"
-	},
-	"login": {
-		"card": {
-			"caption": "Sign in",
-			"title": "Login",
-			"email_text": "Username or Email",
-			"password_text": "Password",
-			"button_text": "Sign In",
-			"forgotpass_introduction": "Forgot password?",
-			"forgotpass_text": "Click here to reset it.",
-			"link_introduction": "Don't have an account yet?",
-			"link_text": "Click here to register."
-		}
-	},
-	"register": {
-		"card": {
-			"title": "Register",
-			"birthdate_text": "Birthday",
-			"gender_text": "Gender",
-			"email_text": "Email Address",
-			"username_text": "Username",
-			"password_text": "Password",
-			"password_confirm_text": "Confirm Password",
-			"caption": "Sign Up",
-			"button_text": "Sign up",
-			"link_introduction": "Already have an account?",
-			"link_text": "Click here to login."
-		}
-	},
-	"password": {
-		"card": {
-			"caption": "Forgot password?",
-			"title": "Reset password",
-			"password_text": "New password",
-			"password_confirm_text": "Confirm password",
-			"button_text": "Reset password"
-		}
-	},
-	"forgot": {
-		"card": {
-			"caption": "Did you forget something?",
-			"title": "Forgot password",
-			"email_text": "Email address",
-			"button_text": "Send email"
-		}
-	},
 	"about": {
 		"caption": "What is this?",
 		"title": "About",
-		"text": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS/2DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS/2DS games to their fullest capacity."
+		"text": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS games to their fullest capacity."
 	},
 	"credits": {
-		"caption": "Who are responsible?",
+		"caption": "The people responsible",
 		"title": "Credits"
 	},
-	"latest_news": {
-		"caption": "Catch up",
-		"title": "Latest news",
-		"description": "Pretendo is constantly evolving to create the best possible servers. We release posts to showcase what we have been working on and how far we got with certain things.",
-		"button_text": "All posts",
-		"news_button_text": "Read more"
-	},
-	"errors": {
-		"invalid_login": "Invalid username/password combination",
-		"account_exists": "An account with that username already exists!"
-	},
-	"verify_email_popup": {
-		"text": "Your email has not been verified yet. You are restricted from certain features.",
-		"change_button_text": "Change email",
-		"repeat_button_text": "Send again"
-	},
-	"dashboard": {
-		"navigation": {
-			"links": {
-				"account": "Account",
-				"soon": "Coming soon"
-			}
-		},
-		"account": {
-			"caption": "Pretendo Network ID",
-			"title": "Account information"
-		}
-	},
 	"footer": {
-		"text": "Copyright 2019 PretendoNetwork - Site designed and developed by MrJVS, ben and Jip"
+		"text": "Copyright 2020 PretendoNetwork - Site designed and developed by mrjvs, ben and jip"
 	}
 }
