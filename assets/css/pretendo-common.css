@@ -44,6 +44,14 @@ nav.navWrapper .navItem {
 	font-size: 1em;
 	cursor: pointer;
 	align-self: stretch;
+	display: flex;
+	align-items: center;
+}
+nav.navWrapper .navItem svg {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-right: 5px;
+	display: block;
 }
 nav.navWrapper .navItem:hover, nav.navWrapper .navItem.active {
 	color: white;
@@ -134,7 +142,7 @@ nav.navWrapper.open .navItem.hamburger {
 		display: none;
 	}
 	nav.navWrapper.open .navItem {
-		display: block;
+		display: flex;
 	}
 	nav.navWrapper .navItem.hamburger {
 		display: flex;
@@ -207,6 +215,7 @@ nav.navWrapper ~ .contentWrapper:nth-child(2) {
 footer {
 	background: #673db6;
 	padding: 2em 1em;
+	padding-bottom: calc(2em + env(safe-area-inset-bottom));
 }
 footer .content {
 	background: white;
@@ -322,7 +331,7 @@ button:disabled, .btn:disabled, .btn-alt:disabled {
 	min-width: 250px;
 	width: 50%;
 	max-width: 550px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	display: flex;
 }
 .profileIcon {
@@ -333,7 +342,7 @@ button:disabled, .btn:disabled, .btn-alt:disabled {
 }
 .profileText {
 	width: calc(100% - 130px);
-	min-width: 200px;
+	min-width: 150px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -343,6 +352,7 @@ button:disabled, .btn:disabled, .btn-alt:disabled {
 }
 .profileText p {
 	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 /* components - inputs */
