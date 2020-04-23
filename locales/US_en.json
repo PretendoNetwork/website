@@ -1,6 +1,8 @@
 {
 	"nav": {
-		"brand": "Pretendo"
+		"brand": "Pretendo",
+		"Cemu": "Cemu",
+		"faq": "FAQ"
 	},
 	"home": {
 		"header": {
