@@ -48,13 +48,13 @@
 		"a3": "We do not have an exact ETA for any specific features or the project as a whole. There are many parts to the network, updates release for them individually whenever they are ready (for example updates to the account server are (almost always) independent on other parts of the network, such as the friends server). Due to that we cannot give an exact ETA",
 		"q4": "Does Pretendo work on Cemu/emulators?",
 		"a4": "Pretendo is designed for the WiiU and (eventually) 3DS. At this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it will still be possible to use Pretendo with Cemu
-								<br>
-								See the <a href="/cemu">Cemu</a> page for more details",
+		<br>
+		See the <a href=\"/cemu\">Cemu</a> page for more details",
 		"q5": "Will my existing NNIDs work on Pretendo?",
 		"a5": "Sadly, no. The only ones with access to the data about your existing NNIDs is Nintendo. A NNID-to-PNID migration could theoretically be possible, but it would be a slow and lengthy process requiring sensitive user information",
 		"q6": "If I am account/console banned on Nintendo Network, will I stay banned when using Pretendo?",
 		"a6": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However Pretendo still reserves the right to issue a ban for our network if we see fit",
 		"q7": "Will Pretendo support the Wii/Switch?",
-		"a7": "The Wii already has custom servers provided by <a href="https://wiimmfi.de/" target="_blank">Wiimmfi</a>. We currently have no plans on supporting the Switch, as not only is it a completely different platform with a different online network, but Switch online is a paid service"
+		"a7": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently have no plans on supporting the Switch, as not only is it a completely different platform with a different online network, but Switch online is a paid service"
 	}
 }
