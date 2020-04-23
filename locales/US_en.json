@@ -39,7 +39,7 @@
 		"text": "Pretendo is currently not usable by the general public. When the network becomes public, this will contain steps on connecting to the network using Cemu"
 	},
 	"faq": {
-		"title": "FAQ"
+		"title": "FAQ",
 		"q1": "What is Pretendo?",
 		"a1": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS games to their fullest capacity",
 		"q2": "How do I use Pretendo?",
