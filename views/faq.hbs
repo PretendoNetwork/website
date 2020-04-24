@@ -15,39 +15,10 @@
 				<div class="bigCard">
 					<h1 class="txt-title">{{ locale.faq.title }}</h1>
 					<div class="faqs">
+						{{#each faq.qna}}
 						<details>
-							<summary>{{ locale.faq.q1 }}</summary>
-							<p class="text">{{ locale.faq.a1 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q2 }}</summary>
-							<p class="text">{{ locale.faq.a2 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q3 }}</summary>
-							<p class="text">{{ locale.faq.a3 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q4 }}</summary>
-							<p class="text">{{ locale.faq.a4 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q5 }}</summary>
-							<p class="text">{{ locale.faq.a5 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q6 }}</summary>
-							<p class="text">{{ locale.faq.a6 }}</p>
-						</details>
-
-						<details>
-							<summary>{{ locale.faq.q7 }}</summary>
-							<p class="text">{{ locale.faq.a7 }}</p>
+							<summary>{{question}}</summary>
+							<p class="text">{{answer}}</p>
 						</details>
 					</div>
 				</div>
