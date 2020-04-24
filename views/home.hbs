@@ -32,93 +32,15 @@
 					<div class="cardProfiles">
 						<!-- profile -->
 						<div class="profile">
-							<img class="profileIcon" src="https://github.com/redduckss.png">
+							{{#each locale.credits.people}}
+							<img class="profileIcon" src="{{picture}}">
 							<div class="profileText">
 								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Jonathan Barrow (RedDucks)</h2>
-									<p>{{ locale.credits.redducks }}</p>
+									<h2 class="txt-smallHeading">{{name}}</h2>
+									<p>{{caption}}</p>
 								</div>
-								<a href="https://github.com/RedDuckss" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/caramelkat.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Jemma (CaramelKat)</h2>
-									<p>{{ locale.credits.caramelkat }}</p>
-								</div>
-								<a href="https://github.com/CaramelKat" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/superwhiskers.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">superwhiskers</h2>
-									<p>{{ locale.credits.superwhiskers }}</p>
-								</div>
-								<a href="https://github.com/superwhiskers" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/supermariodabom.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">SuperMarioDaBom</h2>
-									<p>{{ locale.credits.supermariodabom }}</p>
-								</div>
-								<a href="https://github.com/SuperMarioDaBom" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/NexoDevelopment.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Rambo6Glaz</h2>
-									<p>{{ locale.credits.rambo6glaz }}</p>
-								</div>
-								<a href="https://github.com/NexoDevelopment" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/mrjvs.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">mrjvs</h2>
-									<p>{{ locale.credits.mrjvs }}</p>
-								</div>
-								<a href="https://github.com/mrjvs" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/kxpler442b.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Benjamin Moss (kxpler442b)</h2>
-									<p>{{ locale.credits.kxpler442b }}</p>
-								</div>
-								<a href="https://github.com/kxpler442b" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://github.com/jipfr.png">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Jip Fr</h2>
-									<p>{{ locale.credits.jipfr }}</p>
-								</div>
-								<a href="https://github.com/jipfr" target="_blank"><button class="btn small">GitHub</button></a>
-							</div>
-						</div>
-						<div class="profile">
-							<img class="profileIcon" src="https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048">
-							<div class="profileText">
-								<div class="profileTextDiv">
-									<h2 class="txt-smallHeading">Kinnay</h2>
-									<p>{{ locale.credits.kinnay }}</p>
-								</div>
-								<a href="https://github.com/Kinnay" target="_blank"><button class="btn small">GitHub</button></a>
+								<a href="{{github}}" target="_blank"><button class="btn small">GitHub</button></a>
+							{{/each}}
 							</div>
 						</div>
 					</div>
