@@ -15,11 +15,12 @@
 				<div class="bigCard">
 					<h1 class="txt-title">{{ locale.faq.title }}</h1>
 					<div class="faqs">
-						{{#each faq.qna}}
+					{{#each locale.faq.qna}}
 						<details>
 							<summary>{{question}}</summary>
 							<p class="text">{{answer}}</p>
 						</details>
+					{{/each}}
 					</div>
 				</div>
 			</section>
