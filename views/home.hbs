@@ -30,9 +30,9 @@
 					<p class="txt-highlight">{{ locale.credits.caption }}</p>
 					<h1 class="txt-title">{{ locale.credits.title }}</h1>
 					<div class="cardProfiles">
+                    			{{#each locale.credits.people}}
 						<!-- profile -->
 						<div class="profile">
-							{{#each locale.credits.people}}
 							<img class="profileIcon" src="{{picture}}">
 							<div class="profileText">
 								<div class="profileTextDiv">
@@ -40,9 +40,9 @@
 									<p>{{caption}}</p>
 								</div>
 								<a href="{{github}}" target="_blank"><button class="btn small">GitHub</button></a>
-							{{/each}}
 							</div>
 						</div>
+					{{/each}}
 					</div>
 				</div>
 			</section>
