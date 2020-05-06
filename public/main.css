@@ -23,7 +23,7 @@ body {
 
 h1.dot:after, h2.dot:after {
 	content: ".";
-	color: #A1A8D9;
+	color: #9D6FF3;
 }
 
 header {
@@ -129,6 +129,9 @@ header nav a {
 .button.secondary {
 	background: #333960;
 }
+.button.secondary.discord svg {
+	margin-bottom: -5px;
+}
 .button.secondary.icon-btn {
 	width: 60px;
 	height: 60px;
@@ -173,6 +176,9 @@ section.progress .right {
 	background: #673DB6;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+}
+section.progress .text {
+	color: #D2C4EC;
 }
 section.progress .right:before {
 	content: "";
@@ -256,6 +262,6 @@ section.team {
 footer {
 	text-align: center;
 	color: var(--text-secondary);
-	padding: 20px 0;
 	margin-top: 100px;
+	margin-bottom: 40px;
 }
