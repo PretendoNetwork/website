@@ -21,7 +21,7 @@ body {
 	max-width: 1590px;
 }
 
-h1.dot:after {
+h1.dot:after, h2.dot:after {
 	content: ".";
 	color: #A1A8D9;
 }
@@ -141,4 +141,65 @@ header nav a {
 	width: 40px;
 	height: 40px;
 	display: block;
+}
+
+/* Non-hero sections */
+.sect .title {
+	font-size: 3.125rem;
+}
+section.progress {
+	margin-top: 400px;
+}
+.column-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.sect .title {
+	margin: 0;
+}
+.sect .text {
+	margin: 22px 0;
+	width: 64%;
+	line-height: 1.7;
+}
+section.progress .left, section.progress .right {
+	padding: 50px 0;
+}
+section.progress .right {
+	position: relative;
+	padding-left: 80px;
+	height: 300px;
+	background: #673DB6;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+section.progress .right:before {
+	content: "";
+	width: 300vw;
+	position: absolute;
+	height: 100%;
+	background: yellow;
+	left: 90%;
+	margin-top: -50px;
+	background: #673DB6;
+}
+
+section.faq {
+	margin-top: 200px;
+}
+
+.questions {
+	margin-top: 30px;
+}
+
+.question-and-answer summary::-webkit-details-marker {
+	display: none;
+}
+.question-and-answer summary {
+	font-size: 1.5625rem;
+}
+.question-and-answer .text {
+	margin: 5px;
+	line-height: 1.85;
 }
