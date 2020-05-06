@@ -1,0 +1,144 @@
+
+:root {
+	--background: #1B1F3B;
+	--text: white;
+	--text-secondary: #A1A8D9;
+	--btn: #673DB6;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--text);
+	display: flex;
+	justify-content: center;
+	font-family: Poppins, Arial;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	width: 95%;
+	max-width: 1590px;
+}
+
+h1.dot:after {
+	content: ".";
+	color: #A1A8D9;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	margin-top: 35px;
+}
+header nav a:first-child {
+	margin-left: 40px;
+}
+header nav a {
+	color: var(--text-secondary);
+	margin: 0 17px;
+}
+
+
+/* Misc */
+.purple-circle {
+	position: absolute;
+	z-index: 0;
+	width: 2100px;
+	height: 1700px;
+	background: #111531;
+	border-radius: 50%;
+	top: -250px;
+	right: -1420px;
+}
+.light-purple-circle {
+	background: #CAB1FB;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% - 35px), calc(-50% + 120px));
+	border-radius: 50%;
+	z-index: 5;
+	/* Tmp */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Hero */
+.hero {
+	/* height: 775px; /* To line it up with the design */
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+}
+.hero-meta {
+	margin-top: 230px;
+}
+.hero-image {
+	position: relative;
+}
+.hero .title, .hero .subtitle {
+	margin: 0;
+}
+.hero .subtitle {
+	font-size: 3.125rem;
+	font-weight: 300;
+}
+.hero .title {
+	font-size: 5rem;
+}
+.hero .text {
+	font-size: 1.375rem;
+	color: var(--text-secondary);
+	width: 90%;
+	line-height: 1.8;
+	margin: 0;
+}
+
+/*
+	BUTTONS
+*/
+.hero .buttons {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.hero .buttons a {
+	display: block;
+}
+.hero .buttons a > * {
+	cursor: pointer;
+}
+.button {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	border-radius: 6px;
+	font-family: Poppins;
+	font-size: 1rem;
+	color: var(--text);
+}
+.button.primary {
+	padding: 16px 55px;
+	background: var(--btn);
+}
+.button.secondary {
+	background: #333960;
+}
+.button.secondary.icon-btn {
+	width: 60px;
+	height: 60px;
+	margin-left: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button svg {
+	width: 40px;
+	height: 40px;
+	display: block;
+}
