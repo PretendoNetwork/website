@@ -72,6 +72,66 @@ router.get("/", (req, res) => {
 					"answer": "No. The only thing you need to run the patcher is a way to access the Homebrew Launcher, whether it's the browser exploit, Haxchi or Coldboot Haxchi"
 				}
 			]
+		},
+		credits: {
+			title: "The team",
+			text: "Our amazing team has spent countless hours helping out on making Pretendo better.",
+			people: [
+				{
+					"name": "Jonathan Barrow (RedDucks)",
+					"caption": "Project owner and lead developer",
+					"picture": "https://github.com/redduckss.png",
+					"github": "https://github.com/RedDuckss"
+				},
+				{
+					"name": "Jemma (CaramelKat)",
+					"caption": "Miiverse research and development",
+					"picture": "https://github.com/caramelkat.png",
+					"github": "https://github.com/CaramelKat"
+				},
+				{
+					"name": "superwhiskers",
+					"caption": "crunch library development",
+					"picture": "https://github.com/superwhiskers.png",
+					"github": "https://github.com/superwhiskers"
+				},
+				{
+					"name": "SuperMarioDaBom",
+					"caption": "Console and other system research",
+					"picture": "https://github.com/supermariodabom.png",
+					"github": "https://github.com/SuperMarioDaBom"
+				},
+				{
+					"name": "Rambo6Glaz",
+					"caption": "Network installer and console research",
+					"picture": "https://github.com/NexoDevelopment.png",
+					"github": "https://github.com/NexoDevelopment"
+				},
+				// {
+				// 	"name": "mrjvs",
+				// 	"caption": "Web development and early eShop research",
+				// 	"picture": "https://github.com/mrjvs.png",
+				// 	"github": "https://github.com/mrjvs"
+				// },
+				{
+					"name": "Benjamin Moss (kxpler442b)",
+					"caption": "Web development",
+					"picture": "https://github.com/kxpler442b.png",
+					"github": "https://github.com/kxpler442b"
+				},
+				{
+					"name": "Jip Fr",
+					"caption": "Web development",
+					"picture": "https://github.com/jipfr.png",
+					"github": "https://github.com/jipfr"
+				},
+				{
+					"name": "Kinnay",
+					"caption": "None of this would be possible without the research and help done by Kinnay on PRUDP and nex",
+					"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048",
+					"github": "https://github.com/Kinnay"
+				}
+			]
 		}
 	}
 

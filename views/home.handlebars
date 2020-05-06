@@ -1,11 +1,12 @@
 
 {{!-- this is temp --}}
 
-<img src="tmp/home.png" style="position: absolute; top: 0;left: 0; opacity: 0.5; z-index: -1; pointer-events: none;">
+{{!-- <img src="tmp/home.png" style="position: absolute; top: 0;left: 0; opacity: 0.5; z-index: -1; pointer-events: none;"> --}}
 
 {{!-- This is not --}}
 
 <div class="wrapper">
+
 	<header>
 		<img src="logo-with-text.svg">
 		<nav>
@@ -14,6 +15,7 @@
 			<a>{{ locale.nav.credits }}</a>
 		</nav>
 	</header>
+
 	<section class="hero">
 		<div class="hero-meta">
 			<h3 class="subtitle">{{ locale.hero.subtitle }}</h3>
@@ -46,6 +48,7 @@
 			<div class="purple-circle"></div>
 		</div>
 	</section>
+
 	<section class="progress column-2">
 		<div class="left sect">
 			<div class="left-meta">
@@ -56,12 +59,13 @@
 			</div>
 		</div>
 		<div class="right sect">
-			<h2 class="dot title">{{ locale.section2.right.title }}</h2>
+			<h2 class="title">{{ locale.section2.right.title }}</h2>
 				{{#each locale.section2.right.paragraphs}}
 				<p class="text">{{ this }}</p>
 				{{/each}}
 		</div>
 	</section>
+
 	<section class="faq">
 		<div class="sect-top sect column-2">
 			<div class="left-meta">
@@ -79,6 +83,31 @@
 			</details>
 			{{/each}}
 		</div>
+		{{!-- Tmp! --}}
 		<script>document.querySelector("details").setAttribute("open", true)</script>
 	</section>
+	
+	<section class="team">
+		<div class="sect-top sect team-top">
+			<h2 class="dot title">{{ locale.credits.title }}</h2>
+			<p class="text">{{ locale.credits.text }}</p>
+		</div>
+		<div class="team-cards">
+			{{#each locale.credits.people}}
+			<div class="card">
+				<div class="card-left">
+					<img src="{{ picture }}" class="pfp">
+				</div>
+				<div class="card-core">
+					<h3 class="title">{{ name }}</h3>
+					<p class="text">{{ caption }}</p>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</section>
+
+
+	<footer>Copyright 2020 - Design by mrjvs, development by Jip Fr</footer>
+	
 </div>
