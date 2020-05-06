@@ -60,3 +60,4 @@ typings/
 # keep config and blog posts out of this
 config.json
 static-text.json
+.DS_Store
