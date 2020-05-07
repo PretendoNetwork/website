@@ -251,13 +251,19 @@ section.team {
 }
 
 .team-cards {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-gap: 20px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	margin-top: 80px;
+	margin: -10px;
+}
+.team-cards .card {
+	margin: 10px;
 }
 .card {
 	width: calc(100% - 54px);
+	min-width: 300px;
+	max-width: 460px; 
 	padding: 18px 27px;
 	display: grid;
 	grid-template-columns: 110px 1fr;
