@@ -215,6 +215,9 @@ section.faq {
 	margin-top: 30px;
 	grid-gap: 10px;
 }
+.questions > div > * + * {
+	margin-top: 15px;
+}
 
 .question-and-answer summary::-webkit-details-marker {
 	display: none;
@@ -254,8 +257,8 @@ section.team {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 80px;
 	margin: -10px;
+	margin-top: 80px;
 }
 .team-cards .card {
 	margin: 10px;

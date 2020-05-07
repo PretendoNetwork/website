@@ -98,21 +98,17 @@
 	<section class="faq">
 		<div class="sect-top sect">
 			<h2 class="dot title">{{ locale.faq.title }}</h2>
-		</div>
-		<div class="sect-top sect column-2">
-			<div class="left-meta">
-				<p class="text">{{ locale.faq.text }}</p>
-			</div>
+			<p class="text">{{ locale.faq.text }}</p>
 		</div>
 		<div class="questions column-2">
-			{{#each locale.faq.QAs}}
+			{{#doFaq locale.faq.QAs}}
 			<details class="question-and-answer">
 				<summary>
 					{{ question }}
 				</summary>
 				<p class="text">{{{ answer }}}</p>
 			</details>
-			{{/each}}
+			{{/doFaq}}
 		</div>
 		{{!-- Tmp! --}}
 		<script>document.querySelector("details").setAttribute("open", true)</script>
