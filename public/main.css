@@ -4,6 +4,7 @@
 	--text: white;
 	--text-secondary: #A1A8D9;
 	--btn: #673DB6;
+	--text-secondary-2: #8990C1;
 }
 
 body {
@@ -43,7 +44,7 @@ header nav a {
 /* Misc */
 .purple-circle {
 	position: absolute;
-	z-index: 0;
+	z-index: -1;
 	width: 2100px;
 	height: 1700px;
 	background: #111531;
@@ -206,8 +207,9 @@ section.faq {
 	font-size: 1.5625rem;
 }
 .question-and-answer .text {
-	margin: 5px;
+	margin: 5px 0;
 	line-height: 1.85;
+	color: var(--text-secondary-2);
 }
 
 section.team {
@@ -233,7 +235,6 @@ section.team {
 	grid-template-columns: repeat(6, 1fr);
 	grid-gap: 20px;
 	margin-top: 80px;
-	justify-items: center;
 }
 .card {
 	width: calc(100% - 54px);
@@ -253,6 +254,21 @@ section.team {
 }
 .card .text, .card .title {
 	margin: 0;
+}
+.card .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.card .github {
+	text-decoration: none;
+	color: inherit;
+}
+.card .github svg {
+	width: 1.5em;
+	height: 1.5em;
+	display: block;
 }
 .card .text {
 	color: var(--text-secondary);
