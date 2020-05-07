@@ -107,12 +107,12 @@ router.get("/", (req, res) => {
 					"picture": "https://github.com/NexoDevelopment.png",
 					"github": "https://github.com/NexoDevelopment"
 				},
-				// {
-				// 	"name": "mrjvs",
-				// 	"caption": "Web development and early eShop research",
-				// 	"picture": "https://github.com/mrjvs.png",
-				// 	"github": "https://github.com/mrjvs"
-				// },
+				{
+					"name": "mrjvs",
+					"caption": "Web development and early eShop research",
+					"picture": "https://github.com/mrjvs.png",
+					"github": "https://github.com/mrjvs"
+				},
 				{
 					"name": "Benjamin Moss (kxpler442b)",
 					"caption": "Web development",
