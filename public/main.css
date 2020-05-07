@@ -15,6 +15,22 @@ body {
 	justify-content: center;
 	font-family: Poppins, Arial;
 	overflow-x: hidden;
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.animateDot {
+	animation: dotAnimation 20s infinite;
+}
+@keyframes dotAnimation {
+	0% {
+		cx: 0;
+	}
+	50% {
+		cx: 20px;
+	}
+	100% {
+		cx: 0;
+	}
 }
 
 .wrapper {
@@ -88,6 +104,12 @@ header nav a {
 	left: 50%;
 	transform: translate(-50%, calc(-50% + 70px));
 	z-index: 2;
+}
+
+/* Title business */
+.sect .title[id] {
+	padding-top: 100px;
+	margin-top: -100px;
 }
 
 /* Hero */
@@ -220,7 +242,7 @@ section.faq {
 
 .questions {
 	margin-top: 30px;
-	grid-gap: 10px;
+	grid-gap: 30px;
 }
 .questions > div > * + * {
 	margin-top: 15px;
@@ -292,6 +314,7 @@ section.team {
 	width: 100%;
 	border-radius: 10px;
 	background: white;
+	display: block;
 }
 .card .text, .card .title {
 	margin: 0;
@@ -325,4 +348,96 @@ footer {
 	color: var(--text-secondary);
 	margin-top: 290px;
 	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+
+	h1.dot:after, h2.dot:after {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+
+	header nav {
+		/* You don't really need it on mobile IMO */
+		display: none;
+	}
+
+	.hero-meta {
+		margin-top: 100px;
+	}
+	
+	.wrapper {
+		width: 90%;
+	}
+
+	.hero-image {
+		display: none;
+	}
+	.hero .title {
+		font-size: 2.5rem;
+	}
+	.hero .subtitle {
+		font-size: 1.5rem;
+	}
+	.misc {
+		display: none;
+	}
+
+	.column-2, .hero {
+		grid-template-columns: 100%;
+	}
+
+	.button.primary {
+		padding: 8px 27px;
+	}
+	.button.secondary.icon-btn {
+		width: 41px;
+		height: 41px;
+	}
+	.button.icon-btn svg {
+		min-width: 30px;
+		width: 30px;
+		min-height: 30px;
+		height: 30px;
+	}
+
+
+	section.progress {
+		margin-top: 100px;
+	}
+	section.progress .right:before {
+		content: none;
+	}
+	section.progress .right {
+		padding: 50px 20px;
+		border-radius: 10px;
+	}
+	.sect .title {
+		font-size: 2rem;
+	}
+	.sect .text {
+		width: 100%;
+	}
+
+	.question-and-answer summary {
+		font-size: 1.1rem;
+	}
+
+	.team .team-top .text {
+		width: 100%;
+	}
+
+	.team-cards .card { /* I needed a little bit of a higher priority */
+		grid-template-columns: 60px 1fr;
+		width: 100vw;
+		margin-left: -5vw;
+		margin-right: -2.5vw;
+		border-radius: 0;
+	}
+
+
+	footer {
+		margin-top: 100px;
+	}
+
 }

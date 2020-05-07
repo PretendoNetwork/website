@@ -43,16 +43,16 @@
 				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
 			},
 			{
-				"question": "Is there an ETA for <feature>?",
-				"answer": "We do not have an exact ETA for any specific features or the project as a whole. There are many parts to the network, updates release for them individually whenever they are ready (for example updates to the account server are (almost always) independent on other parts of the network, such as the friends server). Due to that, we cannot give an ETA."
+				"question": "Do you know when <feature/service> will be ready?",
+				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on one dev while Accounts and Friends by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details."
+				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details."
 			},
 			{
-				"question": "If I am account/console banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However, much like Nintendo Network, Pretendo will ban users/consoles for violations of our rules."
+				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
+				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
 			},
 			{
 				"question": "Will Pretendo support the Wii/Switch?",
