@@ -255,6 +255,10 @@ section.team {
 .card .text, .card .title {
 	margin: 0;
 }
+.card .sub {
+	color: #59C9A5;
+	font-size: .875rem;
+}
 .card .title {
 	display: flex;
 	justify-content: space-between;
@@ -278,6 +282,6 @@ section.team {
 footer {
 	text-align: center;
 	color: var(--text-secondary);
-	margin-top: 100px;
+	margin-top: 290px;
 	margin-bottom: 40px;
 }
