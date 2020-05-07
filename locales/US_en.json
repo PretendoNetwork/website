@@ -32,7 +32,7 @@
 		"QAs": [
 			{
 				"question": "What is Pretendo?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity"
+				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
 			},
 			{
 				"question": "Will my existing NNIDs work on Pretendo?",
@@ -48,7 +48,7 @@
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details"
+				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details."
 			},
 			{
 				"question": "If I am account/console banned on Nintendo Network, will I stay banned when using Pretendo?",
@@ -56,7 +56,7 @@
 			},
 			{
 				"question": "Will Pretendo support the Wii/Switch?",
-				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network.."
+				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
 			},
 			{
 				"question": "Will I need hacks to connect?",

@@ -64,7 +64,7 @@ header nav a {
 	width: 500px;
 	height: 500px;
 	position: relative;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(calc(-50% - 35px), -50%);
 	border-radius: 50%;
@@ -108,14 +108,14 @@ header nav a {
 	margin: 0;
 }
 .hero .subtitle {
-	font-size: 3.125rem;
+	font-size: 2.1rem;
 	font-weight: 300;
 }
 .hero .title {
-	font-size: 5rem;
+	font-size: 4rem;
 }
 .hero .text {
-	font-size: 1.375rem;
+	font-size: 1.275rem;
 	color: var(--text-secondary);
 	width: 90%;
 	line-height: 1.8;
