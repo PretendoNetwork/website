@@ -19,17 +19,20 @@ body {
 }
 
 .animateDot {
-	animation: dotAnimation 20s infinite;
+	animation: dotAnimation 10s infinite;
 }
 @keyframes dotAnimation {
 	0% {
 		cx: 0;
+		cy: 0;
 	}
 	50% {
-		cx: 20px;
+		cx: 10px;
+		cy: 10px;
 	}
 	100% {
 		cx: 0;
+		cy: 0;
 	}
 }
 
@@ -38,7 +41,7 @@ body {
 	max-width: 1590px;
 }
 
-h1.dot:after, h2.dot:after {
+h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
 	/* content: ".";
 	color: #9D6FF3; */
 	content: "";
@@ -47,6 +50,11 @@ h1.dot:after, h2.dot:after {
     height: 0.66rem;
     border-radius: 50%;
     display: inline-block;
+}
+h1.dot[data-title-suffix]:after, h2.dot[data-title-suffix]:after {
+	content: attr(data-title-suffix);
+	display: inline-block;
+	color: #9D6FF3;
 }
 
 header {
