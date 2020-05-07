@@ -23,8 +23,14 @@ body {
 }
 
 h1.dot:after, h2.dot:after {
-	content: ".";
-	color: #9D6FF3;
+	/* content: ".";
+	color: #9D6FF3; */
+	content: "";
+    background-color: #9D6FF3;
+    width: 0.66rem;
+    height: 0.66rem;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 header {
@@ -38,6 +44,7 @@ header nav a:first-child {
 header nav a {
 	color: var(--text-secondary);
 	margin: 0 17px;
+	text-decoration: none;
 }
 
 
@@ -95,6 +102,7 @@ header nav a {
 }
 .hero-image {
 	position: relative;
+	height: 100%;
 }
 .hero .title, .hero .subtitle {
 	margin: 0;
@@ -188,7 +196,6 @@ section.progress .left, section.progress .right {
 section.progress .right {
 	position: relative;
 	padding-left: 80px;
-	height: 300px;
 	background: #673DB6;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -219,12 +226,17 @@ section.faq {
 	margin-top: 15px;
 }
 
-.question-and-answer summary::-webkit-details-marker {
-	display: none;
-}
 .question-and-answer summary {
 	font-size: 1.5625rem;
 	color: #B8BDDF;
+}
+.question-and-answer[open] summary {
+	color: var(--text);
+}
+.question-and-answer summary:hover {
+	color: var(--text);
+	text-decoration: underline;
+	cursor: pointer;
 }
 .question-and-answer .text {
 	margin: 5px 0;
@@ -265,7 +277,7 @@ section.team {
 }
 .card {
 	width: calc(100% - 54px);
-	min-width: 300px;
+	min-width: 100px;
 	max-width: 460px; 
 	padding: 18px 27px;
 	display: grid;

@@ -7,7 +7,7 @@
 	"hero": {
 		"subtitle": "Game servers",
 		"title": "Recreated",
-		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all long after the original servers are discontinued.",
+		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all, even after the original servers are discontinued",
 		"buttons": {
 			"readMore": "Read more"
 		}
@@ -52,7 +52,7 @@
 			},
 			{
 				"question": "If I am account/console banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However, much like Nintendo Network, Pretendo will ban users/consoles for violations of our Terms of Agreement."
+				"answer": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However, much like Nintendo Network, Pretendo will ban users/consoles for violations of our rules."
 			},
 			{
 				"question": "Will Pretendo support the Wii/Switch?",
