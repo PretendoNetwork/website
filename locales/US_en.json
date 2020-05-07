@@ -1,13 +1,13 @@
 {
 	"nav": {
 		"about": "About",
-		"faq": "Faq",
+		"faq": "FAQ",
 		"credits": "Credits"
 	},
 	"hero": {
 		"subtitle": "Game servers",
 		"title": "Recreated",
-		"text": "An open source project that aims to recreate all Nintendo servers for 3DS and WiiU. This way the services can persist after officially killed by Nintendo.",
+		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all long after the original servers are discontinued.",
 		"buttons": {
 			"readMore": "Read more"
 		}
@@ -15,52 +15,52 @@
 	"aboutUs": {
 		"title": "About us",
 		"paragraphs": [
-			"We are a bunch of programmers spending our free time reverse engineering and coding game servers for 3DS and WiiU",
-			"An open source project that aims to recreate all Nintendo servers for 3DS and WiiU. This way the services can persist after they are officialy killed by Nintendo"
+			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
+			"As our services would be both free and open source, they can exist long after the inevitable closure of Nintendo Network."
 		]
 	},
 	"progress": {
 		"title": "Progress",
 		"paragraphs": [
-			"Now what are the possibilities of warp drive? Hello world, this is just s'more text. Hello hello world world hello! Some.",
-			"10.000 luchtballonnen, kleuren de hemel blauw. 10.000 luchtballonnen, zijn op weg naar jou. 10.000 luchtballonnen, kleuren de horizon."
+			"Currently, we are working on Miiverse, along with our account servers and its integration with the services.",
+			"For 3DS, we are also working on Mario Kart 7, with a desire to continue working on other games when possible."
 		]
 	},
 	"faq": {
-		"title": "Answered questions",
-		"text": "This is where some text about the questions would go, however jvs didn't write copy for it. So now I have to write this.",
+		"title": "Frequently Asked Questions",
+		"text": "Here are some common questions we're asked for easy information.",
 		"QAs": [
 			{
 				"question": "What is Pretendo?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS games to their fullest capacity"
+				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity"
 			},
 			{
 				"question": "Will my existing NNIDs work on Pretendo?",
-				"answer": "Sadly, no. The only ones with access to the data about your existing NNIDs is Nintendo. A NNID-to-PNID migration could theoretically be possible, but it would be a slow and lengthy process requiring sensitive user information"
+				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
 			},
 			{
 				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console"
+				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
 			},
 			{
-				"question": "Is there an ETA for XYZ?",
-				"answer": "We do not have an exact ETA for any specific features or the project as a whole. There are many parts to the network, updates release for them individually whenever they are ready (for example updates to the account server are (almost always) independent on other parts of the network, such as the friends server). Due to that we cannot give an exact ETA"
+				"question": "Is there an ETA for <feature>?",
+				"answer": "We do not have an exact ETA for any specific features or the project as a whole. There are many parts to the network, updates release for them individually whenever they are ready (for example updates to the account server are (almost always) independent on other parts of the network, such as the friends server). Due to that, we cannot give an ETA."
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the WiiU and (eventually) 3DS. At this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it will still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details"
+				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with real online capability is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details"
 			},
 			{
 				"question": "If I am account/console banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However Pretendo still reserves the right to issue a ban for our network if we see fit"
+				"answer": "Any account/console bans only exist server-side. This means any existing bans would not carry over to Pretendo. However, much like Nintendo Network, Pretendo will ban users/consoles for violations of our Terms of Agreement."
 			},
 			{
 				"question": "Will Pretendo support the Wii/Switch?",
-				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently have no plans on supporting the Switch, as not only is it a completely different platform with a different online network, but Switch online is a paid service"
+				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network.."
 			},
 			{
-				"question": "Do I need Haxchi to run the patcher?",
-				"answer": "No. The only thing you need to run the patcher is a way to access the Homebrew Launcher, whether it's the browser exploit, Haxchi or Coldboot Haxchi"
+				"question": "Will I need hacks to connect?",
+				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
 			}
 		]
 	},

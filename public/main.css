@@ -213,6 +213,7 @@ section.faq {
 
 .questions {
 	margin-top: 30px;
+	grid-gap: 10px;
 }
 
 .question-and-answer summary::-webkit-details-marker {
@@ -220,11 +221,15 @@ section.faq {
 }
 .question-and-answer summary {
 	font-size: 1.5625rem;
+	color: #B8BDDF;
 }
 .question-and-answer .text {
 	margin: 5px 0;
 	line-height: 1.85;
 	color: var(--text-secondary-2);
+}
+.question-and-answer .text a {
+	color: white;
 }
 
 section.team {
