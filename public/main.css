@@ -82,6 +82,7 @@ header nav a {
 	border-radius: 50%;
 	top: -250px;
 	right: -1420px;
+	/* left: 60vw; */
 }
 .light-purple-circle {
 	background: #CAB1FB;
@@ -128,7 +129,7 @@ header nav a {
 	grid-template-columns: 1fr 1fr;
 }
 .hero-meta {
-	margin-top: 230px;
+	margin-top: 25vh;
 }
 .hero-image {
 	position: relative;
@@ -356,6 +357,24 @@ footer {
 	color: var(--text-secondary);
 	margin-top: 290px;
 	margin-bottom: 40px;
+}
+
+@media screen and (min-width: 701px) and (max-width: 1500px) {
+	.light-purple-circle {
+		width: 400px;
+		height: 400px;
+	}
+	img.n2ds {
+		width: 432px;
+	}
+	.deco svg {
+		transform: scale(0.8);
+		/* :/ */
+	}
+	.purple-circle {
+		right: auto;
+		left: 60vw;
+	}
 }
 
 @media screen and (max-width: 700px) {
