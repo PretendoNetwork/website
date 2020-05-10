@@ -1,1 +1,2 @@
-# pretendo_website
+# Pretendo Website
+The official Pretendo Network website.
