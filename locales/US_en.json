@@ -48,7 +48,7 @@
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu<br>See the <a href=\"/cemu\">Cemu</a> page for more details."
+				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
 			},
 			{
 				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",

@@ -46,8 +46,8 @@ h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
 	color: #9D6FF3; */
 	content: "";
     background-color: #9D6FF3;
-    width: 0.66rem;
-    height: 0.66rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
     display: inline-block;
 }
@@ -139,18 +139,20 @@ header nav a {
 	margin: 0;
 }
 .hero .subtitle {
-	font-size: 2.1rem;
+	font-size: 1.9rem;
 	font-weight: 300;
+	margin-bottom: -0.5em;
 }
 .hero .title {
 	font-size: 4rem;
 }
 .hero .text {
-	font-size: 1.275rem;
+	font-size: 1rem;
 	color: var(--text-secondary);
-	width: 90%;
+	width: 63%;
 	line-height: 1.8;
 	margin: 0;
+	margin-top: 0.5rem;
 }
 
 /*
@@ -178,7 +180,7 @@ header nav a {
 	color: var(--text);
 }
 .button.primary {
-	padding: 16px 55px;
+	padding: 12px 48px;
 	background: var(--btn);
 }
 .button.secondary {
@@ -188,16 +190,16 @@ header nav a {
 	margin-bottom: -5px;
 }
 .button.secondary.icon-btn {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	margin-left: 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .button svg {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	display: block;
 }
 
@@ -377,9 +379,9 @@ footer {
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
 
-	h1.dot:after, h2.dot:after {
+	h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
 		width: 0.5rem;
 		height: 0.5rem;
 	}
@@ -405,6 +407,9 @@ footer {
 	}
 	.hero .subtitle {
 		font-size: 1.5rem;
+	}
+	.hero .text {
+		width: 100%;
 	}
 	.misc {
 		display: none;
