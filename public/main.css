@@ -417,6 +417,7 @@ footer {
 
 	.column-2, .hero {
 		grid-template-columns: 100%;
+		grid-gap: 15px;
 	}
 
 	.button.primary {
