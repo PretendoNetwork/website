@@ -6,10 +6,12 @@ const cfg = require("../config.json");
 const app = express();
 
 const routers = {
-	home: require("./routers/home")
+	home: require("./routers/home"),
+	faq: require("./routers/faq")
 }
 
 app.use("/", routers.home);
+app.use("/faq", routers.faq);
 
 app.engine("handlebars", handlebars({
 	helpers: {
