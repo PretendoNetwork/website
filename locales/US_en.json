@@ -44,7 +44,7 @@
 			},
 			{
 				"question": "Do you know when <feature/service> will be ready?",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on one dev while Accounts and Friends by another) and therefore we cannot give an overall ETA for how long this will take."
+				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
