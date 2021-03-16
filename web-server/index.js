@@ -11,6 +11,11 @@ const routers = {
 	faq: require('./routers/faq')
 };
 
+app.use('*', (req, res, next) => {
+	logger.info(`${req.method.toUpperCase()} ${req.path}`);
+	next();
+});
+
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
 
@@ -44,4 +49,6 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.listen(cfg.http.port);
+app.listen(cfg.http.port, () => {
+	logger.info(`Server listening on *:${cfg.http.port}`);
+});
