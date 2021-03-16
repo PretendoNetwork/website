@@ -1,25 +1,26 @@
-const express = require("express");
-const handlebars = require("express-handlebars");
+const logger = require('../logger');
+const express = require('express');
+const handlebars = require('express-handlebars');
 
-const cfg = require("../config.json");
+const cfg = require('../config.json');
 
 const app = express();
 
 const routers = {
-	home: require("./routers/home"),
-	faq: require("./routers/faq")
-}
+	home: require('./routers/home'),
+	faq: require('./routers/faq')
+};
 
-app.use("/", routers.home);
-app.use("/faq", routers.faq);
+app.use('/', routers.home);
+app.use('/faq', routers.faq);
 
-app.engine("handlebars", handlebars({
+app.engine('handlebars', handlebars({
 	helpers: {
 		doFaq(value, options) {
-			let htmlLeft = "";
-			let htmlRight = "";
-			for(let [i, v] of Object.entries(value)) {
-				let appendHtml = options.fn({
+			let htmlLeft = '';
+			let htmlRight = '';
+			for(const [i, v] of Object.entries(value)) {
+				const appendHtml = options.fn({
 					...v
 				}); // Tis is an HTML string
 				if(i % 2 === 0) {
@@ -39,8 +40,8 @@ app.engine("handlebars", handlebars({
 		}
 	}
 }));
-app.set("view engine", "handlebars");
+app.set('view engine', 'handlebars');
 
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 app.listen(cfg.http.port);

@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/PretendoNetwork/website#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4"
+    "express-handlebars": "^4.0.4",
+    "fs-extra": "^9.1.0"
   }
 }
