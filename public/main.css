@@ -60,8 +60,10 @@ h1.dot[data-title-suffix]:after, h2.dot[data-title-suffix]:after {
 
 header {
 	display: flex;
+	position: relative;
 	align-items: center;
 	margin-top: 35px;
+	z-index: 6;
 }
 header nav a:first-child {
 	margin-left: 40px;
@@ -167,6 +169,7 @@ header nav a {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+
 }
 .hero .buttons a {
 	display: block;
@@ -175,6 +178,7 @@ header nav a {
 	cursor: pointer;
 }
 .button {
+	position: relative;
 	appearance: none;
 	-webkit-appearance: none;
 	border: 0;
@@ -182,6 +186,7 @@ header nav a {
 	font-family: Poppins;
 	font-size: 1rem;
 	color: var(--text);
+	z-index: 6;
 }
 .button.primary {
 	padding: 12px 48px;
