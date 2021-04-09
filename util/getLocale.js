@@ -3,6 +3,6 @@ module.exports = (variant, language) => {
 		return require(`../locales/${variant}_${language}.json`);
 	} catch(e) {
 		// Use US_en as a fallback
-		return require("../locales/US_en.json");
+		return require('../locales/US_en.json');
 	}
-}
+};

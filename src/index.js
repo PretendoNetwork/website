@@ -1,4 +1,4 @@
-const logger = require('../logger');
+const logger = require('./logger');
 const express = require('express');
 const handlebars = require('express-handlebars');
 
