@@ -8,7 +8,8 @@ const app = express();
 
 const routers = {
 	home: require('./routers/home'),
-	faq: require('./routers/faq')
+	faq: require('./routers/faq'),
+	progress: require('./routers/progress')
 };
 
 app.use('*', (req, res, next) => {
@@ -18,6 +19,7 @@ app.use('*', (req, res, next) => {
 
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
+app.use('/progress', routers.progress);
 
 app.engine('handlebars', handlebars({
 	helpers: {

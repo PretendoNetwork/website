@@ -4,6 +4,7 @@
 	--text: white;
 	--text-secondary: #A1A8D9;
 	--btn: #673DB6;
+	--theme: var(--btn);
 	--text-secondary-2: #8990C1;
 }
 
@@ -229,7 +230,7 @@ section.progress .left, section.progress .right {
 section.progress .right {
 	position: relative;
 	padding-left: 80px;
-	background: #673DB6;
+	background: var(--theme);
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -244,7 +245,7 @@ section.progress .right:before {
 	background: yellow;
 	left: 90%;
 	margin-top: -50px;
-	background: #673DB6;
+	background: var(--theme);
 }
 
 section.faq {
@@ -354,6 +355,12 @@ section.team {
 }
 
 /* Progress */
+.all-progress-lists {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	grid-gap: 20px;
+}
 .feature-list-wrapper h3 {
 	margin: 0;
 }
@@ -412,6 +419,12 @@ section.team {
 	height: 100%;
 }
 
+/* Bright purple cards */
+.purple-card {
+	padding: 50px 20px;
+	border-radius: 10px;
+	background: var(--btn);
+}
 
 /* Footer */
 footer {

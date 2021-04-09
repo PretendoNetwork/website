@@ -2,14 +2,14 @@ const getLocale = require('../../util/getLocale');
 const { Router } = require('express');
 const router = new Router();
 
-const pgoressLists = require('../../progress-lists.json');
+const progressLists = require('../../progress-lists.json');
 
 router.get('/', (req, res) => {
 	const tmpLocale = getLocale('US', 'en');
-	res.render('home', {
+	res.render('progress', {
 		layout: 'main',
 		locale: tmpLocale,
-		featuredFeatureList: pgoressLists[0]
+		progressLists
 	});
 });
 

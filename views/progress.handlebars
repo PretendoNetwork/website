@@ -1,0 +1,22 @@
+<div class="wrapper">
+
+	{{> header}}
+
+	<div class="hero">
+		<div class="hero-meta">
+			<h1 class="title dot">{{ locale.progressPage.title }}</h1>
+			<p class="text">{{ locale.progressPage.description }}</p>
+		</div>
+	</div>
+
+	<div class="all-progress-lists">
+		{{#each progressLists}}
+		<div class="purple-card">
+			{{> progress-list data=this }}
+		</div>
+		{{/each}}
+	</div>
+
+	{{> footer }}
+
+</div>
