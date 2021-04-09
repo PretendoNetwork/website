@@ -60,10 +60,8 @@ h1.dot[data-title-suffix]:after, h2.dot[data-title-suffix]:after {
 
 header {
 	display: flex;
-	position: relative;
 	align-items: center;
 	margin-top: 35px;
-	z-index: 6;
 }
 header nav a:first-child {
 	margin-left: 40px;
@@ -78,7 +76,7 @@ header nav a {
 /* Misc */
 .purple-circle {
 	position: absolute;
-	z-index: -1;
+	z-index: -2;
 	width: 2100px;
 	height: 1700px;
 	background: #111531;
@@ -96,7 +94,7 @@ header nav a {
 	left: 50%;
 	transform: translate(calc(-50% - 35px), -50%);
 	border-radius: 50%;
-	z-index: 5;
+	z-index: -1;
 	/* Tmp */
 	display: flex;
 	justify-content: center;
@@ -115,7 +113,7 @@ header nav a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, calc(-50% + 70px));
-	z-index: 2;
+	z-index: -2;
 }
 
 /* Title business */
@@ -169,7 +167,6 @@ header nav a {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-
 }
 .hero .buttons a {
 	display: block;
@@ -178,7 +175,6 @@ header nav a {
 	cursor: pointer;
 }
 .button {
-	position: relative;
 	appearance: none;
 	-webkit-appearance: none;
 	border: 0;
@@ -186,7 +182,6 @@ header nav a {
 	font-family: Poppins;
 	font-size: 1rem;
 	color: var(--text);
-	z-index: 6;
 }
 .button.primary {
 	padding: 12px 48px;
