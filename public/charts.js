@@ -18,6 +18,10 @@ function loadAllCharts() {
 		Chart.defaults.plugins.legend = {
 			display: false
 		};
+		Chart.defaults.plugins.tooltip = {
+			enabled: false
+		};
+
 		new Chart(wrapper.querySelector('canvas'), {
 			type: 'doughnut',
 			data: {

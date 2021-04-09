@@ -98,48 +98,7 @@
 		</div>
 		<div class="right sect">
 			<h2 class="title">{{ locale.progress.title }}</h2>
-			<div class="feature-list-wrapper">
-				<div class="feature-list-top">
-					<div class="feature-progress-chart">
-						<canvas></canvas>
-						<p class="percentage-label"></p>
-					</div>
-					<div class="progress-title">
-						<h3>Miiverse (Juxt)</h3>
-					</div>
-				</div>
-				<hr />
-				<div class="feature-list">
-					<div class="feature">
-						{{> custom-checkbox checked=true }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox checked=true }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox checked=true }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox }}
-						<span>Feature A</span>
-					</div>
-					<div class="feature">
-						{{> custom-checkbox }}
-						<span>Feature A</span>
-					</div>
-				</div>
-			</div>
+			{{> progress-list data=featuredFeatureList }}
 		</div>
 	</section>
 

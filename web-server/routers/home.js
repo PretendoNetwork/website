@@ -7,6 +7,19 @@ router.get('/', (req, res) => {
 	res.render('home', {
 		layout: 'main',
 		locale: tmpLocale,
+		featuredFeatureList: {
+			title: 'Thing',
+			features: [
+				{
+					name: 'Feature A', 
+					checked: true
+				},
+				{
+					name: 'Feature B', 
+					checked: false
+				}
+			]
+		}
 	});
 });
 
