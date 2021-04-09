@@ -132,6 +132,9 @@ header nav a {
 .hero-meta {
 	margin-top: 25vh;
 }
+.hero-meta.reduced-margin {
+	margin-top: 10vh;
+}
 .hero-image {
 	position: relative;
 	height: 100%;
