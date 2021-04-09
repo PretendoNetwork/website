@@ -1,0 +1,28 @@
+[
+	{
+		"title": "Thing",
+		"features": [
+			{
+				"name": "Feature A", 
+				"checked": true
+			},
+			{
+				"name": "Feature B", 
+				"checked": false
+			}
+		]
+	},
+	{
+		"title": "Another list",
+		"features": [
+			{
+				"name": "Some other A", 
+				"checked": true
+			},
+			{
+				"name": "Feature B", 
+				"checked": false
+			}
+		]
+	}
+]
