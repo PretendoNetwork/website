@@ -4,11 +4,31 @@
 		"features": [
 			{
 				"name": "Feature A", 
-				"checked": true
+				"status": "done"
 			},
 			{
 				"name": "Feature B", 
-				"checked": false
+				"status": "ongoing"
+			},
+			{
+				"name": "Feature B", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Feature B", 
+				"status": "done"
+			},
+			{
+				"name": "Feature B", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Feature A", 
+				"status": "todo"
+			},
+			{
+				"name": "Feature A", 
+				"status": "todo"
 			}
 		]
 	},
@@ -17,11 +37,11 @@
 		"features": [
 			{
 				"name": "Some other A", 
-				"checked": true
+				"status": "todo"
 			},
 			{
 				"name": "Feature B", 
-				"checked": false
+				"status": "done"
 			}
 		]
 	}

@@ -1,20 +1,24 @@
 <div class="feature-list-wrapper">
 	<div class="feature-list-top">
-		<div class="feature-progress-chart">
-			<p class="percentage-label"></p>
-			<canvas></canvas>
+		<div>
+			<div class="feature-progress-chart">
+				<p class="percentage-label"></p>
+				<canvas></canvas>
+			</div>
 		</div>
+	</div>
+	<div class="core">
+
 		<div class="progress-title">
 			<h3>{{ data.title }}</h3>
 		</div>
-	</div>
-	<hr />
-	<div class="feature-list">
-		{{#each data.features}}
-		<div class="feature">
-			{{> custom-checkbox checked=checked }}
-			<span>{{ name }}</span>
+		<div class="feature-list">
+			{{#each data.features}}
+			<div class="feature">
+				{{> custom-checkbox status=status }}
+				<span>{{ name }}</span>
+			</div>
+			{{/each}}
 		</div>
-		{{/each}}
 	</div>
 </div>

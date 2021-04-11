@@ -3,7 +3,7 @@ function loadAllCharts() {
 	document.querySelectorAll('.feature-list-wrapper').forEach(wrapper => {
 		// Find and generate all relevant data
 		const allFeatureNodes = wrapper.querySelectorAll('.feature');
-		const allDoneFeatureNodes = wrapper.querySelectorAll('.feature [checked]');
+		const allDoneFeatureNodes = wrapper.querySelectorAll('.feature .done');
 		
 		const progressPercentage = Math.round(Math.min((allDoneFeatureNodes.length / allFeatureNodes.length) * 100, 100));
 		const remainingPercentage = 100 - progressPercentage;
@@ -29,9 +29,17 @@ function loadAllCharts() {
 				datasets: [
 					{
 						data,
-						backgroundColor: ['white', 'transparent']
+						backgroundColor: ['#9D6FF3', '#4C5174']
 					}
 				]
+			},
+			options: {
+				elements: {
+					arc: {
+						borderWidth: 0
+					}
+				},
+				cutout: '70%'
 			}
 		});
 	});
