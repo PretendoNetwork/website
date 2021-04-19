@@ -13,10 +13,24 @@
 			<h3>{{ data.title }}</h3>
 		</div>
 		<div class="feature-list">
-			{{#each data.features}}
+			{{#each data.progress.completed}}
 			<div class="feature">
-				{{> custom-checkbox status=status }}
-				<span>{{ name }}</span>
+				{{> custom-checkbox status="completed" }}
+				<span>{{ this }}</span>
+			</div>
+			{{/each}}
+
+			{{#each data.progress.started}}
+			<div class="feature">
+				{{> custom-checkbox status="started" }}
+				<span>{{ this }}</span>
+			</div>
+			{{/each}}
+
+			{{#each data.progress.not_started}}
+			<div class="feature">
+				{{> custom-checkbox status="not_started" }}
+				<span>{{ this }}</span>
 			</div>
 			{{/each}}
 		</div>
