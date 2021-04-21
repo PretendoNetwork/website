@@ -401,6 +401,9 @@ section.team {
 	grid-template-columns: auto 1fr;
 	grid-gap: 20px;
 }
+.feature-progress-chart {
+	max-width: 100px;
+}
 .feature-list-wrapper h3 {
 	margin: 0;
 }
@@ -435,7 +438,7 @@ section.team {
 /* Progress: Feature list */
 .feature-list {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 	grid-gap: 10px;
 }
 .feature {
@@ -607,6 +610,10 @@ footer {
 
 	footer {
 		margin-top: 100px;
+	}
+
+	.text {
+		width: 100%;
 	}
 
 }
