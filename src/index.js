@@ -13,7 +13,7 @@ const routers = {
 };
 
 app.use('*', (req, res, next) => {
-	logger.info(`${req.method.toUpperCase()} ${req.path}`);
+	logger.info(`${req.method.toUpperCase()} ${req.path}${req.filepath}`);
 	next();
 });
 

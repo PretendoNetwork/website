@@ -22,6 +22,8 @@ function loadAllCharts() {
 			enabled: false
 		};
 
+		const isInBrightCard = !!wrapper.closest('.right.sect');
+
 		new Chart(wrapper.querySelector('canvas'), {
 			type: 'doughnut',
 			data: {
@@ -29,7 +31,7 @@ function loadAllCharts() {
 				datasets: [
 					{
 						data,
-						backgroundColor: ['#9D6FF3', '#4C5174']
+						backgroundColor: isInBrightCard ? ['white', 'rgba(195, 178, 227, 0.5)'] : ['#9D6FF3', '#4C5174']
 					}
 				]
 			},

@@ -1,47 +1,66 @@
 [
 	{
-		"title": "Thing",
+		"title": "Juxtaposition",
 		"features": [
 			{
-				"name": "Feature A", 
+				"name": "Fix fonts", 
 				"status": "done"
 			},
 			{
-				"name": "Feature B", 
-				"status": "ongoing"
-			},
-			{
-				"name": "Feature B", 
-				"status": "ongoing"
-			},
-			{
-				"name": "Feature B", 
+				"name": "Guest Mode", 
 				"status": "done"
 			},
 			{
-				"name": "Feature B", 
+				"name": "Communities Page", 
+				"status": "done"
+			},
+			{
+				"name": "Set-Up Page", 
+				"status": "done"
+			},
+			{
+				"name": "Posts", 
 				"status": "ongoing"
 			},
 			{
-				"name": "Feature A", 
+				"name": "User Page", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Community Page", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Notifications", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Miiverse Patch (applet)", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Replies", 
+				"status": "ongoing"
+			},
+			{
+				"name": "Activity Feed", 
 				"status": "todo"
 			},
 			{
-				"name": "Feature A", 
-				"status": "todo"
-			}
-		]
-	},
-	{
-		"title": "Another list",
-		"features": [
-			{
-				"name": "Some other A", 
+				"name": "Fix browser History", 
 				"status": "todo"
 			},
 			{
-				"name": "Feature B", 
-				"status": "done"
+				"name": "Google Analytics(?)", 
+				"status": "todo"
+			},
+			{
+				"name": "Sub Communities", 
+				"status": "todo"
+			},
+			{
+				"name": "Miiverse Patch (games)", 
+				"status": "todo"
 			}
 		]
 	}
