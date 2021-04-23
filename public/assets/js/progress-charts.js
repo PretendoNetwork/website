@@ -22,6 +22,8 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 		enabled: false
 	};
 
+	const isInBrightCard = !!progressListElement.closest('.right.sect');
+
 	new Chart(progressListElement.querySelector('canvas'), {
 		type: 'doughnut',
 		data: {
@@ -29,7 +31,7 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 			datasets: [
 				{
 					data,
-					backgroundColor: ['#9D6FF3', '#4C5174']
+					backgroundColor: isInBrightCard ? ['white', 'rgba(195, 178, 227, 0.5)'] : ['#9D6FF3', '#4C5174']
 				}
 			]
 		},
