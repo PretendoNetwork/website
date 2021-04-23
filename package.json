@@ -22,6 +22,7 @@
     "express-handlebars": "^4.0.4",
     "fs-extra": "^9.1.0",
     "ioredis": "^4.26.0",
+    "morgan": "^1.10.0",
     "redis-json": "^5.0.0",
     "trello": "^0.10.0"
   }

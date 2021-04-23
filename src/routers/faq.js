@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = new Router();
 
-router.get('/', (_req, res) => {
+router.get('/', (request, response) => {
 	res.redirect('/#faq');
 });
 
