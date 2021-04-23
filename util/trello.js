@@ -31,6 +31,7 @@ async function updateTrelloCache() {
 	for (const board of boards) {
 		const meta = {
 			title: '',
+			percentage_complete: 0,
 			progress: {
 				not_started: [],
 				started: [],

@@ -2,14 +2,16 @@ const getLocale = require('../../util/getLocale');
 const { Router } = require('express');
 const router = new Router();
 
-const pgoressLists = require('../progress-lists');
+const { getTrelloCache } = require('../../util/trello');
 
-router.get('/', (req, res) => {
+router.get('/', async (request, response) => {
 	const tmpLocale = getLocale('US', 'en');
-	res.render('home', {
+	const cache = await getTrelloCache();
+
+	response.render('home', {
 		layout: 'main',
 		locale: tmpLocale,
-		featuredFeatureList: pgoressLists[0]
+		featuredFeatureList: cache.sections[0]
 	});
 });
 

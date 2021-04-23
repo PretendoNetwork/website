@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 require('colors');
 
-const root = __dirname;
+const root = __dirname + '/../';
 fs.ensureDirSync(`${root}/logs`);
 
 const streams = {
