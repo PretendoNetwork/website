@@ -1,0 +1,124 @@
+{
+	"nav": {
+		"faq": "FAQ",
+		"connecting": "Conectarse"
+	},
+	"home": {
+		"header": {
+			"text": "Un proyecto de codigo abierto para remplazamiento de los servicions de Ninetendo Network"
+		}
+	},
+	"about": {
+		"caption": "Que es esto?",
+		"title": "Sobre",
+		"text": "Pretendo es un remplazo de codigo abierto para los servicios de Nintendo Network, construir servidores personalizados para la familia de consolas WiiU y 3DS. Nuestra meta es preservar la funcionalidad online de esas consolas, para permitir a los jugadores seguir disfrutando sus juegos favoritos."
+	},
+	"credits": {
+		"caption": "Las personas responsables.",
+		"title": "Creditos",
+		"people": [
+			{
+				"name": "Jonathan Barrow (RedDucks)",
+				"caption": "Dueño y desarrollador",
+				"picture": "https://github.com/redduckss.png",
+				"github": "https://github.com/RedDuckss"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Investigador de Miiverse y desarrollo.",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Desarrollo de la libreria de Crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Investigación de la consola y otros sistemas",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Instalador de la red y investigación de la consola",
+				"picture": "https://github.com/NexoDevelopment.png",
+				"github": "https://github.com/NexoDevelopment"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Desarrollo Web y investigación temprana de la eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "Benjamin Moss (kxpler442b)",
+				"caption": "Desarrollo Web",
+				"picture": "https://github.com/kxpler442b.png",
+				"github": "https://github.com/kxpler442b"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Desarrollo Web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Este proyecto no seria posible sin la investigación y ayuda por Kinnay en PRUDP y nex",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"footer": {
+		"text": "Copyright 2020 PretendoNetwork - Sitio diseñado y desarrollado por mrjvs, Ben, y Jip"
+	},
+	"connecting": {
+		"title": "Connecting",
+		"text": "Pretendo esta actualmente en un estado en el que no se puede usar para el publico general. Cuando la red este este al publico, en esta seción se incluiran los pasos a llevar a cabo para conectarse a la red"
+	},
+	"cemu": {
+		"title": "Cemu",
+		"text": "Pretendo esta actualmente en un estado en el que no se puede usar para el publico general. Cuando la red este este al publico, en esta seción se incluiran los pasos a llevar a cabo para conectarse a la red usando Cemu"
+	},
+	"faq": {
+		"title": "FAQ",
+		"qna": [
+			{
+				"question": "Que es pretendo?",
+				"answer": "Pretendo es un remplazo de codigo abierto para los servicios de Nintendo Network, construir servidores personalizados para la familia de consolas WiiU y 3DS. Nuestra meta es preservar la funcionalidad online de esas consolas, para permitir a los jugadores seguir disfrutando sus juegos favoritos."
+			},
+			{
+				"question": "Como puedo usar Pretendo?",
+				"answer": "Pretendo no se puede usar en publico general. Como siempre pretendo sera un parche del estilo homebrew que se ejecuta al correr un Homebrew en su consola"
+			},
+			{
+				"question": "Hay alguna fecha de lanzamiento para XYZ?",
+				"answer": "Por el momento no tenemos una fecha clara para cualquier caracteristica en especifica del proyecto. Como son muchas partes de la red, las actualizaciones son lanzadas individualmente, como siempre cuando esten listo(por ejemplo las actualizaciones en el servidor de cuentas son (casi siempre) independiente de otras partes de la red, o el servidor de amigos). Dudamos que podamos decir una fecha de salida concreta"
+			},
+			{
+				"question": "Pretendo funciona en Cemu/emuladores?",
+				"answer": "Pretendo esta diseñado para la WiiU y (eventualmente) 3DS. En este momento el unico emulador de esas consolas que tiene la capacidad de conectividad en linea es Cemu. Cemu no tiene soporte Oficial para servidores personalizados, pero si seria posible el uso de Pretendo con Cemu<br>Puede ver la pagina de <a href=\"/cemu\">Cemu</a> para mas detalles"
+			},
+			{
+				"question": "Los NNIDs funcionan en Pretendo?",
+				"answer": "Lamentablemente no. Los únicos con acceso a los datos sobre sus NNID existentes es Nintendo. Teóricamente, podría ser posible una migración de NNID a PNID, pero sería un proceso lento y largo que requeriría información confidencial del usuario."
+			},
+			{
+				"question": "Si tengo una cuenta / consola baneada en Nintendo Network, ¿Permanecere baneado cuando use Pretendo?",
+				"answer": "Cualquier baneo de cuenta/consola solo existe en el lado del servidor. Pero los baneos no se transladan a Pretendo. Como siempre Pretendo baneara a las personas que sean requeridas"
+			},
+			{
+				"question": "Pretendo soporta la Wii/Switch?",
+				"answer": "La Wii ya tiene servidores personalizados proveeidos por <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualmente no tenemos planes de admitir Switch, ya que no solo es una plataforma completamente diferente con una red en línea diferente, sino que Switch online es un servicio pago"
+			},
+			{
+				"question": "Necesito Haxchi para correr el parcheador?",
+				"answer": "No. solo necesitaras una forma para acceder al Homebrew Launcher, como el exploit del navegador, Haxchi o Coldboot Haxchi"
+			}
+		]
+	}
+}

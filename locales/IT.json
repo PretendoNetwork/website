@@ -1,0 +1,124 @@
+{
+	"nav": {
+		"faq": "FAQ",
+		"connecting": "Connettersi"
+	},
+	"home": {
+		"header": {
+			"text": "Un rimpiazzo open source del servizio Nintendo Network"
+		}
+	},
+	"about": {
+		"caption": "Cos'è questo?",
+		"title": "Informazioni",
+		"text": "PretendoNetwork è un rimpiazzo open source del servizio Nintendo Network che punta a costruire server custom per le famiglie di console WiiU e 3DS. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai loro utenti di continuare a giocare ai loro giochi preferiti per WiiU e 3DS al meglio."
+	},
+	"credits": {
+		"caption": "Le persone responsabili",
+		"title": "Riconoscimenti",
+		"people": [
+			{
+				"name": "Jonathan Barrow (RedDucks)",
+				"caption": "Proprietario del progetto e sviluppatore principale",
+				"picture": "https://github.com/redduckss.png",
+				"github": "https://github.com/RedDuckss"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Ricerca e sviluppo Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Sviluppo della libreria crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Ricerca su console e su altri sistemi",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Installer Network e ricerca su console",
+				"picture": "https://github.com/NexoDevelopment.png",
+				"github": "https://github.com/NexoDevelopment"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Sviluppo web e iniziale ricerca su eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "Benjamin Moss (kxpler442b)",
+				"caption": "Sviluppo web",
+				"picture": "https://github.com/kxpler442b.png",
+				"github": "https://github.com/kxpler442b"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Sviluppo web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Niente di tutto questo sarebbe stato possibile senza la ricerca e l'aiuto di Kinnay su PRUDP e nex",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"footer": {
+		"text": "Copyright 2020 PretendoNetwork - Sito sviluppato e progettato da mrjvs, Ben e Jip"
+	},
+	"connecting": {
+		"title": "Connettersi",
+		"text": "PretendoNetwork non è ancora utilizzabile dal pubblico. Quando la rete diventerà pubblica, qui ci saranno le istruzioni per connettersi alla rete"
+	},
+	"cemu": {
+		"title": "Cemu",
+		"text": "PretendoNetwork non è ancora utilizzabile dal pubblico. Quando la rete diventerà pubblica, qui ci saranno le istruzioni per connettersi alla rete usando Cemu"
+	},
+	"faq": {
+		"title": "Domande frequenti (FAQ)",
+		"qna": [
+			{
+				"question": "Cos'è PretendoNetwork?",
+				"answer": "PretendoNetwork è un rimpiazzo open source del servizio Nintendo Network che punta a costruire server custom per le famiglie di console WiiU e 3DS. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai loro utenti di continuare a giocare ai loro giochi preferiti per WiiU e 3DS al meglio"
+			},
+			{
+				"question": "Come si usa PretendoNetwork?",
+				"answer": "PretendoNetwork non è ancora pronta per essere utilizzata dal pubblico. Quando lo sarà, per usare PretendoNetwork basterà eseguire il nostro patcher tramite homebrew sulla tua console"
+			},
+			{
+				"question": "Quando sarà pronto XYZ?",
+				"answer": "Non sappiamo esattamente quando una funzionalità o l'intero progetto saranno pronti. La rete è composta da diverse parti, e gli aggionamenti vengono rilasciati non appena sono pronti (ad esempio gli aggiornamenti al server degli account sono (quasi sempre) rilasciati indipendentemente dalle altre parti della rete, come ad esempio il server degli amici). Per questo non possiamo dare una data per la quale PretendoNetwork sarà pronta"
+			},
+			{
+				"question": "PretendoNetwork funziona su Cemu/emulatori?",
+				"answer": "PretendoNetwork è stata creata per la WiiU e (prima o poi) per la 3DS. Per ora l'unico emulatore capace di connettersi online è Cemu. Ufficialmente, Cemu non supporta i server custom, ma sarà comunque possibile utilizzare PretendoNetwork con Cemu<br>Guarda la pagina <a href=\"/cemu\">Cemu</a> per maggiori informazioni"
+			},
+			{
+				"question": "I miei NNID funzioneranno su PretendoNetwork?",
+				"answer": "Sfortunatamente, no. Solo Nintendo ha accesso ai dati relativi ai tuoi NNID esistenti. In teoria, una migrazione da NNID a PNID potrebbe essere possibile, ma sarebbe un processo lento e lungo che richiederebbe informazioni personali dell'utente"
+			},
+			{
+				"question": "Se il mio account/la mia console è stato bannato su Nintendo Network, rimarrò bannato anche su PretendoNetwork?",
+				"answer": "I ban dell'account/console esistono solo sui server. Questo significa che un ban esistente non si rifletterà su PretendoNetwork. PretendoNetwork si riserva comunque il diritto di bannare dalla rete se ritenuto necessario"
+			},
+			{
+				"question": "PretendoNetwork supporterà la Wii/Switch?",
+				"answer": "La Wii ha già server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch, poiché non solo essa è una piattaforma completamente diversa con una rete online diversa, ma Switch Online è un servizio a pagamento"
+			},
+			{
+				"question": "È necessario utilizzare Haxchi per eseguire il patcher?",
+				"answer": "No. Per eseguire il patcher serve solo un modo per accedere all'Homebrew Launcher, non importa se tramite un exploit nel browser, Haxchi o Coldboot Haxchi"
+			}
+		]
+	}
+}

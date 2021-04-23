@@ -8,9 +8,13 @@ small commonly used utilities
 const fs = require('fs-extra');
 const logger = require('../logger');
 
+let setLocales = (request)=> {
+	return request.headers['accept-language'].split("-")[0].toUpperCase();
+}
 // Returns a locale
-function getLocale(region, language) {
-	const path = `${__dirname}/../locales/${region}_${language}.json`;
+function getLocale(request) {
+	let locale = setLocales(request)
+	const path = `${__dirname}/../locales/${locale}.json`;
 
 	if (fs.pathExistsSync(path)) {
 		return require(path);
@@ -28,5 +32,6 @@ function getDefaultLocale(locale='default') {
 
 module.exports = {
 	getLocale,
-	getDefaultLocale
+	getDefaultLocale,
+	setLocales
 };

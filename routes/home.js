@@ -12,8 +12,8 @@ const utilHelper = require('../helpers/util');
 
 // display home page
 router.get('/', (request, response) => {
-	const locale = utilHelper.getLocale('US', 'en');
-
+	const locale = utilHelper.getLocale(request);
+	console.log(utilHelper.setLocales(request));
 	return response.render('home', {
 		title: 'Pretendo | Home',
 		description: locale.about.text,
