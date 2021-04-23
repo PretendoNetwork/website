@@ -1,9 +1,11 @@
+process.title = 'Pretendo - Website';
+
 const logger = require('./logger');
 const express = require('express');
 const handlebars = require('express-handlebars');
+const config = require('../config.json');
 
-const cfg = require('../config.json');
-
+const { http: { port } } = config;
 const app = express();
 
 const routers = {
@@ -51,6 +53,6 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-app.listen(cfg.http.port, () => {
-	logger.info(`Server listening on *:${cfg.http.port}`);
+app.listen(port, () => {
+	logger.success(`Server listening on *:${port}`);
 });
