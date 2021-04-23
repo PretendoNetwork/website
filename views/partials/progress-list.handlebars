@@ -15,21 +15,28 @@
 		<div class="feature-list">
 			{{#each data.progress.completed}}
 			<div class="feature">
-				{{> custom-checkbox status="completed" }}
+				<div class="custom-checkbox done">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+						stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+						<polyline points="20 6 9 17 4 12"></polyline>
+					</svg>
+				</div>
 				<span>{{ this }}</span>
 			</div>
 			{{/each}}
 
 			{{#each data.progress.started}}
 			<div class="feature">
-				{{> custom-checkbox status="started" }}
+				<div class="custom-checkbox ongoing">
+					<div class="small-dot"></div>
+				</div>
 				<span>{{ this }}</span>
 			</div>
 			{{/each}}
 
 			{{#each data.progress.not_started}}
 			<div class="feature">
-				{{> custom-checkbox status="not_started" }}
+				<div class="custom-checkbox incomplete"></div>
 				<span>{{ this }}</span>
 			</div>
 			{{/each}}
