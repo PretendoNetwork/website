@@ -13,6 +13,9 @@ const app = express();
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
 
+logger.info('Setting up static public folder');
+app.use(express.static('public'));
+
 logger.info('Importing page routers');
 const routers = {
 	home: require('./routers/home'),
@@ -62,9 +65,6 @@ app.engine('handlebars', handlebars({
 	}
 }));
 app.set('view engine', 'handlebars');
-
-logger.info('Setting up static public folder');
-app.use(express.static('public'));
 
 logger.info('Starting server')
 app.listen(port, () => {
