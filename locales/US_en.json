@@ -67,7 +67,7 @@
 	},
 	"credits": {
 		"title": "The team",
-		"text": "Our amazing team has spent countless hours helping out on making Pretendo better.",
+		"text": "Meet team behind the project",
 		"people": [
 			{
 				"name": "Jonathan Barrow (RedDucks)",
@@ -134,6 +134,6 @@
 	},
 	"progressPage": {
 		"title": "Our progress",
-		"description": "This is text. Text can go here. This is a spot for text. A paragraph holds text. It's all true."
+		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
 	}
 }
