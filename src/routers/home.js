@@ -2,7 +2,7 @@ const { Router } = require('express');
 const util = require('../util');
 const router = new Router();
 
-const { getTrelloCache } = require('../../util/trello');
+const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
 	const tmpLocale = util.getLocale('US', 'en');
