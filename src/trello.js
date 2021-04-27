@@ -53,7 +53,7 @@ async function updateTrelloCache() {
 			}
 		}
 
-		if (meta.progress.not_started.length !== 0 && meta.progress.started.length !== 0 && meta.progress.completed.length !== 0) {
+		if (meta.progress.not_started.length !== 0 || meta.progress.started.length !== 0 || meta.progress.completed.length !== 0) {
 			progressData.sections.push(meta);
 		}
 	}
