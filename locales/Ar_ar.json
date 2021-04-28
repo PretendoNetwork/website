@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "About",
+		"about": "عنا",
 		"faq": "FAQ",
 		"credits": "Credits",
 		"progress": "Progress"
@@ -14,7 +14,7 @@
 		}
 	},
 	"aboutUs": {
-		"title": "About us",
+		"title": "معلومات عنا",
 		"paragraphs": [
 			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
 			"As our services would be both free and open source, they can exist long after the inevitable closure of Nintendo Network."
