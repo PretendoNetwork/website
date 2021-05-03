@@ -1,0 +1,124 @@
+{
+	"nav": {
+		"faq": "FAQ",
+		"connecting": "Connexion"
+	},
+	"home": {
+		"header": {
+			"text": "Un service de remplacement du Nintendo Network open source"
+		}
+	},
+	"about": {
+		"caption": "C'est quoi ça ?",
+		"title": "À propos",
+		"text": "Pretendo est un remplacement open source de Nintendo Network qui vise à construire des serveurs personnalisés pour les familles de consoles WiiU et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, pour permettre aux joueurs de continuer à jouer à leurs jeux WiiU et 3DS préférés à leur pleine capacité."
+	},
+	"credits": {
+		"caption": "Les personnes responsables",
+		"title": "Crédits",
+		"people": [
+			{
+				"name": "Jonathan Barrow (RedDucks)",
+				"caption": "Responsable de projet et développeur principal",
+				"picture": "https://github.com/redduckss.png",
+				"github": "https://github.com/RedDuckss"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Recherche et développement Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "développement de la bibliothèque Crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Recherche sur la console et autres systèmes",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Recherche sur l’installateur réseau et la console",
+				"picture": "https://github.com/NexoDevelopment.png",
+				"github": "https://github.com/NexoDevelopment"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Développement web et premières recherches eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "Benjamin Moss (kxpler442b)",
+				"caption": "Développement web",
+				"picture": "https://github.com/kxpler442b.png",
+				"github": "https://github.com/kxpler442b"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Développement web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Rien de tout cela ne serait possible sans la recherche et l’aide de Kinnay sur PRUDP et nex",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"footer": {
+		"text": "Copyright 2020 PretendoNetwork - Site conçu et développé par mrjvs, Ben et Jip"
+	},
+	"connecting": {
+		"title": "Connexion",
+		"text": "Pretendo n’est actuellement pas utilisable par le grand public. Lorsque le réseau devient public, cela contiendra des étapes sur la connexion au réseau"
+	},
+	"cemu": {
+		"title": "Cemu",
+		"text": "Pretendo n’est actuellement pas utilisable par le grand public. Lorsque le réseau devient public, cela contiendra des étapes sur la connexion au réseau en utilisant Cemu"
+	},
+	"faq": {
+		"title": "FAQ",
+		"qna": [
+			{
+				"question": "Qu'est-ce-que c'est que Pretendo?",
+				"answer": "Pretendo est un remplacement open source de Nintendo Network qui vise à construire des serveurs personnalisés pour les familles de consoles WiiU et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, pour permettre aux joueurs de continuer à jouer à leurs jeux WiiU et 3DS préférés à leur pleine capacité"
+			},
+			{
+				"question": "Comment j'utilise Pretendo?",
+				"answer": "Pretendo n’est actuellement pas dans un état qui est prêt pour l’usage public. Cependant, une fois que c’est vous serez en mesure d’utiliser Pretendo simplement en exécutant notre patch homebrew sur votre console"
+			},
+			{
+				"question": "Y a-t-il une heure d’arrivée prévue pour XYZ?",
+				"answer": "Nous n’avons pas d’ETA exacte pour les caractéristiques spécifiques ou le projet dans son ensemble. Le réseau comporte de nombreuses parties, les mises à jour sont publiées individuellement chaque fois qu’elles sont prêtes (par exemple, les mises à jour du serveur de compte sont (presque toujours) indépendantes sur d’autres parties du réseau, comme le serveur des amis). Pour cette raison, nous ne pouvons pas donner une heure d’arrivée exacte."
+			},
+			{
+				"question": "Est-ce-que Pretendo fonctionne sur Cemu/emulateurs?",
+				"answer": "Pretendo est conçu pour le WiiU et (finalement) le 3DS. A ce moment le seul émulateur pour ces consoles avec des capacités en ligne réelles est Cemu. Cemu ne supporte pas officiellement les serveurs personnalisés, mais il sera toujours possible d’utiliser Pretendo avec Cemu<br>Voir la page <a href='/cemu'>Cemu</a> pour plus de détails"
+			},
+			{
+				"question": "Est-ce-que mes NNIDs existants fonctionnent sur Pretendo?",
+				"answer": "Malheureusement, non. Les seuls qui ont accès aux données de vos PNID existants sont Nintendo. Une migration NNID-to-PNID pourrait théoriquement être possible, mais ce serait un processus lent et long qui exigerait des renseignements sensibles sur les utilisateurs."
+			},
+			{
+				"question": "Si mon compte/ma console est interdit sur Nintendo Network, est-ce que je resterai interdit lorsque j’utiliserai Pretendo ?",
+				"answer": "Les interdictions de compte/console n’existent que côté serveur. Cela signifie que les interdictions existantes ne seraient pas reportées sur Pretendo. Cependant Pretendo se réserve toujours le droit d’émettre une interdiction pour notre réseau si nous jugeons bon"
+			},
+			{
+				"question": "Est-ce-que Pretendo supporte la Wii/Switch?",
+				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href='https://wiimmfi.de/' target= \'_blank'>Wiimmfi</a>. Nous n’avons actuellement pas l’intention de prendre en charge la Switch, car non seulement c’est une plateforme complètement différente avec un réseau en ligne différent, mais le Switch online est un service payant"
+			},
+			{
+				"question": "Ai-je besoin de Haxchi pour exécuter le patcher ?",
+				"answer": "Non. La seule chose dont vous avez besoin pour exécuter le patcher est un moyen d’accéder à l'Homebrew Launcher, que ce soit l’exploit du navigateur, Haxchi ou Coldboot Haxchi"
+			}
+		]
+	}
+}
