@@ -71,19 +71,19 @@
 		"people": [
 			{
 				"name": "Jonathan Barrow (RedDucks)",
-				"caption": "Project owner and lead developer",
+				"caption": "مالك المشروع والمطور الرئيسي",
 				"picture": "https://github.com/redduckss.png",
 				"github": "https://github.com/RedDuckss"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse research and development",
+				"caption": "البحث والتطوير Miiverse",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "superwhiskers",
-				"caption": "crunch library development",
+				"caption": "crunch تطوير مكتبة",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
@@ -101,19 +101,19 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Web development and early eShop research",
+				"caption": "eshopتطوير الويب والبحث المبكر لل",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			},
 			{
 				"name": "Benjamin Moss (kxpler442b)",
-				"caption": "Web development",
+				"caption": "تطوير الويب",
 				"picture": "https://github.com/kxpler442b.png",
 				"github": "https://github.com/kxpler442b"
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development",
+				"caption": "تطوير الويب",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -125,7 +125,7 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "Special thanks",
+				"special": "شكر خاص",
 				"caption": "Research on Nintendo datastructures",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
