@@ -6,11 +6,11 @@
 		"progress": "تقدم"
 	},
 	"hero": {
-		"subtitle": "Game servers",
-		"title": "Recreated",
+		"subtitle": "سيرفرات الألعاب",
+		"title": "إعادة تنشيء",
 		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all, even after the original servers are discontinued",
 		"buttons": {
-			"readMore": "Read more"
+			"readMore": "أقرأ اكثر"
 		}
 	},
 	"aboutUs": {
@@ -133,7 +133,7 @@
 		]
 	},
 	"progressPage": {
-		"title": "Our progress",
+		"title": "تقدمنا",
 		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
 	}
 }
