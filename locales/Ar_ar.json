@@ -2,8 +2,8 @@
 	"nav": {
 		"about": "عنا",
 		"faq": "FAQ",
-		"credits": "Credits",
-		"progress": "Progress"
+		"credits": "الاعتمادات",
+		"progress": "تقدم"
 	},
 	"hero": {
 		"subtitle": "Game servers",
@@ -21,7 +21,7 @@
 		]
 	},
 	"progress": {
-		"title": "Progress",
+		"title": "تقدم",
 		"paragraphs": [
 			"Currently, we are working on Miiverse, along with our account servers and its integration with the services.",
 			"For 3DS, we are also working on Mario Kart 7, with a desire to continue working on other games when possible."
@@ -66,8 +66,8 @@
 		]
 	},
 	"credits": {
-		"title": "The team",
-		"text": "Meet the team behind the project",
+		"title": "الفريق",
+		"text": "قابل الفريق وراء المشروع",
 		"people": [
 			{
 				"name": "Jonathan Barrow (RedDucks)",
