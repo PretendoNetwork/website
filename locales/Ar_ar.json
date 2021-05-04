@@ -16,8 +16,8 @@
 	"aboutUs": {
 		"title": "معلومات عنا",
 		"paragraphs": [
-			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
-			"As our services would be both free and open source, they can exist long after the inevitable closure of Nintendo Network."
+			"إن بريتندو مشروع مصدر مفتوح هدفه إعادة إنشاء شبكة نينتندو لل3دي اس و الوي يو عن طريق الهندسة العكسية",
+			".خدماتنا ستكون مجاناً ومصدرها مفتوح فستعيش وقتا طويلاً حتي بعد إغلاق شبكة نينتندو"
 		]
 	},
 	"progress": {
@@ -134,6 +134,6 @@
 	},
 	"progressPage": {
 		"title": "تقدمنا",
-		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
 	}
 }
