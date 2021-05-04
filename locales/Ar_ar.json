@@ -2,13 +2,13 @@
 	"nav": {
 		"about": "عنا",
 		"faq": "FAQ",
-		"credits": "الاعتمادات",
+		"credits": "الفريق",
 		"progress": "تقدم"
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
-		"title": "إعادة تنشيء",
-		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all, even after the original servers are discontinued",
+		"title": "إعادة إنشاء",
+		"text": "السماح بالاتصال عبر الإنترنت حتي بعد إغلاق السيرفرات الأصلية ،Uإن بريتندو بديل مجاني و مصدر مفتوح لسيرفرات ال3دي اس و الوي",
 		"buttons": {
 			"readMore": "أقرأ اكثر"
 		}
