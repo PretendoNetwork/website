@@ -23,13 +23,13 @@
 	"progress": {
 		"title": "تقدم",
 		"paragraphs": [
-			"Currently, we are working on Miiverse, along with our account servers and its integration with the services.",
-			"For 3DS, we are also working on Mario Kart 7, with a desire to continue working on other games when possible."
+			"نحن نعمل الآن على الميفيرز و الأكونتات وإتصالها مع السيرفرات",
+			"و نعمل علي ماريوكارت 7 لل3دي اس و نريد ان نعمل علي الألعاب الآخري في اسرع وقت"
 		]
 	},
 	"faq": {
 		"title": "بعض الأسئلة المكررة",
-		"text": "Here are some common questions we're asked for easy information.",
+		"text": ":هنا بعض الأسئلة المتكررة بإجابتها",
 		"QAs": [
 			{
 				"question": "What is Pretendo?",
