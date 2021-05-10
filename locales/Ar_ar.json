@@ -1,7 +1,7 @@
 {
 	"nav": {
 		"about": "عنا",
-		"faq": "FAQ",
+		"faq": "أسئلة",
 		"credits": "الفريق",
 		"progress": "تقدم"
 	},
@@ -32,35 +32,35 @@
 		"text": ":هنا بعض الأسئلة المتكررة بإجابتها",
 		"QAs": [
 			{
-				"question": "What is Pretendo?",
+				"question": "ما هو بريتندو؟",
 				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
 			},
 			{
-				"question": "Will my existing NNIDs work on Pretendo?",
+				"question": "هل هويتي الشخصية علي شبكة نينتندو ستستمر علي بريتندو؟",
 				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
 			},
 			{
-				"question": "How do I use Pretendo?",
+				"question": "كيف استخدم بريتندو؟",
 				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
 			},
 			{
-				"question": "Do you know when <feature/service> will be ready?",
+				"question": "هل تعرف متي تكون خدمة او خاصية جاهزة؟",
 				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
-				"question": "Does Pretendo work on Cemu/emulators?",
+				"question": "هل بريتندو يعمل علي سيمو و المحاكيات؟",
 				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
 			},
 			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
+				"question": "لو اتمنعنت من شبكة بريتندو هل سأستمتر ممتنع من بريتندو؟",
 				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
 			},
 			{
-				"question": "Will Pretendo support the Wii/Switch?",
+				"question": "هل سيدعم بريتندو الوى و السوتش؟",
 				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
 			},
 			{
-				"question": "Will I need hacks to connect?",
+				"question": "هل احتاج ان اهكر حتي اتصل؟",
 				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
 			}
 		]
