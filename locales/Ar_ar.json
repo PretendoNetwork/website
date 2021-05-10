@@ -37,7 +37,7 @@
 			},
 			{
 				"question": "هل هويتي الشخصية علي شبكة نينتندو ستستمر علي بريتندو؟",
-				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+				"answer": "للأسف لا اي الهويات الشخصية لشبكة نينتندو لن تعمل علي بريتندو لان نينتندو لديم المعلومات الشخصية؛ و من الرغم من ان هجرة الهوية الشخصية من شبكة نينتندو إلي بريتندو ممكنة إلا انها لها خطر و لا نريد ان يكون معنا المعلومات  الشخصية"
 			},
 			{
 				"question": "كيف استخدم بريتندو؟",
@@ -45,7 +45,7 @@
 			},
 			{
 				"question": "هل تعرف متي تكون خدمة او خاصية جاهزة؟",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+				"answer": "لا معظم خدمات بريتندو يتم إنشائها مفردة إي شخص قد يعمل علي الميفيرز و شخصاً أخر قد يعمل علي الاصدقاء و الاكونتات فلا نستطيع أن نعرف متي ستكون جاهزة"
 			},
 			{
 				"question": "هل بريتندو يعمل علي سيمو و المحاكيات؟",
@@ -53,7 +53,7 @@
 			},
 			{
 				"question": "لو اتمنعنت من شبكة بريتندو هل سأستمتر ممتنع من بريتندو؟",
-				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+				"answer": "لا جميع المستخدمين لن يكونوا محرمين و لكن يجب ان تمشي وراء القوانين او سيتمامتناعك"
 			},
 			{
 				"question": "هل سيدعم بريتندو الوى و السوتش؟",
@@ -61,7 +61,7 @@
 			},
 			{
 				"question": "هل احتاج ان اهكر حتي اتصل؟",
-				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
+				"answer": "نعم ستحتاج إلي تهكير جهازك لكن علي الوي يو تحتاج فقط إلي الهومبرو لانشر اي هاكسي او موخا اما علي ال3 دي اس سيتم الاعلان في وقتا لاحقاً"
 			}
 		]
 	},
