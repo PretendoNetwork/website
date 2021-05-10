@@ -33,7 +33,7 @@
 		"QAs": [
 			{
 				"question": "ما هو بريتندو؟",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+				"answer": "إن بريتندو مصدر مفتوح بديل عن شبكة نينتندو هدفها إنشاء سيرفرات لعائلة ال3 دي اس و الوي يو هدفنا الحفاظ علي الاجزاء الونلاين و الاستمتاع باقصي حد"
 			},
 			{
 				"question": "هل هويتي الشخصية علي شبكة نينتندو ستستمر علي بريتندو؟",
@@ -41,7 +41,7 @@
 			},
 			{
 				"question": "كيف استخدم بريتندو؟",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"answer": "إن بريتندو ليس جاهز للاستخدام العام ولكن عندما يكون جاهزا ستسطيع ان نسخدمه من خلال الهومبرو باتشر"
 			},
 			{
 				"question": "هل تعرف متي تكون خدمة او خاصية جاهزة؟",
@@ -49,7 +49,7 @@
 			},
 			{
 				"question": "هل بريتندو يعمل علي سيمو و المحاكيات؟",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
+				"answer": "إن بريتندو مصمم لل3 دي اس و الوي يو؛ و في الوقت الحالي سيمو هو المحاكية الوحيد يدعِم شبكة نينتندو سي مد لا يدعم شبكة بريتندو مباشرا و لكن  ستصتيع استخدامه (حالياً  سيمو لا يدعم شبكة بريتندو)إن بريتندو مصمم لل3 دي اس و الوي يو؛ و في الوقت الحالي سيمو هو المحاكية الوحيد يدعِم شبكة نينتندو سي مد لا يدعم شبكة بريتندو مباشرا و لكن  ستصتيع استخدامه (حالياً  سيمو لا يدعم شبكة بريتندو)"
 			},
 			{
 				"question": "لو اتمنعنت من شبكة بريتندو هل سأستمتر ممتنع من بريتندو؟",
