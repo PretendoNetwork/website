@@ -1,0 +1,10 @@
+{
+	"http": {
+		"port": 80
+	},
+	"trello": {
+		"api_key": "key",
+		"api_token": "token",
+		"board_name": "name"
+	}
+}

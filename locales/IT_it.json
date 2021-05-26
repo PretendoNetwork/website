@@ -1,21 +1,73 @@
 {
 	"nav": {
+		"about": "Info",
 		"faq": "FAQ",
-		"connecting": "Connettersi"
+		"credits": "Riconoscimenti",
+		"progress": "Progresso"
 	},
-	"home": {
-		"header": {
-			"text": "Un rimpiazzo open source del servizio Nintendo Network"
+	"hero": {
+		"subtitle": "Server di gioco",
+		"title": "Ricreati",
+		"text": "Pretendo è un'alternativa gratuita e open source ai server Nintendo per 3DS e Wii U, permettendo connettività online per entrambe, anche dopo la terminazione dei server originali",
+		"buttons": {
+			"readMore": "Scopri di più"
 		}
 	},
-	"about": {
-		"caption": "Cos'è questo?",
+	"aboutUs": {
 		"title": "Informazioni",
-		"text": "PretendoNetwork è un rimpiazzo open source del servizio Nintendo Network che punta a costruire server custom per le famiglie di console WiiU e 3DS. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai loro utenti di continuare a giocare ai loro giochi preferiti per WiiU e 3DS al meglio."
+		"paragraphs": [
+			"Pretendo è un progetto open source che si dedica a ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
+			"Dato che i nostri server saranno gratuiti e open source, essi potranno esistere anche molto dopo l'inevitabile chiusura di Nintendo Network."
+		]
+	},
+	"progress": {
+		"title": "Progresso",
+		"paragraphs": [
+			"Correntemente, stiamo lavorando su Miiverse, insieme al nostro server per gli account e alla sua integrazione con i servizi.",
+			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e desideriamo continuare a lavorare su altri giochi quando possibile."
+		]
+	},
+	"faq": {
+		"title": "Domande frequenti (FAQ)",
+		"text": "Ecco alcune domande che ci vengono poste frequentemente.",
+		"QAs": [
+			{
+				"question": "Cos'è Pretendo?",
+				"answer": "Pretendo è un progetto open source che si dedica a ricreare Nintendo Network per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai giocatori di continuare a divertirsi con i loro giochi preferiti per Wii U e 3DS al massimo della loro capacità."
+			},
+			{
+				"question": "Potrò continuare ad utilizzare i miei NNID su Pretendo?",
+				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo, poiché solo Nintendo è in possesso dei dati del tuo utente; mentre una migrazione da-NNID-a-PNID sarebbe teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che non vorremmo avere."
+			},
+			{
+				"question": "Come si usa Pretendo?",
+				"answer": "Pretendo non è ancora pronto per l'uso pubblico. Quando sarà pronto, però, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
+			},
+			{
+				"question": "Sapete quando <funzionalità/servizio> sarà pronta/o?",
+				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo sapere quanto tempo manca al completamento."
+			},
+			{
+				"question": "Pretendo funziona su Cemu/emulatori?",
+				"answer": "Pretendo è sviluppato con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Correntemente Pretendo non supporta Cemu."
+			},
+			{
+				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
+				"answer": "Non avremo accesso ai ban di Nintendo Network, quindi quegli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio, che se non verranno seguite potranno portare a un ban."
+			},
+			{
+				"question": "Pretendo supporterà la Wii/Switch?",
+				"answer": "Esistono già server custom per Wii U forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Correntemente non supporteremo la Switch poiché il suo servizio online è a pagamento ed è completamente diverso da Nintendo Network."
+			},
+			{
+				"question": "Avrò bisogno di hack per connettermi?",
+				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; comunque, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit per browser). Informazioni per connettersi su 3DS saranno disponibili in futuro."
+			}
+		]
 	},
 	"credits": {
-		"caption": "Le persone responsabili",
-		"title": "Riconoscimenti",
+		"title": "Il team",
+		"text": "Incontra il team dietro al progetto",
 		"people": [
 			{
 				"name": "Jonathan Barrow (RedDucks)",
@@ -31,25 +83,25 @@
 			},
 			{
 				"name": "superwhiskers",
-				"caption": "Sviluppo della libreria crunch",
+				"caption": "Sviluppo libreria crunch",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Ricerca su console e su altri sistemi",
+				"caption": "Ricerca su console e altri sistemi",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Installer Network e ricerca su console",
-				"picture": "https://github.com/NexoDevelopment.png",
-				"github": "https://github.com/NexoDevelopment"
+				"caption": "Installer della rete e ricerca su console",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Sviluppo web e iniziale ricerca su eShop",
+				"caption": "Sviluppo web e ricerca iniziale su eShop",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			},
@@ -66,59 +118,22 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 e ricerca su 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
 				"name": "Kinnay",
-				"caption": "Niente di tutto questo sarebbe stato possibile senza la ricerca e l'aiuto di Kinnay su PRUDP e nex",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=2048",
+				"special": "Ringraziamenti speciali",
+				"caption": "Ricerca su strutture dati Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			}
 		]
 	},
-	"footer": {
-		"text": "Copyright 2020 PretendoNetwork - Sito sviluppato e progettato da mrjvs, Ben e Jip"
-	},
-	"connecting": {
-		"title": "Connettersi",
-		"text": "PretendoNetwork non è ancora utilizzabile dal pubblico. Quando la rete diventerà pubblica, qui ci saranno le istruzioni per connettersi alla rete"
-	},
-	"cemu": {
-		"title": "Cemu",
-		"text": "PretendoNetwork non è ancora utilizzabile dal pubblico. Quando la rete diventerà pubblica, qui ci saranno le istruzioni per connettersi alla rete usando Cemu"
-	},
-	"faq": {
-		"title": "Domande frequenti (FAQ)",
-		"qna": [
-			{
-				"question": "Cos'è PretendoNetwork?",
-				"answer": "PretendoNetwork è un rimpiazzo open source del servizio Nintendo Network che punta a costruire server custom per le famiglie di console WiiU e 3DS. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai loro utenti di continuare a giocare ai loro giochi preferiti per WiiU e 3DS al meglio"
-			},
-			{
-				"question": "Come si usa PretendoNetwork?",
-				"answer": "PretendoNetwork non è ancora pronta per essere utilizzata dal pubblico. Quando lo sarà, per usare PretendoNetwork basterà eseguire il nostro patcher tramite homebrew sulla tua console"
-			},
-			{
-				"question": "Quando sarà pronto XYZ?",
-				"answer": "Non sappiamo esattamente quando una funzionalità o l'intero progetto saranno pronti. La rete è composta da diverse parti, e gli aggionamenti vengono rilasciati non appena sono pronti (ad esempio gli aggiornamenti al server degli account sono (quasi sempre) rilasciati indipendentemente dalle altre parti della rete, come ad esempio il server degli amici). Per questo non possiamo dare una data per la quale PretendoNetwork sarà pronta"
-			},
-			{
-				"question": "PretendoNetwork funziona su Cemu/emulatori?",
-				"answer": "PretendoNetwork è stata creata per la WiiU e (prima o poi) per la 3DS. Per ora l'unico emulatore capace di connettersi online è Cemu. Ufficialmente, Cemu non supporta i server custom, ma sarà comunque possibile utilizzare PretendoNetwork con Cemu<br>Guarda la pagina <a href=\"/cemu\">Cemu</a> per maggiori informazioni"
-			},
-			{
-				"question": "I miei NNID funzioneranno su PretendoNetwork?",
-				"answer": "Sfortunatamente, no. Solo Nintendo ha accesso ai dati relativi ai tuoi NNID esistenti. In teoria, una migrazione da NNID a PNID potrebbe essere possibile, ma sarebbe un processo lento e lungo che richiederebbe informazioni personali dell'utente"
-			},
-			{
-				"question": "Se il mio account/la mia console è stato bannato su Nintendo Network, rimarrò bannato anche su PretendoNetwork?",
-				"answer": "I ban dell'account/console esistono solo sui server. Questo significa che un ban esistente non si rifletterà su PretendoNetwork. PretendoNetwork si riserva comunque il diritto di bannare dalla rete se ritenuto necessario"
-			},
-			{
-				"question": "PretendoNetwork supporterà la Wii/Switch?",
-				"answer": "La Wii ha già server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch, poiché non solo essa è una piattaforma completamente diversa con una rete online diversa, ma Switch Online è un servizio a pagamento"
-			},
-			{
-				"question": "È necessario utilizzare Haxchi per eseguire il patcher?",
-				"answer": "No. Per eseguire il patcher serve solo un modo per accedere all'Homebrew Launcher, non importa se tramite un exploit nel browser, Haxchi o Coldboot Haxchi"
-			}
-		]
+	"progressPage": {
+		"title": "Il nostro progresso",
+		"description": "Controlla il progresso del progetto e gli obiettivi! (Aggiornato circa ogni ora, non riflette TUTTI gli obiettivi e il progresso del progetto)"
 	}
 }
