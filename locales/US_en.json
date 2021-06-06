@@ -70,10 +70,10 @@
 		"text": "Meet the team behind the project",
 		"people": [
 			{
-				"name": "Jonathan Barrow (RedDucks)",
+				"name": "Jonathan Barrow (jonbarrow)",
 				"caption": "Project owner and lead developer",
-				"picture": "https://github.com/redduckss.png",
-				"github": "https://github.com/RedDuckss"
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
