@@ -7,8 +7,8 @@
 	},
 	"hero": {
 		"subtitle": "Oyun sunucuları",
-		"title": "Yeniden oluşturuldu",
-		"text": "Pretendo, Nintendo'nun Wii U ve 3DS konsollarının sunucuları yerine kullanılabilen asıl sunucular kapatılmış olmasına rağmen çevrimiçi bağlantıya olanak sağlayan ücretsiz açık kaynaklı bir yazılımdır.",
+		"title": "Yenilendi",
+		"text": "Pretendo, Nintendo'nun Wii U ve 3DS konsollarının sunucuları yerine kullanılabilmesi için tasarlanmış, asıl sunucular kapatılmış olmasına rağmen çevrimiçi bağlantıya olanak sağlayan ücretsiz açık kaynaklı bir yazılımdır.",
 		"buttons": {
 			"readMore": "Daha fazlasını oku"
 		}
@@ -28,12 +28,12 @@
 		]
 	},
 	"faq": {
-		"title": "Frequently Asked Questions",
-		"text": "Here are some common questions we're asked for easy information.",
+		"title": "Sıkça Sorulan Sorular",
+		"text": "Temel bilgilendirme için bize sorulan bazı genel sorular ve cevapları:",
 		"QAs": [
 			{
-				"question": "What is Pretendo?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+				"question": "Pretendo nedir?",
+				"answer": "Pretendo, Wii U ve 3DS konsolları için özel sunucu oluşturmayı amaç edinen Nintendo Network replasmanıdır. Hedefimiz, oyuncuların favori Wii U ve 3DS oyunlarını tam kapasitede oynayabilmelerini sağlamak adına konsolların çevrimiçi işlevlerini temin etmektir."
 			},
 			{
 				"question": "Will my existing NNIDs work on Pretendo?",
@@ -66,74 +66,74 @@
 		]
 	},
 	"credits": {
-		"title": "The team",
-		"text": "Meet the team behind the project",
+		"title": "Ekip",
+		"text": "Projenin arkasındaki ekiple tanışın",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Project owner and lead developer",
+				"caption": "Proje sahibi ve rehber geliştirici",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse research and development",
+				"caption": "Miiverse üzerine araştırma ve geliştirme",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "superwhiskers",
-				"caption": "crunch library development",
+				"caption": "Sıkıştırılmış kütüphane geliştirilme",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Console and other system research",
+				"caption": "Konsol ve diğer sistem üzerine araştırma",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Network installer and console research",
+				"caption": "Ağ yükleyicisi and konsol üzerine araştırma",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Web development and early eShop research",
+				"caption": "Web sayfası geliştirme ve başlarda eShop üzerine araştırma",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			},
 			{
 				"name": "Benjamin Moss (kxpler442b)",
-				"caption": "Web development",
+				"caption": "Web sayfası geliştirme",
 				"picture": "https://github.com/kxpler442b.png",
 				"github": "https://github.com/kxpler442b"
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development",
+				"caption": "Web sayfası geliştirme",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 and 3DS research",
+				"caption": "Mario Kart 7 ve 3DS üzerine araştırma",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "Kinnay",
-				"special": "Special thanks",
-				"caption": "Research on Nintendo datastructures",
+				"special": "Özel teşekkür",
+				"caption": "Nintendo'nun veri yapıları üzerine araştırma",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			}
 		]
 	},
 	"progressPage": {
-		"title": "Our progress",
-		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+		"title": "İlerlememiz",
+		"description": "Proje ilerlemesini ve hedeflerini kontrol edin! (Her saat başı güncellenir. TÜM proje hedeflerini veya ilerlemesini yansıtmaz)"
 	}
 }
