@@ -1,30 +1,30 @@
 {
 	"nav": {
-		"about": "About",
-		"faq": "FAQ",
-		"credits": "Credits",
-		"progress": "Progress"
+		"about": "Hakkında",
+		"faq": "SSS",
+		"credits": "Katkıda bulunanlar",
+		"progress": "İlerleme"
 	},
 	"hero": {
-		"subtitle": "Game servers",
-		"title": "Recreated",
-		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all, even after the original servers are discontinued",
+		"subtitle": "Oyun sunucuları",
+		"title": "Yeniden oluşturuldu",
+		"text": "Pretendo, Nintendo'nun Wii U ve 3DS konsollarının sunucuları yerine kullanılabilen asıl sunucular kapatılmış olmasına rağmen çevrimiçi bağlantıya olanak sağlayan ücretsiz açık kaynaklı bir yazılımdır.",
 		"buttons": {
-			"readMore": "Read more"
+			"readMore": "Daha fazlasını oku"
 		}
 	},
 	"aboutUs": {
-		"title": "About us",
+		"title": "Hakkımızda",
 		"paragraphs": [
-			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
-			"As our services would be both free and open source, they can exist long after the inevitable closure of Nintendo Network."
+			"Pretendo, Wii U ve 3DS için yapılmış Nintendo Network'ü temiz oda tekniğini kullanarak yeniden oluşturmayı hedefleyen açık kaynaklı bir projedir.",
+			"Hem ücretsiz hem de açık kaynaklı olan hizmetlerimiz, Nintendo Network'ün kaçınılmaz kapanışından sonra uzun bir süre çalışabilecektir."
 		]
 	},
 	"progress": {
-		"title": "Progress",
+		"title": "İlerleme",
 		"paragraphs": [
-			"Currently, we are working on Miiverse, along with our account servers and its integration with the services.",
-			"For 3DS, we are also working on Mario Kart 7, with a desire to continue working on other games when possible."
+			"Şu anda, hesap sunucularımız ve hizmetlerle entegrason ile birlikte Miiverse üzerinde çalışıyoruz.",
+			"3DS için ise, mümkün olduğu vakit diğer oyunlar üzerinde çalışmaya devam etme arzusuyla Mario Kart 7 üzerinde çalışıyoruz."
 		]
 	},
 	"faq": {
