@@ -29,39 +29,39 @@
 	},
 	"faq": {
 		"title": "Sıkça Sorulan Sorular",
-		"text": "Temel bilgilendirme için bize sorulan bazı genel sorular ve cevapları:",
+		"text": "Bize sorulan bazı genel sorular ve cevapları:",
 		"QAs": [
 			{
 				"question": "Pretendo nedir?",
-				"answer": "Pretendo, Wii U ve 3DS konsolları için özel sunucu oluşturmayı amaç edinen Nintendo Network replasmanıdır. Hedefimiz, oyuncuların favori Wii U ve 3DS oyunlarını tam kapasitede oynayabilmelerini sağlamak adına konsolların çevrimiçi işlevlerini temin etmektir."
+				"answer": "Pretendo, Wii U ve 3DS konsolları için özel sunucu oluşturmayı amaç edinen Nintendo Network replasmanıdır. Hedefimiz, oyuncuların favori Wii U ve 3DS oyunlarını tam kapasitede oynayabilmeleri için konsolların çevrimiçi işlevlerini temin etmektir."
 			},
 			{
-				"question": "Will my existing NNIDs work on Pretendo?",
-				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+				"question": "Varolan Nintendo Network Kimliklerim Pretendo'da çalışacak mı?",
+				"answer": "Ne yazık ki, hayır. Varolan Nintendo Kimlikleri ,kullanıcı verileriniz sadece Nintendo sahip olduğundan, Pretendo'da çalışmaz. Tabi, Nintendo Network'ten Prentendo Network'e kimlik intikali teorik olarak mümkündür. Ancak bu işlemin risk ihtimali bulunmakta; ve işlem için sahip olmak istemediğimiz hassas kullanıcı verileri gerekmektedir."
 			},
 			{
-				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"question": "Pretendo'yu nasıl kullanırım?",
+				"answer": "Pretendo, şuanlık topluluk kullanımı için uygun bir vaziyette değil. Bununla birlikte, hazır olduğunda Pretendo'yu sadece konsolunuzdaki Homebrew Yamamızı çalıştırarak kullanabileceksiniz."
 			},
 			{
-				"question": "Do you know when <feature/service> will be ready?",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+				"question": "<Özel aksam/Hizmet> işlevinin ne zaman hazır olacağını biliyor musunuz?",
+				"answer": "Maalesef. Pek çok Pretendo aksamı/hizmeti bağımsız olarak geliştirilmekte (örneğin, Miiverse üzerinde bir geliştirici çalışırken, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışmaktadır.). Bu yüzden, bu işin ne kadar süreceği hakkında herhangi bir tahmin yapamıyoruz."
 			},
 			{
-				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
+				"question": "Pretendo Cemu/emülatörlerde çalışır mı??",
+				"answer": "Pretendo tasarımında, Wii U ve 3DS donanımını esas alır. Konsollara Nintendo Network desteği sağlayan tek emülatör de Cemu'dur. Cemu resmî olarak özel suncuları desteklemiyor ancak yine de Pretendo'yu Cemu üzerinden kullanabilmek mümkün olmalı.<br>Pretendo şu anlık Cemu'yu desteklemiyor."
 			},
 			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+				"question": "Nintendo Network'ten banlandıysam, Pretendo'da da banlı kalır mıyım?",
+				"answer": "Nintendo Network'ün banlarına erişemediğimizden dolayı herhangi bir kullanıcı banlı olmayacak. Ancak, hizmetimiz kullanılırken uyulması gerek kurallar olacak ve uyulmadığı takdirde banlanmalar meydana gelebilecektir."
 			},
 			{
-				"question": "Will Pretendo support the Wii/Switch?",
-				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
+				"question": "Pretendo Wii/Switch'i destekleyecek mi?",
+				"answer": "Wii'nin hâlihazırda <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları bulunmaktadır. Switch için ise ,hem sunucular çalıştığından hem de Nintendo Network'ten tamamen farklı olduğundan dolayı, şimdilik üzerine uğraşmayı düşünmüyoruz."
 			},
 			{
-				"question": "Will I need hacks to connect?",
-				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
+				"question": "Bağlanmak için hacke ihtiyacım var mı?",
+				"answer": "Evet, cihazınızı hacklemeniz gerekmektedir. Ancak, Wii U'nuzda sadece Homebrew Launcher'a erişebilmeniz gerekmektedir (yani Haxchi, Coldboot Haxchi ve web tarayıcı exploiti gerekmektedir). 3DS'in nasıl bağlanacağı ile ilgili bilgilendirme ileriki tarihlerde verilecektir."
 			}
 		]
 	},
@@ -83,7 +83,7 @@
 			},
 			{
 				"name": "superwhiskers",
-				"caption": "Sıkıştırılmış kütüphane geliştirilme",
+				"caption": "Sıkıştırılmış kütüphane geliştirme",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
