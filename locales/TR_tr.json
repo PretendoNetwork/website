@@ -37,7 +37,7 @@
 			},
 			{
 				"question": "Varolan Nintendo Network Kimliklerim Pretendo'da çalışacak mı?",
-				"answer": "Ne yazık ki, hayır. Varolan Nintendo Kimlikleri ,kullanıcı verileriniz sadece Nintendo sahip olduğundan, Pretendo'da çalışmaz. Tabi, Nintendo Network'ten Prentendo Network'e kimlik intikali teorik olarak mümkündür. Ancak bu işlemin risk ihtimali bulunmakta; ve işlem için sahip olmak istemediğimiz hassas kullanıcı verileri gerekmektedir."
+				"answer": "Ne yazık ki, hayır. Varolan Nintendo Kimlikleri, kullanıcı verilerinize sadece Nintendo sahip olduğundan, Pretendo'da çalışmaz. Tabi, Nintendo Network'ten Prentendo Network'e kimlik intikali teorik olarak mümkündür. Ancak bu işlemin risk ihtimali bulunmakta; ve işlem için sahip olmak istemediğimiz hassas kullanıcı verileri gerekmektedir."
 			},
 			{
 				"question": "Pretendo'yu nasıl kullanırım?",
@@ -45,7 +45,7 @@
 			},
 			{
 				"question": "<Özel aksam/Hizmet> işlevinin ne zaman hazır olacağını biliyor musunuz?",
-				"answer": "Maalesef. Pek çok Pretendo aksamı/hizmeti bağımsız olarak geliştirilmekte (örneğin, Miiverse üzerinde bir geliştirici çalışırken, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışmaktadır.). Bu yüzden, bu işin ne kadar süreceği hakkında herhangi bir tahmin yapamıyoruz."
+				"answer": "Maalesef. Pek çok Pretendo aksamı/hizmeti bağımsız olarak geliştirilmekte (örneğin, Miiverse üzerinde bir geliştirici çalışırken, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışmaktadır). Bu yüzden, bu işin ne kadar süreceği hakkında herhangi bir tahmin yapamıyoruz."
 			},
 			{
 				"question": "Pretendo Cemu/emülatörlerde çalışır mı??",
@@ -53,15 +53,15 @@
 			},
 			{
 				"question": "Nintendo Network'ten banlandıysam, Pretendo'da da banlı kalır mıyım?",
-				"answer": "Nintendo Network'ün banlarına erişemediğimizden dolayı herhangi bir kullanıcı banlı olmayacak. Ancak, hizmetimiz kullanılırken uyulması gerek kurallar olacak ve uyulmadığı takdirde banlanmalar meydana gelebilecektir."
+				"answer": "Nintendo Network'ün banlarına erişemediğimizden dolayı herhangi bir kullanıcı banlı olmayacak. Ancak, hizmetimiz kullanılırken uyulması gereken kurallar olacak ve uyulmadığı takdirde banlanmalar meydana gelebilecektir."
 			},
 			{
 				"question": "Pretendo Wii/Switch'i destekleyecek mi?",
-				"answer": "Wii'nin hâlihazırda <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları bulunmaktadır. Switch için ise ,hem sunucular çalıştığından hem de Nintendo Network'ten tamamen farklı olduğundan dolayı, şimdilik üzerine uğraşmayı düşünmüyoruz."
+				"answer": "Wii'nin hâlihazırda <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları bulunmaktadır. Switch için ise, hem sunucular çalıştığından hem de sistemi Nintendo Network'ten tamamen farklı olduğundan dolayı, şimdilik üzerine uğraşmayı düşünmüyoruz."
 			},
 			{
 				"question": "Bağlanmak için hacke ihtiyacım var mı?",
-				"answer": "Evet, cihazınızı hacklemeniz gerekmektedir. Ancak, Wii U'nuzda sadece Homebrew Launcher'a erişebilmeniz gerekmektedir (yani Haxchi, Coldboot Haxchi ve web tarayıcı exploiti gerekmektedir). 3DS'in nasıl bağlanacağı ile ilgili bilgilendirme ileriki tarihlerde verilecektir."
+				"answer": "Evet, cihazınızı hacklemeniz gerekmektedir. Ancak, Wii U'nuzda sadece Homebrew Launcher'a erişebilmeniz gerekmektedir (yani Haxchi, Coldboot Haxchi veya web tarayıcı exploiti gerekmektedir). 3DS'in nasıl bağlanacağı ile ilgili bilgilendirme ileriki tarihlerde verilecektir."
 			}
 		]
 	},
