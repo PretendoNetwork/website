@@ -417,10 +417,11 @@ section.team {
 .progress-title a.github {
 	margin-top: 10px;
 	color: #6D73A2;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	opacity: .75;
 	text-decoration: none;
+	transition: color 50ms ease-in-out;
 }
 .progress-title a.github:focus, .progress-title a.github:hover, .progress-title a.github:visited {
 	color: #6D73A2;
@@ -435,6 +436,9 @@ section.team {
 }
 .feature-list-wrapper.purple .progress-title a.github, .feature-list-wrapper.purple .progress-title a.github:focus, .feature-list-wrapper.purple .progress-title a.github:hover, .feature-list-wrapper.purple .progress-title a.github:visited {
 	color: #c69cf9;
+}
+.feature-list-wrapper .core > .progress-title a.github:hover {
+	color: white;
 }
 
 .feature-list-wrapper canvas {

@@ -41,7 +41,7 @@ async function updateTrelloCache() {
 		};
 
 		meta.title = board.name;
-		meta.id = board.id;
+		meta.id = board.shortLink;
 
 		const lists = await trello.getListsOnBoard(board.id);
 		const cards = await trello.getCardsOnBoard(board.id);
