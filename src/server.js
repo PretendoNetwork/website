@@ -3,6 +3,8 @@ process.title = 'Pretendo - Website';
 const express = require('express');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
+const expressLocale = require('express-locale');
+const cookieParser = require('cookie-parser')
 const logger = require('./logger');
 const util = require('./util');
 const config = require('../config.json');
@@ -22,6 +24,27 @@ const routers = {
 	faq: require('./routers/faq'),
 	progress: require('./routers/progress')
 };
+
+app.use(cookieParser())
+
+// Locale express middleware setup
+app.use(expressLocale({
+	"priority": ["cookie", "accept-language", "map", "default"],
+	cookie: {name: 'preferredLocale'},
+	// fallbacks for browsers that don't send a region code, but only a language
+	map: {
+		de: 'de-DE',
+		es: 'es-ES',
+		fr: 'fr-FR',
+		it: 'it-IT',
+		ko: 'ko-KR',
+		ru: 'ru-RU',
+	},
+	"default": "en-US"
+}))
+
+
+
 
 app.use('/', routers.home);
 app.use('/faq', routers.faq);

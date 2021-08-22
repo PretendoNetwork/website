@@ -80,6 +80,9 @@ header nav a {
 	text-decoration: none;
 }
 
+.locale-dropdown {
+	margin-left: auto;
+}
 
 /* Misc */
 .purple-circle {
