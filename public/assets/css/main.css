@@ -463,7 +463,7 @@ section.team {
 }
 .feature {
 	display: grid;
-	align-items: center;
+	align-items: flex-start;
 	grid-template-columns: auto 1fr;
 	grid-gap: 10px;
 }
