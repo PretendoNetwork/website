@@ -39,6 +39,7 @@ app.use(expressLocale({
 		it: 'it-IT',
 		ko: 'ko-KR',
 		ru: 'ru-RU',
+		tr: 'tr-TR'
 	},
 	"default": "en-US"
 }))
