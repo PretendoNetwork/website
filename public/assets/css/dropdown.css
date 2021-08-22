@@ -36,22 +36,34 @@
 }
 
 .selected-locale::after {
-  content: url("/assets/icons/down-arrow.svg");
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url("/assets/icons/down-arrow.svg");
   position: absolute;
   right: 15px;
   top: 50%;
   transition: transform 150ms;
   transform: translateY(-50%);
+  background-size: contain;
+  background-position: center;
 }
 
 .select-box .option .item {
   color: #afb5dd;
 }
 
+.select-box .lang {
+  width: 1.3rem;
+  height: 1rem;
+  margin-right: .2rem;
+  display: inline-block;
+}
+
 .select-box .options-container.active {
   max-height: 240px;
   opacity: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .select-box .options-container.active + .selected-locale::after {
