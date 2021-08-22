@@ -3,6 +3,7 @@
   width: 200px;
   flex-direction: column;
   position: relative;
+  user-select: none;
 }
 
 .select-box > * {
