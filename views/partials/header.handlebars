@@ -31,10 +31,38 @@
 		<a href="/progress" class="keep-on-mobile">{{ locale.nav.progress }}</a>
 	</nav>
 
-	<select id="locale-dropdown" name="locale-dropdown" class="locale-dropdown" onchange="localeDropdownHandler()">
-		<option value="en-US">🇺🇸 English</option>
-		<option value="it-IT">🇮🇹 Italiano</option>
-		<option value="ru-RU">🇷🇺 Pусский</option>
-	</select>
+	<div class="select-box locale-dropdown" data-dropdown>
+		<div class="options-container">
+			<div class="option">
+				<input type="radio" class="radio" id="en-US" name="category" />
+				<label for="en-US">
+					<div class="item">🇺🇸 English</div>
+				</label>
+			</div>
+
+			<div class="option">
+				<input type="radio" class="radio" id="es-ES" name="category" />
+				<label for="es-ES">
+					<div class="item">🇪🇸 Español</div>
+				</label>
+			</div>
+
+			<div class="option">
+				<input type="radio" class="radio" id="it-IT" name="category" />
+				<label for="it-IT">
+					<div class="item">🇮🇹 Italiano</div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ru-RU" name="category" />
+				<label for="ru-RU">
+					<div class="item">🇷🇺 Pусский</div>
+				</label>
+			</div>
+		</div>
+		<div class="selected-locale">
+			<div class="item">English</div>
+		</div>
+	</div>
 
 </header>
