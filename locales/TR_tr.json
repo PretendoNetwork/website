@@ -1,0 +1,139 @@
+{
+	"nav": {
+		"about": "Hakkımızda",
+		"faq": "SSS",
+		"credits": "Katkıda Bulunanlar",
+		"progress": "İlerleme"
+	},
+	"hero": {
+		"subtitle": "Oyun sunucuları",
+		"title": "Yenilendi",
+		"text": "Pretendo, Nintendo'nun Wii U ve 3DS konsollarının sunucuları yerine kullanılabilmesi için tasarlanmış, asıl sunucular kapatılmış olmasına rağmen çevrimiçi bağlantıya olanak sağlayan ücretsiz açık kaynaklı bir yazılımdır.",
+		"buttons": {
+			"readMore": "Daha fazlasını oku"
+		}
+	},
+	"aboutUs": {
+		"title": "Hakkımızda",
+		"paragraphs": [
+			"Pretendo, Wii U ve 3DS için yapılmış Nintendo Network'ü temiz oda tekniğini kullanarak yeniden oluşturmayı hedefleyen açık kaynaklı bir projedir.",
+			"Hem ücretsiz hem de açık kaynaklı olan hizmetlerimiz, Nintendo Network'ün kaçınılmaz kapanışından sonra uzun bir süre çalışabilecektir."
+		]
+	},
+	"progress": {
+		"title": "İlerleme",
+		"paragraphs": [
+			"Şu anda, hesap sunucularımız ve hizmetlerle entegrason ile birlikte Miiverse üzerinde çalışıyoruz.",
+			"3DS için ise, mümkün olduğu vakit diğer oyunlar üzerinde çalışmaya devam etme arzusuyla Mario Kart 7 üzerinde çalışıyoruz."
+		]
+	},
+	"faq": {
+		"title": "Sıkça Sorulan Sorular",
+		"text": "Bize sorulan bazı genel sorular ve cevapları:",
+		"QAs": [
+			{
+				"question": "Pretendo nedir?",
+				"answer": "Pretendo, Wii U ve 3DS konsolları için özel sunucu oluşturmayı amaç edinen Nintendo Network replasmanıdır. Hedefimiz, oyuncuların favori Wii U ve 3DS oyunlarını tam kapasitede oynayabilmeleri için konsolların çevrimiçi işlevlerini temin etmektir."
+			},
+			{
+				"question": "Varolan Nintendo Network Kimliklerim Pretendo'da çalışacak mı?",
+				"answer": "Ne yazık ki, hayır. Varolan Nintendo Kimlikleri, kullanıcı verilerinize sadece Nintendo sahip olduğundan, Pretendo'da çalışmaz. Tabi, Nintendo Network'ten Prentendo Network'e kimlik intikali teorik olarak mümkündür. Ancak bu işlemin risk ihtimali bulunmakta; ve işlem için sahip olmak istemediğimiz hassas kullanıcı verileri gerekmektedir."
+			},
+			{
+				"question": "Pretendo'yu nasıl kullanırım?",
+				"answer": "Pretendo, şuanlık topluluk kullanımı için uygun bir vaziyette değil. Bununla birlikte, hazır olduğunda Pretendo'yu sadece konsolunuzdaki Homebrew Yamamızı çalıştırarak kullanabileceksiniz."
+			},
+			{
+				"question": "<Özel aksam/Hizmet> işlevinin ne zaman hazır olacağını biliyor musunuz?",
+				"answer": "Maalesef. Pek çok Pretendo aksamı/hizmeti bağımsız olarak geliştirilmekte (örneğin, Miiverse üzerinde bir geliştirici çalışırken, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışmaktadır). Bu yüzden, bu işin ne kadar süreceği hakkında herhangi bir tahmin yapamıyoruz."
+			},
+			{
+				"question": "Pretendo Cemu/emülatörlerde çalışır mı??",
+				"answer": "Pretendo tasarımında, Wii U ve 3DS donanımını esas alır. Konsollara Nintendo Network desteği sağlayan tek emülatör de Cemu'dur. Cemu resmî olarak özel suncuları desteklemiyor ancak yine de Pretendo'yu Cemu üzerinden kullanabilmek mümkün olmalı.<br>Pretendo şu anlık Cemu'yu desteklemiyor."
+			},
+			{
+				"question": "Nintendo Network'ten banlandıysam, Pretendo'da da banlı kalır mıyım?",
+				"answer": "Nintendo Network'ün banlarına erişemediğimizden dolayı herhangi bir kullanıcı banlı olmayacak. Ancak, hizmetimiz kullanılırken uyulması gereken kurallar olacak ve uyulmadığı takdirde banlanmalar meydana gelebilecektir."
+			},
+			{
+				"question": "Pretendo Wii/Switch'i destekleyecek mi?",
+				"answer": "Wii'nin hâlihazırda <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları bulunmaktadır. Switch için ise, hem sunucular çalıştığından hem de sistemi Nintendo Network'ten tamamen farklı olduğundan dolayı, şimdilik üzerine uğraşmayı düşünmüyoruz."
+			},
+			{
+				"question": "Bağlanmak için hacke ihtiyacım var mı?",
+				"answer": "Evet, cihazınızı hacklemeniz gerekmektedir. Ancak, Wii U'nuzda sadece Homebrew Launcher'a erişebilmeniz gerekmektedir (yani Haxchi, Coldboot Haxchi veya web tarayıcı exploiti gerekmektedir). 3DS'in nasıl bağlanacağı ile ilgili bilgilendirme ileriki tarihlerde verilecektir."
+			}
+		]
+	},
+	"credits": {
+		"title": "Ekip",
+		"text": "Projenin arkasındaki ekiple tanışın",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Proje sahibi ve rehber geliştirici",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse üzerine araştırma ve geliştirme",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Sıkıştırılmış kütüphane geliştirme",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Konsol ve diğer sistem üzerine araştırma",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Ağ yükleyicisi ve konsol üzerine araştırma",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Web sayfası geliştirme ve başlarda eShop üzerine araştırma",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "Benjamin Moss (kxpler442b)",
+				"caption": "Web sayfası geliştirme",
+				"picture": "https://github.com/kxpler442b.png",
+				"github": "https://github.com/kxpler442b"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Web sayfası geliştirme",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 ve 3DS üzerine araştırma",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Özel teşekkür",
+				"caption": "Nintendo'nun veri yapıları üzerine araştırma",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"progressPage": {
+		"title": "İlerlememiz",
+		"description": "Proje ilerlemesini ve hedeflerini kontrol edin! (Her saat başı güncellenir. TÜM proje hedeflerini veya ilerlemesini yansıtmaz)"
+	}
+}
