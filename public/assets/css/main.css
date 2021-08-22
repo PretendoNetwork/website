@@ -541,6 +541,11 @@ footer {
 		display: none;
 	}
 
+	.locale-dropdown {
+		/* You don't really need this either on mobile IMHO */
+		display: none;
+	}
+
 	.hero-meta {
 		margin-top: 100px;
 	}
