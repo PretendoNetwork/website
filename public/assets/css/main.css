@@ -220,7 +220,7 @@ header nav a {
 	background: #333960;
 }
 .button.secondary.discord svg {
-	margin-bottom: -5px;
+	margin-bottom: -1px;
 }
 .do-button-margin {
 	margin-left: 15px;
@@ -435,7 +435,7 @@ section.team {
 /* Progress: Feature list */
 .feature-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 	grid-gap: 10px;
 }
 .feature {

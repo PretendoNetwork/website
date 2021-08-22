@@ -70,10 +70,10 @@
 		"text": "Incontra il team dietro al progetto",
 		"people": [
 			{
-				"name": "Jonathan Barrow (RedDucks)",
+				"name": "Jonathan Barrow (jonbarrow)",
 				"caption": "Proprietario del progetto e sviluppatore principale",
-				"picture": "https://github.com/redduckss.png",
-				"github": "https://github.com/RedDuckss"
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
@@ -97,7 +97,7 @@
 				"name": "Rambo6Glaz",
 				"caption": "Installer della rete e ricerca su console",
 				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/NexoDevelopment"
+				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "mrjvs",
