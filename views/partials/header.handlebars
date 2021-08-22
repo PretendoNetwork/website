@@ -30,4 +30,45 @@
 		<a href="/#credits">{{ locale.nav.credits }}</a>
 		<a href="/progress" class="keep-on-mobile">{{ locale.nav.progress }}</a>
 	</nav>
+
+	<div class="select-box locale-dropdown" data-dropdown>
+		<div class="options-container">
+			<div class="option">
+				<input type="radio" class="radio" id="en-US" name="category" />
+				<label for="en-US">
+					<div class="item"><span class="lang">🇺🇸</span>English</div>
+				</label>
+			</div>
+
+			<div class="option">
+				<input type="radio" class="radio" id="es-ES" name="category" />
+				<label for="es-ES">
+					<div class="item"><span class="lang">🇪🇸</span>Español</div>
+				</label>
+			</div>
+
+			<div class="option">
+				<input type="radio" class="radio" id="it-IT" name="category" />
+				<label for="it-IT">
+					<div class="item"><span class="lang">🇮🇹</span>Italiano</div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ru-RU" name="category" />
+				<label for="ru-RU">
+					<div class="item"><span class="lang">🇷🇺</span>Pусский</div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="tr-TR" name="category" />
+				<label for="tr-TR">
+					<div class="item"><span class="lang">🇹🇷</span>Türkçe</div>
+				</label>
+			</div>
+		</div>
+		<div class="selected-locale">
+			<div class="item"><span class="lang"></span></div>
+		</div>
+	</div>
+
 </header>

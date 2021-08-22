@@ -4,6 +4,7 @@
 	--text: white;
 	--text-secondary: #A1A8D9;
 	--btn: #673DB6;
+	--btn-secondary: #333960;
 	--theme: var(--btn);
 	--text-secondary-2: #8990C1;
 }
@@ -80,6 +81,10 @@ header nav a {
 	text-decoration: none;
 }
 
+.locale-dropdown {
+	margin-left: auto;
+	z-index: 2;
+}
 
 /* Misc */
 .purple-circle {
@@ -114,7 +119,7 @@ header nav a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-left: -40px;
-	z-index: 3;
+	z-index: 1;
 }
 .light-purple-circle .deco {
 	position: absolute;
@@ -123,6 +128,15 @@ header nav a {
 	transform: translate(-50%, calc(-50% + 70px));
 	z-index: -2;
 }
+
+/* Twemoji */
+
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+ }
 
 /* Title business */
 .sect .title[id] {
@@ -217,7 +231,7 @@ header nav a {
 	background: var(--btn);
 }
 .button.secondary {
-	background: #333960;
+	background: var(--btn-secondary);
 }
 .button.secondary.discord svg {
 	margin-bottom: -1px;
@@ -524,6 +538,11 @@ footer {
 
 	header nav a:not(.keep-on-mobile) {
 		/* You don't really need it on mobile IMO */
+		display: none;
+	}
+
+	.locale-dropdown {
+		/* You don't really need this either on mobile IMHO */
 		display: none;
 	}
 
