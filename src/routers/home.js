@@ -6,14 +6,18 @@ const router = new Router();
 const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
-	const tmpLocale = util.getLocale('US', 'en');
+
+	const reqLocale = request.locale
+	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+	
 	const cache = await getTrelloCache();
 
 	response.render('home', {
 		layout: 'main',
-		locale: tmpLocale,
 		featuredFeatureList: cache.sections[0],
 		boards,
+		locale,
+		localeString: reqLocale.toString(),
 	});
 });
 

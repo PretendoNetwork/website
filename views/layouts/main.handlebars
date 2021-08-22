@@ -15,7 +15,7 @@
 		<meta name="theme-color" content="#673db6">
 		<!-- open graph/embeds -->
 		<meta property="og:title" content="Pretendo Network">
-		<meta property="og:escription" content="Pretendo is a as close as possible recreation of the original Nintendo Network for 3ds and Wiiu. It is an replacement for if the original servers shut down.">
+		<meta property="og:description" content="Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite WiiU and 3DS games to their fullest capacity.">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="http://pretendo.network/">
 		<meta property="og:image" content="http://pretendo.network/assets/og_image.png">
@@ -27,12 +27,19 @@
 		<!-- favicon -->
 		<link rel="shortcut icon" href="/assets/icons/favicon.ico"><title>Pretendo</title>
 		<!-- css files -->
+		<link rel="stylesheet" href="/assets/css/dropdown.css" />
 		<link rel="stylesheet" href="/assets/css/main.css">
-		<!-- favicon -->
-		<link rel="shortcut icon" href="/assets/icons/favicon.ico">
 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+		<!-- Twemoji setup -->
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<script>
+			window.onload = function() {
+				twemoji.parse(document.body, {folder: 'svg', ext: '.svg'});
+			}
+    	</script>
 	</head>
 	<body>
 		<div class="main-body">
@@ -40,5 +47,8 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 		<script src="/assets/js/progress-charts.js"></script>
+		<script src="/assets/js/locale-dropdown-handler.js"></script>
+		<script>setDefaultDropdownLocale("{{localeString}}")</script>
+
 	</body>
 </html>
