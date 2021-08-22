@@ -1,4 +1,4 @@
-const Trello =require("trello-new")
+const Trello =require("trello")
 const Redis = require('ioredis');
 const JSONCache = require('redis-json');
 const config = require('../config.json');
