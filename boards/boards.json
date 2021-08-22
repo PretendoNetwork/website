@@ -1,28 +1,51 @@
 {
     "boards": {
-        "juxt": {
+        "gb7qURRJ": {
             "github_links": [
-                { "display": "Juxt repo", "url": "https://github.com/PretendoNetwork/juxt-web" }
+                {
+                    "display": "Account server repo",
+                    "url": "https://github.com/PretendoNetwork/account"
+                }
             ]
         },
-        "account": {
+        "G54H0wtc": {
             "github_links": [
-                { "display": "Account server repo", "url": "https://github.com/PretendoNetwork/account" }
+                {
+                    "display": "Juxtaposition repo",
+                    "url": "https://github.com/PretendoNetwork/juxt-web"
+                }
             ]
         },
-        "smm": {
+        "7q78sWW2": {
             "github_links": [
-                { "display": "SMM server repo", "url": "https://github.com/PretendoNetwork/account" }
+                {
+                    "display": "eShop repo",
+                    "url": "https://github.com/PretendoNetwork/Grove"
+                }
             ]
         },
-        "web": {
+        "lmAbWUyn": {
             "github_links": [
-                { "display": "Website repo", "url": "https://github.com/PretendoNetwork/website" }
+                {
+                    "display": "BOSS server repo",
+                    "url": "https://github.com/PretendoNetwork/doesnt-exist-yet"
+                }
             ]
         },
-        "eshop": {
+        "LQZftqhE": {
             "github_links": [
-                { "display": "EShop repo", "url": "https://github.com/PretendoNetwork/Grove" }
+                {
+                    "display": "SMM (auth) server repo",
+                    "url": "https://github.com/PretendoNetwork/doesnt-exist-yet"
+                }
+            ]
+        },
+        "9frc4r0Q": {
+            "github_links": [
+                {
+                    "display": "Website repo",
+                    "url": "https://github.com/PretendoNetwork/website"
+                }
             ]
         }
     }
