@@ -31,8 +31,11 @@ app.use(cookieParser())
 app.use(expressLocale({
 	"priority": ['cookie', 'accept-language', 'map', 'default'],
 	cookie: {name: 'preferredLocale'},
-	// fallbacks for browsers that don't send a region code, but only a language
+
+	// Map unavailable regions to available locales from the same language
 	map: {
+		/* TODO: map more regions to the available locales */
+		en: 'en-US', 'en-GB': 'en-US', 'en-AU': 'en-US', 'en-CA': 'en-US',
 		ar: 'ar-AR',
 		es: 'es-ES',
 		it: 'it-IT',
@@ -40,10 +43,10 @@ app.use(expressLocale({
 		tr: 'tr-TR'
 	},
 	allowed: [
-		'en-US', // English doesn't need as many allowed locales since it's the default anyways
+		'en', 'en-US', 'en-GB', 'en-AU', 'en-CA',
 		'ar', 'ar-AR',
 		'es', 'es-ES',
-		'it', 'it-IT',
+		'it', 'it-IT', 
 		'ru', 'ru-RU',
 		'tr', 'tr-TR',
 	],
