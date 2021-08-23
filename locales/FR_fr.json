@@ -33,7 +33,7 @@
 		"QAs": [
 			{
 				"question": "Qu'est-ce que Pretendo ?",
-				"answer": "Pretendo est un remplacement open-source du Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notr objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
+				"answer": "Pretendo est un remplacement open-source du Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
 				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
@@ -46,12 +46,12 @@
 			},
 			{
 				"question": "Savez-vous quand <fonctionnalité/service> sera prêt ?",
-				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont developpés indépendamment (par exemple, par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
+				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont developpés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
 
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo est conçu pour la Wii U et la 3DS; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellment en charge les serveurs personnalisés, mais il devrait toujours être possible d'utiliser Pretendo avec Cemu;<br>Pretendo ne prend pas en charge Cemu actuellement."
+				"answer": "Pretendo est conçu pour la Wii U et la 3DS; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait toujours être possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
