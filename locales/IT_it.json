@@ -6,9 +6,9 @@
 		"progress": "Progresso"
 	},
 	"hero": {
-		"subtitle": "Server di gioco",
+		"subtitle": "Server online",
 		"title": "Ricreati",
-		"text": "Pretendo è un'alternativa gratuita e open source ai server Nintendo per 3DS e Wii U, permettendo connettività online per entrambe, anche dopo la terminazione dei server originali",
+		"text": "Pretendo è un'alternativa gratuita e open source ai server Nintendo per 3DS e Wii U, con l'obiettivo di permettere di connettersi online anche dopo la terminazione dei server originali",
 		"buttons": {
 			"readMore": "Scopri di più"
 		}
@@ -16,15 +16,15 @@
 	"aboutUs": {
 		"title": "Informazioni",
 		"paragraphs": [
-			"Pretendo è un progetto open source che si dedica a ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
+			"Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
 			"Dato che i nostri server saranno gratuiti e open source, essi potranno esistere anche molto dopo l'inevitabile chiusura di Nintendo Network."
 		]
 	},
 	"progress": {
 		"title": "Progresso",
 		"paragraphs": [
-			"Correntemente, stiamo lavorando su Miiverse, insieme al nostro server per gli account e alla sua integrazione con i servizi.",
-			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e desideriamo continuare a lavorare su altri giochi quando possibile."
+			"Al momento stiamo lavorando su Miiverse, insieme ai nostri server per gli account e alle loro integrazioni con gli altri servizi.",
+			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
 		]
 	},
 	"faq": {
@@ -33,15 +33,15 @@
 		"QAs": [
 			{
 				"question": "Cos'è Pretendo?",
-				"answer": "Pretendo è un progetto open source che si dedica a ricreare Nintendo Network per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai giocatori di continuare a divertirsi con i loro giochi preferiti per Wii U e 3DS al massimo della loro capacità."
+				"answer": "Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai giocatori di continuare a divertirsi con i loro giochi preferiti per Wii U e 3DS al massimo della loro capacità."
 			},
 			{
 				"question": "Potrò continuare ad utilizzare i miei NNID su Pretendo?",
-				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo, poiché solo Nintendo è in possesso dei dati del tuo utente; mentre una migrazione da-NNID-a-PNID sarebbe teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che non vorremmo avere."
+				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo, poiché solo Nintendo è in possesso dei tuoi dati utente; benché una migrazione da-NNID-a-PNID sia teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che preferiremmo non avere."
 			},
 			{
 				"question": "Come si usa Pretendo?",
-				"answer": "Pretendo non è ancora pronto per l'uso pubblico. Quando sarà pronto, però, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
+				"answer": "Pretendo non è ancora pronta per l'uso pubblico. Quando lo sarà, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
 			},
 			{
 				"question": "Sapete quando <funzionalità/servizio> sarà pronta/o?",
@@ -49,7 +49,7 @@
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo è sviluppato con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Correntemente Pretendo non supporta Cemu."
+				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Al momento Pretendo non supporta Cemu."
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
@@ -57,17 +57,17 @@
 			},
 			{
 				"question": "Pretendo supporterà la Wii/Switch?",
-				"answer": "Esistono già server custom per Wii U forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Correntemente non supporteremo la Switch poiché il suo servizio online è a pagamento ed è completamente diverso da Nintendo Network."
+				"answer": "Esistono già server custom per Wii forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento ed è completamente diverso da Nintendo Network."
 			},
 			{
 				"question": "Avrò bisogno di hack per connettermi?",
-				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; comunque, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit per browser). Informazioni per connettersi su 3DS saranno disponibili in futuro."
+				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit web per browser). Informazioni su come connettersi su 3DS saranno disponibili in futuro."
 			}
 		]
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto",
+		"text": "Ecco il team dietro al progetto",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -95,7 +95,7 @@
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Installer della rete e ricerca su console",
+				"caption": "Installer di rete e ricerca su console",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
@@ -119,7 +119,7 @@
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 e ricerca su 3DS",
+				"caption": "Ricerca su Mario Kart 7 e 3DS",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
