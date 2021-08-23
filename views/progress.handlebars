@@ -13,7 +13,7 @@
 	<div class="all-progress-lists">
 		{{#each progressLists.sections}}
 		<div class="purple-card">
-			{{> progress-list data=this }}
+			{{> progress-list data=this boards=@root.boards }}
 		</div>
 		{{/each}}
 	</div>

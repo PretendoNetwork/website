@@ -1,0 +1,52 @@
+{
+    "boards": {
+        "gb7qURRJ": {
+            "github_links": [
+                {
+                    "display": "Account server repo",
+                    "url": "https://github.com/PretendoNetwork/account"
+                }
+            ]
+        },
+        "G54H0wtc": {
+            "github_links": [
+                {
+                    "display": "Juxtaposition repo",
+                    "url": "https://github.com/PretendoNetwork/juxt-web"
+                }
+            ]
+        },
+        "7q78sWW2": {
+            "github_links": [
+                {
+                    "display": "eShop repo",
+                    "url": "https://github.com/PretendoNetwork/Grove"
+                }
+            ]
+        },
+        "lmAbWUyn": {
+            "github_links": [
+                {
+                    "display": "BOSS repo",
+                    "url": "https://github.com/PretendoNetwork/BOSS"
+                }
+            ]
+        },
+        "LQZftqhE": {
+            "github_links": [
+                {
+                    "display": "Super Mario Maker (authentication) repo",
+                    "url": "https://github.com/PretendoNetwork/super-mario-maker-authentication"
+                }
+            ]
+        },
+        "9frc4r0Q": {
+            "github_links": [
+                {
+                    "display": "Website repo",
+                    "url": "https://github.com/PretendoNetwork/website"
+                }
+            ]
+        }
+    }
+}

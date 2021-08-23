@@ -1,0 +1,19 @@
+{
+    "name": "Pretendo Network",
+    "short_name": "Pretendo Network",
+    "icons": [
+        {
+            "src": "https://pretendo.network/assets/images/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://pretendo.network/assets/images/icons/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1b1f3b",
+    "background_color": "#1b1f3b",
+    "display": "standalone"
+}
