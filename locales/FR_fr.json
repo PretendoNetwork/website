@@ -1,0 +1,141 @@
+{
+	"nav": {
+		"about": "À propos",
+		"faq": "FAQ",
+		"credits": "Crédits",
+		"progress": "Progression"
+	},
+	"hero": {
+		"subtitle": "Serveurs de jeu",
+		"title": "Recréés",
+		"text": "Pretendo est un remplacement gratuit et open-source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels.",
+		"buttons": {
+			"readMore": "En savoir plus"
+		}
+	},
+	"aboutUs": {
+		"title": "À propos de nous",
+		"paragraphs": [
+			"Pretendo est un projet open-source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
+			"Puisque nos services seront à la fois gratuits et open-source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
+		]
+	},
+	"progress": {
+		"title": "Progression",
+		"paragraphs": [
+			"Actuellement, nous travaillons sur Miiverse, ainsi que sur nos serveurs de comptes et son intégration avec nos services.",
+			"Pour la 3DS, nous travaillons également sur Mario Kart 7, avec la volonté de continuer à travailler sur d'autres jeux dès que possible."
+		]
+	},
+	"faq": {
+		"title": "Foire Aux Questions",
+		"text": "Voici quelques questions fréquemment posées.",
+		"QAs": [
+			{
+				"question": "Qu'est-ce que Pretendo ?",
+				"answer": "Pretendo est un remplacement open-source du Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
+			},
+			{
+				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
+				"answer": "Malheuresement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration de NNID à PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
+
+			},
+			{
+				"question": "Comment puis-je utiliser Pretendo ?",
+				"answer": "Pretendo n'est actuellement pas dans un état prêt à être utilisé par le public. Cependant, dès qu'il le sera, vous pourrez utiliser Pretendo en exécutant simplement notre patcheur homebrew sur votre console."
+			},
+			{
+				"question": "Savez-vous quand <fonctionnalité/service> sera prêt ?",
+				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont développés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
+
+			},
+			{
+				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
+				"answer": "Pretendo est conçu pour la Wii U et la 3DS; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait tout de mêtre possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
+			},
+			{
+				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
+				"answer": "Nous n'aurons pas accès aux bannissements du Nintendo Network, donc personne ne sera banni de nos serveurs dans un premier temps. En revanche, il y aura des règles à suivre lors de l'utilisation de nos services et le non-respect de ces règles pourrait entraîner des bannissements."
+			},
+			{
+				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
+				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler car ses services sont payants et complètement différents du Nintendo Network."
+			},
+			{
+				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
+				"answer": "Oui, vous devrez modifier votre appareil afin de vous connecter; cependant sur Wii U un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
+			}
+		]
+	},
+	"credits": {
+		"title": "L'équipe",
+		"text": "Rencontrez l'équipe derrière le projet",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Chef de projet et développeur principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Étude et développement sur Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Développement de la bibliothèque crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Étude des consoles et d'autres systèmes",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Installateur du réseau et études des consoles",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Développement Web et premières études de l'eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "Benjamin Moss (kxpler442b)",
+				"caption": "Developpement Web",
+				"picture": "https://github.com/kxpler442b.png",
+				"github": "https://github.com/kxpler442b"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Developpement Web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Étude de Mario Kart 7 et de la 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Remerciement spéciaux",
+				"caption": "Étude des structures de données de Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"progressPage": {
+		"title": "Notre progression",
+		"description": "Vérifiez l'avancement et les objectifs du projet ! (Mis à jour environ toute les heures, ne reflète pas TOUS nos objectifs et notre progression)."
+	}
+}
