@@ -541,11 +541,6 @@ footer {
 		display: none;
 	}
 
-	.locale-dropdown {
-		/* You don't really need this either on mobile IMHO */
-		display: none;
-	}
-
 	.hero-meta {
 		margin-top: 100px;
 	}
@@ -632,4 +627,30 @@ footer {
 		width: 100%;
 	}
 
+}
+
+@media screen and (max-width: 500px) {
+	.selected-locale .locale-names {
+		display: none;
+	}
+
+	.selected-locale {
+		width: 80px;
+		margin-left: auto;
+		margin-right: 12px;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	.select-box .options-container {
+	width: 125px;
+	right: 12px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.locale-dropdown {
+		display: none;
+	}
 }
