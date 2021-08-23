@@ -41,7 +41,7 @@
 			},
 			{
 				"question": "Come si usa Pretendo?",
-				"answer": "Pretendo non è ancora pronto per l'uso pubblico. Quando lo sarà, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
+				"answer": "Pretendo non è ancora pronta per l'uso pubblico. Quando lo sarà, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
 			},
 			{
 				"question": "Sapete quando <funzionalità/servizio> sarà pronta/o?",
@@ -49,7 +49,7 @@
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo è sviluppato con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Al momento Pretendo non supporta Cemu."
+				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Al momento Pretendo non supporta Cemu."
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
