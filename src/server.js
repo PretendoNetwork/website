@@ -29,19 +29,24 @@ app.use(cookieParser())
 
 // Locale express middleware setup
 app.use(expressLocale({
-	"priority": ["cookie", "map", "accept-language", "default"],
+	"priority": ['cookie', 'accept-language', 'map', 'default'],
 	cookie: {name: 'preferredLocale'},
 	// fallbacks for browsers that don't send a region code, but only a language
 	map: {
-		//de: 'de-DE',
+		ar: 'ar-AR',
 		es: 'es-ES',
-		//fr: 'fr-FR',
 		it: 'it-IT',
-		ko: 'ko-KR',
 		ru: 'ru-RU',
 		tr: 'tr-TR'
 	},
-	allowed: ['en-US', 'es-ES', 'it-IT', 'ko-KR', 'ru-RU', 'tr-TR'],
+	allowed: [
+		'en-US', // English doesn't need as many allowed locales since it's the default anyways
+		'ar', 'ar-AR',
+		'es', 'es-ES',
+		'it', 'it-IT',
+		'ru', 'ru-RU',
+		'tr', 'tr-TR',
+	],
 	"default": "en-US"
 }))
 
