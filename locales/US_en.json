@@ -135,5 +135,13 @@
 	"progressPage": {
 		"title": "Our progress",
 		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+	},
+	"localizationPage": {
+		"title": "Let's localize",
+		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
+		"instructions": "View localization instructions",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
 	}
 }

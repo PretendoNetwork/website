@@ -22,7 +22,8 @@ logger.info('Importing page routers');
 const routers = {
 	home: require('./routers/home'),
 	faq: require('./routers/faq'),
-	progress: require('./routers/progress')
+	progress: require('./routers/progress'),
+	localization: require('./routers/localization')
 };
 
 app.use(cookieParser())
@@ -61,6 +62,7 @@ app.use(expressLocale({
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
 app.use('/progress', routers.progress);
+app.use('/localization', routers.localization);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created

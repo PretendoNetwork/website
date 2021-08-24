@@ -135,5 +135,13 @@
 	"progressPage": {
 		"title": "Il nostro progresso",
 		"description": "Controlla il progresso del progetto e gli obiettivi! (Aggiornato circa ogni ora, non riflette TUTTI gli obiettivi e il progresso del progetto)"
+	},
+	"localizationPage": {
+		"title": "Localizziamo",
+		"description": "Incolla il link di una localizzazione in formato JSON accessibile al pubblico per testarla sul sito",
+		"instructions": "Vedi le istruzioni su come localizzare",
+		"fileInput": "File da testare",
+		"filePlaceholder": "https://il.link.di/un_file.json",
+		"button": "Testa file"
 	}
 }

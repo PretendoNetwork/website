@@ -6,6 +6,7 @@
 	--btn: #673DB6;
 	--btn-secondary: #333960;
 	--theme: var(--btn);
+	--theme-light: #A185D6;
 	--text-secondary-2: #8990C1;
 }
 
@@ -16,10 +17,8 @@ body {
 body, .main-body {
 	width: 100%;
 	max-width: 100vw;
-	position: relative;
 	margin: 0;
 	color: var(--text);
-	display: flex;
 	justify-content: center;
 	font-family: Poppins, Arial;
 	overflow-x: hidden;
@@ -46,6 +45,7 @@ body, .main-body {
 .wrapper {
 	width: 95%;
 	max-width: 1590px;
+	margin: 0 auto;
 }
 
 h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
