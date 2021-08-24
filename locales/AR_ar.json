@@ -137,9 +137,11 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "Monty",
-				"caption": "The Locales Guy",
-				"picture": "https://github.com/montylion.png"
+				"name": "The People in the discord",
+				"special": "Special Thanks",
+				"caption": "The People in the discord",
+				"picture": "https://github.com/PretendoNetwork.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 			
 		]
