@@ -55,7 +55,7 @@
   appearance: none;
   -webkit-appearance: none;
   border: 0;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   background-color: var(--btn-secondary);
   border: none;
@@ -82,7 +82,7 @@
   -webkit-appearance: none;
   border: 0;
   border-radius: 0 4px 4px 0;
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: var(--text);
   padding: 12px 36px;

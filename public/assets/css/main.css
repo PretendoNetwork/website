@@ -20,7 +20,7 @@ body, .main-body {
 	margin: 0;
 	color: var(--text);
 	justify-content: center;
-	font-family: Poppins, Arial;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -222,7 +222,7 @@ img.emoji {
 	-webkit-appearance: none;
 	border: 0;
 	border-radius: 6px;
-	font-family: Poppins;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
 	font-size: 1rem;
 	color: var(--text);
 }
