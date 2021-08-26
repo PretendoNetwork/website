@@ -1,6 +1,11 @@
 function setDefaultDropdownLocale(localeString) {
   const selected = document.querySelector(".selected-locale");
-  selected.innerHTML = document.querySelector(`label[for=${localeString}`).innerHTML
+  let item = document.querySelector(`label[for=${localeString}`);
+  if (!item) { // if locale cant be find, default to en-US
+    localeString = "en-US";
+    item = document.querySelector(`label[for=${localeString}`);
+  }
+  selected.innerHTML = item.innerHTML
 }
 
 function localeDropdownHandler(selectedLocale) {
