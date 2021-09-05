@@ -28,7 +28,7 @@
 		]
 	},
 	"faq": {
-		"title": "Frequently Asked Questions",
+		"title": "Preguntas Frecuentes (FAQ)",
 		"text": "Aquí se muestran algunas cuestiones comunes.",
 		"QAs": [
 			{
@@ -37,7 +37,7 @@
 			},
 			{
 				"question": "¿Mi NNID actual funciona en Pretendo?",
-				"answer": "Tristemente, no. Los NNID no funcionan en Pretendo, ya que solo Nintendo almacena tus datos de usuario. Aunque una migración NNID-a-PNID es teóricamente posible, sería arriesgado y requiere datos de usuario sensibles que preferimos no almacenar."
+				"answer": "Tristemente, no. Los NNID no funcionan en Pretendo ya que solo Nintendo almacena tus datos de usuario. Aunque una migración NNID-a-PNID es teóricamente posible, sería arriesgado y requiere datos de usuario sensibles que preferimos no almacenar."
 			},
 			{
 				"question": "¿Cómo uso Pretendo?",
@@ -53,11 +53,11 @@
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-			"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."				
+			"answer": "No tenemos acceso a los baneos de Nintendo Network, motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."				
 			},
 			{
 				"question": "¿Pretendo soportará Wii/Switch?",
-				"answer": "La Wii ya tiene servidores en línea personalizados de parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con Switch ya que sus servidores son de pago y completamente diferentes a los de Nintendo Network."
+				"answer": "Wii ya tiene servidores en línea personalizados de parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con Switch ya que sus servidores son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
 				"question": "¿Necesitaré modificar mi consola para conectarme?",
@@ -101,7 +101,7 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Desarrollo web y temprano estudio de eShop",
+				"caption": "Desarrollo web y estudio temprano de eShop",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			},
