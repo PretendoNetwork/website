@@ -1,6 +1,8 @@
 # Website for Pretendo Network
 
-This is the Repository for the Website of the Pretendo Network
+This is the Repository for the Website of the Pretendo Network.
+
+Contributions should go in the [dev branch](https://github.com/PretendoNetwork/website/tree/dev).
 
 Visit the [live version](https://pretendo.network)
 
