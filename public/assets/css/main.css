@@ -368,6 +368,10 @@ section.team {
 	border-radius: 10px;
 	align-items: center;
 }
+.card .card-left {
+	background: white;
+	border-radius: 12px;
+}
 .card .pfp {
 	width: 100%;
 	border-radius: 10px;
