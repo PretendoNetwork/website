@@ -1,9 +1,7 @@
 const { Router } = require('express');
 const util = require('../util');
-const { boards } = require('../../boards/boards.json');
 const router = new Router();
 
-const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
 
@@ -12,14 +10,10 @@ router.get('/', async (request, response) => {
 
 	const localeString = reqLocale.toString();
 
-	const cache = await getTrelloCache();
-
-	response.render('progress', {
+	response.render('blog', {
 		layout: 'main',
-		boards,
 		locale,
 		localeString,
-		progressLists: cache
 	});
 });
 
