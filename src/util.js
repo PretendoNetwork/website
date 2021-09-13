@@ -20,4 +20,4 @@ function getLocale(region, language) {
 module.exports = {
 	fullUrl,
 	getLocale
-}
+};

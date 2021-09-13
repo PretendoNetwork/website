@@ -4,7 +4,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const expressLocale = require('express-locale');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const logger = require('./logger');
 const util = require('./util');
 const config = require('../config.json');
@@ -26,11 +26,11 @@ const routers = {
 	localization: require('./routers/localization')
 };
 
-app.use(cookieParser())
+app.use(cookieParser());
 
 // Locale express middleware setup
 app.use(expressLocale({
-	"priority": ['cookie', 'accept-language', 'map', 'default'],
+	'priority': ['cookie', 'accept-language', 'map', 'default'],
 	cookie: {name: 'preferredLocale'},
 
 	// Map unavailable regions to available locales from the same language
@@ -59,8 +59,8 @@ app.use(expressLocale({
 		'ru', 'ru-RU',
 		'tr', 'tr-TR',
 	],
-	"default": "en-US"
-}))
+	'default': 'en-US'
+}));
 
 
 
@@ -109,7 +109,7 @@ app.engine('handlebars', handlebars({
 }));
 app.set('view engine', 'handlebars');
 
-logger.info('Starting server')
+logger.info('Starting server');
 app.listen(port, () => {
 	logger.success(`Server listening on *:${port}`);
 });

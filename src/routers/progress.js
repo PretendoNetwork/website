@@ -7,10 +7,8 @@ const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
 
-	const reqLocale = request.locale
+	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString()
 
 	const cache = await getTrelloCache();
 
@@ -18,7 +16,7 @@ router.get('/', async (request, response) => {
 		layout: 'main',
 		boards,
 		locale,
-		localeString,
+		localeString: reqLocale.toString(),
 		progressLists: cache
 	});
 });
