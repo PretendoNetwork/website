@@ -12,47 +12,26 @@
 		</div>
 	</div>
 
-	<div class="all-blog-posts">
-		<div class="purple-card blog-card">
-
-			<div class="post-info">
-				<span>Published by</span>
-				<div class="profile">
-					<img class="profile-picture" src="https://jipfr.nl/icon.png" alt>
-					<span>Jip Frijlink</span>
+    {{#each postList }}
+		<a href="/blog/{{this.slug}}" class="purple-card blog-card">
+			<div class="left">
+				<h2>{{{ this.postInfo.title }}}</h2>
+				<p>{{{ this.postInfo.caption }}}</p>
+				<div class="post-info">
+					<span>Published by</span>
+					<div class="profile">
+						<img class="profile-picture" src="{{{ this.postInfo.author_image }}}" alt>
+						<span>{{{ this.postInfo.author }}}</span>
+					</div>
+					<span>on</span>
+					<span class="date">{{{ this.postInfo.date }}}</span>
 				</div>
-				<span>on</span>
-				<span class="date">1 Sept. 2021</span>
 			</div>
-			
-			<h2>Progress report for Sept. 2021</h2>
-			
-			<p>It is, but that's the point of the Patreon. Hopefully the Patreon will take off and I can make Pretendo development a full time job</p>
-
-			<p>The way game servers work on the 3DS and WiiU is through a service called NEX, which Nintendo licensed from a different company</p>
-
-			<p>NEX acts as a middleware basically. It provides a set of protocols (auth, secure connection, matchmaking, etc) and each protocol has a set of methods associated with it and each method tends to have its own dedicated custom types</p>
-
-			<img src="https://images-ext-2.discordapp.net/external/uh2DBuQss29KtEKJEmIkIUArxAhKbpmxfcTrS9dvLao/https/pbs.twimg.com/media/E_DzxqmX0AIv8Sn.jpg%3Alarge?width=526&height=702">
-
-			<p>So like every game implements AuthenticationProtocol::Login and AuthenticationProtocol::LoginEx to login with, both of which provide a AuthenticationInfo data structure</p>
-
-			<p>Every game server is made up of a mix of implemented protocols and supported methods. The trouble is that Nintendo basically hacked NEX support into their games so a lot of stuff isn't clear because NEX is a set of generic protocols and methods, and Nintendo tends to abuse them and even fork them into Nintendo-specific protocols and methods</p>
-
-			<p>For example NEX provides a protocol called DataStore, which is basically a file database with some metadata associated with the files. SMM forks DataStore into it's own DataStore(SMM) protocol, which several new (sometimes replaced) methods</p>
-
-			<p>SMM is basically 90% vanilla DataStore and DataStore(SMM), but even though Nintendo forked DataStore into their own protocol they still reuse a lot of the same generic DataStore types and data structures which leads to confusing cases of unused and weirdly used fields</p>
-
-			<iframe src="https://www.youtube.com/embed/wjWQwRlmNho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-			<p>Like for example in DataStore(SMM) there's a method called DataStore(SMM)::RecommendedCourseSearchObject which is called to get the Course World list, and it returns a list of DataStoreCustomRankingResult data structures. Inside this data structure is 2 notable fields; MetaBinary and Ratings. MetaBinary is a NEX::Buffer type which has data like the course type, some crc32's, etc. Ratings though is the weird one. It actually doesn't store any ratings for the course, that's what the Score field does. Ratings is used to track the number of times people have attempted the course</p>
-
-			<p>But because these protocols and methods are very generic and shared between multiple games, it means knowledge of one game can't really be reused for another. Like Splatoon also implements DataStore, and also forks it into DataStore(Splatoon), and things like MetaBinary in that game are completely different</p>
-
-			<p>And then to top it all off, there are MANY versions of NEX being used by Nintendo so several games are also slightly different at the transport level (like does the server support acknowledging multiple packets at once, do the data structures have a header or not, etc). And Nintendo would update the NEX library per-game at times without documenting any version changes internally, so it's all guess work at the start as to what each game supports</p>
-
-		</div>
-	</div>
+			<div class="right">
+				<img src="{{this.postInfo.cover_image}}" class="cover" />
+			</div>
+		</a>
+	{{/each}}
 
 	{{> footer }}
 

@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/assets/css/blogpost.css" />
+
+<div class="wrapper blog">
+
+	{{> header}}
+
+	<div class="purple-card blog-card">
+
+		<h1 class="title">{{{ postInfo.title }}}</h1>
+		<div class="post-info">
+			<span>Published by</span>
+			<div class="profile">
+				<img class="profile-picture" src="{{ postInfo.author_image }}" alt="{{ postInfo.author }}">
+				<span>{{{ postInfo.author }}}</span>
+			</div>
+			<span>on</span>
+			<span class="date">{{{ postInfo.date }}}</span>
+		</div>
+
+		{{{ htmlPost }}}
+
+	</div>
+
+	{{> footer }}
+
+</div>
