@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const util = require('../util');
+const logger = require('../logger');
 const router = new Router();
 
 const fs = require('fs');
@@ -50,7 +51,15 @@ router.get('/:slug', async (request, response) => {
 	const postName = request.params.slug;
 
 	// Get the markdown file corresponding to the post
-	const rawPost = fs.readFileSync(path.join('blogposts', `${postName}.md`), 'utf-8');
+	let rawPost;
+	try {
+		rawPost = fs.readFileSync(path.join('blogposts', `${postName}.md`), 'utf-8');
+	} catch(err) {
+		logger.error(err);
+		response.sendStatus(404);
+		logger.warn(`HTTP 404 at /blog/${postName}`);
+		return;
+	}
 	// Convert the post info into JSON and separate it and the content
 	const { data: postInfo, content } = matter(rawPost);
 	// Convert the content into HTML
