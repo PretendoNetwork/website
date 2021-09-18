@@ -2,14 +2,13 @@
 title: "Todo"
 author: "Monty"
 author_image: "https://www.github.com/montylion.png"
-date: "19 January 2038"
-caption: "A todo list"
+date: "January 19, 2038"
+caption: "A todo list (delete file when done)"
 cover_image: "https://i.imgur.com/sOWLwO5.png"
 ---
 
-- <input type="checkbox" onclick="return false;">
-Redesign by the one true design god jvs, then
-- <input type="checkbox" onclick="return false;">
-Add mobile support
-- <input type="checkbox" onclick="return false;">
-Add custom opengraph for each post
+A todo list (delete file when done)
+- [ ] Redesign by the one true design god jvs
+- [x] Add mobile support
+- [x] Add css styling for all elements supported by markdown
+- [ ] Fix navbar

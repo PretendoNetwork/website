@@ -659,7 +659,7 @@ footer {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	.selected-locale .locale-names {
 		display: none;
 	}
@@ -668,6 +668,10 @@ footer {
 		width: 80px;
 		margin-left: auto;
 		margin-right: 12px;
+	}
+
+	.locale-dropdown {
+		width: fit-content;
 	}
 
 }

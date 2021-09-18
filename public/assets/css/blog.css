@@ -1,61 +1,51 @@
 .blog-card {
+	display: flex;
+	flex-flow: row nowrap;
     padding: 0;
 	margin: 0 auto;
 	max-width: 1100px;
-	margin-top: 30px;
+	margin-bottom: 30px;
     text-decoration: none;
-    display: flex;
-	flex-flow: row nowrap;
 	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
-.blog-card .left {
-    flex: 2 0 55%;
+.blog-card .post-info {
+    flex: 2 0 45%;
     padding: 40px;
-}
-
-.blog-card .right {
 	display: flex;
-	border-radius: 0 10px 10px 0;
-	height: 260px;
-	width: 45%;
-}
-
-.blog-card .right img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 0 10px 10px 0;
-}
-
-.blog-card h2 {
-    color: white;
-    margin-top: 0;
-}
-
-.blog-card p, .post-info {
+	flex-flow: column;
 	color: var(--text-secondary);
 }
-.blog-card .date {
-	margin-bottom: 0;
-	font-weight: bold;
-	color: var(--text);
+
+.blog-card .post-info .title {
+    color: white;
+    margin: 0;
 }
-.blog-card img {
-	
-	border-radius: 4px;
+
+.blog-card .post-info .caption {
+	margin: 4px 0 32px 0;
 }
-.blog-card .post-info {
+
+.blog-card .pub-info {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
     justify-content: left;
-	position: absolute;
-	bottom: 40px;
+	margin-top: auto;
 }
-.blog-card .post-info > * + * {
-	margin-left: .5em;
+
+.blog-card .pub-info .date {
+	font-weight: bold;
+	color: var(--text);
 }
+
+.blog-card .pub-info > * {
+	margin-right: .5em;
+	margin-top: .2em;
+}
+
 .blog-card .profile {
 	display: inline-grid;
 	grid-template-columns: 30px auto;
@@ -63,9 +53,44 @@
 	font-weight: bold;
 	color: var(--text);
 	align-items: center;
-    height: 32px; /* So the post doesn't shift when the image gets loaded */
+    height: 32px;
 }
 .blog-card .profile img {
+	border-radius: 4px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	max-width: 100%;
+}
+
+.blog-card .cover {
+	flex: 45%;
+}
+
+@media screen and (max-width: 600px) {
+	.blog-card {
+		flex-flow: column;
+	}
+	.blog-card .post-info {
+		padding: 30px;
+	}
+	.blog-card .cover {
+		order: -1;
+		min-height: 200px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.blog-card {
+		
+		max-width: none;
+		border-radius: 0;
+	  }
+	
+	  .wrapper {
+		width: 100%;
+	  }
+	
+	  header {
+		width: 90%;
+		margin: 35px auto;
+	  }
 }

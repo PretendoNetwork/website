@@ -1,58 +1,160 @@
 .blog-card {
-	padding: 60px;
-	margin: 0 auto;
-	max-width: 1100px;
-	margin-top: 50px;
+  padding: 60px;
+  margin: 0 auto;
+  max-width: 1100px;
+  margin-top: 50px;
+  color: var(--text-secondary);
+}
+
+.blog-card h1,
+.blog-card h2,
+.blog-card h3,
+.blog-card h4,
+.blog-card h5,
+.blog-card h6,
+.blog-card strong,
+.blog-card a,
+.blog-card a * {
+  color: white;
 }
 
 .blog-card .title {
-	margin: 0;
+  margin: 0;
 }
 
-.blog-card p, .post-info {
-	color: var(--text-secondary);
-	margin-bottom: 30px;
+.blog-card p,
+.post-info {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
 }
 .blog a {
-	color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 .blog-card .date {
-	margin-bottom: 0;
-	font-weight: bold;
-	color: var(--text);
+  margin-bottom: 0;
+  font-weight: bold;
+  color: var(--text);
 }
-.blog-card iframe {
-	width: 100%;
-	aspect-ratio: 16/9;
-	border-radius: 4px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 .blog-card img {
-	max-width: 100%;
-	margin: 10px auto;
-	display: block;
+  max-width: 100%;
+  max-height: 800px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blog-card img.emoji {
+  display: inline;
+  margin: 0;
+  border: none;
+}
+
+.blog-card video {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-card iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-card table {
+  border-radius: 4px;
+  border-collapse: collapse;
+  background: #31375E;
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: var(--text-secondary);
+}
+.blog-card table th {
+  padding: 8px 12px;
+  background: #3F4778;
+  color: white;
+}
+.blog-card table td {
+  padding: 8px 12px;
+  vertical-align: top;
+  border-radius: inherit;
+}
+.blog-card table tr:nth-child(even) {
+  background: #2A2F50;
+}
+
+.blog-card pre code {
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.blog-card input[type="checkbox"] {
+  appearance: none;
+	-webkit-appearance: none;
+  display: inline-block;
+	background: var(--btn-secondary);
+	padding: 12px;
+  margin: 4px;
 	border-radius: 4px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: -60%;
+}
+.blog-card input[type="checkbox"]:checked {
+	content: 'checkboxtest';
+  background: no-repeat center/contain url(../images/check.svg), var(--btn-secondary);
+}
+
+.blog-card hr {
+  border: 1px solid var(--text-secondary);
+  margin: 30px 0;
+}
+
+.blog-card blockquote {
+  border-left: 2px solid var(--text-secondary);
+  padding: 8px 24px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .blog-card .post-info {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .blog-card .post-info > * + * {
-	margin-left: .5em;
+  margin-left: 0.5em;
 }
 .blog-card .profile {
-	display: inline-grid;
-	grid-template-columns: 30px auto;
-	grid-gap: 10px;
-	font-weight: bold;
-	color: var(--text);
-	align-items: center;
-	height: 52px; /* So the post doesn't shift when the image gets loaded */
+  display: inline-grid;
+  grid-template-columns: 30px auto;
+  grid-gap: 10px;
+  font-weight: bold;
+  color: var(--text);
+  align-items: center;
+  height: 52px;
 }
 
-footer {
-	margin-top: 80px;
+@media screen and (max-width: 800px) {
+  .blog-card {
+    padding: 60px;
+    margin: 0;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  header {
+    width: 90%;
+    margin: 35px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-card {
+    padding: 40px 5vw;
+  }
 }

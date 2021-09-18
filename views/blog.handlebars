@@ -14,10 +14,10 @@
 
     {{#each postList }}
 		<a href="/blog/{{this.slug}}" class="purple-card blog-card">
-			<div class="left">
-				<h2>{{{ this.postInfo.title }}}</h2>
-				<p>{{{ this.postInfo.caption }}}</p>
-				<div class="post-info">
+			<div class="post-info">
+				<h2 class="title">{{{ this.postInfo.title }}}</h2>
+				<p class="caption">{{{ this.postInfo.caption }}}</p>
+				<div class="pub-info">
 					<span>Published by</span>
 					<div class="profile">
 						<img class="profile-picture" src="{{{ this.postInfo.author_image }}}" alt>
@@ -27,8 +27,7 @@
 					<span class="date">{{{ this.postInfo.date }}}</span>
 				</div>
 			</div>
-			<div class="right">
-				<img src="{{this.postInfo.cover_image}}" class="cover" />
+			<div class="cover" style="background: no-repeat center/cover url({{this.postInfo.cover_image}}">
 			</div>
 		</a>
 	{{/each}}

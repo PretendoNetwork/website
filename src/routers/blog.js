@@ -20,6 +20,7 @@ router.get('/', async (request, response) => {
 	// We get the info for each blogpost, ignoring the ones starting with _
 	const postList = fileList
 		.filter(filename => !filename.startsWith('_'))
+		.filter(filename => filename.endsWith('.md')) //Ignores other files/folders
 		.map((filename) => {
 			const slug = filename.replace('.md', '');
 			const rawPost = fs.readFileSync(path.join('blogposts', `${filename}`), 'utf-8');
@@ -28,6 +29,7 @@ router.get('/', async (request, response) => {
 				slug, postInfo
 			};
 		});
+
 	postList.sort((a, b) => {
 		return new Date(b.postInfo.date) - new Date(a.postInfo.date);
 	});
