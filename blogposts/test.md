@@ -126,7 +126,9 @@ console.log(trueOrFalseJSON);
 
 <cite>Adapted from [blockquote: The Block Quotation element, from MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)</cite>
 
-<iframe src="https://www.youtube.com/embed/HGoCNOFpWpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="aspectratio-fallback">
+  <iframe src="https://www.youtube.com/embed/HGoCNOFpWpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ![test](https://media.discordapp.net/attachments/413884110667251722/886474243662037062/image1.jpg)
 

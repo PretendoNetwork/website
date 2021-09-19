@@ -11,4 +11,4 @@ A todo list (delete file when done)
 - [ ] Redesign by the one true design god jvs
 - [x] Add mobile support
 - [x] Add css styling for all elements supported by markdown
-- [ ] Fix navbar
+- [X] Fix navbar

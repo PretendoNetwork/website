@@ -571,6 +571,10 @@ footer {
 		display: none;
 	}
 
+	header .logo-link {
+		margin-right: 20px;
+	}
+
 	.hero-meta {
 		margin-top: 100px;
 	}
@@ -659,7 +663,7 @@ footer {
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 580px) {
 	.selected-locale .locale-names {
 		display: none;
 	}
@@ -674,17 +678,36 @@ footer {
 		width: fit-content;
 	}
 
+	.select-box .options-container {
+		width: 150px;
+		right: 12px;
+	}
+
 }
 
-@media screen and (max-width: 400px) {
-	.select-box .options-container {
-	width: 125px;
-	right: 12px;
+@media screen and (max-width: 480px) {
+	header .logo-link svg text {
+		display: none;
+	}
+
+	header .logo-link svg {
+		width: 39.876px;
+	}
+
+	header .logo-link {
+		margin-right: 10px;
+	}
+	header nav a {
+		margin: 0 10px;
 	}
 }
 
 @media screen and (max-width: 330px) {
-	.locale-dropdown {
+	.locale-dropdown .selected-locale {
+		width: 50px;
+	}
+	.locale-dropdown .selected-locale::after {
 		display: none;
 	}
+
 }

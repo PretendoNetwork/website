@@ -20,20 +20,44 @@
 
 .blog-card .title {
   margin: 0;
+  margin-bottom: 8px;
+}
+
+.blog-card .pub-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+.blog-card .pub-info .date {
+  font-weight: bold;
+  color: var(--text);
+}
+.blog-card .pub-info > * {
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+.blog-card .profile {
+  display: inline-grid;
+  grid-template-columns: 30px auto;
+  grid-gap: 10px;
+  font-weight: bold;
+  color: var(--text);
+  align-items: center;
+  height: 32px;
+}
+.blog-card .profile img {
+  margin: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 100%;
 }
 
 .blog-card p,
 .post-info {
   color: var(--text-secondary);
-  margin-bottom: 30px;
-}
-.blog a {
-  color: var(--text-secondary);
-}
-.blog-card .date {
-  margin-bottom: 0;
-  font-weight: bold;
-  color: var(--text);
 }
 
 .blog-card img {
@@ -62,18 +86,34 @@
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* Fallback for aspect-ratio since it's unsupported by some browsers (looking at you Safari) */
+@supports not (aspect-ratio: 16/9) {
+  .blog-card .aspectratio-fallback {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+  }
+  .blog-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
 
 .blog-card table {
   border-radius: 4px;
   border-collapse: collapse;
-  background: #31375E;
+  background: #31375e;
   margin-bottom: 30px;
   overflow: hidden;
   color: var(--text-secondary);
 }
 .blog-card table th {
   padding: 8px 12px;
-  background: #3F4778;
+  background: #3f4778;
   color: white;
 }
 .blog-card table td {
@@ -82,7 +122,7 @@
   border-radius: inherit;
 }
 .blog-card table tr:nth-child(even) {
-  background: #2A2F50;
+  background: #2a2f50;
 }
 
 .blog-card pre code {
@@ -92,17 +132,18 @@
 
 .blog-card input[type="checkbox"] {
   appearance: none;
-	-webkit-appearance: none;
+  -webkit-appearance: none;
   display: inline-block;
-	background: var(--btn-secondary);
-	padding: 12px;
+  background: var(--btn-secondary);
+  padding: 12px;
   margin: 4px;
-	border-radius: 4px;
+  border-radius: 4px;
   vertical-align: -60%;
 }
 .blog-card input[type="checkbox"]:checked {
-	content: 'checkboxtest';
-  background: no-repeat center/contain url(../images/check.svg), var(--btn-secondary);
+  content: "checkboxtest";
+  background: no-repeat center/contain url(../images/check.svg),
+    var(--btn-secondary);
 }
 
 .blog-card hr {
@@ -117,32 +158,13 @@
   margin-bottom: 30px;
 }
 
-.blog-card .post-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.blog-card .post-info > * + * {
-  margin-left: 0.5em;
-}
-.blog-card .profile {
-  display: inline-grid;
-  grid-template-columns: 30px auto;
-  grid-gap: 10px;
-  font-weight: bold;
-  color: var(--text);
-  align-items: center;
-  height: 52px;
-}
-
 @media screen and (max-width: 800px) {
   .blog-card {
-    padding: 60px;
-    margin: 0;
-    max-width: none;
-    border-radius: 0;
+    padding: 40px;
   }
+}
 
+@media screen and (max-width: 600px) {
   .wrapper {
     width: 100%;
   }
@@ -151,10 +173,9 @@
     width: 90%;
     margin: 35px auto;
   }
-}
 
-@media screen and (max-width: 600px) {
   .blog-card {
     padding: 40px 5vw;
+    border-radius: 0;
   }
 }
