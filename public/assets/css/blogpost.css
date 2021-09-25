@@ -26,10 +26,24 @@ header {
 .blog-card h4,
 .blog-card h5,
 .blog-card h6,
-.blog-card strong,
+.blog-card strong {
+  color: var(--text);
+}
+
 .blog-card a,
 .blog-card a * {
-  color: var(--text);
+  color: #9d6ff3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-card a:hover,
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+.blog-card del {
+  text-decoration: line-through;
 }
 
 .blog-card .title {

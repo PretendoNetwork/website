@@ -325,7 +325,13 @@ section.faq {
 	color: var(--text-secondary-2);
 }
 .question-and-answer .text a {
-	color: white;
+	color: #9d6ff3;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.question-and-answer .text a:hover {
+	text-decoration: underline;
 }
 
 section.team {
