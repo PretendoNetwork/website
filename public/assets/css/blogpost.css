@@ -1,7 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  min-height: 100vh;
+}
+header {
+  width: 100%;
+}
+
+.card-wrap {
+  width: 100%;
+}
+
 .blog-card {
   padding: 60px;
-  margin: 0 auto;
   max-width: 1100px;
+  margin: auto;
   margin-top: 50px;
   color: var(--text-secondary);
 }
@@ -158,6 +172,11 @@
   margin-bottom: 30px;
 }
 
+footer {
+  padding-top: 40px;
+  margin-top: auto;
+}
+
 @media screen and (max-width: 800px) {
   .blog-card {
     padding: 40px;
@@ -177,5 +196,11 @@
   .blog-card {
     padding: 40px 5vw;
     border-radius: 0;
+    margin-top: 0;
+  }
+
+  footer {
+    width: 95%;
+    margin: auto auto 40px;
   }
 }

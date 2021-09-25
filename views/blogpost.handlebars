@@ -4,21 +4,24 @@
 
 	{{> header}}
 
-	<div class="purple-card blog-card">
+	<div class="card-wrap">
+		<div class="purple-card blog-card">
 
-		<h1 class="title">{{{ postInfo.title }}}</h1>
-		<div class="pub-info">
-			<span>Published by</span>
-			<div class="profile">
-				<img class="profile-picture" src="{{ postInfo.author_image }}" alt="{{ postInfo.author }}">
-				<span>{{{ postInfo.author }}}</span>
+			<h1 class="title">{{{ postInfo.title }}}</h1>
+			<div class="pub-info">
+				<span>Published by</span>
+				<div class="profile">
+					<img class="profile-picture" src="{{ postInfo.author_image }}" alt="{{ postInfo.author }}">
+					<span>{{{ postInfo.author }}}</span>
+				</div>
+				<span>on
+					<span class="date">{{{ postInfo.date }}}</span>
+				</span>
 			</div>
-			<span>on
-				<span class="date">{{{ postInfo.date }}}</span>
-			</span>
-		</div>
 
-		{{{ htmlPost }}}
+			{{{ htmlPost }}}
+
+		</div>
 
 	</div>
 
