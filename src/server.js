@@ -74,11 +74,10 @@ app.use('/blog', routers.blog);
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
 // Meaning the request could not find a valid router
-app.use((request, response) => {
+app.use((request, response, next) => {
 	const fullUrl = util.fullUrl(request);
 	logger.warn(`HTTP 404 at ${fullUrl}`);
-
-	response.sendStatus(404); // TODO: 404 page
+	next();
 });
 
 logger.info('Setting up handlebars engine');

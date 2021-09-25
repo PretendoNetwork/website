@@ -29,7 +29,7 @@ header {
 .blog-card strong,
 .blog-card a,
 .blog-card a * {
-  color: white;
+  color: var(--text);
 }
 
 .blog-card .title {
@@ -65,7 +65,7 @@ header {
 .blog-card .profile img {
   margin: 0;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
   max-width: 100%;
 }
 
@@ -80,7 +80,7 @@ header {
   margin: 10px auto;
   display: block;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
 }
 .blog-card img.emoji {
   display: inline;
@@ -91,14 +91,14 @@ header {
 .blog-card video {
   width: 100%;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
 }
 
 .blog-card iframe {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
 }
 /* Fallback for aspect-ratio since it's unsupported by some browsers (looking at you Safari) */
 @supports not (aspect-ratio: 16/9) {
@@ -123,12 +123,11 @@ header {
   background: #31375e;
   margin-bottom: 30px;
   overflow: hidden;
-  color: var(--text-secondary);
 }
 .blog-card table th {
   padding: 8px 12px;
   background: #3f4778;
-  color: white;
+  color: var(--text);
 }
 .blog-card table td {
   padding: 8px 12px;
