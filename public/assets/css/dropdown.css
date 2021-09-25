@@ -1,6 +1,6 @@
 .select-box {
   display: flex;
-  width: 200px;
+  width: 188px;
   flex-direction: column;
   position: relative;
   user-select: none;

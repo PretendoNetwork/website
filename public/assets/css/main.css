@@ -8,6 +8,7 @@
 	--theme: var(--btn);
 	--theme-light: #A185D6;
 	--text-secondary-2: #8990C1;
+	--border: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -17,11 +18,12 @@ body {
 body, .main-body {
 	width: 100%;
 	max-width: 100vw;
+	position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
+	overflow-x: hidden;
 	margin: 0;
 	color: var(--text);
 	justify-content: center;
 	font-family: Poppins, Arial, Helvetica, sans-serif;
-	overflow-x: hidden;
 }
 
 .animateDot {
@@ -324,7 +326,13 @@ section.faq {
 	color: var(--text-secondary-2);
 }
 .question-and-answer .text a {
-	color: white;
+	color: #9d6ff3;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.question-and-answer .text a:hover {
+	text-decoration: underline;
 }
 
 section.team {
@@ -571,6 +579,10 @@ footer {
 		display: none;
 	}
 
+	header .logo-link {
+		margin-right: 20px;
+	}
+
 	.hero-meta {
 		margin-top: 100px;
 	}
@@ -659,7 +671,7 @@ footer {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
 	.selected-locale .locale-names {
 		display: none;
 	}
@@ -670,17 +682,40 @@ footer {
 		margin-right: 12px;
 	}
 
+	.locale-dropdown {
+		width: fit-content;
+	}
+
+	.select-box .options-container {
+		width: 150px;
+		right: 12px;
+	}
+
 }
 
-@media screen and (max-width: 400px) {
-	.select-box .options-container {
-	width: 125px;
-	right: 12px;
+@media screen and (max-width: 480px) {
+	header .logo-link svg text {
+		display: none;
+	}
+
+	header .logo-link svg {
+		width: 39.876px;
+	}
+
+	header .logo-link {
+		margin-right: 10px;
+	}
+	header nav a {
+		margin: 0 10px;
 	}
 }
 
 @media screen and (max-width: 330px) {
-	.locale-dropdown {
+	.locale-dropdown .selected-locale {
+		width: 50px;
+	}
+	.locale-dropdown .selected-locale::after {
 		display: none;
 	}
+
 }

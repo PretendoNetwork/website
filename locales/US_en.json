@@ -3,7 +3,8 @@
 		"about": "About",
 		"faq": "FAQ",
 		"credits": "Credits",
-		"progress": "Progress"
+		"progress": "Progress",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Game servers",
@@ -135,6 +136,10 @@
 	"progressPage": {
 		"title": "Our progress",
 		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Here we have our lovely blog, which we all love so very much."
 	},
 	"localizationPage": {
 		"title": "Let's localize",
