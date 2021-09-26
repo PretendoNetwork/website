@@ -131,9 +131,12 @@ header {
     border: 0;
   }
 }
-/* This fixes the double border for twitter iframes */
+/* Some twitter iframe specific stuff */
+.blog-card .twitter-tweet {
+  margin: auto;
+}
 .blog-card .twitter-tweet iframe {
-  border: none; 
+  border: none; /* Fixes the double border */
 }
 
 .blog-card table {

@@ -64,7 +64,7 @@
 
 .blog-card .cover {
   flex: 50%;
-  border: 1px solid #151934;
+  border: 3px solid #151934;
   border-radius: 0 10px 10px 0;
 }
 
@@ -80,7 +80,7 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .blog-card {
     flex-flow: column;
   }
@@ -89,6 +89,13 @@
   }
   .blog-card .cover {
     order: -1;
+    min-height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .blog-card .cover {
     min-height: 200px;
   }
 }
