@@ -167,6 +167,15 @@ img.emoji {
 .progress-hero .text {
 	max-width: 423px;
 }
+.progress-hero .text a {
+	color: #9d6ff3;
+	text-decoration: none;
+	font-weight: bold;
+}
+.progress-hero .text a:hover {
+	text-decoration: underline;
+}
+
 .hero-meta {
 	margin-top: 25vh;
 }

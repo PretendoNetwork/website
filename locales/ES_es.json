@@ -136,6 +136,10 @@
 		"title": "Progreso",
 		"description": "¡Comprueba el progreso y las metas pendientes! (Se actualiza cada hora, así que no refleja TODAS nuestras metas o el progreso total)"
 	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
 	"localizationPage": {
 		"title": "Let's localize",
 		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",

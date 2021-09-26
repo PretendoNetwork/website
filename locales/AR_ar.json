@@ -136,6 +136,10 @@
 		"title": "تقدمنا",
 		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
 	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
 	"localizationPage": {
 		"title": "Let's localize",
 		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",

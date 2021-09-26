@@ -54,6 +54,7 @@
   color: var(--text);
   align-items: center;
   height: 32px;
+  margin-right: 0.3em;
 }
 .blog-card .profile img {
   border-radius: 4px;
@@ -63,6 +64,20 @@
 
 .blog-card .cover {
   flex: 50%;
+  border: 1px solid #151934;
+  border-radius: 0 10px 10px 0;
+}
+
+.progress-hero a,
+.progress-hero a * {
+  color: #9d6ff3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.progress-hero a:hover,
+.progress-hero a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {

@@ -75,6 +75,7 @@ header {
   color: var(--text);
   align-items: center;
   height: 32px;
+  margin-right: 0.3em;
 }
 .blog-card .profile img {
   margin: 0;
@@ -129,6 +130,10 @@ header {
     height: 100%;
     border: 0;
   }
+}
+/* This fixes the double border for twitter iframes */
+.blog-card .twitter-tweet iframe {
+  border: none; 
 }
 
 .blog-card table {
