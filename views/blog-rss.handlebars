@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+    <title>Pretendo Network Blog</title>
+    <link>https://pretendo.network/blog</link>
+    <atom:link href="https://pretendo.network/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>The latest updates in condensed chunks.</description>
+    <pubDate>{{ this.pubDate }}</pubDate>
+    <category>Web development</category>
+    <image>
+        <url>https://pretendo.network/assets/images/opengraph/opengraph-image.png</url>
+        <title>Pretendo Network Blog</title>
+        <link>https://pretendo.network/blog</link>
+    </image>
+
+    {{#each postList }}
+    <item>
+         <title>{{ this.postInfo.title }}</title>
+        <link>https://pretendo.network/blog/{{this.slug}}</link>
+        <description>{{ this.postInfo.caption }}</description>
+        <guid>https://pretendo.network/blog/{{this.slug}}</guid>
+    </item>
+    {{/each}}
+
+</channel>
+
+</rss>

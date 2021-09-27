@@ -8,17 +8,11 @@ const path = require('path');
 const marked = require('marked');
 const matter = require('gray-matter');
 
-router.get('/', async (request, response) => {
-
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
-
-	const fileList = fs.readdirSync('blogposts');
+const postList = () => {
+	const files = fs.readdirSync('blogposts');
 
 	// We get the info for each blogpost, ignoring the ones starting with _
-	const postList = fileList
+	const posts = files
 		.filter(filename => !filename.startsWith('_'))
 		.filter(filename => filename.endsWith('.md')) // Ignores other files/folders
 		.map((filename) => {
@@ -30,15 +24,38 @@ router.get('/', async (request, response) => {
 			};
 		});
 
-	postList.sort((a, b) => {
+	posts.sort((a, b) => {
 		return new Date(b.postInfo.date) - new Date(a.postInfo.date);
 	});
+
+	return posts;
+};
+
+router.get('/', async (request, response) => {
+
+	const reqLocale = request.locale;
+	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+
+	const localeString = reqLocale.toString();
 
 	response.render('blog', {
 		layout: 'main',
 		locale,
 		localeString,
 		postList
+	});
+});
+
+// RSS feed
+router.get('/feed.xml', async (request, response) => {
+
+	const pubDate = new Date(postList()[0].postInfo.date).toUTCString();
+
+	response.set('Content-Type', 'application/rss+xml');
+	response.render('blog-rss', {
+		layout: false,
+		postList,
+		pubDate
 	});
 });
 

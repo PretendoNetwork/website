@@ -25,7 +25,11 @@ header {
 .blog-card h3,
 .blog-card h4,
 .blog-card h5,
-.blog-card h6,
+.blog-card h6 {
+  margin: 40px 0 10px;
+  color: var(--text);
+}
+
 .blog-card strong {
   color: var(--text);
 }
