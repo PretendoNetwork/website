@@ -49,13 +49,16 @@ router.get('/', async (request, response) => {
 // RSS feed
 router.get('/feed.xml', async (request, response) => {
 
-	const pubDate = new Date(postList()[0].postInfo.date).toUTCString();
+	// Adds the pubDate to the post array
+	const posts = postList().map((post) => {
+		post.postInfo.pubDate = new Date(post.postInfo.date).toUTCString();
+		return post;
+	});
 
 	response.set('Content-Type', 'application/rss+xml');
 	response.render('blog-rss', {
 		layout: false,
-		postList,
-		pubDate
+		posts
 	});
 });
 

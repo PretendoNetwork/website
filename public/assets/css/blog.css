@@ -80,6 +80,20 @@
   text-decoration: underline;
 }
 
+.buttons {
+  margin: 10vh auto;
+  width: min-content;
+}
+.buttons button.secondary.icon-btn {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+footer {
+  margin-top: 160px;
+}
+
 @media screen and (max-width: 900px) {
   .blog-card {
     flex-flow: column;
@@ -91,6 +105,9 @@
     order: -1;
     min-height: 250px;
     border-radius: 10px 10px 0 0;
+  }
+  footer {
+    margin-top: 100px;
   }
 }
 
