@@ -107,16 +107,34 @@
 				"github": "https://github.com/mrjvs"
 			},
 			{
-				"name": "Benjamin Moss (kxpler442b)",
+				"name": "Monty",
 				"caption": "Web development",
-				"picture": "https://github.com/kxpler442b.png",
-				"github": "https://github.com/kxpler442b"
+				"picture": "https://github.com/montylion.png",
+				"github": "https://github.com/montylion"
 			},
 			{
 				"name": "Jip Fr",
 				"caption": "Web development",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS dev and NEX dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Provider of dumps",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS research and patch development",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "Shutterbug2000",
