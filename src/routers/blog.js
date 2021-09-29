@@ -49,9 +49,10 @@ router.get('/', async (request, response) => {
 // RSS feed
 router.get('/feed.xml', async (request, response) => {
 
-	// Adds the pubDate to the post array
+	// Adds the pubDate and the cover_extension to the post array
 	const posts = postList().map((post) => {
 		post.postInfo.pubDate = new Date(post.postInfo.date).toUTCString();
+		post.postInfo.cover_extension = post.postInfo.cover_image.substring(post.postInfo.cover_image.lastIndexOf('.') + 1);
 		return post;
 	});
 

@@ -22,6 +22,7 @@
         <link>https://pretendo.network/blog/{{this.slug}}</link>
         <guid>https://pretendo.network/blog/{{this.slug}}</guid>
         <pubDate>{{ this.postInfo.pubDate }}</pubDate>
+        <enclosure url="{{ this.postInfo.cover_image }}" length="0" type="image/{{ this.postInfo.cover_extension }}"/>
     </item>
     {{/each}}
 
