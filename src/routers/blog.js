@@ -17,10 +17,14 @@ const postList = () => {
 		.filter(filename => filename.endsWith('.md')) // Ignores other files/folders
 		.map((filename) => {
 			const slug = filename.replace('.md', '');
-			const rawPost = fs.readFileSync(path.join('blogposts', `${filename}`), 'utf-8');
+			const rawPost = fs.readFileSync(
+				path.join('blogposts', `${filename}`),
+				'utf-8'
+			);
 			const { data: postInfo } = matter(rawPost);
 			return {
-				slug, postInfo
+				slug,
+				postInfo,
 			};
 		});
 
@@ -63,7 +67,7 @@ router.get('/feed.xml', async (request, response) => {
 	});
 });
 
-router.get('/:slug', async (request, response) => {
+router.get('/:slug', async (request, response, next) => {
 
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
@@ -79,12 +83,18 @@ router.get('/:slug', async (request, response) => {
 		rawPost = fs.readFileSync(path.join('blogposts', `${postName}.md`), 'utf-8');
 	} catch(err) {
 		logger.error(err);
-		response.sendStatus(404);
-		logger.warn(`HTTP 404 at /blog/${postName}`);
+		next();
 		return;
 	}
 	// Convert the post info into JSON and separate it and the content
-	const { data: postInfo, content } = matter(rawPost);
+	// eslint-disable-next-line prefer-const
+	let { data: postInfo, content } = matter(rawPost);
+
+	// Replace [yt-iframe](videoID) with the full <iframe />
+	content = content
+		.replaceAll(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
+		.replaceAll(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+
 	// Convert the content into HTML
 	const htmlPost = marked(content);
 
@@ -93,7 +103,7 @@ router.get('/:slug', async (request, response) => {
 		locale,
 		localeString,
 		postInfo,
-		htmlPost		
+		htmlPost,
 	});
 });
 
