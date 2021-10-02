@@ -111,5 +111,5 @@ app.set('view engine', 'handlebars');
 
 logger.info('Starting server');
 app.listen(port, () => {
-	logger.success(`Server listening on *:${port}`);
+	logger.success(`Server listening on http://localhost:${port}`);
 });
