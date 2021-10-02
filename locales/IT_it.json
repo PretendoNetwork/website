@@ -106,16 +106,34 @@
 				"github": "https://github.com/mrjvs"
 			},
 			{
+				"name": "Jip Fr",
+				"caption": "Sviluppo web principale",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
 				"name": "Monty",
 				"caption": "Sviluppo web",
 				"picture": "https://github.com/montylion.png",
 				"github": "https://github.com/montylion"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Sviluppo web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
+				"name": "Stary",
+				"caption": "Sviluppo 3DS e strumento di analisi NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Fornitore di dump",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "quarky",
+				"caption": "Ricerca BOSS e sviluppo patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "Shutterbug2000",
