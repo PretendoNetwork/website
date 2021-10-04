@@ -44,6 +44,7 @@ app.use(expressLocale({
 		it: 'it-IT', 'it-CH': 'it-IT',
 		ko: 'ko-KR',
 		pt: 'pt-BR',
+		ro: 'ro-RO',
 		ru: 'ru-RU',
 		tr: 'tr-TR'
 	},
@@ -56,6 +57,7 @@ app.use(expressLocale({
 		'it', 'it-IT', 'it-CH',
 		'ko', 'ko-KR',
 		'pt', 'pt-BR',
+		'ro', 'ro-RO',
 		'ru', 'ru-RU',
 		'tr', 'tr-TR',
 	],
