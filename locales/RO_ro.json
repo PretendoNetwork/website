@@ -30,23 +30,23 @@
 	},
 	"faq": {
 		"title": "Întrebări Puse Frecvent",
-		"text": "Here are some common questions we're asked for easy information.",
+		"text": "Aici sunt câteva întrebări puse frecvent pentru informații simple.",
 		"QAs": [
 			{
-				"question": "What is Pretendo?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+				"question": "Ce este Pretendo?",
+				"answer": "Pretendo este un înlocuitor open source al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
 			},
 			{
-				"question": "Will my existing NNIDs work on Pretendo?",
-				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+				"question": "Va merge NNID-ul meu pe Pretendo?",
+				"answer": "Din păcate, nu. NNID-urile existente nu vor funcționa pe Pretendo, deoarece numai Nintendo deține datele tale; chiar dacă o migrație NNID către PNID este teoretic posibilă, asta ar fi riscant și poate conține date sensibile ale utilizatorilor pe care nu le dorim să le avem."
 			},
 			{
-				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"question": "Cum folosesc Pretendo?",
+				"answer": "Pretendo nu este momentan într-un stadiu pregătit pentru uzul public. Dar, odată ce este gata poți folosi Pretendo doar dacă rulezi patcher-ul nostru pe consola ta."
 			},
 			{
-				"question": "Do you know when <feature/service> will be ready?",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+				"question": "Știți când <caracteristică/serviciu> va fi gata?",
+				"answer": "Nu. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
