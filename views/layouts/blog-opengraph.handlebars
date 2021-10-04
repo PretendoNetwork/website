@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- general -->
+		<title>Pretendo Network</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="manifest" href="/assets/site.webmanifest">
+		<meta name="msapplication-config" content="/assets/browserconfig.xml">
+		
+		<!-- windows/ios/chrome -->
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="apple-mobile-web-app-title" content="Pretendo Network">
+		<meta name="application-name" content="Pretendo Network">
+		<meta name="msapplication-TileColor" content="#1b1f3b">
+		<meta name="theme-color" content="#1b1f3b">
+		
+		<!-- open graph/embeds -->
+		<meta property="og:title" content="{{ postInfo.title }} | Pretendo Network Blog">
+		<meta property="og:description" content="{{ postInfo.caption }}">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://pretendo.network/">
+		<meta property="og:image" content="{{ postInfo.cover_image }}">
+		<meta property="og:image:alt" content="Pretendo Network">
+		<meta property="og:site_name" content="Pretendo Network">
+		
+		<!-- twitter embeds -->
+		<meta name="twitter:url" content="https://pretendo.network/">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@PretendoNetwork">
+		<meta name="twitter:title" content="{{ postInfo.title }} | Pretendo Network Blog">
+		<meta name="twitter:description" content="{{ postInfo.caption }}">
+		<meta name="twitter:image" content="{{ postInfo.cover_image }}">
+				
+		<!-- google seo -->
+		<meta name="description" content="An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles">
+		<meta name="robots" content="index, follow">
+
+		<!-- RSS feed -->
+		<link rel="alternate" type="application/rss+xml" title="Pretendo Network Blog" href="/blog/feed.xml">
+		
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+		<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#1b1f3b">
+		<link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+
+		<!-- css files -->
+		<link rel="stylesheet" href="/assets/css/dropdown.css" />
+		<link rel="stylesheet" href="/assets/css/main.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+		<!-- Twemoji setup -->
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<script>
+			window.onload = function() {
+				twemoji.parse(document.body, {folder: 'svg', ext: '.svg'});
+			}
+		</script>
+
+		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ea6695987d664a7f90874c9c0dee9385"}'></script><!-- End Cloudflare Web Analytics -->
+	</head>
+	<body>
+		<div class="main-body">
+			{{{ body }}}
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+		<script src="/assets/js/progress-charts.js"></script>
+		<script src="/assets/js/locale-dropdown-handler.js"></script>
+		<script>setDefaultDropdownLocale("{{localeString}}")</script>
+
+	</body>
+</html>

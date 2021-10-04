@@ -99,7 +99,7 @@ router.get('/:slug', async (request, response, next) => {
 	const htmlPost = marked(content);
 
 	response.render('blogpost', {
-		layout: 'main',
+		layout: 'blog-opengraph',
 		locale,
 		localeString,
 		postInfo,
