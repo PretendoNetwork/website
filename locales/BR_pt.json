@@ -159,11 +159,11 @@
 		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "Vamos traduzir",
+		"description": "Cole um link para um arquivo JSON acessível publicamente para testá-lo no site",
+		"instructions": "Veja as instruções de localização e tradução",
+		"fileInput": "Arquivo para testar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "Testar aqui"
 	}
 }
