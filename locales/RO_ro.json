@@ -9,7 +9,7 @@
 	"hero": {
 		"subtitle": "Servere de Jocuri",
 		"title": "Recreate",
-		"text": "Pretendo este un înlocuitor open source pentru serverele Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
+		"text": "Pretendo este un înlocuitor gratuit pentru serverele Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
 		"buttons": {
 			"readMore": "Citiți mai multe"
 		}
@@ -34,7 +34,7 @@
 		"QAs": [
 			{
 				"question": "Ce este Pretendo?",
-				"answer": "Pretendo este un înlocuitor open source al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
+				"answer": "Pretendo este un înlocuitor gratuit al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
 			},
 			{
 				"question": "Va merge NNID-ul meu pe Pretendo?",
@@ -61,8 +61,8 @@
 				"answer": "Wii are deja servere personalizate furnizate de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Deocamdată nu dorim să ne legăm de Switch deoarece costă și este diferit de Nintendo Network."
 			},
 			{
-				"question": "Va trebui să îmi hackuiesc consola?",
-				"answer": "Da, va trebui să-ți hackuiești consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploatarea de pe web browser), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
+				"question": "Va trebui să îmi modific consola?",
+				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploatarea de pe web browser), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
 			}
 		]
 	},
