@@ -8,7 +8,7 @@
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
-		"title": "Recreat",
+		"title": "Recreate",
 		"text": "Pretendo este un înlocuitor open source pentru serverele Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
 		"buttons": {
 			"readMore": "Citiți mai multe"
@@ -50,11 +50,11 @@
 			},
 			{
 				"question": "Funcționează Pretendo pe Cemu/emulatoare?",
-				"answer": "Pretendo este făcut pentru consolele Wii U și 3DS pa suflet; momentan singurul emulator pentru aceste console cu suport NN este Cemu. Cemu nu suportă oficial servere personalizate, dar to este posibil să folosiți Pretendo cu Cemu.<br>Pretendo nu suportă momentan Cemu."
+				"answer": "Pretendo este făcut pentru consolele Wii U și 3DS la suflet; momentan singurul emulator pentru aceste console cu suport NN este Cemu. Cemu nu suportă oficial servere personalizate, dar tot este posibil să folosiți Pretendo cu Cemu.<br>Pretendo nu suportă momentan Cemu."
 			},
 			{
 				"question": "Dacă sunt restricționat de pe Nintendo Network, o să rămân restricționat și pe Pretendo?",
-				"answer": "Nu vom avea acces la restricțiile de pe Nintendo Network, și nici un utilizator nu va fi restricționat de pe Pretendo. Însă, vom avea reguli de urmat când folosești serviciul și nerespectarea regulilor poate duce la o restricție."
+				"answer": "Nu vom avea acces la restricțiile de pe Nintendo Network, și nici un utilizator nu va fi restricționat de pe Pretendo. Însă, vom avea reguli de urmat când folosești serviciul iar nerespectarea regulilor poate duce la o restricție."
 			},
 			{
 				"question": "Va avea Pretendo suport pentru Wii/Switch?",
@@ -161,7 +161,7 @@
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
-		"description": "Inserați un link către un JSON public accesibil pentru a testa pe website",
+		"description": "Inserați un link către un JSON public accesibil pentru a testa traducerea pe website",
 		"instructions": "Vedeți instrucțiunile de localizare",
 		"fileInput": "Fișier pentru a testa",
 		"filePlaceholder": "https://a.link.to/the_file.json",
