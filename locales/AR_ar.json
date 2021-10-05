@@ -107,7 +107,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "قائد مطور الويب",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -119,19 +119,19 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "مبرمج و مففك ال3 دي اس و نكس",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Provider of dumps",
+				"caption": "مزود مقالب",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "مباحث البوس و مبرمج التصحيحات",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -155,15 +155,16 @@
 		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
 	},
 	"blogPage": {
-		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"title": "البلوج",
+		"description": " آخر التحديثات في أجزاء مكثفة.  إذا كنت ترغب في رؤية المزيد من التحديثات المتكررة ، ففكر في دعمنا على <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\"> Patreon </a>. "
 	},
+		
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "!لنترجم",
+		"description": "الصق رابطا إلي لغة الزيسون يمكن الوصول إليها بشكل عام لاختبارها على موقع الويب",
+		"instructions": "أظهر خطوات الترجمة",
+		"fileInput": "الملف للتجبرة",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "جرف الملف"
 	}
 }
