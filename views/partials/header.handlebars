@@ -1,6 +1,6 @@
 <header>
 	<a href="/" class="logo-link">
-		<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876" viewBox="0 0 120 39.876">
+		<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
 			<g id="logo_type" data-name="logo type" transform="translate(-553 -467)">
 				<g id="logo" transform="translate(553 467)">
 					<rect id="XMLID_158_" width="39.876" height="39.876" fill="#9d6ff3" opacity="0" />
@@ -29,40 +29,76 @@
 		<a href="/#faq">{{ locale.nav.faq }}</a>
 		<a href="/#credits">{{ locale.nav.credits }}</a>
 		<a href="/progress" class="keep-on-mobile">{{ locale.nav.progress }}</a>
+		<a href="/blog" class="keep-on-mobile">{{ locale.nav.blog }}</a>
 	</nav>
 
+	<!-- Ordered the locales in the same way YouTube's language selector orders them -->
 	<div class="select-box locale-dropdown" data-dropdown>
 		<div class="options-container">
 			<div class="option">
 				<input type="radio" class="radio" id="en-US" name="category" />
 				<label for="en-US">
-					<div class="item"><span class="lang">🇺🇸</span>English</div>
+					<div class="item"><span class="lang">🇺🇸</span><span class="locale-names">English</span></div>
 				</label>
 			</div>
-
+			<div class="option">
+				<input type="radio" class="radio" id="de-DE" name="category" />
+				<label for="de-DE">
+					<div class="item"><span class="lang">🇩🇪</span><span class="locale-names">Deutsch</span></div>
+				</label>
+			</div>
 			<div class="option">
 				<input type="radio" class="radio" id="es-ES" name="category" />
 				<label for="es-ES">
-					<div class="item"><span class="lang">🇪🇸</span>Español</div>
+					<div class="item"><span class="lang">🇪🇸</span><span class="locale-names">Español</span></div>
 				</label>
 			</div>
-
+			<div class="option">
+				<input type="radio" class="radio" id="fr-FR" name="category" />
+				<label for="fr-FR">
+					<div class="item"><span class="lang">🇫🇷</span><span class="locale-names">Français</span></div>
+				</label>
+			</div>
 			<div class="option">
 				<input type="radio" class="radio" id="it-IT" name="category" />
 				<label for="it-IT">
-					<div class="item"><span class="lang">🇮🇹</span>Italiano</div>
+					<div class="item"><span class="lang">🇮🇹</span><span class="locale-names">Italiano</span></div>
 				</label>
 			</div>
 			<div class="option">
-				<input type="radio" class="radio" id="ru-RU" name="category" />
-				<label for="ru-RU">
-					<div class="item"><span class="lang">🇷🇺</span>Pусский</div>
+				<input type="radio" class="radio" id="pt-BR" name="category" />
+				<label for="pt-BR">
+					<div class="item"><span class="lang">🇧🇷</span><span class="locale-names">Português</span></div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ro-RO" name="category" />
+				<label for="ro-RO">
+					<div class="item"><span class="lang">🇷🇴</span><span class="locale-names">Română</span></div>
 				</label>
 			</div>
 			<div class="option">
 				<input type="radio" class="radio" id="tr-TR" name="category" />
 				<label for="tr-TR">
-					<div class="item"><span class="lang">🇹🇷</span>Türkçe</div>
+					<div class="item"><span class="lang">🇹🇷</span><span class="locale-names">Türkçe</span></div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ru-RU" name="category" />
+				<label for="ru-RU">
+					<div class="item"><span class="lang">🇷🇺</span><span class="locale-names">Pусский</span></div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ar-AR" name="category" />
+				<label for="ar-AR">
+					<div class="item"><span class="lang">🇸🇦</span><span class="locale-names">اَلْعَرَبِيَّةُ</span></div>
+				</label>
+			</div>
+			<div class="option">
+				<input type="radio" class="radio" id="ko-KR" name="category" />
+				<label for="ko-KR">
+					<div class="item"><span class="lang">🇰🇷</span><span class="locale-names">한국어</span></div>
 				</label>
 			</div>
 		</div>
