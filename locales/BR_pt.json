@@ -16,7 +16,7 @@
 	"aboutUs": {
 		"title": "Sobre nós",
 		"paragraphs": [
-			"Utilizando do design de sala limpa, Pretendo é um projeto de código aberto que visa recriar a Nintendo Network para o Wii U e para família de consoles Nintendo 3DS.",
+			"Utilizando o design de sala limpa, Pretendo é um projeto de código aberto que visa recriar a Nintendo Network para o Wii U e para família de consoles Nintendo 3DS.",
 			"Como os nossos serviços serão gratuitos e de código aberto, eles podem continuar existindo por muito mais tempo após o inevitável encerramento da Nintendo Network."
 		]
 	},
@@ -33,7 +33,7 @@
 		"QAs": [
 			{
 				"question": "O que é Pretendo?",
-				"answer": "Pretendo é uma reposição de código aberto para a Nintendo Network que visa fornecer servidores personalizados para o Wii U e a família de consoles Nintendo 3DS. Nosso objetivo é preservar as funcionalidades online desses consoles para permitir que os jogadores continuem experienciando seus jogos favoritos em sua capacidade máxima."
+				"answer": "Pretendo é uma reposição de código aberto para a Nintendo Network que visa fornecer servidores personalizados para o Wii U e para a família de consoles Nintendo 3DS. Nosso objetivo é preservar as funcionalidades online desses consoles para permitir que os jogadores continuem experienciando seus jogos favoritos em sua capacidade máxima."
 			},
 			{
 				"question": "Meus NNIDs existentes funcionarão na Pretendo?",
@@ -41,27 +41,27 @@
 			},
 			{
 				"question": "Como eu uso a Pretendo?",
-				"answer": "Pretendo atualmente não está disponível em um estado para uso pelo público geral. No entanto, quando estiver pronto, você poderá usar a Pretendo executando nosso patcher homebrew no seu console."
+				"answer": "Pretendo atualmente não está disponível para uso pelo público geral. No entanto, quando estiver pronto, você poderá usar a Pretendo executando nosso patcher homebrew no seu console."
 			},
 			{
 				"question": "Você sabe quando recurso / serviço estará pronto?",
-				"answer": "Não. Muitos dos recursos e serviços da Pretendo são desenvolvidos de forma independente (por exemplo, o Miiverse pode ser trabalhado por um desenvolvedor enquanto as contas e lista de amigos são trabalhados por outro) e, portanto, não podemos fornecer uma data estimada de quanto tempo isso levará."
+				"answer": "Não. Muitos dos recursos e serviços da Pretendo são desenvolvidos de forma independente (por exemplo, o Miiverse pode ser trabalhado por um desenvolvedor enquanto as contas e lista de amigos são trabalhados por outro) e, portanto, não podemos estimar quanto tempo isso pode levar."
 			},
 			{
-				"question": "A Pretendo funciona em emualdores?",
+				"question": "A Pretendo funciona em emuladores?",
 				"answer": "Pretendo é primariamente projetado para o Wii U e Nintendo 3DS; no momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu oficialmente não fornece suporte a servidores personalizados, mas ainda deve ser possível usar a Pretendo com o Cemu.<br>A Pretendo não oferece suporte ao Cemu no momento."
 			},
 			{
 				"question": "Se eu for banido da Nintendo Network, continuarei banido ao usar a Pretendo?",
-				"answer": "Não temos acesso aos banimentos da Nintendo Network e nem todos os usuários serão banidos do nosso serviço. No entanto, teremos regras quem devem ser seguidas ao utilizar o serviço e o não cumprimento dessas regras pode resultar em um banimento."
+				"answer": "Não temos acesso aos banimentos da Nintendo Network e nem todos os usuários serão banidos do nosso serviço. No entanto, teremos regras que devem ser seguidas ao utilizar o serviço e o não cumprimento dessas regras pode resultar em um banimento."
 			},
 			{
-				"question": "Pretendo terá suporte ao Wii / Nintendo Switch?",
+				"question": "Pretendo terá suporte ao Wii ou Nintendo Switch?",
 				"answer": "O Wii já possui servidores personalizados fornecidos pelo <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No momento, não temos interesse em direcionar o projeto ao Nintendo Switch, pois ele oferece um serviço pago e completamente diferente da Nintendo Network."
 			},
 			{
 				"question": "Terei de desbloquear meu console para me conectar?",
-				"answer": "Sim, você precisará desbloquear seu console para se conectar; no entanto, no Wii U você só precisará acessar o Homebrew Launcher (ou seja, Haxchi, Coldboot Haxchi ou até mesmo o exploit do navegador de internet), informações sobre como consoles Nintendo 3DS se conectarão serão fornecidas em uma data posterior."
+				"answer": "Sim, você precisará desbloquear seu console para se conectar; no entanto, no Wii U você só precisará acessar o Homebrew Launcher (ou seja, Haxchi, Coldboot Haxchi ou até mesmo o exploit do navegador de internet), informações sobre como os consoles Nintendo 3DS se conectarão serão fornecidas em um momento posterior."
 			}
 		]
 	},
@@ -119,7 +119,7 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "Desenvolvimento 3DS e dissector NEX",
+				"caption": "Desenvolvimento do 3DS e dissector NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
@@ -144,7 +144,7 @@
 			{
 				"name": "Kinnay",
 				"special": "Agradecimentos especiais",
-				"caption": "Pesquisa em estruturas de dados da Nintendo",
+				"caption": "Pesquisa da estruturas de dados da Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			}
