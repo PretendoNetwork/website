@@ -3,7 +3,8 @@
 		"about": "Info",
 		"faq": "FAQ",
 		"credits": "Riconoscimenti",
-		"progress": "Progresso"
+		"progress": "Progresso",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Server online",
@@ -82,10 +83,16 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "superwhiskers",
-				"caption": "Sviluppo libreria crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
+				"name": "Rambo6Glaz",
+				"caption": "Installer di rete e ricerca su console",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "Ricerca BOSS e sviluppo patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -94,28 +101,47 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Installer di rete e ricerca su console",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"name": "Jip Fr",
+				"caption": "Sviluppo web principale",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Monty",
+				"caption": "Sviluppo web",
+				"picture": "https://github.com/montylion.png",
+				"github": "https://github.com/montylion"
 			},
 			{
 				"name": "mrjvs",
 				"caption": "Sviluppo web e ricerca iniziale su eShop",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Ringraziamenti speciali",
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
+		"people": [
+
+			{
+				"name": "superwhiskers",
+				"caption": "Sviluppo libreria crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
 			{
-				"name": "Benjamin Moss (kxpler442b)",
-				"caption": "Sviluppo web",
-				"picture": "https://github.com/kxpler442b.png",
-				"github": "https://github.com/kxpler442b"
+				"name": "Stary",
+				"caption": "Sviluppo 3DS e strumento di analisi NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Sviluppo web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
+				"name": "Billy",
+				"caption": "Conservazionista",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -135,5 +161,17 @@
 	"progressPage": {
 		"title": "Il nostro progresso",
 		"description": "Controlla il progresso del progetto e gli obiettivi! (Aggiornato circa ogni ora, non riflette TUTTI gli obiettivi e il progresso del progetto)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"localizationPage": {
+		"title": "Localizziamo",
+		"description": "Incolla il link di una localizzazione in formato JSON accessibile al pubblico per testarla sul sito",
+		"instructions": "Vedi le istruzioni su come localizzare",
+		"fileInput": "File da testare",
+		"filePlaceholder": "https://il.link.di/un_file.json",
+		"button": "Testa file"
 	}
 }

@@ -3,7 +3,8 @@
 		"about": "About",
 		"faq": "FAQ",
 		"credits": "Credits",
-		"progress": "Progress"
+		"progress": "Progress",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Game servers",
@@ -82,10 +83,16 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "superwhiskers",
-				"caption": "crunch library development",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
+				"name": "Rambo6Glaz",
+				"caption": "Network installer and console research",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS research and patch development",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -94,28 +101,46 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Network installer and console research",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"name": "Jip Fr",
+				"caption": "Web development lead",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "Monty",
+				"caption": "Web development",
+				"picture": "https://github.com/montylion.png",
+				"github": "https://github.com/montylion"
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Web development and early eShop research",
+				"caption": "Designer",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Special thanks",
+		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "crunch library development",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
 			{
-				"name": "Benjamin Moss (kxpler442b)",
-				"caption": "Web development",
-				"picture": "https://github.com/kxpler442b.png",
-				"github": "https://github.com/kxpler442b"
+				"name": "Stary",
+				"caption": "3DS dev and NEX dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Web development",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
+				"name": "Billy",
+				"caption": "Preservationist",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -135,5 +160,17 @@
 	"progressPage": {
 		"title": "Our progress",
 		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"localizationPage": {
+		"title": "Let's localize",
+		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
+		"instructions": "View localization instructions",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
 	}
 }

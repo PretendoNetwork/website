@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/assets/css/localization.css" />
+
+<div class="wrapper">
+
+	{{> header}}
+
+	<div class="localization-wrapper">
+		<div class="localization-widget">
+			<h1 class="title dot">{{ locale.localizationPage.title }}</h1>
+			<p class="caption">{{ locale.localizationPage.description }}</p>
+			<a href="https://github.com/PretendoNetwork/Pretendo/blob/master/CONTRIBUTING.md#localization" target="_blank"  class="localization-instr">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--theme-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+				{{ locale.localizationPage.instructions }}
+			</a>
+			<form class="localization-form" autocomplete="off">
+				<label for="url">{{ locale.localizationPage.fileInput }}</label>
+				<div class="input-wrapper">
+					<input type="url" id="url" placeholder="{{ locale.localizationPage.filePlaceholder }}" required />
+					<button type="submit" class="submit-btn">{{ locale.localizationPage.button }}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{> footer }}
+
+<script src="/assets/js/locale-tester-handler.js" />
