@@ -83,28 +83,22 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "superwhiskers",
-				"caption": "Dezvoltare librărie crunch ",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Cercetare console și alte sisteme",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
 				"name": "Rambo6Glaz",
 				"caption": "Instalator Conexiune și cercetare consolă",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Dezvoltare web și cercetare eShop",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "quarky",
+				"caption": "Cercetare BOSS și dezvoltare patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Cercetare console și alte sisteme",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Jip Fr",
@@ -119,6 +113,24 @@
 				"github": "https://github.com/montylion"
 			},
 			{
+				"name": "mrjvs",
+				"caption": "Dezvoltare web și cercetare eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Special thanks",
+		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "Dezvoltare librărie crunch ",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
 				"name": "Stary",
 				"caption": "Dezvolator și disector NEX",
 				"picture": "https://github.com/Stary2001.png",
@@ -129,12 +141,6 @@
 				"caption": "Furnizor de dump-uri",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "quarky",
-				"caption": "Cercetare BOSS și dezvoltare patch",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "Shutterbug2000",

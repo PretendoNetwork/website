@@ -82,28 +82,22 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "superwhiskers",
-				"caption": "Desenvolvimento da crunch library",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Pesquisa de console e outros sistemas",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
 				"name": "Rambo6Glaz",
 				"caption": "Instalador de rede e pesquisa de console",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Desenvolvimento web e pesquisa inicial da eShop",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "quarky",
+				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Pesquisa de console e outros sistemas",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Jip Fr",
@@ -118,6 +112,24 @@
 				"github": "https://github.com/montylion"
 			},
 			{
+				"name": "mrjvs",
+				"caption": "Desenvolvimento web e pesquisa inicial da eShop",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Special thanks",
+		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "Desenvolvimento da crunch library",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
 				"name": "Stary",
 				"caption": "Desenvolvimento do 3DS e dissector NEX",
 				"picture": "https://github.com/Stary2001.png",
@@ -128,12 +140,6 @@
 				"caption": "Fornecedor de dumps",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "quarky",
-				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "Shutterbug2000",
