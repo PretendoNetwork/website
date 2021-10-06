@@ -3,7 +3,8 @@
 		"about": "Info",
 		"faq": "FAQ",
 		"credits": "Riconoscimenti",
-		"progress": "Progresso"
+		"progress": "Progresso",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Server online",
