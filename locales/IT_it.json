@@ -3,7 +3,8 @@
 		"about": "Info",
 		"faq": "FAQ",
 		"credits": "Riconoscimenti",
-		"progress": "Progresso"
+		"progress": "Progresso",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Server online",
@@ -82,28 +83,22 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "superwhiskers",
-				"caption": "Sviluppo libreria crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Ricerca su console e altri sistemi",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
 				"name": "Rambo6Glaz",
 				"caption": "Installer di rete e ricerca su console",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Sviluppo web e ricerca iniziale su eShop",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "quarky",
+				"caption": "Ricerca BOSS e sviluppo patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Ricerca su console e altri sistemi",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Jip Fr",
@@ -118,6 +113,25 @@
 				"github": "https://github.com/montylion"
 			},
 			{
+				"name": "mrjvs",
+				"caption": "Desigmer",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Ringraziamenti speciali",
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
+		"people": [
+
+			{
+				"name": "superwhiskers",
+				"caption": "Sviluppo libreria crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
 				"name": "Stary",
 				"caption": "Sviluppo 3DS e strumento di analisi NEX",
 				"picture": "https://github.com/Stary2001.png",
@@ -125,15 +139,9 @@
 			},
 			{
 				"name": "Billy",
-				"caption": "Fornitore di dump",
+				"caption": "Conservazionista",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "quarky",
-				"caption": "Ricerca BOSS e sviluppo patch",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "Shutterbug2000",
