@@ -121,8 +121,8 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Ringraziamenti speciali",
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
 		"people": [
 
 			{
@@ -139,7 +139,7 @@
 			},
 			{
 				"name": "Billy",
-				"caption": "Fornitore di dump",
+				"caption": "Conservazionista",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
