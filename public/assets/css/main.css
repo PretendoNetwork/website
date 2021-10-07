@@ -220,7 +220,7 @@ img.emoji {
 	margin-top: 40px;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
 }
 .hero .buttons a {
 	display: block;
