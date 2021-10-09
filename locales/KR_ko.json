@@ -121,7 +121,7 @@
 		]
 	},
 	"specialThanks": {
-		"title": "특별한 감사",
+		"title": "Special Thanks",
 		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
 		"people": [
 			{
@@ -150,7 +150,7 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "특별한 감사",
+				"special": "Special Thanks",
 				"caption": "닌텐도 데이터 구조 연구",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
