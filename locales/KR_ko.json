@@ -90,7 +90,7 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "BOSS 연구 및 패치 개발",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -102,7 +102,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "웹 개발 주도",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -114,7 +114,7 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Designer",
+				"caption": "디자이너",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
@@ -122,7 +122,7 @@
 	},
 	"specialThanks": {
 		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -132,13 +132,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS 개발 및 NEX 해부",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "프로젝트 보존",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -150,7 +150,7 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "특별한 감사",
+				"special": "Special Thanks",
 				"caption": "닌텐도 데이터 구조 연구",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
@@ -162,15 +162,15 @@
 		"description": "프로젝트 진행률 및 목표를 확인하세요! (매시간 갱신, 모든 목표나 진행률은 공개되지 않습니다)"
 	},
 	"blogPage": {
-		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"title": "블로그",
+		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면,  <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "같이 번역해 주세요!",
+		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",
+		"instructions": "로컬라이즈",
+		"fileInput": "테스트할 파일",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "테스트 파일"
 	}
 }
