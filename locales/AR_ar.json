@@ -3,8 +3,8 @@
 		"about": "عنا",
 		"faq": "أسئلة",
 		"credits": "الفريق",
-		"progress": "تقدم",
-		"blog": "Blog"
+		"progress": "التقدم",
+		"blog": "البلوج"
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
@@ -90,7 +90,7 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "مباحث البوس و مبرمج التصحيحات",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -102,7 +102,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "مطور الويب والبحث المبكر للالمحل الإلكتروني",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -114,7 +114,7 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "مطور الويب والبحث المبكر للالمحل الإلكتروني",
+				"caption": "مصمم الويب",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
@@ -122,8 +122,8 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "شكرا خاصة",
+		"text": "من غيرهم، بريتندو لن نكن ب شكلها",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -133,13 +133,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "مبرمج و مففك ال3 دي اس و نكس",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "المحافظ",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -149,13 +149,22 @@
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
+			
 			{
 				"name": "Kinnay",
 				"special": "شكر خاص",
 				"caption": "باحث في هياكل بيانات نينتندو",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "الأشخاص العلي ديسكورد",
+				"special": "شكر خاص",
+				"caption": "للمساعدة في الترجمة و دي بج و اكثر",
+				"picture": "https://github.com/discord.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
+			
 		]
 	},
 	"progressPage": {
@@ -163,15 +172,15 @@
 		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
 	},
 	"blogPage": {
-		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"title": "البلوج",
+		"description": "آخر التحديثات في أجزاء مكثفة.  إذا كنت ترغب في رؤية المزيد من التحديثات المتكررة ، ففكر في دعمنا على <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\"> Patreon </a>. "
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "!لنترجم",
+		"description": "الصق رابطا إلي لغة الزيسون يمكن الوصول إليها بشكل عام لاختبارها على موقع الويب",
+		"instructions": "اظهر خطوات الترجمة",
+		"fileInput": "ملف للتجربة",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "جرب الملف"
 	}
 }
