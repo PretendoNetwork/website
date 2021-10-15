@@ -1,0 +1,226 @@
+.account-wrapper {
+  display: grid;
+  column-gap: 60px;
+  margin-top: 80px;
+  color: var(--text-secondary);
+}
+
+/* Account settings navbar  */
+.account-sidebar .user {
+  text-align: center;
+  margin: 55px auto;
+  width: fit-content;
+}
+.account-sidebar .user .miiname {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin: 8px 0 4px;
+}
+.account-sidebar .user .username {
+  margin: 0px;
+}
+.account-sidebar .user .mii {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background: var(--btn-secondary);
+}
+
+/* Settings */
+.settings-wrapper {
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: 50%;
+  column-gap: 20px;
+}
+.settings-wrapper a {
+  color: #9d6ff3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.settings-wrapper a:hover {
+  text-decoration: underline;
+}
+.settings-wrapper h2.section-header {
+  margin-top: 40px;
+  grid-column: 1 / 3;
+  color: var(--text);
+}
+
+.setting-card {
+  display: grid;
+  grid-template-rows: 35px repeat(2, auto);
+  row-gap: 24px;
+  position: relative;
+  border-radius: 10px;
+  background: #2a2f50;
+  padding: 48px 60px;
+}
+.setting-card * {
+  margin: 0;
+}
+.setting-card .edit {
+  color: var(--text-secondary);
+  background: #383f6b;
+  border-radius: 100%;
+  position: absolute;
+  top: 42px;
+  right: 48px;
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+}
+.setting-card .edit:hover {
+  background: #383f6b;
+  color: var(--text);
+}
+
+.setting-card .header {
+  color: var(--text);
+}
+
+.setting-card .setting-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+}
+.setting-card .setting-list p.label {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+fieldset {
+  height: min-content;
+  padding: 0;
+  border: none;
+}
+
+.setting-card .server-selection {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #383f6b;
+}
+.setting-card .server-selection input {
+  display: none;
+}
+.server-selection input + label {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex: 50%;
+  color: var(--text-secondary);
+  padding: 40px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.server-selection input + label h2 {
+  margin-top: 12px;
+  color: var(--text-secondary);
+}
+.server-selection input:checked + label,
+.server-selection input:checked + label h2 {
+  background: var(--theme);
+  color: var(--text);
+}
+
+.setting-card.sign-in-history a button {
+  width: 100%;
+  padding: 12px 48px;
+  cursor: pointer;
+  background: #383f6b;
+}
+.setting-card input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #383f6b;
+  padding: 12px;
+  margin: 4px;
+  margin-left: 0;
+  border-radius: 4px;
+  vertical-align: -65%;
+}
+.setting-card input[type="checkbox"]:checked {
+  background: no-repeat center/contain url(../images/check.svg), var(--theme);
+}
+
+.setting-card.span-both-columns {
+  grid-column: 1 / span 2;
+}
+
+.account-link-notice {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -150px;
+  width: 100%;
+  animation: account-link-notice 5s;
+}
+
+@keyframes account-link-notice {
+  0% {top: -150px}
+  20% {top: 35px}
+  80% {top: 35px}
+  100% {top: -150px}
+}
+
+.account-link-notice div {
+  background: #37A985;
+  padding: 4px 36px;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 1500px) {
+  .account-wrapper {
+    margin: 20px 0;
+  }
+
+  .settings-wrapper {
+    grid-column-start: 1;
+  }
+
+  .account-sidebar {
+    margin: 0;
+  }
+
+  .account-sidebar .user .mii {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .settings-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .setting-card {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .setting-card {
+    padding:  24px;
+  }
+  .setting-card .edit {
+    top: 24px;
+    right: 24px;
+  }
+
+  .setting-card .setting-list {
+    grid-template-columns: auto;
+  }
+
+  .setting-card .server-selection {
+    flex-flow: column;
+  }
+}

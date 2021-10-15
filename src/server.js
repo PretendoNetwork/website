@@ -23,6 +23,7 @@ const routers = {
 	home: require('./routers/home'),
 	faq: require('./routers/faq'),
 	progress: require('./routers/progress'),
+	account: require('./routers/account'),
 	blog: require('./routers/blog'),
 	localization: require('./routers/localization')
 };
@@ -70,6 +71,7 @@ app.use(expressLocale({
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
 app.use('/progress', routers.progress);
+app.use('/account', routers.account);
 app.use('/localization', routers.localization);
 app.use('/blog', routers.blog);
 

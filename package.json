@@ -27,6 +27,7 @@
     "ioredis": "^4.26.0",
     "marked": "^3.0.4",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.0.0",
     "redis-json": "^5.0.0",
     "trello": "^0.10.0"
   },
