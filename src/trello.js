@@ -64,6 +64,7 @@ async function updateTrelloCache() {
 		}
 	}
 
+	await trelloCache.clearAll();
 	await trelloCache.set('latest', progressData);
 	return progressData;
 }
