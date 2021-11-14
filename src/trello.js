@@ -1,15 +1,11 @@
 const Trello =require('trello');
-const Redis = require('ioredis');
-const JSONCache = require('redis-json');
 const got = require('got');
 const config = require('../config.json');
 
 const trello = new Trello(config.trello.api_key, config.trello.api_token);
-const redis = new Redis();
-const trelloCache = new JSONCache(redis, { prefix: 'trello:' });
+let cache;
 
 async function getTrelloCache() {
-	let cache = await trelloCache.get('latest');
 	if (!cache) {
 		cache = await updateTrelloCache();
 	}
@@ -64,8 +60,6 @@ async function updateTrelloCache() {
 		}
 	}
 
-	await trelloCache.clearAll();
-	await trelloCache.set('latest', progressData);
 	return progressData;
 }
 
