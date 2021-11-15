@@ -24,7 +24,7 @@
 	"progress": {
 		"title": "Progresso",
 		"paragraphs": [
-			"Atualmente estamos trabalhando no Miiverse, assinm como no nossos servidores de contas e suas integrações com os serviços.",
+			"Atualmente estamos trabalhando no Miiverse, assim como no nossos servidores de contas e suas integrações com os serviços.",
 			"Para o Nintendo 3DS também estamos trabalhando no Mario Kart 7, pretendemos trabalhar em outros jogos quando possível."
 		]
 	},
@@ -109,8 +109,8 @@
 			{
 				"name": "Monty",
 				"caption": "Desenvolvimento web",
-				"picture": "https://github.com/montylion.png",
-				"github": "https://github.com/montylion"
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
@@ -121,8 +121,8 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Agradecimentos especiais",
+		"text": "Sem eles, Pretendo não estaria onde está hoje.",
 		"people": [
 			{
 				"name": "superwhiskers",
