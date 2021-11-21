@@ -1,20 +1,20 @@
 const Trello =require('trello');
-const Redis = require('ioredis');
-const JSONCache = require('redis-json');
+const got = require('got');
 const config = require('../config.json');
 
 const trello = new Trello(config.trello.api_key, config.trello.api_token);
-const redis = new Redis();
-const trelloCache = new JSONCache(redis, { prefix: 'trello:' });
+let cache;
 
 async function getTrelloCache() {
-	let cache = await trelloCache.get('latest');
 	if (!cache) {
 		cache = await updateTrelloCache();
 	}
 
 	if (cache.update_time < Date.now() - (1000 * 60 * 60)) {
-		cache = await updateTrelloCache();
+		const available = await trelloAPIAvailable();
+		if (available) {
+			cache = await updateTrelloCache();
+		}
 	}
 
 	return cache;
@@ -60,8 +60,12 @@ async function updateTrelloCache() {
 		}
 	}
 
-	await trelloCache.set('latest', progressData);
 	return progressData;
+}
+
+async function trelloAPIAvailable() {
+	const { status } = await got('https://trello.status.atlassian.com/api/v2/status.json').json();
+	return status.description === 'All Systems Operational';
 }
 
 module.exports = {

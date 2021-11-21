@@ -9,7 +9,7 @@
 	"hero": {
 		"subtitle": "Servere de Jocuri",
 		"title": "Recreate",
-		"text": "Pretendo este un înlocuitor gratuit pentru serverele Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
+		"text": "Pretendo este un înlocuitor gratuit al serverelor Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
 		"buttons": {
 			"readMore": "Citiți mai multe"
 		}
@@ -34,7 +34,7 @@
 		"QAs": [
 			{
 				"question": "Ce este Pretendo?",
-				"answer": "Pretendo este un înlocuitor open source al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
+				"answer": "Pretendo este un înlocuitor gratuit al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
 			},
 			{
 				"question": "Va merge NNID-ul meu pe Pretendo?",
@@ -109,8 +109,8 @@
 			{
 				"name": "Monty",
 				"caption": "Dezvoltare web",
-				"picture": "https://github.com/montylion.png",
-				"github": "https://github.com/montylion"
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
