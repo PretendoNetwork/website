@@ -1,0 +1,81 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.login-wrapper {
+  margin: auto;
+}
+
+form.login {
+  padding: 48px;
+  background-color: #151934;
+  border-radius: 12px;
+  max-width: calc(90vw - 92px);
+  width: 400px;
+}
+
+form.login input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: var(--btn-secondary);
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--text);
+  width: calc(100% - 24px);
+  margin-bottom: 12px;
+}
+
+form.login input::placeholder {
+  color: var(--text-secondary);
+}
+
+form.login input:focus {
+  background-color: #fff;
+  color: var(--btn-secondary);
+  transition: 200ms;
+  outline: none;
+}
+
+form.login button {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  border: 0;
+  border-radius: 4px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  padding: 12px;
+  background: var(--btn);
+  cursor: pointer;
+  width: 100%;
+}
+
+form.login a.pwdreset {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-align: right;
+  margin: 6px 0;
+  width: 100%;
+}
+
+form.login a.pwdreset:hover {
+  color: var(--text);
+}
+
+form.login .register button {
+  background: var(--btn-secondary);
+  margin-top: 18px;
+}
+
+footer {
+  margin-top: 23px;
+}

@@ -176,7 +176,16 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/login', async (request, response) => {
-	response.render('account_login');
+	const reqLocale = request.locale;
+	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+
+	const localeString = reqLocale.toString();
+
+	response.render('account_login', {
+		layout: 'main',
+		locale,
+		localeString,
+	});
 });
 
 router.post('/login', async (request, response) => {
