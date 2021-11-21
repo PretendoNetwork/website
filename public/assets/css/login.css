@@ -71,6 +71,10 @@ form.login a.pwdreset:hover {
   color: var(--text);
 }
 
+form.login .register {
+  text-decoration: none;
+}
+
 form.login .register button {
   background: var(--btn-secondary);
   margin-top: 18px;
