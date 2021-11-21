@@ -157,50 +157,30 @@ fieldset {
   grid-column: 1 / span 2;
 }
 
-.account-link-notice {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: -150px;
-  width: 100%;
-  animation: account-link-notice 5s;
-}
-
-@keyframes account-link-notice {
+@keyframes banner-notice {
   0% {top: -150px}
   20% {top: 35px}
   80% {top: 35px}
   100% {top: -150px}
 }
-
-.account-link-notice div {
+.banner-notice {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: -150px;
+  width: 100%;
+  animation: banner-notice 5s;
+}
+.banner-notice div {
+  padding: 4px 36px;
+  border-radius: 5px;
+  z-index: 3;
+}
+.banner-notice.success div {
   background: #37A985;
-  padding: 4px 36px;
-  border-radius: 5px;
-  z-index: 3;
 }
-
-.account-error-notice {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: -150px;
-  width: 100%;
-  animation: account-error-notice 5s;
-}
-
-@keyframes account-error-notice {
-  0% {top: -150px}
-  20% {top: 35px}
-  80% {top: 35px}
-  100% {top: -150px}
-}
-
-.account-error-notice div {
+.banner-notice.error div {
   background: #A9375B;
-  padding: 4px 36px;
-  border-radius: 5px;
-  z-index: 3;
 }
 
 footer {
