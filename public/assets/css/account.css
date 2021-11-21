@@ -5,14 +5,14 @@
   color: var(--text-secondary);
 }
 
-/* Account settings navbar  */
+/* Account settings sidebar */
 .account-sidebar .user {
   text-align: center;
   margin: 55px auto;
   width: fit-content;
 }
 .account-sidebar .user .miiname {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text);
   margin: 8px 0 4px;
 }
@@ -20,8 +20,8 @@
   margin: 0px;
 }
 .account-sidebar .user .mii {
-  width: 300px;
-  height: 300px;
+  width: 128px;
+  height: 128px;
   border-radius: 100%;
   background: var(--btn-secondary);
 }
@@ -30,7 +30,7 @@
 .settings-wrapper {
   display: grid;
   grid-column-start: 2;
-  grid-template-columns: 50%;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
 .settings-wrapper a {
@@ -207,7 +207,7 @@ footer {
   margin-top: 80px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1300px) {
   .account-wrapper {
     margin: 20px 0;
   }
@@ -221,12 +221,12 @@ footer {
   }
 
   .account-sidebar .user .mii {
-    width: 250px;
-    height: 250px;
+    width: 128px;
+    height: 128px;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
   .settings-wrapper {
     display: block;
     width: 100%;
@@ -239,18 +239,28 @@ footer {
 
 @media screen and (max-width: 550px) {
   .setting-card {
-    padding:  24px;
+    padding: 24px;
+    width: calc(100vw - 48px);
+    margin-left: -5vw;
+    margin-right: -2.5vw;
+    border-radius: 0;
+    margin-bottom: 12px;
   }
+  
   .setting-card .edit {
-    top: 24px;
-    right: 24px;
-  }
-
-  .setting-card .setting-list {
-    grid-template-columns: auto;
+    top: 20px;
+    right: 20px;
+    transform: scale(0.85); 
   }
 
   .setting-card .server-selection {
     flex-flow: column;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .setting-card .setting-list {
+    grid-template-columns: auto;
   }
 }
