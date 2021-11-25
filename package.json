@@ -28,7 +28,7 @@
     "gray-matter": "^4.0.3",
     "marked": "^3.0.4",
     "morgan": "^1.10.0",
-    "trello": "github:norberteder/trello"
+    "trello": "^0.11.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0"
