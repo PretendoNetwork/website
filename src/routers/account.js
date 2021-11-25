@@ -176,16 +176,16 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/login', async (request, response) => {
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
-
-	response.render('account_login', {
+	const renderData = {
 		layout: 'main',
-		locale,
-		localeString,
-	});
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		error: request.cookies.error
+	};
+
+	response.clearCookie('error');
+
+	response.render('account_login', renderData);
 });
 
 router.post('/login', async (request, response) => {
@@ -198,10 +198,8 @@ router.post('/login', async (request, response) => {
 	});
 
 	if (apiResponse.statusCode !== 200) {
-		// TODO: Error message
-		return response.status(apiResponse.statusCode).json({
-			error: 'Bad'
-		});
+		response.cookie('error', apiResponse.body.error);
+		return response.redirect('/account/login');
 	}
 
 	const tokens = apiResponse.body;
