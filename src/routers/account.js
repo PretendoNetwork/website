@@ -53,9 +53,9 @@ router.get('/', async (request, response) => {
 
 		const tokens = apiResponse.body;
 
-		response.cookie('refresh_token', tokens.refresh_token);
-		response.cookie('access_token', tokens.access_token);
-		response.cookie('token_type', tokens.token_type);
+		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
 
 		apiResponse = await util.apiGetRequest('/v1/user', {
 			'Authorization': `${tokens.token_type} ${tokens.access_token}`
@@ -122,9 +122,9 @@ router.get('/', async (request, response) => {
 
 				const tokens = apiResponse.body;
 
-				response.cookie('refresh_token', tokens.refresh_token);
-				response.cookie('access_token', tokens.access_token);
-				response.cookie('token_type', tokens.token_type);
+				response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+				response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+				response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
 
 				apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
 					'Authorization': `${tokens.token_type} ${tokens.access_token}`
@@ -198,15 +198,15 @@ router.post('/login', async (request, response) => {
 	});
 
 	if (apiResponse.statusCode !== 200) {
-		response.cookie('error', apiResponse.body.error);
+		response.cookie('error', apiResponse.body.error, { domain: '.pretendo.network' });
 		return response.redirect('/account/login');
 	}
 
 	const tokens = apiResponse.body;
 
-	response.cookie('refresh_token', tokens.refresh_token);
-	response.cookie('access_token', tokens.access_token);
-	response.cookie('token_type', tokens.token_type);
+	response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+	response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+	response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
 
 	response.redirect('/account');
 });
@@ -221,7 +221,7 @@ router.get('/connect/discord', async (request, response) => {
 			grantType: 'authorization_code',
 		});
 	} catch (error) {
-		response.cookie('error', 'Invalid Discord authorization code. Please try again');
+		response.cookie('error', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
 
@@ -255,9 +255,9 @@ router.get('/connect/discord', async (request, response) => {
 
 		const tokens = apiResponse.body;
 
-		response.cookie('refresh_token', tokens.refresh_token);
-		response.cookie('access_token', tokens.access_token);
-		response.cookie('token_type', tokens.token_type);
+		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
 
 		apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
 			'Authorization': `${tokens.token_type} ${tokens.access_token}`
@@ -278,7 +278,7 @@ router.get('/connect/discord', async (request, response) => {
 		}
 	}
 
-	response.cookie('linked', 'Discord').redirect('/account');
+	response.cookie('linked', 'Discord', { domain: '.pretendo.network' }).redirect('/account');
 });
 
 module.exports = router;
