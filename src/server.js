@@ -14,6 +14,7 @@ const app = express();
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
 
 logger.info('Setting up static public folder');
 app.use(express.static('public'));
@@ -65,9 +66,6 @@ app.use(expressLocale({
 	'default': 'en-US'
 }));
 
-
-
-
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
 app.use('/progress', routers.progress);
@@ -108,6 +106,12 @@ app.engine('handlebars', handlebars({
 				${htmlRight}
 			</div>
 			`;
+		},
+		eq(value1, value2) {
+			return value1 === value2;
+		},
+		neq(value1, value2) {
+			return value1 !== value2;
 		}
 	}
 }));

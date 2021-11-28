@@ -1,185 +1,284 @@
 const { Router } = require('express');
+const crypto = require('crypto');
+const DiscordOauth2 = require('discord-oauth2');
 const util = require('../util');
-const router = new Router();
-const fetch = (...args) =>
-	import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const config = require('../../config.json');
+const router = new Router();
 
-// A test PNID
-const account = {
-	access_level: 0, // 0: standard, 1: tester, 2: mod?, 3. dev?, 4. god
-	server_access_level: 'prod', // prod, test, dev
-	username: 'PN_Monty',
-	password: 'thelegend27', 
-	birthdate: '13/04/2004', // what format
-	gender: 'what even is this', // what format
-	country: 'Italy', // what format
-	language: 'JS smh', // what format
-	email: {
-		address: 'notascam@freecreditreport.com',
-		primary: true, // do we need to let the user change anything?
-		parent: true,
-		reachable: true,
-		validated: true,
-	},
-	region: 'don\'t know the numbers',
-	timezone: {
-		name: 'Europe/Rome',
-		offset: 3600, // haven't checked if this is correct, just an assumption
-	},
-	mii: {
-		name: 'Monty',
-		image_url:
-      'https://studio.mii.nintendo.com/miis/image.png?data=00080f50595a606a6268696f757883969b9aa1a8b1b8b7bebdc5cccbd1d8620a121a181119111916222d3444484c4b&type=face&expression=normal&width=512',
-	},
-	flags: {
-		marketing: true,
-		off_device: true, // Forgot what this does
-	},
-	devices: [
-		{
-			is_emulator: {
-				type: false,
-			},
-			console_type: {
-				type: 'wup',
-			},
-			device_attributes: {
-				created_date: '23/07/2021', // what format
-				name: 'Wii U', // ?
-				value: 'what', // what format
-			},
-		},
-		{
-			is_emulator: {
-				type: false,
-			},
-			console_type: {
-				type: 'wup',
-			},
-			device_attributes: {
-				created_date: '24/05/2020',
-				name: 'Windows', // ?
-				value: 'what',
-			},
-		},
-	],
-	connections: { // This needs to be added to the schema
-		discord: {
-			id: '406125028065804289',
-			access_token: 'GiJ2Osi6LpYS7uLgZNyvCbRtpRopv1', // This only has the identify scope so eh, who cares if it gets leaked
-			expires_on: 604800,
-			refresh_token: 'VeQMa6zp2Rx77PjhiNFJbpKrpz2gX2',
-			scope: 'identify',
-			token_type: 'Bearer',
-		},
-	},
-};
+// Create OAuth client
+const discordOAuth = new DiscordOauth2({
+	clientId: config.discord.client_id,
+	clientSecret: config.discord.client_secret,
+	redirectUri: `${config.http.base_url}/account/connect/discord`,
+	version: 'v9'
+});
 
 router.get('/', async (request, response) => {
-	const justLinked = request.cookies.justLinked;
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	let discordUser;
-	
-	if (account.connections.discord.access_token) {
-		// TODO: check if the token is valid, if not refresh it.
-		const discord = account.connections.discord;
-		const fetchDiscordUser = await fetch('https://discord.com/api/users/@me', {
-			method: 'get',
-			headers: {
-				'Authorization': `${discord.token_type} ${discord.access_token}`
-			},
-		});
-		discordUser =  await fetchDiscordUser.json();
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token) {
+		return response.redirect('/account/login');
 	}
 
-	// test user
-	discordUser = {
-		id: '406125028065804289',
-		username: 'montylion',
-		avatar: '5184b3dc388bdad1a93eb58694a58398',
-		discriminator: '3581',
-		public_flags: 64,
-		flags: 64,
-		banner: null,
-		banner_color: '#ff7081',
-		accent_color: 16740481,
-		locale: 'en-US',
-		mfa_enabled: true,
-	};
-
-	const isTester = () => {
-		return account.access_level > 0;
-	};
-
-	response.clearCookie('justLinked');
-
-	// TODO: make the sign in history only show the first 2/4 devices
-
-	response.render('account', {
+	// Setup the data to be sent to the handlebars renderer
+	const renderData = {
 		layout: 'main',
-		locale,
-		localeString: reqLocale.toString(),
-		account,
-		isTester,
-		discordUser,
-		justLinked
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		linked: request.cookies.linked,
+		error: request.cookies.error
+	};
+
+	// Reset message cookies
+	response.clearCookie('linked');
+	response.clearCookie('error');
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
 	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			// TODO: Error message
+			return response.status(apiResponse.statusCode).json({
+				error: 'Bad'
+			});
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		// TODO: Error message
+		return response.status(apiResponse.statusCode).json({
+			error: 'Bad'
+		});
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+
+	renderData.account = account;
+	renderData.isTester = account.access_level > 0;
+
+	// Check if a Discord account is linked to the PNID
+	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {
+		// If Discord account is linked, then get user info
+		try {
+			renderData.discordUser = await discordOAuth.getUser(account.connections.discord.access_token);
+		} catch (error) {
+			// Assume expired, refresh and retry Discord request
+			let tokens;
+			try {
+				tokens = await discordOAuth.tokenRequest({
+					scope: 'identify guilds',
+					grantType: 'refresh_token',
+					refreshToken: account.connections.discord.refresh_token,
+				});
+			} catch (error) {
+				renderData.error = 'Invalid Discord refresh token. Remove account and relink';
+				response.render('account', renderData);
+			}
+
+			// TODO: Add a dedicated endpoint for updating connections?
+			apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
+				'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+			}, {
+				data: {
+					id: account.connections.discord.id,
+					access_token: tokens.access_token,
+					refresh_token: tokens.refresh_token,
+				}
+			});
+
+			if (apiResponse.statusCode !== 200) {
+				// Assume expired, refresh and retry request
+				apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+					refresh_token: request.cookies.refresh_token,
+					grant_type: 'refresh_token'
+				});
+
+				if (apiResponse.statusCode !== 200) {
+					// TODO: Error message
+					return response.status(apiResponse.statusCode).json({
+						error: 'Bad'
+					});
+				}
+
+				const tokens = apiResponse.body;
+
+				response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+				response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+				response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+
+				apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
+					'Authorization': `${tokens.token_type} ${tokens.access_token}`
+				}, {
+					data: {
+						id: account.connections.discord.id,
+						access_token: tokens.access_token,
+						refresh_token: tokens.refresh_token,
+					}
+				});
+
+				// If still failed, something went horribly wrong
+				if (apiResponse.statusCode !== 200) {
+					// TODO: Error message
+					return response.status(apiResponse.statusCode).json({
+						error: 'Bad'
+					});
+				}
+			}
+
+			account.connections.discord.access_token = tokens.access_token;
+			account.connections.discord.refresh_token = tokens.refresh_token;
+		}
+
+		// Get the users Discord roles to check if they are a tester
+		const { roles } = await discordOAuth.getMemberRolesForGuild({
+			userId: account.connections.discord.id,
+			guildId: config.discord.guild_id,
+			botToken: config.discord.bot_token
+		});
+
+		// Only run this check if not already a tester (edge case)
+		if (!renderData.isTester) {
+			// 409116477212459008 = Developer
+			// 882247322933801030 = Super Mario (Patreon tier)
+			renderData.isTester = roles.some(role => config.discord.tester_roles.includes(role));
+		}
+	} else {
+		// If no Discord account linked, generate an auth URL
+		const discordAuthURL = discordOAuth.generateAuthUrl({
+			scope: ['identify', 'guilds'],
+			state: crypto.randomBytes(16).toString('hex'),
+		});
+		
+		renderData.discordAuthURL = discordAuthURL;
+	}
+
+	response.render('account', renderData);
+});
+
+router.get('/login', async (request, response) => {
+	const renderData = {
+		layout: 'main',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		error: request.cookies.error
+	};
+
+	response.clearCookie('error');
+
+	response.render('account_login', renderData);
+});
+
+router.post('/login', async (request, response) => {
+	const { username, password } = request.body;
+
+	const apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+		username,
+		password,
+		grant_type: 'password'
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		response.cookie('error', apiResponse.body.error, { domain: '.pretendo.network' });
+		return response.redirect('/account/login');
+	}
+
+	const tokens = apiResponse.body;
+
+	response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+	response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+	response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+
+	response.redirect('/account');
 });
 
 router.get('/connect/discord', async (request, response) => {
-	//const reqLocale = request.locale;
-	//const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const codeExchange = await fetch('https://discord.com/api/oauth2/token', {
-		method: 'post',
-		body: new URLSearchParams({
-			client_id: config.discord.client_id,
-			client_secret: config.discord.client_secret,
-			grant_type: 'authorization_code',
+	let tokens;
+	try {
+		// Attempt to get OAuth2 tokens
+		tokens = await discordOAuth.tokenRequest({
 			code: request.query.code,
-			redirect_uri: `${config.http.base_url}/account/connect/discord`,
-		}),
-		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	});
-	const token = await codeExchange.json();
+			scope: 'identify guilds',
+			grantType: 'authorization_code',
+		});
+	} catch (error) {
+		response.cookie('error', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
 
-	/*
-	// Send the oauth tokens to the account server
-	fetch('account server endpoint', {
-		method: 'post',
-		body: {
-			access_token: token.access_token,
-			token_type: token.token_type,
-			expires_on: new Date().getTime() + token.expires_in,
-			refresh_token: token.refresh_token,
-			scope: token.scope,
-		},
-		headers: {
-			'Content-Type': 'application/json',
+	// Get Discord user data
+	const user = await discordOAuth.getUser(tokens.access_token);
+
+	// Link the Discord account to the PNID
+	let apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	}, {
+		data: {
+			id: user.id,
+			access_token: tokens.access_token,
+			refresh_token: tokens.refresh_token,
 		}
 	});
-	*/
 
-	/* Token refresh function (should be moved to util.js)
-	const refreshTokens = await fetch('https://discord.com/api/oauth2/token', {
-		method: 'post',
-		body: new URLSearchParams({
-			client_id: config.discord.client_id,
-			client_secret: config.discord.client_secret,
-			grant_type: 'refresh_token',
-			refresh_token: account.connections.discord.refresh_token
-		}),
-		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	});
-	const newTokens = await refreshTokens.json();
-	console.log(newTokens);
-	*/
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
 
-	// This sets a cookie to tell the account page to show the "Account linked successfully" notice, and redirects.
-	response.cookie('justLinked', 'discord').redirect('/account');
+		if (apiResponse.statusCode !== 200) {
+			// TODO: Error message
+			return response.status(apiResponse.statusCode).json({
+				error: 'Bad'
+			});
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+
+		apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		}, {
+			data: {
+				id: user.id,
+				access_token: tokens.access_token,
+				refresh_token: tokens.refresh_token,
+			}
+		});
+
+		// If still failed, something went horribly wrong
+		if (apiResponse.statusCode !== 200) {
+			// TODO: Error message
+			return response.status(apiResponse.statusCode).json({
+				error: 'Bad'
+			});
+		}
+	}
+
+	response.cookie('linked', 'Discord', { domain: '.pretendo.network' }).redirect('/account');
 });
 
 module.exports = router;

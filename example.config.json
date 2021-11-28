@@ -10,6 +10,11 @@
 	},
 	"discord": {
 		"client_id": "client_id",
-		"client_secret": "client_secret"
+		"client_secret": "client_secret",
+		"guild_id": "Guild ID",
+		"bot_token": "token",
+		"tester_roles": [
+			"role id"
+		]
 	}
 }

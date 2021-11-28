@@ -6,11 +6,11 @@
 
 	<div class="account-wrapper">
 		<div class="account-sidebar">
-  			<div class="user">
-    			<img src="{{account.mii.image_url}}&bgColor=3E446600" class="mii" />
-    			<p class="miiname">{{account.mii.name}}</p>
-    			<p class="username">PNID: {{account.username}}</p>
-  			</div>
+			<div class="user">
+				<img src="{{account.mii.image_url}}" class="mii" />
+				<p class="miiname">{{account.mii.name}}</p>
+				<p class="username">PNID: {{account.username}}</p>
+			</div>
 		</div>
 
 		<div class="settings-wrapper">
@@ -50,8 +50,8 @@
 				<h2 class="header">Servers</h2>
 				<fieldset {{#if isTester}}{{else}}disabled{{/if}}>
 					<form class="server-selection" id="server">
-						<input type="radio" id="prod" name="server_selection" value="prod">
-  						<label for="prod">
+						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
+						<label for="prod">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
 								<polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
@@ -62,8 +62,8 @@
 							</svg>
 							<h2>Production</h2>
 						</label>
-						<input type="radio" id="beta" name="server_selection" value="beta">
-  						<label for="beta">
+						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
+						<label for="beta">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<polygon points="2,21 22,21 14,11.5 14,5 10,3 10,11.5"></polygon>
 							</svg>
@@ -73,15 +73,14 @@
 				</fieldset>
 				{{#if discordUser}}
 					{{#if isTester }}
-					<p>Connected as {{ discordUser.username }}#{{ discordUser.discriminator }}.</p>
+					<p>Connected as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
 					{{else}}
-					<p>{{ discordUser.username }}#{{ discordUser.discriminator }} doesn't appear to be a @Tester account. Check that you have the role on Discord. [should probably fix the wording]</p>
+					<p>Beta servers are exclusive to testers. To become a tester, check us out on <a href="https://www.patreon.com/PretendoNetwork" target="_blank">Patreon</a> and link your Discord account to your Patreon and PNID accounts</p>
 					{{/if}}
 				{{else}}
-				<p>Beta servers are exclusive to testers. If you're a tester, connect your Discord account <a href="https://discord.com/api/oauth2/authorize?client_id=896508671742345266&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Faccount%2Fconnect%2Fdiscord&response_type=code&scope=identify">here</a>.</p>
+				<p>Beta servers are exclusive to testers. If you're already a tester, connect your Discord account <a href="{{ discordAuthURL }}">here</a>.</p>
 				{{/if}}
-
-
 			</div>
 			
 			<h2 class="section-header" id="security">Sign in and security</h2>
@@ -109,11 +108,11 @@
 				<h2 class="header">Sign in history</h2>
 				<ul class="setting-list">
 					{{#each account.devices }}
-    					<li>
+						<li>
 							<p class="label">{{this.device_attributes.name}}</p>
 							<p class="value">{{this.device_attributes.created_date}}</p>
 							</li>
-  					{{/each}}
+					{{/each}}
 				</ul>
 				<a href="/account/sign-in-history">
 					<button class="button secondary">View full sign in history</button>
@@ -124,29 +123,30 @@
 			<div class="setting-card span-both-columns">
 				<h2 class="header">Newsletter</h2>
 				<form id="other">
-					  <input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
-					  <label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
-
+					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
+					<label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
 				</form>
 			</div>
 		</div>
 	</div>
-
-
 	{{> footer }}
-	
 </div>
 
 
-{{#if justLinked}}
-	<div class="account-link-notice">
-		<div>
-			<p>Account linked successfully.</p>
-		</div>
+{{#if linked}}
+<div class="banner-notice success">
+	<div>
+		<p>{{ linked }} account linked successfully</p>
 	</div>
+</div>
 {{/if}}
 
-<script>
-	// Selectes the server level from the user's PNID
-	{{ account.server_access_level }}.setAttribute('checked', true);
-</script>
+{{#if error}}
+<div class="banner-notice error">
+	<div>
+		<p>{{ error }}</p>
+	</div>
+</div>
+{{/if}}
+
+<script src="/assets/js/account.js"></script>

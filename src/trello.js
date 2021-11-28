@@ -6,15 +6,20 @@ const trello = new Trello(config.trello.api_key, config.trello.api_token);
 let cache;
 
 async function getTrelloCache() {
+	const available = await trelloAPIAvailable();
+	if (!available) {
+		return {
+			update_time: Date.now(),
+			sections: []
+		};
+	}
+
 	if (!cache) {
 		cache = await updateTrelloCache();
 	}
 
 	if (cache.update_time < Date.now() - (1000 * 60 * 60)) {
-		const available = await trelloAPIAvailable();
-		if (available) {
-			cache = await updateTrelloCache();
-		}
+		cache = await updateTrelloCache();
 	}
 
 	return cache;

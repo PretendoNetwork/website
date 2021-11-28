@@ -1,6 +1,6 @@
 ---
 title: "Test"
-author: "Monty"
+author: "monty"
 author_image: "https://www.github.com/ashmonty.png"
 date: "January 20, 2038"
 caption: "A post to test the styling of the various elements we might use (rename to _test.md before deploying the blog section)"
