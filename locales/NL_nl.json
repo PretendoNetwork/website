@@ -1,0 +1,176 @@
+{
+	"nav": {
+		"about": "Over",
+		"faq": "FAQ",
+		"credits": "Credits",
+		"progress": "Vooruitgang",
+		"blog": "Blog"
+	},
+	"hero": {
+		"subtitle": "Game servers",
+		"title": "Nagemaakt",
+		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers stoppen",
+		"buttons": {
+			"readMore": "Lees meer"
+		}
+	},
+	"aboutUs": {
+		"title": "Over ons",
+		"paragraphs": [
+			"Pretendo is een open source project met het doel om het Nintendo Network voor 3DS en Wii U na te maken met clean-room reverse engineering.",
+			"Omdat onze diensten gratis en open source zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
+		]
+	},
+	"progress": {
+		"title": "Vooruitgang",
+		"paragraphs": [
+			"We werken momentele aan Miiverse, de account servers, en de intergratie met de servers.",
+			"We werken ook aan Mario Kart 7 voor de 3DS, met een wens om aan andere games te werken wanneer we die kans krijgen."
+		]
+	},
+	"faq": {
+		"title": "Veelgestelde vragen",
+		"text": "Hier zijn een aantal vragen die wij vaak horen.",
+		"QAs": [
+			{
+				"question": "Wat is Pretendo?",
+				"answer": "Pretendo is een open source Nintendo Network vervanger met het doel om custom servers voor de Wii U en 3DS familie te maken. Ons doel is om de online functionaliteit van deze consoles te behouden, zodat spelers hun favoriete Wii U en 3DS games kunnen blijven spelen."
+			},
+			{
+				"question": "Blijft mijn bestaande NNID werken op Pretendo?",
+				"answer": "Jammer genoeg niet. Bestande NNIDs zullen niet gaan werken op Pretendo, omdat enkel Nintendo je informatie heeft; Al is het zo dat een NNID-naar-PNID migratie technisch mogelijk, het zou wel gevaarlijk zijn en zouden we gevoelige gebruikers informatie krijgen die we niet willen bewaren."
+			},
+			{
+				"question": "Hoe installeer ik Pretendo?",
+				"answer": "Pretendo is momenteel nog niet klaar voor publiekelijk gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
+			},
+			{
+				"question": "Wanneer is <feature> klaar?",
+				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt dan bijvoorbeeld door één developer ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
+			},
+			{
+				"question": "Werkt Pretendo op Cemu of andere emulators?",
+				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN support, Cemu. Cemu ondersteunt niet officieel custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
+			},
+			{
+				"question": "Als ik van Nintendo Network verbannen ben, blijf ik dan verbannen op Pretendo?",
+				"answer": "Nee. We hebben geen toegang tot de bans van Nintendo Network, dus je zal niet direct verbannen zijn op onze dienst. Echter zullen wij wel regels hebben bij het gebruik van onze diensten. Als je deze breekt, zal je verbannen worden."
+			},
+			{
+				"question": "Gaat Pretendo ook de Wii of Switch ondersteunen?",
+				"answer": "Er zijn al custom servers voor Wii, namelijk <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Wij willen op het moment de Switch niet ondersteunen omdat Switch online betaald is, en compleet anders is dan Nintendo Network."
+			},
+			{
+				"question": "Ga ik hacks nodig hebben om te verbinden met Pretendo?",
+				"answer": "ja, je zal inderdaad hacks nodig hebben. Op de Wii U heb je enkel de Homebrew launcher (d.m.v bijvoorbeeld Haxchi, Coldboot Haxchi, of zelfs de web browser exploit) nodig. Over de 3DS plaatsen we in de toekomst meer informatie."
+			}
+		]
+	},
+	"credits": {
+		"title": "Het team",
+		"text": "Ontmoet het team achter het project",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Eigenaar en hoofd ontwikkelaar",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse research en ontwikkeling",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Netwerk installeerder en console research",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "Onderzoek naar BOSS en patch ontwikkeling",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Onderzoek naar console en andere systemen",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Website ontwikkelaar",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "Website ontwikkelaar",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Ontwerper",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Speciale dank",
+		"text": "Zonder deze mensen zou Pretendo vandaag niet zijn waar het is.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "crunch ontwikkeling",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS ontwikkelaar and NEX dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Archivist",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Onderzoek naar Mario Kart 7 en 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Special thanks",
+				"caption": "Onderzoek naar Nintendo data structuur",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			}
+		]
+	},
+	"progressPage": {
+		"title": "Onze vooruitgang",
+		"description": "Zie hier onze vooruitgang! (Wordt elk uur ververst, geeft niet ALLE vooruitgang en doelen weer)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "De meest recente samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen."
+	},
+	"localizationPage": {
+		"title": "Laten we meer talen toe voegen!",
+		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen.",
+		"instructions": "Zie hier instructies voor het vertalen",
+		"fileInput": "Bestand om te testen",
+		"filePlaceholder": "https://een.link.naar/het_bestand.json",
+		"button": "Test bestand"
+	}
+}
