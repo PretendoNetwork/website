@@ -34,11 +34,11 @@
 		"QAs": [
 			{
 				"question": "Pretendoってなんですか?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+				"answer": "Pretendoは Wii Uと3DSシリーズのカスタムサーバーを作ろうとしている、オープンソースのニンテンドーネットワーク代替プロジェクトです。私たちの目標はこのゲーム機器たちのオンライン機能を維持させ、プレイヤーたちが好むゲームたちをフルでできるようにすることです。"
 			},
 			{
-				"question": "Will my existing NNIDs work on Pretendo?",
-				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+				"question": "私のいまのニンテンドーネットワークID (NNID)はPretendoでも使えますか?",
+				"answer": "残念ですが、使えません。任天堂だけがあなたのデータを持っているので、元のNNIDはPretendoでは使えません。NNIDをPretendo Network ID（PNID）に変換することは理論上可能ではありますが、危険であり、私たちが欲しくない個人情報なども含まれることになります。"
 			},
 			{
 				"question": "How do I use Pretendo?",
@@ -72,49 +72,49 @@
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Project owner and lead developer",
+				"caption": "プロジェクトのオーナー、主導開発者",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse research and development",
+				"caption": "Miiverse研究、開発",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Network installer and console research",
+				"caption": "ネットワークインストーラー、コンソール研究",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "BOSS研究、パッチ開発",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Console and other system research",
+				"caption": "コンソール・他システム研究",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "ウェブ開発主導",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
 			{
 				"name": "monty",
-				"caption": "Web development",
+				"caption": "ウェブ開発",
 				"picture": "https://github.com/ashmonty.png",
 				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Designer",
+				"caption": "デザイナー",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
@@ -122,36 +122,36 @@
 	},
 	"specialThanks": {
 		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。",
 		"people": [
 			{
 				"name": "superwhiskers",
-				"caption": "crunch library development",
+				"caption": "crunchライブラリー開発",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS開発過程及びHEX解剖",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "プロジェクト保存",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 and 3DS research",
+				"caption": "マリオカート7及び3DS研究",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "Kinnay",
 				"special": "Special thanks",
-				"caption": "Research on Nintendo datastructures",
+				"caption": "任天堂データ構造研究",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			}
@@ -166,11 +166,11 @@
 		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "レッツローカライズ",
+		"description": "公開されているJSONへのリンクを貼り付けてこのサイトに試してみて下さい！",
+		"instructions": "ローカライズ方法を開く",
+		"fileInput": "試してみるファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "ファイルを試す！"
 	}
 }
