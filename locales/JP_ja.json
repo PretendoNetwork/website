@@ -42,33 +42,33 @@
 			},
 			{
 				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"answer": "Pretendoはまだ公開にできるほど開発されていません。ですが、そうなった場合はただパッチャーを実行しただけでPretendoを使えるようになります。"
 			},
 			{
-				"question": "Do you know when <feature/service> will be ready?",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+				"question": "<機能/サービス>がいつできるか分かりますか?",
+				"answer": "分かりません。多くのPretendoの機能は各自で開発されています。（例えば、Miiverseをこの人が開発しているとき、アカウント・フレンドシステムは他の人が開発している）ですので、全てを合わせた完成予想時間は分かりません。"
 			},
 			{
-				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
+				"question": "PretendoはCemu/エミュレーターで動作しますか?",
+				"answer": "PretendoはWii Uと3DSの本体のために開発しているつもりです。現在、ニンテンドーネットワークに対応しているのはCemuだけです。Cemuは公式ではカスタムサーバーに対応してはいませんが、まだ、PretendoをCemuで使うのは可能です。<br>Pretendoは現在、Cemuに対応していません。"
 			},
 			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+				"question": "もしニンテンドーネットワークでBANされた場合は、PretendoでもBANされたままですか?",
+				"answer": "私たちはニンテンドーネットワークのBAN情報は取得できないので、全てのユーザーは初めはBANされません。ですが、このサービスを利用する際に守らなくてはならないルールを作りますので、これを守れなかった場合はBANに繋がることもあります。"
 			},
 			{
-				"question": "Will Pretendo support the Wii/Switch?",
-				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
+				"question": "PretendoはWiiやSwitchに対応しますか?",
+				"answer": "Wiiは<a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>によってカスタムが提供されています。Switchに関しては、有料であり、ニンテンドーネットワークと完全に異なるので、対応しかねません。"
 			},
 			{
-				"question": "Will I need hacks to connect?",
-				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
+				"question": "接続するには改造が必要ですか?",
+				"answer": "はい、接続するにはあなたのゲーム機器を改造しなくてはいけません。ですが、Wii UではHomebrew Launcherへのアクセスだけで接続できます。(Haxchi、Coldboot Haxchi、Webブラウザエクスプロイトなど) 3DSの接続方法に関しては後で公開します。"
 			}
 		]
 	},
 	"credits": {
-		"title": "The team",
-		"text": "Meet the team behind the project",
+		"title": "開発チーム",
+		"text": "プロジェクトの裏のチームをご覧ください",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
