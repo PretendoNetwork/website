@@ -23,6 +23,7 @@ logger.info('Importing page routers');
 const routers = {
 	home: require('./routers/home'),
 	faq: require('./routers/faq'),
+	docs: require('./routers/docs'),
 	progress: require('./routers/progress'),
 	account: require('./routers/account'),
 	blog: require('./routers/blog'),
@@ -72,6 +73,7 @@ app.use(expressLocale({
 
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
+app.use('/docs', routers.docs);
 app.use('/progress', routers.progress);
 app.use('/account', routers.account);
 app.use('/localization', routers.localization);

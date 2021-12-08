@@ -89,6 +89,7 @@ header nav a {
 .locale-dropdown {
 	margin-left: auto;
 	z-index: 2;
+	height: 45px;
 }
 
 /* Misc */
