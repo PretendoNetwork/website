@@ -71,6 +71,9 @@ header {
 	align-items: center;
 	margin-top: 35px;
 }
+header a {
+	text-decoration: none;
+}
 header .logo-link, header .logo-link svg {
 	display: block;
 }

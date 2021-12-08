@@ -96,6 +96,9 @@ fieldset {
   padding: 0;
   border: none;
 }
+fieldset:disabled form label {
+  cursor: not-allowed;
+}
 
 .setting-card .server-selection {
   display: flex;
@@ -158,10 +161,18 @@ fieldset {
 }
 
 @keyframes banner-notice {
-  0% {top: -150px}
-  20% {top: 35px}
-  80% {top: 35px}
-  100% {top: -150px}
+  0% {
+    top: -150px;
+  }
+  20% {
+    top: 35px;
+  }
+  80% {
+    top: 35px;
+  }
+  100% {
+    top: -150px;
+  }
 }
 .banner-notice {
   display: flex;
@@ -177,10 +188,10 @@ fieldset {
   z-index: 3;
 }
 .banner-notice.success div {
-  background: #37A985;
+  background: #37a985;
 }
 .banner-notice.error div {
-  background: #A9375B;
+  background: #a9375b;
 }
 
 footer {
@@ -230,14 +241,13 @@ footer {
   .setting-card .edit {
     top: 20px;
     right: 20px;
-    transform: scale(0.85); 
+    transform: scale(0.85);
   }
 
   .setting-card .server-selection {
     flex-flow: column;
   }
 }
-
 
 @media screen and (max-width: 350px) {
   .setting-card .setting-list {
