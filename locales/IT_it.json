@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "Info",
 		"faq": "FAQ",
+		"docs": "Documentazione",
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
 		"blog": "Blog"
@@ -173,5 +174,8 @@
 		"fileInput": "File da testare",
 		"filePlaceholder": "https://il.link.di/un_file.json",
 		"button": "Testa file"
+	},
+	"docs": {
+		"missingInLocale": "Questa pagina non è disponibile nella tua lingua. Per favore, controlla la versione in inglese sotto."
 	}
 }

@@ -173,5 +173,8 @@
 		"fileInput": "File to test",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Test file"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below."
 	}
 }

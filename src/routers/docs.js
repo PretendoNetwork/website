@@ -1,92 +1,85 @@
 const { Router } = require('express');
 const util = require('../util');
-const logger = require('../logger');
 const router = new Router();
 
 const fs = require('fs');
 const path = require('path');
 const marked = require('marked');
-const matter = require('gray-matter');
-/*
-const postList = () => {
-	const files = fs.readdirSync('blogposts');
 
-	// We get the info for each blogpost, ignoring the ones starting with _
-	const posts = files
-		.filter(filename => !filename.startsWith('_'))
-		.filter(filename => filename.endsWith('.md')) // Ignores other files/folders
-		.map((filename) => {
-			const slug = filename.replace('.md', '');
-			const rawPost = fs.readFileSync(
-				path.join('blogposts', `${filename}`),
-				'utf-8'
-			);
-			const { data: postInfo } = matter(rawPost);
-			return {
-				slug,
-				postInfo,
-			};
-		});
+// Here we'll store the rendered markdown files for future requests
+const cachedPages = {};
 
-	posts.sort((a, b) => {
-		return new Date(b.postInfo.date) - new Date(a.postInfo.date);
-	});
-
-	return posts;
-};
-*/
 router.get('/', async (request, response) => {
+	response.redirect('/docs/welcome');
+});
 
+router.get('/search', async (request, response) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
 	const localeString = reqLocale.toString();
 
-	response.render('docs', {
+	response.render('docs/search', {
 		layout: 'main',
 		locale,
 		localeString,
+		currentPage: request.params.slug,
 	});
 });
-/*
-router.get('/:slug', async (request, response, next) => {
 
+router.get('/:slug', async (request, response, next) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
 	const localeString = reqLocale.toString();
 
-	// Get the name of the post from the URL
-	const postName = request.params.slug;
+	// Get the name of the page from the URL
+	const pageName = request.params.slug;
 
-	// Get the markdown file corresponding to the post
-	let rawPost;
-	try {
-		rawPost = fs.readFileSync(path.join('blogposts', `${postName}.md`), 'utf-8');
-	} catch(err) {
-		logger.error(err);
+	let markdownLocale = localeString;
+	let missingInLocale = false;
+	// Check if the MD file exists in the user's locale, if not try en-US and show notice, or finally log error and show 404.
+	if (fs.existsSync(path.join('docs', localeString, `${pageName}.md`))) {
+		null;
+	} else if (fs.existsSync(path.join('docs', 'en-US', `${pageName}.md`))) {
+		markdownLocale = 'en-US';
+		missingInLocale = true;
+	} else {
 		next();
 		return;
 	}
-	// Convert the post info into JSON and separate it and the content
-	// eslint-disable-next-line prefer-const
-	let { data: postInfo, content } = matter(rawPost);
 
-	// Replace [yt-iframe](videoID) with the full <iframe />
-	content = content
-		.replace(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
-		.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+	let content;
+	// If the page has already been rendered, use the cached version
+	if (cachedPages[markdownLocale]?.[pageName]) {
+		content = cachedPages[markdownLocale]?.[pageName];
+	} else {
+		// Get the markdown file corresponding to the page.
+		content = fs.readFileSync(path.join('docs', markdownLocale, `${pageName}.md`), 'utf-8');
 
-	// Convert the content into HTML
-	const htmlPost = marked(content);
+		// Replace [yt-iframe](videoID) with the full <iframe />
+		content = content
+			.replace(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
+			.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
 
-	response.render('blog/blogpost', {
-		layout: 'blog-opengraph',
+		// Convert the content into HTML
+		content = marked(content);
+
+		// Push the content into the cache
+		if (!cachedPages[markdownLocale]) {
+			cachedPages[markdownLocale] = {};
+		}
+		cachedPages[markdownLocale][pageName] = content;
+	}
+
+	response.render('docs/docs', {
+		layout: 'main',
 		locale,
 		localeString,
-		postInfo,
-		htmlPost,
+		content,
+		currentPage: request.params.slug,
+		missingInLocale,
 	});
 });
-*/
+
 module.exports = router;
