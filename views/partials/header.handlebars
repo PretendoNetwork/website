@@ -25,12 +25,12 @@
 	</a>
 
 	<nav>
-		<a href="/#about">{{ locale.nav.about }}</a>
-		<a href="/#faq">{{ locale.nav.faq }}</a>
-		<a href="/#credits">{{ locale.nav.credits }}</a>
-		<a href="/docs">{{ locale.nav.docs }}</a>
-		<a href="/progress" class="keep-on-mobile">{{ locale.nav.progress }}</a>
-		<a href="/blog" class="keep-on-mobile">{{ locale.nav.blog }}</a>
+		<a href="/#about">{{ localeHelper locale "nav" "about" }}</a>
+		<a href="/#faq">{{ localeHelper locale "nav" "faq" }}</a>
+		<a href="/#credits">{{ localeHelper locale "nav" "credits" }}</a>
+		<a href="/docs">{{ localeHelper locale "nav" "docs"}}</a>
+		<a href="/progress" class="keep-on-mobile">{{ localeHelper locale "nav" "progress"}}</a>
+		<a href="/blog" class="keep-on-mobile">{{ localeHelper locale "nav" "blog" }}</a>
 	</nav>
 
 	<!-- Ordered the locales in the same way YouTube's language selector orders them -->

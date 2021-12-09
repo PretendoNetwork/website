@@ -34,7 +34,7 @@
     <div class="content">
       	<div class="content-inner">
         	{{#if missingInLocale}}
-        		<p class="missing-in-locale-notice">{{locale.docs.missingInLocale}}</p>
+        		<p class="missing-in-locale-notice">{{ localeHelper locale "docs" "missingInLocale" }}</p>
         	{{/if}}
 
 			{{#if showQuickLinks}}

@@ -9,6 +9,8 @@ const logger = require('./logger');
 const util = require('./util');
 const config = require('../config.json');
 
+const defaultLocale = require('../locales/US_en.json');
+
 const { http: { port } } = config;
 const app = express();
 
@@ -118,6 +120,29 @@ app.engine('handlebars', handlebars({
 		},
 		neq(value1, value2) {
 			return value1 !== value2;
+		},
+		localeHelper(...args) {
+			let userLocaleString = args[0];
+
+			/*
+			 *	Removes the first and the last argument, and then loops through the rest to
+			 *	get the string in the user's locale. If not available, it will return it in
+			 *	the default locale.
+			 */
+			
+			args.slice(1, -1).forEach(arg => {
+				userLocaleString = userLocaleString?.[arg];
+			});
+
+			if (!userLocaleString) {
+				let defaultLocaleString = defaultLocale;
+				args.slice(1, -1).forEach(arg => {
+					defaultLocaleString = defaultLocaleString?.[arg];
+				});
+				return defaultLocaleString;
+			} else {
+				return userLocaleString;
+			}
 		}
 	}
 }));

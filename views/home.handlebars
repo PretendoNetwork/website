@@ -5,15 +5,15 @@
 
 	<section class="hero">
 		<div class="hero-meta">
-			<h3 class="subtitle">{{ locale.hero.subtitle }}</h3>
-			<h1 class="title dot" {{#if locale.hero.titleSuffix}}data-title-suffix="{{locale.hero.titleSuffix}}"{{/if}}>{{ locale.hero.title }}</h1>
+			<h3 class="subtitle">{{ localeHelper locale "hero" "subtitle" }}</h3>
+			<h1 class="title dot" {{#if locale.hero.titleSuffix}}data-title-suffix="{{locale.hero.titleSuffix}}"{{/if}}>{{ localeHelper locale "hero" "title" }}</h1>
 			<p class="text">
-				{{ locale.hero.text }}
+				{{ localeHelper locale "hero" "text" }}
 			</p>
 			<div class="buttons">
 				<a href="/#about" class="do-button-margin">
 					<button class="button primary">
-						{{ locale.hero.buttons.readMore }}
+						{{ localeHelper locale "hero" "buttons" "readMore" }}
 					</button>
 				</a>
 				<a href="https://invite.gg/pretendo" class="do-button-margin" target="_blank">
@@ -75,22 +75,22 @@
 	<section class="progress column-2">
 		<div class="left sect">
 			<div class="left-meta">
-				<h2 class="dot title" id="about" {{#if locale.aboutUs.titleSuffix}}data-title-suffix="{{locale.aboutUs.titleSuffix}}"{{/if}}>{{ locale.aboutUs.title }}</h2>
+				<h2 class="dot title" id="about" {{#if locale.aboutUs.titleSuffix}}data-title-suffix="{{locale.aboutUs.titleSuffix}}"{{/if}}>{{ localeHelper locale "aboutUs" "title" }}</h2>
 				{{#each locale.aboutUs.paragraphs}}
 				<p class="text">{{ this }}</p>
 				{{/each}}
 			</div>
 		</div>
 		<div class="right sect">
-			<h2 class="title">{{ locale.progress.title }}</h2>
+			<h2 class="title">{{ localeHelper locale "progress" "title" }}</h2>
 			{{> progress-list data=featuredFeatureList purple=true boards=boards }}
 		</div>
 	</section>
 
 	<section class="faq">
 		<div class="sect-top sect">
-			<h2 class="dot title" id="faq" {{#if locale.faq.titleSuffix}}data-title-suffix="{{locale.faq.titleSuffix}}"{{/if}}>{{ locale.faq.title }}</h2>
-			<p class="text">{{ locale.faq.text }}</p>
+			<h2 class="dot title" id="faq" {{#if locale.faq.titleSuffix}}data-title-suffix="{{locale.faq.titleSuffix}}"{{/if}}>{{ localeHelper locale "faq" "title" }}</h2>
+			<p class="text">{{ localeHelper locale "faq" "text" }}</p>
 		</div>
 		<div class="questions column-2">
 			{{#doFaq locale.faq.QAs}}
@@ -108,8 +108,8 @@
 	
 	<section class="team">
 		<div class="sect-top sect team-top">
-			<h2 class="dot title" id="credits" {{#if locale.credits.titleSuffix}}data-title-suffix="{{locale.credits.titleSuffix}}"{{/if}}>{{ locale.credits.title }}</h2>
-			<p class="text">{{ locale.credits.text }}</p>
+			<h2 class="dot title" id="credits" {{#if locale.credits.titleSuffix}}data-title-suffix="{{locale.credits.titleSuffix}}"{{/if}}>{{ localeHelper locale "credits" "title" }}</h2>
+			<p class="text">{{ localeHelper locale "credits" "text" }}</p>
 		</div>
 		<div class="team-cards">
 			{{#each locale.credits.people}}
@@ -134,8 +134,8 @@
 
 	<section class="team team-helpers">
 		<div class="sect-top sect team-top">
-			<h2 class="dot title" id="special-thanks" {{#if locale.specialThanks.titleSuffix}}data-title-suffix="{{locale.specialThanks.titleSuffix}}"{{/if}}>{{ locale.specialThanks.title }}</h2>
-			<p class="text">{{ locale.specialThanks.text }}</p>
+			<h2 class="dot title" id="special-thanks" {{#if locale.specialThanks.titleSuffix}}data-title-suffix="{{locale.specialThanks.titleSuffix}}"{{/if}}>{{ localeHelper locale "specialThanks" "title" }}</h2>
+			<p class="text">{{ localeHelper locale "specialThanks" "text" }}</p>
 		</div>
 		<div class="team-cards">
 			{{#each locale.specialThanks.people}}
