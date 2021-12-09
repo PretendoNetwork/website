@@ -58,6 +58,12 @@ router.get('/:slug', async (request, response, next) => {
 	// Convert the content into HTML
 	content = marked(content);
 
+	// A boolean to show the quick links grid or not.
+	let showQuickLinks = false;
+	if (pageName === 'welcome') {
+		showQuickLinks = true;
+	}
+
 	response.render('docs/docs', {
 		layout: 'main',
 		locale,
@@ -65,6 +71,7 @@ router.get('/:slug', async (request, response, next) => {
 		content,
 		currentPage: request.params.slug,
 		missingInLocale,
+		showQuickLinks
 	});
 });
 
