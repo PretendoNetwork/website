@@ -6,9 +6,6 @@ const fs = require('fs');
 const path = require('path');
 const marked = require('marked');
 
-// Here we'll store the rendered markdown files for future requests
-const cachedPages = {};
-
 router.get('/', async (request, response) => {
 	response.redirect('/docs/welcome');
 });
@@ -50,27 +47,16 @@ router.get('/:slug', async (request, response, next) => {
 	}
 
 	let content;
-	// If the page has already been rendered, use the cached version
-	if (cachedPages[markdownLocale]?.[pageName]) {
-		content = cachedPages[markdownLocale]?.[pageName];
-	} else {
-		// Get the markdown file corresponding to the page.
-		content = fs.readFileSync(path.join('docs', markdownLocale, `${pageName}.md`), 'utf-8');
+	// Get the markdown file corresponding to the page.
+	content = fs.readFileSync(path.join('docs', markdownLocale, `${pageName}.md`), 'utf-8');
 
-		// Replace [yt-iframe](videoID) with the full <iframe />
-		content = content
-			.replace(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
-			.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+	// Replace [yt-iframe](videoID) with the full <iframe />
+	content = content
+		.replace(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
+		.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
 
-		// Convert the content into HTML
-		content = marked(content);
-
-		// Push the content into the cache
-		if (!cachedPages[markdownLocale]) {
-			cachedPages[markdownLocale] = {};
-		}
-		cachedPages[markdownLocale][pageName] = content;
-	}
+	// Convert the content into HTML
+	content = marked(content);
 
 	response.render('docs/docs', {
 		layout: 'main',
