@@ -15,8 +15,7 @@ header {
 .blog-card {
   padding: 60px;
   max-width: 1100px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto;
   color: var(--text-secondary);
 }
 
@@ -195,11 +194,6 @@ header {
   padding: 8px 24px;
   margin: 0;
   margin-bottom: 30px;
-}
-
-footer {
-  padding-top: 40px;
-  margin-top: auto;
 }
 
 @media screen and (max-width: 800px) {
