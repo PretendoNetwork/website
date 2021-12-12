@@ -211,6 +211,58 @@ router.post('/login', async (request, response) => {
 	response.redirect('/account');
 });
 
+router.get('/register', async (request, response) => {
+	const renderData = {
+		layout: 'main',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		error: request.cookies.error,
+		email: request.cookies.email,
+		username: request.cookies.username,
+		mii_name: request.cookies.mii_name,
+	};
+
+	response.clearCookie('error');
+	response.clearCookie('email');
+	response.clearCookie('username');
+	response.clearCookie('mii_name');
+
+	response.render('account_register', renderData);
+});
+
+router.post('/register', async (request, response) => {
+	const { email, username, mii_name, password, password_confirm } = request.body;
+
+	response.cookie('email', email, { domain: '.pretendo.network' });
+	response.cookie('username', username, { domain: '.pretendo.network' });
+	response.cookie('mii_name', mii_name, { domain: '.pretendo.network' });
+
+	const apiResponse = await util.apiPostGetRequest('/v1/register', {}, {
+		email, username, mii_name, password, password_confirm
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		response.cookie('error', apiResponse.body.error, { domain: '.pretendo.network' });
+		return response.redirect('/account/register');
+	}
+
+	const tokens = apiResponse.body;
+
+	response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+	response.clearCookie('error');
+	response.clearCookie('email');
+	response.clearCookie('username');
+	response.clearCookie('mii_name');
+
+	response.redirect('/account');
+});
+
+
+https://cdn.pretendo.cc/mii/1730592963/standard.tga
+
 router.get('/connect/discord', async (request, response) => {
 	let tokens;
 	try {
