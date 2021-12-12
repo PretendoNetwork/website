@@ -679,6 +679,9 @@ section.update-signup div.circle {
 .feature-progress-chart {
 	max-width: 100px;
 }
+.feature-progress-chart canvas.percentage-chart {
+	pointer-events: none; /* Fixes issue #48 */
+}
 .feature-list-wrapper h3 {
 	margin: 0;
 }
