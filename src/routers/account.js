@@ -29,8 +29,8 @@ router.get('/', async (request, response) => {
 	};
 
 	// Reset message cookies
-	response.clearCookie('linked');
-	response.clearCookie('error');
+	response.clearCookie('linked', { domain: '.pretendo.network' });
+	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	// Attempt to get user data
 	let apiResponse = await util.apiGetRequest('/v1/user', {
@@ -183,7 +183,7 @@ router.get('/login', async (request, response) => {
 		error: request.cookies.error
 	};
 
-	response.clearCookie('error');
+	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	response.render('account_login', renderData);
 });
@@ -222,10 +222,10 @@ router.get('/register', async (request, response) => {
 		mii_name: request.cookies.mii_name,
 	};
 
-	response.clearCookie('error');
-	response.clearCookie('email');
-	response.clearCookie('username');
-	response.clearCookie('mii_name');
+	response.clearCookie('error', { domain: '.pretendo.network' });
+	response.clearCookie('email', { domain: '.pretendo.network' });
+	response.clearCookie('username', { domain: '.pretendo.network' });
+	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
 	response.render('account_register', renderData);
 });
@@ -252,16 +252,13 @@ router.post('/register', async (request, response) => {
 	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
 	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
 
-	response.clearCookie('error');
-	response.clearCookie('email');
-	response.clearCookie('username');
-	response.clearCookie('mii_name');
+	response.clearCookie('error', { domain: '.pretendo.network' });
+	response.clearCookie('email', { domain: '.pretendo.network' });
+	response.clearCookie('username', { domain: '.pretendo.network' });
+	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
 	response.redirect('/account');
 });
-
-
-https://cdn.pretendo.cc/mii/1730592963/standard.tga
 
 router.get('/connect/discord', async (request, response) => {
 	let tokens;
