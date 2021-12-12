@@ -437,7 +437,7 @@ section.team {
 .card {
 	width: calc(100% - 54px);
 	min-width: 100px;
-	max-width: 460px; 
+	max-width: 460px;
 	padding: 18px 27px;
 	display: grid;
 	grid-template-columns: 110px 1fr;
@@ -485,7 +485,6 @@ section.team {
 section.team-helpers {
 	position: relative;
 	margin-top: 160px;
-	margin-bottom: 160px;
 }
 section.team-helpers .text {
 	max-width: 504px;
@@ -493,7 +492,7 @@ section.team-helpers .text {
 }
 section.team-helpers .team-helpers-cards {
 	display: inline-grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-gap: 20px;
 	margin-right: 20px;
 	color: var(--text-secondary);
@@ -531,10 +530,11 @@ section.team-helpers .helper-card {
 	padding: 14px 24px;
 	background: #16192D;
 	border-radius: 12px;
-	animation: scrollHelpersRTL 25s linear infinite;
+	animation: scrollHelpersRTL 30s linear infinite;
+	min-width: 480px;
 }
 section.team-helpers .row.second .helper-card {
-	animation: scrollHelpersLTR 25s linear infinite;
+	animation: scrollHelpersLTR 30s linear infinite;
 }
 section.team-helpers .helper-card:hover {
 	background: #252A51;
@@ -545,12 +545,12 @@ section.team-helpers .helper-card:hover {
 		transform: translatex(0%);  	
 	} 
 	100% { 
-		transform: translateX(calc( ( ( 100% + 20px ) * -5 ) + -7px));
+		transform: translateX(calc( ( ( 100% + 20px ) * -6 ) + -7px)); /* Don't question this, it just works. */
 	}
 }
 @keyframes scrollHelpersLTR { 
 	0% {
-		transform: translateX(calc( ( ( 100% + 20px ) * -5 ) + -7px));
+		transform: translateX(calc( ( ( 100% + 20px ) * -6 ) + -7px));
 	} 
 	100% { 
 		transform: translatex(0%);  
@@ -597,10 +597,6 @@ section.team-helpers .row.first .team-helpers-cards.repeat.first a:nth-child(3){
 	position: relative;
 	left: 5px;
 }
-section.team-helpers .row.second .team-helpers-cards.repeat.first a.special,
-section.team-helpers .row.second .team-helpers-cards.repeat.second a:nth-child(1){
-	left: calc(-250% - 45px);
-}
 
 section.update-signup {
 	position: relative;
@@ -610,6 +606,7 @@ section.update-signup {
 	justify-items: center;
 	align-items: center;
 	text-align: center;
+	margin-top: 160px;
 	padding-top: 240px;
 	padding-bottom: 300px;
 }
@@ -625,6 +622,7 @@ section.update-signup .text {
 section.update-signup .floating-serverjoin {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
+	gap: 18px;
 	width: 100%;
 	max-width: 576px;
 
@@ -648,6 +646,7 @@ section.update-signup .floating-serverjoin a {
 	padding: 9px 18px;
 	border-radius: 5px;
 	width: fit-content;
+	height: fit-content;
 }
 section.update-signup div.circle {
 	display: block;
@@ -793,7 +792,7 @@ footer {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(3, fit-content(100%)) 1fr;
-	gap: 148px;
+	gap: 7.7vw;
 	color: var(--text-secondary);
 	margin-top: 120px;
 	position: relative;
@@ -893,11 +892,6 @@ footer div.discord-server-card svg {
 
 @media screen and (max-width: 900px) {
 
-	h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
-		width: 0.5rem;
-		height: 0.5rem;
-	}
-
 	.all-progress-lists {
 		grid-template-columns: 100%;
 	}
@@ -924,12 +918,6 @@ footer div.discord-server-card svg {
 
 	.hero-image {
 		display: none;
-	}
-	.hero .title {
-		font-size: 2.5rem;
-	}
-	.hero .subtitle {
-		font-size: 1.5rem;
 	}
 	.hero .text {
 		width: 100%;
@@ -968,9 +956,6 @@ footer div.discord-server-card svg {
 		padding: 50px 20px;
 		border-radius: 10px;
 	}
-	.sect .title {
-		font-size: 2rem;
-	}
 	.sect .text {
 		width: 100%;
 	}
@@ -979,21 +964,57 @@ footer div.discord-server-card svg {
 		font-size: 1.1rem;
 	}
 
+	
+	section.showcase {
+    	margin-top: 0;
+	}
+	section.showcase .grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+	}
+	
+	section.team,
+	section.team-helpers {
+		margin-top: 100px;
+	}
 	.team .team-top .text {
 		width: 100%;
 	}
 
-	.team-cards .card { /* I needed a little bit of a higher priority */
-		grid-template-columns: 60px 1fr;
-		width: 100vw;
-		margin-left: -5vw;
-		margin-right: -2.5vw;
-		border-radius: 0;
+	section.team-helpers .sect-top {
+		text-align: center;
+	}
+	section.team-helpers .sect-top .text {
+		width: 100%;
+		max-width: none;
+	}
+	section.team-helpers .animation-wrapper {
+		transform: none;
+		overflow-x: visible;
+		margin-left: -10vw; /* Fixes the loop being visible */
+	}
+	section.team-helpers .animation-wrapper::after {
+		background: none;
 	}
 
+	section.update-signup {
+		margin-top: 0;
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
 
 	footer {
 		margin-top: 100px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, fit-content(100%));
+	}
+	footer div {
+		justify-self: center;
+	}
+	footer div.discord-server-card {
+		grid-column: 1 / span 4;
+		width: calc(100% - 126px);
+		justify-self: normal;
 	}
 
 	.text {
@@ -1003,6 +1024,87 @@ footer div.discord-server-card svg {
 }
 
 @media screen and (max-width: 580px) {
+
+	.sect .title {
+		font-size: 2rem;
+	}
+	h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
+		width: 0.5rem;
+		height: 0.5rem;
+	}
+
+	.hero .title {
+		font-size: 2.5rem;
+	}
+	.hero .subtitle {
+		font-size: 1.5rem;
+	}
+
+	section.showcase {
+    	padding: 160px 0;
+	}
+	section.showcase p.text {
+		margin-bottom: 82px;
+	}
+	section.showcase .grid .item {
+		padding: 24px 24px;
+	}
+
+	.team .team-top {
+		text-align: left;
+	}
+	.team-cards .card {
+		grid-template-columns: 60px 1fr;
+		width: calc(95vw - 36px);
+		margin-left: -1vw;
+		margin-right: -1vw;
+		padding: 18px;
+		max-width: none;
+	}
+
+	section.team-helpers .team-helpers-cards {
+		grid-gap: 12px;
+    	margin-right: 12px;
+	}
+	section.team-helpers .animation-wrapper .helper-card {
+		padding: 7px 18px;
+	}
+
+	section.team-helpers .animation-wrapper .row.second {
+		margin-top: 12px;
+	}
+	section.team-helpers .helper-card {
+		animation: scrollHelpersRTLMobile 25s linear infinite;
+	}
+	section.team-helpers .row.second .helper-card {
+		animation: scrollHelpersLTRMobile 25s linear infinite;
+	}
+	@keyframes scrollHelpersRTLMobile { 
+		0% {
+			transform: translatex(0%);  	
+		} 
+		100% { 
+			transform: translateX(calc( ( ( 100% + 12px ) * -6 ) + -6px));
+		}
+	}
+	@keyframes scrollHelpersLTRMobile { 
+		0% {
+			transform: translateX(calc( ( ( 100% + 12px ) * -6 ) + -6px));
+		} 
+		100% { 
+			transform: translatex(0%);  
+		}
+	}
+
+	section.update-signup .floating-serverjoin {
+		width: calc(100% - 36px);
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, fit-content(100%));
+	}
+	section.update-signup .floating-serverjoin > * {
+		margin: auto !important;
+	}
+
 	.selected-locale .locale-names {
 		display: none;
 	}
@@ -1020,6 +1122,19 @@ footer div.discord-server-card svg {
 	.select-box .options-container {
 		width: 150px;
 		right: 12px;
+	}
+
+	footer {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, fit-content(100%));
+	}
+	footer div {
+		justify-self: start;
+	}
+	footer div.discord-server-card {
+		grid-column: 1 / span 1;
+		padding: 30px;
+		width: calc(100% - 60px);
 	}
 
 }
