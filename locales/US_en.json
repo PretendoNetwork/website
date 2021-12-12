@@ -180,6 +180,19 @@
 		"button": "Test file"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below."
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Installing Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		}
 	}
 }
