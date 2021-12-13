@@ -1,87 +1,125 @@
 .wrapper {
   display: flex;
-  flex-flow: column;
   min-height: 100vh;
 }
 
-.login-wrapper {
+.account-form-wrapper {
   margin: auto;
+  width: fit-content;
+  overflow: hidden;
 }
 
-form.login {
-  padding: 48px;
-  background-color: #151934;
+.account-form-wrapper .logotype {
+  display: block;
+  position: relative;
+  left: -6px;
+  margin-bottom: 30px;
+}
+
+.account-form-wrapper .logotype svg {
+  width: 140px;
+}
+.account-form-wrapper .logotype svg text {
+  font-size: 20px;
+  transform: translate(593px, 495px);
+}
+
+form.account {
+  display: block;
+  padding: 40px 48px;
+  background-color: #292E53;
+  color: var(--text-secondary);
   border-radius: 12px;
-  max-width: calc(90vw - 92px);
-  width: 400px;
+  width: 360px;
+  max-width: calc(90vw - 96px);
 }
 
-form.login input {
+form.account h2 {
+  margin: 0;
+  color: var(--text)
+}
+
+form.account p {
+  margin: 12px 0;
+}
+
+form.account div {
+  margin-top: 24px;
+}
+
+form.account input {
   appearance: none;
   -webkit-appearance: none;
   display: block;
-  border: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: var(--btn-secondary);
+  background-color: #353C6A;
   border: none;
   border-radius: 4px;
   padding: 12px;
   color: var(--text);
   width: calc(100% - 24px);
-  margin-bottom: 12px;
 }
 
-form.login input::placeholder {
-  color: var(--text-secondary);
-}
-
-form.login input:focus {
-  background-color: #fff;
-  color: var(--btn-secondary);
-  transition: 200ms;
+form.account input:focus {
+  background-color: #4B5595;
   outline: none;
+  transition: 150ms;
 }
 
-form.login button {
+form.account label {
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+form.account button {
   appearance: none;
   -webkit-appearance: none;
   display: block;
-  border: 0;
+  border: none;
   border-radius: 4px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: var(--text);
-  padding: 12px;
-  background: var(--btn);
+  padding: 12px 30px;
+  background: #353C6A;
+  margin-top: 18px;
   cursor: pointer;
   width: 100%;
+  text-decoration: none;
 }
 
-form.login a.pwdreset {
-  display: block;
-  color: var(--text-secondary);
+form.account button[type="submit"] {
+  background: var(--btn);
+  margin: auto;
+}
+
+form.account a {
   text-decoration: none;
+  display: block;
+  color: var(--text-secondary);  
   text-align: right;
   margin: 6px 0;
-  width: 100%;
+  width: fit-content;
 }
-
-form.login a.pwdreset:hover {
+form.account a:hover {
   color: var(--text);
 }
 
-form.login .register {
-  text-decoration: none;
+form.account a.pwdreset {
+  margin-left: auto;
+  font-size: 14px;
 }
 
-form.login .register button {
-  background: var(--btn-secondary);
+form.account a.register {
+  margin:auto;
   margin-top: 18px;
 }
 
-footer {
-  margin-top: 23px;
+form.account.register div:last-child {
+  margin-top: 42px;
 }
 
 @keyframes banner-notice {
