@@ -95,7 +95,7 @@ router.get('/', async (request, response) => {
 				});
 			} catch (error) {
 				renderData.error = 'Invalid Discord refresh token. Remove account and relink';
-				response.render('account', renderData);
+				response.render('account/account', renderData);
 			}
 
 			// TODO: Add a dedicated endpoint for updating connections?
@@ -175,7 +175,7 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
-	response.render('account', renderData);
+	response.render('account/account', renderData);
 });
 
 router.get('/login', async (request, response) => {
@@ -188,7 +188,7 @@ router.get('/login', async (request, response) => {
 
 	response.clearCookie('error', { domain: '.pretendo.network' });
 
-	response.render('account_login', renderData);
+	response.render('account/login', renderData);
 });
 
 router.post('/login', async (request, response) => {
@@ -246,7 +246,7 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
-	response.render('account_register', renderData);
+	response.render('account/register', renderData);
 });
 
 router.post('/register', async (request, response) => {
@@ -289,7 +289,7 @@ router.get('/register', async (request, response) => {
 
 	response.clearCookie('error');
 
-	response.render('account_register', renderData);
+	response.render('account/register', renderData);
 });
 
 router.get('/connect/discord', async (request, response) => {
