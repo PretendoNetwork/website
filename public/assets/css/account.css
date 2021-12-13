@@ -1,6 +1,12 @@
+/* Removing until it's done */
+.setting-card a.edit,
+.sign-in-history a {
+  display: none;
+}
+
 .account-wrapper {
   display: grid;
-  column-gap: 60px;
+  column-gap: 48px;
   margin-top: 80px;
   color: var(--text-secondary);
 }
@@ -26,15 +32,21 @@
   background: var(--btn-secondary);
 }
 .account-sidebar .user #download-cemu-files {
-  width: 100%;
-  padding: 4px 16px;
-  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 24px;
   background: #383f6b;
-  font-size: 0.9rem;
-  margin: 8px 0 0;
+  margin: 24px 0 0;
+  text-decoration: none;
 }
-.account-sidebar .user .cemu-warning {
+.account-sidebar .user #download-cemu-files p.download-caption {
+  margin: 15px 0 0;
+}
+.account-sidebar .user p.cemu-warning {
+  margin: 4px 0 0;
   font-size: 0.7rem;
+  color: var(--text-secondary);
 }
 
 /* Settings */
