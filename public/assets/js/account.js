@@ -1,5 +1,5 @@
 
-document.getElementById('remove-discord-connection').addEventListener('click', () => {
+document.getElementById('remove-discord-connection')?.addEventListener('click', () => {
 	// TODO: Refresh access token if expired (move this to the backend maybe?)
 
 	const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];

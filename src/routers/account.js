@@ -1,9 +1,11 @@
 const { Router } = require('express');
 const crypto = require('crypto');
 const DiscordOauth2 = require('discord-oauth2');
+const AdmZip = require('adm-zip');
 const util = require('../util');
 const config = require('../../config.json');
 const router = new Router();
+const aesKey = Buffer.from(config.aes_key, 'hex');
 
 // Create OAuth client
 const discordOAuth = new DiscordOauth2({
@@ -15,7 +17,7 @@ const discordOAuth = new DiscordOauth2({
 
 router.get('/', async (request, response) => {
 	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token) {
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
 		return response.redirect('/account/login');
 	}
 
@@ -191,7 +193,7 @@ router.get('/login', async (request, response) => {
 router.post('/login', async (request, response) => {
 	const { username, password } = request.body;
 
-	const apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
 		username,
 		password,
 		grant_type: 'password'
@@ -207,6 +209,22 @@ router.post('/login', async (request, response) => {
 	response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
 	response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
 	response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+
+	apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${tokens.token_type} ${tokens.access_token}`
+	});
+
+	const account = apiResponse.body;
+
+	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
+	const hashedPasswordBuffer = Buffer.from(hashedPassword, 'hex');
+
+	const cipher = crypto.createCipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
+
+	let encryptedBody = cipher.update(hashedPasswordBuffer);
+	encryptedBody = Buffer.concat([encryptedBody, cipher.final()]);
+
+	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
 	response.redirect('/account');
 });
@@ -304,9 +322,9 @@ router.get('/connect/discord', async (request, response) => {
 
 		const tokens = apiResponse.body;
 
-		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
 
 		apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
 			'Authorization': `${tokens.token_type} ${tokens.access_token}`
@@ -328,6 +346,78 @@ router.get('/connect/discord', async (request, response) => {
 	}
 
 	response.cookie('linked', 'Discord', { domain: '.pretendo.network' }).redirect('/account');
+});
+
+router.get('/online-files', async (request, response) => {
+
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token|| !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			// TODO: Error message
+			return response.status(apiResponse.statusCode).json({
+				error: 'Bad'
+			});
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		// TODO: Error message
+		return response.status(apiResponse.statusCode).json({
+			error: 'Bad'
+		});
+	}
+
+	const account = apiResponse.body;
+
+	const decipher = crypto.createDecipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
+
+	let decryptedPasswordHash = decipher.update(Buffer.from(request.cookies.ph, 'hex'));
+	decryptedPasswordHash = Buffer.concat([decryptedPasswordHash, decipher.final()]);
+
+	let accountDat = 'AccountInstance_00000000\n';
+	accountDat += `AccountPasswordCache=${decryptedPasswordHash.toString('hex')}\n`;
+	accountDat += 'IsPasswordCacheEnabled=1\n';
+	accountDat += `AccountId=${account.username}\n`;
+	accountDat += 'PersistentId=80000001';
+
+	const onlineFiles = new AdmZip();
+
+	onlineFiles.addFile('mlc01/usr/save/system/act/80000001/account.dat', Buffer.from(accountDat)); // Minimal account.dat
+	onlineFiles.addFile('otp.bin', Buffer.alloc(0x400)); // nulled OTP
+	onlineFiles.addFile('seeprom.bin', Buffer.alloc(0x200)); // nulled SEEPROM
+
+	response.writeHead(200, {
+		'Content-Disposition': 'attachment; filename="Online Files.zip"',
+		'Content-Type': 'application/zip',
+	});
+
+	response.end(onlineFiles.toBuffer());
 });
 
 module.exports = router;

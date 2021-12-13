@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/PretendoNetwork/website#readme",
   "dependencies": {
+    "adm-zip": "^0.5.9",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
     "discord-oauth2": "github:ryanblenis/discord-oauth2",

@@ -9,7 +9,9 @@
 			<div class="user">
 				<img src="{{account.mii.image_url}}" class="mii" />
 				<p class="miiname">{{account.mii.name}}</p>
-				<p class="username">PNID: {{account.username}}</p>
+				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
+				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>Download account files</a>
+				<p class="cemu-warning">(will not work with Nintendo Network)</p>
 			</div>
 		</div>
 
