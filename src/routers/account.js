@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const crypto = require('crypto');
 const DiscordOauth2 = require('discord-oauth2');
+const { v4: uuidv4 } = require('uuid');
 const AdmZip = require('adm-zip');
 const util = require('../util');
 const config = require('../../config.json');
@@ -400,11 +401,27 @@ router.get('/online-files', async (request, response) => {
 	let decryptedPasswordHash = decipher.update(Buffer.from(request.cookies.ph, 'hex'));
 	decryptedPasswordHash = Buffer.concat([decryptedPasswordHash, decipher.final()]);
 
+	const miiNameBuffer = Buffer.alloc(0x16);
+	const miiName = Buffer.from(account.mii.name, 'utf16le').swap16();
+	miiName.copy(miiNameBuffer);
+
 	let accountDat = 'AccountInstance_00000000\n';
-	accountDat += `AccountPasswordCache=${decryptedPasswordHash.toString('hex')}\n`;
-	accountDat += 'IsPasswordCacheEnabled=1\n';
+	accountDat += 'PersistentId=80000001\n';
+	accountDat += 'TransferableIdBase=0\n';
+	accountDat += `Uuid=${uuidv4().replace(/-/g, '')}\n`;
+	accountDat += `MiiData=${Buffer.from(account.mii.data, 'base64').toString('hex')}\n`;
+	accountDat += `MiiName=${miiNameBuffer.toString('hex')}\n`;
 	accountDat += `AccountId=${account.username}\n`;
-	accountDat += 'PersistentId=80000001';
+	accountDat += 'BirthYear=0\n';
+	accountDat += 'BirthMonth=0\n';
+	accountDat += 'BirthDay=0\n';
+	accountDat += 'Gender=0\n';
+	accountDat += `EmailAddress=${account.email.address}\n`;
+	accountDat += 'Country=0\n';
+	accountDat += 'SimpleAddressId=0\n';
+	accountDat += `PrincipalId=${account.pid.toString(16)}\n`;
+	accountDat += 'IsPasswordCacheEnabled=1\n';
+	accountDat += `AccountPasswordCache=${decryptedPasswordHash.toString('hex')}`;
 
 	const onlineFiles = new AdmZip();
 
@@ -412,10 +429,9 @@ router.get('/online-files', async (request, response) => {
 	onlineFiles.addFile('otp.bin', Buffer.alloc(0x400)); // nulled OTP
 	onlineFiles.addFile('seeprom.bin', Buffer.alloc(0x200)); // nulled SEEPROM
 
-	response.writeHead(200, {
-		'Content-Disposition': 'attachment; filename="Online Files.zip"',
-		'Content-Type': 'application/zip',
-	});
+	response.status(200);
+	response.set('Content-Disposition', 'attachment; filename="Online Files.zip');
+	response.set('Content-Type', 'application/zip');
 
 	response.end(onlineFiles.toBuffer());
 });
