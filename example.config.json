@@ -16,5 +16,6 @@
 		"tester_roles": [
 			"role id"
 		]
-	}
+	},
+	"aes_key": "hex key here"
 }

@@ -9,6 +9,8 @@ const logger = require('./logger');
 const util = require('./util');
 const config = require('../config.json');
 
+const defaultLocale = require('../locales/US_en.json');
+
 const { http: { port } } = config;
 const app = express();
 
@@ -23,6 +25,7 @@ logger.info('Importing page routers');
 const routers = {
 	home: require('./routers/home'),
 	faq: require('./routers/faq'),
+	docs: require('./routers/docs'),
 	progress: require('./routers/progress'),
 	account: require('./routers/account'),
 	blog: require('./routers/blog'),
@@ -45,7 +48,7 @@ app.use(expressLocale({
 		es: 'es-ES',
 		fr: 'fr-FR', 'fr-CA': 'fr-FR', 'fr-CH': 'fr-FR',
 		it: 'it-IT', 'it-CH': 'it-IT',
-		jp: 'ja-JP',
+		ja: 'ja-JP',
 		ko: 'ko-KR',
 		pt: 'pt-BR',
 		ro: 'ro-RO',
@@ -60,7 +63,7 @@ app.use(expressLocale({
 		'es', 'es-ES',
 		'fr', 'fr-FR', 'fr-CA', 'fr-CH',
 		'it', 'it-IT', 'it-CH',
-		'jp', 'ja-JP',
+		'ja', 'ja-JP',
 		'ko', 'ko-KR',
 		'pt', 'pt-BR',
 		'ro', 'ro-RO',
@@ -72,6 +75,7 @@ app.use(expressLocale({
 
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
+app.use('/docs', routers.docs);
 app.use('/progress', routers.progress);
 app.use('/account', routers.account);
 app.use('/localization', routers.localization);
@@ -116,6 +120,29 @@ app.engine('handlebars', handlebars({
 		},
 		neq(value1, value2) {
 			return value1 !== value2;
+		},
+		localeHelper(...args) {
+			let userLocaleString = args[0];
+
+			/*
+			 *	Removes the first and the last argument, and then loops through the rest to
+			 *	get the string in the user's locale. If not available, it will return it in
+			 *	the default locale.
+			 */
+			
+			args.slice(1, -1).forEach(arg => {
+				userLocaleString = userLocaleString?.[arg];
+			});
+
+			if (!userLocaleString) {
+				let defaultLocaleString = defaultLocale;
+				args.slice(1, -1).forEach(arg => {
+					defaultLocaleString = defaultLocaleString?.[arg];
+				});
+				return defaultLocaleString;
+			} else {
+				return userLocaleString;
+			}
 		}
 	}
 }));

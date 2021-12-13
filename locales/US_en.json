@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "About",
 		"faq": "FAQ",
+		"docs": "Docs",
 		"credits": "Credits",
 		"progress": "Progress",
 		"blog": "Blog"
@@ -154,6 +155,11 @@
 				"caption": "Research on Nintendo datastructures",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "The localizers",
+				"caption": "Localizing, duh.",
+				"picture": "https://via.placeholder.com/128"
 			}
 		]
 	},
@@ -172,5 +178,8 @@
 		"fileInput": "File to test",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Test file"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below."
 	}
 }
