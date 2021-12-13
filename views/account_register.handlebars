@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/assets/css/register.css" />
+
+<div class="wrapper">
+
+	{{> header}}
+
+
+<div class="register-wrapper">
+	<h1 class="title dot">Register</h1>
+	<form action="/account/register" method="post" class="register">
+		<div>
+			<input name="email" id="email" type="email" placeholder="Email" value="{{ email }}" required>
+		</div>
+		<div>
+			<input name="username" id="username" placeholder="Username" value="{{ username }}" minlength=6 maxlength=16 required>
+		</div>
+		<div>
+			<input name="mii_name" id="mii_name" placeholder="Mii Name (Max 10 characters)" value="{{ mii_name }}" maxlength=10 required>
+		</div>
+		<div>
+			<input name="password" id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+		</div>
+		<div>
+			<input name="password_confirm" id="password_confirm" type="password" placeholder="Confirm Password" required>
+		</div>
+		<div>
+			<button type="submit">Register</button>
+		</div>
+		<div>
+		<a href="/account/login" class="login">
+			<button type="button">Already have an account?</button>
+		</a>
+		</div>
+	</form>
+	</div>
+
+	{{> footer }}
+
+</div>
+
+{{#if error}}
+<div class="banner-notice error">
+	<div>
+		<p>{{ error }}</p>
+	</div>
+</div>
+{{/if}}
