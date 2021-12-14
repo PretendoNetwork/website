@@ -28,10 +28,10 @@ router.get('/', async (request, response) => {
 	const specialThanksFirstRow = specialThanksPeople.slice(0, 3);
 	const specialThanksSecondRow = specialThanksPeople.slice(3, 6);
 
-	// Builds the final array to be sent to the view, and duplicates each row.
+	// Builds the final array to be sent to the view, and triples each row.
 	specialThanksPeople = {
-		first: specialThanksFirstRow.concat(specialThanksFirstRow),
-		second: specialThanksSecondRow.concat(specialThanksSecondRow)
+		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
+		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
 	};
 
 	response.render('home', {

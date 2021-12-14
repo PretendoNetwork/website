@@ -492,7 +492,7 @@ section.team-helpers .text {
 }
 section.team-helpers .team-helpers-cards {
 	display: inline-grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(9, 1fr);
 	grid-gap: 20px;
 	margin-right: 20px;
 	color: var(--text-secondary);
@@ -530,11 +530,11 @@ section.team-helpers .helper-card {
 	padding: 14px 24px;
 	background: #16192D;
 	border-radius: 12px;
-	animation: scrollHelpersRTL 30s linear infinite;
+	animation: scrollHelpersRTL 45s linear infinite;
 	min-width: 480px;
 }
 section.team-helpers .row.second .helper-card {
-	animation: scrollHelpersLTR 30s linear infinite;
+	animation: scrollHelpersLTR 45s linear infinite;
 }
 section.team-helpers .helper-card:hover {
 	background: #252A51;
@@ -545,12 +545,12 @@ section.team-helpers .helper-card:hover {
 		transform: translatex(0%);  	
 	} 
 	100% { 
-		transform: translateX(calc( ( ( 100% + 20px ) * -6 ) + -7px)); /* Don't question this, it just works. */
+		transform: translateX(calc( ( ( 100% + 20px ) * -9 ) + -7px)); /* Don't question this, it just works. */
 	}
 }
 @keyframes scrollHelpersLTR { 
 	0% {
-		transform: translateX(calc( ( ( 100% + 20px ) * -6 ) + -7px));
+		transform: translateX(calc( ( ( 100% + 20px ) * -9 ) + -7px));
 	} 
 	100% { 
 		transform: translatex(0%);  
@@ -591,11 +591,6 @@ section.team-helpers .helper-card span {
 }
 section.team-helpers .helper-card p {
 	color: var(--text-secondary);
-}
-/* These two fix the spacing being inconsistent on some card, thus "jumping" on repeat. I'm fairly certain it isn't my fault */
-section.team-helpers .row.first .team-helpers-cards.repeat.first a:nth-child(3){
-	position: relative;
-	left: 5px;
 }
 
 section.update-signup {
@@ -1074,22 +1069,22 @@ footer div.discord-server-card svg {
 		margin-top: 12px;
 	}
 	section.team-helpers .helper-card {
-		animation: scrollHelpersRTLMobile 25s linear infinite;
+		animation: scrollHelpersRTLMobile 45s linear infinite;
 	}
 	section.team-helpers .row.second .helper-card {
-		animation: scrollHelpersLTRMobile 25s linear infinite;
+		animation: scrollHelpersLTRMobile 45s linear infinite;
 	}
 	@keyframes scrollHelpersRTLMobile { 
 		0% {
 			transform: translatex(0%);  	
 		} 
 		100% { 
-			transform: translateX(calc( ( ( 100% + 12px ) * -6 ) + -6px));
+			transform: translateX(calc( ( ( 100% + 12px ) * -9 ) + -6px));
 		}
 	}
 	@keyframes scrollHelpersLTRMobile { 
 		0% {
-			transform: translateX(calc( ( ( 100% + 12px ) * -6 ) + -6px));
+			transform: translateX(calc( ( ( 100% + 12px ) * -9 ) + -6px));
 		} 
 		100% { 
 			transform: translatex(0%);  

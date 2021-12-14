@@ -4,7 +4,8 @@
 		"faq": "FAQ",
 		"credits": "Créditos",
 		"progress": "Progresso",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Servidores de jogos",
@@ -64,6 +65,25 @@
 				"question": "Terei de desbloquear meu console para me conectar?",
 				"answer": "Sim, você precisará desbloquear seu console para se conectar; no entanto, no Wii U você só precisará acessar o Homebrew Launcher (ou seja, Haxchi, Coldboot Haxchi ou até mesmo o exploit do navegador de internet), informações sobre como os consoles Nintendo 3DS se conectarão serão fornecidas em um momento posterior."
 			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -154,8 +174,32 @@
 				"caption": "Pesquisa da estruturas de dados da Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
 	},
 	"progressPage": {
 		"title": "Nosso progresso",

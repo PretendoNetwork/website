@@ -5,7 +5,8 @@
 		"docs": "Documentazione",
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Server online",
@@ -65,6 +66,25 @@
 				"question": "Avrò bisogno di hack per connettermi?",
 				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit web per browser). Informazioni su come connettersi su 3DS saranno disponibili in futuro."
 			}
+		]
+	},
+	"showcase": {
+		"title": "Cosa facciamo",
+		"text": "Il nostro progetto ha vari componenti. Eccone alcuni.",
+		"cards": [
+			{
+				"title": "Server di gioco",
+				"caption": "Riportiamo in vita i tuoi giochi e contenuti preferiti usando server custom."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Una reimmaginazione di Miiverse, come se fosse stato fatto nell'era moderna."
+			},
+			{
+				"title": "Supporto per Cemu",
+				"caption": "Gioca ai tuoi giochi preferiti per Wii U anche senza avere una console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -156,8 +176,32 @@
 				"caption": "Ricerca su strutture dati Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "Contributori su GitHub",
+				"caption": "Localizzazioni e altre contribuzioni",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "Resta aggiornato",
+		"text": "Entra nel nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
+		"widget": {
+			"text": "Ricevi aggiornamenti in tempo reale",
+			"button": "Unisciti al server"
+		}
+	},
+	"footer": {
+		"socials": "Social",
+		"usefulLinks": "Link utili",
+		"widget": {
+			"captions": [
+				"Vuoi rimanere aggiornato?",
+				"Unisciti al nostro server su Discord!"
+			],
+			"button": "Unisciti ora!"
+		}
 	},
 	"progressPage": {
 		"title": "Il nostro progresso",
