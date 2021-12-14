@@ -4,7 +4,8 @@
 		"faq": "أسئلة",
 		"credits": "الفريق",
 		"progress": "التقدم",
-		"blog": "البلوج"
+		"blog": "البلوج",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
@@ -64,6 +65,25 @@
 				"question": "هل احتاج أن اهكر حتي اتصل؟",
 				"answer": "نعم ستحتاج إلي تهكير جهازك لكن علي الوي يو تحتاج فقط إلي الهومبرو لانشر اي هاكسي او موخا اما علي ال3 دي اس سيتم الاعلان في وقتا لاحقاً"
 			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -163,6 +183,11 @@
 				"caption": "للمساعدة في الترجمة و دي بج و اكثر",
 				"picture": "https://github.com/discord.png",
 				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 			
 		]

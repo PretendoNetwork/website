@@ -5,7 +5,9 @@
 		"docs": "Docs",
 		"credits": "Credits",
 		"progress": "Progress",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Game servers",
@@ -65,6 +67,25 @@
 				"question": "Will I need hacks to connect?",
 				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
 			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -157,11 +178,30 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "The localizers",
-				"caption": "Localizing, duh.",
-				"picture": "https://via.placeholder.com/128"
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
 	},
 	"progressPage": {
 		"title": "Our progress",
@@ -185,7 +225,7 @@
 			"header": "Quick links",
 			"links": [
 				{
-					"header": "Installing Pretendo",
+					"header": "Install Pretendo",
 					"caption": "View the setup instructions"
 				},
 				{

@@ -5,7 +5,8 @@
 		"docs": "Documentazione",
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Server online",
@@ -65,6 +66,25 @@
 				"question": "Avrò bisogno di hack per connettermi?",
 				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit web per browser). Informazioni su come connettersi su 3DS saranno disponibili in futuro."
 			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -156,8 +176,32 @@
 				"caption": "Ricerca su strutture dati Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "Contributori su GitHub",
+				"caption": "Localizzazioni e altre contribuzioni",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
 	},
 	"progressPage": {
 		"title": "Il nostro progresso",
