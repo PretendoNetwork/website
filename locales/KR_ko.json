@@ -4,7 +4,8 @@
 		"faq": "자주 묻는 질문",
 		"credits": "크레딧",
 		"progress": "진행률",
-		"blog": "Blog"
+		"blog": "블로그",
+		"account": "계정"
 	},
 	"hero": {
 		"subtitle": "다시 만들어진",
@@ -66,8 +67,27 @@
 			}
 		]
 	},
+	"showcase": {
+		"title": "저희가 만드는 것들",
+		"text": "저희 프로젝트는 여러 부분으로 나뉘어져 있습니다. 그 중 몇개를 여기서 확인하시죠.",
+		"cards": [
+			{
+				"title": "게임 서버",
+				"caption": "유저들이 좋아하는 게임과 컨텐츠를 커스텀 서버로 부활시킵니다."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "최근에 처음 만들어진 것처럼 만드는, Miiverse의 재제작입니다. "
+			},
+			{
+				"title": "Cemu 지원",
+				"caption": "당신이 좋아하는 Wii U 타이틀을 콘솔 없이 플레이하세요!"
+			}
+
+		]
+	},
 	"credits": {
-		"title": "만든 사람들",
+		"title": "개발 팀",
 		"text": "프로젝트 뒤에서 일하는 사람들을 만나보세요",
 		"people": [
 			{
@@ -90,7 +110,7 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "BOSS 연구 및 패치 개발",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -102,27 +122,27 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "웹 개발 주도",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "Monty",
+				"name": "monty",
 				"caption": "웹 개발",
-				"picture": "https://github.com/montylion.png",
-				"github": "https://github.com/montylion"
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Designer",
+				"caption": "디자이너",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Special Thanks",
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -132,13 +152,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS 개발 및 NEX 해부",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "프로젝트 보존",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -150,27 +170,51 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "특별한 감사",
+				"special": "Special Thanks",
 				"caption": "닌텐도 데이터 구조 연구",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "GitHub 기여자들",
+				"caption": "로컬라이징 및 다른 기여",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "최신 정보",
+		"text": "저희의 최신 정보를 얻으려면 저희 Discord 서버에 참여하세요.",
+		"widget": {
+			"text": "저희 진행도의 실시간 업데이트를 얻으세요",
+			"button": "서버 참여하기"
+		}
+	},
+	"footer": {
+		"socials": "소셜",
+		"usefulLinks": "쓸모있는 링크",
+		"widget": {
+			"captions": [
+				"지속적 업데이트를 받고 싶으세요?",
+				"저희 Discord 서버에 참여하세요!!"
+			],
+			"button": "지금 참여하기!"
+		}
 	},
 	"progressPage": {
 		"title": "프로젝트 진행률",
 		"description": "프로젝트 진행률 및 목표를 확인하세요! (매시간 갱신, 모든 목표나 진행률은 공개되지 않습니다)"
 	},
 	"blogPage": {
-		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"title": "블로그",
+		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면,  <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "같이 번역해 주세요!",
+		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",
+		"instructions": "로컬라이즈",
+		"fileInput": "테스트할 파일",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "파일 테스트"
 	}
 }

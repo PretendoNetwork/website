@@ -17,18 +17,20 @@
   },
   "homepage": "https://github.com/PretendoNetwork/website#readme",
   "dependencies": {
+    "adm-zip": "^0.5.9",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
+    "discord-oauth2": "github:ryanblenis/discord-oauth2",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "express-locale": "^2.0.0",
     "fs-extra": "^9.1.0",
+    "got": "^11.8.2",
     "gray-matter": "^4.0.3",
-    "ioredis": "^4.26.0",
     "marked": "^3.0.4",
     "morgan": "^1.10.0",
-    "redis-json": "^5.0.0",
-    "trello": "^0.10.0"
+    "trello": "^0.11.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0"

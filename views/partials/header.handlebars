@@ -25,11 +25,12 @@
 	</a>
 
 	<nav>
-		<a href="/#about">{{ locale.nav.about }}</a>
-		<a href="/#faq">{{ locale.nav.faq }}</a>
-		<a href="/#credits">{{ locale.nav.credits }}</a>
-		<a href="/progress" class="keep-on-mobile">{{ locale.nav.progress }}</a>
-		<a href="/blog" class="keep-on-mobile">{{ locale.nav.blog }}</a>
+		<a href="/#about">{{ localeHelper locale "nav" "about" }}</a>
+		<a href="/#faq">{{ localeHelper locale "nav" "faq" }}</a>
+		<a href="/#credits">{{ localeHelper locale "nav" "credits" }}</a>
+		<a style="display: none;" href="/docs">{{ localeHelper locale "nav" "docs"}}</a>
+		<a href="/progress" class="keep-on-mobile">{{ localeHelper locale "nav" "progress"}}</a>
+		<a href="/blog" class="keep-on-mobile">{{ localeHelper locale "nav" "blog" }}</a>
 	</nav>
 
 	<!-- Ordered the locales in the same way YouTube's language selector orders them -->
@@ -66,6 +67,12 @@
 				</label>
 			</div>
 			<div class="option">
+				<input type="radio" class="radio" id="nl-NL" name="category" />
+				<label for="nl-NL">
+					<div class="item"><span class="lang">🇳🇱</span><span class="locale-names">Nederlands</span></div>
+				</label>
+			</div>
+			<div class="option">
 				<input type="radio" class="radio" id="pt-BR" name="category" />
 				<label for="pt-BR">
 					<div class="item"><span class="lang">🇧🇷</span><span class="locale-names">Português</span></div>
@@ -96,6 +103,11 @@
 				</label>
 			</div>
 			<div class="option">
+				<input type="radio" class="radio" id="ja-JP" name="category" />
+				<label for="ja-JP">
+					<div class="item"><span class="lang">🇯🇵</span><span class="locale-names">日本語</span></div>
+			</div>
+			<div class="option">
 				<input type="radio" class="radio" id="ko-KR" name="category" />
 				<label for="ko-KR">
 					<div class="item"><span class="lang">🇰🇷</span><span class="locale-names">한국어</span></div>
@@ -106,5 +118,4 @@
 			<div class="item"><span class="lang"></span></div>
 		</div>
 	</div>
-
 </header>

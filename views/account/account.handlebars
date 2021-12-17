@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="/assets/css/account.css" />
+
+<div class="wrapper">
+
+	{{> header}}
+
+	<div class="account-wrapper">
+		<div class="account-sidebar">
+			<div class="user">
+				<img src="{{account.mii.image_url}}" class="mii" />
+				<p class="miiname">{{account.mii.name}}</p>
+				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
+				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+					<p class="download-caption">Download account files</p>
+					<p class="cemu-warning">(will not work on Nintendo Network)</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="settings-wrapper">
+			<h2 class="section-header" id="user-settings">User settings</h2>
+			<div class="setting-card">
+				<h2 class="header">Profile</h2>
+				<a href="/account/edit/profile" class="edit">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+					</svg>
+				</a>
+				<ul class="setting-list">
+					<li>
+						<p class="label">Nickname</p>
+						<p class="value">{{account.mii.name}}</p>
+					</li>
+					<li>
+						<p class="label">Birth date</p>
+						<p class="value">{{account.birthdate}}</p>
+					</li>
+					<li>
+						<p class="label">Gender</p>
+						<p class="value">{{account.gender}}</p>
+					</li>
+					<li>
+						<p class="label">Country/region</p>
+						<p class="value">{{account.country}}</p>
+					</li>
+					<li>
+						<p class="label">Timezone</p>
+						<p class="value">{{account.timezone.name}}</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="setting-card">
+				<h2 class="header">Servers</h2>
+				<fieldset {{#if isTester}}{{else}}disabled{{/if}}>
+					<form class="server-selection" id="server">
+						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
+						<label for="prod">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+								<polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+								<polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+								<polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+								<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+								<line x1="12" y1="22.08" x2="12" y2="12"></line>
+							</svg>
+							<h2>Production</h2>
+						</label>
+						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
+						<label for="beta">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<polygon points="2,21 22,21 14,11.5 14,5 10,3 10,11.5"></polygon>
+							</svg>
+							<h2>Beta</h2>
+						</label>
+					</form>
+				</fieldset>
+				{{#if discordUser}}
+					{{#if isTester }}
+					<p>Connected as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
+					{{else}}
+					<p>Beta servers are exclusive to testers. To become a tester, check us out on <a href="https://www.patreon.com/PretendoNetwork" target="_blank">Patreon</a> and link your Discord account to your Patreon and PNID accounts</p>
+					{{/if}}
+				{{else}}
+				<p>Beta servers are exclusive to testers. If you're already a tester, connect your Discord account <a href="{{ discordAuthURL }}">here</a>.</p>
+				{{/if}}
+			</div>
+			
+			<h2 class="section-header" id="security">Sign in and security</h2>
+			<div class="setting-card">
+				<h2 class="header">Account</h2>
+				<a href="/account/edit/login-info" class="edit">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+					</svg>
+				</a>
+				<ul class="setting-list">
+					<li>
+						<p class="label">Email</p>
+						<p class="value">{{account.email.address}}</p>
+					</li>
+					<li>
+						<p class="label">Password</p>
+						<p class="value">●●●●●●●●</p> <!-- Should remain hardcoded -->
+					</li>
+				</ul>
+				<p>After changing your password, you will be signed out from all devices.</p>
+			</div>
+
+			<div class="setting-card sign-in-history">
+				<h2 class="header">Sign in history</h2>
+				<ul class="setting-list">
+					{{#each account.devices }}
+						<li>
+							<p class="label">{{this.device_attributes.name}}</p>
+							<p class="value">{{this.device_attributes.created_date}}</p>
+							</li>
+					{{/each}}
+				</ul>
+				<a href="/account/sign-in-history">
+					<button class="button secondary">View full sign in history</button>
+				</a>
+			</div>
+
+			<h2 class="section-header" id="other">Other settings</h2>
+			<div class="setting-card span-both-columns">
+				<h2 class="header">Newsletter</h2>
+				<form id="other">
+					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
+					<label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
+				</form>
+			</div>
+		</div>
+	</div>
+	{{> footer }}
+</div>
+
+
+{{#if linked}}
+<div class="banner-notice success">
+	<div>
+		<p>{{ linked }} account linked successfully</p>
+	</div>
+</div>
+{{/if}}
+
+{{#if error}}
+<div class="banner-notice error">
+	<div>
+		<p>{{ error }}</p>
+	</div>
+</div>
+{{/if}}
+
+<script src="/assets/js/account.js"></script>

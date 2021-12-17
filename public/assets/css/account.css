@@ -1,0 +1,279 @@
+/* Removing until it's done */
+.setting-card a.edit,
+.sign-in-history a {
+  display: none;
+}
+
+.account-wrapper {
+  display: grid;
+  column-gap: 48px;
+  margin-top: 80px;
+  color: var(--text-secondary);
+}
+
+/* Account settings sidebar */
+.account-sidebar .user {
+  text-align: center;
+  margin: 55px auto;
+  width: fit-content;
+}
+.account-sidebar .user .miiname {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 8px 0 4px;
+}
+.account-sidebar .user .username {
+  margin: 0px;
+}
+.account-sidebar .user .mii {
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+  background: var(--btn-secondary);
+}
+.account-sidebar .user #download-cemu-files {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 24px;
+  background: #383f6b;
+  margin: 24px 0 0;
+  text-decoration: none;
+}
+.account-sidebar .user #download-cemu-files p.download-caption {
+  margin: 15px 0 0;
+}
+.account-sidebar .user p.cemu-warning {
+  margin: 4px 0 0;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+/* Settings */
+.settings-wrapper {
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+.settings-wrapper a {
+  color: #9d6ff3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.settings-wrapper a:hover {
+  text-decoration: underline;
+}
+.settings-wrapper h2.section-header {
+  margin-top: 40px;
+  grid-column: 1 / 3;
+  color: var(--text);
+}
+
+.setting-card {
+  display: grid;
+  grid-template-rows: 35px repeat(2, auto);
+  row-gap: 24px;
+  position: relative;
+  border-radius: 10px;
+  background: #2a2f50;
+  padding: 48px 60px;
+}
+.setting-card * {
+  margin: 0;
+}
+.setting-card .edit {
+  color: var(--text-secondary);
+  background: #383f6b;
+  border-radius: 100%;
+  position: absolute;
+  top: 42px;
+  right: 48px;
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+}
+.setting-card .edit:hover {
+  background: #383f6b;
+  color: var(--text);
+}
+
+.setting-card .header {
+  color: var(--text);
+}
+
+.setting-card .setting-list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+}
+.setting-card .setting-list p.label {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+fieldset {
+  height: min-content;
+  padding: 0;
+  border: none;
+}
+fieldset:disabled form label {
+  cursor: not-allowed;
+}
+
+.setting-card .server-selection {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #383f6b;
+}
+.setting-card .server-selection input {
+  display: none;
+}
+.server-selection input + label {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex: 50%;
+  color: var(--text-secondary);
+  padding: 40px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.server-selection input + label h2 {
+  margin-top: 12px;
+  color: var(--text-secondary);
+}
+.server-selection input:checked + label,
+.server-selection input:checked + label h2 {
+  background: var(--theme);
+  color: var(--text);
+}
+
+.setting-card #remove-discord-connection {
+  width: 100%;
+  padding: 12px 48px;
+  cursor: pointer;
+  background: #383f6b;
+}
+
+.setting-card.sign-in-history a button {
+  width: 100%;
+  padding: 12px 48px;
+  cursor: pointer;
+  background: #383f6b;
+}
+.setting-card input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #383f6b;
+  padding: 12px;
+  margin: 4px;
+  margin-left: 0;
+  border-radius: 4px;
+  vertical-align: -65%;
+}
+.setting-card input[type="checkbox"]:checked {
+  background: no-repeat center/contain url(../images/check.svg), var(--theme);
+}
+
+.setting-card.span-both-columns {
+  grid-column: 1 / span 2;
+}
+
+@keyframes banner-notice {
+  0% {
+    top: -150px;
+  }
+  20% {
+    top: 35px;
+  }
+  80% {
+    top: 35px;
+  }
+  100% {
+    top: -150px;
+  }
+}
+.banner-notice {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: -150px;
+  width: 100%;
+  animation: banner-notice 5s;
+}
+.banner-notice div {
+  padding: 4px 36px;
+  border-radius: 5px;
+  z-index: 3;
+}
+.banner-notice.success div {
+  background: #37a985;
+}
+.banner-notice.error div {
+  background: #a9375b;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 1300px) {
+  .account-wrapper {
+    margin: 20px 0;
+  }
+
+  .settings-wrapper {
+    grid-column-start: 1;
+  }
+
+  .account-sidebar {
+    margin: 0;
+  }
+
+  .account-sidebar .user .mii {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .settings-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .setting-card {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .setting-card {
+    padding: 24px;
+    width: calc(100vw - 48px);
+    margin-left: -5vw;
+    margin-right: -2.5vw;
+    border-radius: 0;
+    margin-bottom: 12px;
+  }
+  
+  .setting-card .edit {
+    top: 20px;
+    right: 20px;
+    transform: scale(0.85);
+  }
+
+  .setting-card .server-selection {
+    flex-flow: column;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .setting-card .setting-list {
+    grid-template-columns: auto;
+  }
+}

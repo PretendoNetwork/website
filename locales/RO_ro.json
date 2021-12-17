@@ -4,12 +4,13 @@
 		"faq": "FAQ",
 		"credits": "Mulțumiri",
 		"progress": "Progres",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
 		"title": "Recreate",
-		"text": "Pretendo este un înlocuitor gratuit pentru serverele Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
+		"text": "Pretendo este un înlocuitor gratuit și open source al serverelor Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
 		"buttons": {
 			"readMore": "Citiți mai multe"
 		}
@@ -34,7 +35,7 @@
 		"QAs": [
 			{
 				"question": "Ce este Pretendo?",
-				"answer": "Pretendo este un înlocuitor open source al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
+				"answer": "Pretendo este un înlocuitor gratuit al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
 			},
 			{
 				"question": "Va merge NNID-ul meu pe Pretendo?",
@@ -64,6 +65,25 @@
 				"question": "Va trebui să îmi modific consola?",
 				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploatarea de pe web browser), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
 			}
+		]
+	},
+	"showcase": {
+		"title": "Ce creăm",
+		"text": "Proiectul nostru are multe componente. Aici sunt câteva dintre ele.",
+		"cards": [
+			{
+				"title": "Servere de jocuri",
+				"caption": "Îți aducem înapoi jocurile și conținuturile tale preferate folosind servere personalizate."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "O reimaginare a Miiverse, ca și când ar fi din era modernă."
+			},
+			{
+				"title": "Suport Cemu",
+				"caption": "Joacă jocurile tale preferate de pe Wii U chiar și fără o consolă!"
+			}
+
 		]
 	},
 	"credits": {
@@ -107,10 +127,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "Monty",
+				"name": "monty",
 				"caption": "Dezvoltare web",
-				"picture": "https://github.com/montylion.png",
-				"github": "https://github.com/montylion"
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
@@ -154,8 +174,32 @@
 				"caption": "Cercetare pe structurile de date de la Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
+	},
+	"discordJoin": {
+		"title": "Fii la zi",
+		"text": "Alătură-te serverului nostru de Discord pentru a primi ultimele actualizări despre proiectele noastre.",
+		"widget": {
+			"text": "Obține noutăți despre progresul nostru în timp real",
+			"button": "Alătură-te serverului"
+		}
+	},
+	"footer": {
+		"socials": "Rețele sociale",
+		"usefulLinks": "Link-uri folositoare",
+		"widget": {
+			"captions": [
+				"Vrei să obții ultimele actualizări?",
+				"Alătură-te serverului nostru de Discord!"
+			],
+			"button": "Alătură-te!"
+		}
 	},
 	"progressPage": {
 		"title": "Progresul nostru",

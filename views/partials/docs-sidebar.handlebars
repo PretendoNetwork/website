@@ -1,0 +1,50 @@
+<div class="sidebar">
+    <div class="section">
+        <h5>Getting started</h5>
+        <a href="/docs/welcome">Welcome</a>
+        <a href="/docs/installing-juxt" >Installing Juxt</a>
+        <a href="/docs/search">Search</a>
+    </div>
+
+    <div class="section">
+        <h5>Error codes - Juxt</h5>
+        <a href="/docs/JXT-598-0000">JXT-598-0000</a>
+        <a href="/docs/JXT-598-0001">JXT-598-0001</a>
+        <a href="/docs/JXT-598-0002">JXT-598-0002</a>
+        <a href="/docs/JXT-598-0003">JXT-598-0003</a>
+        <a href="/docs/JXT-598-0009">JXT-598-0009</a>
+        <a href="/docs/JXT-598-0010">JXT-598-0010</a>
+        <a href="/docs/JXT-598-0011">JXT-598-0011</a>
+        <a href="/docs/JXT-598-0015">JXT-598-0015</a>
+        <a href="/docs/JXT-598-0020">JXT-598-0020</a>
+        <a href="/docs/JXT-598-1XXX">JXT-598-1XXX</a>
+        <a href="/docs/JXT-598-2XXX">JXT-598-2XXX</a>
+        <a href="/docs/JXT-598-3XXX">JXT-598-3XXX</a>
+        <a href="/docs/JXT-598-4XXX">JXT-598-4XXX</a>
+        <a href="/docs/JXT-598-5XXX">JXT-598-5XXX</a>
+    </div>
+
+    <div class="section">
+        <h5>Error codes - Beans</h5>
+        <a href="/docs/Black Beans">Black Beans</a>
+        <a href="/docs/black-eyed-peas">Black-Eyed Peas</a>
+        <a href="/docs/Cannellini Beans">Cannellini Beans</a>
+        <a href="/docs/Chickpeas (Garbanzo Beans)">Chickpeas (Garbanzo Beans)</a>
+        <a href="/docs/Great Northern Beans">Great Northern Beans</a>
+        <a href="/docs/Kidney Beans">Kidney Beans</a>
+        <a href="/docs/Lima Beans">Lima Beans</a>
+        <a href="/docs/Pinto Beans">Pinto Beans</a>
+        <a href="/docs/Fava Beans">Fava Beans</a>
+        <a href="/docs/Navy Beans">Navy Beans</a>
+    </div>
+</div>
+
+<script>
+  function selectSidebarElement(element) {
+    element.scrollIntoView({ block: "center" });
+    element.classList.add('active');
+  }
+
+  selectSidebarElement(document.querySelector("div.sidebar a[href='/docs/{{currentPage}}']"));
+  
+</script>

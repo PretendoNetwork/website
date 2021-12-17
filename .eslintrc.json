@@ -1,5 +1,6 @@
 {
     "env": {
+        "browser": true,
         "node": true,
         "commonjs": true,
         "es6": true
@@ -8,7 +9,7 @@
         "document": true
     },
 	"parserOptions": {
-        "ecmaVersion": 2019
+        "ecmaVersion": 2021
     },
     "extends": "eslint:recommended",
     "rules": {

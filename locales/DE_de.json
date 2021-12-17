@@ -2,30 +2,31 @@
 	"nav": {
 		"about": "Über",
 		"faq": "FAQ",
-		"credits": "Credits",
+		"credits": "Mitwirkende",
 		"progress": "Fortschritt",
-		"blog": "Blog"
+		"blog": "Blog",
+		"account": "Account"
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
-		"title": "Neu Definiert",
-		"text": "Pretendo ist ein kostenloser, open source Ersatz für Nintendo's Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach dem dem offiziellen Ende, ermöglicht.",
+		"title": "Rekonstruiert",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der offiziellen Einstellung des NNs, ermöglicht.",
 		"buttons": {
 			"readMore": "Mehr lesen"
 		}
 	},
 	"aboutUs": {
-		"title": "Über Uns",
+		"title": "Über uns",
 		"paragraphs": [
-			"Pretendo ist ein open-source Project, dass das Nintendo Network für den 3DS und die Wii U durch clean-room reverse engineering neu erstellt.",
-			"Da unsere Dienste kostenlos und Open Source sind, können sie auch nach der offiziellen Schließung des Nintendo Network weiterexistieren."
+			"Pretendo ist ein Open-Source-Projekt, welches das Nintendo Network für den 3DS und die Wii U durch Clean-Room-Reverse-Engineering rekonstruiert.",
+			"Da unsere Dienste kostenlos und Open-Source sind, können diese auch nach der offiziellen Schließung des Nintendo Networks weiterexistieren."
 		]
 	},
 	"progress": {
 		"title": "Fortschritt",
 		"paragraphs": [
-			"Aktuell arbeiten wir am Miiverse und unseren Account-Servern und deren Integration mit den Diensten.",
-			"Für den 3DS arbeiten wir nebenbei auch an Mario Kart 7, mit dem Wunsch, nach Möglichkeit auch an anderen Spielen zu Arbeiten."
+			"Aktuell arbeiten wir am Miiverse, unseren Account-Servern und deren Integration mit den Diensten.",
+			"Für den 3DS arbeiten wir nebenbei auch an Mario Kart 7, mit dem Wunsch, nach Möglichkeit auch an anderen Spielen zu arbeiten."
 		]
 	},
 	"faq": {
@@ -34,36 +35,55 @@
 		"QAs": [
 			{
 				"question": "Was ist Pretendo?",
-				"answer": "Pretendo ist ein Open Source Nintendo Network Ersatz, mit dem eigene Server für die Konsolenfamilien Wii U und 3DS erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen zu erhalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig Spielen können."
+				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen zu beibehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
 			},
 			{
-				"question": "Werden meine vorhandenen NNIDs mit Pretendo funktionieren?",
-				"answer": "Leider nicht. Vorhandene NNIDs werden nicht mit Pretendo funktionieren, da nur Nintendo deine Nutzerdaten hat. Auch wenn eine NNID-zu-PNID Migration theoretisch möglich ist, wäre es riskant und würde Sensitive Nutzerdaten erfordern, die wir nicht Speichern möchten."
+				"question": "Werden meine vorhandenen NNIDs mit Pretendo weiterhin funktionieren?",
+				"answer": "Leider nicht. Vorhandene NNIDs werden nicht mit Pretendo funktionieren, da nur Nintendo deine Nutzerdaten hat. Auch wenn eine NNID-zu-PNID Migration theoretisch möglich ist, wäre es riskant und würde sensible Nutzerdaten erfordern, die wir nicht speichern möchten."
 			},
 			{
 				"question": "Wie benutze ich Pretendo?",
-				"answer": "Pretendo ist aktuell nicht bereit für die Öffentliche Nutzung. Allerdings, sobald Pretendo bereit ist, kannst du es einfach durch unseren homebrew patcher auf deiner Konsole nutzen."
+				"answer": "Pretendo ist aktuell nicht für die öffentliche Nutzung verfügbar. Sobald das Pretendo Network bereit ist, kannst du es einfach durch unseren Homebrew-Patcher auf deiner Konsole nutzen."
 			},
 			{
 				"question": "Weißt du, wann <Funktion/Dienst> bereit ist?",
-				"answer": "Nein. Viele von Pretendo's Funktionen und Diensten werden unabhängig voneinander entwickelt (zum Beispiel, ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet) und deshalb können wir keine Zeit nennen, wie lange es noch dauern wird."
+				"answer": "Nein. Viele von Funktionen und Diensten von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet) und deshalb können wir keine Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
-				"question": "Funktioniert Pretendo mit Cemu oder Emulatoren?",
-				"answer": "Pretendo wird hautpsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige emulator für diese Konsolen mit NN support. Cemu selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit Cemu zu verwenden.<br>Cemu wird aktuell von Pretendo nicht unterstützt."
+				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
+				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN support. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
 			},
 			{
 				"question": "Wenn ich im Nintendo Network gebannt wurde, bleibe ich in Pretendo auch gebannt?",
-				"answer": "Wir werden keinen Zugriff auf Nintendo's bans haben, weshalt kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und das Nichteinhalten kann in einem Ban resultieren."
+				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalt kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und das Nichteinhalten kann in einem Bann resultieren."
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Für die Wii gibt es bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Aktuell möchten wir die Switch auch nicht als Ziel festlegen, da der Online-Service der Switch Kostenpflichtig und  it is both paid and completely different to Nintendo Network."
+				"answer": "Für die Wii gibt es bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Aktuell möchten wir die Switch auch nicht als Ziel festlegen, da der Online-Service der Switch kostenpflichtig ist und sich stark vom Nintendo Network unterscheidet."
 			},
 			{
-				"question": "Benötige ich einen Hack zum verbinden?",
-				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U der Zugriff zum Homebrew Launcher (z.B. über Haxchi, Coldboot Haxchi, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, wird später noch veröffentlicht."
+				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
+				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, wird später noch veröffentlicht."
 			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+
 		]
 	},
 	"credits": {
@@ -78,19 +98,19 @@
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse Forschung und Entwicklung",
+				"caption": "Miiverse-Forschung und -Entwicklung",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Network Installer und Konsolenforschung",
+				"caption": "Network-Installer und Konsolenforschung",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/NexoDevelopment"
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "BOSS-Forschung und Patchentwicklung",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -102,15 +122,15 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "Webentwicklungsleiter",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "Monty",
-				"caption": "Web Entwicklung",
-				"picture": "https://github.com/montylion.png",
-				"github": "https://github.com/montylion"
+				"name": "monty",
+				"caption": "Webentwicklung",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
 			},
 			{
 				"name": "mrjvs",
@@ -122,48 +142,72 @@
 	},
 	"specialThanks": {
 		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"text": "Ohne sie, wäre Pretendo nicht, wo es heute ist.",
 		"people": [
 			{
 				"name": "superwhiskers",
-				"caption": "Entwicklung der crunch Bibliothek",
+				"caption": "Entwicklung der 'Crunch'-Bibliothek",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS-Entwickler und NEX-Sezierer",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "Bewahrer",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 und 3DS Forschung",
+				"caption": "Mario Kart 7 und 3DS-Forschung",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "Kinnay",
 				"special": "Besonderer Dank",
-				"caption": "Forschung an Nintendo Datenstrukturen",
+				"caption": "Forschung auf Nintendo-Datenstrukturen",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
 	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
+	},
 	"progressPage": {
 		"title": "Unser Fortschritt",
-		"description": "Prüfe den Projektfortschritt und die Ziele! (Ungefähr jede Stunde aktualisiert, reflektiert nicht ALLE Projekte oder Ziele)"
+		"description": "Prüfe den Projektfortschritt und die Ziele! (Es wird stündlich aktualisiert, reflektiert nicht ALLE Projekte oder Ziele)"
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
 		"title": "Let's localize",

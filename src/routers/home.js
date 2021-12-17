@@ -12,12 +12,35 @@ router.get('/', async (request, response) => {
 	
 	const cache = await getTrelloCache();
 
+	// Builds the arrays of people for the special thanks section
+
+	// Shuffles the special thanks people
+	let specialThanksPeople = locale.specialThanks.people.slice();
+	function shuffleArray(array) {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+	}
+	shuffleArray(specialThanksPeople);
+
+	// Slices the array in half
+	const specialThanksFirstRow = specialThanksPeople.slice(0, 3);
+	const specialThanksSecondRow = specialThanksPeople.slice(3, 6);
+
+	// Builds the final array to be sent to the view, and triples each row.
+	specialThanksPeople = {
+		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
+		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
+	};
+
 	response.render('home', {
 		layout: 'main',
 		featuredFeatureList: cache.sections[0],
 		boards,
 		locale,
 		localeString: reqLocale.toString(),
+		specialThanksPeople
 	});
 });
 
