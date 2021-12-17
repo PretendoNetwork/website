@@ -5,7 +5,7 @@
 		"credits": "الفريق",
 		"progress": "التقدم",
 		"blog": "البلوج",
-		"account": "Account"
+		"account": "حساب"
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
@@ -68,20 +68,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "ما نعمله",
+		"text": "مشروعنا ليده مكونات كثيرة، منها",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "سيرفرات الالعاب",
+				"caption": "إعادة افضل الالعاب ومكوناتها بسيرفرات مخصصة"
 			},
 			{
-				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"title": "زنكسابوسيتن",
+				"caption": "صورة جديدة للميفرس لو كان في وقت المعاصر"
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "دعم سيمو",
+				"caption": "العب افضل العاب الوي يو بدون جهاز"
 			}
 
 		]
@@ -185,8 +185,8 @@
 				"github": "https://github.com/PretendoNetwork"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "مساهمين العلي جيتهب",
+				"caption": "للترجمة و مساهامات اخري",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 			
