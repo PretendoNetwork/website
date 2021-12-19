@@ -279,19 +279,6 @@ router.post('/register', async (request, response) => {
 	response.redirect('/account');
 });
 
-router.get('/register', async (request, response) => {
-	const renderData = {
-		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
-		error: request.cookies.error
-	};
-
-	response.clearCookie('error');
-
-	response.render('account/register', renderData);
-});
-
 router.get('/connect/discord', async (request, response) => {
 	let tokens;
 	try {
