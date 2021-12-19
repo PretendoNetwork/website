@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js && node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/PretendoNetwork/website#readme",
   "dependencies": {
     "adm-zip": "^0.5.9",
+    "browserify": "^17.0.0",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
     "discord-oauth2": "github:ryanblenis/discord-oauth2",
@@ -27,6 +28,7 @@
     "fs-extra": "^9.1.0",
     "got": "^11.8.2",
     "gray-matter": "^4.0.3",
+    "kaitai-struct": "^0.9.0",
     "marked": "^3.0.4",
     "morgan": "^1.10.0",
     "trello": "^0.11.0",
