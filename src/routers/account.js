@@ -250,14 +250,14 @@ router.get('/register', async (request, response) => {
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm } = request.body;
+	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
 	response.cookie('mii_name', mii_name, { domain: '.pretendo.network' });
 
 	const apiResponse = await util.apiPostGetRequest('/v1/register', {}, {
-		email, username, mii_name, password, password_confirm
+		email, username, mii_name, password, password_confirm, hCaptchaResponse
 	});
 
 	if (apiResponse.statusCode !== 200) {

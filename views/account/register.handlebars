@@ -1,3 +1,4 @@
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <link rel="stylesheet" href="/assets/css/login.css" />
 
 <div class="wrapper">
@@ -50,9 +51,10 @@
 				<label for="password_confirm">Confirm Password</label>
 				<input name="password_confirm" id="password_confirm" type="password" autocomplete="new-password" required>
 			</div>
+			<div class="h-captcha" data-sitekey="cf3fd74e-93ca-47e6-9fa0-5fc439de06d4"></div>
 			<div class="buttons">
 				<button type="submit">Register</button>
-			<a href="/account/login" class="register">Already have an account?</a>
+				<a href="/account/login" class="register">Already have an account?</a>
 			</div>
 		</form>
 	</div>
