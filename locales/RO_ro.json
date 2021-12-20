@@ -68,20 +68,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "Ce creăm",
+		"text": "Proiectul nostru are multe componente. Aici sunt câteva dintre ele.",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "Servere de jocuri",
+				"caption": "Îți aducem înapoi jocurile și conținuturile tale preferate folosind servere personalizate."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "O reimaginare a Miiverse, ca și când ar fi din era modernă."
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Suport Cemu",
+				"caption": "Joacă jocurile tale preferate de pe Wii U chiar și fără o consolă!"
 			}
 
 		]
@@ -183,22 +183,22 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Fii la zi",
+		"text": "Alătură-te serverului nostru de Discord pentru a primi ultimele actualizări despre proiectele noastre.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "Obține noutăți despre progresul nostru în timp real",
+			"button": "Alătură-te serverului"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Rețele sociale",
+		"usefulLinks": "Link-uri folositoare",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"Vrei să obții ultimele actualizări?",
+				"Alătură-te serverului nostru de Discord!"
 			],
-			"button": "Join now!"
+			"button": "Alătură-te!"
 		}
 	},
 	"progressPage": {

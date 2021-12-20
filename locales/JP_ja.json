@@ -68,20 +68,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "私たちが作るもの",
+		"text": "私たちのプロジェクトは色んな部分に分かれています。その一部を紹介します!",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "ゲームサーバー",
+				"caption": "カスタムサーバーを使ってユーザーたちの好きなゲームとコンテンツを蘇らせます。"
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "現代に作られたような、Miiverseの再製作。"
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Cemuサポート",
+				"caption": "あなたの好きなWii Uタイトルを、Wii Uなしでプレイできます!"
 			}
 
 		]
@@ -176,38 +176,38 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "GitHub貢献者たち",
+				"caption": "ローカライズ及び他の貢献",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "情報を見逃さないで",
+		"text": "プロジェクトの最新情報を取得するには、私たちのDiscordサーバーに参加してください。",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "進行状況の最新アップデートをもらいましょう",
+			"button": "サーバーに参加"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "ソーシャル",
+		"usefulLinks": "関係リンク",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"アップデートを多くもらいたいですか?",
+				"Discordサーバーに参加してください!"
 			],
-			"button": "Join now!"
+			"button": "すぐ参加する!"
 		}
 	},
 	"progressPage": {
-		"title": "Our progress",
-		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+		"title": "進行状況（英語）",
+		"description": "プロジェクトの進行度とゴールをチェックできます! (1時間ぐらいごとにアップデート、すべてのプロジェクトゴールや進行状況は反映しない)"
 	},
 	"blogPage": {
-		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"title": "ブログ（英語）",
+		"description": "最新のアップデートをまとめてお届けします。もっと多くのアップデートを貰いたい方は、<a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>での寄付をご検討ください。"
 	},
 	"localizationPage": {
 		"title": "レッツローカライズ",
