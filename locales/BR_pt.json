@@ -5,7 +5,7 @@
 		"credits": "Créditos",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Account"
+		"account": "Conta"
 	},
 	"hero": {
 		"subtitle": "Servidores de jogos",
@@ -68,20 +68,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "O que fazemos",
+		"text": "Nosso projeto tem diversos componentes. Aqui estão alguns deles.",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "Servidores de jogos",
+				"caption": "Trazendo de volta seus jogos e conteúdo favoritos usando servidores personalizados."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "Uma re-imaginação do Miiverse, como se fosse feito nos dias de hoje."
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Suporte para Cemu",
+				"caption": "Jogue seus títulos favoritos do Wii U mesmo sem um console!"
 			}
 
 		]
@@ -176,29 +176,29 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "Contribuidores do GitHub",
+				"caption": "Traduções e outras contribuições",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Fique atualizado",
+		"text": "Junte-se ao nosso servidor do Discord para receber as atualizações mais recentes do projeto.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "Receba atualizações em tempo real sobre o nosso progresso",
+			"button": "Se juntar ao servidor"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Redes Sociais",
+		"usefulLinks": "Links úteis",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"Quer se manter atualizado?",
+				"Se junte ao nosso servidor do Discord!"
 			],
-			"button": "Join now!"
+			"button": "Se juntar agora!"
 		}
 	},
 	"progressPage": {
