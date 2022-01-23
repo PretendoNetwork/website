@@ -1023,6 +1023,12 @@ footer div.discord-server-card svg {
 		background: none;
 	}
 
+	/* Hides workaround on mobile */
+	section.team-helpers .animation-wrapper .row-wrapper::before,
+	section.team-helpers .animation-wrapper .row-wrapper::after {
+		content: none;
+	}
+
 	section.update-signup {
 		margin-top: 0;
 		padding-top: 90px;
