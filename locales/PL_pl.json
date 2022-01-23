@@ -48,7 +48,7 @@
 				"answer": "Pretendo nie jest aktualnie w takim stanie, w którym może być wykorzystywane publicznie. Jednak gdy będzie już dostępne, będziesz mógł otrzymać dostęp do Pretendo uruchamiając patcher homebrew na twojej konsoli."
 			},
 			{
-				"question": "Czy drużyna Pretendo wie, kiedy <funkcja/serwis> będzie gotowy/gotowa?",
+				"question": "Czy drużyna Pretendo wie, kiedy <funkcja/serwis> będzie gotowa/gotowy?",
 				"answer": "Nie. Wiele z funkcji/usług Pretendo są tworzone przez różnych programistów, przez to nie możemy podać szacowanego terminu ukończenia tej rzeczy."
 			},
 			{
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Czy moja konsola musi być zmodyfikowana, aby połączyć się z Pretendo?",
-				"answer": "Tak, musisz mieć konsolę z zainstalowanym homebrew (np. Aroma, Tiramisu, Haxchi). Informacje na temat sposobu podłączenia konsoli 3DS nie są na razie dostępne."
+				"answer": "Tak, musisz mieć konsolę z zainstalowanym homebrew (np. Tiramisu, Haxchi, nawet browser exploit). Informacje na temat sposobu podłączenia konsoli 3DS nie są na razie dostępne."
 			}
 		]
 	},
