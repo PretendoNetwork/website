@@ -520,7 +520,6 @@ section.team-helpers .row.second {
 }
 section.team-helpers .animation-wrapper {
 	transform: rotate(-5deg);
-	overflow-x: hidden;
 	position:relative;
 	top: -90px;
 	padding: 20px; /* Needed for the star not to get cut off */
@@ -536,6 +535,38 @@ section.team-helpers .animation-wrapper::after {
 	z-index: 1;
 	pointer-events: none;
 }
+
+/* This fixes overflow-x: hidden; not working correctly on Firefox (https://i.imgur.com/TpM0CEB.png)
+ * and WebKit (https://i.imgur.com/290nYsb.png) */
+section.team-helpers .animation-wrapper .row-wrapper {
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+}
+section.team-helpers .animation-wrapper .row-wrapper::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: calc(-100% - 20px);
+	height: 100%;
+	background: var(--background);
+	z-index: 2;
+	pointer-events: none;
+}
+section.team-helpers .animation-wrapper .row-wrapper::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: calc(100% - 20px);
+	height: 100%;
+	background: var(--background);
+	z-index: 2;
+	pointer-events: none;
+}
+
 section.team-helpers .animation-wrapper .row {
 	white-space: nowrap;
 }
