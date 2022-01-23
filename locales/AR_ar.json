@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "عنا",
 		"faq": "أسئلة",
+		"docs": "Docs",
 		"credits": "الفريق",
 		"progress": "التقدم",
 		"blog": "البلوج",
@@ -106,7 +107,7 @@
 				"name": "Rambo6Glaz",
 				"caption": "مثبت الشبكة و باحث الأجهزة",
 				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/NexoDevelopment"
+				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "quarky",
@@ -138,7 +139,6 @@
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
-			
 		]
 	},
 	"specialThanks": {
@@ -169,7 +169,6 @@
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
-			
 			{
 				"name": "Kinnay",
 				"special": "شكر خاص",
@@ -178,19 +177,36 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "الأشخاص العلي ديسكورد",
-				"special": "شكر خاص",
-				"caption": "للمساعدة في الترجمة و دي بج و اكثر",
-				"picture": "https://github.com/discord.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
 			},
 			{
 				"name": "GitHub contributors",
 				"caption": "Localizations and other contributions",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
-			
 		]
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
 	},
 	"progressPage": {
 		"title": "تقدمنا",
@@ -206,6 +222,22 @@
 		"instructions": "اظهر خطوات الترجمة",
 		"fileInput": "ملف للتجربة",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "جرب الملف"
+		"button": "Test file"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		}
 	}
 }
