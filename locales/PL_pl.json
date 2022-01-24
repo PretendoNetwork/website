@@ -37,7 +37,7 @@
 		"QAs": [
 			{
 				"question": "Czym jest Pretendo?",
-				"answer": "Pretendo to otwarto-źródłowy zamiennik dla Nintendo Network, który ma na celu stworzenie własnych serwerów dla konsol Wii U i 3DS. Naszym celem jest zachowanie funkcjonalności usług online tych konsol, aby zezwolić graczom na kontynuowanie ich ulubionych gier na konsolach Wii U i 3DS."
+				"answer": "Pretendo to otwarto-źródłowy zamiennik dla Nintendo Network, który ma na celu stworzenie niestandardowych serwerów dla konsol Wii U i 3DS. Naszym celem jest zachowanie funkcjonalności usług online tych konsol, aby zezwolić graczom na kontynuowanie ich ulubionych gier na konsolach Wii U i 3DS."
 			},
 			{
 				"question": "Czy Pretendo będzie wspierać moje dotychczasowe konto Nintendo Network ID?",
@@ -57,7 +57,7 @@
 			},
 			{
 				"question": "Jeśli jestem zbanowany na Nintendo Network, czy będę również zbanowany na Pretendo?",
-				"answer": "Nie będziemy mieli dostępu do listy zbanowanych użytkowników Nintendo Network, a wszyscy, którzy się tam znajdują nie będą zbanowali na Pretendo. Mamy jednak zasady, które musisz przestrzegać, ponieważ ich złamanie może doprowadzić do bana."
+				"answer": "Nie mamy dostępu do listy zbanowanych użytkowników Nintendo Network, a wszyscy, którzy się na niej znajdują nie będą od początku zbanowani na Pretendo. Mamy jednak zasady, które musisz przestrzegać, ponieważ ich złamanie może doprowadzić do bana."
 			},
 			{
 				"question": "Czy Pretendo będzie wspierać konsole Wii/Switch?",
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Czy moja konsola musi być zmodyfikowana, aby połączyć się z Pretendo?",
-				"answer": "Tak, musisz mieć konsolę z zainstalowanym homebrew (np. Tiramisu, Haxchi, nawet browser exploit). Informacje na temat sposobu podłączenia konsoli 3DS nie są na razie dostępne."
+				"answer": "Tak, musisz mieć konsolę z zainstalowanym homebrew (np. Tiramisu, Haxchi). Informacje na temat sposobu podłączenia konsoli 3DS nie są na razie dostępne."
 			}
 		]
 	},
@@ -83,7 +83,7 @@
 			},
 			{
 				"title": "Wsparcie dla Cemu",
-				"caption": "Graj w twoje ulubiony gry na Wii U bez tej konsoli!"
+				"caption": "Graj w twoje ulubione gry na Wii U bez tej konsoli!"
 			}
 
 		]
@@ -160,7 +160,7 @@
 			},
 			{
 				"name": "Billy",
-				"caption": "Przechowuje oryginalne dane",
+				"caption": "Archiwista danych",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -197,7 +197,7 @@
 		"usefulLinks": "Przydatne linki",
 		"widget": {
 			"captions": [
-				"Chcesz mieć najnowsze informacje o Pretendo?",
+				"Chcesz mieć dostęp do najnowszych informacje dotyczących Pretendo?",
 				"Dołącz na nasz serwer Discord!"
 			],
 			"button": "Dołącz teraz!"
@@ -209,7 +209,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Najnowsze informacje w krótkich tekstach. Jeśli chcesz częstsze aktualizacje, pomyśl nad wsparciem nas na <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Najnowsze informacje w krótkich tekstach. Jeśli chcesz otrzymywać częstsze aktualizacje, pomyśl nad wsparciem nas na <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
 		"title": "Tłumaczmy",
