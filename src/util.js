@@ -9,16 +9,33 @@ function fullUrl(request) {
 
 function getLocale(region, language) {
 	const path = `${__dirname}/../locales/${region}_${language}.json`;
-
+	const backupFileName = getLocaleFileName(language);
 	if (fs.pathExistsSync(path)) {
 		return require(path);
 	}
-
+	else if (backupFileName) {
+		return require(`${__dirname}/../locales/${backupFileName}`);
+	}
+	
 	logger.warn(`Could not find locale ${region}_${language}! Loading US_en`);
 
 	return require(`${__dirname}/../locales/US_en.json`);
 }
-
+function getLocaleFileName(language){
+//Try to look if another locale with same language exist
+const localeFolder = `${__dirname}/../locales/`;
+const r = fs.readdirSync(localeFolder)
+let i = 0
+for (i;i <r.length;i++){
+	var fileName = r[i]
+	if (!fileName){return null}
+	var fileLanguage = fileName.split("_")[1]
+	if (fileLanguage.startsWith(language)){
+		return fileName;
+	}
+}
+return null;
+}
 function apiGetRequest(path, headers) {
 	return got.get(`https://api.pretendo.cc${path}`, {
 		responseType: 'json',
@@ -71,6 +88,7 @@ function nintendoPasswordHash(password, pid) {
 module.exports = {
 	fullUrl,
 	getLocale,
+	getLocaleFileName,
 	apiGetRequest,
 	apiPostGetRequest,
 	apiDeleteGetRequest,
