@@ -29,7 +29,7 @@ router.get('/:slug', async (request, response, next) => {
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
 	var localeString = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace(".json","");
-	
+
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;
 
