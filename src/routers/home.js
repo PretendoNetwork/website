@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const util = require('../util');
 const { boards } = require('../../boards/boards.json');
+const logger = require('../logger');
 const router = new Router();
 
 const { getTrelloCache } = require('../trello');
@@ -9,9 +10,13 @@ router.get('/', async (request, response) => {
 
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-	
-	const cache = await getTrelloCache();
-
+	const cache = null
+	try {
+	 cache = await getTrelloCache();
+	}
+	catch(e){
+		logger.warn(`Trello Error: ${e}`)
+	}
 	// Builds the arrays of people for the special thanks section
 
 	// Shuffles the special thanks people
@@ -33,10 +38,12 @@ router.get('/', async (request, response) => {
 		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
 		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
 	};
-
+	if (cache){
+		var featuredFeatureList = cache.sections[0]
+	}
 	response.render('home', {
 		layout: 'main',
-		featuredFeatureList: cache.sections[0],
+		featuredFeatureList: featuredFeatureList,
 		boards,
 		locale,
 		localeString: reqLocale.toString(),
