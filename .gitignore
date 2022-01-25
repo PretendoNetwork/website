@@ -61,3 +61,6 @@ typings/
 config.json
 static-text.json
 .DS_Store
+
+# keep browserified files out
+*.bundled.js

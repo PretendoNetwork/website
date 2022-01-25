@@ -178,9 +178,16 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
 				"name": "Contributori su GitHub",
 				"caption": "Localizzazioni e altre contribuzioni",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -220,6 +227,19 @@
 		"button": "Testa file"
 	},
 	"docs": {
-		"missingInLocale": "Questa pagina non è disponibile nella tua lingua. Per favore, controlla la versione in inglese sotto."
+		"missingInLocale": "Questa pagina non è disponibile nella tua lingua. Per favore, controlla la versione in inglese sotto.",
+		"quickLinks": {
+			"header": "Link rapidi",
+			"links": [
+				{
+					"header": "Installa Pretendo",
+					"caption": "Mostra le istruzioni di setup"
+				},
+				{
+					"header": "Hai un errore?",
+					"caption": "Cercalo qui"
+				}
+			]
+		}
 	}
 }

@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "Over",
 		"faq": "FAQ",
+		"docs": "Docs",
 		"credits": "Credits",
 		"progress": "Vooruitgang",
 		"blog": "Blog",
@@ -176,9 +177,16 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
 				"name": "GitHub contributors",
 				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -216,5 +224,21 @@
 		"fileInput": "Bestand om te testen",
 		"filePlaceholder": "https://een.link.naar/het_bestand.json",
 		"button": "Test bestand"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		}
 	}
 }
