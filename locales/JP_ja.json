@@ -6,7 +6,7 @@
 		"credits": "クレジット",
 		"progress": "進行状況",
 		"blog": "ブログ",
-		"account": "Account"
+		"account": "アカウント"
 	},
 	"hero": {
 		"subtitle": "再構築された",
@@ -226,17 +226,17 @@
 		"button": "ファイルを試す！"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
 		"quickLinks": {
-			"header": "Quick links",
+			"header": "クイックリンク",
 			"links": [
 				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
+					"header": "Pretendoをインストール",
+					"caption": "設定手順を見る"
 				},
 				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
+					"header": "エラーに会いましたか?",
+					"caption": "ここで検索できます"
 				}
 			]
 		}
