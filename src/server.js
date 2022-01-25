@@ -9,7 +9,7 @@ const logger = require('./logger');
 const util = require('./util');
 const config = require('../config.json');
 
-const defaultLocale = require('../locales/US_en.json');
+const defaultLocale = require('../locales/en-US.json');
 
 const { http: { port } } = config;
 const app = express();
@@ -29,7 +29,8 @@ const routers = {
 	progress: require('./routers/progress'),
 	account: require('./routers/account'),
 	blog: require('./routers/blog'),
-	localization: require('./routers/localization')
+	localization: require('./routers/localization'),
+	notfound: require('./routers/404')
 };
 
 app.use(cookieParser());
@@ -83,14 +84,22 @@ app.use('/progress', routers.progress);
 app.use('/account', routers.account);
 app.use('/localization', routers.localization);
 app.use('/blog', routers.blog);
+app.use('/404', routers.notfound);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
 // Meaning the request could not find a valid router
-app.use((request, response, next) => {
-	const fullUrl = util.fullUrl(request);
-	logger.warn(`HTTP 404 at ${fullUrl}`);
-	next();
+app.use((request, response) => {
+if (request.accepts('html')) {
+	const reqLocale = request.locale;
+	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+    response.render('404.handlebars', { 
+	layout: 'main',
+	locale,
+	localeString: reqLocale.toString(),
+	url: request.url });
+    return;
+  }
 });
 
 logger.info('Setting up handlebars engine');
