@@ -28,8 +28,7 @@ router.get('/:slug', async (request, response, next) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
-	var localeString = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace("_","-").replace(".json","");
-	localeString = localeString.split("-")[1] + `-` + localeString.split("-")[0];
+	var localeString = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace(".json","");
 	
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;

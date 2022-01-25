@@ -8,7 +8,7 @@ function fullUrl(request) {
 }
 
 function getLocale(region, language) {
-	const path = `${__dirname}/../locales/${region}_${language}.json`;
+	const path = `${__dirname}/../locales/${language}-${region}.json`;
 	const backupFileName = getLocaleFileName(language);
 	if (fs.pathExistsSync(path)) {
 		return require(path);
@@ -17,9 +17,9 @@ function getLocale(region, language) {
 		return require(`${__dirname}/../locales/${backupFileName}`);
 	}
 	
-	logger.warn(`Could not find locale ${region}_${language}! Loading US_en`);
+	logger.warn(`Could not find locale ${language}-${region}! Loading en-US`);
 
-	return require(`${__dirname}/../locales/US_en.json`);
+	return require(`${__dirname}/../locales/en-US.json`);
 }
 function getLocaleFileName(language){
 //Try to look if another locale with same language exist
@@ -29,7 +29,7 @@ let i = 0
 for (i;i <r.length;i++){
 	var fileName = r[i]
 	if (!fileName){return null}
-	var fileLanguage = fileName.split("_")[1]
+	var fileLanguage = fileName.split("-")[0]
 	if (fileLanguage.startsWith(language)){
 		return fileName;
 	}
