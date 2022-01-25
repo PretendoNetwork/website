@@ -3,13 +3,13 @@ In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
 <div class="info-frame" style="--main-info-color: #00b7ff;">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>
-<br></br>
+<br>
 <div class="info-frame" style="--main-info-color: #00ff2a;">I am a green Frame</div>
-<br></br>
+<br>
 <div class="info-frame" style="--main-info-color: #fffb00;">A Body has been Discovered</div>
-<br></br>
+<br>
 <div class="info-frame" style="--main-info-color: #ff0000;">Red Sus</div>
-<br></br>
+<br>
 
 ## SD Preparation
 ### What you need
@@ -57,7 +57,7 @@ Just Restart the Console then all network patching will be reverted.
 >ℹ️ If you try to login to your PNID without running the patcher, the console would try to connect to NN instead and give a incorrect Password for the ID.
 
 #### TroubleShoot
-Please visit this [Page](https://www.youtube.com/watch?v=dQw4w9WgXcQ) if you encounter an issue.
+Please visit this [Page](/docs/troubleshoot-errors) if you encounter an issue.
 
 <!---
   Info (Blue - Default) #00b7ff
