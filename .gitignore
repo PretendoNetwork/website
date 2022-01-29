@@ -64,3 +64,4 @@ static-text.json
 
 # keep browserified files out
 *.bundled.js
+.vscode/launch.json
