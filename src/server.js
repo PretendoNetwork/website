@@ -30,7 +30,6 @@ const routers = {
 	account: require('./routers/account'),
 	blog: require('./routers/blog'),
 	localization: require('./routers/localization'),
-	notfound: require('./routers/404')
 };
 
 app.use(cookieParser());
@@ -84,7 +83,6 @@ app.use('/progress', routers.progress);
 app.use('/account', routers.account);
 app.use('/localization', routers.localization);
 app.use('/blog', routers.blog);
-app.use('/404', routers.notfound);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
