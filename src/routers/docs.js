@@ -20,7 +20,7 @@ router.get('/search', async (request, response) => {
 		layout: 'main',
 		locale,
 		localeString,
-		currentPage: request.params.slug,
+		currentPage: 'search',
 	});
 });
 
