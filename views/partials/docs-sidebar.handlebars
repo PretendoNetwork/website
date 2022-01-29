@@ -41,6 +41,7 @@
 
 <script>
   function selectSidebarElement(element) {
+    if (!element){return}
     element.scrollIntoView({ block: "center" });
     element.classList.add('active');
   }
