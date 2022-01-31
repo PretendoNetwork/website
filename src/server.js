@@ -88,16 +88,17 @@ logger.info('Creating 404 status handler');
 // This works because it is the last router created
 // Meaning the request could not find a valid router
 app.use((request, response) => {
-if (request.accepts('html')) {
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-    response.render('404.handlebars', { 
-	layout: 'main',
-	locale,
-	localeString: reqLocale.toString(),
-	url: request.url });
-    return;
-  }
+	if (request.accepts('html')) {
+		const reqLocale = request.locale;
+		const locale = util.getLocale(reqLocale.region, reqLocale.language);
+		response.render('404.handlebars', { 
+			layout: 'main',
+			locale,
+			localeString: reqLocale.toString(),
+			url: request.url
+		});
+		return;
+	}
 });
 
 logger.info('Setting up handlebars engine');

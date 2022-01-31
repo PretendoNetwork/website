@@ -29,15 +29,15 @@ router.get('/search/:searchingWord', async (request, response) => {
 
 	const searchingWord = request.params.searchingWord;
 	const localeString = reqLocale.toString();
-	const c = fs.readdirSync(`${__dirname}/../../docs/${localeString}`);
-	var arraySent = [];
-	for (var i = 0;i < c.length;i++){
-		let file = fs.readFileSync(`${__dirname}/../../docs/${localeString}/${c[i]}`,{encoding: "utf8"});
+	const pageNames = fs.readdirSync(`${__dirname}/../../docs/${localeString}`);
+	const arraySent = [];
+	pageNames.forEach(pageName => {
+		const file = fs.readFileSync(`${__dirname}/../../docs/${localeString}/${pageName}`,{encoding: 'utf8'});
 		if (file.includes(searchingWord)){
-			arraySent.push(c[i])
+			arraySent.push(pageName);
 		}
-	}
-	response.json({"ResopnseArray": arraySent});
+	});
+	response.json({'ResponseArray': arraySent});
 	return;
 });
 
@@ -45,7 +45,7 @@ router.get('/:slug', async (request, response, next) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
-	var localeString = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace(".json","");
+	const localeString = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace('.json','');
 
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;

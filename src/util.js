@@ -9,33 +9,31 @@ function fullUrl(request) {
 
 function getLocale(region, language) {
 	const path = `${__dirname}/../locales/${language}-${region}.json`;
-	const backupFileName = getLocaleFileName(language);
+	const fallbackLocale = getLocaleFileName(language);
 	if (fs.pathExistsSync(path)) {
 		return require(path);
 	}
-	else if (backupFileName) {
-		return require(`${__dirname}/../locales/${backupFileName}`);
+	else if (fallbackLocale) {
+		return require(`${__dirname}/../locales/${fallbackLocale}`);
 	}
 	
 	logger.warn(`Could not find locale ${language}-${region}! Loading en-US`);
 
 	return require(`${__dirname}/../locales/en-US.json`);
 }
+
 function getLocaleFileName(language){
 //Try to look if another locale with same language exist
-const localeFolder = `${__dirname}/../locales/`;
-const r = fs.readdirSync(localeFolder)
-let i = 0
-for (i;i <r.length;i++){
-	var fileName = r[i]
-	if (!fileName){return null}
-	var fileLanguage = fileName.split("-")[0]
-	if (fileLanguage.startsWith(language)){
-		return fileName;
-	}
+	const localeFolder = `${__dirname}/../locales/`;
+	const locales = fs.readdirSync(localeFolder);
+	locales.forEach(locale => {
+		const fileLanguage = locale.split('-')[0];
+		if (fileLanguage.startsWith(language)){
+			return locale;
+		}
+	});
 }
-return null;
-}
+
 function apiGetRequest(path, headers) {
 	return got.get(`https://api.pretendo.cc${path}`, {
 		responseType: 'json',

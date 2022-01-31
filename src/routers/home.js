@@ -10,13 +10,14 @@ router.get('/', async (request, response) => {
 
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-	const cache = null
+	let cache = null;
 	try {
-	 cache = await getTrelloCache();
+		cache = await getTrelloCache();
 	}
 	catch(e){
-		logger.warn(`Trello Error: ${e}`)
+		logger.warn(`Trello Error: ${e}`);
 	}
+	
 	// Builds the arrays of people for the special thanks section
 
 	// Shuffles the special thanks people
@@ -38,12 +39,9 @@ router.get('/', async (request, response) => {
 		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
 		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
 	};
-	if (cache){
-		var featuredFeatureList = cache.sections[0]
-	}
 	response.render('home', {
 		layout: 'main',
-		featuredFeatureList: featuredFeatureList,
+		featuredFeatureList: cache?.sections[0],
 		boards,
 		locale,
 		localeString: reqLocale.toString(),
