@@ -73,7 +73,7 @@ router.get('/:slug', async (request, response, next) => {
 		.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
 
 	// Convert the content into HTML
-	content = marked(content);
+	content = marked.parse(content);
 
 	// A boolean to show the quick links grid or not.
 	let showQuickLinks = false;
