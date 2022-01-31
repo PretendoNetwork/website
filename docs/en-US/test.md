@@ -2,13 +2,13 @@
 In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
-<div class="info-frame" style="--main-info-color: #00b7ff;">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>
+<div class="info-frame">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>
 <br>
-<div class="info-frame" style="--main-info-color: #00ff2a;">I am a green Frame</div>
+<div class="info-frame green">I am a green Frame</div>
 <br>
-<div class="info-frame" style="--main-info-color: #fffb00;">A Body has been Discovered</div>
+<div class="info-frame yellow">A Body has been Discovered</div>
 <br>
-<div class="info-frame" style="--main-info-color: #ff0000;">Red Sus</div>
+<div class="info-frame red">Red Sus</div>
 <br>
 
 ## SD Preparation
