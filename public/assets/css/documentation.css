@@ -223,6 +223,17 @@ header nav a:first-child {
   color: var(--text);
 }
 
+.docs-wrapper .resultcard {
+	width: calc(100% - 54px);
+	min-width: 100px;
+	max-width: 460px;
+	padding: 18px 27px;
+	grid-template-columns: 110px 1fr;
+	background:#16192D;
+	border-radius: 10px;
+  color: var(--text);
+}
+
 .info-frame {
   height: auto;
   width: auto;

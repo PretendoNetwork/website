@@ -24,6 +24,23 @@ router.get('/search', async (request, response) => {
 	});
 });
 
+router.get('/search/:searchingWord', async (request, response) => {
+	const reqLocale = request.locale;
+
+	const searchingWord = request.params.searchingWord;
+	const localeString = reqLocale.toString();
+	const c = fs.readdirSync(`${__dirname}/../../docs/${localeString}`);
+	var arraySent = [];
+	for (var i = 0;i < c.length;i++){
+		let file = fs.readFileSync(`${__dirname}/../../docs/${localeString}/${c[i]}`,{encoding: "utf8"});
+		if (file.includes(searchingWord)){
+			arraySent.push(c[i])
+		}
+	}
+	response.json({"ResopnseArray": arraySent});
+	return;
+});
+
 router.get('/:slug', async (request, response, next) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
