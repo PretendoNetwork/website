@@ -23,15 +23,17 @@ function getLocale(region, language) {
 }
 
 function getLocaleFileName(language){
-//Try to look if another locale with same language exist
+	// Try to look if another locale with same language exist
 	const localeFolder = `${__dirname}/../locales/`;
-	const locales = fs.readdirSync(localeFolder);
-	locales.forEach(locale => {
-		const fileLanguage = locale.split('-')[0];
+	const localeFiles = fs.readdirSync(localeFolder);
+	for (let i = 0; i < localeFiles.length; i++) {
+		const localeFile = localeFiles[i];
+		const fileLanguage = localeFile.split('-')[0];
 		if (fileLanguage.startsWith(language)){
-			return locale;
+			return localeFile;
 		}
-	});
+	}
+	return null;
 }
 
 function apiGetRequest(path, headers) {
