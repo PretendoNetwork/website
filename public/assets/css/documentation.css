@@ -268,3 +268,23 @@ header nav a:first-child {
     width: 184px;
   }
 }
+@media screen and (max-width: 930px) {
+  .docs-wrapper .sidebar  {
+    visibility: hidden;
+   /* margin-left: -60%; */
+    width: 0px;
+  }
+  .docs-wrapper .content {
+    width: 95%; 
+    margin-left: -35mm;
+  }
+}
+@media screen and (max-width: 650px) {
+  .docs-wrapper .content {
+    margin-left: -37.5mm;
+  }
+
+  .docs-wrapper .content .quick-links-grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
