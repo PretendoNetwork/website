@@ -26,9 +26,9 @@ router.get('/search', async (request, response) => {
 
 router.get('/search/:searchingWord', async (request, response) => {
 	const reqLocale = request.locale;
-
+	const locale = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace('.json','');
 	const searchingWord = request.params.searchingWord;
-	const localeString = reqLocale.toString();
+	const localeString = locale.toString();
 	const pageNames = fs.readdirSync(`${__dirname}/../../docs/${localeString}`);
 	const arraySent = [];
 	pageNames.forEach(pageName => {
