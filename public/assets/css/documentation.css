@@ -262,6 +262,28 @@ header nav a:first-child {
   background: #ed4245;
 }
 
+.content table {
+  border-radius: 4px;
+  border-collapse: collapse;
+  background: #31375e;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.content table th {
+  padding: 8px 12px;
+  background: #3f4778;
+  color: var(--text);
+}
+.content table td {
+  padding: 8px 12px;
+  vertical-align: top;
+  border-radius: inherit;
+}
+.content table tr:nth-child(even) {
+  background: #2a2f50;
+}
+
 @media screen and (max-width: 1080px) {
   .docs-wrapper .sidebar .section {
     margin-left: 60px;
