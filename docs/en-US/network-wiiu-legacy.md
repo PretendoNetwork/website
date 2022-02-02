@@ -1,4 +1,4 @@
-# Pretendo Network Installer (WiiU)
+# Pretendo Network Installer (WiiU Legacy CFWs)
 In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
