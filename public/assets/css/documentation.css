@@ -286,12 +286,13 @@ header nav a:first-child {
 }
 
 .mobile-button {
-  bottom: 0;
+  bottom: 5px;
+  left: 5px;
   top:auto;
-  background-color: darkorchid;
+  background-color: var(--theme-light);
   width: fit-content;
-  height: min-content;
-  border-radius: 10px;
+  height: fit-content;
+  border-radius: 15px;
   position: fixed;
   visibility:hidden;
   padding: 10px;
