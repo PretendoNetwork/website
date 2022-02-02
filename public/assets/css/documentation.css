@@ -284,6 +284,20 @@ header nav a:first-child {
   background: #2a2f50;
 }
 
+.docs-wrapper .mobile-button {
+  bottom: 0;
+  top:auto;
+  background-color: darkorchid;
+  width: fit-content;
+  height: min-content;
+  border-radius: 10px;
+  position: fixed;
+}
+.docs-wrapper .sidebar .popout{
+  transition: 3s;
+  margin-left: 50% !important;
+}
+
 @media screen and (max-width: 1080px) {
   .docs-wrapper .sidebar .section {
     margin-left: 60px;
@@ -293,8 +307,8 @@ header nav a:first-child {
 @media screen and (max-width: 930px) {
   .docs-wrapper .sidebar  {
     visibility: hidden;
-   /* margin-left: -60%; */
     width: 0px;
+    position:relative;
   }
   .docs-wrapper .content {
     width: 95%; 
@@ -303,7 +317,11 @@ header nav a:first-child {
 }
 @media screen and (max-width: 650px) {
   .docs-wrapper .content {
-    margin-left: -37.5mm;
+    margin-left: -41mm;
+    padding-left: 20px;
+    width: 100%;
+    min-width: fit-content;
+    max-width: max-content;
   }
 
   .docs-wrapper .content .quick-links-grid{
