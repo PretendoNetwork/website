@@ -12,24 +12,28 @@ a.logo-link {
 .content a:link {
   color: var(--text-secondary);
 	text-decoration: none;
+  font-weight: bold;
 }
 
 /* visited link */
 a:visited {
   color: var(--text-secondary);
 	text-decoration: none;
+  font-weight: bold;
 }
 
 /* mouse over link */
 a:hover {
   color: var(--text-secondary-2);
 	text-decoration: none;
+  font-weight: bold;
 }
 
 /* selected link */
 a:active {
   color: var(--btn);
 	text-decoration: none;
+  font-weight: bold;
 }
 header {
   width: calc(100% - 72px);
