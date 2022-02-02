@@ -25,7 +25,7 @@ router.get('/search', async (request, response) => {
 });
 
 router.get('/search/:searchingWord', async (request, response) => {
-	const reqLocale = request.locale;
+	const reqLocale = request.locale || "en-US";
 	const locale = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace('.json','');
 	const searchingWord = request.params.searchingWord;
 	const localeString = locale.toString();
