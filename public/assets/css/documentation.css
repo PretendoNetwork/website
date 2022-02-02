@@ -37,6 +37,7 @@ header nav a:first-child {
   max-height: calc(100vh - 69px);
   overflow-y: scroll;
   min-height: 100%;
+  z-index: 2;
 }
 .docs-wrapper .sidebar .section {
   display: flex;
@@ -284,7 +285,7 @@ header nav a:first-child {
   background: #2a2f50;
 }
 
-.docs-wrapper .mobile-button {
+.mobile-button {
   bottom: 0;
   top:auto;
   background-color: darkorchid;
@@ -292,10 +293,8 @@ header nav a:first-child {
   height: min-content;
   border-radius: 10px;
   position: fixed;
-}
-.docs-wrapper .sidebar .popout{
-  transition: 3s;
-  margin-left: 50% !important;
+  visibility:hidden;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -308,11 +307,18 @@ header nav a:first-child {
   .docs-wrapper .sidebar  {
     visibility: hidden;
     width: 0px;
+    padding-left: 10px;
     position:relative;
+  }
+  .docs-wrapper .sidebar  .section{
+    margin-left: 0px;
   }
   .docs-wrapper .content {
     width: 95%; 
     margin-left: -35mm;
+  }
+  .mobile-button {
+    visibility: visible;
   }
 }
 @media screen and (max-width: 650px) {
