@@ -24,7 +24,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: var(--text-secondary-2);
+  color: var(--text);
 	text-decoration: none;
   font-weight: bold;
 }
@@ -330,6 +330,7 @@ header nav a:first-child {
   .docs-wrapper .sidebar .section {
     margin-left: 60px;
     width: 184px;
+    visibility: visible;
   }
 }
 @media screen and (max-width: 930px) {

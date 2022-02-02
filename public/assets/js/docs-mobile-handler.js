@@ -10,3 +10,14 @@ document.addEventListener('click', (e) => {
         sidebar.style.width = "0mm"   
     }
 })
+window.addEventListener("resize",() => {
+    if (window.screen.width > 930 && sidebar.style.visibility === "hidden") {
+        sidebar.style.visibility = "visible"
+        sidebar.style.width = "calc(clamp(270px, 30vw, 500px))"
+        sidebar.children.width
+    }
+    if (window.screen.width < 930){
+        sidebar.style.visibility = "hidden"
+        sidebar.style.width = "0mm"
+    }
+})
