@@ -8,6 +8,29 @@ a.logo-link {
   height: 40px;
   text-decoration: none;
 }
+/* unvisited link */
+.content a:link {
+  color: var(--text-secondary);
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: var(--text-secondary);
+	text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--text-secondary-2);
+	text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: var(--btn);
+	text-decoration: none;
+}
 header {
   width: calc(100% - 72px);
   background: #131730;
@@ -289,7 +312,7 @@ header nav a:first-child {
   bottom: 5px;
   left: 5px;
   top:auto;
-  background-color: var(--theme-light);
+  background-color: var(--btn);
   width: fit-content;
   height: fit-content;
   border-radius: 15px;
