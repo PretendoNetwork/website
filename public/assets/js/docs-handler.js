@@ -21,3 +21,9 @@ window.addEventListener("resize",() => {
         sidebar.style.width = "0mm"
     }
 })
+function selectSidebarElement(element) {
+    if (!element){return}
+    element.scrollIntoView({ block: "center" });
+    element.classList.add('active');
+  }
+  selectSidebarElement(document.querySelector(`div.sidebar a[href='${location.pathname}']`));
