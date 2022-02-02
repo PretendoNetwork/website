@@ -5,7 +5,7 @@ button.addEventListener('click',function() {
     sidebar.style.width = "60mm"
 })
 document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !button.contains(e.target)) {
+    if (!sidebar.contains(e.target) && !button.contains(e.target) && sidebar.style.visibility === "visible") {
         sidebar.style.visibility = "hidden"
         sidebar.style.width = "0mm"   
     }
