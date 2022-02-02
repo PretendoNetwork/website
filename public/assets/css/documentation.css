@@ -319,6 +319,7 @@ header nav a:first-child {
   .docs-wrapper .content {
     margin-left: -41mm;
     padding-left: 20px;
+    padding-right: 10px;
     width: 100%;
     min-width: fit-content;
     max-width: max-content;
