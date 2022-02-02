@@ -295,6 +295,7 @@ header nav a:first-child {
   position: fixed;
   visibility:hidden;
   padding: 10px;
+  z-index: 2;
 }
 
 @media screen and (max-width: 1080px) {
