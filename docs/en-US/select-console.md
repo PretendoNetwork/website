@@ -11,10 +11,10 @@ There are two versions of the network patcher (Nimble) for the WiiU depending on
 | Element      | Description                                                                                                                                                        |
 | :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nimble.elf  | This Version of Nimble is for Leagcy CFWs (Mocha/Haxchi/CBHC). |
-| Nimble.rpx        | This version of Nimble is a module for environments CFWs (Tirasumu/Aroma) |
+| Nimble.rpx        | This version of Nimble is a module for environments CFWs (Turamisu/Aroma) |
 
 ### [Continue with Nimble.elf](/docs/network-wiiu-legacy)     (Mocha/Haxchi/CHBC)
-### [Continue with Nimble.rpx](/docs/network-wiiu-env)     (Tirasumu/Aroma)
+### [Continue with Nimble.rpx](/docs/network-wiiu-env)     (Turamisu/Aroma)
 
 
 ## 3DS

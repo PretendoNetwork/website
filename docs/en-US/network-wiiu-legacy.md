@@ -2,8 +2,8 @@
 In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
-<div class="info-frame">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>
-<br>
+<div class="info-frame">ℹ️ This guide assumes that you are using Legacy CFWS (Mocha, Haxchi, CBHC), if you are using an environment CFW (Turamisu, Aroma), Please follow this <a href="/docs/network-wiiu-env">guide</a> instead.</div>
+
 
 ## SD Preparation
 ### What you need
@@ -14,7 +14,7 @@ In this guide you would learn how to setup a PNID from Scratch on a WiiU.
  1. Open your SD in a File Explorer
  2. Go to `/wiiu/apps/`
  3. Create a folder (Name it whatever you want)
- 4. Copy the `nimble_patcher.elf`
+ 4. Copy the `nimble_patcher.elf` to that folder
 
 ## Launching Nimble
 The next step is to launch Nimble and run it to redirect the URLs from Nintendo to Pretendo.

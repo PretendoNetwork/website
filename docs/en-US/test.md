@@ -3,13 +3,13 @@ In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
 <div class="info-frame">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>
-<br>
+
 <div class="info-frame green">I am a green Frame</div>
-<br>
+
 <div class="info-frame yellow">A Body has been Discovered</div>
-<br>
+
 <div class="info-frame red">Red Sus</div>
-<br>
+
 
 ## SD Preparation
 ### What you need
@@ -59,14 +59,6 @@ Just Restart the Console then all network patching will be reverted.
 #### TroubleShoot
 Please visit this [Page](/docs/troubleshoot-errors) if you encounter an issue.
 
-<!---
-  Info (Blue - Default) #00b7ff
-
-  Ok (Green) #00ff2a;
- 
-  Alert (Red) #ff0000;
- 
-  Warn (Yellow) #fffb00; --->
 
 
 
