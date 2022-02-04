@@ -19,7 +19,7 @@ function fetchResults(word) {
 				newDiv.className = 'resultcard';
 				const newA = document.createElement("a")
 				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}#:~:text=${word}`);
-				const newContent = document.createTextNode(data.ResponseArray[i]);
+				const newContent = document.createTextNode(data.ResponseArray[i].replace('.md',''));
 				newDiv.appendChild(newA)
 				newA.appendChild(newContent);
 				currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
