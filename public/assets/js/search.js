@@ -1,5 +1,11 @@
+var previousWord = ""
 document.getElementById('searchBox').addEventListener('input',function() {
 	const word = document.getElementById('searchBox').textContent;
+	if (previousWord === word){
+		//Stupid Solution to Stop Enter Keys Input (if there is a better way please fix this)
+		document.getElementById('searchBox').textContent = previousWord;
+	}
+	else {previousWord = word}
 	fetchResults(word);
 });
 
