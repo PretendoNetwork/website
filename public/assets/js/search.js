@@ -17,9 +17,11 @@ function fetchResults(word) {
 			for (let i = 0;i < data.ResponseArray.length;i++){
 				const newDiv = document.createElement('div');
 				newDiv.className = 'resultcard';
-				newDiv.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}#:~:text=${word}`);
+				const newA = document.createElement("a")
+				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}#:~:text=${word}`);
 				const newContent = document.createTextNode(data.ResponseArray[i]);
-				newDiv.appendChild(newContent);
+				newDiv.appendChild(newA)
+				newA.appendChild(newContent);
 				currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
 			}
 		})
