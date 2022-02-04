@@ -260,6 +260,7 @@ header nav a:first-child {
 	background:#16192D;
 	border-radius: 10px;
   color: var(--text);
+  margin-bottom: 15px;
 }
 
 .info-frame {
@@ -324,6 +325,7 @@ header nav a:first-child {
   visibility:hidden;
   padding: 10px;
   z-index: 2;
+  fill: var(--text);
 }
 
 @media screen and (max-width: 1080px) {
