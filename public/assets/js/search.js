@@ -5,6 +5,7 @@ document.getElementById('searchBox').addEventListener('input',function() {
 		//Stupid Solution to Stop Enter Keys Input (if there is a better way please fix this)
 		document.getElementById('searchBox').textContent = previousWord;
 	}
+	else if (word === ""){return}
 	else {previousWord = word}
 	fetchResults(word);
 });
@@ -39,5 +40,6 @@ function fetchResults(word) {
 			while(elements.length > 0){
 				elements[0].parentNode.removeChild(elements[0]);
 			}
+			currentDiv.textContent = "Something went wrong."
 		});
 }
