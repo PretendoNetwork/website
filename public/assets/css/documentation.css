@@ -333,22 +333,24 @@ header nav a:first-child {
   .docs-wrapper .sidebar .section {
     margin-left: 60px;
     width: 184px;
-    visibility: visible;
+/*   visibility: visible; */
   }
 }
 @media screen and (max-width: 930px) {
   .docs-wrapper .sidebar  {
-    visibility: hidden;
-    width: 0px;
-    padding-left: 10px;
-    position:relative;
-  }
-  .docs-wrapper .sidebar  .section{
-    margin-left: 0px;
+   /* visibility: hidden; */
+    display: none;
+  /*  width: 0px; */
+  /*  padding-left: 10px;
+    position:relative; */
   }
   .docs-wrapper .content {
-    width: 95%; 
-    margin-left: -35mm;
+    margin-left: 0px; 
+    padding-left: 125px;
+    padding-right: 175px;
+    width: 100%;
+    min-width: fit-content;
+    max-width: max-content;
   }
   .mobile-button {
     visibility: visible;
@@ -356,9 +358,9 @@ header nav a:first-child {
 }
 @media screen and (max-width: 650px) {
   .docs-wrapper .content {
-    margin-left: -41mm;
-    padding-left: 20px;
-    padding-right: 10px;
+    margin-left: 0px; 
+    padding-left: 25px;
+    padding-right: 100px;
     width: 100%;
     min-width: fit-content;
     max-width: max-content;
