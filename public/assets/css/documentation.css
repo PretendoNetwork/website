@@ -269,6 +269,7 @@ header nav a:first-child {
   border-radius: 8px;
   color: var(--text);
   padding: 24px 36px;
+  margin-bottom: 25px;
 }
 
 .info-frame::after {
