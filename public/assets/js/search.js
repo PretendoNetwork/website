@@ -4,15 +4,19 @@ document.getElementById('searchBox').addEventListener('input',function() {
 });
 
 function fetchResults(word) {
+	const elements = document.getElementsByClassName('resultcard');
+	const currentDiv = document.getElementById('result');
 	fetch(`/docs/search/${word}`)
 		.then(res => res.json())
 		.then(data => {
-			const currentDiv = document.getElementById('result');
+			currentDiv.textContent = ""
 			currentDiv.classList.remove('resultcard');
 
-			const elements = document.getElementsByClassName('resultcard');
 			while(elements.length > 0){
 				elements[0].parentNode.removeChild(elements[0]);
+			}
+			if (data.ResponseArray.length === 0){
+				currentDiv.textContent = "We could't find what you were looking for."
 			}
 			for (let i = 0;i < data.ResponseArray.length;i++){
 				const newDiv = document.createElement('div');
@@ -26,7 +30,6 @@ function fetchResults(word) {
 			}
 		})
 		.catch(function () {
-			const elements = document.getElementsByClassName('resultcard');
 			while(elements.length > 0){
 				elements[0].parentNode.removeChild(elements[0]);
 			}
