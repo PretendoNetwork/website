@@ -341,14 +341,17 @@ header nav a:first-child {
    /* visibility: hidden; */
     display: none;
   /*  width: 0px; */
-  /*  padding-left: 10px;
-    position:relative; */
+    padding-left: 10px;
+  /*  position:relative; */
+  }
+  .docs-wrapper .sidebar .section {
+    margin-left: 30px;
   }
   .docs-wrapper .content {
     margin-left: 0px; 
-    padding-left: 125px;
+    padding-left: 10px;
     padding-right: 175px;
-    width: 100%;
+    width: calc(clamp(650px, 102.5vw, 930px) - (20px * 2));
     min-width: fit-content;
     max-width: max-content;
   }
@@ -358,10 +361,10 @@ header nav a:first-child {
 }
 @media screen and (max-width: 650px) {
   .docs-wrapper .content {
-    margin-left: 0px; 
-    padding-left: 25px;
-    padding-right: 100px;
-    width: 100%;
+   /* margin-left: -75px; 
+    padding-left:12.5vmax;
+    padding-right: 50px;*/
+    width: calc(clamp(250px, 102.5vw, 650px) - (10px * 2));
     min-width: fit-content;
     max-width: max-content;
   }
