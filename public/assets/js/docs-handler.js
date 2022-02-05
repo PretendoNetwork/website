@@ -1,13 +1,11 @@
 const sidebar = document.getElementsByClassName('sidebar')[0];
 const button = document.getElementById('docs-mobile-button')
 button.addEventListener('click',function() {
-  //  sidebar.style.visibility = "visible"
     sidebar.style.display = "block"
     
 })
 document.addEventListener('click', (e) => {
     if (!sidebar.contains(e.target) && !button.contains(e.target) && sidebar.style.display === "block" && window.screen.width < 930) {
-    //    sidebar.style.visibility = "hidden"
         sidebar.style.display = "none"
     }
 })
@@ -17,7 +15,6 @@ window.addEventListener("resize",() => {
         sidebar.style.width = "calc(clamp(270px, 30vw, 500px))"
     }
     if (window.screen.width < 930){
-     //   sidebar.style.visibility = "hidden"
         sidebar.style.width = "60mm"
         sidebar.style.display = "none"
     }
@@ -27,4 +24,6 @@ function selectSidebarElement(element) {
     element.scrollIntoView({ block: "center" });
     element.classList.add('active');
   }
-  selectSidebarElement(document.querySelector(`div.sidebar a[href='${location.pathname}']`));
+  var aURL = location.pathname.split("#")[0]
+  if (aURL.endsWith("/")){aURL = aURL.replace(/.$/,"")}
+  selectSidebarElement(document.querySelector(`div.sidebar a[href='${aURL}']`));
