@@ -2,7 +2,7 @@
 In this guide you would learn how to setup a PNID from Scratch on a WiiU.
 
 
-<div class="info-frame">ℹ️ This guide assumes that you are using Legacy CFWS (Mocha, Haxchi, CBHC), if you are using an environment CFW (Turamisu, Aroma), Please follow this <a href="/docs/network-wiiu-env">guide</a> instead.</div>
+<div class="info-frame">ℹ️ This guide assumes that you are using Legacy CFWS (Mocha, Haxchi, CBHC), if you are using an environment CFW (Tiramisu, Aroma), Please follow this <a href="/docs/network-wiiu-env">guide</a> instead.</div>
 
 
 ## SD Preparation
