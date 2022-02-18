@@ -8,7 +8,7 @@ Please select your version you want to continue with
 
 There are two versions of the network patcher (Nimble) for the WiiU depending on your CFW you are using.
 
-| Element      | Description                                                                                                                                                        |
+| Nimble Versions      | Description                                                                                                                                                        |
 | :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nimble.elf  | This Version of Nimble is for Leagcy CFWs (Mocha/Haxchi/CBHC). |
 | Nimble.rpx        | This version of Nimble is a module for environments CFWs (Tiramisu/Aroma) |

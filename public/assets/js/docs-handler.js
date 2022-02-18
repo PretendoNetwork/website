@@ -24,5 +24,7 @@ function selectSidebarElement(element) {
     element.scrollIntoView({ block: "center" });
     element.classList.add('active');
   }
-  var aURL = location.pathname.split("/")
-  selectSidebarElement(document.querySelector(`div.sidebar a[href='/docs/${aURL[2]}']`));
+  let aURL = location.pathname.split("/")
+  let hrefURL = aURL[2]
+  if (hrefURL.includes("errorcodes")) {hrefURL += `/${aURL[3]}`}
+  selectSidebarElement(document.querySelector(`div.sidebar a[href='/docs/${hrefURL}']`));
