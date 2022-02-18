@@ -30,13 +30,14 @@ function fetchResults(word) {
 				newDiv.className = 'resultcard';
 				const newA = document.createElement("a")
 				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}${word}`);
-				const newContent = document.createTextNode(data.ResponseArray[i].replace('.md','').replaceAll('-',' '));
+				let resultContent =  data.ResponseArray[i].replace('.md','').replace(/-/g,' ');
+				const newContent = document.createTextNode(resultContent);
 				newDiv.appendChild(newA)
 				newA.appendChild(newContent);
 				currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
 			}
 		})
-		.catch(function () {
+		.catch((error) => {
 			while(elements.length > 0){
 				elements[0].parentNode.removeChild(elements[0]);
 			}
