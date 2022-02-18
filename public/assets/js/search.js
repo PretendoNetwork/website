@@ -29,7 +29,7 @@ function fetchResults(word) {
 				const newDiv = document.createElement('div');
 				newDiv.className = 'resultcard';
 				const newA = document.createElement("a")
-				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}#:~:text=${word}`);
+				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}${word}`);
 				const newContent = document.createTextNode(data.ResponseArray[i].replace('.md','').replaceAll('-',' '));
 				newDiv.appendChild(newA)
 				newA.appendChild(newContent);

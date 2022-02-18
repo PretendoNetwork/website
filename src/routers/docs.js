@@ -41,7 +41,7 @@ router.get('/search/:searchingWord', async (request, response) => {
 	return;
 });
 
-router.get('/:slug', async (request, response, next) => {
+router.get('/:slug?(/:focusString)?', async (request, response, next) => {
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
 
@@ -49,7 +49,7 @@ router.get('/:slug', async (request, response, next) => {
 
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;
-
+	const focusString = request.params.focusString;
 	let markdownLocale = localeString;
 	let missingInLocale = false;
 	// Check if the MD file exists in the user's locale, if not try en-US and show notice, or finally log error and show 404.
@@ -88,7 +88,8 @@ router.get('/:slug', async (request, response, next) => {
 		content,
 		currentPage: request.params.slug,
 		missingInLocale,
-		showQuickLinks
+		showQuickLinks,
+		focusString
 	});
 });
 
