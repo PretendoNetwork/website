@@ -5,16 +5,16 @@ button.addEventListener('click',function() {
     
 })
 document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !button.contains(e.target) && sidebar.style.display === "block" && window.screen.width < 930) {
+    if (!sidebar.contains(e.target) && !button.contains(e.target) && sidebar.style.display === "block" && window.screen.width < 650) {
         sidebar.style.display = "none"
     }
 })
 window.addEventListener("resize",() => {
-    if (window.screen.width > 930 && sidebar.style.display === "none") {
+    if (window.screen.width > 650 && sidebar.style.display === "none") {
        sidebar.style.display = "block"
         sidebar.style.width = "calc(clamp(270px, 30vw, 500px))"
     }
-    if (window.screen.width < 930){
+    if (window.screen.width < 650){
         sidebar.style.width = "60mm"
         sidebar.style.display = "none"
     }
