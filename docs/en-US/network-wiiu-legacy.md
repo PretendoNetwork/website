@@ -1,5 +1,5 @@
 # Pretendo Network Installer (WiiU Legacy CFWs)
-In this guide you would learn how to setup a PNID from Scratch on a WiiU.
+In this guide you will learn how to setup a PNID from Scratch on a WiiU.
 
 
 <div class="info-frame">ℹ️ This guide assumes that you are using Legacy CFWS (Mocha, Haxchi, CBHC), if you are using an environment CFW (Tiramisu, Aroma), Please follow this <a href="/docs/network-wiiu-env">guide</a> instead.</div>

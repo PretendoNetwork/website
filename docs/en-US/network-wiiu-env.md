@@ -1,5 +1,5 @@
 # Pretendo Network Installer (WiiU Environments)
-In this guide you would learn how to setup a PNID from Scratch on a WiiU.
+In this guide you will learn how to setup a PNID from Scratch on a WiiU.
 
 
 <div class="info-frame">ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/#/">guide</a> on how to homebrew your system first.</div>

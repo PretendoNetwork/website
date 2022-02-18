@@ -5,7 +5,7 @@ In this page are all the possible Juxt Error Codes as well as Possible Solutions
 
 ## Main Codes
 
-This is where you will find full error code ex:(598-0000)
+This is where you will find full error code ex: (598-0000)
 
 ### JXT-598-0000
 
@@ -87,7 +87,7 @@ This is where you will find full error code ex:(598-0000)
 
 | Info      | Details                                                                                                                                                        |
 | :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Issue  | User Permantly Banned |
+| Issue  | User Permanently Banned |
 | Solution | Contact a Moderator to appeal |
 
 ### JXT-598-0012
@@ -155,7 +155,7 @@ This is where you will find full error code ex:(598-0000)
 
 ## Main Headers
 
-This is where you will find error code with the same number after the -, These Error codes means that they all belong in the same group ex:(598-1025)
+This is where you will find error code with the same number after the -, These Error codes means that they all belong in the same group ex: (598-1025)
 
 ### JXT-598-1XXX
 

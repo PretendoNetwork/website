@@ -1,5 +1,5 @@
 # Installing Juxt (WiiU)
-In this guide we will install Juxtaposition onto your WiiU.
+In this guide you will install Juxtaposition onto your WiiU.
 <div class="info-frame">ℹ️ This is the only Patcher where you only run it once as it changes the Miiverse Files Permanently.</div>
 
 <div class="info-frame yellow">⚠️ While the chances of bricking is low and our patcher does checks and tries to recover if a failure occurs, it is <b>recommended</b> to have an AutoBoot CFW (CBHC, Tiramisu, Aroma) for installtion incase of a brick.<br></br>You can Install Juxt without them but incase of a brick, you need to use BluuBomb to unbrick your WiiU.</div>

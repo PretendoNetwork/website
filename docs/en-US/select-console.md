@@ -25,6 +25,6 @@ Follow this guide to install the network patcher (Nimbus) to your 3DS/2DS
 
 ## Cemu
  
-Currently Cemu is tbe only emulator that supports Pretendo, Check the guide right here.
+Currently Cemu is the only emulator that supports Pretendo, Check the guide right here.
 
 ### [Continue with CEMU](/docs/cemu)
