@@ -65,7 +65,7 @@
 {{#if focusString}}<script>
 let elems = document.body.getElementsByClassName("content-inner")[0].children;
 for (let eleValue = 0;eleValue < elems.length;eleValue++){
- if (elems[eleValue].textContent.includes("{{focusString}}")) {elems[eleValue].scrollIntoView({behavior: "smooth", block: "start", inline: "center"});break;}
+ if (elems[eleValue].textContent.includes("{{focusString}}")) {elems[eleValue].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});break;}
 }
 </script>{{/if}}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
