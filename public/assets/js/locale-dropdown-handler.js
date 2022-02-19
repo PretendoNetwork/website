@@ -2,11 +2,7 @@
 function setDefaultDropdownLocale(localeString) {
 	try {
 		const selected = document.querySelector('.selected-locale');
-		let item = document.querySelector(`label[for=${localeString}`);
-		if (!item) { // if locale can't be found, default to en-US
-			localeString = 'en-US';
-			item = document.querySelector(`label[for=${localeString}`);
-		}
+		let item = document.querySelector(`label[for=${localeString}]`) ||  document.querySelector(`label [for=en-US]`);
 		selected.innerHTML = item.innerHTML;
 	} catch (e) {} // If it errors it's probably because there isn't a navbar in the view
 }
