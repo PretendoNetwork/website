@@ -19,9 +19,9 @@ window.addEventListener("resize",() => {
         sidebar.style.display = "none"
     }
 })
-function selectSidebarElement(element) {
+function selectSidebarElement(element,blocktype) {
     if (!element){return}
-    element.scrollIntoView({ block: "center" });
+    element.scrollIntoView({ block: blocktype || "center" });
     element.classList.add('active');
   }
   let aURL = location.pathname.split("/")
@@ -36,6 +36,9 @@ function selectSidebarElement(element) {
     for (let eleValue = 0;eleValue < elems[section].children.length;eleValue++){
      if (elems[section].children[eleValue].textContent.includes(aURL[3])){
         selectSidebarElement(elems[section].children[eleValue]);break;}
+    }
+    if (elems[section].children[0].textContent.toLowerCase().includes(aURL[2].split("-")[0])) {
+        selectSidebarElement(elems[section].children[0],"start");break;
     }
   }
 }
