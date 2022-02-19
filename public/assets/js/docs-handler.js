@@ -22,7 +22,7 @@ window.addEventListener("resize",() => {
 function selectSidebarElement(element,blocktype) {
     if (!element){return}
     element.scrollIntoView({ block: blocktype || "center" });
-    element.classList.add('active');
+   if(!blocktype){ element.classList.add('active');}
   }
   let aURL = location.pathname.split("/")
   let hrefURL = aURL[2]

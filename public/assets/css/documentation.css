@@ -254,7 +254,7 @@ header nav a:first-child {
 .docs-wrapper .resultcard {
 	width: calc(100% - 54px);
 	min-width: 100px;
-	max-width: 460px;
+	max-width: 560px;
 	padding: 18px 27px;
 	grid-template-columns: 110px 1fr;
 	background:#16192D;
@@ -344,11 +344,6 @@ header nav a:first-child {
     min-width: fit-content;
     max-width: max-content;
   } */
-  .docs-wrapper .resultcard {
-    width: calc(100% - 15px);
-    max-width: 100%;
-  }
-  
 }
 @media screen and (max-width: 650px) {
   .docs-wrapper .sidebar  {
