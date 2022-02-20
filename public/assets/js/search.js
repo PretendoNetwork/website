@@ -31,7 +31,7 @@ function fetchResults(word) {
 				const newA = document.createElement("a")
 				newA.setAttribute('href',`${window.location.href.replace('search','')}${data.ResponseArray[i].replace('.md','/')}${word}`);
 				let resultContent =  data.ResponseArray[i].replace('.md','').replace(/-/g,' ');
-				const newContent = document.createTextNode(resultContent);
+				const newContent = document.createTextNode(resultContent.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()));
 				newDiv.appendChild(newA)
 				newA.appendChild(newContent);
 				currentDiv.parentNode.insertBefore(newDiv, currentDiv.nextSibling);
