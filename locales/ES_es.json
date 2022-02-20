@@ -2,7 +2,6 @@
 	"nav": {
 		"about": "Acerca de",
 		"faq": "FAQ",
-		"docs": "Documentación",
 		"credits": "Créditos",
 		"progress": "Progreso",
 		"blog": "Blog",
@@ -177,12 +176,6 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
-				"name": "NinStar",
-				"caption": "Iconos para el Editor de Mii y las reacciones en Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
 				"name": "Contribuidores en GitHub.",
 				"caption": "Traducciones y otras contribuciones",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
@@ -205,7 +198,7 @@
 				"¿Quieres estar al día?",
 				"!Unete a nuestro servidor de Discord!"
 			],
-			"button": "Unete ahora!"
+			"button": "Join now!"
 		}
 	},
 	"progressPage": {
@@ -223,21 +216,5 @@
 		"fileInput": "Archivo a probar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Probar archivo"
-	},
-	"docs": {
-		"missingInLocale": "Esta pagina todavía no esta en tu idioma. Por favor revisa la versión en Ingles.",
-		"quickLinks": {
-			"header": "Links rápidos",
-			"links": [
-				{
-					"header": "Instala Pretendo",
-					"caption": "Ver las instrucciones de instalación"
-				},
-				{
-					"header": "Ocurrion un error?",
-					"caption": "Buscalo por aquí"
-				}
-			]
-		}
 	}
 }
