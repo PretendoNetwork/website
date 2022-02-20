@@ -29,7 +29,7 @@ router.get('/search/:searchingWord', async (request, response) => {
 	const locale = util.getLocaleFileName(reqLocale.toString().slice(0,2)).replace('.json','');
 	const searchingWord = request.params.searchingWord;
 	const localeString = locale.toString();
-	const pageNames = fs.readdirSync(`${__dirname}/../../docs/${localeString}`);
+	const pageNames = fs.readdirSync(`${__dirname}/../../docs/${localeString}`).filter(filename => !filename.startsWith('_'));
 	const arraySent = [];
 	pageNames.forEach(pageName => {
 		const file = fs.readFileSync(`${__dirname}/../../docs/${localeString}/${pageName}`,{encoding: 'utf8'});
