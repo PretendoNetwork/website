@@ -2,11 +2,11 @@
 	"nav": {
 		"about": "紹介",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "ドキュメント",
 		"credits": "クレジット",
 		"progress": "進行状況",
 		"blog": "ブログ",
-		"account": "Account"
+		"account": "アカウント"
 	},
 	"hero": {
 		"subtitle": "再構築された",
@@ -178,7 +178,7 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "MiiエディターとJuxtリアクションのアイコン",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
@@ -226,17 +226,17 @@
 		"button": "ファイルを試す！"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
 		"quickLinks": {
-			"header": "Quick links",
+			"header": "クイックリンク",
 			"links": [
 				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
+					"header": "Pretendoをインストール",
+					"caption": "設定手順を見る"
 				},
 				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
+					"header": "エラーが発生しましたか?",
+					"caption": "ここで検索する"
 				}
 			]
 		}

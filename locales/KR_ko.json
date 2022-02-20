@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "정보",
 		"faq": "자주 묻는 질문",
-		"docs": "Docs",
+		"docs": "문서",
 		"credits": "크레딧",
 		"progress": "진행률",
 		"blog": "블로그",
@@ -226,17 +226,17 @@
 		"button": "파일 테스트"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"missingInLocale": "이 페이지는 한국어로 번역되어 있지 않습니다. 아래의 영어판을 참고해 주세요.",
 		"quickLinks": {
-			"header": "Quick links",
+			"header": "바로가기",
 			"links": [
 				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
+					"header": "Pretendo를 설치",
+					"caption": "설정 방법을 보기"
 				},
 				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
+					"header": "에러가 발생했나요?",
+					"caption": "여기서 검색하기"
 				}
 			]
 		}
