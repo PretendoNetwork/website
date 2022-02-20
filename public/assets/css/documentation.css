@@ -16,21 +16,21 @@ a.logo-link {
 }
 
 /* visited link */
-a:visited {
+.content a:visited {
   color: var(--text-secondary);
 	text-decoration: none;
   font-weight: bold;
 }
 
 /* mouse over link */
-a:hover {
+.content a:hover {
   color: var(--text);
 	text-decoration: none;
   font-weight: bold;
 }
 
 /* selected link */
-a:active {
+.content a:active {
   color: var(--btn);
 	text-decoration: none;
   font-weight: bold;
