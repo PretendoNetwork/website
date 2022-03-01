@@ -373,3 +373,8 @@ header nav a:first-child {
     z-index: 4;
   }
 }
+@supports (-moz-appearance: none)  and (max-width: 650px){
+  .docs-wrapper .content {
+  padding-left: 3.5px; /*Firefox Mobile Stuff*/
+  }
+}
