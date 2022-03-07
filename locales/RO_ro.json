@@ -211,10 +211,10 @@
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
-		"description": "Inserați un link către un JSON public accesibil pentru a testa traducerea pe website",
+		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",
 		"instructions": "Vedeți instrucțiunile de localizare",
-		"fileInput": "Fișier pentru a testa",
+		"fileInput": "Fișier de testare",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Fișier de testare"
+		"button": "Testează fișier"
 	}
 }
