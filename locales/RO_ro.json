@@ -18,7 +18,7 @@
 	"aboutUs": {
 		"title": "Despre noi",
 		"paragraphs": [
-			"Pretendo un proiect open-source ce are ca scop să recreeze Nintendo Network pentru 3DS și Wii U folosind inginerie inversă.",
+			"Pretendo este un proiect open-source ce are ca scop să recreeze Nintendo Network pentru 3DS și Wii U folosind inginerie inversă.",
 			"Pentru că serviciile noastre sunt gratuite și open source, ele pot exista cu mult după inevitabila închidere a serverelor Nintendo Network."
 		]
 	},
@@ -203,7 +203,7 @@
 	},
 	"progressPage": {
 		"title": "Progresul nostru",
-		"description": "Verificați progresul proiectului și țintele! (Actulizat de obicei la fiecare oră, nu reflectă TOATE progresele și țintele proiectului)"
+		"description": "Verificați progresul proiectului și țintele! (Actualizat de obicei la fiecare oră, nu reflectă TOATE progresele și țintele proiectului)"
 	},
 	"blogPage": {
 		"title": "Blog",
