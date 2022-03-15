@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "Despre",
 		"faq": "FAQ",
+		"docs": "Docs",
 		"credits": "Mulțumiri",
 		"progress": "Progres",
 		"blog": "Blog",
@@ -63,7 +64,7 @@
 			},
 			{
 				"question": "Va trebui să îmi modific consola?",
-				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploatarea de pe web browser), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
+				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploit-ul de pe browser-ul web), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
 			}
 		]
 	},
@@ -176,9 +177,16 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
 				"name": "GitHub contributors",
 				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -216,5 +224,21 @@
 		"fileInput": "Fișier pentru a testa",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Fișier de testare"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		}
 	}
 }
