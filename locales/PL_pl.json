@@ -6,7 +6,6 @@
 		"credits": "Podziękowania",
 		"progress": "Postęp",
 		"blog": "Blog",
-		"account": "Konto",
 		"account": "Konto"
 	},
 	"hero": {
@@ -176,13 +175,13 @@
 				"caption": "Research w sprawie struktur danych Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
+			},
 			{
 				"name": "NinStar",
 				"caption": "Ikony do edytora Mii oraz reakcje do Juxt",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
-			{
 			{
 				"name": "Ofiarodawcy z GitHub",
 				"caption": "Tłumaczenia oraz inne wkłady",
