@@ -19,7 +19,7 @@
 	"aboutUs": {
 		"title": "Despre noi",
 		"paragraphs": [
-			"Pretendo un proiect open-source ce are ca scop să recreeze Nintendo Network pentru 3DS și Wii U folosind inginerie inversă.",
+			"Pretendo este un proiect open-source ce are ca scop să recreeze Nintendo Network pentru 3DS și Wii U folosind inginerie inversă.",
 			"Pentru că serviciile noastre sunt gratuite și open source, ele pot exista cu mult după inevitabila închidere a serverelor Nintendo Network."
 		]
 	},
@@ -211,7 +211,7 @@
 	},
 	"progressPage": {
 		"title": "Progresul nostru",
-		"description": "Verificați progresul proiectului și țintele! (Actulizat de obicei la fiecare oră, nu reflectă TOATE progresele și țintele proiectului)"
+		"description": "Verificați progresul proiectului și țintele! (Actualizat de obicei la fiecare oră, nu reflectă TOATE progresele și țintele proiectului)"
 	},
 	"blogPage": {
 		"title": "Blog",
@@ -219,11 +219,11 @@
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
-		"description": "Inserați un link către un JSON public accesibil pentru a testa traducerea pe website",
+		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",
 		"instructions": "Vedeți instrucțiunile de localizare",
-		"fileInput": "Fișier pentru a testa",
+		"fileInput": "Fișier de testare",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Fișier de testare"
+		"button": "Testează fișier"
 	},
 	"docs": {
 		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
