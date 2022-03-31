@@ -54,6 +54,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# vscode settings
+.vscode
+
 # dotenv environment variables file
 .env
 
