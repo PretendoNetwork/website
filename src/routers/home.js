@@ -26,7 +26,7 @@ router.get('/', async (request, response) => {
 
 	// Slices the array in half
 	const specialThanksFirstRow = specialThanksPeople.slice(0, 3);
-	const specialThanksSecondRow = specialThanksPeople.slice(3, 6);
+	const specialThanksSecondRow = specialThanksPeople.slice(3, 7);
 
 	// Builds the final array to be sent to the view, and triples each row.
 	specialThanksPeople = {

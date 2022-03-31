@@ -2,6 +2,7 @@
 	"nav": {
 		"about": "정보",
 		"faq": "자주 묻는 질문",
+		"docs": "문서",
 		"credits": "크레딧",
 		"progress": "진행률",
 		"blog": "블로그",
@@ -176,9 +177,16 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
 				"name": "GitHub 기여자들",
 				"caption": "로컬라이징 및 다른 기여",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -216,5 +224,21 @@
 		"fileInput": "테스트할 파일",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "파일 테스트"
+	},
+	"docs": {
+		"missingInLocale": "이 페이지는 한국어로 번역되어 있지 않습니다. 아래의 영어판을 참고해 주세요.",
+		"quickLinks": {
+			"header": "바로가기",
+			"links": [
+				{
+					"header": "Pretendo를 설치",
+					"caption": "설정 방법을 보기"
+				},
+				{
+					"header": "에러가 발생했나요?",
+					"caption": "여기서 검색하기"
+				}
+			]
+		}
 	}
 }

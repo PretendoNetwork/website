@@ -29,7 +29,8 @@ const routers = {
 	progress: require('./routers/progress'),
 	account: require('./routers/account'),
 	blog: require('./routers/blog'),
-	localization: require('./routers/localization')
+	localization: require('./routers/localization'),
+	aprilfools: require('./routers/aprilfools')
 };
 
 app.use(cookieParser());
@@ -50,6 +51,9 @@ app.use(expressLocale({
 		it: 'it-IT', 'it-CH': 'it-IT',
 		ja: 'ja-JP',
 		ko: 'ko-KR',
+		nb: 'nb-NO',
+		no: 'nb-NO',
+		pl: 'pl-PL',
 		pt: 'pt-BR',
 		ro: 'ro-RO',
 		ru: 'ru-RU',
@@ -65,6 +69,8 @@ app.use(expressLocale({
 		'it', 'it-IT', 'it-CH',
 		'ja', 'ja-JP',
 		'ko', 'ko-KR',
+		'nb', 'no', 'nb-NO',
+		'pl', 'pl-PL',
 		'pt', 'pt-BR',
 		'ro', 'ro-RO',
 		'ru', 'ru-RU',
@@ -80,6 +86,7 @@ app.use('/progress', routers.progress);
 app.use('/account', routers.account);
 app.use('/localization', routers.localization);
 app.use('/blog', routers.blog);
+app.use('/nso-legacy-pack', routers.aprilfools);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created

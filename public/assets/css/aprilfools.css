@@ -1,0 +1,160 @@
+.new-font {
+    font-family: museo-sans, sans-serif;
+}
+
+.pretendo {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.announcement-hero {
+    position: relative;
+    text-align: center;
+    padding: 96px 0;
+    margin: 36px 0 24px;
+}
+.announcement-hero p {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+.announcement-hero h1 {
+    font-size: 450%;
+    margin: 0;
+}
+.announcement-hero::before {
+    content: "";
+    position: absolute;
+    width: 500vw;
+    height: 100%;
+    top: 0;
+    left: -50vw;
+    background: var(--theme);
+    z-index: -1;
+}
+
+.bro-what.subscribe {
+    padding-top: 0;
+    display: flex;
+}
+.bro-what.subscribe h1 {
+    margin: 0;
+    margin-right: 12px;
+    width: fit-content;
+}
+.buy-now {
+    margin-left:auto;
+}
+.buy-now button {
+    cursor: pointer;
+    width: max-content;
+    height: 100%;
+}
+
+.bro-what {
+    padding: 48px;
+}
+.bro-what a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.dotted-bg {
+    position: relative;
+}
+.dotted-bg::before {
+    content: "";
+    position: absolute;
+    width: 500vw;
+    height: 100%;
+    top: 0;
+    left: -50vw;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='6' height='6' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform=''%3E%3Crect width='100%25' height='100%25' fill='rgba(27, 31, 59,1)'/%3E%3Ccircle cx='20' cy='20' r='11' fill='rgba(103, 61, 182,0.4)'/%3E%3Cpath d='M9 20aInfinityInfinity 0 0 0InfinityNaNaInfinityInfinity 0 0 0-InfinityNaN' fill='%23ecc94b'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    z-index: -1;
+}
+
+.footnotes {
+    color: var(--text-secondary);
+}
+
+@media screen and (max-width: 1064px) {
+    .selected-locale .locale-names {
+		display: none;
+	}
+
+	.selected-locale {
+		width: 80px;
+		margin-left: auto;
+		margin-right: 12px;
+	}
+
+	.locale-dropdown {
+		width: fit-content;
+	}
+
+	.select-box .options-container {
+		width: 150px;
+		right: 12px;
+	}
+}
+
+@media screen and (max-width: 946px) {
+    header nav a:not(.keep-on-mobile) {
+		display: none;
+	}
+
+    .announcement-hero h1 {
+        font-size: 350%;
+    }
+}
+
+@media screen and (max-width: 724px) {
+	header .logo-link svg text {
+		display: none;
+	}
+
+	header .logo-link svg {
+		width: 39.876px;
+	}
+
+	header .logo-link {
+		margin-right: 10px;
+	}
+	header nav a {
+		margin: 0 10px;
+	}
+
+    .announcement-hero h1 {
+        font-size: 250%;
+    }
+    .announcement-hero p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bro-what.subscribe {
+        flex-flow: column;
+    }
+
+    .bro-what a,
+    .buy-now button {
+        width: 100%;
+    }
+
+    .bro-what a {
+        margin-top: 24px;
+    }
+
+    .announcement-hero {
+        padding: 72px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bro-what {
+        padding: 36px 0;
+    }
+}

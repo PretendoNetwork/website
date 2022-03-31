@@ -2,10 +2,11 @@
 	"nav": {
 		"about": "À propos",
 		"faq": "FAQ",
+		"docs": "Docs",
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
-		"account": "Account"
+		"account": "Compte"
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeu",
@@ -70,20 +71,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "Ce qu'on fait",
+		"text": "Notre projet comporte de nombreuses composantes. En voici quelques uns.",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "Serveurs de jeu",
+				"caption": "Ramener vos jeux et contenus préférés à l'aide de serveurs personnalisés."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "Une réinvention de Miiverse, comme s'il avait été créé à l'ère moderne."
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Support de Cemu",
+				"caption": "Jouez à vos titres Wii U préférés même sans console !"
 			}
 
 		]
@@ -112,7 +113,7 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "Recherche de BOSS et développement de correctifs",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -124,7 +125,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "Chef de développement Web",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -143,8 +144,8 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Remerciement spécial",
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -154,13 +155,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "Developpeur 3DS et dissecteur de NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Provider of dumps",
+				"caption": "Fournisseur de dumps",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -178,29 +179,36 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
+				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
 				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Tiens-toi à jour",
+		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "Recevez des mises à jour en temps réel de nos progrès",
+			"button": "Rejoignez le serveur"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Sociales",
+		"usefulLinks": "Liens utiles",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"Vous voulez rester à jour ?",
+				"Rejoignez notre serveur Discord !"
 			],
-			"button": "Join now!"
+			"button": "Rejoignez maintenant !"
 		}
 	},
 	"progressPage": {
@@ -209,14 +217,30 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "Localisons",
+		"description": "Collez un lien vers un paramètre régional JSON accessible au public pour le tester sur le site Web",
+		"instructions": "Afficher les instructions de localisation",
+		"fileInput": "Fichier à tester",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "Tester un fichier"
+	},
+	"docs": {
+		"missingInLocale": "Cette page n'est pas disponible dans votre région. Veuillez essayer avec la version anglaise ci-dessous.",
+		"quickLinks": {
+			"header": "Liens rapides",
+			"links": [
+				{
+					"header": "Installer Pretendo",
+					"caption": "Afficher les instructions de configuration"
+				},
+				{
+					"header": "Vous avez une erreur ?",
+					"caption": "Cherchez-la ici"
+				}
+			]
+		}
 	}
 }
