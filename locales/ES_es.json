@@ -2,11 +2,11 @@
 	"nav": {
 		"about": "Acerca de",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Documentos",
 		"credits": "Créditos",
 		"progress": "Progreso",
 		"blog": "Blog",
-		"account": "Account"
+		"account": "Cuenta"
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
@@ -31,7 +31,7 @@
 		]
 	},
 	"faq": {
-		"title": "Frequently Asked Questions",
+		"title": "Preguntas Frecuentes",
 		"text": "Aquí se muestran algunas cuestiones comunes.",
 		"QAs": [
 			{
@@ -69,20 +69,20 @@
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "Lo que hacemos",
+		"text": "Nuestro proyecto tiene muchos elementos. Estos son algunos de ellos.",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "Servidores de Videojuegos",
+				"caption": "Traemos de vuelta tus juegos favoritos y contenido a través de servidores personalizados."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "Una reimaginación de Miiverse, como si este fuera creado en la era moderna."
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Compatibilidad con Cemu",
+				"caption": "Juega tus títulos de Wii U favoritos sin necesidad de una consola!"
 			}
 
 		]
@@ -111,7 +111,7 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "Jefe de investigación y desarrollador de parches",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
@@ -123,7 +123,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "Líder del desarrollo web",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -135,15 +135,15 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Designer",
+				"caption": "Diseñador",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Agradecimientos especiales",
+		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -153,13 +153,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "desarrollador de 3DS y disector NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "Conservacionista",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -178,35 +178,35 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Iconos para el Editor de Mii y las reacciones de Juxt",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
 				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"caption": "Localizaciones y otras contribuciones",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Mantente al día",
+		"text": "Únete a nuestro servidor de Discord para recibir las últimas actualizaciones del proyecto.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "Obtén actualizaciones en tiempo real de nuestro progreso",
+			"button": "Unirse"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Redes sociales",
+		"usefulLinks": "Enlaces",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"¿Quieres estar al día?",
+				"¡Únete a nuestro servidor de Discord!"
 			],
-			"button": "Join now!"
+			"button": "¡Unirse ahora!"
 		}
 	},
 	"progressPage": {
@@ -215,28 +215,28 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Las últimas actualizaciones separadas en trozos. Si quieres ver más actualizaciones frecuentemente, considera apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
+		"title": "Localicémonos",
+		"description": "Pega un link de un archivo JSON de acceso público para probarlo en nuestra página web",
+		"instructions": "Ver instrucciones de localización",
+		"fileInput": "Archivo para probar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
+		"button": "Probar archivo"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"missingInLocale": "Esta págnia no está disponible para tu localización. Porfavor comprueba la versión inglesa abajo.",
 		"quickLinks": {
-			"header": "Quick links",
+			"header": "Enlaces",
 			"links": [
 				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
+					"header": "Instalar Pretendo",
+					"caption": "Mira las instrucciones de instalación"
 				},
 				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
+					"header": "¿Has obtenido un error?",
+					"caption": "Búscalo aquí"
 				}
 			]
 		}
