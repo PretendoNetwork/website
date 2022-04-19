@@ -89,6 +89,10 @@ header nav a {
 	margin: 0 17px;
 	text-decoration: none;
 }
+header nav a:hover {
+	color: var(--text);
+    	transition: color 50ms ease-in-out;
+}
 
 .locale-dropdown {
 	margin-left: auto;
