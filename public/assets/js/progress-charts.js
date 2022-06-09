@@ -2,10 +2,12 @@
 document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement => {
 
 	// Find and generate all relevant data
+	const percentageOverride = progressListElement.querySelector('canvas.percentage-chart').dataset.percentageoverride;
 	const allFeatureNodes = progressListElement.querySelectorAll('.feature');
 	const allDoneFeatureNodes = progressListElement.querySelectorAll('.feature .done');
 
-	const progressPercentage = Math.round(Math.min((allDoneFeatureNodes.length / allFeatureNodes.length) * 100, 100));
+	// Use percentage override data attribute if present, else calculate
+	const progressPercentage = Math.round(percentageOverride) || Math.round(Math.min((allDoneFeatureNodes.length / allFeatureNodes.length) * 100, 100));
 	const remainingPercentage = 100 - progressPercentage;
 
 	// Set inner paragraph

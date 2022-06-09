@@ -3,12 +3,12 @@
 		<div>
 			<div class="feature-progress-chart">
 				<p class="percentage-label">{{ data.percent }}</p>
-				<canvas class="percentage-chart"></canvas>
+				<canvas class="percentage-chart" {{#if data.percent}}data-percentageoverride="{{data.percent}}"{{/if}}></canvas>
 			</div>
 		</div>
 	</div>
 	<div class="core">
-		<div class="progress-title">
+		{{#if data.title}}<div class="progress-title">
 			<h3>{{ data.title }}</h3>
 			{{#if data.id}}{{#if (lookup boards data.id)}}{{#with (lookup boards data.id) as | board |}}
 				{{#each board.github_links}}
@@ -20,7 +20,7 @@
 					</div>
 				{{/each}}
 			{{/with}}{{/if}}{{/if}}
-		</div>
+		</div>{{/if}}
 		<div class="feature-list">
 			{{#each data.progress.completed}}
 			<div class="feature">
