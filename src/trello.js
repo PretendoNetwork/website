@@ -3,6 +3,7 @@ const got = require('got');
 const config = require('../config.json');
 
 const trello = new Trello(config.trello.api_key, config.trello.api_token);
+const VALID_LIST_NAMES = ['Not Started', 'Started', 'Completed'];
 let cache;
 
 async function getTrelloCache() {
@@ -49,6 +50,14 @@ async function updateTrelloCache() {
 		meta.id = board.shortLink;
 
 		const lists = await trello.getListsOnBoard(board.id);
+
+		const listNames = lists.map(list => list.name);
+		const hasAllValidLists = listNames.every(name => VALID_LIST_NAMES.includes(name));
+
+		if (!hasAllValidLists) {
+			continue;
+		}
+
 		const cards = await trello.getCardsOnBoard(board.id);
 
 		for (const card of cards) {
