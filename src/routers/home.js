@@ -54,7 +54,8 @@ router.get('/', async (request, response) => {
 	cache.sections.forEach(section => {
 		const { not_started, started, completed } = section.progress;
 
-		const sectionCompletionPercentage = completed.length / (completed.length + started.length + not_started.length);
+		// Calculates the completion percentage of the project, and sums it to the total
+		const sectionCompletionPercentage = (completed.length + started.length * 0.5) / (completed.length + started.length + not_started.length);
 		totalProgress._calc.percentageSum += sectionCompletionPercentage;
 
 		const sectionTitle = `${section.title}  [${Math.round(sectionCompletionPercentage * 100)}%]`;
