@@ -17,5 +17,20 @@
 			"role id"
 		]
 	},
+	"stripe": {
+		"secret_key": "sk_secret",
+		"webhook_secret": "whsec_secret"
+	},
+	"database": {
+		"account": {
+			"address": "127.0.0.1",
+			"port": 27017,
+			"database_name": "pretendo",
+			"options": {
+				"useNewUrlParser": true,
+				"useUnifiedTopology": true
+			}
+		}
+	},
 	"aes_key": "hex key here"
 }

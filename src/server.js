@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
 const logger = require('./logger');
+const database = require('./database');
 const util = require('./util');
 const config = require('../config.json');
 
@@ -156,6 +157,8 @@ app.engine('handlebars', handlebars({
 app.set('view engine', 'handlebars');
 
 logger.info('Starting server');
-app.listen(port, () => {
-	logger.success(`Server listening on http://localhost:${port}`);
+database.connect().then(() => {
+	app.listen(port, () => {
+		logger.success(`Server listening on http://localhost:${port}`);
+	});
 });
