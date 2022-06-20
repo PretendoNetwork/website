@@ -620,24 +620,25 @@ router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (requ
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
 		const pid = Number(customer.metadata.pnid_pid);
-		const pnid = await database.PNID.findOne({ pid });
+
+		const updateData = {};
 
 		if (product.metadata.beta === 'true') {
 			switch (subscription.status) {
 				case 'active':
-					pnid.access_level = 1;
+					updateData.access_level = 1;
 					break;
 
 				case 'canceled': // Subscription was cancled
 				case 'unpaid': // User missed too many payments
-					pnid.access_level = 0;
+					updateData.access_level = 0;
 					break;
 			
 				default:
 					break;
 			}
 
-			await pnid.save();
+			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
 		}
 	}
 
