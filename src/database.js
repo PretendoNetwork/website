@@ -14,6 +14,8 @@ async function connect() {
 		accountServerDBConnection.removeAllListeners();
 	});
 
+	await accountServerDBConnection.asPromise();
+
 	PNID = accountServerDBConnection.model('PNID', PNIDSchema);
 
 	module.exports.PNID = PNID;
