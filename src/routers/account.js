@@ -629,7 +629,7 @@ router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (requ
 					updateData.access_level = 1;
 					break;
 
-				case 'canceled': // Subscription was cancled
+				case 'canceled': // Subscription was canceled
 				case 'unpaid': // User missed too many payments
 					updateData.access_level = 0;
 					break;
