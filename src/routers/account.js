@@ -573,7 +573,7 @@ router.post('/checkout/:priceId', async (request, response) => {
 	const pid = account.pid;
 
 	let customer;
-	const { data: searchResults } = await await stripe.customers.search({
+	const { data: searchResults } = await stripe.customers.search({
 		query: `metadata['pnid_pid']:'${pid}'`
 	});
 
