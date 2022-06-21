@@ -517,12 +517,22 @@ router.get('/upgrade', async (request, response) => {
 
 	renderData.tiers = products.filter(product => product.active).map(product => {
 		const price = prices.find(price => price.product === product.id);
+		const perks = [];
+
+		if (product.metadata.discord_read === 'true') {
+			perks.push('Read-only access to select dev channels on Discord');
+		}
+
+		if (product.metadata.beta === 'true') {
+			perks.push('Access the beta servers');
+		}
 
 		return {
 			price_id: price.id,
 			thumbnail: product.images[0],
 			name: product.name,
 			description: product.description,
+			perks,
 			price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
 		};
 	});
