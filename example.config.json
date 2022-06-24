@@ -31,5 +31,9 @@
 			}
 		}
 	},
+	"gmail": {
+		"user": "email@gmail.com",
+		"pass": "app-password"
+	},
 	"aes_key": "hex key here"
 }

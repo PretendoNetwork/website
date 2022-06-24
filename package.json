@@ -26,6 +26,7 @@
     "express-handlebars": "^5.3.1",
     "express-locale": "^2.0.0",
     "fs-extra": "^9.1.0",
+    "gmail-send": "^1.8.14",
     "got": "^11.8.2",
     "gray-matter": "^4.0.3",
     "kaitai-struct": "^0.9.0",

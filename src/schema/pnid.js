@@ -8,6 +8,14 @@ const PNIDSchema = new Schema({
 	},
 	server_access_level: String,
 	access_level: Number,
+	connections: {
+		stripe: {
+			customer_id: String,
+			price_id: String,
+			tier_level: Number,
+			latest_webhook_timestamp: Number
+		}
+	}
 });
 
 module.exports = PNIDSchema;

@@ -4,13 +4,16 @@ const DiscordOauth2 = require('discord-oauth2');
 const { v4: uuidv4 } = require('uuid');
 const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
+const gmail = require('gmail-send');
 const database = require('../database');
 const util = require('../util');
 const config = require('../../config.json');
 
-const { Router } = express;
 const stripe = new Stripe(config.stripe.secret_key);
 const router = new Router();
+const sendGmail = gmail(config.gmail);
+
+const { Router } = express;
 const aesKey = Buffer.from(config.aes_key, 'hex');
 
 // Create OAuth client
@@ -591,10 +594,19 @@ router.post('/checkout/:priceId', async (request, response) => {
 		customer = searchResults[0];
 	} else {
 		customer = await stripe.customers.create({
+			email: account.email.address,
 			metadata: {
 				pnid_pid: pid
 			}
 		});
+
+		await database.PNID.updateOne({ pid }, { $set: {
+			connections: {
+				stripe: {
+					customer_id: customer.id
+				}
+			}
+		} }, { upsert: true }).exec();
 	}
 
 	const priceId = request.params.priceId;
@@ -629,7 +641,45 @@ router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (requ
 		const subscription = event.data.object;
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
+
+		if (!customer.metadata.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+			// No PNID PID linked to customer. Abort and refund!
+			await stripe.subscriptions.del(subscription.id);
+
+			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+			await stripe.refunds.create({
+				payment_intent: invoice.payment_intent
+			});
+
+			await sendGmail({
+				to: customer.email,
+				subject: 'Pretendo Subscription Failed - No Linked PNID',
+				text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+			});
+
+			return response.json({ received: true });
+		}
+
 		const pid = Number(customer.metadata.pnid_pid);
+		const pnid = await database.PNID.findOne({ pid });
+
+		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+			// PNID does not exist. Abort and refund!
+			await stripe.subscriptions.del(subscription.id);
+
+			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+			await stripe.refunds.create({
+				payment_intent: invoice.payment_intent
+			});
+
+			await sendGmail({
+				to: customer.email,
+				subject: 'Pretendo Subscription Failed - PNID Not Found',
+				text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
+			});
+
+			return response.json({ received: true });
+		}
 
 		const updateData = {};
 
