@@ -24,7 +24,7 @@
 	"database": {
 		"account": {
 			"uri": "mongodb://127.0.0.1:27017",
-			"database_name": "pretendo",
+			"database": "pretendo",
 			"options": {
 				"useNewUrlParser": true,
 				"useUnifiedTopology": true
