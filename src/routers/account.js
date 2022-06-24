@@ -516,27 +516,30 @@ router.get('/upgrade', async (request, response) => {
 	const { data: prices } = await stripe.prices.list();
 	const { data: products } = await stripe.products.list();
 
-	renderData.tiers = products.filter(product => product.active).map(product => {
-		const price = prices.find(price => price.product === product.id);
-		const perks = [];
+	renderData.tiers = products
+		.filter(product => product.active)
+		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
+		.map(product => {
+			const price = prices.find(price => price.product === product.id);
+			const perks = [];
 
-		if (product.metadata.discord_read === 'true') {
-			perks.push('Read-only access to select dev channels on Discord');
-		}
+			if (product.metadata.discord_read === 'true') {
+				perks.push('Read-only access to select dev channels on Discord');
+			}
 
-		if (product.metadata.beta === 'true') {
-			perks.push('Access the beta servers');
-		}
+			if (product.metadata.beta === 'true') {
+				perks.push('Access the beta servers');
+			}
 
-		return {
-			price_id: price.id,
-			thumbnail: product.images[0],
-			name: product.name,
-			description: product.description,
-			perks,
-			price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-		};
-	});
+			return {
+				price_id: price.id,
+				thumbnail: product.images[0],
+				name: product.name,
+				description: product.description,
+				perks,
+				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+			};
+		});
 
 	response.render('account/upgrade', renderData);
 });
