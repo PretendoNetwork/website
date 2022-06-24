@@ -140,12 +140,16 @@ async function handleStripeEvent(event) {
 		if (product.metadata.beta === 'true') {
 			switch (subscription.status) {
 				case 'active':
-					updateData.access_level = 1;
+					if (pnid.access_level < 2) { // only change access level if not staff member
+						updateData.access_level = 1;
+					}
 					break;
 
 				case 'canceled': // Subscription was canceled
 				case 'unpaid': // User missed too many payments
-					updateData.access_level = 0;
+					if (pnid.access_level < 2) { // only change access level if not staff member
+						updateData.access_level = 0;
+					}
 					break;
 
 				default:
