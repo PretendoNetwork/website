@@ -5,15 +5,16 @@ const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
+const Stripe = require('stripe');
 const logger = require('./logger');
 const database = require('./database');
 const util = require('./util');
 const config = require('../config.json');
-
 const defaultLocale = require('../locales/US_en.json');
 
 const { http: { port } } = config;
 const app = express();
+const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
@@ -158,7 +159,15 @@ app.set('view engine', 'handlebars');
 
 logger.info('Starting server');
 database.connect().then(() => {
-	app.listen(port, () => {
+	app.listen(port, async () => {
+		const events = await stripe.events.list({
+			delivery_success: false // failed webhooks
+		});
+
+		for (const event of events.data) {
+			await util.handleStripeEvent(event);
+		}
+
 		logger.success(`Server listening on http://localhost:${port}`);
 	});
 });
