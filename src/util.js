@@ -102,6 +102,13 @@ async function handleStripeEvent(event) {
 		const pid = Number(customer.metadata.pnid_pid);
 		const pnid = await database.PNID.findOne({ pid });
 
+		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
+
+		if (latestWebhookTimestamp && latestWebhookTimestamp > event.created) {
+			// Do nothing, this webhook is older than the latest seen
+			return;
+		}
+
 		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// PNID does not exist. Abort and refund!
 			await stripe.subscriptions.del(subscription.id);
@@ -120,7 +127,15 @@ async function handleStripeEvent(event) {
 			return;
 		}
 
-		const updateData = {};
+		const updateData = {
+			connections: {
+				stripe: {
+					price_id: subscription.plan.id,
+					tier_level: Number(product.metadata.tier_level || 0),
+					latest_webhook_timestamp: event.created
+				}
+			}
+		};
 
 		if (product.metadata.beta === 'true') {
 			switch (subscription.status) {

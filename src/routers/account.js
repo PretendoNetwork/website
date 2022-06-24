@@ -597,15 +597,17 @@ router.post('/checkout/:priceId', async (request, response) => {
 				pnid_pid: pid
 			}
 		});
+	}
 
-		await database.PNID.updateOne({ pid }, { $set: {
+	await database.PNID.updateOne({ pid }, {
+		$set: {
 			connections: {
 				stripe: {
-					customer_id: customer.id
+					customer_id: customer.id // ensure PNID always has latest customer ID
 				}
 			}
-		} }, { upsert: true }).exec();
-	}
+		}
+	}, { upsert: true }).exec();
 
 	const priceId = request.params.priceId;
 
