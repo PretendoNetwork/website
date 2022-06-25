@@ -83,6 +83,8 @@ async function handleStripeEvent(event) {
 
 		if (!customer.metadata.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// No PNID PID linked to customer. Abort and refund!
+			logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
+
 			await stripe.subscriptions.del(subscription.id);
 
 			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
@@ -90,11 +92,16 @@ async function handleStripeEvent(event) {
 				payment_intent: invoice.payment_intent
 			});
 
-			await sendGmail({
-				to: customer.email,
-				subject: 'Pretendo Subscription Failed - No Linked PNID',
-				text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
-			});
+			try {
+				await sendGmail({
+					to: customer.email,
+					subject: 'Pretendo Subscription Failed - No Linked PNID',
+					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+			}
+			
 
 			return;
 		}
@@ -111,6 +118,8 @@ async function handleStripeEvent(event) {
 
 		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// PNID does not exist. Abort and refund!
+			logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
+
 			await stripe.subscriptions.del(subscription.id);
 
 			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
@@ -118,12 +127,16 @@ async function handleStripeEvent(event) {
 				payment_intent: invoice.payment_intent
 			});
 
-			await sendGmail({
-				to: customer.email,
-				subject: 'Pretendo Subscription Failed - PNID Not Found',
-				text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
-			});
-
+			try {
+				await sendGmail({
+					to: customer.email,
+					subject: 'Pretendo Subscription Failed - PNID Not Found',
+					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+			}
+			
 			return;
 		}
 
