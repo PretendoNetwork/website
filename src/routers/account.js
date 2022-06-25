@@ -1,12 +1,18 @@
-const { Router } = require('express');
+const express = require('express');
 const crypto = require('crypto');
 const DiscordOauth2 = require('discord-oauth2');
 const { v4: uuidv4 } = require('uuid');
 const AdmZip = require('adm-zip');
+const Stripe = require('stripe');
+const database = require('../database');
 const util = require('../util');
 const config = require('../../config.json');
-const router = new Router();
+
+const { Router } = express;
 const aesKey = Buffer.from(config.aes_key, 'hex');
+
+const stripe = new Stripe(config.stripe.secret_key);
+const router = new Router();
 
 // Create OAuth client
 const discordOAuth = new DiscordOauth2({
@@ -493,5 +499,158 @@ router.get('/miieditor', async (request, response) => {
 		editorToHex
 	});
 });
+
+router.get('/upgrade', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	const renderData = {
+		layout: 'main',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		error: request.cookies.error
+	};
+
+	const { data: prices } = await stripe.prices.list();
+	const { data: products } = await stripe.products.list();
+
+	renderData.tiers = products
+		.filter(product => product.active)
+		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
+		.map(product => {
+			const price = prices.find(price => price.product === product.id);
+			const perks = [];
+
+			if (product.metadata.discord_read === 'true') {
+				perks.push('Read-only access to select dev channels on Discord');
+			}
+
+			if (product.metadata.beta === 'true') {
+				perks.push('Access the beta servers');
+			}
+
+			return {
+				price_id: price.id,
+				thumbnail: product.images[0],
+				name: product.name,
+				description: product.description,
+				perks,
+				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+			};
+		});
+
+	response.render('account/upgrade', renderData);
+});
+
+router.post('/checkout/:priceId', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	let customer;
+	const { data: searchResults } = await stripe.customers.search({
+		query: `metadata['pnid_pid']:'${pid}'`
+	});
+
+	if (searchResults.length !== 0) {
+		customer = searchResults[0];
+	} else {
+		customer = await stripe.customers.create({
+			email: account.email.address,
+			metadata: {
+				pnid_pid: pid
+			}
+		});
+	}
+
+	await database.PNID.updateOne({ pid }, {
+		$set: {
+			connections: {
+				stripe: {
+					customer_id: customer.id // ensure PNID always has latest customer ID
+				}
+			}
+		}
+	}, { upsert: true }).exec();
+
+	const priceId = request.params.priceId;
+
+	try {
+		const session = await stripe.checkout.sessions.create({
+			line_items: [
+				{
+					price: priceId,
+					quantity: 1,
+				},
+			],
+			customer: customer.id,
+			mode: 'subscription',
+			success_url: `${config.http.base_url}/account?upgrade_success=true`,
+			cancel_url: `${config.http.base_url}/account?upgrade_success=false`
+		});
+
+		return response.redirect(303, session.url);
+	} catch (error) {
+		// Maybe we need a dedicated error page?
+		// O handle this as not cookies?
+		response.cookie('error', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
+});
+
+router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (request, response) => {
+	const stripeSignature = request.headers['stripe-signature'];
+	let event;
+
+	try {
+		event = stripe.webhooks.constructEvent(request.body, stripeSignature, config.stripe.webhook_secret);
+	} catch (err) {
+		return response.status(400).send(`Webhook Error: ${err.message}`);
+	}
+
+	await util.handleStripeEvent(event);
+
+	response.json({ received: true });
+});
+
 
 module.exports = router;
