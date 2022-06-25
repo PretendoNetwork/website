@@ -614,20 +614,27 @@ router.post('/checkout/:priceId', async (request, response) => {
 
 	const priceId = request.params.priceId;
 
-	const session = await stripe.checkout.sessions.create({
-		line_items: [
-			{
-				price: priceId,
-				quantity: 1,
-			},
-		],
-		customer: customer.id,
-		mode: 'subscription',
-		success_url: `${config.http.base_url}/account?upgrade_success=true`,
-		cancel_url: `${config.http.base_url}/account?upgrade_success=false`
-	});
+	try {
+		const session = await stripe.checkout.sessions.create({
+			line_items: [
+				{
+					price: priceId,
+					quantity: 1,
+				},
+			],
+			customer: customer.id,
+			mode: 'subscription',
+			success_url: `${config.http.base_url}/account?upgrade_success=true`,
+			cancel_url: `${config.http.base_url}/account?upgrade_success=false`
+		});
 
-	response.redirect(303, session.url);
+		return response.redirect(303, session.url);
+	} catch (error) {
+		// Maybe we need a dedicated error page?
+		// O handle this as not cookies?
+		response.cookie('error', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
 });
 
 router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (request, response) => {
