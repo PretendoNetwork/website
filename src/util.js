@@ -1,14 +1,13 @@
 const fs = require('fs-extra');
 const got = require('got');
 const crypto = require('crypto');
-const gmail = require('gmail-send');
 const Stripe = require('stripe');
+const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
 const config = require('../config.json');
 
 const stripe = new Stripe(config.stripe.secret_key);
-const sendGmail = gmail(config.gmail);
 
 function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
@@ -93,9 +92,9 @@ async function handleStripeEvent(event) {
 			});
 
 			try {
-				await sendGmail({
+				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Subscription Failed - No Linked PNID',
+					subject: 'Pretendo Network Subscription Failed - No Linked PNID',
 					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
 				});
 			} catch (error) {
@@ -128,9 +127,9 @@ async function handleStripeEvent(event) {
 			});
 
 			try {
-				await sendGmail({
+				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Subscription Failed - PNID Not Found',
+					subject: 'Pretendo Network Subscription Failed - PNID Not Found',
 					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
 				});
 			} catch (error) {
@@ -171,6 +170,43 @@ async function handleStripeEvent(event) {
 
 			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
 		}
+
+		if (subscription.status === 'active') {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Active',
+					text: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+		}
+
+		if (subscription.status === 'canceled') {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Canceled',
+					text: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+		}
+
+		if (subscription.status === 'unpaid') {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Unpaid',
+					text: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+		}
+
 	}
 }
 
