@@ -34,7 +34,7 @@
 
     	<form method="post">
       		{{#each tiers}}
-				<input type="radio" class="tier-radio" name="tier" value="{{this.price_id}}" id="{{this.price_id}}" />
+				<input type="radio" class="tier-radio" data-tier-name="{{this.name}}" name="tier" value="{{this.price_id}}" id="{{this.price_id}}" />
         		<label class="tier" for="{{this.price_id}}">
 					<div class="tier-thumbnail">
           				<img src="{{this.thumbnail}}" width="100%" height="auto" alt="Tier icon" />
@@ -66,22 +66,20 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-		document.querySelector('#submitButton').addEventListener('click', function(e) {
-			e.preventDefault();
+	document.querySelector('#submitButton').addEventListener('click', function(e) {
+		e.preventDefault();
 
-			const form = document.querySelector('form');
-			const selectedTier = form.querySelector('input[type="radio"]:checked').value;
-			form.action = `/account/checkout/${selectedTier}`;
-			form.submit();
-		});
+		const form = document.querySelector('form');
+		const selectedTier = form.querySelector('input[type="radio"]:checked').value;
+		form.action = `/account/checkout/${selectedTier}`;
+		form.submit();
+	});
 
-		document.querySelector('form').addEventListener('change', function(e) {
-			e.preventDefault();
+	document.querySelector('form').addEventListener('change', function(e) {
+		e.preventDefault();
 
-			const clickedTierID = e.srcElement.id;
-			const clickedTierName = document.querySelector(`label.tier[for="${clickedTierID}"] .tier-name`).innerHTML;
-			document.querySelector('#submitButton').innerHTML = `Subscribe to ${clickedTierName}`;
-		});
+		const clickedTierID = e.srcElement.id;
+		const clickedTierName = e.srcElement.dataset.tierName;
+		document.querySelector('#submitButton').innerText = `Subscribe to ${clickedTierName}`;
 	});
 </script>
