@@ -28,13 +28,25 @@ router.get('/', async (request, response) => {
 		return response.redirect('/account/login');
 	}
 
+	const { upgrade_success } = request.query;
+	console.log(upgrade_success);
+	const stripe = {};
+	if (upgrade_success === 'true') {
+		stripe.showNotice = true;
+		stripe.success = true;
+	} else if (upgrade_success === 'false') {
+		stripe.showNotice = true;
+		stripe.error = true;
+	}
+
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {
 		layout: 'main',
 		locale: util.getLocale(request.locale.region, request.locale.language),
 		localeString: request.locale.toString(),
 		linked: request.cookies.linked,
-		error: request.cookies.error
+		error: request.cookies.error,
+		stripe: stripe
 	};
 
 	// Reset message cookies
