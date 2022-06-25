@@ -1,0 +1,230 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.wrapper::before {
+  position: absolute;
+  top: -800px;
+  content: "";
+  background: #111531;
+  border-radius: 100%;
+  width: 1600px;
+  height: 1400px;
+}
+
+.account-form-wrapper {
+  display: flex;
+  flex-flow: column;
+  width: min(1200px, 100%);
+  color: var(--text-secondary);
+  margin: 0 auto 48px;
+  z-index: 1;
+}
+
+.account-form-wrapper .logotype {
+  margin: 36px auto 0;
+  width: fit-content;
+}
+
+h1.title {
+  color: var(--text);
+}
+p.caption {
+  width: min(100%, 500px);
+  margin: 0 auto 72px;
+}
+
+form {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+}
+
+form .tier-radio {
+  display: none;
+}
+form .tier-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 4px #9d70f1;
+  border-radius: 10px;
+}
+form .tier-radio:checked + label::after {
+  content: url(/assets/images/check.svg);
+  display: flex;
+  justify-content: center;
+  background: #9d70f1;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  padding: 6px;
+}
+
+label.tier {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+  padding-top: calc(50px + 1rem);
+  background: #393b5f;
+  cursor: pointer;
+  transition: all 150ms;
+  margin-top: 50px;
+  text-align: center;
+}
+
+label.tier p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+label.tier .tier-thumbnail {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  position: absolute;
+  top: -50px;
+  z-index: 2;
+  background: #47496d;
+}
+form .tier-radio:checked + label .tier-thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 4px #9d70f1;
+  border-radius: 8px;
+}
+
+label.tier .tier-text {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: auto;
+}
+
+label.tier .tier-name {
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+label.tier .tier-perks {
+  text-align: left;
+  width: 70%;
+  margin: 24px auto 48px;
+}
+label.tier .tier-perks div {
+  display: grid;
+  grid-template-columns: 16px auto;
+  gap: 8px;
+}
+label.tier .tier-perks svg {
+  stroke-width: 5px;
+  stroke: #59c9a5;
+  stroke-linecap: square;
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+  margin-top: 0.5ex;
+}
+
+label.tier p.price {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #47496d;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+}
+label.tier p.price span {
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: bold;
+  margin-right: 0.5ch;
+}
+
+form .button-wrapper {
+  grid-column: 2 / span 1;
+}
+form button {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  height: fit-content;
+
+  background: var(--btn);
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--text);
+  width: 100%;
+  margin-top: 24px;
+  pointer-events: none;
+  filter: brightness(0.75) saturate(0.75); /* not using opacity here 'cause in the mobile layout you would see the cards under it */
+  transition: filter 300ms;
+}
+form .tier-radio:checked ~ .button-wrapper button {
+  pointer-events: all;
+  cursor: pointer;
+  filter: none;
+}
+
+@media screen and (max-width: 900px) {
+  .account-form-wrapper {
+    width: min(500px, 100%);
+    margin-bottom: 120px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  form button {
+    position: relative;
+    width: 100%;
+  }
+  form .button-wrapper {
+    grid-column: 1 / span 1;
+    position: fixed;
+    bottom: 24px;
+    width: min(500px, 90%);
+    z-index: 5;
+  }
+  form .button-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 200vw;
+    height: 150%;
+    background: #111531;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  label.tier .tier-perks {
+    width: 80%;
+  }
+}

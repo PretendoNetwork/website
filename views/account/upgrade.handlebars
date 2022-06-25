@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/assets/css/login.css" />
+<link rel="stylesheet" href="/assets/css/upgrade.css" />
 
 <div class="wrapper">
 	<div class="account-form-wrapper">
@@ -26,25 +26,62 @@
 				</g>
 			</svg>
 		</a>
+  
+		<h1 class="title dot">Upgrade</h1>
+		<p class="caption">Subscribing to a tier gives you access to our developer chats and, depending on the tier,
+				to our beta servers. Please someone reword this, it sucks. No fr.</p>
 
-		{{#each tiers }}
-		<div class="tier">
-			<form action="/account/checkout/{{this.price_id}}" method="post">
-				<img src="{{this.thumbnail}}" width="100" height="auto" alt="" srcset="">
-				<p>{{this.name}}</p>
-				<p>{{this.description}}</p>
-				<p>{{this.price}}+Tax</p>
-				<button type="submit">Checkout</button>
-			</form>
-		</div>
-		{{/each}}
-	</div>
+
+    	<form method="post">
+      		{{#each tiers}}
+				<input type="radio" class="tier-radio" name="tier" value="{{this.price_id}}" id="{{this.price_id}}" />
+        		<label class="tier" for="{{this.price_id}}">
+					<div class="tier-thumbnail">
+          				<img src="{{this.thumbnail}}" width="100%" height="auto" alt="Tier icon" />
+					</div>
+          			<div class="tier-text">
+						<p class="tier-name">{{this.name}}</p>
+						<div class="tier-perks">
+							{{#each this.perks}}
+
+								<div>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            						<p>{{this}}</p>
+								</div>
+							{{/each}}
+						</div>
+          			</div>
+					<p class="price">
+						<span>{{this.price}}</span> / month
+					</p>
+       			</label>
+      		{{/each}}
+			<div class="button-wrapper">
+				<button type="submit" id="submitButton">
+					Select a tier
+				</button>
+			</div>
+    	</form>
+  	</div>
 </div>
 
-<style>
-	.tier {
-		padding: 10px;
-		background-color: white;
-		color: black;
-	}
-</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+		document.querySelector('#submitButton').addEventListener('click', function(e) {
+			e.preventDefault();
+
+			const form = document.querySelector('form');
+			const selectedTier = form.querySelector('input[type="radio"]:checked').value;
+			form.action = `/account/checkout/${selectedTier}`;
+			form.submit();
+		});
+
+		document.querySelector('form').addEventListener('change', function(e) {
+			e.preventDefault();
+
+			const clickedTierID = e.srcElement.id;
+			const clickedTierName = document.querySelector(`label.tier[for="${clickedTierID}"] .tier-name`).innerHTML;
+			document.querySelector('#submitButton').innerHTML = `Subscribe to ${clickedTierName}`;
+		});
+	});
+</script>
