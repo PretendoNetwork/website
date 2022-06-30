@@ -631,35 +631,6 @@ router.post('/checkout/:priceId', async (request, response) => {
 		return response.redirect('/account');
 	}
 
-	const stripeConnection = pnid.get('connections.stripe');
-
-	if (stripeConnection.subscription_id) {
-		// User already has a subscription with us
-		if (stripeConnection.price_id === priceId) {
-			response.cookie('error', 'Already subscribed to this tier', { domain: '.pretendo.network' });
-			return response.redirect('/account');
-		}
-
-		try {
-			const subscription = await stripe.subscriptions.retrieve(stripeConnection.subscription_id);
-			stripe.subscriptions.update(stripeConnection.subscription_id, {
-				cancel_at_period_end: false,
-				proration_behavior: 'always_invoice',
-				items: [{
-					id: subscription.items.data[0].id,
-					price: priceId,
-				}]
-			});
-
-			return response.redirect('/account?upgrade_success=true');
-		} catch (error) {
-			// Maybe we need a dedicated error page?
-			// Or handle this as not cookies?
-			response.cookie('error', error.message, { domain: '.pretendo.network' });
-			return response.redirect('/account');
-		}
-	}
-
 	try {
 		const session = await stripe.checkout.sessions.create({
 			line_items: [

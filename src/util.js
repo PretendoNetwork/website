@@ -80,7 +80,7 @@ async function handleStripeEvent(event) {
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
 
-		if (!customer.metadata.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+		if (!customer?.metadata?.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// No PNID PID linked to customer. Abort and refund!
 			logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
@@ -139,14 +139,25 @@ async function handleStripeEvent(event) {
 			return;
 		}
 
+		const oldSubscriptionId = pnid.get('connections.stripe.subscription_id');
+
+		if (subscription.status === 'canceled' && oldSubscriptionId && subscription.id !== oldSubscriptionId) {
+			// Canceling old subscription, do nothing but update webhook date
+
+			const updateData = {
+				'connections.stripe.latest_webhook_timestamp': event.created
+			};
+
+			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
+
+			return;
+		}
+
 		const updateData = {
-			connections: {
-				stripe: {
-					price_id: subscription.plan.id,
-					tier_level: Number(product.metadata.tier_level || 0),
-					latest_webhook_timestamp: event.created
-				}
-			}
+			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : null,
+			'connections.stripe.price_id': subscription.status === 'active' ? subscription.plan.id : null,
+			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
+			'connections.stripe.latest_webhook_timestamp': event.created,
 		};
 
 		if (product.metadata.beta === 'true') {
@@ -167,11 +178,19 @@ async function handleStripeEvent(event) {
 				default:
 					break;
 			}
-
-			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
 		}
 
+		await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
+
 		if (subscription.status === 'active') {
+			if (oldSubscriptionId) {
+				try {
+					await stripe.subscriptions.del(oldSubscriptionId);
+				} catch (error) {
+					logger.error(`Error canceling old user subscription | ${customer.id}, ${pid}, ${oldSubscriptionId} | - ${error.message}`);
+				}
+			}
+
 			try {
 				await mailer.sendMail({
 					to: customer.email,
