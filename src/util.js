@@ -80,7 +80,7 @@ async function handleStripeEvent(event) {
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
 
-		if (!customer.metadata.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+		if (!customer?.metadata?.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// No PNID PID linked to customer. Abort and refund!
 			logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
@@ -139,14 +139,30 @@ async function handleStripeEvent(event) {
 			return;
 		}
 
-		const updateData = {
-			connections: {
-				stripe: {
-					price_id: subscription.plan.id,
-					tier_level: Number(product.metadata.tier_level || 0),
-					latest_webhook_timestamp: event.created
+		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
+
+		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
+			// Canceling old subscription, do nothing but update webhook date
+
+			const updateData = {
+				'connections.stripe.latest_webhook_timestamp': event.created
+			};
+
+			await database.PNID.updateOne({
+				pid,
+				'connections.stripe.latest_webhook_timestamp': {
+					$lte: event.created
 				}
-			}
+			}, { $set: updateData }).exec();
+
+			return;
+		}
+
+		const updateData = {
+			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : null,
+			'connections.stripe.price_id': subscription.status === 'active' ? subscription.plan.id : null,
+			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
+			'connections.stripe.latest_webhook_timestamp': event.created,
 		};
 
 		if (product.metadata.beta === 'true') {
@@ -167,11 +183,36 @@ async function handleStripeEvent(event) {
 				default:
 					break;
 			}
-
-			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
 		}
 
+		await database.PNID.updateOne({
+			pid,
+			'connections.stripe.latest_webhook_timestamp': {
+				$lte: event.created
+			}
+		}, { $set: updateData }).exec();
+
 		if (subscription.status === 'active') {
+			// Get all the customers active subscriptions
+			const { data: activeSubscriptions } = await stripe.subscriptions.list({
+				limit: 100,
+				status: 'active',
+				customer: customer.id
+			});
+
+			// Order subscriptions by creation time and remove the latest one
+			const orderedActiveSubscriptions = activeSubscriptions.sort((a, b) => b.created - a.created);
+			const pastSubscriptions = orderedActiveSubscriptions.slice(1);
+
+			// Remove any old past subscriptions that might still be hanging around
+			for (const pastSubscription of pastSubscriptions) {
+				try {
+					await stripe.subscriptions.del(pastSubscription.id);
+				} catch (error) {
+					logger.error(`Error canceling old user subscription | ${customer.id}, ${pid}, ${pastSubscription.id} | - ${error.message}`);
+				}
+			}
+
 			try {
 				await mailer.sendMail({
 					to: customer.email,
@@ -206,7 +247,6 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 		}
-
 	}
 }
 

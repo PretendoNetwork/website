@@ -29,7 +29,7 @@ router.get('/', async (request, response) => {
 	}
 
 	const { upgrade_success } = request.query;
-	console.log(upgrade_success);
+
 	const stripe = {};
 	if (upgrade_success === 'true') {
 		stripe.showNotice = true;
@@ -192,6 +192,8 @@ router.get('/', async (request, response) => {
 		
 		renderData.discordAuthURL = discordAuthURL;
 	}
+
+	renderData.isTester = false;
 
 	response.render('account/account', renderData);
 });
@@ -616,15 +618,18 @@ router.post('/checkout/:priceId', async (request, response) => {
 
 	await database.PNID.updateOne({ pid }, {
 		$set: {
-			connections: {
-				stripe: {
-					customer_id: customer.id // ensure PNID always has latest customer ID
-				}
-			}
+			'connections.stripe.customer_id': customer.id // ensure PNID always has latest customer ID
 		}
 	}, { upsert: true }).exec();
 
 	const priceId = request.params.priceId;
+
+	const pnid = await database.PNID.findOne({ pid });
+
+	if (pnid.get('access_level') >= 2) {
+		response.cookie('error', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
 
 	try {
 		const session = await stripe.checkout.sessions.create({
@@ -643,7 +648,7 @@ router.post('/checkout/:priceId', async (request, response) => {
 		return response.redirect(303, session.url);
 	} catch (error) {
 		// Maybe we need a dedicated error page?
-		// O handle this as not cookies?
+		// Or handle this as not cookies?
 		response.cookie('error', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}

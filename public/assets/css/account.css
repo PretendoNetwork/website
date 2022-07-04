@@ -31,7 +31,8 @@
   border-radius: 100%;
   background: var(--btn-secondary);
 }
-.account-sidebar .user #download-cemu-files {
+.account-sidebar .user #download-cemu-files,
+.account-sidebar .user #account-upgrade {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -40,7 +41,8 @@
   margin: 24px 0 0;
   text-decoration: none;
 }
-.account-sidebar .user #download-cemu-files p.download-caption {
+.account-sidebar .user #download-cemu-files p.caption,
+.account-sidebar .user #account-upgrade p.caption {
   margin: 15px 0 0;
 }
 .account-sidebar .user p.cemu-warning {
@@ -152,7 +154,7 @@ fieldset:disabled form label {
   color: var(--text);
 }
 
-.setting-card #remove-discord-connection {
+.setting-card #link-discord-account {
   width: 100%;
   padding: 12px 48px;
   cursor: pointer;
