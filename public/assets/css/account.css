@@ -31,21 +31,22 @@
   border-radius: 100%;
   background: var(--btn-secondary);
 }
-.account-sidebar .user #download-cemu-files,
-.account-sidebar .user #account-upgrade {
+.account-sidebar .buttons a {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 24px;
+  padding: 20px 24px;
   background: #383f6b;
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   text-decoration: none;
 }
-.account-sidebar .user #download-cemu-files p.caption,
-.account-sidebar .user #account-upgrade p.caption {
-  margin: 15px 0 0;
+.account-sidebar .buttons a svg {
+  margin-bottom: 16px;
 }
-.account-sidebar .user p.cemu-warning {
+.account-sidebar .buttons a p.caption {
+  margin: 0;
+}
+.account-sidebar .buttons p.cemu-warning {
   margin: 4px 0 0;
   font-size: 0.7rem;
   color: var(--text-secondary);
