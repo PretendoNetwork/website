@@ -139,16 +139,21 @@ async function handleStripeEvent(event) {
 			return;
 		}
 
-		const oldSubscriptionId = pnid.get('connections.stripe.subscription_id');
+		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
 
-		if (subscription.status === 'canceled' && oldSubscriptionId && subscription.id !== oldSubscriptionId) {
+		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
 			// Canceling old subscription, do nothing but update webhook date
 
 			const updateData = {
 				'connections.stripe.latest_webhook_timestamp': event.created
 			};
 
-			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
+			await database.PNID.updateOne({
+				pid,
+				'connections.stripe.latest_webhook_timestamp': {
+					$lte: event.created
+				}
+			}, { $set: updateData }).exec();
 
 			return;
 		}
@@ -180,14 +185,31 @@ async function handleStripeEvent(event) {
 			}
 		}
 
-		await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
+		await database.PNID.updateOne({
+			pid,
+			'connections.stripe.latest_webhook_timestamp': {
+				$lte: event.created
+			}
+		}, { $set: updateData }).exec();
 
 		if (subscription.status === 'active') {
-			if (oldSubscriptionId) {
+			// Get all the customers active subscriptions
+			const { data: activeSubscriptions } = await stripe.subscriptions.list({
+				limit: 100,
+				status: 'active',
+				customer: customer.id
+			});
+
+			// Order subscriptions by creation time and remove the latest one
+			const orderedActiveSubscriptions = activeSubscriptions.sort((a, b) => b.created - a.created);
+			const pastSubscriptions = orderedActiveSubscriptions.slice(1);
+
+			// Remove any old past subscriptions that might still be hanging around
+			for (const pastSubscription of pastSubscriptions) {
 				try {
-					await stripe.subscriptions.del(oldSubscriptionId);
+					await stripe.subscriptions.del(pastSubscription.id);
 				} catch (error) {
-					logger.error(`Error canceling old user subscription | ${customer.id}, ${pid}, ${oldSubscriptionId} | - ${error.message}`);
+					logger.error(`Error canceling old user subscription | ${customer.id}, ${pid}, ${pastSubscription.id} | - ${error.message}`);
 				}
 			}
 
@@ -225,7 +247,6 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 		}
-
 	}
 }
 
