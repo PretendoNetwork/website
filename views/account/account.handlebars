@@ -10,6 +10,8 @@
 				<img src="{{account.mii.image_url}}" class="mii" />
 				<p class="miiname">{{account.mii.name}}</p>
 				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
+			</div>
+			<div class="buttons">
 				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
 					<p class="caption">Download account files</p>
@@ -17,7 +19,7 @@
 				</a>
 
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
-					<p class="caption">Upgrade Account</p>
+					<p class="caption">Upgrade account</p>
 				</a>
 			</div>
 		</div>
@@ -56,9 +58,8 @@
 			</div>
 
 			<div class="setting-card">
-				<h2 class="header">Server Environment</h2>
-			{{#if isTester}}
-				<fieldset>
+				<h2 class="header">Server environment</h2>
+				<fieldset {{#unless isTester}}disabled{{/unless}}>
 					<form class="server-selection" id="server">
 						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
 						<label for="prod">
@@ -72,6 +73,7 @@
 							</svg>
 							<h2>Production</h2>
 						</label>
+						{{#if isTester}}
 						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
 						<label for="beta">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -79,20 +81,14 @@
 							</svg>
 							<h2>Beta</h2>
 						</label>
+						{{/if}}
 					</form>
 				</fieldset>
-				{{#if discordUser}}
-					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
-					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
-				{{else}}
-					<a href="{{ discordAuthURL }}">
-						<button class="button secondary" id="link-discord-account">Link Discord account</button>
-					</a>
-				{{/if}}
-			{{else}}
-				<p>Account is not a beta tester, locked to production servers.</p>
+			{{#unless isTester}}
 				<p>Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.</p>
-			{{/if}}
+			{{else}}
+				<p>Your current tier (insert current tier{{currentTier}}) gives you beta server access. Cool!</p>
+			{{/unless}}
 			</div>
 			
 			<h2 class="section-header" id="security">Sign in and security</h2>
@@ -132,13 +128,25 @@
 			</div>
 
 			<h2 class="section-header" id="other">Other settings</h2>
-			<div class="setting-card span-both-columns">
+				<div class="setting-card">
+					<h2 class="header">Discord</h2>
+						{{#if discordUser}}
+					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
+				{{else}}
+					<p>To link your Discord account, run /whatever in the <a href="https://invite.gg/pretendo" >Discord server</a></p>
+				{{/if}}
+			</div>
+
+			<div class="setting-card">
 				<h2 class="header">Newsletter</h2>
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
 					<label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
 				</form>
 			</div>
+
+
 		</div>
 	</div>
 	{{> footer }}

@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -12,6 +13,31 @@
   border-radius: 100%;
   width: 1600px;
   height: 1400px;
+}
+
+.back-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 36px;
+  left: 0;
+  padding: 6px 10px;
+  background: var(--btn-secondary);
+  border-radius: 24px;
+  
+  transition: filter 150ms;
+  text-decoration: none;
+  color: var(--text);
+}
+.back-arrow:hover {
+  filter: brightness(1.5)
+}
+.back-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+.back-arrow span {
+  margin: 0 4px;
 }
 
 .account-form-wrapper {
@@ -164,8 +190,10 @@ label.tier p.price span {
 
 form .button-wrapper {
   grid-column: 2 / span 1;
+  position: relative;
+  margin-top: 24px;
 }
-form button {
+button {
   appearance: none;
   -webkit-appearance: none;
   display: block;
@@ -179,21 +207,101 @@ form button {
   padding: 12px;
   color: var(--text);
   width: 100%;
-  margin-top: 24px;
-  pointer-events: none;
-  filter: brightness(0.75) saturate(0.75); /* not using opacity here 'cause in the mobile layout you would see the cards under it */
+
   transition: filter 300ms;
-}
-form .tier-radio:checked ~ .button-wrapper button {
   pointer-events: all;
   cursor: pointer;
   filter: none;
+}
+form button.disabled {
+  pointer-events: none;
+  filter: brightness(0.75) saturate(0.75); /* not using opacity here 'cause in the mobile layout you would see the cards under it */
+  cursor: default;
+}
+
+form button.unsubscribe {
+  position: relative;
+  background: none;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  padding: 0;
+}
+form button.unsubscribe.hidden {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+form button.unsubscribe:hover {
+  color: var(--text);
+}
+
+div.unsub-modal-wrapper,
+div.switch-tier-modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 10;
+}
+div.unsub-modal-wrapper.hidden,
+div.switch-tier-modal-wrapper.hidden {
+  display: none;
+}
+div.unsub-modal,
+div.switch-tier-modal {
+  background: #393b5f;
+  padding: 48px;
+  border-radius: 8px;
+  text-align: left;
+  width: min(660px, 90%);
+  box-sizing: border-box;
+}
+
+div.unsub-modal h1,
+div.switch-tier-modal h1 {
+  margin-top: 0;
+}
+p.unsub-modal-caption,
+p.switch-tier-modal-caption {
+  color: var(--text-secondary);
+}
+p.unsub-modal-caption span,
+p.switch-tier-modal-caption span {
+  color: var(--text);
+}
+
+.unsub-modal-button-wrapper,
+.switch-tier-modal-button-wrapper {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+.unsub-modal-button-wrapper button,
+.switch-tier-modal-button-wrapper button {
+  margin-left: 12px;
+  width: fit-content;
+}
+.unsub-modal-button-wrapper button.cancel,
+.switch-tier-modal-button-wrapper button.cancel {
+  background: none;
+}
+.unsub-modal-button-wrapper button.confirm,
+.switch-tier-modal-button-wrapper button.confirm {
+  padding: 12px 24px;
 }
 
 @media screen and (max-width: 900px) {
   .account-form-wrapper {
     width: min(500px, 100%);
-    margin-bottom: 120px;
+    margin-bottom: 172px;
   }
 
   form {
@@ -215,16 +323,28 @@ form .tier-radio:checked ~ .button-wrapper button {
   form .button-wrapper::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -24px;
     left: -100vw;
     width: 200vw;
-    height: 150%;
+    height: 300%;
     background: #111531;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.unsub-modal {
+    padding: 24px;
   }
 }
 
 @media screen and (max-width: 380px) {
   label.tier .tier-perks {
     width: 80%;
+  }
+  .back-arrow {
+    padding: 6px;
+  }
+  .back-arrow span {
+    display: none;
   }
 }

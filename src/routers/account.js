@@ -193,8 +193,6 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
-	renderData.isTester = false;
-
 	response.render('account/account', renderData);
 });
 
@@ -524,7 +522,8 @@ router.get('/upgrade', async (request, response) => {
 		layout: 'main',
 		locale: util.getLocale(request.locale.region, request.locale.language),
 		localeString: request.locale.toString(),
-		error: request.cookies.error
+		error: request.cookies.error,
+		currentTier: 'price_1LBnZADOJlJAaQQ3pEUjNWbY' // To be replaced
 	};
 
 	const { data: prices } = await stripe.prices.list();
