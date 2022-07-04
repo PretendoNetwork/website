@@ -1,22 +1,22 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	min-height: 100vh;
 }
 header {
-  width: 100%;
+	width: 100%;
 }
 
 .card-wrap {
-  width: 100%;
+	width: 100%;
 }
 
 .blog-card {
-  padding: 60px;
-  max-width: 1100px;
-  margin: 50px auto;
-  color: var(--text-secondary);
+	padding: 60px;
+	max-width: 1100px;
+	margin: 50px auto;
+	color: var(--text-secondary);
 }
 
 .blog-card h1,
@@ -25,201 +25,201 @@ header {
 .blog-card h4,
 .blog-card h5,
 .blog-card h6 {
-  margin: 40px 0 10px;
-  color: var(--text);
+	margin: 40px 0 10px;
+	color: var(--text);
 }
 
 .blog-card strong {
-  color: var(--text);
+	color: var(--text);
 }
 
 .blog-card a,
 .blog-card a * {
-  color: #9d6ff3;
-  text-decoration: none;
-  font-weight: bold;
+	color: #9d6ff3;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .blog-card a:hover,
 .blog-card a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .blog-card del {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .blog-card .title {
-  margin: 0;
-  margin-bottom: 8px;
+	margin: 0;
+	margin-bottom: 8px;
 }
 
 .blog-card .pub-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: left;
-  margin-top: auto;
-  margin-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: left;
+	margin-top: auto;
+	margin-bottom: 30px;
 }
 .blog-card .pub-info .date {
-  font-weight: bold;
-  color: var(--text);
+	font-weight: bold;
+	color: var(--text);
 }
 .blog-card .pub-info > * {
-  margin-right: 0.5em;
-  margin-top: 0.2em;
+	margin-right: 0.5em;
+	margin-top: 0.2em;
 }
 .blog-card .profile {
-  display: inline-grid;
-  grid-template-columns: 30px auto;
-  grid-gap: 10px;
-  font-weight: bold;
-  color: var(--text);
-  align-items: center;
-  height: 32px;
-  margin-right: 0.3em;
+	display: inline-grid;
+	grid-template-columns: 30px auto;
+	grid-gap: 10px;
+	font-weight: bold;
+	color: var(--text);
+	align-items: center;
+	height: 32px;
+	margin-right: 0.3em;
 }
 .blog-card .profile img {
-  margin: 0;
-  border-radius: 4px;
-  border: 1px solid var(--border);
-  max-width: 100%;
+	margin: 0;
+	border-radius: 4px;
+	border: 1px solid var(--border);
+	max-width: 100%;
 }
 
 .blog-card p,
 .post-info {
-  color: var(--text-secondary);
+	color: var(--text-secondary);
 }
 
 .blog-card img {
-  max-width: 100%;
-  max-height: 800px;
-  margin: 10px auto;
-  display: block;
-  border-radius: 4px;
-  border: 1px solid var(--border);
+	max-width: 100%;
+	max-height: 800px;
+	margin: 10px auto;
+	display: block;
+	border-radius: 4px;
+	border: 1px solid var(--border);
 }
 .blog-card img.emoji {
-  display: inline;
-  margin: 0;
-  border: none;
+	display: inline;
+	margin: 0;
+	border: none;
 }
 
 .blog-card video {
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid var(--border);
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid var(--border);
 }
 
 .blog-card iframe {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 4px;
-  border: 1px solid var(--border);
+	width: 100%;
+	aspect-ratio: 16/9;
+	border-radius: 4px;
+	border: 1px solid var(--border);
 }
 /* Fallback for aspect-ratio since it's unsupported by some browsers (looking at you Safari) */
 @supports not (aspect-ratio: 16/9) {
-  .blog-card .aspectratio-fallback {
-    position: relative;
-    height: 0;
-    padding-top: 56.25%;
-  }
-  .blog-card iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
+	.blog-card .aspectratio-fallback {
+		position: relative;
+		height: 0;
+		padding-top: 56.25%;
+	}
+	.blog-card iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
 }
 /* Some twitter iframe specific stuff */
 .blog-card .twitter-tweet {
-  margin: auto;
+	margin: auto;
 }
 .blog-card .twitter-tweet iframe {
-  border: none; /* Fixes the double border */
+	border: none; /* Fixes the double border */
 }
 
 .blog-card table {
-  border-radius: 4px;
-  border-collapse: collapse;
-  background: #31375e;
-  margin-bottom: 30px;
-  overflow: hidden;
+	border-radius: 4px;
+	border-collapse: collapse;
+	background: #31375e;
+	margin-bottom: 30px;
+	overflow: hidden;
 }
 .blog-card table th {
-  padding: 8px 12px;
-  background: #3f4778;
-  color: var(--text);
+	padding: 8px 12px;
+	background: #3f4778;
+	color: var(--text);
 }
 .blog-card table td {
-  padding: 8px 12px;
-  vertical-align: top;
-  border-radius: inherit;
+	padding: 8px 12px;
+	vertical-align: top;
+	border-radius: inherit;
 }
 .blog-card table tr:nth-child(even) {
-  background: #2a2f50;
+	background: #2a2f50;
 }
 
 .blog-card pre code {
-  border-radius: 4px;
-  margin-bottom: 30px;
+	border-radius: 4px;
+	margin-bottom: 30px;
 }
 
 .blog-card input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  display: inline-block;
-  background: var(--btn-secondary);
-  padding: 12px;
-  margin: 4px;
-  border-radius: 4px;
-  vertical-align: -60%;
+	appearance: none;
+	-webkit-appearance: none;
+	display: inline-block;
+	background: var(--btn-secondary);
+	padding: 12px;
+	margin: 4px;
+	border-radius: 4px;
+	vertical-align: -60%;
 }
 .blog-card input[type="checkbox"]:checked {
-  content: "checkboxtest";
-  background: no-repeat center/contain url(../images/check.svg),
-    var(--btn-secondary);
+	content: "checkboxtest";
+	background: no-repeat center/contain url(../images/check.svg),
+		var(--btn-secondary);
 }
 
 .blog-card hr {
-  border: 1px solid var(--text-secondary);
-  margin: 30px 0;
+	border: 1px solid var(--text-secondary);
+	margin: 30px 0;
 }
 
 .blog-card blockquote {
-  border-left: 2px solid var(--text-secondary);
-  padding: 8px 24px;
-  margin: 0;
-  margin-bottom: 30px;
+	border-left: 2px solid var(--text-secondary);
+	padding: 8px 24px;
+	margin: 0;
+	margin-bottom: 30px;
 }
 
 @media screen and (max-width: 800px) {
-  .blog-card {
-    padding: 40px;
-  }
+	.blog-card {
+		padding: 40px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .wrapper {
-    width: 100%;
-  }
+	.wrapper {
+		width: 100%;
+	}
 
-  header {
-    width: 90%;
-    margin: 35px auto;
-  }
+	header {
+		width: 90%;
+		margin: 35px auto;
+	}
 
-  .blog-card {
-    padding: 40px 5vw;
-    border-radius: 0;
-    margin-top: 0;
-  }
+	.blog-card {
+		padding: 40px 5vw;
+		border-radius: 0;
+		margin-top: 0;
+	}
 
-  footer {
-    width: 95%;
-    margin: auto auto 40px;
-  }
+	footer {
+		width: 95%;
+		margin: auto auto 40px;
+	}
 }

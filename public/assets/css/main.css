@@ -58,11 +58,11 @@ h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
 	/* content: ".";
 	color: #9D6FF3; */
 	content: "";
-    background-color: #9D6FF3;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    display: inline-block;
+	background-color: #9D6FF3;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	display: inline-block;
 }
 h1.dot[data-title-suffix]:after, h2.dot[data-title-suffix]:after {
 	content: attr(data-title-suffix);
@@ -91,7 +91,7 @@ header nav a {
 }
 header nav a:hover {
 	color: var(--text);
-    	transition: color 50ms ease-in-out;
+		transition: color 50ms ease-in-out;
 }
 
 .locale-dropdown {
@@ -377,7 +377,7 @@ section.showcase::before {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-  	z-index: -1;
+	z-index: -1;
 }
 section.showcase .text {
 	max-width: 504px;
@@ -514,12 +514,12 @@ section.team-helpers .row.first {
 section.team-helpers .row.second {
 	animation: infiniteScrollRow2 20s linear infinite; /* Set the duration to 5s times the number of cards */
 }
-@keyframes infiniteScrollRow1 { 
-	0% { transform: translate3d(0); } 
+@keyframes infiniteScrollRow1 {
+	0% { transform: translate3d(0); }
 	100% { transform: translate3d(calc(100% / -3), 0, 0); }
 }
-@keyframes infiniteScrollRow2 { 
-	0% { transform: translate3d(calc(100% / -3), 0, 0); } 
+@keyframes infiniteScrollRow2 {
+	0% { transform: translate3d(calc(100% / -3), 0, 0); }
 	100% { transform: translate3d(0, 0, 0); }
 }
 section.team-helpers .animation-wrapper {
@@ -917,7 +917,7 @@ footer div.discord-server-card svg {
 		left: 60vw;
 	}
 
-	
+
 }
 
 @media screen and (max-width: 900px) {
@@ -941,7 +941,7 @@ footer div.discord-server-card svg {
 	.hero-meta {
 		margin-top: 100px;
 	}
-	
+
 	.wrapper {
 		width: 90%;
 	}
@@ -994,15 +994,15 @@ footer div.discord-server-card svg {
 		font-size: 1.1rem;
 	}
 
-	
+
 	section.showcase {
-    	margin-top: 0;
+		margin-top: 0;
 	}
 	section.showcase .grid {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, 1fr);
 	}
-	
+
 	section.team,
 	section.team-helpers {
 		margin-top: 100px;
@@ -1077,7 +1077,7 @@ footer div.discord-server-card svg {
 	}
 
 	section.showcase {
-    	padding: 160px 0;
+		padding: 160px 0;
 	}
 	section.showcase p.text {
 		margin-bottom: 82px;
@@ -1100,7 +1100,7 @@ footer div.discord-server-card svg {
 
 	section.team-helpers .team-helpers-cards {
 		grid-gap: 12px;
-    	margin-right: 12px;
+		margin-right: 12px;
 	}
 	section.team-helpers .animation-wrapper .helper-card {
 		padding: 7px 18px;

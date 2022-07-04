@@ -1,169 +1,169 @@
 .wrapper {
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
 }
 header {
-  margin: 35px 0;
+	margin: 35px 0;
 }
 
 .account-form-wrapper {
-  margin: auto;
-  width: fit-content;
-  overflow: hidden;
+	margin: auto;
+	width: fit-content;
+	overflow: hidden;
 }
 
 form.account {
-  display: block;
-  padding: 40px 48px;
-  background-color: #292e53;
-  color: var(--text-secondary);
-  border-radius: 12px;
-  width: min(480px, 90vw);
-  box-sizing: border-box;
+	display: block;
+	padding: 40px 48px;
+	background-color: #292e53;
+	color: var(--text-secondary);
+	border-radius: 12px;
+	width: min(480px, 90vw);
+	box-sizing: border-box;
 }
 
 form.account h2 {
-  margin: 0;
-  color: var(--text);
+	margin: 0;
+	color: var(--text);
 }
 
 form.account p {
-  margin: 12px 0;
+	margin: 12px 0;
 }
 
 form.account div {
-  margin-top: 24px;
+	margin-top: 24px;
 }
 
 form.account input {
-  appearance: none;
-  -webkit-appearance: none;
-  display: block;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  background-color: #353c6a;
-  border: none;
-  border-radius: 4px;
-  padding: 12px;
-  color: var(--text);
-  width: calc(100% - 24px);
+	appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	background-color: #353c6a;
+	border: none;
+	border-radius: 4px;
+	padding: 12px;
+	color: var(--text);
+	width: calc(100% - 24px);
 }
 
 form.account input:focus {
-  background-color: #4b5595;
-  outline: none;
-  transition: 150ms;
+	background-color: #4b5595;
+	outline: none;
+	transition: 150ms;
 }
 
 form.account label {
-  display: block;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  font-size: 12px;
+	display: block;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 
 form.account button {
-  appearance: none;
-  -webkit-appearance: none;
-  display: block;
-  border: none;
-  border-radius: 4px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: var(--text);
-  padding: 12px 30px;
-  background: #353c6a;
-  margin-top: 18px;
-  cursor: pointer;
-  width: 100%;
-  text-decoration: none;
+	appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	border: none;
+	border-radius: 4px;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	color: var(--text);
+	padding: 12px 30px;
+	background: #353c6a;
+	margin-top: 18px;
+	cursor: pointer;
+	width: 100%;
+	text-decoration: none;
 }
 
 form.account button[type="submit"] {
-  background: var(--btn);
-  margin: auto;
+	background: var(--btn);
+	margin: auto;
 }
 
 form.account a {
-  text-decoration: none;
-  display: block;
-  color: var(--text-secondary);
-  text-align: right;
-  margin: 6px 0;
-  width: fit-content;
+	text-decoration: none;
+	display: block;
+	color: var(--text-secondary);
+	text-align: right;
+	margin: 6px 0;
+	width: fit-content;
 }
 form.account a:hover {
-  color: var(--text);
+	color: var(--text);
 }
 
 form.account a.pwdreset {
-  margin-left: auto;
-  font-size: 14px;
+	margin-left: auto;
+	font-size: 14px;
 }
 
 form.account a.register {
-  margin: auto;
-  margin-top: 18px;
+	margin: auto;
+	margin-top: 18px;
 }
 
 @keyframes banner-notice {
-  0% {
-    top: -150px;
-  }
-  20% {
-    top: 35px;
-  }
-  80% {
-    top: 35px;
-  }
-  100% {
-    top: -150px;
-  }
+	0% {
+		top: -150px;
+	}
+	20% {
+		top: 35px;
+	}
+	80% {
+		top: 35px;
+	}
+	100% {
+		top: -150px;
+	}
 }
 .banner-notice {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: -150px;
-  width: 100%;
-  animation: banner-notice 5s;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: -150px;
+	width: 100%;
+	animation: banner-notice 5s;
 }
 .banner-notice div {
-  padding: 4px 36px;
-  border-radius: 5px;
-  z-index: 3;
+	padding: 4px 36px;
+	border-radius: 5px;
+	z-index: 3;
 }
 .banner-notice.error div {
-  background: #a9375b;
+	background: #a9375b;
 }
 
 form.account.register {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: min(780px, 90vw);
-  column-gap: 24px;
-  margin-bottom: 48px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: min(780px, 90vw);
+	column-gap: 24px;
+	margin-bottom: 48px;
 }
 form.account.register div.h-captcha {
-  grid-column: 1 / span 2;
-  display: flex;
-  justify-content: center;
+	grid-column: 1 / span 2;
+	display: flex;
+	justify-content: center;
 }
 form.account.register p,
 form.account.register div.email,
 form.account.register div.buttons {
-  grid-column: 1 / span 2;
+	grid-column: 1 / span 2;
 }
 
 @media screen and (max-width: 720px) {
-  form.account.register {
-    grid-template-columns: 1fr;
-  }
-  form.account.register div.h-captcha,
-  form.account.register p,
-  form.account.register div.email,
-  form.account.register div.buttons {
-    grid-column: unset;
-  }
+	form.account.register {
+		grid-template-columns: 1fr;
+	}
+	form.account.register div.h-captcha,
+	form.account.register p,
+	form.account.register div.email,
+	form.account.register div.buttons {
+		grid-column: unset;
+	}
 }

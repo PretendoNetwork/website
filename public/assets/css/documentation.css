@@ -1,221 +1,221 @@
 html,
 body {
-  background: #131730;
+	background: #131730;
 }
 a.logo-link {
-  margin: auto;
-  margin-left: 36px;
-  height: 40px;
-  text-decoration: none;
+	margin: auto;
+	margin-left: 36px;
+	height: 40px;
+	text-decoration: none;
 }
 header {
-  width: calc(100% - 72px);
-  background: #131730;
-  padding: 12px 36px;
-  margin: 0;
+	width: calc(100% - 72px);
+	background: #131730;
+	padding: 12px 36px;
+	margin: 0;
 }
 header a.logo-link {
-  display: none;
+	display: none;
 }
 header nav a:first-child {
-  margin-left: -24px;
+	margin-left: -24px;
 }
 
 .docs-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, fit-content(100%));
-  grid-template-rows: repeat(2, fit-content(100%));
-  height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, fit-content(100%));
+	grid-template-rows: repeat(2, fit-content(100%));
+	height: 100vh;
 }
 
 .docs-wrapper .sidebar {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  width: clamp(270px, 30vw, 500px);
-  background: #161931;
-  max-height: calc(100vh - 69px);
-  overflow-y: scroll;
-  min-height: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: clamp(270px, 30vw, 500px);
+	background: #161931;
+	max-height: calc(100vh - 69px);
+	overflow-y: scroll;
+	min-height: 100%;
 }
 .docs-wrapper .sidebar .section {
-  display: flex;
-  flex-flow: column;
-  width: 200px;
-  margin-left: 138px;
-  margin-bottom: 72px;
+	display: flex;
+	flex-flow: column;
+	width: 200px;
+	margin-left: 138px;
+	margin-bottom: 72px;
 }
 .docs-wrapper .sidebar .section:first-child {
-  margin-top: 72px;
+	margin-top: 72px;
 }
 .docs-wrapper .sidebar .section h5 {
-  margin: 0;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: var(--text-secondary-2);
-  margin-bottom: 12px;
+	margin: 0;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: var(--text-secondary-2);
+	margin-bottom: 12px;
 }
 .docs-wrapper .sidebar .section a {
-  position: relative;
-  text-decoration: none;
-  color: var(--text-secondary);
-  width: fit-content;
-  margin-bottom: 12px;
+	position: relative;
+	text-decoration: none;
+	color: var(--text-secondary);
+	width: fit-content;
+	margin-bottom: 12px;
 }
 .docs-wrapper .sidebar .section a.active,
 .docs-wrapper .sidebar .section a:hover {
-  color: var(--text);
+	color: var(--text);
 }
 .docs-wrapper .sidebar .section a.active::before {
-  /* This filter thing is jank, if anyone knows a better way to do this please fix */
-  filter: invert(51%) sepia(12%) saturate(2930%) hue-rotate(218deg)
-    brightness(99%) contrast(92%);
-  position: absolute;
-  left: -30px;
-  content: url(../images/arrow-right.svg);
+	/* This filter thing is jank, if anyone knows a better way to do this please fix */
+	filter: invert(51%) sepia(12%) saturate(2930%) hue-rotate(218deg)
+		brightness(99%) contrast(92%);
+	position: absolute;
+	left: -30px;
+	content: url(../images/arrow-right.svg);
 }
 
 .docs-wrapper .content {
-  width: calc(100vw - clamp(270px, 30vw, 500px) - (72px * 2));
-  background: var(--background);
-  padding: 72px;
-  max-height: calc(100vh - 69px - (72px * 2));
-  overflow-y: scroll;
+	width: calc(100vw - clamp(270px, 30vw, 500px) - (72px * 2));
+	background: var(--background);
+	padding: 72px;
+	max-height: calc(100vh - 69px - (72px * 2));
+	overflow-y: scroll;
 }
 .docs-wrapper .content-inner {
-  max-width: 900px;
+	max-width: 900px;
 }
 .docs-wrapper .content p {
-  color: var(--text-secondary);
+	color: var(--text-secondary);
 }
 .docs-wrapper .content h1:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 .docs-wrapper .content .quick-links-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
-  margin-bottom: 60px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 24px;
+	margin-bottom: 60px;
 }
 .docs-wrapper .quick-links-grid a {
-  text-decoration: none;
-  background: #252a51;
-  border-radius: 6px;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  padding: 20px;
+	text-decoration: none;
+	background: #252a51;
+	border-radius: 6px;
+	color: var(--text-secondary);
+	display: flex;
+	align-items: center;
+	padding: 20px;
 }
 .docs-wrapper .quick-links-grid svg:first-child {
-  height: 36px;
-  margin-right: 24px;
-  margin-left: 4px;
-  color: var(--theme-light);
+	height: 36px;
+	margin-right: 24px;
+	margin-left: 4px;
+	color: var(--theme-light);
 }
 .docs-wrapper .quick-links-grid p.header {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--text);
-  margin: 0;
+	font-size: 22px;
+	font-weight: 600;
+	color: var(--text);
+	margin: 0;
 }
 .docs-wrapper .quick-links-grid p {
-  margin: 0;
+	margin: 0;
 }
 .docs-wrapper .quick-links-grid svg:last-child {
-  height: 36px;
-  margin-left: auto;
+	height: 36px;
+	margin-left: auto;
 }
 
 /* Scrollbar styling 'cause it's fancy */
 .docs-wrapper .sidebar::-webkit-scrollbar,
 .docs-wrapper .content::-webkit-scrollbar,
 .docs-wrapper .content pre code::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+	width: 12px;
+	height: 12px;
 }
 .docs-wrapper .sidebar::-webkit-scrollbar-track,
 .docs-wrapper .content::-webkit-scrollbar-track,
 .docs-wrapper .content pre code::-webkit-scrollbar-track {
-  background: none;
+	background: none;
 }
 .docs-wrapper .sidebar::-webkit-scrollbar-thumb,
 .docs-wrapper .content::-webkit-scrollbar-thumb,
 .docs-wrapper .content pre code::-webkit-scrollbar-thumb {
-  background-color: var(--text-secondary-2);
-  border-radius: 24px;
-  border: 3px solid #161931;
+	background-color: var(--text-secondary-2);
+	border-radius: 24px;
+	border: 3px solid #161931;
 }
 .docs-wrapper .content::-webkit-scrollbar-thumb {
-  border: 3px solid var(--background);
+	border: 3px solid var(--background);
 }
 .docs-wrapper .content pre code::-webkit-scrollbar-thumb {
-  border: 3px solid #0d0f20;
+	border: 3px solid #0d0f20;
 }
 .docs-wrapper .sidebar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) #161931;
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-secondary-2) #161931;
 }
 .docs-wrapper .content {
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) var(--background);
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-secondary-2) var(--background);
 }
 .docs-wrapper .content pre codear {
-  scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) #0d0f20;
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-secondary-2) #0d0f20;
 }
 .docs-wrapper .content .missing-in-locale-notice {
-  background: #252a51;
-  padding: 24px;
-  border-radius: 6px;
+	background: #252a51;
+	padding: 24px;
+	border-radius: 6px;
 }
 
 
 .input-wrapper {
-  display: flex;
-  margin-top: 8px;
+	display: flex;
+	margin-top: 8px;
 }
 
 .localization-form input {
-  appearance: none;
-  -webkit-appearance: none;
-  border: 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  background-color: var(--btn-secondary);
-  border: none;
-  border-radius: 4px 0 0 4px;
-  padding: 12px 24px;
-  color: var(--text-secondary);
-  width: 20px;
-  flex: 2 10%;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	background-color: var(--btn-secondary);
+	border: none;
+	border-radius: 4px 0 0 4px;
+	padding: 12px 24px;
+	color: var(--text-secondary);
+	width: 20px;
+	flex: 2 10%;
 }
 
 .search input::placeholder {
-  color: var(--text-secondary-2);
+	color: var(--text-secondary-2);
 }
 
 .search input:focus {
-  background-color: #fff;
-  color: var(--btn-secondary);
-  transition: 200ms;
-  outline: none;
+	background-color: #fff;
+	color: var(--btn-secondary);
+	transition: 200ms;
+	outline: none;
 }
 
 .search button {
-  appearance: none;
-  -webkit-appearance: none;
-  border: 0;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: var(--text);
-  padding: 12px 36px;
-  background: var(--btn);
-  cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	color: var(--text);
+	padding: 12px 36px;
+	background: var(--btn);
+	cursor: pointer;
 }
 
 @media screen and (max-width: 1080px) {
-  .docs-wrapper .sidebar .section {
-    margin-left: 60px;
-    width: 184px;
-  }
+	.docs-wrapper .sidebar .section {
+		margin-left: 60px;
+		width: 184px;
+	}
 }

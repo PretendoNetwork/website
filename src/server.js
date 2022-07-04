@@ -138,7 +138,7 @@ app.engine('handlebars', handlebars({
 			 *	get the string in the user's locale. If not available, it will return it in
 			 *	the default locale.
 			 */
-			
+
 			args.slice(1, -1).forEach(arg => {
 				userLocaleString = userLocaleString?.[arg];
 			});

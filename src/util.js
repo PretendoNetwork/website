@@ -68,7 +68,7 @@ function nintendoPasswordHash(password, pid) {
 		Buffer.from('\x02\x65\x43\x46'),
 		Buffer.from(password)
 	]);
-	
+
 	const hashed = crypto.createHash('sha256').update(unpacked).digest().toString('hex');
 
 	return hashed;
@@ -100,7 +100,7 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
 			}
-			
+
 
 			return;
 		}
@@ -135,7 +135,7 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
 			}
-			
+
 			return;
 		}
 

@@ -9,7 +9,7 @@ router.get('/', async (request, response) => {
 
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-	
+
 	const cache = await getTrelloCache();
 
 	// Builds the arrays of people for the special thanks section

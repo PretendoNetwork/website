@@ -189,7 +189,7 @@ router.get('/', async (request, response) => {
 			scope: ['identify', 'guilds'],
 			state: crypto.randomBytes(16).toString('hex'),
 		});
-		
+
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
