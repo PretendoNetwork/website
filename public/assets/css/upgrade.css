@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -12,6 +13,31 @@
   border-radius: 100%;
   width: 1600px;
   height: 1400px;
+}
+
+.back-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 36px;
+  left: 0;
+  padding: 6px 10px;
+  background: var(--btn-secondary);
+  border-radius: 24px;
+  
+  transition: filter 150ms;
+  text-decoration: none;
+  color: var(--text);
+}
+.back-arrow:hover {
+  filter: brightness(1.5)
+}
+.back-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+.back-arrow span {
+  margin: 0 4px;
 }
 
 .account-form-wrapper {
@@ -314,5 +340,11 @@ p.switch-tier-modal-caption span {
 @media screen and (max-width: 380px) {
   label.tier .tier-perks {
     width: 80%;
+  }
+  .back-arrow {
+    padding: 6px;
+  }
+  .back-arrow span {
+    display: none;
   }
 }
