@@ -193,8 +193,6 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
-	renderData.isTester = false;
-
 	response.render('account/account', renderData);
 });
 

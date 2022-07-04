@@ -118,12 +118,10 @@
 }
 
 fieldset {
+  position: relative;
   height: min-content;
   padding: 0;
   border: none;
-}
-fieldset:disabled form label {
-  cursor: not-allowed;
 }
 
 .setting-card .server-selection {
@@ -162,9 +160,11 @@ fieldset:disabled form label {
   background: #383f6b;
 }
 
-.setting-card.sign-in-history a button {
+.setting-card button {
   width: 100%;
+  height: fit-content;
   padding: 12px 48px;
+  align-self: flex-end;
   cursor: pointer;
   background: #383f6b;
 }
