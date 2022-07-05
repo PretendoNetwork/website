@@ -1,5 +1,4 @@
 .wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -20,7 +19,7 @@
   display: flex;
   justify-content: center;
   top: 36px;
-  left: 0;
+  left: max(calc((100vw - 1590px) / 2), 2.5vw);
   padding: 6px 10px;
   background: var(--btn-secondary);
   border-radius: 24px;
