@@ -9,7 +9,19 @@ let cache;
 async function getTrelloCache() {
 	const available = await trelloAPIAvailable();
 	if (!available) {
-		return cache;
+		return cache || {
+			update_time: 0,
+			sections: [{
+				title: 'Upstream API error',
+				id: '',
+				percentage_complete: '',
+				progress: {
+					not_started: [ 'Trello API unavailable' ],
+					started: [],
+					completed: []
+				}
+			}],
+		};
 	}
 
 	if (!cache) {
