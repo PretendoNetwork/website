@@ -6,19 +6,24 @@ const router = new Router();
 const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
-
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const cache = await getTrelloCache();
-
-	response.render('progress', {
+	const renderData = 	{
 		layout: 'main',
 		boards,
-		locale,
-		localeString: reqLocale.toString(),
-		progressLists: cache
-	});
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+	};
+
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
+
+	const cache = await getTrelloCache();
+	renderData.cache = cache;
+
+	response.render('progress', renderData);
 });
 
 module.exports = router;

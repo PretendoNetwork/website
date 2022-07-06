@@ -7,15 +7,26 @@ const { getTrelloCache } = require('../trello');
 
 router.get('/', async (request, response) => {
 
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-	
+	const renderData = 	{
+		layout: 'main',
+		boards,
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+	};
+
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
+
 	const cache = await getTrelloCache();
 
 	// Builds the arrays of people for the special thanks section
 
 	// Shuffles the special thanks people
-	let specialThanksPeople = locale.specialThanks.people.slice();
+	const specialThanksPeople = renderData.locale.specialThanks.people.slice();
 	function shuffleArray(array) {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -29,7 +40,7 @@ router.get('/', async (request, response) => {
 	const specialThanksSecondRow = specialThanksPeople.slice(3, 7);
 
 	// Builds the final array to be sent to the view, and triples each row.
-	specialThanksPeople = {
+	renderData.specialThanksPeople = {
 		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
 		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
 	};
@@ -74,14 +85,9 @@ router.get('/', async (request, response) => {
 	// Calculates global completion percentage
 	totalProgress.percent = Math.round(totalProgress._calc.percentageSum / cache.sections.length * 100);
 
-	response.render('home', {
-		layout: 'main',
-		featuredFeatureList: totalProgress,
-		boards,
-		locale,
-		localeString: reqLocale.toString(),
-		specialThanksPeople
-	});
+	renderData.featuredFeatureList = totalProgress;
+
+	response.render('home', renderData);
 });
 
 module.exports = router;

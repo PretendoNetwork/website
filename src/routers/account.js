@@ -193,6 +193,8 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
 	response.render('account/account', renderData);
 });
 
@@ -295,6 +297,15 @@ router.post('/register', async (request, response) => {
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
 	response.redirect('/account');
+});
+
+router.get('/logout', async(_request, response) => {
+	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
+	response.clearCookie('access_token', { domain: '.pretendo.network' });
+	response.clearCookie('token_type', { domain: '.pretendo.network' });
+	response.clearCookie('ph', { domain: '.pretendo.network' });
+
+	response.redirect('/');
 });
 
 router.get('/connect/discord', async (request, response) => {

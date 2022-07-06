@@ -79,27 +79,6 @@
     color: var(--text-secondary);
 }
 
-@media screen and (max-width: 1064px) {
-    .selected-locale .locale-names {
-		display: none;
-	}
-
-	.selected-locale {
-		width: 80px;
-		margin-left: auto;
-		margin-right: 12px;
-	}
-
-	.locale-dropdown {
-		width: fit-content;
-	}
-
-	.select-box .options-container {
-		width: 150px;
-		right: 12px;
-	}
-}
-
 @media screen and (max-width: 946px) {
     header nav a:not(.keep-on-mobile) {
 		display: none;
