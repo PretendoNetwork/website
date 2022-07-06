@@ -25,6 +25,29 @@
 .account-sidebar .user .username {
   margin: 0px;
 }
+.account-sidebar .user .tier-name {
+  margin: 0px;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+  border-width: 5px;
+  border-style: solid;
+}
+.account-sidebar .user .tier-level-0 {
+  color:gray;
+  border-color: gray;
+}
+.account-sidebar .user .tier-level-1 {
+  color:red;
+  border-color: red;
+}
+.account-sidebar .user .tier-level-2 {
+  color:darkorange;
+  border-color: darkorange;
+}
+.account-sidebar .user .tier-level-3 {
+  color:gold;
+  border-color: gold;
+}
 .account-sidebar .user .mii {
   width: 128px;
   height: 128px;

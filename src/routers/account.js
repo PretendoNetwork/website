@@ -5,7 +5,9 @@ const { v4: uuidv4 } = require('uuid');
 const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
 const database = require('../database');
+const cache = require('../cache');
 const util = require('../util');
+const logger = require('../logger');
 const config = require('../../config.json');
 
 const { Router } = express;
@@ -28,30 +30,27 @@ router.get('/', async (request, response) => {
 		return response.redirect('/account/login');
 	}
 
-	const { upgrade_success } = request.query;
-
-	const stripe = {};
-	if (upgrade_success === 'true') {
-		stripe.showNotice = true;
-		stripe.success = true;
-	} else if (upgrade_success === 'false') {
-		stripe.showNotice = true;
-		stripe.error = true;
-	}
-
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {
 		layout: 'main',
 		locale: util.getLocale(request.locale.region, request.locale.language),
 		localeString: request.locale.toString(),
-		linked: request.cookies.linked,
-		error: request.cookies.error,
-		stripe: stripe
+		success: request.cookies.success,
+		error: request.cookies.error
 	};
 
 	// Reset message cookies
-	response.clearCookie('linked', { domain: '.pretendo.network' });
+	response.clearCookie('success', { domain: '.pretendo.network' });
 	response.clearCookie('error', { domain: '.pretendo.network' });
+
+	// Check for Stripe messages
+	const { upgrade_success } = request.query;
+
+	if (upgrade_success === 'true') {
+		renderData.success = 'Account upgraded successfully';
+	} else if (upgrade_success === 'false') {
+		renderData.error = 'Account upgrade failed';
+	}
 
 	// Attempt to get user data
 	let apiResponse = await util.apiGetRequest('/v1/user', {
@@ -93,7 +92,12 @@ router.get('/', async (request, response) => {
 
 	// Set user account info to render data
 	const account = apiResponse.body;
+	const pid = account.pid;
 
+	const pnid = await database.PNID.findOne({ pid });
+
+	renderData.tierName = pnid.get('connections.stripe.tier_name');
+	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
 
@@ -364,7 +368,7 @@ router.get('/connect/discord', async (request, response) => {
 		}
 	}
 
-	response.cookie('linked', 'Discord', { domain: '.pretendo.network' }).redirect('/account');
+	response.cookie('success', 'Discord account linked successfully', { domain: '.pretendo.network' }).redirect('/account');
 });
 
 router.get('/online-files', async (request, response) => {
@@ -518,12 +522,51 @@ router.get('/upgrade', async (request, response) => {
 		return response.redirect('/account/login');
 	}
 
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	const pnid = await database.PNID.findOne({ pid });
+
 	const renderData = {
 		layout: 'main',
 		locale: util.getLocale(request.locale.region, request.locale.language),
 		localeString: request.locale.toString(),
 		error: request.cookies.error,
-		currentTier: 'price_1LBnZADOJlJAaQQ3pEUjNWbY' // To be replaced
+		currentTier: pnid.get('connections.stripe.price_id'),
+		donationCache: await cache.getStripeDonationCache()
 	};
 
 	const { data: prices } = await stripe.prices.list();
@@ -557,7 +600,7 @@ router.get('/upgrade', async (request, response) => {
 	response.render('account/upgrade', renderData);
 });
 
-router.post('/checkout/:priceId', async (request, response) => {
+router.post('/stripe/checkout/:priceId', async (request, response) => {
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
 		return response.redirect('/account/login');
@@ -626,8 +669,8 @@ router.post('/checkout/:priceId', async (request, response) => {
 	const pnid = await database.PNID.findOne({ pid });
 
 	if (pnid.get('access_level') >= 2) {
-		response.cookie('error', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
-		return response.redirect('/account');
+		//response.cookie('error', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		//return response.redirect('/account');
 	}
 
 	try {
@@ -653,7 +696,80 @@ router.post('/checkout/:priceId', async (request, response) => {
 	}
 });
 
-router.post('/stripe-wh', express.raw({ type: 'application/json' }), async (request, response) => {
+router.post('/stripe/unsubscribe', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	const pnid = await database.PNID.findOne({ pid });
+	const subscriptionId = pnid.get('connections.stripe.subscription_id');
+	const tierName = pnid.get('connections.stripe.tier_name');
+
+	if (subscriptionId) {
+		try {
+			await stripe.subscriptions.del(subscriptionId);
+
+			const updateData = {
+				'connections.stripe.subscription_id': null,
+				'connections.stripe.price_id':  null,
+				'connections.stripe.tier_level': 0,
+				'connections.stripe.tier_name': null,
+			};
+
+			if (pnid.get('access_level') < 2) {
+				// Fail-safe for if staff members reach here
+				// Mostly only useful during testing
+				updateData.access_level = 0;
+			}
+
+			await database.PNID.updateOne({ pid }, { $set: updateData }).exec();
+		} catch (error) {
+			logger.error(`Error canceling old user subscription | ${pnid.get('connections.stripe.customer_id')}, ${pid}, ${subscriptionId} | - ${error.message}`);
+		}
+	}
+
+	response.cookie('success', `Unsubscribed from ${tierName}`, { domain: '.pretendo.network' });
+	return response.redirect('/account');
+});
+
+router.post('/stripe/webhook', express.raw({ type: 'application/json' }), async (request, response) => {
 	const stripeSignature = request.headers['stripe-signature'];
 	let event;
 

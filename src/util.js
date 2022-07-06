@@ -80,27 +80,31 @@ async function handleStripeEvent(event) {
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
 
-		if (!customer?.metadata?.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
-			// No PNID PID linked to customer. Abort and refund!
-			logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
+		if (!customer?.metadata?.pnid_pid) {
+			// No PNID PID linked to customer
+			if (subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+				// Abort and refund!
+				logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
-			await stripe.subscriptions.del(subscription.id);
+				await stripe.subscriptions.del(subscription.id);
 
-			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-			await stripe.refunds.create({
-				payment_intent: invoice.payment_intent
-			});
-
-			try {
-				await mailer.sendMail({
-					to: customer.email,
-					subject: 'Pretendo Network Subscription Failed - No Linked PNID',
-					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+				await stripe.refunds.create({
+					payment_intent: invoice.payment_intent
 				});
-			} catch (error) {
-				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+
+				try {
+					await mailer.sendMail({
+						to: customer.email,
+						subject: 'Pretendo Network Subscription Failed - No Linked PNID',
+						text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+					});
+				} catch (error) {
+					logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+				}
+			} else {
+				logger.error(`Stripe user ${customer.id} has no PNID linked!`);
 			}
-			
 
 			return;
 		}
@@ -162,6 +166,7 @@ async function handleStripeEvent(event) {
 			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : null,
 			'connections.stripe.price_id': subscription.status === 'active' ? subscription.plan.id : null,
 			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
+			'connections.stripe.tier_name': subscription.status === 'active' ? product.name : null,
 			'connections.stripe.latest_webhook_timestamp': event.created,
 		};
 

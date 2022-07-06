@@ -12,7 +12,7 @@ const buttons = {
 	},
 };
 
-const currentTierID = document.querySelector('form').dataset.currentTier;
+const currentTierID = document.querySelector('form').dataset.currentTier || undefined;
 
 const currentTierElement = document.querySelector(`#${currentTierID}`) || undefined;
 
@@ -30,6 +30,19 @@ function conditionalSubmitButton(condition, target) {
 		buttons.submit.disabled = false;
 		buttons.submit.innerText = `Subscribe to ${target.dataset.tierName}`;
 	}
+}
+
+function submitForm(cancel) {
+	const form = document.querySelector('form');
+
+	if (cancel) {
+		form.action = '/account/stripe/unsubscribe';
+	} else {
+		const selectedTier = form.querySelector('input[type="radio"]:checked').value;
+		form.action = `/account/stripe/checkout/${selectedTier}`;
+	}
+
+	form.submit();
 }
 
 // If the currect tier exists, select it from the list and disable the submit button.
@@ -59,10 +72,7 @@ buttons.submit.addEventListener('click', function(e) {
 
 		document.querySelector('.switch-tier-modal-wrapper').classList.remove('hidden');
 	} else {
-		const form = document.querySelector('form');
-		const selectedTier = form.querySelector('input[type="radio"]:checked').value;
-		form.action = `/account/checkout/${selectedTier}`;
-		form.submit();
+		submitForm();
 	}
 });
 
@@ -84,8 +94,7 @@ buttons.unsubModal.close.addEventListener('click', function(e) {
 buttons.unsubModal.confirm.addEventListener('click', function(e) {
 	e.preventDefault();
 
-	/* unsub logic here */
-	alert('lol unsubbed');
+	submitForm(true);
 });
 
 buttons.switchTierModal.close.addEventListener('click', function(e) {
@@ -97,6 +106,5 @@ buttons.switchTierModal.close.addEventListener('click', function(e) {
 buttons.switchTierModal.confirm.addEventListener('click', function(e) {
 	e.preventDefault();
 
-	/* tier switching logic here */
-	alert('lol switched tier');
+	submitForm(false);
 });
