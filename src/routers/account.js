@@ -762,6 +762,10 @@ router.post('/stripe/unsubscribe', async (request, response) => {
 			await database.PNID.updateOne({ pid }, { $set: updateData }).exec();
 		} catch (error) {
 			logger.error(`Error canceling old user subscription | ${pnid.get('connections.stripe.customer_id')}, ${pid}, ${subscriptionId} | - ${error.message}`);
+
+			response.cookie('error', 'Error canceling subscription! Contact support if issue persists', { domain: '.pretendo.network' });
+			
+			return response.redirect('/account');
 		}
 	}
 
