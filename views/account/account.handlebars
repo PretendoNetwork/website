@@ -10,6 +10,11 @@
 				<img src="{{account.mii.image_url}}" class="mii" />
 				<p class="miiname">{{account.mii.name}}</p>
 				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
+				{{#if tierName}}
+				<p class="tier-name tier-level-{{tierLevel}}" value="{{tierName}}">{{tierName}}</p>
+				{{else}}
+				<p class="tier-name tier-level-0" value="Default">Default</p>
+				{{/if}}
 			</div>
 			<div class="buttons">
 				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
@@ -145,18 +150,16 @@
 					<label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
 				</form>
 			</div>
-
-
 		</div>
 	</div>
 	{{> footer }}
 </div>
 
 
-{{#if linked}}
+{{#if success}}
 <div class="banner-notice success">
 	<div>
-		<p>{{ linked }} account linked successfully</p>
+		<p>{{success}}</p>
 	</div>
 </div>
 {{/if}}
@@ -164,27 +167,9 @@
 {{#if error}}
 <div class="banner-notice error">
 	<div>
-		<p>{{ error }}</p>
+		<p>{{error}}</p>
 	</div>
 </div>
-{{/if}}
-
-{{#if stripe.showNotice}}
-	{{#if stripe.success}}
-	<div class="banner-notice success">
-		<div>
-			<p>Account upgraded successfully</p>
-		</div>
-	</div>
-	{{/if}}
-
-	{{#if stripe.error}}
-	<div class="banner-notice error">
-		<div>
-			<p>Account upgrade failed</p>
-		</div>
-	</div>
-	{{/if}}
 {{/if}}
 
 <script src="/assets/js/account.js"></script>

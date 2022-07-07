@@ -14,6 +14,7 @@ const PNIDSchema = new Schema({
 			subscription_id: String,
 			price_id: String,
 			tier_level: Number,
+			tier_name: String,
 			latest_webhook_timestamp: Number
 		}
 	}
