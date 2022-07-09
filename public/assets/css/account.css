@@ -25,25 +25,51 @@
 .account-sidebar .user .username {
   margin: 0px;
 }
+.account-sidebar .user .tier-name {
+  margin: 0px;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+  border-width: 5px;
+  border-style: solid;
+}
+.account-sidebar .user .tier-level-0 {
+  color:gray;
+  border-color: gray;
+}
+.account-sidebar .user .tier-level-1 {
+  color:red;
+  border-color: red;
+}
+.account-sidebar .user .tier-level-2 {
+  color:darkorange;
+  border-color: darkorange;
+}
+.account-sidebar .user .tier-level-3 {
+  color:gold;
+  border-color: gold;
+}
 .account-sidebar .user .mii {
   width: 128px;
   height: 128px;
   border-radius: 100%;
   background: var(--btn-secondary);
 }
-.account-sidebar .user #download-cemu-files {
+.account-sidebar .buttons a {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 24px;
+  padding: 20px 24px;
   background: #383f6b;
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   text-decoration: none;
 }
-.account-sidebar .user #download-cemu-files p.download-caption {
-  margin: 15px 0 0;
+.account-sidebar .buttons a svg {
+  margin-bottom: 16px;
 }
-.account-sidebar .user p.cemu-warning {
+.account-sidebar .buttons a p.caption {
+  margin: 0;
+}
+.account-sidebar .buttons p.cemu-warning {
   margin: 4px 0 0;
   font-size: 0.7rem;
   color: var(--text-secondary);
@@ -115,12 +141,10 @@
 }
 
 fieldset {
+  position: relative;
   height: min-content;
   padding: 0;
   border: none;
-}
-fieldset:disabled form label {
-  cursor: not-allowed;
 }
 
 .setting-card .server-selection {
@@ -152,16 +176,18 @@ fieldset:disabled form label {
   color: var(--text);
 }
 
-.setting-card #remove-discord-connection {
+.setting-card #link-discord-account {
   width: 100%;
   padding: 12px 48px;
   cursor: pointer;
   background: #383f6b;
 }
 
-.setting-card.sign-in-history a button {
+.setting-card button {
   width: 100%;
+  height: fit-content;
   padding: 12px 48px;
+  align-self: flex-end;
   cursor: pointer;
   background: #383f6b;
 }

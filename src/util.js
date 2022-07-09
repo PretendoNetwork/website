@@ -1,14 +1,13 @@
 const fs = require('fs-extra');
 const got = require('got');
 const crypto = require('crypto');
-const gmail = require('gmail-send');
 const Stripe = require('stripe');
+const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
 const config = require('../config.json');
 
 const stripe = new Stripe(config.stripe.secret_key);
-const sendGmail = gmail(config.gmail);
 
 function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
@@ -81,27 +80,31 @@ async function handleStripeEvent(event) {
 		const product = await stripe.products.retrieve(subscription.plan.product);
 		const customer = await stripe.customers.retrieve(subscription.customer);
 
-		if (!customer.metadata.pnid_pid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
-			// No PNID PID linked to customer. Abort and refund!
-			logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
+		if (!customer?.metadata?.pnid_pid) {
+			// No PNID PID linked to customer
+			if (subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+				// Abort and refund!
+				logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
-			await stripe.subscriptions.del(subscription.id);
+				await stripe.subscriptions.del(subscription.id);
 
-			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-			await stripe.refunds.create({
-				payment_intent: invoice.payment_intent
-			});
-
-			try {
-				await sendGmail({
-					to: customer.email,
-					subject: 'Pretendo Subscription Failed - No Linked PNID',
-					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+				await stripe.refunds.create({
+					payment_intent: invoice.payment_intent
 				});
-			} catch (error) {
-				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+
+				try {
+					await mailer.sendMail({
+						to: customer.email,
+						subject: 'Pretendo Network Subscription Failed - No Linked PNID',
+						text: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
+					});
+				} catch (error) {
+					logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+				}
+			} else {
+				logger.error(`Stripe user ${customer.id} has no PNID linked!`);
 			}
-			
 
 			return;
 		}
@@ -128,9 +131,9 @@ async function handleStripeEvent(event) {
 			});
 
 			try {
-				await sendGmail({
+				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Subscription Failed - PNID Not Found',
+					subject: 'Pretendo Network Subscription Failed - PNID Not Found',
 					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
 				});
 			} catch (error) {
@@ -140,14 +143,31 @@ async function handleStripeEvent(event) {
 			return;
 		}
 
-		const updateData = {
-			connections: {
-				stripe: {
-					price_id: subscription.plan.id,
-					tier_level: Number(product.metadata.tier_level || 0),
-					latest_webhook_timestamp: event.created
+		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
+
+		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
+			// Canceling old subscription, do nothing but update webhook date
+
+			const updateData = {
+				'connections.stripe.latest_webhook_timestamp': event.created
+			};
+
+			await database.PNID.updateOne({
+				pid,
+				'connections.stripe.latest_webhook_timestamp': {
+					$lte: event.created
 				}
-			}
+			}, { $set: updateData }).exec();
+
+			return;
+		}
+
+		const updateData = {
+			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : null,
+			'connections.stripe.price_id': subscription.status === 'active' ? subscription.plan.id : null,
+			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
+			'connections.stripe.tier_name': subscription.status === 'active' ? product.name : null,
+			'connections.stripe.latest_webhook_timestamp': event.created,
 		};
 
 		if (product.metadata.beta === 'true') {
@@ -168,8 +188,69 @@ async function handleStripeEvent(event) {
 				default:
 					break;
 			}
+		}
 
-			await database.PNID.updateOne({ pid }, { $set: updateData }, { upsert: true }).exec();
+		await database.PNID.updateOne({
+			pid,
+			'connections.stripe.latest_webhook_timestamp': {
+				$lte: event.created
+			}
+		}, { $set: updateData }).exec();
+
+		if (subscription.status === 'active') {
+			// Get all the customers active subscriptions
+			const { data: activeSubscriptions } = await stripe.subscriptions.list({
+				limit: 100,
+				status: 'active',
+				customer: customer.id
+			});
+
+			// Order subscriptions by creation time and remove the latest one
+			const orderedActiveSubscriptions = activeSubscriptions.sort((a, b) => b.created - a.created);
+			const pastSubscriptions = orderedActiveSubscriptions.slice(1);
+
+			// Remove any old past subscriptions that might still be hanging around
+			for (const pastSubscription of pastSubscriptions) {
+				try {
+					await stripe.subscriptions.del(pastSubscription.id);
+				} catch (error) {
+					logger.error(`Error canceling old user subscription | ${customer.id}, ${pid}, ${pastSubscription.id} | - ${error.message}`);
+				}
+			}
+
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Active',
+					text: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+		}
+
+		if (subscription.status === 'canceled') {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Canceled',
+					text: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+		}
+
+		if (subscription.status === 'unpaid') {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: 'Pretendo Network Subscription - Unpaid',
+					text: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
 		}
 	}
 }

@@ -3,7 +3,7 @@ const util = require('../util');
 const { boards } = require('../../boards/boards.json');
 const router = new Router();
 
-const { getTrelloCache } = require('../trello');
+const { getTrelloCache } = require('../cache');
 
 router.get('/', async (request, response) => {
 

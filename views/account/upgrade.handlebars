@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="/assets/css/upgrade.css" />
-
 <div class="wrapper">
+  
+	<a href="/account" class="back-arrow">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+		<span>Back</span>
+	</a>
+
 	<div class="account-form-wrapper">
 		<a class="logotype" href="/">
 			<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
@@ -26,60 +31,65 @@
 				</g>
 			</svg>
 		</a>
-  
+
 		<h1 class="title dot">Upgrade</h1>
 		<p class="caption">Subscribing to a tier gives you access to our developer chats and, depending on the tier,
 				to our beta servers. Please someone reword this, it sucks. No fr.</p>
-
-
-    	<form method="post">
-      		{{#each tiers}}
+		<form method="post" data-current-tier="{{currentTier}}">
+			{{#each tiers}}
 				<input type="radio" class="tier-radio" data-tier-name="{{this.name}}" name="tier" value="{{this.price_id}}" id="{{this.price_id}}" />
-        		<label class="tier" for="{{this.price_id}}">
+				<label class="tier" for="{{this.price_id}}">
 					<div class="tier-thumbnail">
-          				<img src="{{this.thumbnail}}" width="100%" height="auto" alt="Tier icon" />
+						<img src="{{this.thumbnail}}" width="100%" height="auto" alt="Tier icon" />
 					</div>
-          			<div class="tier-text">
+					<div class="tier-text">
 						<p class="tier-name">{{this.name}}</p>
 						<div class="tier-perks">
 							{{#each this.perks}}
 
 								<div>
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            						<p>{{this}}</p>
+								<p>{{this}}</p>
 								</div>
 							{{/each}}
 						</div>
-          			</div>
+					</div>
 					<p class="price">
 						<span>{{this.price}}</span> / month
 					</p>
-       			</label>
-      		{{/each}}
+				</label>
+			{{/each}}
+
 			<div class="button-wrapper">
-				<button type="submit" id="submitButton">
-					Select a tier
-				</button>
+				<button class="disabled" type="submit" id="submitButton">Select a tier</button>
+				<button class="unsubscribe hidden" id="unsubModalShowButton">Unsubscribe</button>
 			</div>
-    	</form>
-  	</div>
+		</form>
+	</div>
+
+	<div class="unsub-modal-wrapper hidden">
+		<div class="unsub-modal">
+			<h1 class="title dot">Unsubscribe</h1>
+			<p class="unsub-modal-caption">Are you sure you want to unsubscribe from <span>tiername</span>?
+			You will lose access to the perks associated with that tier.</p>
+			<div class="unsub-modal-button-wrapper">
+				<button class="cancel" id="unsubModalCloseButton">Cancel</button>
+				<button class="confirm" id="unsubModalConfirmButton">Unsubscribe</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="switch-tier-modal-wrapper hidden">
+		<div class="switch-tier-modal">
+			<h1 class="title dot">Change tier</h1>
+			<p class="switch-tier-modal-caption">Are you sure you want to unsubscribe
+			from <span class="oldtier">oldtiername</span> and subscribe to <span class="newtier">newtiername</span>?</p>
+			<div class="switch-tier-modal-button-wrapper">
+				<button class="cancel" id="switchTierCloseButton">Cancel</button>
+				<button class="confirm" id="switchTierConfirmButton">Confirm</button>
+			</div>
+		</div>
+	</div>
 </div>
 
-<script>
-	document.querySelector('#submitButton').addEventListener('click', function(e) {
-		e.preventDefault();
-
-		const form = document.querySelector('form');
-		const selectedTier = form.querySelector('input[type="radio"]:checked').value;
-		form.action = `/account/checkout/${selectedTier}`;
-		form.submit();
-	});
-
-	document.querySelector('form').addEventListener('change', function(e) {
-		e.preventDefault();
-
-		const clickedTierID = e.srcElement.id;
-		const clickedTierName = e.srcElement.dataset.tierName;
-		document.querySelector('#submitButton').innerText = `Subscribe to ${clickedTierName}`;
-	});
-</script>
+<script src="/assets/js/upgrade.js" />
