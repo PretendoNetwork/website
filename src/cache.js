@@ -137,6 +137,9 @@ async function updateStripeDonationCache() {
 		hasMore = has_more;
 	}
 
+	donationCache.goal_dollars = donationCache.goal / 100;
+	donationCache.total_dollars = donationCache.total / 100;
+
 	donationCache.completed_real = Math.floor((donationCache.total / donationCache.goal) * 100); // real completion amount
 	donationCache.completed_capped = Math.max(0, Math.min(donationCache.completed_real, 100)); // capped at 100
 

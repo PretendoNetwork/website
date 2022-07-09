@@ -58,7 +58,31 @@ h1.title {
 }
 p.caption {
   width: min(100%, 500px);
+  margin: 0 auto 36px;
+}
+
+.account-form-wrapper .progress-bar-wrapper {
+  justify-content: center;
+  width: min(100%, 500px);
   margin: 0 auto 72px;
+  padding: 24px;
+  border-radius: 6px;
+  background: #1b1f3b;
+  box-sizing: border-box;
+}
+.account-form-wrapper .progress-bar-wrapper p {
+  text-align: left;
+  margin-bottom: 0;
+}
+.account-form-wrapper .progress-bar-wrapper p span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.account-form-wrapper .progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 0;
 }
 
 form {

@@ -813,7 +813,8 @@ section.update-signup div.circle {
 .donation-progress a:hover {
 	text-decoration: underline;
 }
-.donation-progress .progress-bar {
+
+.progress-bar {
 	position: relative;
 	display: block;
 	width: 100%;
@@ -823,7 +824,7 @@ section.update-signup div.circle {
 	background: var(--btn-secondary);
 	overflow: hidden;
 }
-.donation-progress .progress-bar-inner {
+.progress-bar-inner {
 	height: 100%;
 	background-color: var(--theme);
 }

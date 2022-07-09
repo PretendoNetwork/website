@@ -23,7 +23,7 @@ router.get('/', async (request, response) => {
 	const trelloCache = await getTrelloCache();
 	renderData.progressLists = trelloCache;
 	const stripeDonationCache = await getStripeDonationCache();
-	renderData.donation = stripeDonationCache;
+	renderData.donationCache = stripeDonationCache;
 
 	response.render('progress', renderData);
 });

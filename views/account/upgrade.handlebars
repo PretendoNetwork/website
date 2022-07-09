@@ -33,8 +33,18 @@
 		</a>
 
 		<h1 class="title dot">Upgrade</h1>
-		<p class="caption">Subscribing to a tier gives you access to our developer chats and, depending on the tier,
-				to our beta servers. Please someone reword this, it sucks. No fr.</p>
+		<p class="caption">
+			Reaching the monthly goal will make Pretendo a full time job, providing better quality updates at a faster rate.
+		</p>
+
+		<div class="progress-bar-wrapper">
+			<div class="progress-bar">
+				<div class="progress-bar-inner" style="width: {{ donationCache.completed_capped }}%;" ></div>
+			</div>
+			<p>
+				<span>${{donationCache.total_dollars}}</span> of <span>${{donationCache.goal_dollars}}</span>/month, <span>${{donationCache.completed_real}}%</span> of the monthly goal.
+			</p>
+		</div>
 		<form method="post" data-current-tier="{{currentTier}}">
 			{{#each tiers}}
 				<input type="radio" class="tier-radio" data-tier-name="{{this.name}}" name="tier" value="{{this.price_id}}" id="{{this.price_id}}" />
