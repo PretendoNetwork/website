@@ -211,13 +211,15 @@ router.get('/login', async (request, response) => {
 		error: request.cookies.error
 	};
 
+	renderData.redirect = request.query.redirect;
+
 	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	response.render('account/login', renderData);
 });
 
 router.post('/login', async (request, response) => {
-	const { username, password } = request.body;
+	const { username, password, redirect } = request.body;
 
 	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
 		username,
@@ -252,7 +254,7 @@ router.post('/login', async (request, response) => {
 
 	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	response.redirect(redirect || '/account');
 });
 
 router.get('/register', async (request, response) => {
@@ -271,11 +273,14 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
+	const redirect = request.query.redirect;
+	renderData.redirect = redirect;
+
 	response.render('account/register', renderData);
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse, redirect } = request.body;
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -301,7 +306,7 @@ router.post('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	response.redirect(redirect || '/account');
 });
 
 router.get('/logout', async(_request, response) => {
@@ -387,7 +392,7 @@ router.get('/online-files', async (request, response) => {
 
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token|| !request.cookies.ph) {
-		return response.redirect('/account/login');
+		return response.redirect('/account/login?redirect=/online-files');
 	}
 
 	// Attempt to get user data
@@ -531,7 +536,7 @@ router.get('/miieditor', async (request, response) => {
 router.get('/upgrade', async (request, response) => {
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login');
+		return response.redirect('/account/login?redirect=/account/upgrade');
 	}
 
 	// Attempt to get user data
