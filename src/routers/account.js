@@ -100,6 +100,7 @@ router.get('/', async (request, response) => {
 	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
 
 	// Check if a Discord account is linked to the PNID
 	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {
@@ -117,7 +118,7 @@ router.get('/', async (request, response) => {
 				});
 			} catch (error) {
 				renderData.error = 'Invalid Discord refresh token. Remove account and relink';
-				response.render('account/account', renderData);
+				return response.render('account/account', renderData);
 			}
 
 			// TODO: Add a dedicated endpoint for updating connections?
