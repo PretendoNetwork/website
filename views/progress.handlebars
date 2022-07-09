@@ -10,7 +10,17 @@
 		</div>
 	</div>
 
+
+
 	<div class="all-progress-lists">
+		<div class="donation-progress">
+			<h1 class="title dot">Donation goal</h1>
+			<div class="progress-bar">
+				<div class="progress-bar-inner" style="width: {{ donation.completed_capped }}%;" ></div>
+			</div>
+			<p>Raised <span class="amount">{{ donation.completed_capped }}%</span> of the monthly goal, thanks to <span class="amount">{{ donation.donators }}</span> donators! To become a subscriber and gain access to cool perks, visit the <a href="/account/upgrade">upgrade page</a>.</p>
+		</div>
+
 		{{#each progressLists.sections}}
 		<div class="purple-card">
 			{{> progress-list data=this boards=@root.boards }}

@@ -3,7 +3,7 @@ const util = require('../util');
 const { boards } = require('../../boards/boards.json');
 const router = new Router();
 
-const { getTrelloCache } = require('../cache');
+const { getTrelloCache, getStripeDonationCache } = require('../cache');
 
 router.get('/', async (request, response) => {
 	const renderData = 	{
@@ -20,8 +20,10 @@ router.get('/', async (request, response) => {
 		renderData.account = account;
 	}
 
-	const cache = await getTrelloCache();
-	renderData.cache = cache;
+	const trelloCache = await getTrelloCache();
+	renderData.progressLists = trelloCache;
+	const stripeDonationCache = await getStripeDonationCache();
+	renderData.donation = stripeDonationCache;
 
 	response.render('progress', renderData);
 });
