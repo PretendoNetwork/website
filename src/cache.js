@@ -13,9 +13,18 @@ let stripeDonationCache;
 async function getTrelloCache() {
 	const available = await trelloAPIAvailable();
 	if (!available) {
-		return {
-			update_time: Date.now(),
-			sections: []
+		return trelloCache || {
+			update_time: 0,
+			sections: [{
+				title: 'Upstream API error',
+				id: '',
+				percentage_complete: '',
+				progress: {
+					not_started: [ 'Trello API unavailable' ],
+					started: [],
+					completed: []
+				}
+			}],
 		};
 	}
 
@@ -83,7 +92,7 @@ async function updateTrelloCache() {
 
 async function trelloAPIAvailable() {
 	const { status } = await got('https://trello.status.atlassian.com/api/v2/status.json').json();
-	return status.description === 'All Systems Operational';
+	return status.indicator !== 'major' && status.indicator !== 'critical';
 }
 
 async function getStripeDonationCache() {
