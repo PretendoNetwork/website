@@ -7,7 +7,7 @@ const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
 const Stripe = require('stripe');
 const redirectMiddleware = require('./middleware/redirect');
-const localeMiddleware = require('./middleware/locale');
+const renderDataMiddleware = require('./middleware/render-data');
 const database = require('./database');
 const util = require('./util');
 const logger = require('./logger');
@@ -67,7 +67,7 @@ app.use(expressLocale({
 	'default': 'en-US'
 }));
 app.use(redirectMiddleware);
-app.use(localeMiddleware);
+app.use(renderDataMiddleware);
 
 logger.info('Setting up static public folder');
 app.use(express.static('public'));

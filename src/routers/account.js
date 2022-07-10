@@ -31,14 +31,7 @@ router.get('/', async (request, response) => {
 	}
 
 	// Setup the data to be sent to the handlebars renderer
-	const renderData = {
-		success: request.cookies.success,
-		error: request.cookies.error
-	};
-
-	// Reset message cookies
-	response.clearCookie('success', { domain: '.pretendo.network' });
-	response.clearCookie('error', { domain: '.pretendo.network' });
+	const renderData = {};
 
 	// Check for Stripe messages
 	const { upgrade_success } = request.query;
@@ -201,13 +194,7 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/login', async (request, response) => {
-	const renderData = {
-		error: request.cookies.error
-	};
-
-	response.clearCookie('error', { domain: '.pretendo.network' });
-
-	response.render('account/login', renderData);
+	response.render('account/login');
 });
 
 router.post('/login', async (request, response) => {
@@ -220,7 +207,7 @@ router.post('/login', async (request, response) => {
 	});
 
 	if (apiResponse.statusCode !== 200) {
-		response.cookie('error', apiResponse.body.error, { domain: '.pretendo.network' });
+		response.cookie('error_message', apiResponse.body.error, { domain: '.pretendo.network' });
 		return response.redirect('/account/login');
 	}
 
@@ -251,13 +238,11 @@ router.post('/login', async (request, response) => {
 
 router.get('/register', async (request, response) => {
 	const renderData = {
-		error: request.cookies.error,
 		email: request.cookies.email,
 		username: request.cookies.username,
 		mii_name: request.cookies.mii_name,
 	};
 
-	response.clearCookie('error', { domain: '.pretendo.network' });
 	response.clearCookie('email', { domain: '.pretendo.network' });
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
@@ -277,7 +262,7 @@ router.post('/register', async (request, response) => {
 	});
 
 	if (apiResponse.statusCode !== 200) {
-		response.cookie('error', apiResponse.body.error, { domain: '.pretendo.network' });
+		response.cookie('error_message', apiResponse.body.error, { domain: '.pretendo.network' });
 		return response.redirect('/account/register');
 	}
 
@@ -287,7 +272,6 @@ router.post('/register', async (request, response) => {
 	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
 	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
 
-	response.clearCookie('error', { domain: '.pretendo.network' });
 	response.clearCookie('email', { domain: '.pretendo.network' });
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
@@ -314,7 +298,7 @@ router.get('/connect/discord', async (request, response) => {
 			grantType: 'authorization_code',
 		});
 	} catch (error) {
-		response.cookie('error', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
+		response.cookie('error_message', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
 
@@ -371,7 +355,9 @@ router.get('/connect/discord', async (request, response) => {
 		}
 	}
 
-	response.cookie('success', 'Discord account linked successfully', { domain: '.pretendo.network' }).redirect('/account');
+	response.cookie('success_message', 'Discord account linked successfully', { domain: '.pretendo.network' });
+
+	response.redirect('/account');
 });
 
 router.get('/online-files', async (request, response) => {
@@ -662,7 +648,7 @@ router.post('/stripe/checkout/:priceId', async (request, response) => {
 	const pnid = await database.PNID.findOne({ pid });
 
 	if (pnid.get('access_level') >= 2) {
-		response.cookie('error', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
 
@@ -684,7 +670,8 @@ router.post('/stripe/checkout/:priceId', async (request, response) => {
 	} catch (error) {
 		// Maybe we need a dedicated error page?
 		// Or handle this as not cookies?
-		response.cookie('error', error.message, { domain: '.pretendo.network' });
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+
 		return response.redirect('/account');
 	}
 });
@@ -756,7 +743,7 @@ router.post('/stripe/unsubscribe', async (request, response) => {
 		} catch (error) {
 			logger.error(`Error canceling old user subscription | ${pnid.get('connections.stripe.customer_id')}, ${pid}, ${subscriptionId} | - ${error.message}`);
 
-			response.cookie('error', 'Error canceling subscription! Contact support if issue persists', { domain: '.pretendo.network' });
+			response.cookie('error_message', 'Error canceling subscription! Contact support if issue persists', { domain: '.pretendo.network' });
 			
 			return response.redirect('/account');
 		}
