@@ -1,6 +1,5 @@
 .select-box {
   display: flex;
-  width: 188px;
   flex-direction: column;
   position: relative;
   user-select: none;
@@ -12,7 +11,7 @@
 
 .select-box .options-container {
   max-height: 0;
-  width: 100%;
+  width: fit-content;
   opacity: 0;
   transition: all 0.4s;
   overflow: hidden;
@@ -20,34 +19,8 @@
   background-color: var(--btn-secondary);
   order: 1;
   position: absolute;
-  top: 50px;
-}
-
-.selected-locale {
-  margin-bottom: 8px;
-  position: relative;
-  width: 188px;
-  height: 45px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  background-color: var(--btn-secondary);
-  color: white;
-  order: 0;
-}
-
-.selected-locale::after {
-  content: "";
-  width: 1.2rem;
-  height: 1.2rem;
-  background: url("/assets/images/down-arrow.svg");
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transition: transform 150ms;
-  transform: translateY(-50%);
-  background-size: contain;
-  background-position: center;
+  top: 48px;
+  right: 0;
 }
 
 .select-box .option .item {
@@ -67,25 +40,21 @@
   overflow-y: auto;
 }
 
-.select-box .options-container.active + .selected-locale::after {
+.select-box .options-container.active + .locale-dropdown-toggle::after {
   transform: translateY(-50%) rotateX(180deg);
 }
 
 .select-box .options-container::-webkit-scrollbar {
   width: 8px;
-  background: #0d141f;
-  background: #81878f;
-  background: #f1f2f3;
+  background: var(--btn-secondary);
   border-radius: 0 5px 5px 0;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
-  background: #81878f;
+  background: var(--text-secondary);
   border-radius: 0 5px 5px 0;
 }
-.select-box .option,
-.selected-locale {
+.select-box .option {
   padding: 12px 15px;
   cursor: pointer;
 }

@@ -18,9 +18,10 @@
 				<a href="/account/passwordreset" class="pwdreset">Forgot your password?</a>
 			</div>
 			<input name="grant_type" id="grant_type" type="hidden" value="password">
+			<input name="redirect" id="redirect" type="hidden" value="{{redirect}}">
 			<div class="buttons">
 				<button type="submit">Login</button>
-			<a href="/account/register" class="register">Don't have an account?</a>
+			<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">Don't have an account?</a>
 			</div>
 		</form>
 	</div>

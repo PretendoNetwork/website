@@ -100,6 +100,7 @@ router.get('/', async (request, response) => {
 	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
 
 	// Check if a Discord account is linked to the PNID
 	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {
@@ -117,7 +118,7 @@ router.get('/', async (request, response) => {
 				});
 			} catch (error) {
 				renderData.error = 'Invalid Discord refresh token. Remove account and relink';
-				response.render('account/account', renderData);
+				return response.render('account/account', renderData);
 			}
 
 			// TODO: Add a dedicated endpoint for updating connections?
@@ -197,6 +198,8 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
 	response.render('account/account', renderData);
 });
 
@@ -208,6 +211,8 @@ router.get('/login', async (request, response) => {
 		error: request.cookies.error
 	};
 
+	renderData.redirect = request.query.redirect;
+
 	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	response.render('account/login', renderData);
@@ -215,6 +220,7 @@ router.get('/login', async (request, response) => {
 
 router.post('/login', async (request, response) => {
 	const { username, password } = request.body;
+	let { redirect } = request.body;
 
 	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
 		username,
@@ -249,7 +255,11 @@ router.post('/login', async (request, response) => {
 
 	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+
+	response.redirect(redirect || '/account');
 });
 
 router.get('/register', async (request, response) => {
@@ -268,11 +278,19 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
+	let redirect = request.query.redirect;
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+	
+	renderData.redirect = redirect;
+
 	response.render('account/register', renderData);
 });
 
 router.post('/register', async (request, response) => {
 	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	let { redirect } = request.body;
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -298,7 +316,20 @@ router.post('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+
+	response.redirect(redirect || '/account');
+});
+
+router.get('/logout', async(_request, response) => {
+	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
+	response.clearCookie('access_token', { domain: '.pretendo.network' });
+	response.clearCookie('token_type', { domain: '.pretendo.network' });
+	response.clearCookie('ph', { domain: '.pretendo.network' });
+
+	response.redirect('/');
 });
 
 router.get('/connect/discord', async (request, response) => {
@@ -375,7 +406,7 @@ router.get('/online-files', async (request, response) => {
 
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token|| !request.cookies.ph) {
-		return response.redirect('/account/login');
+		return response.redirect('/account/login?redirect=/online-files');
 	}
 
 	// Attempt to get user data
@@ -519,7 +550,7 @@ router.get('/miieditor', async (request, response) => {
 router.get('/upgrade', async (request, response) => {
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login');
+		return response.redirect('/account/login?redirect=/account/upgrade');
 	}
 
 	// Attempt to get user data

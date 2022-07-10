@@ -23,31 +23,37 @@
   margin: 8px 0 4px;
 }
 .account-sidebar .user .username {
-  margin: 0px;
+  margin: 0;
 }
 .account-sidebar .user .tier-name {
-  margin: 0px;
+  margin: 12px 0;
   line-height: 1.2em;
   border-radius: 1.2em;
-  border-width: 5px;
+  border-width: 2px;
   border-style: solid;
+  padding: 4px 16px;
 }
 .account-sidebar .user .tier-level-0 {
-  color:gray;
-  border-color: gray;
+  background: #2a2f50;
+  color: var(--text-secondary);
+  border-color: #383f6b;
 }
 .account-sidebar .user .tier-level-1 {
-  color:red;
-  border-color: red;
+  background: rgba(255, 132, 132, 0.2);
+  color: #FF8484;
+  border-color: rgba(255, 132, 132, 0.8);
 }
 .account-sidebar .user .tier-level-2 {
-  color:darkorange;
-  border-color: darkorange;
+  background: rgba(89, 201, 165, 0.3);
+  color:#59c9a5;
+  border-color: #59c9a5;
 }
 .account-sidebar .user .tier-level-3 {
-  color:gold;
-  border-color: gold;
+  background: rgba(202, 177, 251, 0.3);
+  color:#cab1fb;
+  border-color: #cab1fb;
 }
+
 .account-sidebar .user .mii {
   width: 128px;
   height: 128px;

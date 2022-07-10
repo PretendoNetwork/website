@@ -36,18 +36,21 @@ const postList = () => {
 };
 
 router.get('/', async (request, response) => {
-
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
-
-	response.render('blog/blog', {
+	const renderData = 	{
 		layout: 'main',
-		locale,
-		localeString,
-		postList
-	});
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		postList,
+	};
+
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
+
+	response.render('blog/blog', renderData);
 });
 
 // RSS feed
@@ -69,10 +72,19 @@ router.get('/feed.xml', async (request, response) => {
 
 router.get('/:slug', async (request, response, next) => {
 
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+	const renderData = 	{
+		layout: 'blog-opengraph',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		postList,
+	};
 
-	const localeString = reqLocale.toString();
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
 
 	// Get the name of the post from the URL
 	const postName = request.params.slug;
@@ -89,6 +101,7 @@ router.get('/:slug', async (request, response, next) => {
 	// Convert the post info into JSON and separate it and the content
 	// eslint-disable-next-line prefer-const
 	let { data: postInfo, content } = matter(rawPost);
+	renderData.postInfo = postInfo;
 
 	// Replace [yt-iframe](videoID) with the full <iframe />
 	content = content
@@ -97,14 +110,9 @@ router.get('/:slug', async (request, response, next) => {
 
 	// Convert the content into HTML
 	const htmlPost = marked.parse(content);
+	renderData.htmlPost = htmlPost;
 
-	response.render('blog/blogpost', {
-		layout: 'blog-opengraph',
-		locale,
-		localeString,
-		postInfo,
-		htmlPost,
-	});
+	response.render('blog/blogpost', renderData);
 });
 
 module.exports = router;

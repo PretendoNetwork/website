@@ -11,32 +11,45 @@ router.get('/', async (request, response) => {
 });
 
 router.get('/search', async (request, response) => {
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
-
-	response.render('docs/search', {
+	const renderData = 	{
 		layout: 'main',
-		locale,
-		localeString,
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
 		currentPage: request.params.slug,
-	});
+	};
+
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
+
+	response.render('docs/search', renderData);
 });
 
 router.get('/:slug', async (request, response, next) => {
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
+	const renderData = 	{
+		layout: 'main',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		currentPage: request.params.slug,
+	};
 
-	const localeString = reqLocale.toString();
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
+	if (renderData.isLoggedIn) {
+		const account = await util.getAccount(request, response);
+		renderData.account = account;
+	}
 
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;
 
-	let markdownLocale = localeString;
+	let markdownLocale = renderData.localeString;
 	let missingInLocale = false;
 	// Check if the MD file exists in the user's locale, if not try en-US and show notice, or finally log error and show 404.
-	if (fs.existsSync(path.join('docs', localeString, `${pageName}.md`))) {
+	if (fs.existsSync(path.join('docs', renderData.localeString, `${pageName}.md`))) {
 		null;
 	} else if (fs.existsSync(path.join('docs', 'en-US', `${pageName}.md`))) {
 		markdownLocale = 'en-US';
@@ -45,6 +58,7 @@ router.get('/:slug', async (request, response, next) => {
 		next();
 		return;
 	}
+	renderData.missingInLocale = missingInLocale;
 
 	let content;
 	// Get the markdown file corresponding to the page.
@@ -57,22 +71,16 @@ router.get('/:slug', async (request, response, next) => {
 
 	// Convert the content into HTML
 	content = marked.parse(content);
+	renderData.content = content;
 
 	// A boolean to show the quick links grid or not.
 	let showQuickLinks = false;
 	if (pageName === 'welcome') {
 		showQuickLinks = true;
 	}
+	renderData.showQuickLinks = showQuickLinks;
 
-	response.render('docs/docs', {
-		layout: 'main',
-		locale,
-		localeString,
-		content,
-		currentPage: request.params.slug,
-		missingInLocale,
-		showQuickLinks
-	});
+	response.render('docs/docs', renderData);
 });
 
 module.exports = router;
