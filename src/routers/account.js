@@ -207,8 +207,6 @@ router.get('/login', async (request, response) => {
 		error: request.cookies.error
 	};
 
-	renderData.redirect = request.query.redirect;
-
 	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	response.render('account/login', renderData);
@@ -266,13 +264,6 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('email', { domain: '.pretendo.network' });
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
-
-	let redirect = request.query.redirect;
-	if (!redirect.startsWith('/')) {
-		redirect = null;
-	}
-	
-	renderData.redirect = redirect;
 
 	response.render('account/register', renderData);
 });
