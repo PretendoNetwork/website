@@ -3,9 +3,7 @@ const util = require('../util');
 const router = new Router();
 
 router.get('/', async (request, response) => {
-	const renderData = 	{
-		layout: 'main'
-	};
+	const renderData = 	{};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
 

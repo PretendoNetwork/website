@@ -12,8 +12,7 @@ router.get('/', async (request, response) => {
 
 router.get('/search', async (request, response) => {
 	const renderData = 	{
-		layout: 'main',
-		currentPage: request.params.slug,
+		currentPage: request.params.slug
 	};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
@@ -28,8 +27,7 @@ router.get('/search', async (request, response) => {
 
 router.get('/:slug', async (request, response, next) => {
 	const renderData = 	{
-		layout: 'main',
-		currentPage: request.params.slug,
+		currentPage: request.params.slug
 	};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;

@@ -32,7 +32,6 @@ router.get('/', async (request, response) => {
 
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {
-		layout: 'main',
 		success: request.cookies.success,
 		error: request.cookies.error
 	};
@@ -203,7 +202,6 @@ router.get('/', async (request, response) => {
 
 router.get('/login', async (request, response) => {
 	const renderData = {
-		layout: 'main',
 		error: request.cookies.error
 	};
 
@@ -253,7 +251,6 @@ router.post('/login', async (request, response) => {
 
 router.get('/register', async (request, response) => {
 	const renderData = {
-		layout: 'main',
 		error: request.cookies.error,
 		email: request.cookies.email,
 		username: request.cookies.username,
@@ -510,7 +507,6 @@ router.get('/miieditor', async (request, response) => {
 	};
 
 	response.render('account/miieditor', {
-		layout: 'main',
 		encodedUserMiiData,
 		editorToHex
 	});
@@ -561,7 +557,6 @@ router.get('/upgrade', async (request, response) => {
 	const pnid = await database.PNID.findOne({ pid });
 
 	const renderData = {
-		layout: 'main',
 		error: request.cookies.error,
 		currentTier: pnid.get('connections.stripe.price_id'),
 		donationCache: await cache.getStripeDonationCache()

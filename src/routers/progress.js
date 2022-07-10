@@ -7,7 +7,6 @@ const { getTrelloCache, getStripeDonationCache } = require('../cache');
 
 router.get('/', async (request, response) => {
 	const renderData = 	{
-		layout: 'main',
 		boards
 	};
 

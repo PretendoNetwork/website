@@ -37,8 +37,7 @@ const postList = () => {
 
 router.get('/', async (request, response) => {
 	const renderData = 	{
-		layout: 'main',
-		postList,
+		postList
 	};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
