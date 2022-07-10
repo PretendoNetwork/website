@@ -1,15 +1,19 @@
-const Trello =require('trello');
+const Trello = require('trello');
+const Stripe = require('stripe');
 const got = require('got');
 const config = require('../config.json');
 
 const trello = new Trello(config.trello.api_key, config.trello.api_token);
+const stripe = new Stripe(config.stripe.secret_key);
+
 const VALID_LIST_NAMES = ['Not Started', 'Started', 'Completed'];
-let cache;
+let trelloCache;
+let stripeDonationCache;
 
 async function getTrelloCache() {
 	const available = await trelloAPIAvailable();
 	if (!available) {
-		return cache || {
+		return trelloCache || {
 			update_time: 0,
 			sections: [{
 				title: 'Upstream API error',
@@ -24,19 +28,19 @@ async function getTrelloCache() {
 		};
 	}
 
-	if (!cache) {
-		cache = await updateTrelloCache();
+	if (!trelloCache) {
+		trelloCache = await updateTrelloCache();
 	}
 
-	if (cache.update_time < Date.now() - (1000 * 60 * 60)) {
-		cache = await updateTrelloCache();
+	if (trelloCache.update_time < Date.now() - (1000 * 60 * 60)) {
+		trelloCache = await updateTrelloCache();
 	}
 
-	return cache;
+	return trelloCache;
 }
 
 async function updateTrelloCache() {
-	const progressData = {
+	const progressCache = {
 		update_time: Date.now(),
 		sections: []
 	};
@@ -79,11 +83,11 @@ async function updateTrelloCache() {
 		}
 
 		if (meta.progress.not_started.length !== 0 || meta.progress.started.length !== 0 || meta.progress.completed.length !== 0) {
-			progressData.sections.push(meta);
+			progressCache.sections.push(meta);
 		}
 	}
 
-	return progressData;
+	return progressCache;
 }
 
 async function trelloAPIAvailable() {
@@ -91,7 +95,58 @@ async function trelloAPIAvailable() {
 	return status.indicator !== 'major' && status.indicator !== 'critical';
 }
 
+async function getStripeDonationCache() {
+	if (!stripeDonationCache) {
+		stripeDonationCache = await updateStripeDonationCache();
+	}
+
+	if (stripeDonationCache.update_time < Date.now() - (1000 * 60 * 60)) {
+		stripeDonationCache = await updateStripeDonationCache();
+	}
+
+	return stripeDonationCache;
+}
+
+async function updateStripeDonationCache() {
+	const donationCache = {
+		update_time: Date.now(),
+		goal: config.stripe.goal_cents,
+		total: 0,
+		donators: 0,
+		completed_real: 0,
+		completed_capped: 0
+	};
+
+	let hasMore = true;
+	let lastId;
+
+	while (hasMore) {
+		const { data: activeSubscriptions, has_more } = await stripe.subscriptions.list({
+			limit: 100,
+			status: 'active',
+			starting_after: lastId
+		});
+
+		donationCache.donators += activeSubscriptions.length;
+
+		for (const subscription of activeSubscriptions) {
+			donationCache.total += subscription.plan.amount;
+			lastId = subscription.id;
+		}
+
+		hasMore = has_more;
+	}
+
+	donationCache.goal_dollars = donationCache.goal / 100;
+	donationCache.total_dollars = donationCache.total / 100;
+
+	donationCache.completed_real = Math.floor((donationCache.total / donationCache.goal) * 100); // real completion amount
+	donationCache.completed_capped = Math.max(0, Math.min(donationCache.completed_real, 100)); // capped at 100
+
+	return donationCache;
+}
+
 module.exports = {
 	getTrelloCache,
-	updateTrelloCache
+	getStripeDonationCache
 };

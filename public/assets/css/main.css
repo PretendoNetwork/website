@@ -94,10 +94,108 @@ header nav a:hover {
     	transition: color 50ms ease-in-out;
 }
 
-.locale-dropdown {
+header .right-section {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 24px;
 	margin-left: auto;
 	z-index: 2;
-	height: 45px;
+	color: var(--text-secondary);
+}
+
+header .locale-dropdown-toggle {
+  width: fit-content;
+  height: 24px;
+	padding: 0;
+	margin: auto;
+  transition: color 150ms;
+	cursor: pointer;
+}
+header .locale-dropdown-toggle:hover,
+header .locale-dropdown-toggle.active {
+  color: var(--text);
+}
+
+header .user-widget-wrapper {
+	height: 24px;
+}
+
+header .user-widget-wrapper a.login-link {
+	color: var(--text-secondary);
+	text-decoration: none;
+	transition: color 150ms;
+}
+header .user-widget-wrapper a.login-link:hover {
+	color: var(--text);
+}
+
+header .user-widget-wrapper.logged-in {
+	position: relative;
+	width: 32px;
+	height: 32px;
+}
+header .user-widget-wrapper.logged-in .user-widget-toggle {
+	width: 32px;
+	height: 32px;
+	background: var(--text-secondary-2);
+	border-radius: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+header .user-widget-wrapper .user-widget-toggle img,
+header .user-widget .user-avatar img {
+	width: 100%;
+	height: 100%;
+}
+header .user-widget {
+	max-height: 0;
+	overflow: hidden;
+
+	box-sizing: border-box;
+	transition: max-height 300ms, padding 200ms, opacity 150ms;
+
+	position: absolute;
+	right: 0;
+	top: 48px;
+	padding: 0;
+	background: #2a2f50;
+	border-radius: 8px;
+	text-align: center;
+	opacity: 0;
+
+	box-shadow: 0 0 10px -2px #111531;
+}
+header .user-widget.active {
+	max-height: 100vh;
+	padding: 36px;
+	opacity: 1;
+}
+header .user-widget .user-avatar {
+	width: 128px;
+	height: 128px;
+	margin: auto;
+	background: var(--text-secondary-2);
+	border-radius: 50%;
+	overflow: hidden;
+}
+header .user-widget .user-info {
+	margin-top: 12px;
+}
+header .user-widget .user-info .mii-name {
+	color: var(--text);
+}
+header .user-widget .buttons {
+	margin-top: 12px;
+}
+header .user-widget .button {
+	margin-top: 12px;
+	width: 100%;
+	padding: 8px 60px;
+	cursor: pointer;
+}
+header .user-widget .button.logout {
+	background: #383f6b;
+	color: var(--text);
 }
 
 /* Misc */
@@ -693,6 +791,44 @@ section.update-signup div.circle {
 }
 
 /* Progress */
+
+.donation-progress {
+	padding: 50px 20px;
+  border-radius: 10px;
+  background: #151934;
+	grid-column: span 2;
+}
+.donation-progress h1 {
+	display: inline-block;
+	margin: 0;
+}
+.donation-progress span {
+	font-weight: bold;
+}
+.donation-progress a {
+	color: #9d6ff3;
+	text-decoration: none;
+	font-weight: bold;
+}
+.donation-progress a:hover {
+	text-decoration: underline;
+}
+
+.progress-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 12px;
+	margin: 1rem 0;
+	border-radius: 6px;
+	background: var(--btn-secondary);
+	overflow: hidden;
+}
+.progress-bar-inner {
+	height: 100%;
+	background-color: var(--theme);
+}
+
 .all-progress-lists {
 	margin-top: 50px;
 	display: grid;
@@ -928,6 +1064,9 @@ footer div.discord-server-card svg {
 	.feature-list-wrapper {
 		grid-template-columns: 100%;
 	}
+	.donation-progress {
+		grid-column: span 1;
+	}
 
 	header nav a:not(.keep-on-mobile) {
 		/* You don't really need it on mobile IMO */
@@ -1118,25 +1257,6 @@ footer div.discord-server-card svg {
 		margin: auto !important;
 	}
 
-	.selected-locale .locale-names {
-		display: none;
-	}
-
-	.selected-locale {
-		width: 80px;
-		margin-left: auto;
-		margin-right: 12px;
-	}
-
-	.locale-dropdown {
-		width: fit-content;
-	}
-
-	.select-box .options-container {
-		width: 150px;
-		right: 12px;
-	}
-
 	footer {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(4, fit-content(100%));
@@ -1167,14 +1287,4 @@ footer div.discord-server-card svg {
 	header nav a {
 		margin: 0 10px;
 	}
-}
-
-@media screen and (max-width: 330px) {
-	.locale-dropdown .selected-locale {
-		width: 50px;
-	}
-	.locale-dropdown .selected-locale::after {
-		display: none;
-	}
-
 }

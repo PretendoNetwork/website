@@ -17,5 +17,23 @@
 			"role id"
 		]
 	},
+	"stripe": {
+		"secret_key": "sk_secret",
+		"webhook_secret": "whsec_secret"
+	},
+	"database": {
+		"account": {
+			"uri": "mongodb://127.0.0.1:27017",
+			"database": "pretendo",
+			"options": {
+				"useNewUrlParser": true,
+				"useUnifiedTopology": true
+			}
+		}
+	},
+	"gmail": {
+		"user": "email@gmail.com",
+		"pass": "app-password"
+	},
 	"aes_key": "hex key here"
 }

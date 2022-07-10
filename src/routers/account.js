@@ -1,12 +1,20 @@
-const { Router } = require('express');
+const express = require('express');
 const crypto = require('crypto');
 const DiscordOauth2 = require('discord-oauth2');
 const { v4: uuidv4 } = require('uuid');
 const AdmZip = require('adm-zip');
+const Stripe = require('stripe');
+const database = require('../database');
+const cache = require('../cache');
 const util = require('../util');
+const logger = require('../logger');
 const config = require('../../config.json');
-const router = new Router();
+
+const { Router } = express;
 const aesKey = Buffer.from(config.aes_key, 'hex');
+
+const stripe = new Stripe(config.stripe.secret_key);
+const router = new Router();
 
 // Create OAuth client
 const discordOAuth = new DiscordOauth2({
@@ -27,13 +35,22 @@ router.get('/', async (request, response) => {
 		layout: 'main',
 		locale: util.getLocale(request.locale.region, request.locale.language),
 		localeString: request.locale.toString(),
-		linked: request.cookies.linked,
+		success: request.cookies.success,
 		error: request.cookies.error
 	};
 
 	// Reset message cookies
-	response.clearCookie('linked', { domain: '.pretendo.network' });
+	response.clearCookie('success', { domain: '.pretendo.network' });
 	response.clearCookie('error', { domain: '.pretendo.network' });
+
+	// Check for Stripe messages
+	const { upgrade_success } = request.query;
+
+	if (upgrade_success === 'true') {
+		renderData.success = 'Account upgraded successfully';
+	} else if (upgrade_success === 'false') {
+		renderData.error = 'Account upgrade failed';
+	}
 
 	// Attempt to get user data
 	let apiResponse = await util.apiGetRequest('/v1/user', {
@@ -75,9 +92,15 @@ router.get('/', async (request, response) => {
 
 	// Set user account info to render data
 	const account = apiResponse.body;
+	const pid = account.pid;
 
+	const pnid = await database.PNID.findOne({ pid });
+
+	renderData.tierName = pnid.get('connections.stripe.tier_name');
+	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
 
 	// Check if a Discord account is linked to the PNID
 	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {
@@ -95,7 +118,7 @@ router.get('/', async (request, response) => {
 				});
 			} catch (error) {
 				renderData.error = 'Invalid Discord refresh token. Remove account and relink';
-				response.render('account/account', renderData);
+				return response.render('account/account', renderData);
 			}
 
 			// TODO: Add a dedicated endpoint for updating connections?
@@ -175,6 +198,8 @@ router.get('/', async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+
 	response.render('account/account', renderData);
 });
 
@@ -186,6 +211,8 @@ router.get('/login', async (request, response) => {
 		error: request.cookies.error
 	};
 
+	renderData.redirect = request.query.redirect;
+
 	response.clearCookie('error', { domain: '.pretendo.network' });
 
 	response.render('account/login', renderData);
@@ -193,6 +220,7 @@ router.get('/login', async (request, response) => {
 
 router.post('/login', async (request, response) => {
 	const { username, password } = request.body;
+	let { redirect } = request.body;
 
 	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
 		username,
@@ -227,7 +255,11 @@ router.post('/login', async (request, response) => {
 
 	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+
+	response.redirect(redirect || '/account');
 });
 
 router.get('/register', async (request, response) => {
@@ -246,11 +278,19 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
+	let redirect = request.query.redirect;
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+	
+	renderData.redirect = redirect;
+
 	response.render('account/register', renderData);
 });
 
 router.post('/register', async (request, response) => {
 	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	let { redirect } = request.body;
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -276,7 +316,20 @@ router.post('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
-	response.redirect('/account');
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+
+	response.redirect(redirect || '/account');
+});
+
+router.get('/logout', async(_request, response) => {
+	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
+	response.clearCookie('access_token', { domain: '.pretendo.network' });
+	response.clearCookie('token_type', { domain: '.pretendo.network' });
+	response.clearCookie('ph', { domain: '.pretendo.network' });
+
+	response.redirect('/');
 });
 
 router.get('/connect/discord', async (request, response) => {
@@ -346,14 +399,14 @@ router.get('/connect/discord', async (request, response) => {
 		}
 	}
 
-	response.cookie('linked', 'Discord', { domain: '.pretendo.network' }).redirect('/account');
+	response.cookie('success', 'Discord account linked successfully', { domain: '.pretendo.network' }).redirect('/account');
 });
 
 router.get('/online-files', async (request, response) => {
 
 	// Verify the user is logged in
 	if (!request.cookies.access_token || !request.cookies.refresh_token|| !request.cookies.ph) {
-		return response.redirect('/account/login');
+		return response.redirect('/account/login?redirect=/online-files');
 	}
 
 	// Attempt to get user data
@@ -493,5 +546,278 @@ router.get('/miieditor', async (request, response) => {
 		editorToHex
 	});
 });
+
+router.get('/upgrade', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login?redirect=/account/upgrade');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	const pnid = await database.PNID.findOne({ pid });
+
+	const renderData = {
+		layout: 'main',
+		locale: util.getLocale(request.locale.region, request.locale.language),
+		localeString: request.locale.toString(),
+		error: request.cookies.error,
+		currentTier: pnid.get('connections.stripe.price_id'),
+		donationCache: await cache.getStripeDonationCache()
+	};
+
+	const { data: prices } = await stripe.prices.list();
+	const { data: products } = await stripe.products.list();
+
+	renderData.tiers = products
+		.filter(product => product.active)
+		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
+		.map(product => {
+			const price = prices.find(price => price.product === product.id);
+			const perks = [];
+
+			if (product.metadata.discord_read === 'true') {
+				perks.push('Read-only access to select dev channels on Discord');
+			}
+
+			if (product.metadata.beta === 'true') {
+				perks.push('Access the beta servers');
+			}
+
+			return {
+				price_id: price.id,
+				thumbnail: product.images[0],
+				name: product.name,
+				description: product.description,
+				perks,
+				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+			};
+		});
+
+	response.render('account/upgrade', renderData);
+});
+
+router.post('/stripe/checkout/:priceId', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	let customer;
+	const { data: searchResults } = await stripe.customers.search({
+		query: `metadata['pnid_pid']:'${pid}'`
+	});
+
+	if (searchResults.length !== 0) {
+		customer = searchResults[0];
+	} else {
+		customer = await stripe.customers.create({
+			email: account.email.address,
+			metadata: {
+				pnid_pid: pid
+			}
+		});
+	}
+
+	await database.PNID.updateOne({ pid }, {
+		$set: {
+			'connections.stripe.customer_id': customer.id // ensure PNID always has latest customer ID
+		}
+	}, { upsert: true }).exec();
+
+	const priceId = request.params.priceId;
+
+	const pnid = await database.PNID.findOne({ pid });
+
+	if (pnid.get('access_level') >= 2) {
+		response.cookie('error', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
+
+	try {
+		const session = await stripe.checkout.sessions.create({
+			line_items: [
+				{
+					price: priceId,
+					quantity: 1,
+				},
+			],
+			customer: customer.id,
+			mode: 'subscription',
+			success_url: `${config.http.base_url}/account?upgrade_success=true`,
+			cancel_url: `${config.http.base_url}/account?upgrade_success=false`
+		});
+
+		return response.redirect(303, session.url);
+	} catch (error) {
+		// Maybe we need a dedicated error page?
+		// Or handle this as not cookies?
+		response.cookie('error', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
+});
+
+router.post('/stripe/unsubscribe', async (request, response) => {
+	// Verify the user is logged in
+	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+		return response.redirect('/account/login');
+	}
+
+	// Attempt to get user data
+	let apiResponse = await util.apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// Assume expired, refresh and retry request
+		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
+			refresh_token: request.cookies.refresh_token,
+			grant_type: 'refresh_token'
+		});
+
+		if (apiResponse.statusCode !== 200) {
+			return response.redirect('/account/login');
+		}
+
+		const tokens = apiResponse.body;
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		apiResponse = await util.apiGetRequest('/v1/user', {
+			'Authorization': `${tokens.token_type} ${tokens.access_token}`
+		});
+	}
+
+	// If still failed, something went horribly wrong
+	if (apiResponse.statusCode !== 200) {
+		return response.redirect('/account/login');
+	}
+
+	// Set user account info to render data
+	const account = apiResponse.body;
+	const pid = account.pid;
+
+	const pnid = await database.PNID.findOne({ pid });
+	const subscriptionId = pnid.get('connections.stripe.subscription_id');
+	const tierName = pnid.get('connections.stripe.tier_name');
+
+	if (subscriptionId) {
+		try {
+			await stripe.subscriptions.del(subscriptionId);
+
+			const updateData = {
+				'connections.stripe.subscription_id': null,
+				'connections.stripe.price_id':  null,
+				'connections.stripe.tier_level': 0,
+				'connections.stripe.tier_name': null,
+			};
+
+			if (pnid.get('access_level') < 2) {
+				// Fail-safe for if staff members reach here
+				// Mostly only useful during testing
+				updateData.access_level = 0;
+			}
+
+			await database.PNID.updateOne({ pid }, { $set: updateData }).exec();
+		} catch (error) {
+			logger.error(`Error canceling old user subscription | ${pnid.get('connections.stripe.customer_id')}, ${pid}, ${subscriptionId} | - ${error.message}`);
+
+			response.cookie('error', 'Error canceling subscription! Contact support if issue persists', { domain: '.pretendo.network' });
+			
+			return response.redirect('/account');
+		}
+	}
+
+	response.cookie('success', `Unsubscribed from ${tierName}`, { domain: '.pretendo.network' });
+	return response.redirect('/account');
+});
+
+router.post('/stripe/webhook', express.raw({ type: 'application/json' }), async (request, response) => {
+	const stripeSignature = request.headers['stripe-signature'];
+	let event;
+
+	try {
+		event = stripe.webhooks.constructEvent(request.body, stripeSignature, config.stripe.webhook_secret);
+	} catch (err) {
+		return response.status(400).send(`Webhook Error: ${err.message}`);
+	}
+
+	await util.handleStripeEvent(event);
+
+	response.json({ received: true });
+});
+
 
 module.exports = router;
