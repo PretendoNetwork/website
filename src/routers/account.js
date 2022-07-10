@@ -219,7 +219,8 @@ router.get('/login', async (request, response) => {
 });
 
 router.post('/login', async (request, response) => {
-	const { username, password, redirect } = request.body;
+	const { username, password } = request.body;
+	let { redirect } = request.body;
 
 	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
 		username,
@@ -254,6 +255,10 @@ router.post('/login', async (request, response) => {
 
 	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+
 	response.redirect(redirect || '/account');
 });
 
@@ -273,14 +278,19 @@ router.get('/register', async (request, response) => {
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
 
-	const redirect = request.query.redirect;
+	let redirect = request.query.redirect;
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
+	
 	renderData.redirect = redirect;
 
 	response.render('account/register', renderData);
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse, redirect } = request.body;
+	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	let { redirect } = request.body;
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -305,6 +315,10 @@ router.post('/register', async (request, response) => {
 	response.clearCookie('email', { domain: '.pretendo.network' });
 	response.clearCookie('username', { domain: '.pretendo.network' });
 	response.clearCookie('mii_name', { domain: '.pretendo.network' });
+
+	if (!redirect.startsWith('/')) {
+		redirect = null;
+	}
 
 	response.redirect(redirect || '/account');
 });
