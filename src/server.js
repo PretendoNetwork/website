@@ -46,6 +46,7 @@ app.use(expressLocale({
 		/* TODO: map more regions to the available locales */
 		en: 'en-US', 'en-GB': 'en-US', 'en-AU': 'en-US', 'en-CA': 'en-US',
 		ar: 'ar-AR',
+		cn: 'zh-CN',
 		de: 'de-DE',
 		nl: 'nl-NL',
 		es: 'es-ES',
@@ -59,11 +60,12 @@ app.use(expressLocale({
 		pt: 'pt-BR',
 		ro: 'ro-RO',
 		ru: 'ru-RU',
-		tr: 'tr-TR'
+		tr: 'tr-TR',
 	},
 	allowed: [
 		'en', 'en-US', 'en-GB', 'en-AU', 'en-CA',
 		'ar', 'ar-AR',
+		'cn', 'zh-CN', 'zh-HK', 'zh-TW',
 		'de', 'de-DE',
 		'nl', 'nl-NL',
 		'es', 'es-ES',
