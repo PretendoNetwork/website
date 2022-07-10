@@ -13,6 +13,9 @@
   width: 1600px;
   height: 1400px;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .back-arrow {
   position: absolute;
@@ -261,7 +264,7 @@ form button.unsubscribe:hover {
 
 div.unsub-modal-wrapper,
 div.switch-tier-modal-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

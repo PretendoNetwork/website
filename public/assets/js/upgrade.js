@@ -70,6 +70,7 @@ buttons.submit.addEventListener('click', function(e) {
 		oldTierNameSpan.innerText = currentTierElement.dataset.tierName;
 		newTierNameSpan.innerText = document.querySelector('input[name="tier"]:checked').dataset.tierName;
 
+		document.body.classList.add('modal-open');
 		document.querySelector('.switch-tier-modal-wrapper').classList.remove('hidden');
 	} else {
 		submitForm();
@@ -83,12 +84,14 @@ buttons.unsubModal.show.addEventListener('click', function(e) {
 	tierNameSpan.innerText = currentTierElement.dataset.tierName;
 
 	// Show the unsubscribe modal
+	document.body.classList.add('modal-open');
 	document.querySelector('.unsub-modal-wrapper').classList.remove('hidden');
 });
 buttons.unsubModal.close.addEventListener('click', function(e) {
 	e.preventDefault();
 
 	// Hide the unsubscribe modal
+	document.body.classList.remove('modal-open');
 	document.querySelector('.unsub-modal-wrapper').classList.add('hidden');
 });
 buttons.unsubModal.confirm.addEventListener('click', function(e) {
@@ -101,6 +104,7 @@ buttons.switchTierModal.close.addEventListener('click', function(e) {
 	e.preventDefault();
 
 	// Hide the switch tier modal
+	document.body.classList.remove('modal-open');
 	document.querySelector('.switch-tier-modal-wrapper').classList.add('hidden');
 });
 buttons.switchTierModal.confirm.addEventListener('click', function(e) {
