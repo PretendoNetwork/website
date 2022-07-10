@@ -6,9 +6,10 @@ const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
 const Stripe = require('stripe');
-const logger = require('./logger');
+const redirectMiddleware = require('./middleware/redirect');
 const database = require('./database');
 const util = require('./util');
+const logger = require('./logger');
 const config = require('../config.json');
 const defaultLocale = require('../locales/US_en.json');
 
@@ -19,25 +20,7 @@ const stripe = new Stripe(config.stripe.secret_key);
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
-
-logger.info('Setting up static public folder');
-app.use(express.static('public'));
-
-logger.info('Importing page routers');
-const routers = {
-	home: require('./routers/home'),
-	faq: require('./routers/faq'),
-	docs: require('./routers/docs'),
-	progress: require('./routers/progress'),
-	account: require('./routers/account'),
-	blog: require('./routers/blog'),
-	localization: require('./routers/localization'),
-	aprilfools: require('./routers/aprilfools')
-};
-
 app.use(cookieParser());
-
-// Locale express middleware setup
 app.use(expressLocale({
 	'priority': ['cookie', 'accept-language', 'map', 'default'],
 	cookie: { name: 'preferredLocale' },
@@ -82,6 +65,22 @@ app.use(expressLocale({
 	],
 	'default': 'en-US'
 }));
+app.use(redirectMiddleware);
+
+logger.info('Setting up static public folder');
+app.use(express.static('public'));
+
+logger.info('Importing page routers');
+const routers = {
+	home: require('./routers/home'),
+	faq: require('./routers/faq'),
+	docs: require('./routers/docs'),
+	progress: require('./routers/progress'),
+	account: require('./routers/account'),
+	blog: require('./routers/blog'),
+	localization: require('./routers/localization'),
+	aprilfools: require('./routers/aprilfools')
+};
 
 app.use('/', routers.home);
 app.use('/faq', routers.faq);
