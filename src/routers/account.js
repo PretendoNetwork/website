@@ -33,8 +33,6 @@ router.get('/', async (request, response) => {
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		success: request.cookies.success,
 		error: request.cookies.error
 	};
@@ -206,8 +204,6 @@ router.get('/', async (request, response) => {
 router.get('/login', async (request, response) => {
 	const renderData = {
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		error: request.cookies.error
 	};
 
@@ -260,8 +256,6 @@ router.post('/login', async (request, response) => {
 router.get('/register', async (request, response) => {
 	const renderData = {
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		error: request.cookies.error,
 		email: request.cookies.email,
 		username: request.cookies.username,
@@ -480,10 +474,6 @@ router.get('/online-files', async (request, response) => {
 });
 
 router.get('/miieditor', async (request, response) => {
-
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
 	// Should obviously be the user's
 	const encodedUserMiiData = 'AwAAQOlVognnx0GC2X0LLQOzuI0n2QAAAUBiAGUAbABsAGEAAABFAAAAAAAAAEBAEgCBAQRoQxggNEYUgRIXaA0AACkDUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6G';
 
@@ -530,8 +520,6 @@ router.get('/miieditor', async (request, response) => {
 
 	response.render('account/miieditor', {
 		layout: 'main',
-		locale,
-		localeString: reqLocale.toString(),
 		encodedUserMiiData,
 		editorToHex
 	});
@@ -583,8 +571,6 @@ router.get('/upgrade', async (request, response) => {
 
 	const renderData = {
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		error: request.cookies.error,
 		currentTier: pnid.get('connections.stripe.price_id'),
 		donationCache: await cache.getStripeDonationCache()

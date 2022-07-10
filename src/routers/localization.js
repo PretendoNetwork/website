@@ -4,9 +4,7 @@ const router = new Router();
 
 router.get('/', async (request, response) => {
 	const renderData = 	{
-		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
+		layout: 'main'
 	};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;

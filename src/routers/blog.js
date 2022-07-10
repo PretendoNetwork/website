@@ -38,8 +38,6 @@ const postList = () => {
 router.get('/', async (request, response) => {
 	const renderData = 	{
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		postList,
 	};
 
@@ -74,8 +72,6 @@ router.get('/:slug', async (request, response, next) => {
 
 	const renderData = 	{
 		layout: 'blog-opengraph',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		postList,
 	};
 

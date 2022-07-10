@@ -8,9 +8,7 @@ const { getTrelloCache, getStripeDonationCache } = require('../cache');
 router.get('/', async (request, response) => {
 	const renderData = 	{
 		layout: 'main',
-		boards,
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
+		boards
 	};
 
 	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;

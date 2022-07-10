@@ -13,8 +13,6 @@ router.get('/', async (request, response) => {
 router.get('/search', async (request, response) => {
 	const renderData = 	{
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		currentPage: request.params.slug,
 	};
 
@@ -31,8 +29,6 @@ router.get('/search', async (request, response) => {
 router.get('/:slug', async (request, response, next) => {
 	const renderData = 	{
 		layout: 'main',
-		locale: util.getLocale(request.locale.region, request.locale.language),
-		localeString: request.locale.toString(),
 		currentPage: request.params.slug,
 	};
 
@@ -46,10 +42,10 @@ router.get('/:slug', async (request, response, next) => {
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;
 
-	let markdownLocale = renderData.localeString;
+	let markdownLocale = response.locals.localeString;
 	let missingInLocale = false;
 	// Check if the MD file exists in the user's locale, if not try en-US and show notice, or finally log error and show 404.
-	if (fs.existsSync(path.join('docs', renderData.localeString, `${pageName}.md`))) {
+	if (fs.existsSync(path.join('docs', markdownLocale, `${pageName}.md`))) {
 		null;
 	} else if (fs.existsSync(path.join('docs', 'en-US', `${pageName}.md`))) {
 		markdownLocale = 'en-US';
