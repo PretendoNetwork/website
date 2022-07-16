@@ -14,7 +14,6 @@ const logger = require('../logger');
 const config = require('../../config.json');
 
 const { Router } = express;
-const aesKey = Buffer.from(config.aes_key, 'hex');
 
 const stripe = new Stripe(config.stripe.secret_key);
 const router = new Router();
@@ -48,7 +47,7 @@ router.get('/', pnidMiddleware, async (request, response) => {
 	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
 
 	// Check if a Discord account is linked to the PNID
 	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {
@@ -67,7 +66,7 @@ router.get('/', pnidMiddleware, async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token && request.cookies.ph;
+	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
 
 	response.render('account/account', renderData);
 });
@@ -85,18 +84,6 @@ router.post('/login', async (request, response) => {
 		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
 		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
 		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		const account = await util.getUserAccountData(request, response);
-
-		const hashedPassword = util.nintendoPasswordHash(password, account.pid);
-		const hashedPasswordBuffer = Buffer.from(hashedPassword, 'hex');
-
-		const cipher = crypto.createCipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
-
-		let encryptedBody = cipher.update(hashedPasswordBuffer);
-		encryptedBody = Buffer.concat([encryptedBody, cipher.final()]);
-
-		response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
 
 		response.redirect(request.redirect || '/account');
 
@@ -157,7 +144,6 @@ router.get('/logout', async(_request, response) => {
 	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
 	response.clearCookie('access_token', { domain: '.pretendo.network' });
 	response.clearCookie('token_type', { domain: '.pretendo.network' });
-	response.clearCookie('ph', { domain: '.pretendo.network' });
 
 	response.redirect('/');
 });
@@ -190,13 +176,11 @@ router.get('/connect/discord', pnidMiddleware, async (request, response) => {
 	}
 });
 
-router.get('/online-files', pnidMiddleware, async (request, response) => {
+router.post('/online-files', pnidMiddleware, async (request, response) => {
 	const { account } = request;
+	const { password } = request.body;
 
-	const decipher = crypto.createDecipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
-
-	let decryptedPasswordHash = decipher.update(Buffer.from(request.cookies.ph, 'hex'));
-	decryptedPasswordHash = Buffer.concat([decryptedPasswordHash, decipher.final()]);
+	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
 
 	const miiNameBuffer = Buffer.alloc(0x16);
 	const miiName = Buffer.from(account.mii.name, 'utf16le').swap16();
@@ -218,7 +202,7 @@ router.get('/online-files', pnidMiddleware, async (request, response) => {
 	accountDat += 'SimpleAddressId=0\n';
 	accountDat += `PrincipalId=${account.pid.toString(16)}\n`;
 	accountDat += 'IsPasswordCacheEnabled=1\n';
-	accountDat += `AccountPasswordCache=${decryptedPasswordHash.toString('hex')}`;
+	accountDat += `AccountPasswordCache=${hashedPassword}`;
 
 	const onlineFiles = new AdmZip();
 
@@ -227,7 +211,7 @@ router.get('/online-files', pnidMiddleware, async (request, response) => {
 	onlineFiles.addFile('seeprom.bin', Buffer.alloc(0x200)); // nulled SEEPROM
 
 	response.status(200);
-	response.set('Content-Disposition', 'attachment; filename="Online Files.zip');
+	response.set('Content-Disposition', 'attachment; filename="Cemu Pretendo Online Files.zip');
 	response.set('Content-Type', 'application/zip');
 
 	response.end(onlineFiles.toBuffer());

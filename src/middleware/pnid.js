@@ -3,7 +3,7 @@ const database = require('../database');
 
 async function pnidMiddleware(request, response, next) {
 	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
+	if (!request.cookies.access_token || !request.cookies.refresh_token) {
 		return response.redirect(`/account/login?redirect=${request.originalUrl}`);
 	}
 

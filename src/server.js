@@ -20,7 +20,10 @@ const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({
+	extended: true
+}));
 app.use(cookieParser());
 app.use(expressLocale({
 	'priority': ['cookie', 'accept-language', 'map', 'default'],
