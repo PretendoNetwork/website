@@ -559,7 +559,8 @@ router.post('/stripe/checkout/:priceId', async (request, response) => {
 
 	await database.PNID.updateOne({ pid }, {
 		$set: {
-			'connections.stripe.customer_id': customer.id // ensure PNID always has latest customer ID
+			'connections.stripe.customer_id': customer.id, // ensure PNID always has latest customer ID
+			'connections.stripe.latest_webhook_timestamp': 0
 		}
 	}, { upsert: true }).exec();
 
