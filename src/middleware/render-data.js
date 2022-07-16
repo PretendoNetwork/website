@@ -2,6 +2,10 @@ const util = require('../util');
 const database = require('../database');
 
 async function renderDataMiddleware(request, response, next) {
+	if (request.path.startsWith('/assets')) {
+		return next();
+	}
+	
 	// Get user local
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.region, reqLocale.language);
