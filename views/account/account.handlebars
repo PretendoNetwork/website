@@ -139,7 +139,7 @@
 					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
 					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
 				{{else}}
-					<p>To link your Discord account, run /whatever in the <a href="https://invite.gg/pretendo" >Discord server</a></p>
+					<p>No Discord account linked. <a href="{{ discordAuthURL }}">Link Discord account here</a></p>
 				{{/if}}
 			</div>
 
