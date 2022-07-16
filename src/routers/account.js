@@ -6,6 +6,7 @@ const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
+const pnidMiddleware = require('../middleware/pnid');
 const database = require('../database');
 const cache = require('../cache');
 const util = require('../util');
@@ -27,12 +28,7 @@ const discordOAuth = new DiscordOauth2({
 	version: 'v10'
 });
 
-router.get('/', async (request, response) => {
-	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login');
-	}
-
+router.get('/', pnidMiddleware, async (request, response) => {
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {};
 
@@ -45,49 +41,8 @@ router.get('/', async (request, response) => {
 		renderData.error_message = 'Account upgrade failed';
 	}
 
-	// Attempt to get user data
-	let apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			// TODO: Error message
-			return response.status(apiResponse.statusCode).json({
-				error: 'Bad'
-			});
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
-
-		apiResponse = await util.apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-		// TODO: Error message
-		return response.status(apiResponse.statusCode).json({
-			error: 'Bad'
-		});
-	}
-
-	// Set user account info to render data
-	const account = apiResponse.body;
-	const pid = account.pid;
-
-	const pnid = await database.PNID.findOne({ pid });
+	const { account } = request;
+	const { pnid } = request;
 
 	renderData.tierName = pnid.get('connections.stripe.tier_name');
 	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
@@ -212,7 +167,7 @@ router.get('/logout', async(_request, response) => {
 	response.redirect('/');
 });
 
-router.get('/connect/discord', async (request, response) => {
+router.get('/connect/discord', pnidMiddleware, async (request, response) => {
 	let tokens;
 	try {
 		// Attempt to get OAuth2 tokens
@@ -280,52 +235,8 @@ router.get('/connect/discord', async (request, response) => {
 	response.redirect('/account');
 });
 
-router.get('/online-files', async (request, response) => {
-
-	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token|| !request.cookies.ph) {
-		return response.redirect('/account/login?redirect=/online-files');
-	}
-
-	// Attempt to get user data
-	let apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			// TODO: Error message
-			return response.status(apiResponse.statusCode).json({
-				error: 'Bad'
-			});
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		apiResponse = await util.apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-		// TODO: Error message
-		return response.status(apiResponse.statusCode).json({
-			error: 'Bad'
-		});
-	}
-
-	const account = apiResponse.body;
+router.get('/online-files', pnidMiddleware, async (request, response) => {
+	const { account } = request;
 
 	const decipher = crypto.createDecipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
 
@@ -418,49 +329,9 @@ router.get('/miieditor', async (request, response) => {
 	});
 });
 
-router.get('/upgrade', async (request, response) => {
-	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login?redirect=/account/upgrade');
-	}
-
-	// Attempt to get user data
-	let apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			return response.redirect('/account/login');
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		apiResponse = await util.apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-		return response.redirect('/account/login');
-	}
-
+router.get('/upgrade', pnidMiddleware, async (request, response) => {
 	// Set user account info to render data
-	const account = apiResponse.body;
-	const pid = account.pid;
-
-	const pnid = await database.PNID.findOne({ pid });
+	const { pnid } = request;
 
 	const renderData = {
 		error: request.cookies.error,
@@ -499,46 +370,9 @@ router.get('/upgrade', async (request, response) => {
 	response.render('account/upgrade', renderData);
 });
 
-router.post('/stripe/checkout/:priceId', async (request, response) => {
-	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login');
-	}
-
-	// Attempt to get user data
-	let apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			return response.redirect('/account/login');
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		apiResponse = await util.apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-		return response.redirect('/account/login');
-	}
-
+router.post('/stripe/checkout/:priceId', pnidMiddleware, async (request, response) => {
 	// Set user account info to render data
-	const account = apiResponse.body;
+	const { account } = request;
 	const pid = account.pid;
 
 	let customer;
@@ -597,49 +431,11 @@ router.post('/stripe/checkout/:priceId', async (request, response) => {
 	}
 });
 
-router.post('/stripe/unsubscribe', async (request, response) => {
-	// Verify the user is logged in
-	if (!request.cookies.access_token || !request.cookies.refresh_token || !request.cookies.ph) {
-		return response.redirect('/account/login');
-	}
-
-	// Attempt to get user data
-	let apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			return response.redirect('/account/login');
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		apiResponse = await util.apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-		return response.redirect('/account/login');
-	}
-
+router.post('/stripe/unsubscribe', pnidMiddleware, async (request, response) => {
 	// Set user account info to render data
-	const account = apiResponse.body;
-	const pid = account.pid;
+	const { pnid } = request;
 
-	const pnid = await database.PNID.findOne({ pid });
+	const pid = pnid.get('pid');
 	const subscriptionId = pnid.get('connections.stripe.subscription_id');
 	const tierName = pnid.get('connections.stripe.tier_name');
 
