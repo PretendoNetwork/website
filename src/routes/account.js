@@ -338,8 +338,8 @@ router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request,
 	const pnid = await database.PNID.findOne({ pid });
 
 	if (pnid.get('access_level') >= 2) {
-		//response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
-		//return response.redirect('/account');
+		response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		return response.redirect('/account');
 	}
 
 	try {
