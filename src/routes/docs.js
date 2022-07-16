@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const util = require('../util');
 const router = new Router();
 
 const fs = require('fs');
@@ -15,11 +14,6 @@ router.get('/search', async (request, response) => {
 		currentPage: request.params.slug
 	};
 
-	if (response.locals.isLoggedIn) {
-		const account = await util.getAccount(request, response);
-		renderData.account = account;
-	}
-
 	response.render('docs/search', renderData);
 });
 
@@ -27,11 +21,6 @@ router.get('/:slug', async (request, response, next) => {
 	const renderData = 	{
 		currentPage: request.params.slug
 	};
-
-	if (response.locals.isLoggedIn) {
-		const account = await util.getAccount(request, response);
-		renderData.account = account;
-	}
 
 	// Get the name of the page from the URL
 	const pageName = request.params.slug;

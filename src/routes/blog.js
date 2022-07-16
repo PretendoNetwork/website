@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const util = require('../util');
 const logger = require('../logger');
 const router = new Router();
 
@@ -40,11 +39,6 @@ router.get('/', async (request, response) => {
 		postList
 	};
 
-	if (response.locals.isLoggedIn) {
-		const account = await util.getAccount(request, response);
-		renderData.account = account;
-	}
-
 	response.render('blog/blog', renderData);
 });
 
@@ -71,11 +65,6 @@ router.get('/:slug', async (request, response, next) => {
 		layout: 'blog-opengraph',
 		postList,
 	};
-
-	if (response.locals.isLoggedIn) {
-		const account = await util.getAccount(request, response);
-		renderData.account = account;
-	}
 
 	// Get the name of the post from the URL
 	const postName = request.params.slug;

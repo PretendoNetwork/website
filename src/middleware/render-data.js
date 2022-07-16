@@ -1,4 +1,5 @@
 const util = require('../util');
+const database = require('../database');
 
 async function renderDataMiddleware(request, response, next) {
 	// Get user local
@@ -17,8 +18,22 @@ async function renderDataMiddleware(request, response, next) {
 	response.clearCookie('error_message', { domain: '.pretendo.network' });
 
 	response.locals.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
-	
-	return next();
+
+	if (response.locals.isLoggedIn) {
+		try {
+			response.locals.account = await util.getUserAccountData(request, response);
+
+			request.pnid = await database.PNID.findOne({ pid: response.locals.account.pid });
+			request.account = response.locals.account;
+
+			return next();
+		} catch (error) {
+			response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+			return response.redirect('/account/login');
+		}
+	} else {
+		return next();
+	}
 }
 
 module.exports = renderDataMiddleware;

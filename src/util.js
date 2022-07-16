@@ -335,46 +335,6 @@ async function handleStripeEvent(event) {
 	}
 }
 
-async function getAccount(request, response) {
-	// Attempt to get user data
-	let apiResponse = await apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200) {
-	// Assume expired, refresh and retry request
-		apiResponse = await apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-		// TODO: Error message
-			return response.status(apiResponse.statusCode).json({
-				error: 'Bad'
-			});
-		}
-
-		const tokens = apiResponse.body;
-
-		apiResponse = await apiGetRequest('/v1/user', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		});
-	}
-
-	// If still failed, something went horribly wrong
-	if (apiResponse.statusCode !== 200) {
-	// TODO: Error message
-		return response.status(apiResponse.statusCode).json({
-			error: 'Bad'
-		});
-	}
-
-	// Return user account info
-	const account = apiResponse.body;
-	return account;
-}
-
 module.exports = {
 	fullUrl,
 	getLocale,
@@ -387,6 +347,5 @@ module.exports = {
 	getUserAccountData,
 	updateDiscordConnection,
 	nintendoPasswordHash,
-	handleStripeEvent,
-	getAccount
+	handleStripeEvent
 };

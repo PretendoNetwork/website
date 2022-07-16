@@ -6,7 +6,7 @@ const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
-const pnidMiddleware = require('../middleware/pnid');
+const requireLoginMiddleware = require('../middleware/require-login');
 const database = require('../database');
 const cache = require('../cache');
 const util = require('../util');
@@ -27,7 +27,7 @@ const discordOAuth = new DiscordOauth2({
 	version: 'v10'
 });
 
-router.get('/', pnidMiddleware, async (request, response) => {
+router.get('/', requireLoginMiddleware, async (request, response) => {
 	// Setup the data to be sent to the handlebars renderer
 	const renderData = {};
 
@@ -145,7 +145,7 @@ router.get('/logout', async(_request, response) => {
 	response.redirect('/');
 });
 
-router.get('/connect/discord', pnidMiddleware, async (request, response) => {
+router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {
 	let tokens;
 	try {
 		// Attempt to get OAuth2 tokens
@@ -173,7 +173,7 @@ router.get('/connect/discord', pnidMiddleware, async (request, response) => {
 	}
 });
 
-router.post('/online-files', pnidMiddleware, async (request, response) => {
+router.post('/online-files', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 	const { password } = request.body;
 
@@ -265,7 +265,7 @@ router.get('/miieditor', async (request, response) => {
 	});
 });
 
-router.get('/upgrade', pnidMiddleware, async (request, response) => {
+router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 	// Set user account info to render data
 	const { pnid } = request;
 
@@ -306,7 +306,7 @@ router.get('/upgrade', pnidMiddleware, async (request, response) => {
 	response.render('account/upgrade', renderData);
 });
 
-router.post('/stripe/checkout/:priceId', pnidMiddleware, async (request, response) => {
+router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request, response) => {
 	// Set user account info to render data
 	const { account } = request;
 	const pid = account.pid;
@@ -367,7 +367,7 @@ router.post('/stripe/checkout/:priceId', pnidMiddleware, async (request, respons
 	}
 });
 
-router.post('/stripe/unsubscribe', pnidMiddleware, async (request, response) => {
+router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, response) => {
 	// Set user account info to render data
 	const { pnid } = request;
 
