@@ -40,9 +40,9 @@ router.get('/', async (request, response) => {
 	const { upgrade_success } = request.query;
 
 	if (upgrade_success === 'true') {
-		renderData.success = 'Account upgraded successfully';
+		renderData.success_message = 'Account upgraded successfully';
 	} else if (upgrade_success === 'false') {
-		renderData.error = 'Account upgrade failed';
+		renderData.error_message = 'Account upgrade failed';
 	}
 
 	// Attempt to get user data
