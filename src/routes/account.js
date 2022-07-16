@@ -214,9 +214,8 @@ router.post('/online-files', requireLoginMiddleware, async (request, response) =
 	response.end(onlineFiles.toBuffer());
 });
 
-router.get('/miieditor', async (request, response) => {
-	// Should obviously be the user's
-	const encodedUserMiiData = 'AwAAQOlVognnx0GC2X0LLQOzuI0n2QAAAUBiAGUAbABsAGEAAABFAAAAAAAAAEBAEgCBAQRoQxggNEYUgRIXaA0AACkDUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP6G';
+router.get('/miieditor', requireLoginMiddleware, async (request, response) => {
+	const { account } = request;
 
 	// Adapted from https://www.3dbrew.org/wiki/Mii#Mapped_Editor_.3C-.3E_Hex_values
 
@@ -260,7 +259,7 @@ router.get('/miieditor', async (request, response) => {
 	};
 
 	response.render('account/miieditor', {
-		encodedUserMiiData,
+		encodedUserMiiData: account.mii.data,
 		editorToHex
 	});
 });
