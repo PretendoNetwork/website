@@ -72,26 +72,26 @@ app.use(renderDataMiddleware);
 logger.info('Setting up static public folder');
 app.use(express.static('public'));
 
-logger.info('Importing page routers');
-const routers = {
-	home: require('./routers/home'),
-	faq: require('./routers/faq'),
-	docs: require('./routers/docs'),
-	progress: require('./routers/progress'),
-	account: require('./routers/account'),
-	blog: require('./routers/blog'),
-	localization: require('./routers/localization'),
-	aprilfools: require('./routers/aprilfools')
+logger.info('Importing routes');
+const routes = {
+	home: require('./routes/home'),
+	faq: require('./routes/faq'),
+	docs: require('./routes/docs'),
+	progress: require('./routes/progress'),
+	account: require('./routes/account'),
+	blog: require('./routes/blog'),
+	localization: require('./routes/localization'),
+	aprilfools: require('./routes/aprilfools')
 };
 
-app.use('/', routers.home);
-app.use('/faq', routers.faq);
-app.use('/docs', routers.docs);
-app.use('/progress', routers.progress);
-app.use('/account', routers.account);
-app.use('/localization', routers.localization);
-app.use('/blog', routers.blog);
-app.use('/nso-legacy-pack', routers.aprilfools);
+app.use('/', routes.home);
+app.use('/faq', routes.faq);
+app.use('/docs', routes.docs);
+app.use('/progress', routes.progress);
+app.use('/account', routes.account);
+app.use('/localization', routes.localization);
+app.use('/blog', routes.blog);
+app.use('/nso-legacy-pack', routes.aprilfools);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
