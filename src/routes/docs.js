@@ -15,9 +15,7 @@ router.get('/search', async (request, response) => {
 		currentPage: request.params.slug
 	};
 
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
-
-	if (renderData.isLoggedIn) {
+	if (response.locals.isLoggedIn) {
 		const account = await util.getAccount(request, response);
 		renderData.account = account;
 	}
@@ -30,9 +28,7 @@ router.get('/:slug', async (request, response, next) => {
 		currentPage: request.params.slug
 	};
 
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
-
-	if (renderData.isLoggedIn) {
+	if (response.locals.isLoggedIn) {
 		const account = await util.getAccount(request, response);
 		renderData.account = account;
 	}

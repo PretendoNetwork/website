@@ -47,7 +47,6 @@ router.get('/', pnidMiddleware, async (request, response) => {
 	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
 
 	// Check if a Discord account is linked to the PNID
 	if (account.connections.discord.id && account.connections.discord.id.trim() !== '') {

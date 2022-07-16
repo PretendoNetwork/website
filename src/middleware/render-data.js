@@ -15,6 +15,8 @@ async function renderDataMiddleware(request, response, next) {
 	// Reset message cookies
 	response.clearCookie('success_message', { domain: '.pretendo.network' });
 	response.clearCookie('error_message', { domain: '.pretendo.network' });
+
+	response.locals.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
 	
 	return next();
 }

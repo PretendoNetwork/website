@@ -11,9 +11,7 @@ router.get('/', async (request, response) => {
 		boards
 	};
 
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
-
-	if (renderData.isLoggedIn) {
+	if (response.locals.isLoggedIn) {
 		const account = await util.getAccount(request, response);
 		renderData.account = account;
 	}
