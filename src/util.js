@@ -59,6 +59,86 @@ function apiDeleteGetRequest(path, headers, json) {
 	});
 }
 
+async function register(registerData) {
+	const apiResponse = await apiPostGetRequest('/v1/register', {}, registerData);
+
+	if (apiResponse.statusCode !== 200) {
+		throw new Error(apiResponse.body.error);
+	}
+
+	return apiResponse.body;
+}
+
+async function login(username, password) {
+	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+		username,
+		password,
+		grant_type: 'password'
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		throw new Error(apiResponse.body.error);
+	}
+
+	return apiResponse.body;
+}
+
+async function refreshLogin(request, response) {
+	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+		refresh_token: request.cookies.refresh_token,
+		grant_type: 'refresh_token'
+	});
+
+	if (apiResponse.statusCode !== 200) {
+		// TODO: Error message
+		throw new Error('Bad');
+	}
+
+	const tokens = apiResponse.body;
+
+	response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+}
+
+async function getUserAccountData(request, response, fromRetry=false) {
+	const apiResponse = await apiGetRequest('/v1/user', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200 && fromRetry === true) {
+		// TODO: Error message
+		throw new Error('Bad');
+	}
+
+	if (apiResponse.statusCode !== 200) {
+		await refreshLogin(request, response);
+		return await getUserAccountData(request, response, true);
+	}
+
+	return apiResponse.body;
+}
+
+async function updateDiscordConnection(discordUser, request, response, fromRetry=false) {
+	const apiResponse = await apiPostGetRequest('/v1/connections/add/discord', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	}, {
+		data: {
+			id: discordUser.id
+		}
+	});
+
+	if (apiResponse.statusCode !== 200 && fromRetry === true) {
+		// TODO: Error message
+		throw new Error('Bad');
+	}
+
+	if (apiResponse.statusCode !== 200) {
+		await refreshLogin(request, response);
+		await updateDiscordConnection(discordUser, request, response, true);
+	}
+}
+
 function nintendoPasswordHash(password, pid) {
 	const pidBuffer = Buffer.alloc(4);
 	pidBuffer.writeUInt32LE(pid);
@@ -301,6 +381,11 @@ module.exports = {
 	apiGetRequest,
 	apiPostGetRequest,
 	apiDeleteGetRequest,
+	register,
+	login,
+	refreshLogin,
+	getUserAccountData,
+	updateDiscordConnection,
 	nintendoPasswordHash,
 	handleStripeEvent,
 	getAccount

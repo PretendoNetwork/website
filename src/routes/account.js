@@ -79,40 +79,32 @@ router.get('/login', async (request, response) => {
 router.post('/login', async (request, response) => {
 	const { username, password } = request.body;
 
-	let apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-		username,
-		password,
-		grant_type: 'password'
-	});
+	try {
+		const tokens = await util.login(username, password);
 
-	if (apiResponse.statusCode !== 200) {
-		response.cookie('error_message', apiResponse.body.error, { domain: '.pretendo.network' });
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		const account = await util.getUserAccountData(request, response);
+
+		const hashedPassword = util.nintendoPasswordHash(password, account.pid);
+		const hashedPasswordBuffer = Buffer.from(hashedPassword, 'hex');
+
+		const cipher = crypto.createCipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
+
+		let encryptedBody = cipher.update(hashedPasswordBuffer);
+		encryptedBody = Buffer.concat([encryptedBody, cipher.final()]);
+
+		response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
+
+		response.redirect(request.redirect || '/account');
+
+	} catch (error) {
+		console.log(error);
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account/login');
 	}
-
-	const tokens = apiResponse.body;
-
-	response.cookie('refresh_token', tokens.refresh_token, { domain : '.pretendo.network' });
-	response.cookie('access_token', tokens.access_token, { domain : '.pretendo.network' });
-	response.cookie('token_type', tokens.token_type, { domain : '.pretendo.network' });
-
-	apiResponse = await util.apiGetRequest('/v1/user', {
-		'Authorization': `${tokens.token_type} ${tokens.access_token}`
-	});
-
-	const account = apiResponse.body;
-
-	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
-	const hashedPasswordBuffer = Buffer.from(hashedPassword, 'hex');
-
-	const cipher = crypto.createCipheriv('aes-256-cbc', aesKey, Buffer.alloc(16));
-
-	let encryptedBody = cipher.update(hashedPasswordBuffer);
-	encryptedBody = Buffer.concat([encryptedBody, cipher.final()]);
-
-	response.cookie('ph', encryptedBody.toString('hex'), { domain: '.pretendo.network' });
-
-	response.redirect(request.redirect || '/account');
 });
 
 router.get('/register', async (request, response) => {
@@ -136,26 +128,29 @@ router.post('/register', async (request, response) => {
 	response.cookie('username', username, { domain: '.pretendo.network' });
 	response.cookie('mii_name', mii_name, { domain: '.pretendo.network' });
 
-	const apiResponse = await util.apiPostGetRequest('/v1/register', {}, {
-		email, username, mii_name, password, password_confirm, hCaptchaResponse
-	});
+	try {
+		const tokens = await util.register({
+			email,
+			username,
+			mii_name,
+			password,
+			password_confirm,
+			hCaptchaResponse
+		});
 
-	if (apiResponse.statusCode !== 200) {
-		response.cookie('error_message', apiResponse.body.error, { domain: '.pretendo.network' });
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		response.clearCookie('email', { domain: '.pretendo.network' });
+		response.clearCookie('username', { domain: '.pretendo.network' });
+		response.clearCookie('mii_name', { domain: '.pretendo.network' });
+
+		response.redirect(request.redirect || '/account');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account/register');
 	}
-
-	const tokens = apiResponse.body;
-
-	response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-	response.clearCookie('email', { domain: '.pretendo.network' });
-	response.clearCookie('username', { domain: '.pretendo.network' });
-	response.clearCookie('mii_name', { domain: '.pretendo.network' });
-
-	response.redirect(request.redirect || '/account');
 });
 
 router.get('/logout', async(_request, response) => {
@@ -182,57 +177,17 @@ router.get('/connect/discord', pnidMiddleware, async (request, response) => {
 	}
 
 	// Get Discord user data
-	const user = await discordOAuth.getUser(tokens.access_token);
+	const discordUser = await discordOAuth.getUser(tokens.access_token);
 
-	// Link the Discord account to the PNID
-	let apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
-	}, {
-		data: {
-			id: user.id // Only care about user ID. Bot will get details we need
-		}
-	});
+	try {
+		await util.updateDiscordConnection(discordUser, request, response);
 
-	if (apiResponse.statusCode !== 200) {
-		// Assume expired, refresh and retry request
-		apiResponse = await util.apiPostGetRequest('/v1/login', {}, {
-			refresh_token: request.cookies.refresh_token,
-			grant_type: 'refresh_token'
-		});
-
-		if (apiResponse.statusCode !== 200) {
-			// TODO: Error message
-			return response.status(apiResponse.statusCode).json({
-				error: 'Bad'
-			});
-		}
-
-		const tokens = apiResponse.body;
-
-		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
-		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
-		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
-
-		apiResponse = await util.apiPostGetRequest('/v1/connections/add/discord', {
-			'Authorization': `${tokens.token_type} ${tokens.access_token}`
-		}, {
-			data: {
-				id: user.id
-			}
-		});
-
-		// If still failed, something went horribly wrong
-		if (apiResponse.statusCode !== 200) {
-			// TODO: Error message
-			return response.status(apiResponse.statusCode).json({
-				error: 'Bad'
-			});
-		}
+		response.cookie('success_message', 'Discord account linked successfully', { domain: '.pretendo.network' });
+		response.redirect('/account');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
 	}
-
-	response.cookie('success_message', 'Discord account linked successfully', { domain: '.pretendo.network' });
-
-	response.redirect('/account');
 });
 
 router.get('/online-files', pnidMiddleware, async (request, response) => {
