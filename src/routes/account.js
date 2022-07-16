@@ -66,8 +66,6 @@ router.get('/', pnidMiddleware, async (request, response) => {
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
-	renderData.isLoggedIn = request.cookies.access_token && request.cookies.refresh_token;
-
 	response.render('account/account', renderData);
 });
 
