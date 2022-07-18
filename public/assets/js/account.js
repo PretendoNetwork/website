@@ -5,7 +5,7 @@ document.getElementById('remove-discord-connection')?.addEventListener('click', 
 	const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];
 	const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
 
-	fetch('http://api.pretendo.cc/v1/connections/remove/discord', {
+	fetch('https://api.pretendo.cc/v1/connections/remove/discord', {
 		method: 'DELETE',
 		headers: {
 			'Content-Type': 'application/json',
