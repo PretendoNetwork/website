@@ -44,7 +44,6 @@ onlineFilesModalButtonConfirm?.addEventListener('click', () => {
 		})
 	})
 		.then(response => response.blob())
-		.then()
 		.then(blob => URL.createObjectURL(blob))
 		.then(blobUrl => {
 			const a = document.createElement('a');
