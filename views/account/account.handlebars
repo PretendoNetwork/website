@@ -139,7 +139,7 @@
 					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
 					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
 				{{else}}
-					<p>To link your Discord account, run /whatever in the <a href="https://invite.gg/pretendo" >Discord server</a></p>
+					<p>No Discord account linked. <a href="{{ discordAuthURL }}">Link Discord account here</a></p>
 				{{/if}}
 			</div>
 
@@ -156,20 +156,32 @@
 </div>
 
 
-{{#if success}}
+{{#if success_message}}
 <div class="banner-notice success">
 	<div>
-		<p>{{success}}</p>
+		<p>{{success_message}}</p>
 	</div>
 </div>
 {{/if}}
 
-{{#if error}}
+{{#if error_message}}
 <div class="banner-notice error">
 	<div>
-		<p>{{error}}</p>
+		<p>{{error_message}}</p>
 	</div>
 </div>
 {{/if}}
+
+<div class="online-files-modal-wrapper hidden">
+	<div class="online-files-modal">
+		<h1 class="title dot">Password</h1>
+		<p class="online-files-modal-caption">Enter your PNID password to download Cemu files</p>
+		<input name="password" id="password" type="password" required>
+		<div class="online-files-modal-button-wrapper">
+			<button class="cancel" id="onlineFilesCloseButton">Cancel</button>
+			<button class="confirm" id="onlineFilesConfirmButton">Confirm</button>
+		</div>
+	</div>
+</div>
 
 <script src="/assets/js/account.js"></script>

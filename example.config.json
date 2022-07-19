@@ -11,11 +11,7 @@
 	"discord": {
 		"client_id": "client_id",
 		"client_secret": "client_secret",
-		"guild_id": "Guild ID",
-		"bot_token": "token",
-		"tester_roles": [
-			"role id"
-		]
+		"bot_token": "token"
 	},
 	"stripe": {
 		"secret_key": "sk_secret",
@@ -34,6 +30,5 @@
 	"gmail": {
 		"user": "email@gmail.com",
 		"pass": "app-password"
-	},
-	"aes_key": "hex key here"
+	}
 }

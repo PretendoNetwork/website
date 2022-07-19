@@ -9,6 +9,9 @@ const PNIDSchema = new Schema({
 	server_access_level: String,
 	access_level: Number,
 	connections: {
+		discord: {
+			id: String
+		},
 		stripe: {
 			customer_id: String,
 			subscription_id: String,

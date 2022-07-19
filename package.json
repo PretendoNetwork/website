@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/PretendoNetwork/website#readme",
   "dependencies": {
+    "@discordjs/rest": "^0.5.0",
     "adm-zip": "^0.5.9",
     "browserify": "^17.0.0",
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
+    "discord-api-types": "^0.36.1",
     "discord-oauth2": "github:ryanblenis/discord-oauth2",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.1",
