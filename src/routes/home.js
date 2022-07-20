@@ -25,8 +25,8 @@ router.get('/', async (request, response) => {
 	shuffleArray(specialThanksPeople);
 
 	// Slices the array in half
-	const specialThanksFirstRow = specialThanksPeople.slice(0, 3);
-	const specialThanksSecondRow = specialThanksPeople.slice(3, 7);
+	const specialThanksFirstRow = specialThanksPeople.slice(0, 4);
+	const specialThanksSecondRow = specialThanksPeople.slice(4);
 
 	// Builds the final array to be sent to the view, and triples each row.
 	renderData.specialThanksPeople = {

@@ -594,23 +594,20 @@ section.team-helpers .text {
 }
 section.team-helpers .team-helpers-cards {
 	display: inline-grid;
-	grid-template-columns: repeat(9, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 20px;
 	margin-right: 20px;
 	color: var(--text-secondary);
 	width: max-content;
 }
-section.team-helpers .row.second .team-helpers-cards {
-	grid-template-columns: repeat(12, 1fr);
-}
 section.team-helpers .row {
 	width: fit-content;
 }
 section.team-helpers .row.first {
-	animation: infiniteScrollRow1 15s linear infinite; /* Set the duration to 5s times the number of cards */
+	animation: infiniteScrollRow1 25s linear infinite;
 }
 section.team-helpers .row.second {
-	animation: infiniteScrollRow2 20s linear infinite; /* Set the duration to 5s times the number of cards */
+	animation: infiniteScrollRow2 25s linear infinite;
 }
 @keyframes infiniteScrollRow1 { 
 	0% { transform: translate3d(0); } 
