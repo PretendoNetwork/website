@@ -224,6 +224,15 @@
 		"title": "Blog",
 		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderatore",
+			"Sviluppatore"
+		],
+		"banned": "Bannato"
+	},
 	"localizationPage": {
 		"title": "Localizziamo",
 		"description": "Incolla il link di una localizzazione in formato JSON accessibile al pubblico per testarla sul sito",

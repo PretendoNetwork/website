@@ -222,6 +222,15 @@
 		"title": "البلوج",
 		"description": "آخر التحديثات في أجزاء مكثفة.  إذا كنت ترغب في رؤية المزيد من التحديثات المتكررة ، ففكر في دعمنا على <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\"> Patreon </a>. "
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "!لنترجم",
 		"description": "الصق رابطا إلي لغة الزيسون يمكن الوصول إليها بشكل عام لاختبارها على موقع الويب",

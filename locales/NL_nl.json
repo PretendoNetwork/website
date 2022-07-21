@@ -223,6 +223,15 @@
 		"title": "Blog",
 		"description": "De meest recente samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen."
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "Laten we meer talen toe voegen!",
 		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen.",

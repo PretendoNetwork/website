@@ -223,6 +223,15 @@
 		"title": "Blog",
 		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "Vamos traduzir",
 		"description": "Cole um link para um arquivo JSON acessível publicamente para testá-lo no site",

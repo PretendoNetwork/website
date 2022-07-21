@@ -37,7 +37,9 @@ body.modal-open {
   border-style: solid;
   padding: 4px 16px;
 }
-.account-sidebar .user .tier-level-0 {
+
+.account-sidebar .user .tier-level-0,
+.account-sidebar .user .access-level-0 {
   background: #2a2f50;
   color: var(--text-secondary);
   border-color: #383f6b;
@@ -56,6 +58,26 @@ body.modal-open {
   background: rgba(202, 177, 251, 0.3);
   color:#cab1fb;
   border-color: #cab1fb;
+}
+.account-sidebar .user .access-level-banned {
+  background: rgba(255, 63, 0, 0.1);
+  color:#FF3F00;
+  border-color: rgba(255, 63, 0, 0.8);
+}
+.account-sidebar .user .access-level-1 {
+  background: rgba(100, 247, 239, 0.3);
+  color: #64F7EF;
+  border-color: #64F7EF;
+}
+.account-sidebar .user .access-level-2 {
+  background: rgba(255, 199, 89, 0.3);
+  color: #FFC759;
+  border-color: #FFC759;
+}
+.account-sidebar .user .access-level-3 {
+  background: rgba(90, 255, 21, 0.3);
+  color:#5AFF15;
+  border-color: #5AFF15;
 }
 
 .account-sidebar .user .mii {

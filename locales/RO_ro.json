@@ -223,6 +223,15 @@
 		"title": "Blog",
 		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
 		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",

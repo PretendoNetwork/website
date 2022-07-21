@@ -223,6 +223,15 @@
 		"title": "블로그",
 		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면,  <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "같이 번역해 주세요!",
 		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",

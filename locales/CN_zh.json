@@ -223,6 +223,15 @@
 		"title": "博客",
 		"description": "压缩块的最新更新。如果您想看到更频繁的更新，请考虑在 <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> 上支持我们。"
 	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
 	"localizationPage": {
 		"title": "让我们本地化",
 		"description": "粘贴指向可公开访问的 JSON 语言环境的链接以在网站上对其进行测试",

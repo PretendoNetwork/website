@@ -11,9 +11,13 @@
 				<p class="miiname">{{account.mii.name}}</p>
 				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
 				{{#if tierName}}
-				<p class="tier-name tier-level-{{tierLevel}}" value="{{tierName}}">{{tierName}}</p>
+					<p class="tier-name tier-level-{{tierLevel}}" value="{{tierName}}">{{tierName}}</p>
 				{{else}}
-				<p class="tier-name tier-level-0" value="Default">Default</p>
+					{{#if (neq account.access_level -1)}}
+						<p class="tier-name access-level-{{account.access_level}}" value="{{ localeHelper locale "account" "accountLevel" account.access_level }}">{{ localeHelper locale "account" "accountLevel" account.access_level }}</p>
+					{{else}}
+						<p class="tier-name access-level-banned" value="{{ localeHelper locale "account" "banned" }}">{{ localeHelper locale "account" "banned" }}</p>
+					{{/if}}
 				{{/if}}
 			</div>
 			<div class="buttons">
@@ -92,7 +96,7 @@
 			{{#unless isTester}}
 				<p>Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.</p>
 			{{else}}
-				<p>Your current tier (insert current tier{{currentTier}}) gives you beta server access. Cool!</p>
+				<p>Your current tier gives you beta server access. Cool!</p>
 			{{/unless}}
 			</div>
 			
