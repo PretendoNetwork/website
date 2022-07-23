@@ -1,6 +1,6 @@
 :root {
 	/* 1 is the base color, <1 are darker variations and >1 are lighter */
-	
+
 	--bg-shade-0: #131733;
 	--bg-shade-1: #1B1F3B;
 	--bg-shade-2: #23274A;
@@ -16,7 +16,7 @@
 	--text-shade-1: #A1A8D9;
 	--text-shade-2: #CAC1F5;
 	--text-shade-3: #fff;
-	
+
 	--green-shade-0: #37a985;
 	--green-shade-1: #59c9a5;
 
@@ -70,11 +70,11 @@ body, .main-body {
 
 h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
 	content: "";
-    background-color: var(--accent-shade-1);
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 50%;
-    display: inline-block;
+	background-color: var(--accent-shade-1);
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	display: inline-block;
 }
 h1.dot[data-title-suffix]:after, h2.dot[data-title-suffix]:after {
 	content: attr(data-title-suffix);
@@ -331,7 +331,7 @@ section.showcase::before {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-  	z-index: -1;
+	z-index: -1;
 }
 section.showcase .text {
 	max-width: 504px;
@@ -465,12 +465,12 @@ section.team-helpers .row.first {
 section.team-helpers .row.second {
 	animation: infiniteScrollRow2 25s linear infinite;
 }
-@keyframes infiniteScrollRow1 { 
-	0% { transform: translate3d(0); } 
+@keyframes infiniteScrollRow1 {
+	0% { transform: translate3d(0); }
 	100% { transform: translate3d(calc(100% / -3), 0, 0); }
 }
-@keyframes infiniteScrollRow2 { 
-	0% { transform: translate3d(calc(100% / -3), 0, 0); } 
+@keyframes infiniteScrollRow2 {
+	0% { transform: translate3d(calc(100% / -3), 0, 0); }
 	100% { transform: translate3d(0, 0, 0); }
 }
 section.team-helpers .animation-wrapper {
@@ -839,7 +839,7 @@ section.update-signup div.circle {
 	.hero-meta {
 		margin-top: 100px;
 	}
-	
+
 	.wrapper {
 		width: 90%;
 	}
@@ -892,15 +892,15 @@ section.update-signup div.circle {
 		font-size: 1.1rem;
 	}
 
-	
+
 	section.showcase {
-    	margin-top: 0;
+		margin-top: 0;
 	}
 	section.showcase .grid {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, 1fr);
 	}
-	
+
 	section.team,
 	section.team-helpers {
 		margin-top: 100px;
@@ -961,7 +961,7 @@ section.update-signup div.circle {
 	}
 
 	section.showcase {
-    	padding: 160px 0;
+		padding: 160px 0;
 	}
 	section.showcase p.text {
 		margin-bottom: 82px;
@@ -984,7 +984,7 @@ section.update-signup div.circle {
 
 	section.team-helpers .team-helpers-cards {
 		grid-gap: 12px;
-    	margin-right: 12px;
+		margin-right: 12px;
 	}
 	section.team-helpers .animation-wrapper .helper-card {
 		padding: 7px 18px;

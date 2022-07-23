@@ -39,7 +39,7 @@ onlineFilesModalButtonConfirm?.addEventListener('click', () => {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({ 
+		body: JSON.stringify({
 			password: onlineFilesModalPasswordInput.value
 		})
 	})
