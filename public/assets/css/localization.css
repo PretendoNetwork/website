@@ -14,7 +14,7 @@
 }
 
 .caption {
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   max-width: 400px;
   margin: 20px 0;
 }
@@ -27,7 +27,7 @@
 .localization-instr:visited {
   display: flex;
   align-items: center;
-  color: var(--theme-light);
+  color: var(--accent-shade-2);
   text-decoration: none;
   position: relative;
   left: -4px;
@@ -41,7 +41,7 @@
 
 .localization-form {
   padding: 36px;
-  background-color: #151934;
+  background-color: var(--bg-shade-0);
   border-radius: 12px;
   margin-top: 36px;
 }
@@ -57,22 +57,22 @@
   border: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: var(--btn-secondary);
+  background-color: var(--bg-shade-3);
   border: none;
   border-radius: 4px 0 0 4px;
   padding: 12px 24px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   width: 20px;
   flex: 2 10%;
 }
 
 .localization-form input::placeholder {
-  color: var(--text-secondary-2);
+  color: var(--text-shade-0);
 }
 
 .localization-form input:focus {
-  background-color: #fff;
-  color: var(--btn-secondary);
+  background-color: var(--bg-shade-4);
+  color: var(--bg-shade-3);
   transition: 200ms;
   outline: none;
 }
@@ -84,9 +84,9 @@
   border-radius: 0 4px 4px 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: var(--text);
+  color: var(--text-shade-3);
   padding: 12px 36px;
-  background: var(--btn);
+  background: var(--accent-shade-0);
   cursor: pointer;
 }
 

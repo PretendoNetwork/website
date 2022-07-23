@@ -16,11 +16,11 @@
   padding: 40px;
   display: flex;
   flex-flow: column;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 
 .blog-card .post-info .title {
-  color: var(--text);
+  color: var(--text-shade-3);
   margin: 0;
 }
 
@@ -38,7 +38,7 @@
 
 .blog-card .pub-info .date {
   font-weight: bold;
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 .blog-card .pub-info > * {
@@ -51,7 +51,7 @@
   grid-template-columns: 30px auto;
   grid-gap: 10px;
   font-weight: bold;
-  color: var(--text);
+  color: var(--text-shade-3);
   align-items: center;
   height: 32px;
   margin-right: 0.3em;
@@ -64,13 +64,13 @@
 
 .blog-card .cover {
   flex: 50%;
-  border: 3px solid #151934;
+  border: 3px solid var(--bg-shade-0);
   border-radius: 0 10px 10px 0;
 }
 
 .progress-hero a,
 .progress-hero a * {
-  color: #9d6ff3;
+  color: var(--accent-shade-1);
   text-decoration: none;
   font-weight: bold;
 }

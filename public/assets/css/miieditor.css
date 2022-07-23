@@ -16,7 +16,7 @@ svg.logotype {
   position: relative;
   display: grid;
   grid-template-columns: 2fr 3fr;
-  background: #0d0f20;
+  background: var(--bg-shade-0);
   width: 100vw;
   height: 100vh;
   gap: 0 48px;
@@ -26,7 +26,7 @@ svg.logotype {
   content: "";
   display: block;
   position: absolute;
-  background: radial-gradient(closest-side, #161d40 0%, transparent 100%);
+  background: radial-gradient(closest-side, var(--bg-shade-1) 0%, transparent 100%);
   width: 200vh;
   height: 200vh;
   top: -100vh;
@@ -53,8 +53,7 @@ div.mii-img-wrapper .shadow {
   left: 6px;
   height: 72px;
   width: 512px;
-  background: #1a214c;
-  background: radial-gradient(farthest-side, #1a214c 0%, transparent 100%);
+  background: radial-gradient(farthest-side, var(--bg-shade-2) 0%, transparent 100%);
 }
 
 div.params-wrapper {
@@ -84,11 +83,11 @@ div.tabs .tabbtn {
   border-radius: 6px;
   cursor: pointer;
   background: none;
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 div.tabs .tabbtn:hover,
 div.tabs .tabbtn.active {
-  background: #1d203d;
+  background: var(--bg-shade-1);
 }
 
 div.subtabs {
@@ -102,7 +101,7 @@ div.subtabs .subtabbtn {
   border-radius: 6px;
   cursor: pointer;
   background: none;
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 div.subtabs .subtabbtn.active::before,
 div.subtabs .subtabbtn.active:hover::before {
@@ -112,7 +111,7 @@ div.subtabs .subtabbtn.active:hover::before {
   left: 0;
   width: 100%;
   height: 5px;
-  background: #9D6FF3;
+  background: var(--accent-shade-1);
   border-radius: 6px;
 }
 
@@ -161,17 +160,17 @@ fieldset input[type="radio"] + label {
   justify-content: center;
   cursor: pointer;
   border-radius: 18px;
-  background: #393b5f;
+  background: var(--bg-shade-3);
   width: 120px;
   height: 120px;
 }
 fieldset input[type="radio"]:checked + label {
-  background: #3f4480;
+  background: var(--bg-shade-4);
   font-weight: bold;
-  box-shadow: inset 0 0 0 4px #9D70F1;
+  box-shadow: inset 0 0 0 4px var(--accent-shade-1);
 }
 fieldset.color input[type="radio"]:checked + label {
-  box-shadow: inset 0 0 0 4px #9D70F1, inset 0 0 0 6px #181B33;
+  box-shadow: inset 0 0 0 4px var(--accent-shade-1), inset 0 0 0 6px var(--bg-shade-1);
 }
 div.colorSidebar {
   margin: auto;
@@ -204,12 +203,12 @@ input[type="range"].invert {
   margin-left: auto;
   align-items: center;
   font-size: 18px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 .pagination .current-page-index {
   display: inline-block;
   font-weight: bold;
-  color: var(--text);
+  color: var(--text-shade-3);
   width: 18px;
   margin-right: 0.7ch;
   text-align: right;
@@ -229,7 +228,7 @@ input[type="range"].invert {
   pointer-events: none;
 }
 .page-btn.disabled svg path {
-  fill: #393B5F;
+  fill: var(--bg-shade-3);
 }
 
 button * {
@@ -240,7 +239,7 @@ button * {
   content: "";
   display: block;
   position: absolute;
-  background: #181B33;
+  background: var(--bg-shade-1);
   border-radius: 100%;
   width: 1308px;
   height: 1707px;

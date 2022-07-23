@@ -12,7 +12,7 @@ body.modal-open {
   display: grid;
   column-gap: 48px;
   margin-top: 80px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 
 /* Account settings sidebar */
@@ -23,7 +23,7 @@ body.modal-open {
 }
 .account-sidebar .user .miiname {
   font-size: 1.2rem;
-  color: var(--text);
+  color: var(--text-shade-3);
   margin: 8px 0 4px;
 }
 .account-sidebar .user .username {
@@ -41,7 +41,7 @@ body.modal-open {
 .account-sidebar .user .tier-level-0,
 .account-sidebar .user .access-level-0 {
   background: #2a2f50;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   border-color: #383f6b;
 }
 .account-sidebar .user .tier-level-1 {
@@ -56,8 +56,8 @@ body.modal-open {
 }
 .account-sidebar .user .tier-level-3 {
   background: rgba(202, 177, 251, 0.3);
-  color:#cab1fb;
-  border-color: #cab1fb;
+  color:var(--accent-shade-3);
+  border-color: var(--accent-shade-3);
 }
 .account-sidebar .user .access-level-banned {
   background: rgba(255, 63, 0, 0.1);
@@ -84,16 +84,16 @@ body.modal-open {
   width: 128px;
   height: 128px;
   border-radius: 100%;
-  background: var(--btn-secondary);
+  background: var(--bg-shade-3);
 }
 .account-sidebar .buttons a {
   display: flex;
   flex-flow: column;
   align-items: center;
   padding: 20px 24px;
-  background: #383f6b;
   margin: 20px 0 0;
   text-decoration: none;
+  text-align: center;
 }
 .account-sidebar .buttons a svg {
   margin-bottom: 16px;
@@ -104,7 +104,7 @@ body.modal-open {
 .account-sidebar .buttons p.cemu-warning {
   margin: 4px 0 0;
   font-size: 0.7rem;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 
 /* Settings */
@@ -115,7 +115,7 @@ body.modal-open {
   column-gap: 20px;
 }
 .settings-wrapper a {
-  color: #9d6ff3;
+  color: var(--accent-shade-1);
   text-decoration: none;
   font-weight: bold;
 }
@@ -125,7 +125,7 @@ body.modal-open {
 .settings-wrapper h2.section-header {
   margin-top: 40px;
   grid-column: 1 / 3;
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 .setting-card {
@@ -134,15 +134,15 @@ body.modal-open {
   row-gap: 24px;
   position: relative;
   border-radius: 10px;
-  background: #2a2f50;
+  background: var(--bg-shade-2);
   padding: 48px 60px;
 }
 .setting-card * {
   margin: 0;
 }
 .setting-card .edit {
-  color: var(--text-secondary);
-  background: #383f6b;
+  color: var(--text-shade-1);
+  background: var(--bg-shade-3);
   border-radius: 100%;
   position: absolute;
   top: 42px;
@@ -152,12 +152,12 @@ body.modal-open {
   padding: 12px;
 }
 .setting-card .edit:hover {
-  background: #383f6b;
-  color: var(--text);
+  background: var(--bg-shade-3);
+  color: var(--text-shade-3);
 }
 
 .setting-card .header {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 .setting-card .setting-list {
@@ -168,7 +168,7 @@ body.modal-open {
   padding: 0;
 }
 .setting-card .setting-list p.label {
-  color: var(--text);
+  color: var(--text-shade-3);
   margin-bottom: 4px;
 }
 
@@ -183,7 +183,7 @@ fieldset {
   display: flex;
   border-radius: 5px;
   overflow: hidden;
-  background: #383f6b;
+  background: var(--bg-shade-3);
 }
 .setting-card .server-selection input {
   display: none;
@@ -193,26 +193,26 @@ fieldset {
   flex-flow: column;
   align-items: center;
   flex: 50%;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   padding: 40px;
   justify-content: space-between;
   cursor: pointer;
 }
 .server-selection input + label h2 {
   margin-top: 12px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 .server-selection input:checked + label,
 .server-selection input:checked + label h2 {
-  background: var(--theme);
-  color: var(--text);
+  background: var(--accent-shade-0);
+  color: var(--text-shade-3);
 }
 
 .setting-card #link-discord-account {
   width: 100%;
   padding: 12px 48px;
   cursor: pointer;
-  background: #383f6b;
+  background: var(--bg-shade-3);
 }
 
 .setting-card button {
@@ -221,20 +221,22 @@ fieldset {
   padding: 12px 48px;
   align-self: flex-end;
   cursor: pointer;
-  background: #383f6b;
+  background: var(--bg-shade-3);
 }
 .setting-card input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  background: #383f6b;
+  background: var(--bg-shade-3);
   padding: 12px;
   margin: 4px;
   margin-left: 0;
   border-radius: 4px;
   vertical-align: -65%;
+  width: fit-content;
+  cursor: pointer;
 }
 .setting-card input[type="checkbox"]:checked {
-  background: no-repeat center/contain url(../images/check.svg), var(--theme);
+  background: no-repeat center/contain url(../images/check.svg), var(--accent-shade-0);
 }
 
 .setting-card.span-both-columns {
@@ -269,10 +271,10 @@ fieldset {
   z-index: 3;
 }
 .banner-notice.success div {
-  background: #37a985;
+  background: var(--green-shade-0);
 }
 .banner-notice.error div {
-  background: #a9375b;
+  background: var(--red-shade-1);
 }
 
 div.online-files-modal-wrapper {
@@ -293,7 +295,7 @@ div.online-files-modal-wrapper.hidden {
   display: none;
 }
 div.online-files-modal {
-  background: #393b5f;
+  background: var(--bg-shade-2);
   padding: 48px;
   border-radius: 8px;
   text-align: left;
@@ -305,10 +307,10 @@ div.online-files-modal h1 {
   margin-top: 0;
 }
 p.online-files-modal-caption {
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 p.online-files-modal-caption span {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 .online-files-modal-button-wrapper {
@@ -335,11 +337,11 @@ button {
   font-size: 1rem;
   height: fit-content;
 
-  background: var(--btn);
+  background: var(--accent-shade-0);
   border: none;
   border-radius: 4px;
   padding: 12px;
-  color: var(--text);
+  color: var(--text-shade-3);
   width: 100%;
 
   transition: filter 300ms;
@@ -354,16 +356,16 @@ input {
   display: block;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: black; /*change me*/
+  background-color: var(--bg-shade-3);
   border: none;
   border-radius: 4px;
   padding: 12px;
-  color: var(--text);
+  color: var(--text-shade-2);
   width: calc(100% - 24px);
 }
 
 input:focus {
-  background-color: #4b5595;
+  background-color: var(--bg-shade-4);
   outline: none;
   transition: 150ms;
 }

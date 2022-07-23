@@ -16,7 +16,7 @@
   transition: all 0.4s;
   overflow: hidden;
   border-radius: 5px;
-  background-color: var(--btn-secondary);
+  background-color: var(--bg-shade-3);
   order: 1;
   position: absolute;
   top: 48px;
@@ -24,7 +24,7 @@
 }
 
 .select-box .option .item {
-  color: #afb5dd;
+  color: var(--text-shade-2);
 }
 
 .select-box .lang {
@@ -46,21 +46,22 @@
 
 .select-box .options-container::-webkit-scrollbar {
   width: 8px;
-  background: var(--btn-secondary);
+  background: var(--bg-shade-3);
   border-radius: 0 5px 5px 0;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: var(--text-secondary);
+  background: var(--text-shade-1);
   border-radius: 0 5px 5px 0;
 }
 .select-box .option {
   padding: 12px 15px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .select-box .option:hover {
-  background: #2f345b;
+  background: var(--bg-shade-4);
 }
 .select-box .option:hover .item {
   color: white;

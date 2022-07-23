@@ -33,7 +33,7 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 			datasets: [
 				{
 					data,
-					backgroundColor: isInBrightCard ? ['white', 'rgba(195, 178, 227, 0.5)'] : ['#9D6FF3', '#4C5174']
+					backgroundColor: isInBrightCard ? ['white', 'rgba(195, 178, 227, 0.5)'] : ['#9D6FF3', '#31365A']
 				}
 			]
 		},

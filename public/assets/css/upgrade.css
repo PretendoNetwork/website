@@ -8,7 +8,7 @@
   position: absolute;
   top: -800px;
   content: "";
-  background: #111531;
+  background: var(--bg-shade-0);
   border-radius: 100%;
   width: 1600px;
   height: 1400px;
@@ -24,12 +24,12 @@ body.modal-open {
   top: 36px;
   left: max(calc((100vw - 1590px) / 2), 2.5vw);
   padding: 6px 10px;
-  background: var(--btn-secondary);
+  background: var(--bg-shade-3);
   border-radius: 24px;
   
   transition: filter 150ms;
   text-decoration: none;
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 .back-arrow:hover {
   filter: brightness(1.5)
@@ -46,7 +46,7 @@ body.modal-open {
   display: flex;
   flex-flow: column;
   width: min(1200px, 100%);
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   margin: 0 auto 48px;
   z-index: 1;
 }
@@ -57,7 +57,7 @@ body.modal-open {
 }
 
 h1.title {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 p.caption {
   width: min(100%, 500px);
@@ -70,7 +70,7 @@ p.caption {
   margin: 0 auto 72px;
   padding: 24px;
   border-radius: 6px;
-  background: #1b1f3b;
+  background: var(--bg-shade-0);
   box-sizing: border-box;
 }
 .account-form-wrapper .progress-bar-wrapper p {
@@ -78,7 +78,7 @@ p.caption {
   margin-bottom: 0;
 }
 .account-form-wrapper .progress-bar-wrapper p span {
-  color: var(--text);
+  color: var(--text-shade-3);
   font-weight: 600;
 }
 
@@ -105,14 +105,14 @@ form .tier-radio:checked + label::before {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 4px #9d70f1;
+  box-shadow: inset 0 0 0 4px var(--accent-shade-1);
   border-radius: 10px;
 }
 form .tier-radio:checked + label::after {
   content: url(/assets/images/check.svg);
   display: flex;
   justify-content: center;
-  background: #9d70f1;
+  background: var(--accent-shade-1);
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -129,7 +129,7 @@ label.tier {
   border-radius: 10px;
   align-items: center;
   padding-top: calc(50px + 1rem);
-  background: #393b5f;
+  background: var(--bg-shade-3);
   cursor: pointer;
   transition: all 150ms;
   margin-top: 50px;
@@ -151,7 +151,7 @@ label.tier .tier-thumbnail {
   position: absolute;
   top: -50px;
   z-index: 2;
-  background: #47496d;
+  background: var(--bg-shade-4);
 }
 form .tier-radio:checked + label .tier-thumbnail::before {
   content: "";
@@ -160,7 +160,7 @@ form .tier-radio:checked + label .tier-thumbnail::before {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 4px #9d70f1;
+  box-shadow: inset 0 0 0 4px var(--accent-shade-1);
   border-radius: 8px;
 }
 
@@ -171,7 +171,7 @@ label.tier .tier-text {
 }
 
 label.tier .tier-name {
-  color: var(--text);
+  color: var(--text-shade-3);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -188,7 +188,7 @@ label.tier .tier-perks div {
 }
 label.tier .tier-perks svg {
   stroke-width: 5px;
-  stroke: #59c9a5;
+  stroke: var(--green-shade-1);
   stroke-linecap: square;
   width: 16px;
   height: 16px;
@@ -201,7 +201,7 @@ label.tier p.price {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: #47496d;
+  background: var(--bg-shade-4);
   margin: 0;
   padding: 1.5rem 1rem;
   box-sizing: border-box;
@@ -209,7 +209,7 @@ label.tier p.price {
 }
 label.tier p.price span {
   font-size: 2rem;
-  color: var(--text);
+  color: var(--text-shade-3);
   font-weight: bold;
   margin-right: 0.5ch;
 }
@@ -227,11 +227,11 @@ button {
   font-size: 1rem;
   height: fit-content;
 
-  background: var(--btn);
+  background: var(--accent-shade-0);
   border: none;
   border-radius: 4px;
   padding: 12px;
-  color: var(--text);
+  color: var(--text-shade-3);
   width: 100%;
 
   transition: filter 300ms;
@@ -248,7 +248,7 @@ form button.disabled {
 form button.unsubscribe {
   position: relative;
   background: none;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   margin-top: 12px;
   padding: 0;
 }
@@ -259,7 +259,7 @@ form button.unsubscribe.hidden {
   z-index: -1;
 }
 form button.unsubscribe:hover {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 div.unsub-modal-wrapper,
@@ -283,7 +283,7 @@ div.switch-tier-modal-wrapper.hidden {
 }
 div.unsub-modal,
 div.switch-tier-modal {
-  background: #393b5f;
+  background: var(--bg-shade-3);
   padding: 48px;
   border-radius: 8px;
   text-align: left;
@@ -297,11 +297,11 @@ div.switch-tier-modal h1 {
 }
 p.unsub-modal-caption,
 p.switch-tier-modal-caption {
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 p.unsub-modal-caption span,
 p.switch-tier-modal-caption span {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 
 .unsub-modal-button-wrapper,
@@ -353,7 +353,7 @@ p.switch-tier-modal-caption span {
     left: -100vw;
     width: 200vw;
     height: 300%;
-    background: #111531;
+    background: var(--bg-shade-0);
   }
 }
 

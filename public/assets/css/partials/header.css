@@ -1,0 +1,155 @@
+header {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+header a {
+  text-decoration: none;
+}
+header .logo-link,
+header .logo-link svg {
+  display: block;
+}
+header nav a:first-child {
+  margin-left: 40px;
+}
+header nav a {
+  color: var(--text-shade-1);
+  margin: 0 17px;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: var(--text-shade-3);
+  transition: color 50ms ease-in-out;
+}
+
+header .right-section {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 24px;
+  margin-left: auto;
+  z-index: 2;
+  color: var(--text-shade-1);
+}
+
+header .locale-dropdown-toggle {
+  width: fit-content;
+  height: 24px;
+  padding: 0;
+  margin: auto;
+  transition: color 150ms;
+  cursor: pointer;
+}
+header .locale-dropdown-toggle:hover,
+header .locale-dropdown-toggle.active {
+  color: var(--text-shade-3);
+}
+
+header .user-widget-wrapper {
+  height: 24px;
+}
+
+header .user-widget-wrapper a.login-link {
+  color: var(--text-shade-1);
+  text-decoration: none;
+  transition: color 150ms;
+}
+header .user-widget-wrapper a.login-link:hover {
+  color: var(--text-shade-3);
+}
+
+header .user-widget-wrapper.logged-in {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+header .user-widget-wrapper.logged-in .user-widget-toggle {
+  width: 32px;
+  height: 32px;
+  background: var(--text-shade-0);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+header .user-widget-wrapper .user-widget-toggle img,
+header .user-widget .user-avatar img {
+  width: 100%;
+  height: 100%;
+}
+header .user-widget {
+  max-height: 0;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  transition: max-height 300ms, padding 200ms, opacity 150ms;
+
+  position: absolute;
+  right: 0;
+  top: 48px;
+  padding: 0;
+  background: var(--bg-shade-2);
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+
+  box-shadow: 0 0 10px -2px var(--bg-shade-0);
+}
+header .user-widget.active {
+  max-height: 100vh;
+  padding: 36px;
+  opacity: 1;
+}
+header .user-widget .user-avatar {
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  background: var(--text-shade-0);
+  border-radius: 50%;
+  overflow: hidden;
+}
+header .user-widget .user-info {
+  margin-top: 12px;
+}
+header .user-widget .user-info .mii-name {
+  color: var(--text-shade-3);
+}
+header .user-widget .buttons {
+  margin-top: 12px;
+}
+header .user-widget .button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px 60px;
+  cursor: pointer;
+}
+header .user-widget .button.logout {
+  background: var(--bg-shade-3);
+  color: var(--text-shade-3);
+}
+
+@media screen and (max-width: 900px) {
+  header nav a:not(.keep-on-mobile) {
+    display: none;
+  }
+
+  header .logo-link {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo-link svg text {
+    display: none;
+  }
+
+  header .logo-link svg {
+    width: 39.876px;
+  }
+
+  header .logo-link {
+    margin-right: 10px;
+  }
+  header nav a {
+    margin: 0 10px;
+  }
+}
