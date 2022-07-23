@@ -21,7 +21,7 @@ document.getElementById('remove-discord-connection')?.addEventListener('click', 
 		.catch(console.log);
 });
 
-const onlineFilesModal = document.querySelector('.online-files-modal-wrapper');
+const onlineFilesModal = document.querySelector('.modal-wrapper#onlinefiles');
 const onlineFilesModalButtonConfirm = document.getElementById('onlineFilesConfirmButton');
 const onlineFilesModalButtonClose = document.getElementById('onlineFilesCloseButton');
 const onlineFilesModalPasswordInput = document.getElementById('password');

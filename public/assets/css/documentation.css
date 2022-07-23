@@ -1,6 +1,6 @@
 html,
 body {
-  background: #131730;
+  background: var(--bg-shade-0);
 }
 a.logo-link {
   margin: auto;
@@ -8,11 +8,11 @@ a.logo-link {
   height: 40px;
   text-decoration: none;
 }
-header {
+.docs-wrapper header {
   width: calc(100% - 72px);
-  background: #131730;
+  background: var(--bg-shade-0);
   padding: 12px 36px;
-  margin: 0;
+  margin: 18px 0;
 }
 header a.logo-link {
   display: none;
@@ -33,7 +33,7 @@ header nav a:first-child {
   flex-flow: column;
   align-items: center;
   width: clamp(270px, 30vw, 500px);
-  background: #161931;
+  background: var(--bg-shade-0);
   max-height: calc(100vh - 69px);
   overflow-y: scroll;
   min-height: 100%;
@@ -52,19 +52,19 @@ header nav a:first-child {
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
-  color: var(--text-secondary-2);
+  color: var(--text-shade-0);
   margin-bottom: 12px;
 }
 .docs-wrapper .sidebar .section a {
   position: relative;
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   width: fit-content;
   margin-bottom: 12px;
 }
 .docs-wrapper .sidebar .section a.active,
 .docs-wrapper .sidebar .section a:hover {
-  color: var(--text);
+  color: var(--text-shade-3);
 }
 .docs-wrapper .sidebar .section a.active::before {
   /* This filter thing is jank, if anyone knows a better way to do this please fix */
@@ -77,7 +77,7 @@ header nav a:first-child {
 
 .docs-wrapper .content {
   width: calc(100vw - clamp(270px, 30vw, 500px) - (72px * 2));
-  background: var(--background);
+  background: var(--bg-shade-1);
   padding: 72px;
   max-height: calc(100vh - 69px - (72px * 2));
   overflow-y: scroll;
@@ -86,7 +86,7 @@ header nav a:first-child {
   max-width: 900px;
 }
 .docs-wrapper .content p {
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
 }
 .docs-wrapper .content h1:first-child {
   margin-top: 0;
@@ -99,9 +99,9 @@ header nav a:first-child {
 }
 .docs-wrapper .quick-links-grid a {
   text-decoration: none;
-  background: #252a51;
+  background: var(--bg-shade-2);
   border-radius: 6px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   display: flex;
   align-items: center;
   padding: 20px;
@@ -110,12 +110,12 @@ header nav a:first-child {
   height: 36px;
   margin-right: 24px;
   margin-left: 4px;
-  color: var(--theme-light);
+  color: var(--accent-shade-2);
 }
 .docs-wrapper .quick-links-grid p.header {
   font-size: 22px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-shade-3);
   margin: 0;
 }
 .docs-wrapper .quick-links-grid p {
@@ -141,30 +141,30 @@ header nav a:first-child {
 .docs-wrapper .sidebar::-webkit-scrollbar-thumb,
 .docs-wrapper .content::-webkit-scrollbar-thumb,
 .docs-wrapper .content pre code::-webkit-scrollbar-thumb {
-  background-color: var(--text-secondary-2);
+  background-color: var(--text-shade-0);
   border-radius: 24px;
-  border: 3px solid #161931;
+  border: 3px solid var(--bg-shade-1);
 }
 .docs-wrapper .content::-webkit-scrollbar-thumb {
-  border: 3px solid var(--background);
+  border: 3px solid var(--bg-shade-1);
 }
 .docs-wrapper .content pre code::-webkit-scrollbar-thumb {
-  border: 3px solid #0d0f20;
+  border: 3px solid var(--bg-shade-0);
 }
 .docs-wrapper .sidebar {
   scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) #161931;
+  scrollbar-color: var(--text-shade-0) var(--bg-shade-1);
 }
 .docs-wrapper .content {
   scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) var(--background);
+  scrollbar-color: var(--text-shade-0) var(--bg-shade-1);
 }
-.docs-wrapper .content pre codear {
+.docs-wrapper .content pre code {
   scrollbar-width: thin;
-  scrollbar-color: var(--text-secondary-2) #0d0f20;
+  scrollbar-color: var(--text-shade-0) var(--bg-shade-0);
 }
 .docs-wrapper .content .missing-in-locale-notice {
-  background: #252a51;
+  background: var(--bg-shade-2);
   padding: 24px;
   border-radius: 6px;
 }
@@ -181,22 +181,22 @@ header nav a:first-child {
   border: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: var(--btn-secondary);
+  background-color: var(--bg-shade-3);
   border: none;
   border-radius: 4px 0 0 4px;
   padding: 12px 24px;
-  color: var(--text-secondary);
+  color: var(--text-shade-1);
   width: 20px;
   flex: 2 10%;
 }
 
 .search input::placeholder {
-  color: var(--text-secondary-2);
+  color: var(--text-shade-0);
 }
 
 .search input:focus {
   background-color: #fff;
-  color: var(--btn-secondary);
+  color: var(--bg-shade-3);
   transition: 200ms;
   outline: none;
 }
@@ -207,9 +207,9 @@ header nav a:first-child {
   border: 0;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: var(--text);
+  color: var(--text-shade-3);
   padding: 12px 36px;
-  background: var(--btn);
+  background: var(--accent-shade-0);
   cursor: pointer;
 }
 

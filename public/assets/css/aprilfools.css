@@ -29,7 +29,7 @@
     height: 100%;
     top: 0;
     left: -50vw;
-    background: var(--theme);
+    background: var(--accent-shade-0);
     z-index: -1;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .footnotes {
-    color: var(--text-secondary);
+    color: var(--text-shade-1);
 }
 
 @media screen and (max-width: 946px) {

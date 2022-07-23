@@ -9,11 +9,11 @@ code.hljs {
   padding: 3px 5px;
 }
 .hljs {
-  background: #0D0F20;
+  background: var(--bg-shade-0);
   color: #d6deeb;
 }
 .hljs-keyword {
-  color: #c792ea;
+  color: var(--accent-shade-2);
   font-style: italic;
 }
 .hljs-built_in {

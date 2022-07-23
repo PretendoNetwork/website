@@ -65,13 +65,13 @@ buttons.submit.addEventListener('click', function(e) {
 
 	// If the user is already subscribed to another tier, we show the confirm modal, else if this is a new subscription we submit the form.
 	if (currentTierElement) {
-		const oldTierNameSpan = document.querySelector('.switch-tier-modal-caption span.oldtier');
-		const newTierNameSpan = document.querySelector('.switch-tier-modal-caption span.newtier');
+		const oldTierNameSpan = document.querySelector('#switchtier .modal-caption span.oldtier');
+		const newTierNameSpan = document.querySelector('#switchtier .modal-caption span.newtier');
 		oldTierNameSpan.innerText = currentTierElement.dataset.tierName;
 		newTierNameSpan.innerText = document.querySelector('input[name="tier"]:checked').dataset.tierName;
 
 		document.body.classList.add('modal-open');
-		document.querySelector('.switch-tier-modal-wrapper').classList.remove('hidden');
+		document.querySelector('.modal-wrapper#switchtier').classList.remove('hidden');
 	} else {
 		submitForm();
 	}
@@ -80,19 +80,19 @@ buttons.submit.addEventListener('click', function(e) {
 buttons.unsubModal.show.addEventListener('click', function(e) {
 	e.preventDefault();
 
-	const tierNameSpan = document.querySelector('.unsub-modal-caption span');
+	const tierNameSpan = document.querySelector('#unsub .modal-caption span');
 	tierNameSpan.innerText = currentTierElement.dataset.tierName;
 
 	// Show the unsubscribe modal
 	document.body.classList.add('modal-open');
-	document.querySelector('.unsub-modal-wrapper').classList.remove('hidden');
+	document.querySelector('.modal-wrapper#unsub').classList.remove('hidden');
 });
 buttons.unsubModal.close.addEventListener('click', function(e) {
 	e.preventDefault();
 
 	// Hide the unsubscribe modal
 	document.body.classList.remove('modal-open');
-	document.querySelector('.unsub-modal-wrapper').classList.add('hidden');
+	document.querySelector('.modal-wrapper#unsub').classList.add('hidden');
 });
 buttons.unsubModal.confirm.addEventListener('click', function(e) {
 	e.preventDefault();
@@ -105,7 +105,7 @@ buttons.switchTierModal.close.addEventListener('click', function(e) {
 
 	// Hide the switch tier modal
 	document.body.classList.remove('modal-open');
-	document.querySelector('.switch-tier-modal-wrapper').classList.add('hidden');
+	document.querySelector('.modal-wrapper#switchtier').classList.add('hidden');
 });
 buttons.switchTierModal.confirm.addEventListener('click', function(e) {
 	e.preventDefault();
