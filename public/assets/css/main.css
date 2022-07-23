@@ -216,25 +216,9 @@ img.emoji {
 	align-items: flex-start;
 }
 .hero .buttons a {
-	display: block;
+	text-decoration: none;
 }
-.hero .buttons a > * {
-	cursor: pointer;
-}
-.button {
-	appearance: none;
-	-webkit-appearance: none;
-	border: 0;
-	border-radius: 6px;
-	font-family: Poppins, Arial, Helvetica, sans-serif;
-	font-size: 1rem;
-	color: var(--text-shade-3);
-	padding: 12px 48px;
-	background: var(--bg-shade-3);
-}
-.button.primary {
-	background: var(--accent-shade-0);
-}
+
 .hero .button.secondary {
 	padding: 0;
 }
@@ -244,18 +228,6 @@ img.emoji {
 .do-button-margin {
 	margin-bottom: 15px;
 	margin-right: 15px;
-}
-.button.secondary.icon-btn {
-	width: 50px;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.button svg {
-	width: 30px;
-	height: 30px;
-	display: block;
 }
 
 /* Non-hero sections */

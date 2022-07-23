@@ -13,9 +13,6 @@
   width: 1600px;
   height: 1400px;
 }
-body.modal-open {
-  overflow: hidden;
-}
 
 .back-arrow {
   position: absolute;
@@ -30,6 +27,7 @@ body.modal-open {
   transition: filter 150ms;
   text-decoration: none;
   color: var(--text-shade-3);
+  z-index: 5;
 }
 .back-arrow:hover {
   filter: brightness(1.5)
@@ -70,7 +68,7 @@ p.caption {
   margin: 0 auto 72px;
   padding: 24px;
   border-radius: 6px;
-  background: var(--bg-shade-0);
+  background: var(--bg-shade-2);
   box-sizing: border-box;
 }
 .account-form-wrapper .progress-bar-wrapper p {
@@ -262,68 +260,6 @@ form button.unsubscribe:hover {
   color: var(--text-shade-3);
 }
 
-div.unsub-modal-wrapper,
-div.switch-tier-modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-
-  z-index: 10;
-}
-div.unsub-modal-wrapper.hidden,
-div.switch-tier-modal-wrapper.hidden {
-  display: none;
-}
-div.unsub-modal,
-div.switch-tier-modal {
-  background: var(--bg-shade-3);
-  padding: 48px;
-  border-radius: 8px;
-  text-align: left;
-  width: min(660px, 90%);
-  box-sizing: border-box;
-}
-
-div.unsub-modal h1,
-div.switch-tier-modal h1 {
-  margin-top: 0;
-}
-p.unsub-modal-caption,
-p.switch-tier-modal-caption {
-  color: var(--text-shade-1);
-}
-p.unsub-modal-caption span,
-p.switch-tier-modal-caption span {
-  color: var(--text-shade-3);
-}
-
-.unsub-modal-button-wrapper,
-.switch-tier-modal-button-wrapper {
-  margin-top: 24px;
-  display: flex;
-  justify-content: flex-end;
-}
-.unsub-modal-button-wrapper button,
-.switch-tier-modal-button-wrapper button {
-  margin-left: 12px;
-  width: fit-content;
-}
-.unsub-modal-button-wrapper button.cancel,
-.switch-tier-modal-button-wrapper button.cancel {
-  background: none;
-}
-.unsub-modal-button-wrapper button.confirm,
-.switch-tier-modal-button-wrapper button.confirm {
-  padding: 12px 24px;
-}
-
 @media screen and (max-width: 900px) {
   .account-form-wrapper {
     width: min(500px, 100%);
@@ -357,11 +293,7 @@ p.switch-tier-modal-caption span {
   }
 }
 
-@media screen and (max-width: 600px) {
-  div.unsub-modal {
-    padding: 24px;
-  }
-}
+
 
 @media screen and (max-width: 380px) {
   label.tier .tier-perks {
