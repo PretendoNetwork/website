@@ -61,7 +61,7 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 			scope: ['identify', 'guilds'],
 			state: crypto.randomBytes(16).toString('hex'),
 		});
-		
+
 		renderData.discordAuthURL = discordAuthURL;
 	}
 
@@ -396,7 +396,7 @@ router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, respo
 			logger.error(`Error canceling old user subscription | ${pnid.get('connections.stripe.customer_id')}, ${pid}, ${subscriptionId} | - ${error.message}`);
 
 			response.cookie('error_message', 'Error canceling subscription! Contact support if issue persists', { domain: '.pretendo.network' });
-			
+
 			return response.redirect('/account');
 		}
 	}

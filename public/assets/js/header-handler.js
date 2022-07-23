@@ -59,7 +59,7 @@ document.addEventListener('click', (e) => {
 	let found = false;
 	if (
 		localeDropdown == targetElement ||
-    localeDropdown.contains(targetElement)
+	localeDropdown.contains(targetElement)
 	) {
 		found = true;
 		userWidget.classList.remove('active');
@@ -67,9 +67,9 @@ document.addEventListener('click', (e) => {
 
 	if (
 		userWidget == targetElement ||
-    userWidget.contains(targetElement) ||
-    userWidgetToggle == targetElement ||
-    userWidgetToggle.contains(targetElement)
+	userWidget.contains(targetElement) ||
+	userWidgetToggle == targetElement ||
+	userWidgetToggle.contains(targetElement)
 	) {
 		found = true;
 		localeDropdownToggle.classList.remove('active');

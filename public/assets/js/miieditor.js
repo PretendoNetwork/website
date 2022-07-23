@@ -1,6 +1,6 @@
 // This file gets automatically bundled with browserify when running the start script. This also means that after any update you're gonna need to restart the server.
 
-// Prevent the user from reloading or leaving the page 
+// Prevent the user from reloading or leaving the page
 window.addEventListener('beforeunload', function (e) {
 	e.preventDefault();
 	e.returnValue = '';

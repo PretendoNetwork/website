@@ -1,76 +1,76 @@
 .select-box {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  user-select: none;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	user-select: none;
 }
 
 .select-box > * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .select-box .options-container {
-  max-height: 0;
-  width: fit-content;
-  opacity: 0;
-  transition: all 0.4s;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: var(--bg-shade-3);
-  order: 1;
-  position: absolute;
-  top: 48px;
-  right: 0;
+	max-height: 0;
+	width: fit-content;
+	opacity: 0;
+	transition: all 0.4s;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: var(--bg-shade-3);
+	order: 1;
+	position: absolute;
+	top: 48px;
+	right: 0;
 }
 
 .select-box .option .item {
-  color: var(--text-shade-2);
+	color: var(--text-shade-2);
 }
 
 .select-box .lang {
-  width: 1.3rem;
-  height: 1rem;
-  margin-right: .2rem;
-  display: inline-block;
+	width: 1.3rem;
+	height: 1rem;
+	margin-right: .2rem;
+	display: inline-block;
 }
 
 .select-box .options-container.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: auto;
+	max-height: 240px;
+	opacity: 1;
+	overflow-y: auto;
 }
 
 .select-box .options-container.active + .locale-dropdown-toggle::after {
-  transform: translateY(-50%) rotateX(180deg);
+	transform: translateY(-50%) rotateX(180deg);
 }
 
 .select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: var(--bg-shade-3);
-  border-radius: 0 5px 5px 0;
+	width: 8px;
+	background: var(--bg-shade-3);
+	border-radius: 0 5px 5px 0;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: var(--text-shade-1);
-  border-radius: 0 5px 5px 0;
+	background: var(--text-shade-1);
+	border-radius: 0 5px 5px 0;
 }
 .select-box .option {
-  padding: 12px 15px;
-  cursor: pointer;
-  border-radius: 5px;
+	padding: 12px 15px;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .select-box .option:hover {
-  background: var(--bg-shade-4);
+	background: var(--bg-shade-4);
 }
 .select-box .option:hover .item {
-  color: white;
+	color: white;
 }
 
 .select-box label {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .select-box .option .radio {
-  display: none;
+	display: none;
 }
