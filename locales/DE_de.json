@@ -178,13 +178,13 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Icons für das Mii Editor und Juxt Reaktionen",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
 				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"caption": "Lokalisierungen und anderen Beiträgen",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
