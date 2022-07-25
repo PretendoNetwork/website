@@ -1,6 +1,7 @@
 /* BUTTONS */
 
-button {
+button,
+.button {
 	appearance: none;
 	-webkit-appearance: none;
 	border: 0;
@@ -14,24 +15,29 @@ button {
 	display: block;
 	text-align: center;
 }
-button:hover {
+button:hover,
+.button:hover {
 	background: var(--bg-shade-4);
 }
-button.primary {
+button.primary,
+.button.primary {
 	background: var(--accent-shade-0);
 }
-button.primary:hover {
+button.primary:hover,
+.button.primary:hover {
 	background: var(--accent-shade-1);
 }
 
-button.secondary.icon-btn {
+button.secondary.icon-btn,
+.button.secondary.icon-btn {
 	width: 50px;
 	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-button svg {
+button svg,
+.button svg {
 	width: 30px;
 	height: 30px;
 	display: block;
