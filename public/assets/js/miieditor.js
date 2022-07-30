@@ -241,7 +241,7 @@ document.querySelector('#saveTab #saveButton').addEventListener('click', (e) => 
 	}, 1500);
 
 	setTimeout(() => {
-		document.querySelector('.mii-comparison.confirmed .new-mii').classList.add('centered-mii-img');
+		document.querySelector('.mii-comparison.confirmed .new-mii-wrapper').classList.add('centered-mii-img');
 	}, 2000);
 
 
