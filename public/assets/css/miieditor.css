@@ -313,8 +313,9 @@ input[type="range"].invert {
 .tab#saveTab {
 	gap: 2rem 0;
 }
-.tab#saveTab p {
-	margin: 0;
+.tab#saveTab p.save-prompt {
+	margin-bottom: 0;
+	text-align: center;
 }
 
 .mii-comparison-animation-wrapper {
@@ -650,7 +651,8 @@ button * {
 }
 
 @media screen and (max-width: 360px) {
-	fieldset, fieldset.has-subpages .subpage {
+	fieldset,
+	fieldset.has-subpages .subpage {
 		gap: 4px;
 	}
 
