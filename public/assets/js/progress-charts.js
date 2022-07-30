@@ -5,9 +5,10 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 	const percentageOverride = progressListElement.querySelector('canvas.percentage-chart').dataset.percentageoverride;
 	const allFeatureNodes = progressListElement.querySelectorAll('.feature');
 	const allDoneFeatureNodes = progressListElement.querySelectorAll('.feature .done');
+	const allStartedFeatureNodes = progressListElement.querySelectorAll('.feature .ongoing');
 
 	// Use percentage override data attribute if present, else calculate
-	const progressPercentage = Math.round(percentageOverride) || Math.round(Math.min((allDoneFeatureNodes.length / allFeatureNodes.length) * 100, 100));
+	const progressPercentage = Math.round(percentageOverride) || Math.round(Math.min((allDoneFeatureNodes.length + allStartedFeatureNodes.length * 0.5) / allFeatureNodes.length * 100, 100));
 	const remainingPercentage = 100 - progressPercentage;
 
 	// Set inner paragraph
