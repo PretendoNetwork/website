@@ -56,7 +56,7 @@
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-			"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."				
+			"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
 			},
 			{
 				"question": "¿Pretendo soportará Wii/Switch?",
@@ -170,6 +170,12 @@
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
+				"name": "rverse",
+				"caption": "Miiverse information sharing",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
 				"name": "Kinnay",
 				"special": "Agradecimientos",
 				"caption": "Estudio de las estructuras de datos de Nintendo",
@@ -216,6 +222,15 @@
 	"blogPage": {
 		"title": "Blog",
 		"description": "Las últimas actualizaciones en pequeñas cantidades. Si quieres ver actualizaciones más frecuentes, considera apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
 	},
 	"localizationPage": {
 		"title": "Vamos a localizar",

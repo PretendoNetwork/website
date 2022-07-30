@@ -1,0 +1,308 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+}
+.wrapper::before {
+	position: absolute;
+	top: -800px;
+	content: "";
+	background: var(--bg-shade-0);
+	border-radius: 100%;
+	width: 1600px;
+	height: 1400px;
+}
+
+.back-arrow {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 36px;
+	left: max(calc((100vw - 1590px) / 2), 2.5vw);
+	padding: 6px 10px;
+	background: var(--bg-shade-3);
+	border-radius: 24px;
+
+	transition: filter 150ms;
+	text-decoration: none;
+	color: var(--text-shade-3);
+	z-index: 5;
+}
+.back-arrow:hover {
+	filter: brightness(1.5)
+}
+.back-arrow svg {
+	width: 24px;
+	height: 24px;
+}
+.back-arrow span {
+	margin: 0 4px;
+}
+
+.account-form-wrapper {
+	display: flex;
+	flex-flow: column;
+	width: min(1200px, 100%);
+	color: var(--text-shade-1);
+	margin: 0 auto 48px;
+	z-index: 1;
+}
+
+.account-form-wrapper .logotype {
+	margin: 36px auto 0;
+	width: fit-content;
+}
+
+h1.title {
+	color: var(--text-shade-3);
+}
+p.caption {
+	width: min(100%, 500px);
+	margin: 0 auto 36px;
+}
+
+.account-form-wrapper .progress-bar-wrapper {
+	justify-content: center;
+	width: min(100%, 500px);
+	margin: 0 auto 72px;
+	padding: 24px;
+	border-radius: 6px;
+	background: var(--bg-shade-2);
+	box-sizing: border-box;
+}
+.account-form-wrapper .progress-bar-wrapper p {
+	text-align: left;
+	margin-bottom: 0;
+}
+.account-form-wrapper .progress-bar-wrapper p span {
+	color: var(--text-shade-3);
+	font-weight: 600;
+}
+
+.account-form-wrapper .progress-bar {
+	height: 8px;
+	border-radius: 4px;
+	margin-top: 0;
+}
+
+form {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.3rem;
+}
+
+form .tier-radio {
+	display: none;
+}
+form .tier-radio:checked + label::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 4px var(--accent-shade-1);
+	border-radius: 10px;
+}
+form .tier-radio:checked + label::after {
+	content: url(/assets/images/check.svg);
+	display: flex;
+	justify-content: center;
+	background: var(--accent-shade-1);
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	position: absolute;
+	top: -16px;
+	right: -16px;
+	padding: 6px;
+}
+
+label.tier {
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	border-radius: 10px;
+	align-items: center;
+	padding-top: calc(50px + 1rem);
+	background: var(--bg-shade-3);
+	cursor: pointer;
+	transition: all 150ms;
+	margin-top: 50px;
+	text-align: center;
+}
+
+label.tier p {
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+label.tier .tier-thumbnail {
+	height: 100px;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 8px;
+	position: absolute;
+	top: -50px;
+	z-index: 2;
+	background: var(--bg-shade-4);
+}
+form .tier-radio:checked + label .tier-thumbnail::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 0 4px var(--accent-shade-1);
+	border-radius: 8px;
+}
+
+label.tier .tier-text {
+	display: flex;
+	flex-flow: column;
+	margin-bottom: auto;
+}
+
+label.tier .tier-name {
+	color: var(--text-shade-3);
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+label.tier .tier-perks {
+	text-align: left;
+	width: 70%;
+	margin: 24px auto 48px;
+}
+label.tier .tier-perks div {
+	display: grid;
+	grid-template-columns: 16px auto;
+	gap: 8px;
+}
+label.tier .tier-perks svg {
+	stroke-width: 5px;
+	stroke: var(--green-shade-1);
+	stroke-linecap: square;
+	width: 16px;
+	height: 16px;
+	vertical-align: top;
+	margin-top: 0.5ex;
+}
+
+label.tier p.price {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background: var(--bg-shade-4);
+	margin: 0;
+	padding: 1.5rem 1rem;
+	box-sizing: border-box;
+	border-radius: 0 0 10px 10px;
+}
+label.tier p.price span {
+	font-size: 2rem;
+	color: var(--text-shade-3);
+	font-weight: bold;
+	margin-right: 0.5ch;
+}
+
+form .button-wrapper {
+	grid-column: 2 / span 1;
+	position: relative;
+	margin-top: 24px;
+}
+button {
+	appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	height: fit-content;
+
+	background: var(--accent-shade-0);
+	border: none;
+	border-radius: 4px;
+	padding: 12px;
+	color: var(--text-shade-3);
+	width: 100%;
+
+	transition: filter 300ms;
+	pointer-events: all;
+	cursor: pointer;
+	filter: none;
+}
+form button.disabled {
+	pointer-events: none;
+	filter: brightness(0.75) saturate(0.75); /* not using opacity here 'cause in the mobile layout you would see the cards under it */
+	cursor: default;
+}
+
+form button.unsubscribe {
+	position: relative;
+	background: none;
+	color: var(--text-shade-1);
+	margin-top: 12px;
+	padding: 0;
+}
+form button.unsubscribe.hidden {
+	position: absolute;
+	top: 0;
+	pointer-events: none;
+	z-index: -1;
+}
+form button.unsubscribe:hover {
+	color: var(--text-shade-3);
+}
+
+@media screen and (max-width: 900px) {
+	.account-form-wrapper {
+		width: min(500px, 100%);
+		margin-bottom: 172px;
+	}
+
+	form {
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+	}
+
+	form button {
+		position: relative;
+		width: 100%;
+	}
+	form .button-wrapper {
+		grid-column: 1 / span 1;
+		position: fixed;
+		bottom: 24px;
+		width: min(500px, 90%);
+		z-index: 5;
+	}
+	form .button-wrapper::before {
+		content: "";
+		position: absolute;
+		top: -24px;
+		left: -100vw;
+		width: 200vw;
+		height: 300%;
+		background: var(--bg-shade-0);
+	}
+}
+
+
+
+@media screen and (max-width: 380px) {
+	label.tier .tier-perks {
+		width: 80%;
+	}
+	.back-arrow {
+		padding: 6px;
+	}
+	.back-arrow span {
+		display: none;
+	}
+}

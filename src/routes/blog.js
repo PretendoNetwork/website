@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const util = require('../util');
 const logger = require('../logger');
 const router = new Router();
 
@@ -36,18 +35,11 @@ const postList = () => {
 };
 
 router.get('/', async (request, response) => {
-
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
-
-	response.render('blog/blog', {
-		layout: 'main',
-		locale,
-		localeString,
+	const renderData = 	{
 		postList
-	});
+	};
+
+	response.render('blog/blog', renderData);
 });
 
 // RSS feed
@@ -69,10 +61,10 @@ router.get('/feed.xml', async (request, response) => {
 
 router.get('/:slug', async (request, response, next) => {
 
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-
-	const localeString = reqLocale.toString();
+	const renderData = 	{
+		layout: 'blog-opengraph',
+		postList,
+	};
 
 	// Get the name of the post from the URL
 	const postName = request.params.slug;
@@ -89,6 +81,7 @@ router.get('/:slug', async (request, response, next) => {
 	// Convert the post info into JSON and separate it and the content
 	// eslint-disable-next-line prefer-const
 	let { data: postInfo, content } = matter(rawPost);
+	renderData.postInfo = postInfo;
 
 	// Replace [yt-iframe](videoID) with the full <iframe />
 	content = content
@@ -97,14 +90,9 @@ router.get('/:slug', async (request, response, next) => {
 
 	// Convert the content into HTML
 	const htmlPost = marked.parse(content);
+	renderData.htmlPost = htmlPost;
 
-	response.render('blog/blogpost', {
-		layout: 'blog-opengraph',
-		locale,
-		localeString,
-		postInfo,
-		htmlPost,
-	});
+	response.render('blog/blogpost', renderData);
 });
 
 module.exports = router;

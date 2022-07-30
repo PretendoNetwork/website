@@ -171,6 +171,12 @@
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
+				"name": "rverse",
+				"caption": "Condivisione di informazioni su Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
 				"name": "Kinnay",
 				"special": "Ringraziamenti speciali",
 				"caption": "Ricerca su strutture dati Nintendo",
@@ -179,7 +185,7 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Icone per l'editor Mii e le reazioni su Juxt",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
@@ -217,6 +223,15 @@
 	"blogPage": {
 		"title": "Blog",
 		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderatore",
+			"Sviluppatore"
+		],
+		"banned": "Bannato"
 	},
 	"localizationPage": {
 		"title": "Localizziamo",

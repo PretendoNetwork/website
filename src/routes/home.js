@@ -1,21 +1,21 @@
 const { Router } = require('express');
-const util = require('../util');
 const { boards } = require('../../boards/boards.json');
 const router = new Router();
 
-const { getTrelloCache } = require('../trello');
+const { getTrelloCache } = require('../cache');
 
 router.get('/', async (request, response) => {
 
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.region, reqLocale.language);
-	
+	const renderData = 	{
+		boards
+	};
+
 	const cache = await getTrelloCache();
 
 	// Builds the arrays of people for the special thanks section
 
 	// Shuffles the special thanks people
-	let specialThanksPeople = locale.specialThanks.people.slice();
+	const specialThanksPeople = response.locals.locale.specialThanks.people.slice();
 	function shuffleArray(array) {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -25,11 +25,11 @@ router.get('/', async (request, response) => {
 	shuffleArray(specialThanksPeople);
 
 	// Slices the array in half
-	const specialThanksFirstRow = specialThanksPeople.slice(0, 3);
-	const specialThanksSecondRow = specialThanksPeople.slice(3, 7);
+	const specialThanksFirstRow = specialThanksPeople.slice(0, 4);
+	const specialThanksSecondRow = specialThanksPeople.slice(4);
 
 	// Builds the final array to be sent to the view, and triples each row.
-	specialThanksPeople = {
+	renderData.specialThanksPeople = {
 		first: specialThanksFirstRow.concat(specialThanksFirstRow).concat(specialThanksFirstRow),
 		second: specialThanksSecondRow.concat(specialThanksSecondRow).concat(specialThanksSecondRow)
 	};
@@ -75,14 +75,9 @@ router.get('/', async (request, response) => {
 	// Calculates global completion percentage
 	totalProgress.percent = Math.round(totalProgress._calc.percentageSum / cache.sections.length * 100);
 
-	response.render('home', {
-		layout: 'main',
-		featuredFeatureList: totalProgress,
-		boards,
-		locale,
-		localeString: reqLocale.toString(),
-		specialThanksPeople
-	});
+	renderData.featuredFeatureList = totalProgress;
+
+	response.render('home', renderData);
 });
 
 module.exports = router;

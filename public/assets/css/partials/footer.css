@@ -1,0 +1,111 @@
+footer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, fit-content(100%)) 1fr;
+	gap: 7.7vw;
+	color: var(--text-shade-1);
+	margin-top: 120px;
+	position: relative;
+	padding: 60px 0;
+}
+footer::after {
+	content: "";
+	width: 400vw;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -50vw;
+	background: var(--bg-shade-0);
+	z-index: -1;
+}
+footer div {
+	display: flex;
+	flex-flow: column;
+	width: fit-content;
+}
+footer svg.logotype {
+	height: 56px;
+	width: fit-content;
+	margin: -10px 0 24px -10px;
+}
+footer p {
+	margin: 0;
+}
+footer h1 {
+	font-size: 20px;
+	margin-top: 0;
+	color: var(--text-shade-3);
+}
+footer a {
+	color: var(--text-shade-1);
+	text-decoration: none;
+	width: fit-content;
+}
+footer a:hover {
+	color: var(--text-shade-3);
+	text-decoration: underline;
+}
+footer div.discord-server-card {
+	background: var(--bg-shade-2);
+	border-radius: 12px;
+	padding: 30px 90px 30px 36px;
+	justify-self: end;
+}
+footer div.discord-server-card h1 {
+	font-size: 25px;
+	margin: 0;
+}
+footer div.discord-server-card h2 {
+	color: var(--text-shade-3);
+	font-size: 22px;
+	margin: 0;
+}
+footer div.discord-server-card a {
+	display: flex;
+	align-items: center;
+	color: var(--accent-shade-3);
+	font-size: 22px;
+	text-decoration: none;
+	width: fit-content;
+	margin-left: -2px;
+	margin-top: 12px;
+}
+footer div.discord-server-card a:hover {
+	text-decoration: underline;
+}
+footer div.discord-server-card svg {
+	height: 24px;
+	stroke-width: 3px;
+	margin-right: 4px;
+}
+
+@media screen and (max-width: 900px) {
+	footer {
+		margin-top: 100px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, fit-content(100%));
+	}
+	footer div {
+		justify-self: center;
+	}
+	footer div.discord-server-card {
+		grid-column: 1 / span 4;
+		width: calc(100% - 126px);
+		justify-self: normal;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	footer {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, fit-content(100%));
+	}
+	footer div {
+		justify-self: start;
+	}
+	footer div.discord-server-card {
+		grid-column: 1 / span 1;
+		padding: 30px;
+		width: calc(100% - 60px);
+	}
+}

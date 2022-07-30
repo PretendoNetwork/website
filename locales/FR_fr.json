@@ -172,6 +172,12 @@
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
+				"name": "rverse",
+				"caption": "Miiverse information sharing",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
 				"name": "Kinnay",
 				"special": "Remerciement spéciaux",
 				"caption": "Étude des structures de données de Nintendo",
@@ -218,6 +224,15 @@
 	"blogPage": {
 		"title": "Blog",
 		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
 	},
 	"localizationPage": {
 		"title": "Localisons",

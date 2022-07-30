@@ -5,37 +5,26 @@ const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
-const logger = require('./logger');
+const Stripe = require('stripe');
+const redirectMiddleware = require('./middleware/redirect');
+const renderDataMiddleware = require('./middleware/render-data');
+const database = require('./database');
 const util = require('./util');
+const logger = require('./logger');
 const config = require('../config.json');
-
 const defaultLocale = require('../locales/US_en.json');
 
 const { http: { port } } = config;
 const app = express();
+const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: true }));
-
-logger.info('Setting up static public folder');
-app.use(express.static('public'));
-
-logger.info('Importing page routers');
-const routers = {
-	home: require('./routers/home'),
-	faq: require('./routers/faq'),
-	docs: require('./routers/docs'),
-	progress: require('./routers/progress'),
-	account: require('./routers/account'),
-	blog: require('./routers/blog'),
-	localization: require('./routers/localization'),
-	aprilfools: require('./routers/aprilfools')
-};
-
+app.use(express.json());
+app.use(express.urlencoded({
+	extended: true
+}));
 app.use(cookieParser());
-
-// Locale express middleware setup
 app.use(expressLocale({
 	'priority': ['cookie', 'accept-language', 'map', 'default'],
 	cookie: { name: 'preferredLocale' },
@@ -44,6 +33,7 @@ app.use(expressLocale({
 		/* TODO: map more regions to the available locales */
 		en: 'en-US', 'en-GB': 'en-US', 'en-AU': 'en-US', 'en-CA': 'en-US',
 		ar: 'ar-AR',
+		cn: 'zh-CN',
 		de: 'de-DE',
 		nl: 'nl-NL',
 		es: 'es-ES',
@@ -57,11 +47,12 @@ app.use(expressLocale({
 		pt: 'pt-BR',
 		ro: 'ro-RO',
 		ru: 'ru-RU',
-		tr: 'tr-TR'
+		tr: 'tr-TR',
 	},
 	allowed: [
 		'en', 'en-US', 'en-GB', 'en-AU', 'en-CA',
 		'ar', 'ar-AR',
+		'cn', 'zh-CN', 'zh-HK', 'zh-TW',
 		'de', 'de-DE',
 		'nl', 'nl-NL',
 		'es', 'es-ES',
@@ -78,15 +69,32 @@ app.use(expressLocale({
 	],
 	'default': 'en-US'
 }));
+app.use(redirectMiddleware);
+app.use(renderDataMiddleware);
 
-app.use('/', routers.home);
-app.use('/faq', routers.faq);
-app.use('/docs', routers.docs);
-app.use('/progress', routers.progress);
-app.use('/account', routers.account);
-app.use('/localization', routers.localization);
-app.use('/blog', routers.blog);
-app.use('/nso-legacy-pack', routers.aprilfools);
+logger.info('Setting up static public folder');
+app.use(express.static('public'));
+
+logger.info('Importing routes');
+const routes = {
+	home: require('./routes/home'),
+	faq: require('./routes/faq'),
+	docs: require('./routes/docs'),
+	progress: require('./routes/progress'),
+	account: require('./routes/account'),
+	blog: require('./routes/blog'),
+	localization: require('./routes/localization'),
+	aprilfools: require('./routes/aprilfools')
+};
+
+app.use('/', routes.home);
+app.use('/faq', routes.faq);
+app.use('/docs', routes.docs);
+app.use('/progress', routes.progress);
+app.use('/account', routes.account);
+app.use('/localization', routes.localization);
+app.use('/blog', routes.blog);
+app.use('/nso-legacy-pack', routes.aprilfools);
 
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
@@ -136,7 +144,7 @@ app.engine('handlebars', handlebars({
 			 *	get the string in the user's locale. If not available, it will return it in
 			 *	the default locale.
 			 */
-			
+
 			args.slice(1, -1).forEach(arg => {
 				userLocaleString = userLocaleString?.[arg];
 			});
@@ -156,6 +164,16 @@ app.engine('handlebars', handlebars({
 app.set('view engine', 'handlebars');
 
 logger.info('Starting server');
-app.listen(port, () => {
-	logger.success(`Server listening on http://localhost:${port}`);
+database.connect().then(() => {
+	app.listen(port, async () => {
+		const events = await stripe.events.list({
+			delivery_success: false // failed webhooks
+		});
+
+		for (const event of events.data) {
+			await util.handleStripeEvent(event);
+		}
+
+		logger.success(`Server listening on http://localhost:${port}`);
+	});
 });

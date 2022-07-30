@@ -10,10 +10,25 @@
 				<img src="{{account.mii.image_url}}" class="mii" />
 				<p class="miiname">{{account.mii.name}}</p>
 				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
+				{{#if tierName}}
+					<p class="tier-name tier-level-{{tierLevel}}" value="{{tierName}}">{{tierName}}</p>
+				{{else}}
+					{{#if (neq account.access_level -1)}}
+						<p class="tier-name access-level-{{account.access_level}}" value="{{ localeHelper locale "account" "accountLevel" account.access_level }}">{{ localeHelper locale "account" "accountLevel" account.access_level }}</p>
+					{{else}}
+						<p class="tier-name access-level-banned" value="{{ localeHelper locale "account" "banned" }}">{{ localeHelper locale "account" "banned" }}</p>
+					{{/if}}
+				{{/if}}
+			</div>
+			<div class="buttons">
 				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-					<p class="download-caption">Download account files</p>
+					<p class="caption">Download account files</p>
 					<p class="cemu-warning">(will not work on Nintendo Network)</p>
+				</a>
+
+				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
+					<p class="caption">Upgrade account</p>
 				</a>
 			</div>
 		</div>
@@ -52,8 +67,8 @@
 			</div>
 
 			<div class="setting-card">
-				<h2 class="header">Servers</h2>
-				<fieldset {{#if isTester}}{{else}}disabled{{/if}}>
+				<h2 class="header">Server environment</h2>
+				<fieldset {{#unless isTester}}disabled{{/unless}}>
 					<form class="server-selection" id="server">
 						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
 						<label for="prod">
@@ -67,6 +82,7 @@
 							</svg>
 							<h2>Production</h2>
 						</label>
+						{{#if isTester}}
 						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
 						<label for="beta">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,20 +90,16 @@
 							</svg>
 							<h2>Beta</h2>
 						</label>
+						{{/if}}
 					</form>
 				</fieldset>
-				{{#if discordUser}}
-					{{#if isTester }}
-					<p>Connected as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
-					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
-					{{else}}
-					<p>Beta servers are exclusive to testers. To become a tester, check us out on <a href="https://www.patreon.com/PretendoNetwork" target="_blank">Patreon</a> and link your Discord account to your Patreon and PNID accounts</p>
-					{{/if}}
-				{{else}}
-				<p>Beta servers are exclusive to testers. If you're already a tester, connect your Discord account <a href="{{ discordAuthURL }}">here</a>.</p>
-				{{/if}}
+			{{#unless isTester}}
+				<p>Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.</p>
+			{{else}}
+				<p>Your current tier gives you beta server access. Cool!</p>
+			{{/unless}}
 			</div>
-			
+
 			<h2 class="section-header" id="security">Sign in and security</h2>
 			<div class="setting-card">
 				<h2 class="header">Account</h2>
@@ -125,7 +137,17 @@
 			</div>
 
 			<h2 class="section-header" id="other">Other settings</h2>
-			<div class="setting-card span-both-columns">
+				<div class="setting-card">
+					<h2 class="header">Discord</h2>
+						{{#if discordUser}}
+					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
+				{{else}}
+					<p>No Discord account linked. <a href="{{ discordAuthURL }}">Link Discord account here</a></p>
+				{{/if}}
+			</div>
+
+			<div class="setting-card">
 				<h2 class="header">Newsletter</h2>
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
@@ -138,20 +160,32 @@
 </div>
 
 
-{{#if linked}}
+{{#if success_message}}
 <div class="banner-notice success">
 	<div>
-		<p>{{ linked }} account linked successfully</p>
+		<p>{{success_message}}</p>
 	</div>
 </div>
 {{/if}}
 
-{{#if error}}
+{{#if error_message}}
 <div class="banner-notice error">
 	<div>
-		<p>{{ error }}</p>
+		<p>{{error_message}}</p>
 	</div>
 </div>
 {{/if}}
+
+<div class="modal-wrapper hidden" id="onlinefiles">
+	<div class="modal">
+		<h1 class="title dot">Password</h1>
+		<p class="modal-caption">Enter your PNID password to download Cemu files</p>
+		<input name="password" id="password" type="password" required />
+		<div class="modal-button-wrapper">
+			<button class="button cancel" id="onlineFilesCloseButton">Cancel</button>
+			<button class="button primary confirm" id="onlineFilesConfirmButton">Confirm</button>
+		</div>
+	</div>
+</div>
 
 <script src="/assets/js/account.js"></script>
