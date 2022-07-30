@@ -52,7 +52,7 @@
 				</div>
 
 					<fieldset class="subtab active" id="faceType" style="--assetrow: 0">
-					{{#each editorToHex.face}}
+					{{#each editorJSON.face}}
 							<input type="radio" name="faceType" id="faceType{{this}}" value="{{this}}" />
 							<label for="faceType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
@@ -74,14 +74,14 @@
 					</fieldset>
 
 					<fieldset id="faceMakeup" class="subtab" style="--assetrow: 1">
-						{{#each editorToHex.arrayOf12}}
+						{{#each editorJSON.arrayOf12}}
 							<input type="radio" name="faceMakeup" id="faceMakeup{{this}}" value="{{this}}" />
 							<label for="faceMakeup{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 					</fieldset>
 
 					<fieldset id="faceWrinkles" class="subtab" style="--assetrow: 2">
-						{{#each editorToHex.arrayOf12}}
+						{{#each editorJSON.arrayOf12}}
 							<input type="radio" name="faceWrinkles" id="faceWrinkles{{this}}" value="{{this}}" />
 							<label for="faceWrinkles{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
@@ -95,7 +95,7 @@
 					<button class="subtabbtn" id="hairColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="hairType" class="subtab has-subpages active">
-					{{#each editorToHex.hairs}}
+					{{#each editorJSON.hairs}}
 					<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="hairType" id="hairType{{this}}" value="{{this}}" />
@@ -149,7 +149,7 @@
 					<button class="subtabbtn" id="eyebrowColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="eyebrowType" class="subtab has-subpages active" style="--assetrow: 4">
-					{{#each editorToHex.eyebrows}}
+					{{#each editorJSON.eyebrows}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="eyebrowType" id="eyebrowType{{this}}" value="{{this}}" />
@@ -212,7 +212,7 @@
 					<button class="subtabbtn" id="eyeColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="eyeType" class="subtab has-subpages active" style="--assetrow: 5">
-					{{#each editorToHex.eyes}}
+					{{#each editorJSON.eyes}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="eyeType" id="eyeType{{this}}" value="{{this}}" />
@@ -270,7 +270,7 @@
 					<button class="subtabbtn" id="nosePositionSubButton" style="--assetcol: 13"></button>
 				</div>
 				<fieldset id="noseType" class="subtab has-subpages active" style="--assetrow: 6">
-					{{#each editorToHex.nose}}
+					{{#each editorJSON.nose}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="noseType" id="noseType{{this}}" value="{{this}}" />
@@ -309,7 +309,7 @@
 					<button class="subtabbtn" id="mouthColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="mouthType" class="subtab has-subpages active" style="--assetrow: 7">
-					{{#each editorToHex.mouth}}
+					{{#each editorJSON.mouth}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="mouthType" id="mouthType{{this}}" value="{{this}}" />
@@ -362,7 +362,7 @@
 					<button class="subtabbtn" id="glassesColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="glassesType" class="subtab active" style="--assetrow: 8">
-					{{#each editorToHex.arrayOf9}}
+					{{#each editorJSON.arrayOf9}}
 						<input type="radio" name="glassesType" id="glassesType{{this}}" value="{{this}}" />
 						<label for="glassesType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
@@ -400,7 +400,7 @@
 					<button class="subtabbtn" id="facialHairColorSubButton" style="--assetcol: 12"></button>
 				</div>
 				<fieldset id="facialHairType" class="subtab active" style="--assetrow: 9">
-					{{#each editorToHex.arrayOf6}}
+					{{#each editorJSON.arrayOf6}}
 						<input type="radio" name="facialHairType" id="facialHairType{{this}}" value="{{this}}" />
 						<label for="facialHairType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
@@ -426,7 +426,7 @@
 				</fieldset>
 
 				<fieldset id="facialHairMustache" class="subtab active" style="--assetrow: 10">
-					{{#each editorToHex.arrayOf6}}
+					{{#each editorJSON.arrayOf6}}
 						<input type="radio" name="facialHairMustache" id="facialHairMustache{{this}}" value="{{this}}" />
 						<label for="facialHairMustache{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
