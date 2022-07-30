@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Über",
+		"about": "Über uns",
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Mitwirkende",
@@ -20,7 +20,7 @@
 		"title": "Über uns",
 		"paragraphs": [
 			"Pretendo ist ein Open-Source-Projekt, welches das Nintendo Network für den 3DS und die Wii U durch Clean-Room-Reverse-Engineering rekonstruiert.",
-			"Da unsere Dienste kostenlos und Open-Source sind, können diese auch nach der offiziellen Schließung des Nintendo Networks weiterexistieren."
+			"Da unsere Dienste kostenlos und Open-Source sind, können diese auch nach der offiziellen Schließung des Nintendo Networks weiter existieren."
 		]
 	},
 	"progress": {
@@ -32,7 +32,7 @@
 	},
 	"faq": {
 		"title": "Frequently Asked Questions (Häufig gestellte Fragen)",
-		"text": "Hier sind einige Fragen, die wir oft gestellt bekommen, zur schnellen Informationsbeschaffung.",
+		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen:",
 		"QAs": [
 			{
 				"question": "Was ist Pretendo?",
@@ -48,15 +48,15 @@
 			},
 			{
 				"question": "Weißt du, wann <Funktion/Dienst> bereit ist?",
-				"answer": "Nein. Viele von Funktionen und Diensten von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet) und deshalb können wir keine Angaben zur jeweiligen Fertigstellung machen."
+				"answer": "Nein. Viele der Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet), deshalb können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
 				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
-				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN support. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
+				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN Unterstützung. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
 			},
 			{
-				"question": "Wenn ich im Nintendo Network gebannt wurde, bleibe ich in Pretendo auch gebannt?",
-				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalt kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und das Nichteinhalten kann in einem Bann resultieren."
+				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
+				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalb kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und die Nichteinhaltung dieser kann zu einem Bann führen."
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
@@ -64,32 +64,32 @@
 			},
 			{
 				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
-				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, wird später noch veröffentlicht."
+				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
 			}
 		]
 	},
 	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
+		"title": "Was wir machen",
+		"text": "Unser Projekt hat viele Komponenten, hier sind einige davon.",
 		"cards": [
 			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
+				"title": "Spiele Server",
+				"caption": " Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+				"caption": "Eine Neuinterpretation des Miiverse, als ob es im modernen Zeitalter entwickelt wurde."
 			},
 			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
+				"title": "Cemu Unterstützung",
+				"caption": "Spiele deine Lieblings WII U Spiele sogar ohne eine Konsole!"
 			}
 
 		]
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Triff das Team, das hinter dem Projekt steckt",
+		"text": "Triff das Team hinter dem Projekt",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -184,40 +184,40 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons für das Mii Editor und Juxt Reaktionen",
+				"caption": "Icons für den Mii Editor und Juxt Reaktionen",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
 				"name": "GitHub contributors",
-				"caption": "Lokalisierungen und anderen Beiträgen",
+				"caption": "Übersetzungen und andere Beiträge",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Bleib auf dem Laufenden",
+		"text": "Tritt unserem Discord Server bei um die neuesten Updates des Projektes zu erhalten.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
+			"text": "Erhalte Echtzeit informationen über unseren Fortschritt",
+			"button": "Tritt dem Server bei"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Soziale Medien",
+		"usefulLinks": "Nützliche Links",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"Du möchtest auf dem Laufenden bleiben?",
+				"Tritt dem Discord server bei!"
 			],
-			"button": "Join now!"
+			"button": "Tritt noch heute bei!"
 		}
 	},
 	"progressPage": {
 		"title": "Unser Fortschritt",
-		"description": "Prüfe den Projektfortschritt und die Ziele! (Es wird stündlich aktualisiert, reflektiert nicht ALLE Projekte oder Ziele)"
+		"description": "Prüfe den Projektfortschritt und die Ziele! (Wird stündlich aktualisiert, reflektiert nicht ALLE Projekte oder Ziele)"
 	},
 	"blogPage": {
 		"title": "Blog",
