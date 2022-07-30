@@ -26,67 +26,39 @@
 
 		<div class="mii-img-wrapper">
 			<img id="mii-img" draggable="false" />
-			<div class="shadow"></div>
 		</div>
 
 		<div class="params-wrapper">
 			<div class="tabs">
-				<button class="tabbtn active" id="faceTypeButton">
-					face
-				</button>
-				<button class="tabbtn" id="hairTypeButton">
-					hair
-				</button>
-				<button class="tabbtn" id="eyebrowTypeButton">
-					eyebrow
-				</button>
-				<button class="tabbtn" id="eyeTypeButton">
-					eye
-				</button>
-				<button class="tabbtn" id="noseTypeButton">
-					nose
-				</button>
-				<button class="tabbtn" id="mouthTypeButton">
-					mouth
-				</button>
-				<button class="tabbtn" id="glassesTypeButton">
-					glasses
-				</button>
-				<button class="tabbtn" id="facialHairTypeButton">
-					facialHair
-				</button>
-				<button class="tabbtn" id="moleEnableButton">
-					mole
-				</button>
-				<button class="tabbtn" id="sizeButton">
-					size
-				</button>
-				<button class="tabbtn" id="miiscButton">
-					miisc
-				</button>
+				<button class="tabbtn active" id="faceTypeButton" style="--assetcol: 0"></button>
+				<button class="tabbtn" id="hairTypeButton" style="--assetcol: 1"></button>
+				<button class="tabbtn" id="eyebrowTypeButton" style="--assetcol: 2"></button>
+				<button class="tabbtn" id="eyeTypeButton" style="--assetcol: 3"></button>
+				<button class="tabbtn" id="noseTypeButton" style="--assetcol: 4"></button>
+				<button class="tabbtn" id="mouthTypeButton" style="--assetcol: 5"></button>
+				<button class="tabbtn" id="glassesTypeButton" style="--assetcol: 6"></button>
+				<button class="tabbtn" id="facialHairTypeButton"style="--assetcol: 7"></button>
+				<button class="tabbtn" id="moleEnableButton" style="--assetcol: 8"></button>
+				<button class="tabbtn" id="miiscButton" style="--assetcol: 9"></button>
+				<button class="tabbtn" id="saveButton" style="--assetcol: 10"></button>
 			</div>
 		<form class="params">
 			<div class="tab active" id="faceTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="faceTypeSubButton">
-						faceType
-					</button>
-					<button class="subtabbtn" id="faceMakeupSubButton">
-						faceMakeup
-					</button>
-					<button class="subtabbtn" id="faceWrinklesSubButton">
-						faceWrinkles
-					</button>
+					<button class="subtabbtn active" id="faceTypeSubButton" style="--assetcol: 0"></button>
+					<button class="subtabbtn" id="faceMakeupSubButton" style="--assetcol: 1"></button>
+					<button class="subtabbtn" id="faceWrinklesSubButton" style="--assetcol: 2"></button>
+					<button class="subtabbtn" id="faceColorSubButton" style="--assetcol: 12"></button>
 				</div>
 
-					<fieldset class="subtab active" id="faceType">
+					<fieldset class="subtab active" id="faceType" style="--assetrow: 0">
 					{{#each editorToHex.face}}
 							<input type="radio" name="faceType" id="faceType{{this}}" value="{{this}}" />
-							<label for="faceType{{this}}">{{this}}</label>
+							<label for="faceType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
 					</fieldset>
 
-					<fieldset id="faceColor" class="color">
+					<fieldset id="faceColor" class="subtab color">
 						<input type="radio" name="faceColor" id="faceColor0" value="0" />
 						<label for="faceColor0" style="background: #FFCE98 !important;" ></label>
 						<input type="radio" name="faceColor" id="faceColor1" value="1" />
@@ -101,69 +73,33 @@
 						<label for="faceColor5" style="background: #752E17 !important;" ></label>
 					</fieldset>
 
-					<fieldset id="faceMakeup" class="subtab">
-						<input type="radio" name="faceMakeup" id="faceMakeup0" value="0" />
-						<label for="faceMakeup0">0</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup1" value="1" />
-						<label for="faceMakeup1">1</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup2" value="2" />
-						<label for="faceMakeup2">2</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup3" value="3" />
-						<label for="faceMakeup3">3</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup4" value="4" />
-						<label for="faceMakeup4">4</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup5" value="5" />
-						<label for="faceMakeup5">5</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup6" value="6" />
-						<label for="faceMakeup6">6</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup7" value="7" />
-						<label for="faceMakeup7">7</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup8" value="8" />
-						<label for="faceMakeup8">8</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup9" value="9" />
-						<label for="faceMakeup9">9</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup10" value="10" />
-						<label for="faceMakeup10">10</label>
-						<input type="radio" name="faceMakeup" id="faceMakeup11" value="11" />
-						<label for="faceMakeup11">11</label>
+					<fieldset id="faceMakeup" class="subtab" style="--assetrow: 1">
+						{{#each editorToHex.arrayOf12}}
+							<input type="radio" name="faceMakeup" id="faceMakeup{{this}}" value="{{this}}" />
+							<label for="faceMakeup{{this}}" style="--assetcol: {{@key}}"></label>
+						{{/each}}
 					</fieldset>
 
-					<fieldset id="faceWrinkles" class="subtab">
-						<input type="radio" name="faceWrinkles" id="faceWrinkles0" value="0" />
-						<label for="faceWrinkles0">0</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles1" value="1" />
-						<label for="faceWrinkles1">1</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles2" value="2" />
-						<label for="faceWrinkles2">2</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles3" value="3" />
-						<label for="faceWrinkles3">3</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles4" value="4" />
-						<label for="faceWrinkles4">4</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles5" value="5" />
-						<label for="faceWrinkles5">5</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles6" value="6" />
-						<label for="faceWrinkles6">6</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles7" value="7" />
-						<label for="faceWrinkles7">7</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles8" value="8" />
-						<label for="faceWrinkles8">8</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles9" value="9" />
-						<label for="faceWrinkles9">9</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles10" value="10" />
-						<label for="faceWrinkles10">10</label>
-						<input type="radio" name="faceWrinkles" id="faceWrinkles11" value="11" />
-						<label for="faceWrinkles11">11</label>
+					<fieldset id="faceWrinkles" class="subtab" style="--assetrow: 2">
+						{{#each editorToHex.arrayOf12}}
+							<input type="radio" name="faceWrinkles" id="faceWrinkles{{this}}" value="{{this}}" />
+							<label for="faceWrinkles{{this}}" style="--assetcol: {{@key}}"></label>
+						{{/each}}
 					</fieldset>
 
 			</div>
 
-			<div class="tab" id="hairTypeTab">
-				<fieldset id="hairType" class="has-subpages active">
+			<div class="tab" id="hairTypeTab" style="--assetrow: 3">
+				<div class="subtabs">
+					<button class="subtabbtn active" id="hairTypeSubButton" style="--assetcol: 9"></button>
+					<button class="subtabbtn" id="hairColorSubButton" style="--assetcol: 12"></button>
+				</div>
+				<fieldset id="hairType" class="subtab has-subpages active">
 					{{#each editorToHex.hairs}}
-					<div class="subpage">
+					<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="hairType" id="hairType{{this}}" value="{{this}}" />
-							<label for="hairType{{this}}">{{this}}</label>
+							<label for="hairType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 						<div class="pagination">
 							<button class="previous page-btn index-{{@index}} {{#if @first }}disabled{{/if}}">
@@ -186,7 +122,7 @@
 					{{/each}}
 				</fieldset>
 
-				<fieldset id="hairColor" class="color">
+				<fieldset id="hairColor" class="subtab color">
 					<input type="radio" name="hairColor" id="hairColor0" value="0" />
 					<label for="hairColor0" style="background: #0A0A09 !important;" ></label>
 					<input type="radio" name="hairColor" id="hairColor1" value="1" />
@@ -208,19 +144,16 @@
 
 			<div class="tab" id="eyebrowTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="eyebrowTypeSubButton">
-						eyebrowType
-					</button>
-					<button class="subtabbtn" id="eyebrowPositionSubButton">
-						eyebrowPosition
-					</button>
+					<button class="subtabbtn active" id="eyebrowTypeSubButton" style="--assetcol: 3"></button>
+					<button class="subtabbtn" id="eyebrowPositionSubButton" style="--assetcol: 13"></button>
+					<button class="subtabbtn" id="eyebrowColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="eyebrowType" class="subtab has-subpages active">
+				<fieldset id="eyebrowType" class="subtab has-subpages active" style="--assetrow: 4">
 					{{#each editorToHex.eyebrows}}
-						<div class="subpage">
+						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="eyebrowType" id="eyebrowType{{this}}" value="{{this}}" />
-							<label for="eyebrowType{{this}}">{{this}}</label>
+							<label for="eyebrowType{{this}}" style="--assetcol: {{@key}}"><div></div></label>
 						{{/each}}
 						<div class="pagination">
 							<button class="previous page-btn index-{{@index}} {{#if @first }}disabled{{/if}}">
@@ -240,19 +173,19 @@
 				</fieldset>
 
 				<fieldset id="eyebrowPosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="eyebrowVertical" id="eyebrowVertical" min="3" max="18" />
-					<label for="eyebrowVertical">eyebrowVertical</label>
-					<input type="range" name="eyebrowHorizontal" id="eyebrowHorizontal" min="0" max="12" />
-					<label for="eyebrowHorizontal">eyebrowHorizontal</label>
-					<input type="range" name="eyebrowRotation" id="eyebrowRotation" min="0" max="11" />
-					<label for="eyebrowRotation">eyebrowRotation</label>
-					<input type="range" name="eyebrowSize" id="eyebrowSize" min="0" max="8" />
-					<label for="eyebrowSize">eyebrowSize</label>
-					<input type="range" name="eyebrowStretch" id="eyebrowStretch" min="0" max="6" />
-					<label for="eyebrowStretch">eyebrowStretch</label>
+					<label for="eyebrowVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="eyebrowVertical" id="eyebrowVertical" min="3" max="18" />
+					<label for="eyebrowHorizontal" style="--assetcol: 4"></label>
+					<input type="range" list="tickmarks" name="eyebrowHorizontal" id="eyebrowHorizontal" min="0" max="12" />
+					<label for="eyebrowRotation" style="--assetcol: 5"></label>
+					<input type="range" list="tickmarks" class="invert" name="eyebrowRotation" id="eyebrowRotation" min="0" max="11" />
+					<label for="eyebrowSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="eyebrowSize" id="eyebrowSize" min="0" max="8" />
+					<label for="eyebrowStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="eyebrowStretch" id="eyebrowStretch" min="0" max="6" />
 				</fieldset>
 
-				<fieldset id="eyebrowColor" class="color">
+				<fieldset id="eyebrowColor" class="subtab color">
 					<input type="radio" name="eyebrowColor" id="eyebrowColor0" value="0" />
 					<label for="eyebrowColor0" style="background: #0A0A09 !important;" ></label>
 					<input type="radio" name="eyebrowColor" id="eyebrowColor1" value="1" />
@@ -274,19 +207,16 @@
 
 			<div class="tab" id="eyeTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="eyeTypeSubButton">
-						eyeType
-					</button>
-					<button class="subtabbtn" id="eyePositionSubButton">
-						eyePosition
-					</button>
+					<button class="subtabbtn active" id="eyeTypeSubButton" style="--assetcol: 4"></button>
+					<button class="subtabbtn" id="eyePositionSubButton" style="--assetcol: 13"></button>
+					<button class="subtabbtn" id="eyeColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="eyeType" class="subtab has-subpages active">
+				<fieldset id="eyeType" class="subtab has-subpages active" style="--assetrow: 5">
 					{{#each editorToHex.eyes}}
-						<div class="subpage">
+						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="eyeType" id="eyeType{{this}}" value="{{this}}" />
-							<label for="eyeType{{this}}">{{this}}</label>
+							<label for="eyeType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 						<div class="pagination">
 							<button class="previous page-btn index-{{@index}} {{#if @first }}disabled{{/if}}">
@@ -305,7 +235,7 @@
 					{{/each}}
 				</fieldset>
 
-				<fieldset id="eyeColor" class="color">
+				<fieldset id="eyeColor" class="subtab color">
 					<input type="radio" name="eyeColor" id="eyeColor0" value="0" />
 					<label for="eyeColor0" style="background: #070606 !important;" ></label>
 					<input type="radio" name="eyeColor" id="eyeColor1" value="1" />
@@ -321,34 +251,30 @@
 				</fieldset>
 
 				<fieldset id="eyePosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="eyeVertical" id="eyeVertical" min="0" max="18" />
-					<label for="eyeVertical">eyeVertical</label>
-					<input type="range" name="eyeHorizontal" id="eyeHorizontal" min="0" max="12" />
-					<label for="eyeHorizontal">eyeHorizontal</label>
-					<input type="range" name="eyeRotation" id="eyeRotation" min="0" max="7" />
-					<label for="eyeRotation">eyeRotation</label>
-					<input type="range" name="eyeSize" id="eyeSize" min="0" max="7" />
-					<label for="eyeSize">eyeSize</label>
-					<input type="range" name="eyeStretch" id="eyeStretch" min="0" max="6" />
-					<label for="eyeStretch">eyeStretch</label>
+					<label for="eyeVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="eyeVertical" id="eyeVertical" min="0" max="18" />
+					<label for="eyeHorizontal" style="--assetcol: 4"></label>
+					<input type="range" list="tickmarks" name="eyeHorizontal" id="eyeHorizontal" min="0" max="12" />
+					<label for="eyeRotation" style="--assetcol: 5"></label>
+					<input type="range" class="invert" list="tickmarks" name="eyeRotation" id="eyeRotation" min="0" max="7" />
+					<label for="eyeSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="eyeSize" id="eyeSize" min="0" max="7" />
+					<label for="eyeStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="eyeStretch" id="eyeStretch" min="0" max="6" />
 				</fieldset>
 			</div>
 
 			<div class="tab" id="noseTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="noseTypeSubButton">
-						noseType
-					</button>
-					<button class="subtabbtn" id="nosePositionSubButton">
-						nosePosition
-					</button>
+					<button class="subtabbtn active" id="noseTypeSubButton" style="--assetcol: 5"></button>
+					<button class="subtabbtn" id="nosePositionSubButton" style="--assetcol: 13"></button>
 				</div>
-				<fieldset id="noseType" class="subtab has-subpages active">
+				<fieldset id="noseType" class="subtab has-subpages active" style="--assetrow: 6">
 					{{#each editorToHex.nose}}
-						<div class="subpage">
+						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="noseType" id="noseType{{this}}" value="{{this}}" />
-							<label for="noseType{{this}}">{{this}}</label>
+							<label for="noseType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 						<div class="pagination">
 							<button class="previous page-btn index-{{@index}} {{#if @first }}disabled{{/if}}">
@@ -368,28 +294,26 @@
 				</fieldset>
 
 				<fieldset id="nosePosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="noseVertical" id="noseVertical" min="0" max="18" />
-					<label for="noseVertical">noseVertical</label>
-					<input type="range" name="noseSize" id="noseSize" min="0" max="8" />
-					<label for="noseSize">noseSize</label>
+					<label for="noseVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="noseVertical" id="noseVertical" min="0" max="18" />
+					<label for="noseSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="noseSize" id="noseSize" min="0" max="8" />
+
 				</fieldset>
 			</div>
 
 			<div class="tab" id="mouthTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="mouthTypeSubButton">
-						mouthType
-					</button>
-					<button class="subtabbtn" id="mouthPositionSubButton">
-						mouthPosition
-					</button>
+					<button class="subtabbtn active" id="mouthTypeSubButton" style="--assetcol: 6"></button>
+					<button class="subtabbtn" id="mouthPositionSubButton" style="--assetcol: 13"></button>
+					<button class="subtabbtn" id="mouthColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="mouthType" class="subtab has-subpages active">
+				<fieldset id="mouthType" class="subtab has-subpages active" style="--assetrow: 7">
 					{{#each editorToHex.mouth}}
-						<div class="subpage">
+						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
 							<input type="radio" name="mouthType" id="mouthType{{this}}" value="{{this}}" />
-							<label for="mouthType{{this}}">{{this}}</label>
+							<label for="mouthType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 						<div class="pagination">
 							<button class="previous page-btn index-{{@index}} {{#if @first }}disabled{{/if}}">
@@ -408,7 +332,7 @@
 					{{/each}}
 				</fieldset>
 
-				<fieldset id="mouthColor" class="color">
+				<fieldset id="mouthColor" class="subtab color">
 					<input type="radio" name="mouthColor" id="mouthColor0" value="0" />
 					<label for="mouthColor0" style="background: #FF5D0C !important;" ></label>
 					<input type="radio" name="mouthColor" id="mouthColor1" value="1" />
@@ -422,44 +346,29 @@
 				</fieldset>
 
 				<fieldset id="mouthPosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="mouthVertical" id="mouthVertical" min="0" max="18" />
-					<label for="mouthVertical">mouthVertical</label>
-					<input type="range" name="mouthSize" id="mouthSize" min="0" max="8" />
-					<label for="mouthSize">mouthSize</label>
+					<label for="mouthVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="mouthVertical" id="mouthVertical" min="0" max="18" />
+					<label for="mouthSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="mouthSize" id="mouthSize" min="0" max="8" />
+					<label for="mouthStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="mouthStretch" id="mouthStretch" min="0" max="6" />
 				</fieldset>
 			</div>
 
 			<div class="tab" id="glassesTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="glassesTypeSubButton">
-						glassesType
-					</button>
-					<button class="subtabbtn" id="glassesPositionSubButton">
-						glassesPosition
-					</button>
+					<button class="subtabbtn active" id="glassesTypeSubButton" style="--assetcol: 7"></button>
+					<button class="subtabbtn" id="glassesPositionSubButton" style="--assetcol: 13"></button>
+					<button class="subtabbtn" id="glassesColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="glassesType" class="subtab active">
-					<input type="radio" name="glassesType" id="glassesType0" value="0" />
-					<label for="glassesType0">0</label>
-					<input type="radio" name="glassesType" id="glassesType1" value="1" />
-					<label for="glassesType1">1</label>
-					<input type="radio" name="glassesType" id="glassesType2" value="2" />
-					<label for="glassesType2">2</label>
-					<input type="radio" name="glassesType" id="glassesType3" value="3" />
-					<label for="glassesType3">3</label>
-					<input type="radio" name="glassesType" id="glassesType4" value="4" />
-					<label for="glassesType4">4</label>
-					<input type="radio" name="glassesType" id="glassesType5" value="5" />
-					<label for="glassesType5">5</label>
-					<input type="radio" name="glassesType" id="glassesType6" value="6" />
-					<label for="glassesType6">6</label>
-					<input type="radio" name="glassesType" id="glassesType7" value="7" />
-					<label for="glassesType7">7</label>
-					<input type="radio" name="glassesType" id="glassesType8" value="8" />
-					<label for="glassesType8">8</label>
+				<fieldset id="glassesType" class="subtab active" style="--assetrow: 8">
+					{{#each editorToHex.arrayOf9}}
+						<input type="radio" name="glassesType" id="glassesType{{this}}" value="{{this}}" />
+						<label for="glassesType{{this}}" style="--assetcol: {{@key}}"></label>
+					{{/each}}
 				</fieldset>
 
-				<fieldset id="glassesColor" class="color">
+				<fieldset id="glassesColor" class="subtab color">
 					<input type="radio" name="glassesColor" id="glassesColor0" value="0" />
 					<label for="glassesColor0" style="background: #000000 !important;" ></label>
 					<input type="radio" name="glassesColor" id="glassesColor1" value="1" />
@@ -475,41 +384,29 @@
 				</fieldset>
 
 				<fieldset id="glassesPosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="glassesVertical" id="glassesVertical" min="0" max="20" />
-					<label for="glassesVertical">glassesVertical</label>
-					<input type="range" name="glassesSize" id="glassesSize" min="0" max="7" />
-					<label for="glassesSize">glassesSize</label>
+					<label for="glassesVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="glassesVertical" id="glassesVertical" min="0" max="20" />
+					<label for="glassesSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="glassesSize" id="glassesSize" min="0" max="7" />
+
 				</fieldset>
 			</div>
 
 			<div class="tab" id="facialHairTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="facialHairTypeSubButton">
-						facialHairType
-					</button>
-					<button class="subtabbtn" id="facialHairMustacheSubButton">
-						facialHairMustache
-					</button>
-					<button class="subtabbtn" id="facialHairPositionSubButton">
-						facialHairPosition
-					</button>
+					<button class="subtabbtn active" id="facialHairTypeSubButton" style="--assetcol: 8"></button>
+					<button class="subtabbtn" id="facialHairMustacheSubButton" style="--assetcol: 9"></button>
+					<button class="subtabbtn" id="facialHairPositionSubButton" style="--assetcol: 13"></button>
+					<button class="subtabbtn" id="facialHairColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="facialHairType" class="subtab active">
-					<input type="radio" name="facialHairType" id="facialHairType0" value="0" />
-					<label for="facialHairType0">0</label>
-					<input type="radio" name="facialHairType" id="facialHairType1" value="1" />
-					<label for="facialHairType1">1</label>
-					<input type="radio" name="facialHairType" id="facialHairType2" value="2" />
-					<label for="facialHairType2">2</label>
-					<input type="radio" name="facialHairType" id="facialHairType3" value="3" />
-					<label for="facialHairType3">3</label>
-					<input type="radio" name="facialHairType" id="facialHairType4" value="4" />
-					<label for="facialHairType4">4</label>
-					<input type="radio" name="facialHairType" id="facialHairType5" value="5" />
-					<label for="facialHairType5">5</label>
+				<fieldset id="facialHairType" class="subtab active" style="--assetrow: 9">
+					{{#each editorToHex.arrayOf6}}
+						<input type="radio" name="facialHairType" id="facialHairType{{this}}" value="{{this}}" />
+						<label for="facialHairType{{this}}" style="--assetcol: {{@key}}"></label>
+					{{/each}}
 				</fieldset>
 
-				<fieldset id="facialHairColor" class="color">
+				<fieldset id="facialHairColor" class="subtab color">
 					<input type="radio" name="facialHairColor" id="facialHairColor0" value="0" />
 					<label for="facialHairColor0" style="background: #0A0A09 !important;" ></label>
 					<input type="radio" name="facialHairColor" id="facialHairColor1" value="1" />
@@ -528,78 +425,62 @@
 					<label for="facialHairColor7" style="background: #FEB454 !important;" ></label>
 				</fieldset>
 
-				<fieldset id="facialHairMustache" class="subtab">
-					<input type="radio" name="facialHairMustache" id="facialHairMustache0" value="0" />
-					<label for="facialHairMustache0">0</label>
-					<input type="radio" name="facialHairMustache" id="facialHairMustache1" value="1" />
-					<label for="facialHairMustache1">1</label>
-					<input type="radio" name="facialHairMustache" id="facialHairMustache2" value="2" />
-					<label for="facialHairMustache2">2</label>
-					<input type="radio" name="facialHairMustache" id="facialHairMustache3" value="3" />
-					<label for="facialHairMustache3">3</label>
-					<input type="radio" name="facialHairMustache" id="facialHairMustache4" value="4" />
-					<label for="facialHairMustache4">4</label>
-					<input type="radio" name="facialHairMustache" id="facialHairMustache5" value="5" />
-					<label for="facialHairMustache5">5</label>
+				<fieldset id="facialHairMustache" class="subtab active" style="--assetrow: 10">
+					{{#each editorToHex.arrayOf6}}
+						<input type="radio" name="facialHairMustache" id="facialHairMustache{{this}}" value="{{this}}" />
+						<label for="facialHairMustache{{this}}" style="--assetcol: {{@key}}"></label>
+					{{/each}}
 				</fieldset>
 
 				<fieldset id="facialHairPosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="facialHairVertical" id="facialHairVertical" min="0" max="16" />
-					<label for="facialHairVertical">facialHairVertical</label>
-					<input type="range" name="facialHairSize" id="facialHairSize" min="0" max="8" />
-					<label for="facialHairSize">facialHairSize</label>
+					<label for="facialHairVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="facialHairVertical" id="facialHairVertical" min="0" max="16" />
+					<label for="facialHairSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="facialHairSize" id="facialHairSize" min="0" max="8" />
 				</fieldset>
 			</div>
 
 			<div class="tab" id="moleEnableTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="moleEnableSubButton">
-						moleEnable
-					</button>
-					<button class="subtabbtn" id="molePositionSubButton">
-						moleEnablePosition
-					</button>
+					<button class="subtabbtn active" id="moleEnableSubButton" style="--assetcol: 10"></button>
+					<button class="subtabbtn" id="molePositionSubButton" style="--assetcol: 13"></button>
 				</div>
-				<fieldset id="moleEnable" class="subtab active">
+				<fieldset id="moleEnable" class="subtab active" style="--assetrow: 11">
 					<input type="radio" name="moleEnable" id="moleEnable0" value="0" />
-					<label for="moleEnable0">0</label>
+					<label for="moleEnable0" style="--assetcol: 0"></label>
 					<input type="radio" name="moleEnable" id="moleEnable1" value="1" />
-					<label for="moleEnable1">1</label>
+					<label for="moleEnable1" style="--assetcol: 1"></label>
 				</fieldset>
 
 				<fieldset id="molePosition" class="subtab has-sliders">
-					<input type="range" class="invert" name="moleVertical" id="moleVertical" min="0" max="30" />
-					<label for="moleVertical">moleVertical</label>
-					<input type="range" name="moleHorizontal" id="moleHorizontal" min="0" max="16" />
-					<label for="moleHorizontal">moleHorizontal</label>
-					<input type="range" name="moleSize" id="moleSize" min="0" max="8" />
-					<label for="moleSize">moleSize</label>
-				</fieldset>
-			</div>
-
-			<div class="tab" id="sizeTab">
-				<fieldset id="size" class="active has-sliders">
-					<input type="range" name="height" id="height" min="0" max="127" />
-					<label for="height">height</label>
-					<input type="range" name="build" id="build" min="0" max="127" />
-					<label for="build">build</label>
+					<label for="moleVertical" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="moleVertical" id="moleVertical" min="0" max="30" />
+					<label for="moleHorizontal" style="--assetcol: 3"></label>
+					<input type="range" list="tickmarks" name="moleHorizontal" id="moleHorizontal" min="0" max="16" />
+					<label for="moleSize" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="moleSize" id="moleSize" min="0" max="8" />
 				</fieldset>
 			</div>
 
 			<div class="tab" id="miiscTab"><!--Get it it's funny 'cause 'mii' and 'misc'-->
 				<div class="subtabs">
-					<button class="subtabbtn active" id="genderSubButton">
-						dress
-					</button>
-					<button class="subtabbtn" id="favoriteColorSubButton">
-						favcolor
-					</button>
+					<button class="subtabbtn active" id="sizeSubButton" style="--assetcol: 14"></button>
+					<button class="subtabbtn" id="genderSubButton" style="--assetcol: 11"></button>
+					<button class="subtabbtn" id="favoriteColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="gender" class="subtab active">
+
+				<fieldset id="size" class="subtab active has-sliders">
+					<label for="height" style="--assetcol: 0"></label>
+					<input type="range" list="tickmarks" name="height" id="height" min="0" max="127" />
+					<label for="build" style="--assetcol: 1"></label>
+					<input type="range" list="tickmarks" name="build" id="build" min="0" max="127" />
+				</fieldset>
+
+				<fieldset id="gender" class="subtab" style="--assetrow: 12">
 					<input type="radio" name="gender" id="gender0" value="0" />
-					<label for="gender0">0</label>
+					<label for="gender0" style="--assetcol: 0"></label>
 					<input type="radio" name="gender" id="gender1" value="1" />
-					<label for="gender1">1</label>
+					<label for="gender1" style="--assetcol: 1"></label>
 				</fieldset>
 
 				<fieldset id="favoriteColor" class="subtab">
@@ -628,6 +509,21 @@
 					<input type="radio" name="favoriteColor" id="favoriteColor11" value="11" />
 					<label for="favoriteColor11" style="background: #1D1A15 !important;" ></label>
 				</fieldset>
+			</div>
+
+			<div class="tab" id="saveTab">
+				<p class="save-prompt">Save Mii? This will permanently overwrite your current Mii.</p>
+				<div class="mii-comparison-animation-wrapper">
+					<div class="mii-comparison unconfirmed">
+						<img class="old-mii" src="" ></img>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#888888" d="M4 15V9h8V4.16L19.84 12L12 19.84V15H4Z"></path></svg>						<img class="new-mii" src="" ></img>
+					</div>
+					<div class="mii-comparison confirmed">
+						<img class="old-mii" src="" ></img>
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#888888" d="M4 15V9h8V4.16L19.84 12L12 19.84V15H4Z"></path></svg>						<img class="new-mii" src="" ></img>
+					</div>
+				</div>
+				<button class="button primary" id="saveButton">Save!</button>
 			</div>
 		</form>
 		</div>

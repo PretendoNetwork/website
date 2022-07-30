@@ -2,10 +2,9 @@
 
 // Prevent the user from reloading or leaving the page
 window.addEventListener('beforeunload', function (e) {
-	e.preventDefault();
+	e?.preventDefault();
 	e.returnValue = '';
 });
-
 
 const Mii = require('./MiiClass.js');
 
@@ -16,24 +15,44 @@ const encodedUserMiiData = document.querySelector(
 	'script#encodedUserMiiData'
 ).textContent;
 document.querySelector('script#encodedUserMiiData').remove();
-
 // We initialize the Mii object with the encoded data and render the Mii
 const mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
 renderMii();
+
+const oldMiiStudioData = mii.toStudioMii().toString('hex');
+
+// initial setup for saving animation
+document.querySelector('.mii-comparison img.old-mii').src = `https://studio.mii.nintendo.com/miis/image.png?data=${oldMiiStudioData}&type=face&expression=normal&width=512&bgColor=13173300`;
+document.querySelector('.mii-comparison.confirmed img.old-mii').src = `https://studio.mii.nintendo.com/miis/image.png?data=${oldMiiStudioData}&type=face&expression=sorrow&width=512&bgColor=13173300`;
 
 // This function renders the Mii on the page
 function renderMii(type) {
 	type = type || 'all_body'; // Can be 'all_body' or 'face'
 
-	const newMii = mii.toStudioMii().toString('hex');
+	const miiStudioData = mii.toStudioMii().toString('hex');
 	document.querySelector(
 		'img#mii-img'
-	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${newMii}&type=${type}&expression=normal&width=512&bgColor=CAB1FB00`;
+	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=${type}&expression=normal&width=512&bgColor=13173300`;
 
-	// This updates the offset of the shadow of the Mii
-	document.querySelector('div.mii-img-wrapper .shadow').style.bottom = `${
-		mii.height * mii.height * 0.0035 - mii.height * 0.162 - 18
+	// sets the new mii in the save tab to the new mii
+	document.querySelector(
+		'.mii-comparison img.new-mii'
+	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=face&expression=normal&width=512&bgColor=13173300`;
+	document.querySelector(
+		'.mii-comparison.confirmed img.new-mii'
+	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=face&expression=smile&width=512&bgColor=13173300`;
+
+	// this sets the mii height so that the face width stays the same
+	document.querySelector('img#mii-img').style.height = `${
+		mii.height * mii.height * 0.0023 + mii.height * 1.058 + 384
 	}px`;
+
+	// this sets the bottom position so that the mii's feet stay in the same position
+	document.querySelector('img#mii-img').style.bottom = `${
+		mii.height * mii.height * -0.00468135 + mii.height * 0.28 - 0.052435
+	}px`;
+
+	console.log(mii);
 }
 
 // This function updates a prop of the Mii and rerenders it
@@ -41,7 +60,6 @@ function updateMii(e, type) {
 	const prop = e.target.name;
 	const value = e.target.value;
 	mii[prop] = parseInt(value);
-	console.log(mii);
 	renderMii(type);
 }
 
@@ -95,6 +113,9 @@ document.querySelectorAll('input[type=\'range\']').forEach((fieldset) => {
 	'eyeStretch',
 	'noseVertical',
 	'noseSize',
+	'mouthVertical',
+	'mouthSize',
+	'mouthStretch',
 	'glassesVertical',
 	'glassesSize',
 	'facialHairVertical',
@@ -199,4 +220,29 @@ document.querySelectorAll('span.current-page-index').forEach((el) => {
 // Here we bind the functions to the corresponding buttons
 document.querySelectorAll('button.page-btn').forEach((el) => {
 	el.addEventListener('click', paginationHandler);
+});
+
+// mii saving business (animation jank & actual saving)
+document.querySelector('#saveTab #saveButton').addEventListener('click', (e) => {
+	e.preventDefault();
+
+	document.querySelector('#saveTab #saveButton').classList.add('inactive', 'fade-out');
+	document.querySelector('.tabs').style.pointerEvents = 'none';
+	document.querySelector('.mii-comparison.confirmed').style.opacity = 1;
+	document.querySelector('#saveTab p.save-prompt').classList.add('fade-out');
+
+	setTimeout(() => {
+		document.querySelector('.mii-comparison.unconfirmed').style.opacity = 0;
+	}, 500);
+
+	setTimeout(() => {
+		document.querySelector('.mii-comparison.confirmed .old-mii').classList.add('fade-out');
+		document.querySelector('.mii-comparison.confirmed svg').classList.add('fade-out');
+	}, 1500);
+
+	setTimeout(() => {
+		document.querySelector('.mii-comparison.confirmed .new-mii').classList.add('centered-mii-img');
+	}, 2000);
+
+
 });
