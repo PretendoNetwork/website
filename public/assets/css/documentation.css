@@ -71,7 +71,7 @@ header nav a:first-child {
   flex-flow: column;
   width: 200px;
   margin-left: 138px;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 }
 .docs-wrapper .sidebar .section:first-child {
   margin-top: 72px;

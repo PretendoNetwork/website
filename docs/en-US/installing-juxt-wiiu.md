@@ -37,4 +37,4 @@ The next step is to launch Martini and run it to install Juxt.
  Now Enjoy Juxt.
 
  #### TroubleShoot
-Please visit this [Page](/docs/martini-errors) if you encounter an issue.
+Please visit this [Page](/docs/martini-errorcodes) if you encounter an issue.
