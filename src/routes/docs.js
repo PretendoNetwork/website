@@ -4,17 +4,26 @@ const router = new Router();
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const errorList = require('../../docs/common/errorList.json');
 
 router.get('/', async (request, response) => {
 	response.redirect('/docs/welcome');
 });
 
 router.get('/search', async (request, response) => {
+	const renderData = {
+		errorList: JSON.stringify(errorList),
+		currentPage: 'search',
+	};
+	response.render('docs/search', renderData);
+});
+
+router.get('/install', async (request, response) => {
 	const renderData = 	{
-		currentPage: request.params.slug
+		currentPage: 'install',
 	};
 
-	response.render('docs/search', renderData);
+	response.render('docs/install', renderData);
 });
 
 router.get('/:slug', async (request, response, next) => {
@@ -53,11 +62,9 @@ router.get('/:slug', async (request, response, next) => {
 	renderData.content = content;
 
 	// A boolean to show the quick links grid or not.
-	let showQuickLinks = false;
 	if (pageName === 'welcome') {
-		showQuickLinks = true;
+		renderData.showQuickLinks = true;
 	}
-	renderData.showQuickLinks = showQuickLinks;
 
 	response.render('docs/docs', renderData);
 });
