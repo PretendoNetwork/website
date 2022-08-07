@@ -322,6 +322,7 @@ button#openSidebar {
 	.docs-wrapper .content .quick-links-grid,
 	.platform-grid {
 		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
 	}
 }
 
