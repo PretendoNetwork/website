@@ -92,8 +92,8 @@ router.get('/:subpath/:page', async (request, response, next) => {
 
 	const locale = response.locals.localeString;
 	const pageName = request.params.page;
-	renderData.currentPage = pageName;
 	const subpath = request.params.subpath;
+	renderData.currentPage = `${subpath}/${pageName}`;
 
 	const { content, MDLocale } = getRawDocs(locale, subpath, pageName);
 	if (content) {

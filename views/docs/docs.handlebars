@@ -27,7 +27,12 @@
 		</svg>
 	</a>
 
-	{{> header}}
+	<div class="header-wrapper">
+		<button id="openSidebar" class="nostyle">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+		</button>
+		{{> header}}
+	</div>
 
 	{{> docs-sidebar}}
 
@@ -62,6 +67,8 @@
 		</div>
 	</div>
 </div>
+
+<script src="/assets/js/docssidebarhandler.js"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
