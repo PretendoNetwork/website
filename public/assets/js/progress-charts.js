@@ -8,12 +8,16 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 	const allStartedFeatureNodes = progressListElement.querySelectorAll('.feature .ongoing');
 
 	// Use percentage override data attribute if present, else calculate
-	const progressPercentage = Math.round(percentageOverride) || Math.round(Math.min((allDoneFeatureNodes.length + allStartedFeatureNodes.length * 0.5) / allFeatureNodes.length * 100, 100));
+	const progressPercentage = Math.round(percentageOverride) || Math.round(Math.min((allDoneFeatureNodes.length + allStartedFeatureNodes.length * 0.5) / allFeatureNodes.length * 100, 100)) || 0;
 	const remainingPercentage = 100 - progressPercentage;
 
 	// Set inner paragraph
 	progressListElement.querySelectorAll('.percentage-label').forEach(p => {
-		p.innerText = progressPercentage.toString().padStart(2, '0') + '%';
+		if (progressPercentage === 0) {
+			p.innerText = progressPercentage.toString() + '%';
+		} else {
+			p.innerText = progressPercentage.toString().padStart(2, '0') + '%';
+		}
 	});
 
 	// Create chart
