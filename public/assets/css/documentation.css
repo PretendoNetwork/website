@@ -243,10 +243,9 @@ button#openSidebar {
 }
 
 .platform-grid a img {
-	width: 100%;
-	max-width: 216px;
+	width: 180px;
+	max-width: 100%;
 	height: auto;
-	max-height: 184px;
 }
 .platform-grid a span {
 	margin-top: auto;
@@ -339,6 +338,12 @@ button#openSidebar {
 	}
 	.docs-wrapper header a.logo-link {
 		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.docs-wrapper .content {
+		padding: 24px;
 	}
 }
 
