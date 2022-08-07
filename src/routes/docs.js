@@ -26,45 +26,82 @@ router.get('/install', async (request, response) => {
 	response.render('docs/install', renderData);
 });
 
-router.get('/:slug', async (request, response, next) => {
-	const renderData = 	{
-		currentPage: request.params.slug
-	};
+function getRawDocs(locale, subpath, pageName) {
 
-	// Get the name of the page from the URL
-	const pageName = request.params.slug;
+	const localePath = path.join(__dirname, '../../docs', locale, subpath, `${pageName}.md`);
+	const defaultPath = path.join(__dirname, '../../docs', 'en-US', subpath, `${pageName}.md`);
 
-	let markdownLocale = response.locals.localeString;
-	let missingInLocale = false;
-	// Check if the MD file exists in the user's locale, if not try en-US and show notice, or finally log error and show 404.
-	if (fs.existsSync(path.join('docs', markdownLocale, `${pageName}.md`))) {
-		null;
-	} else if (fs.existsSync(path.join('docs', 'en-US', `${pageName}.md`))) {
-		markdownLocale = 'en-US';
-		missingInLocale = true;
+	if (fs.existsSync(localePath)) {
+		return {
+			content: parseDocs(fs.readFileSync(localePath, 'utf8')),
+			MDLocale: locale,
+		};
+	} else if (fs.existsSync(defaultPath)) {
+		return {
+			content: parseDocs(fs.readFileSync(defaultPath, 'utf8')),
+			MDLocale: 'en-US'
+		};
 	} else {
-		next();
-		return;
+		return {
+			content: null,
+			MDLocale: null
+		};
 	}
-	renderData.missingInLocale = missingInLocale;
+}
 
-	let content;
-	// Get the markdown file corresponding to the page.
-	content = fs.readFileSync(path.join('docs', markdownLocale, `${pageName}.md`), 'utf-8');
+function parseDocs(rawDocs) {
+	if (rawDocs) {
+		let markedContent = marked(rawDocs);
+		markedContent = markedContent.replaceAll(/\[yt-iframe\]\(.{11}\)/g, (match) => {
+			const videoIDRegex = /(?<=\[yt-iframe\]\().*(?=\))/g;
+			const videoID = match.match(videoIDRegex)[0];
+			return `<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/${videoID}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+		});
 
-	// Replace [yt-iframe](videoID) with the full <iframe />
-	content = content
-		.replace(/(?<!`)\[yt-iframe]\(/g, '<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/')
-		.replace(/(?<=<iframe src="https:\/\/www\.youtube-nocookie\.com\/embed\/.{11})\)/g, '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		const htmlContent = marked.parse(markedContent);
+		return htmlContent;
+	} else {
+		return null;
+	}
+}
 
-	// Convert the content into HTML
-	content = marked.parse(content);
-	renderData.content = content;
+router.get('/:page', async (request, response, next) => {
+	const renderData = 	{};
+
+	const locale = response.locals.localeString;
+	const pageName = request.params.page;
+	renderData.currentPage = pageName;
+
+	const { content, MDLocale } = getRawDocs(locale, '', pageName);
+	if (content) {
+		renderData.content = content;
+	} else {
+		return next();
+	}
+	renderData.missingInLocale = locale !== MDLocale;
 
 	// A boolean to show the quick links grid or not.
 	if (pageName === 'welcome') {
 		renderData.showQuickLinks = true;
 	}
+
+	response.render('docs/docs', renderData);
+});
+router.get('/:subpath/:page', async (request, response, next) => {
+	const renderData = 	{};
+
+	const locale = response.locals.localeString;
+	const pageName = request.params.page;
+	renderData.currentPage = pageName;
+	const subpath = request.params.subpath;
+
+	const { content, MDLocale } = getRawDocs(locale, subpath, pageName);
+	if (content) {
+		renderData.content = content;
+	} else {
+		return next();
+	}
+	renderData.missingInLocale = locale !== MDLocale;
 
 	response.render('docs/docs', renderData);
 });

@@ -181,6 +181,39 @@ a.logo-link {
 	border-radius: 4px 4px 0 0;
 }
 
+.platform-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+	margin-top: 36px;
+}
+
+.platform-grid a {
+	text-decoration: none;
+	background: var(--bg-shade-3);
+	border-radius: 12px;
+	color: var(--text-shade-4);
+	display: grid;
+	grid-template-rows: auto fit-content(100%);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 36px;
+	padding-bottom: 24px;
+	gap: 24px;
+}
+
+.platform-grid a img {
+	width: 100%;
+	max-width: 216px;
+	height: auto;
+	max-height: 184px;
+}
+.platform-grid a span {
+	margin-top: auto;
+	font-size: 1.2rem;
+}
+
 /*
 @media screen and (max-width: 1080px) {
 	.docs-wrapper .sidebar .section {
