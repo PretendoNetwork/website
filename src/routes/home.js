@@ -1,16 +1,12 @@
 const { Router } = require('express');
-const { boards } = require('../../boards/boards.json');
 const router = new Router();
 
-const { getTrelloCache } = require('../cache');
+const { getGithubProjectsCache } = require('../cache');
 
 router.get('/', async (request, response) => {
+	const renderData = 	{};
 
-	const renderData = 	{
-		boards
-	};
-
-	const cache = await getTrelloCache();
+	const githubProjectsCache = await getGithubProjectsCache();
 
 	// Builds the arrays of people for the special thanks section
 
@@ -43,37 +39,37 @@ router.get('/', async (request, response) => {
 			percentageSum: 0
 		},
 		percent: 0,
-		progress: {
-			not_started: [],
-			started: [],
-			completed: []
+		cards: {
+			todo: [],
+			in_progress: [],
+			done: []
 		}
 	};
 
 	// Calculates individual completion percentages and progress states
-	cache.sections.forEach(section => {
-		const { not_started, started, completed } = section.progress;
+	githubProjectsCache.sections.forEach(section => {
+		const { todo, in_progress, done } = section.cards;
 
 		// Calculates the completion percentage of the project, and sums it to the total
-		const sectionCompletionPercentage = (completed.length + started.length * 0.5) / (completed.length + started.length + not_started.length);
+		const sectionCompletionPercentage = ((done.length + in_progress.length * 0.5) / (done.length + in_progress.length + todo.length)) || 0;
 		totalProgress._calc.percentageSum += sectionCompletionPercentage;
 
 		const sectionTitle = `${section.title}  [${Math.round(sectionCompletionPercentage * 100)}%]`;
 
-		if (completed !== [] && started + not_started === []) {
-			// if all the section tasks have been completed, push to completed
-			totalProgress.progress.completed.push(sectionTitle);
-		} else if (not_started !== [] && started + completed === []) {
-			// if none the section tasks have been completed or started, push to not started
-			totalProgress.progress.not_started.push(sectionTitle);
+		if (done !== [] && in_progress + todo === []) {
+			// if all the section tasks have been done, push to done
+			totalProgress.cards.done.push(sectionTitle);
+		} else if (todo !== [] && in_progress + done === []) {
+			// if none the section tasks have been done or in_progress, push to todo
+			totalProgress.cards.todo.push(sectionTitle);
 		} else {
-			// for all other combos, push to started
-			totalProgress.progress.started.push(sectionTitle);
+			// for all other combos, push to in_progress
+			totalProgress.cards.in_progress.push(sectionTitle);
 		}
 	});
 
 	// Calculates global completion percentage
-	totalProgress.percent = Math.round(totalProgress._calc.percentageSum / cache.sections.length * 100);
+	totalProgress.percent = Math.round(totalProgress._calc.percentageSum / githubProjectsCache.sections.length * 100);
 
 	renderData.featuredFeatureList = totalProgress;
 
