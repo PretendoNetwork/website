@@ -12,7 +12,7 @@ const database = require('./database');
 const util = require('./util');
 const logger = require('./logger');
 const config = require('../config.json');
-const defaultLocale = require('../locales/US_en.json');
+const defaultLocale = require('../locales/en_US.json');
 
 const { http: { port } } = config;
 const app = express();

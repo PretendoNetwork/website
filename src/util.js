@@ -13,16 +13,16 @@ function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
 }
 
-function getLocale(region, language) {
-	const path = `${__dirname}/../locales/${region}_${language}.json`;
+function getLocale(language, region) {
+	const path = `${__dirname}/../locales/${language}_${region}.json`;
 
 	if (fs.pathExistsSync(path)) {
 		return require(path);
 	}
 
-	logger.warn(`Could not find locale ${region}_${language}! Loading US_en`);
+	logger.warn(`Could not find locale ${language}_${region}! Loading en_US`);
 
-	return require(`${__dirname}/../locales/US_en.json`);
+	return require(`${__dirname}/../locales/en_US.json`);
 }
 
 function apiGetRequest(path, headers) {
