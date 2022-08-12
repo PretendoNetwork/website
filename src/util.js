@@ -99,6 +99,10 @@ async function refreshLogin(request, response) {
 	response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
 	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
 	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+	request.cookies.refresh_token = tokens.refresh_token;
+	request.cookies.access_token = tokens.access_token;
+	request.cookies.token_type = tokens.token_type;
 }
 
 async function getUserAccountData(request, response, fromRetry=false) {

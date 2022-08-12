@@ -33,7 +33,7 @@ async function renderDataMiddleware(request, response, next) {
 			return next();
 		} catch (error) {
 			response.cookie('error_message', error.message, { domain: '.pretendo.network' });
-			return response.redirect('/account/login');
+			return response.redirect('/account/logout');
 		}
 	} else {
 		return next();
