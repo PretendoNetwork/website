@@ -14,21 +14,21 @@
 					<p class="tier-name tier-level-{{tierLevel}}" value="{{tierName}}">{{tierName}}</p>
 				{{else}}
 					{{#if (neq account.access_level -1)}}
-						<p class="tier-name access-level-{{account.access_level}}" value="{{ localeHelper locale "account" "accountLevel" account.access_level }}">{{ localeHelper locale "account" "accountLevel" account.access_level }}</p>
+						<p class="tier-name access-level-{{account.access_level}}" value="{{ localeHelper locale "account.accountLevel" account.access_level }}">{{ localeHelper locale "account.accountLevel" account.access_level }}</p>
 					{{else}}
-						<p class="tier-name access-level-banned" value="{{ localeHelper locale "account" "banned" }}">{{ localeHelper locale "account" "banned" }}</p>
+						<p class="tier-name access-level-banned" value="{{ localeHelper locale "account.banned" }}">{{ localeHelper locale "account.banned" }}</p>
 					{{/if}}
 				{{/if}}
 			</div>
 			<div class="buttons">
 				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-					<p class="caption">Download account files</p>
-					<p class="cemu-warning">(will not work on Nintendo Network)</p>
+					<p class="caption">{{ localeHelper locale "account.settings.downloadFiles" }}</p>
+					<p class="cemu-warning">{{ localeHelper locale "account.settings.downloadFilesDescription" }}</p>
 				</a>
 
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
-					<p class="caption">Upgrade account</p>
+					<p class="caption">{{ localeHelper locale "account.settings.upgrade" }}</p>
 				</a>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 		<div class="settings-wrapper">
 			<h2 class="section-header" id="user-settings">User settings</h2>
 			<div class="setting-card">
-				<h2 class="header">Profile</h2>
+				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.profile" }}</h2>
 				<a href="/account/edit/profile" class="edit">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
@@ -44,30 +44,30 @@
 				</a>
 				<ul class="setting-list">
 					<li>
-						<p class="label">Nickname</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.nickname" }}</p>
 						<p class="value">{{account.mii.name}}</p>
 					</li>
 					<li>
-						<p class="label">Birth date</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.birthDate" }}</p>
 						<p class="value">{{account.birthdate}}</p>
 					</li>
 					<li>
-						<p class="label">Gender</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.gender" }}</p>
 						<p class="value">{{account.gender}}</p>
 					</li>
 					<li>
-						<p class="label">Country/region</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.country" }}</p>
 						<p class="value">{{account.country}}</p>
 					</li>
 					<li>
-						<p class="label">Timezone</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.timezone" }}</p>
 						<p class="value">{{account.timezone.name}}</p>
 					</li>
 				</ul>
 			</div>
 
 			<div class="setting-card">
-				<h2 class="header">Server environment</h2>
+				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.serverEnv" }}</h2>
 				<fieldset {{#unless isTester}}disabled{{/unless}}>
 					<form class="server-selection" id="server">
 						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
@@ -80,7 +80,7 @@
 								<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
 								<line x1="12" y1="22.08" x2="12" y2="12"></line>
 							</svg>
-							<h2>Production</h2>
+							<h2>{{ localeHelper locale "account.settings.settingCards.production" }}</h2>
 						</label>
 						{{#if isTester}}
 						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
@@ -88,19 +88,19 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<polygon points="2,21 22,21 14,11.5 14,5 10,3 10,11.5"></polygon>
 							</svg>
-							<h2>Beta</h2>
+							<h2>{{ localeHelper locale "account.settings.settingCards.beta" }}</h2>
 						</label>
 						{{/if}}
 					</form>
 				</fieldset>
 			{{#unless isTester}}
-				<p>Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.</p>
+				<p>{{{ localeHelper locale "account.settings.settingCards.upgradePrompt" }}}</p>
 			{{else}}
-				<p>Your current tier gives you beta server access. Cool!</p>
+				<p>{{ localeHelper locale "account.settings.settingCards.hasAccessPrompt" }}</p>
 			{{/unless}}
 			</div>
 
-			<h2 class="section-header" id="security">Sign in and security</h2>
+			<h2 class="section-header" id="security">{{ localeHelper locale "account.settings.settingCards.signInSecurity" }}</h2>
 			<div class="setting-card">
 				<h2 class="header">Account</h2>
 				<a href="/account/edit/login-info" class="edit">
@@ -110,19 +110,19 @@
 				</a>
 				<ul class="setting-list">
 					<li>
-						<p class="label">Email</p>
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.email" }}</p>
 						<p class="value">{{account.email.address}}</p>
 					</li>
 					<li>
-						<p class="label">Password</p>
-						<p class="value">●●●●●●●●</p> <!-- Should remain hardcoded -->
+						<p class="label">{{ localeHelper locale "account.settings.settingCards.password" }}</p>
+						<p class="value">●●●●●●●●</p>
 					</li>
 				</ul>
-				<p>After changing your password, you will be signed out from all devices.</p>
+				<p>{{ localeHelper locale "account.settings.settingCards.passwordResetNotice" }}</p>
 			</div>
 
 			<div class="setting-card sign-in-history">
-				<h2 class="header">Sign in history</h2>
+				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.signInHistory" }}</h2>
 				<ul class="setting-list">
 					{{#each account.devices }}
 						<li>
@@ -132,26 +132,26 @@
 					{{/each}}
 				</ul>
 				<a href="/account/sign-in-history">
-					<button class="button secondary">View full sign in history</button>
+					<button class="button secondary">{{ localeHelper locale "account.settings.settingCards.fullSignInHistory" }}</button>
 				</a>
 			</div>
 
-			<h2 class="section-header" id="other">Other settings</h2>
+			<h2 class="section-header" id="other">{{ localeHelper locale "account.settings.settingCards.otherSettings" }}</h2>
 				<div class="setting-card">
-					<h2 class="header">Discord</h2>
+					<h2 class="header">{{ localeHelper locale "account.settings.settingCards.discord" }}</h2>
 						{{#if discordUser}}
-					<p>Connected to Discord as {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
-					<button class="button secondary" id="remove-discord-connection">Remove Discord account</button>
+					<p>{{ localeHelper locale "account.settings.settingCards.connectedToDiscord" }} {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<button class="button secondary" id="remove-discord-connection">{{ localeHelper locale "account.settings.settingCards.removeDiscord" }}</button>
 				{{else}}
-					<p>No Discord account linked. <a href="{{ discordAuthURL }}">Link Discord account here</a></p>
+					<p>{{ localeHelper locale "account.settings.settingCards.noDiscordLinked" }} <a href="{{ discordAuthURL }}">{{ localeHelper locale "account.settings.settingCards.linkDiscord" }}</a></p>
 				{{/if}}
 			</div>
 
 			<div class="setting-card">
-				<h2 class="header">Newsletter</h2>
+				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.newsletter" }}</h2>
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
-					<label for="marketing">Receive project updates via email (you can opt-out at any time)</label>
+					<label for="marketing">{{ localeHelper locale "account.settings.settingCards.newsletterPrompt" }}</label>
 				</form>
 			</div>
 		</div>
@@ -178,12 +178,12 @@
 
 <div class="modal-wrapper hidden" id="onlinefiles">
 	<div class="modal">
-		<h1 class="title dot">Password</h1>
-		<p class="modal-caption">Enter your PNID password to download Cemu files</p>
+		<h1 class="title dot">{{ localeHelper locale "account.settings.settingCards.password" }}</h1>
+		<p class="modal-caption">{{ localeHelper locale "account.settings.settingCards.passwordPrompt" }}</p>
 		<input name="password" id="password" type="password" required />
 		<div class="modal-button-wrapper">
-			<button class="button cancel" id="onlineFilesCloseButton">Cancel</button>
-			<button class="button primary confirm" id="onlineFilesConfirmButton">Confirm</button>
+			<button class="button cancel" id="onlineFilesCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
+			<button class="button primary confirm" id="onlineFilesConfirmButton">{{ localeHelper locale "modals.confirm" }}</button>
 		</div>
 	</div>
 </div>

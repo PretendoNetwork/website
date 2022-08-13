@@ -27,12 +27,12 @@
 	</a>
 
 	<nav>
-		<a href="/#about">{{ localeHelper locale "nav" "about" }}</a>
-		<a href="/#faq">{{ localeHelper locale "nav" "faq" }}</a>
-		<a href="/#credits">{{ localeHelper locale "nav" "credits" }}</a>
-		<a style="display: none;" href="/docs">{{ localeHelper locale "nav" "docs"}}</a>
-		<a href="/progress" class="keep-on-mobile">{{ localeHelper locale "nav" "progress"}}</a>
-		<a href="/blog" class="keep-on-mobile">{{ localeHelper locale "nav" "blog" }}</a>
+		<a href="/#about">{{ localeHelper locale "nav.about" }}</a>
+		<a href="/#faq">{{ localeHelper locale "nav.faq" }}</a>
+		<a href="/#credits">{{ localeHelper locale "nav.credits" }}</a>
+		<a style="display: none;" href="/docs">{{ localeHelper locale "nav.docs"}}</a>
+		<a href="/progress" class="keep-on-mobile">{{ localeHelper locale "nav.progress"}}</a>
+		<a href="/blog" class="keep-on-mobile">{{ localeHelper locale "nav.blog" }}</a>
 	</nav>
 
 	<div class="right-section">
@@ -155,12 +155,12 @@
 					<div class="buttons">
 						<a href="/account">
 							<button class="button primary">
-								Settings
+								{{ localeHelper locale "nav.accountWidget.settings" }}
 							</button>
 						</a>
 						<a href="/account/logout">
 							<button class="button logout">
-								Logout
+								{{ localeHelper locale "nav.accountWidget.logout" }}
 							</button>
 						</a>
 					</div>

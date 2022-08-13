@@ -223,15 +223,6 @@
 		"title": "Blog",
 		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "Vamos traduzir",
 		"description": "Cole um link para um arquivo JSON acessível publicamente para testá-lo no site",
@@ -239,21 +230,5 @@
 		"fileInput": "Arquivo para testar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Testar aqui"
-	},
-	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
-		"quickLinks": {
-			"header": "Quick links",
-			"links": [
-				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
-				},
-				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
-				}
-			]
-		}
 	}
 }

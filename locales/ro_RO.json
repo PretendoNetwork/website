@@ -4,9 +4,7 @@
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Mulțumiri",
-		"progress": "Progres",
-		"blog": "Blog",
-		"account": "Account"
+		"progress": "Progres"
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
@@ -223,15 +221,6 @@
 		"title": "Blog",
 		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
 		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",
@@ -239,21 +228,5 @@
 		"fileInput": "Fișier de testare",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Testează fișier"
-	},
-	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
-		"quickLinks": {
-			"header": "Quick links",
-			"links": [
-				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
-				},
-				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
-				}
-			]
-		}
 	}
 }

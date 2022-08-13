@@ -6,7 +6,11 @@
 		"credits": "Credits",
 		"progress": "Progress",
 		"blog": "Blog",
-		"account": "Account"
+		"account": "Account",
+		"accountWidget": {
+			"settings": "Settings",
+			"logout": "Logout"
+		}
 	},
 	"hero": {
 		"subtitle": "Game servers",
@@ -25,10 +29,7 @@
 	},
 	"progress": {
 		"title": "Progress",
-		"paragraphs": [
-			"Currently, we are working on Miiverse, along with our account servers and its integration with the services.",
-			"For 3DS, we are also working on Mario Kart 7, with a desire to continue working on other games when possible."
-		]
+		"githubRepo": "Github repository"
 	},
 	"faq": {
 		"title": "Frequently Asked Questions",
@@ -221,9 +222,57 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Published by",
+		"publishedOn": "on"
 	},
 	"account": {
+		"loginForm": {
+			"login": "Login",
+			"register": "Register",
+			"detailsPrompt": "Enter your account details below",
+			"username": "Username",
+			"password": "Password",
+			"confirmPassword": "Confirm password",
+			"email": "Email",
+			"miiName": "Mii name",
+			"forgotPassword": "Forgot your password?",
+			"registerPrompt": "Don't have an account?",
+			"loginPrompt": "Already have an account?"
+		},
+		"settings": {
+			"downloadFiles": "Download account files",
+			"downloadFilesDescription": "(will not work on Nintendo Network)",
+			"upgrade": "Upgrade account",
+			"settingCards": {
+				"profile": "Profile",
+				"nickname": "Nickname",
+				"birthDate": "Birth date",
+				"gender": "Gender",
+				"country": "Country/region",
+				"timezone": "Timezone",
+				"serverEnv": "Server environment",
+				"production": "Production",
+				"beta": "Beta",
+				"upgradePrompt": "Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.",
+				"hasAccessPrompt": "Your current tier gives you beta server access. Cool!",
+				"signInSecurity": "Sign in and security",
+				"email": "Email",
+				"password": "Password",
+				"passwordResetNotice": "After changing your password, you will be signed out from all devices.",
+				"signInHistory": "Sign in history",
+				"fullSignInHistory": "View full sign in history",
+				"otherSettings": "Other settings",
+				"discord": "Discord",
+				"connectedToDiscord": "Connected to Discord as",
+				"removeDiscord": "Remove Discord account",
+				"noDiscordLinked": "No Discord account linked.",
+				"linkDiscord": "Link Discord account",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Receive project updates via email (you can opt-out at any time)",
+				"passwordPrompt": "Enter your PNID password to download Cemu files"
+			}
+		},
 		"accountLevel": [
 			"Standard",
 			"Tester",
@@ -231,6 +280,23 @@
 			"Developer"
 		],
 		"banned": "Banned"
+	},
+	"upgrade": {
+		"title": "Upgrade",
+		"description": "Reaching the monthly goal will make Pretendo a full time job, providing better quality updates at a faster rate.",
+		"month": "month",
+		"tierSelectPrompt": "Select a tier",
+		"unsub": "Unsubscribe",
+		"unsubPrompt": "Are you sure you want to unsubscribe from <span>tiername</span>? You will lose access to the perks associated with that tier.",
+		"unsubConfirm": "Unsubscribe",
+		"changeTier": "Change tier",
+		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class='oldtier'>oldtiername</span> and subscribe to <span class='newtier'>newtiername</span>?",
+		"changeTierConfirm": "Change tier",
+		"back": "Back"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/month, <span>${perc}%</span> of the monthly goal.",
+		"upgradePush": "To become a subscriber and gain access to cool perks, visit the <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"localizationPage": {
 		"title": "Let's localize",
@@ -255,5 +321,9 @@
 				}
 			]
 		}
+	},
+	"modals": {
+		"cancel": "Cancel",
+		"confirm": "Confirm"
 	}
 }

@@ -223,15 +223,6 @@
 		"title": "Blogg",
 		"description": "De nyeste oppdateringen er i kondensert biter. Hvis du har lyst til å se mer hyppig oppdateringen, tenk om å støtte oss på <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "La oss lokalisere",
 		"description": "Lim inn en lenke til en offentlig JSON lokal til å teste det på nettsiden",
