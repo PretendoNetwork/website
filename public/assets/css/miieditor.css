@@ -205,11 +205,8 @@ div.subtabs .subtabbtn.active:hover::before {
 div.birthday {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
-	align-items: end;
+	align-items: center;
 	gap: 12px;
-}
-div.birthday span {
-	margin-bottom: 12px;
 }
 .has-textinput .icons {
 	display: flex;
