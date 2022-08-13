@@ -2,7 +2,7 @@
 <div class="wrapper">
 	<a href="/account" class="back-arrow">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-		<span>Back</span>
+		<span>{{ localeHelper locale "upgrade.back" }}</span>
 	</a>
 
 	<div class="account-form-wrapper">
@@ -31,17 +31,15 @@
 			</svg>
 		</a>
 
-		<h1 class="title dot">Upgrade</h1>
-		<p class="caption">
-			Reaching the monthly goal will make Pretendo a full time job, providing better quality updates at a faster rate.
-		</p>
+		<h1 class="title dot">{{ localeHelper locale "upgrade.title" }}</h1>
+		<p class="caption">{{ localeHelper locale "upgrade.description" }}</p>
 
 		<div class="progress-bar-wrapper">
 			<div class="progress-bar">
 				<div class="progress-bar-inner" style="width: {{ donationCache.completed_capped }}%;" ></div>
 			</div>
-			<p>
-				<span>${{donationCache.total_dollars}}</span> of <span>${{donationCache.goal_dollars}}</span>/month, <span>${{donationCache.completed_real}}%</span> of the monthly goal.
+			<p class="localeReplace">
+				{{{ localeHelper locale "donation.progress" }}}
 			</p>
 		</div>
 		<form method="post" data-current-tier="{{currentTier}}">
@@ -64,41 +62,49 @@
 						</div>
 					</div>
 					<p class="price">
-						<span>{{this.price}}</span> / month
+						<span>{{this.price}}</span> / {{ localeHelper locale "upgrade.month" }}
 					</p>
 				</label>
 			{{/each}}
 
 			<div class="button-wrapper">
-				<button class="disabled" type="submit" id="submitButton">Select a tier</button>
-				<button class="unsubscribe hidden" id="unsubModalShowButton">Unsubscribe</button>
+				<button class="disabled" type="submit" id="submitButton">{{ localeHelper locale "upgrade.tierSelectPrompt" }}</button>
+				<button class="unsubscribe hidden" id="unsubModalShowButton">{{ localeHelper locale "upgrade.unsub" }}</button>
 			</div>
 		</form>
 	</div>
 
 	<div class="modal-wrapper hidden" id="unsub">
 		<div class="modal">
-			<h1 class="title dot">Unsubscribe</h1>
-			<p class="modal-caption">Are you sure you want to unsubscribe from <span>tiername</span>?
-			You will lose access to the perks associated with that tier.</p>
+			<h1 class="title dot">{{ localeHelper locale "upgrade.unsub" }}</h1>
+			<p class="modal-caption">{{{ localeHelper locale "upgrade.unsubPrompt" }}}</p>
 			<div class="modal-button-wrapper">
-				<button class="button cancel" id="unsubModalCloseButton">Cancel</button>
-				<button class="button primary confirm" id="unsubModalConfirmButton">Unsubscribe</button>
+				<button class="button cancel" id="unsubModalCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
+				<button class="button primary confirm" id="unsubModalConfirmButton">{{ localeHelper locale "upgrade.unsubConfirm" }}</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="modal-wrapper hidden" id="switchtier">
 		<div class="modal">
-			<h1 class="title dot">Change tier</h1>
-			<p class="modal-caption">Are you sure you want to unsubscribe
-			from <span class="oldtier">oldtiername</span> and subscribe to <span class="newtier">newtiername</span>?</p>
+			<h1 class="title dot">{{ localeHelper locale "upgrade.changeTier" }}</h1>
+			<p class="modal-caption">{{{ localeHelper locale "upgrade.changeTierConfirm" }}}</p>
 			<div class="modal-button-wrapper">
-				<button class="button cancel" id="switchTierCloseButton">Cancel</button>
-				<button class="button primary confirm" id="switchTierConfirmButton">Confirm</button>
+				<button class="button cancel" id="switchTierCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
+				<button class="button primary confirm" id="switchTierConfirmButton">{{ localeHelper locale "modals.confirm" }}</button>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	/* this jank is needed to have data mixed in with a localized string */
+	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+		.replace('${totd}', '{{donationCache.total_dollars}}');
+	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+		.replace('${goald}', '{{donationCache.goal_dollars}}');
+	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+		.replace('${perc}', '{{donationCache.completed_real}}');
+</script>
 
 <script src="/assets/js/upgrade.js" />
