@@ -223,15 +223,6 @@
 		"title": "ブログ（英語）",
 		"description": "最新のアップデートをまとめてお届けします。もっと多くのアップデートを貰いたい方は、<a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>での寄付をご検討ください。"
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "レッツローカライズ",
 		"description": "公開されているJSONへのリンクを貼り付けてこのサイトに試してみて下さい！",

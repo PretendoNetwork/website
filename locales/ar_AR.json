@@ -68,25 +68,6 @@
 			}
 		]
 	},
-	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
-		"cards": [
-			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
-			},
-			{
-				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
-			},
-			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
-			}
-
-		]
-	},
 	"credits": {
 		"title": "الفريق",
 		"text": "قابل الفريق وراء المشروع",
@@ -195,25 +176,6 @@
 			}
 		]
 	},
-	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
-		"widget": {
-			"text": "Get realtime updates to our progress",
-			"button": "Join the server"
-		}
-	},
-	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
-		"widget": {
-			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
-			],
-			"button": "Join now!"
-		}
-	},
 	"progressPage": {
 		"title": "تقدمنا",
 		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
@@ -222,37 +184,10 @@
 		"title": "البلوج",
 		"description": "آخر التحديثات في أجزاء مكثفة.  إذا كنت ترغب في رؤية المزيد من التحديثات المتكررة ، ففكر في دعمنا على <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\"> Patreon </a>. "
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "!لنترجم",
 		"description": "الصق رابطا إلي لغة الزيسون يمكن الوصول إليها بشكل عام لاختبارها على موقع الويب",
 		"instructions": "اظهر خطوات الترجمة",
-		"fileInput": "ملف للتجربة",
-		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
-	},
-	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
-		"quickLinks": {
-			"header": "Quick links",
-			"links": [
-				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
-				},
-				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
-				}
-			]
-		}
+		"fileInput": "ملف للتجربة"
 	}
 }

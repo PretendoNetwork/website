@@ -222,15 +222,6 @@
 		"title": "Blog",
 		"description": "Najnowsze informacje w krótkich tekstach. Jeśli chcesz otrzymywać częstsze aktualizacje, pomyśl nad wsparciem nas na <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "Tłumaczmy",
 		"description": "Wklej link do publicznego pliku JSON, aby przetestować go na stronie",
