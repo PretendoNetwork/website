@@ -1,4 +1,4 @@
-// This file gets automatically bundled with browserify when running the start script. This also means that after any update you're gonna need to restart the server.
+// This file gets automatically bundled with browserify when running the start script. This also means that after any update you're gonna need to restart the server to see any changes.
 
 // Prevent the user from reloading or leaving the page
 window.addEventListener('beforeunload', function (e) {
@@ -6,7 +6,7 @@ window.addEventListener('beforeunload', function (e) {
 	e.returnValue = '';
 });
 
-const Mii = require('./MiiClass.js');
+const Mii = require('mii-js');
 
 // MII RENDERER
 
@@ -15,32 +15,52 @@ const encodedUserMiiData = document.querySelector(
 	'script#encodedUserMiiData'
 ).textContent;
 document.querySelector('script#encodedUserMiiData').remove();
-// We initialize the Mii object with the encoded data and render the Mii
+
+// We initialize the Mii object
 const mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
+
+// We set the img sources for the unedited miis in the save animation
+const miiStudioNeutralUrl = mii.studioUrl({
+	width: 512,
+	bgColor: '13173300',
+});
+const miiStudioSorrowUrl = mii.studioUrl({
+	width: 512,
+	bgColor: '13173300',
+	expression: 'sorrow',
+});
+document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
+document.querySelector('.mii-comparison.confirmed img.old-mii').src =
+	miiStudioSorrowUrl;
+
+// Initial mii render
 renderMii();
-
-const oldMiiStudioData = mii.toStudioMii().toString('hex');
-
-// initial setup for saving animation
-document.querySelector('.mii-comparison img.old-mii').src = `https://studio.mii.nintendo.com/miis/image.png?data=${oldMiiStudioData}&type=face&expression=normal&width=512&bgColor=13173300`;
-document.querySelector('.mii-comparison.confirmed img.old-mii').src = `https://studio.mii.nintendo.com/miis/image.png?data=${oldMiiStudioData}&type=face&expression=sorrow&width=512&bgColor=13173300`;
 
 // This function renders the Mii on the page
 function renderMii(type) {
-	type = type || 'all_body'; // Can be 'all_body' or 'face'
+	const miiStudioUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+		type: type || 'all_body',
+	});
 
-	const miiStudioData = mii.toStudioMii().toString('hex');
-	document.querySelector(
-		'img#mii-img'
-	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=${type}&expression=normal&width=512&bgColor=13173300`;
+	const faceMiiStudioUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+	});
+
+	const faceMiiStudioSmileUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+		expression: 'smile'
+	});
+
+	// sets the mii
+	document.querySelector('img#mii-img').src = miiStudioUrl;
 
 	// sets the new mii in the save tab to the new mii
-	document.querySelector(
-		'.mii-comparison img.new-mii'
-	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=face&expression=normal&width=512&bgColor=13173300`;
-	document.querySelector(
-		'.mii-comparison.confirmed img.new-mii'
-	).src = `https://studio.mii.nintendo.com/miis/image.png?data=${miiStudioData}&type=face&expression=smile&width=512&bgColor=13173300`;
+	document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
+	document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
 
 	// this sets the mii height so that the face width stays the same
 	document.querySelector('img#mii-img').style.height = `${
@@ -58,27 +78,91 @@ function renderMii(type) {
 // This function updates a prop of the Mii and rerenders it
 function updateMii(e, type) {
 	const prop = e.target.name;
-	const value = e.target.value;
-	mii[prop] = parseInt(value);
+	let value = e.target.value || e.target.defaultValue;
+
+	// if the value comes from a checkbox, we use the checked property
+	if (value === 'on' || value === 'off') {
+		value = e.target.checked;
+	}
+
+	// if the prop is disableSharing, we set the value to the opposite of the current value
+	if (prop === 'disableSharing') {
+		value = !value;
+	}
+
+	// Handle booleans, on/offs and strings
+	if (value === 'true' || value === 'false') {
+		mii[prop] = value === 'true';
+	}	else if (value === 'on' || value === 'off') {
+		mii[prop] = value === 'on';
+	} else if (isNaN(parseInt(value))) {
+		mii[prop] = value;
+	} else {
+		mii[prop] = parseInt(value);
+	}
+
 	renderMii(type);
+}
+
+// prevent the user from inputting values out of the range
+function handleRange(e) {
+	if (e.target.value === '') return;
+
+	const value = parseInt(e.target.value);
+
+	// if the value is out of range, set to the nearest in-range value
+	if (value > e.target.max) {
+		e.target.value = e.target.max;
+	} else if (value < e.target.min) {
+		e.target.value = e.target.min;
+	}
+}
+
+function handleCalendar(e) {
+	const month = parseInt(e.target.value);
+
+	// we get the days in the month (hardcoded to 2024 'cause it's a leap year)
+	const daysInMonth = new Date(2024, month, 0).getDate();
+
+	const birthDayElement = document.querySelector('input[type=\'number\']#birthDay');
+
+	// we set the max value for the day selector to the days in the month
+	birthDayElement.max = daysInMonth;
+
+	// if the day is greater than the days in the month, set it to the max
+	if (parseInt(birthDayElement.value) > daysInMonth) {
+		birthDayElement.value = daysInMonth;
+	}
+}
+
+function preventEmpty(e) {
+	if (e.target.value !== '') return;
+
+	e.target.value = e.target.defaultValue;
 }
 
 document.querySelectorAll('fieldset').forEach((fieldset) => {
 	fieldset.addEventListener('change', (e) => updateMii(e));
 });
 
-document.querySelectorAll('input[type=\'range\']').forEach((fieldset) => {
-	fieldset.addEventListener('input', (e) => updateMii(e));
+document.querySelectorAll('input[type=\'range\']').forEach((input) => {
+	input.addEventListener('input', (e) => updateMii(e));
 });
+
+document.querySelectorAll('input[type=\'text\'], input[type=\'number\']').forEach((input) => {
+	input.addEventListener('blur', (e) => preventEmpty(e));
+});
+
+document.querySelector('input[type=\'number\']#birthMonth').addEventListener('blur', (e) => handleCalendar(e));
 
 // FORM
 
 // Here we preselect the options corresponding to the Mii's current values
 [
 	'faceType',
-	'faceColor',
-	'faceMakeup',
-	'faceWrinkles',
+	'skinColor',
+	'makeupType',
+	'wrinklesType',
 	'hairType',
 	'hairColor',
 	'eyebrowType',
@@ -90,45 +174,78 @@ document.querySelectorAll('input[type=\'range\']').forEach((fieldset) => {
 	'mouthColor',
 	'glassesType',
 	'glassesColor',
-	'facialHairType',
+	'beardType',
 	'facialHairColor',
-	'facialHairMustache',
-	'moleEnable',
+	'mustacheType',
+	'moleEnabled',
 	'gender',
-	'favoriteColor'
+	'favoriteColor',
 ].forEach((prop) => {
-	document.querySelector(`#${prop}${mii[prop]}`).checked = true;
+	const el = document.querySelector(`#${prop}${mii[prop]}`);
+	if (el) {
+		el.checked = true;
+	}
+	console.log(`[info] preselected value for ${prop}`);
 });
 
 [
-	'eyebrowVertical',
-	'eyebrowHorizontal',
-	'eyebrowRotation',
-	'eyebrowSize',
-	'eyebrowStretch',
-	'eyeVertical',
-	'eyeHorizontal',
-	'eyeRotation',
-	'eyeSize',
-	'eyeStretch',
-	'noseVertical',
-	'noseSize',
-	'mouthVertical',
-	'mouthSize',
-	'mouthStretch',
-	'glassesVertical',
-	'glassesSize',
-	'facialHairVertical',
-	'facialHairSize',
-	'moleVertical',
-	'moleHorizontal',
-	'moleSize',
-	'height',
-	'build'
+	'favorite',
+	'allowCopying'
 ].forEach((prop) => {
-	document.querySelector(`#${prop}`).value = mii[prop];
+	const el = document.querySelector(`#${prop}`);
+	if (el) {
+		el.checked = mii[prop];
+	}
+	console.log(`[info] preselected value for ${prop}`);
 });
 
+document.querySelector('#disableSharing').checked = !mii.disableSharing;
+console.log('[info] preselected value for disableSharing');
+
+[
+	'eyebrowYPosition',
+	'eyebrowSpacing',
+	'eyebrowRotation',
+	'eyebrowScale',
+	'eyebrowVerticalStretch',
+	'eyeYPosition',
+	'eyeSpacing',
+	'eyeRotation',
+	'eyeScale',
+	'eyeVerticalStretch',
+	'noseYPosition',
+	'noseScale',
+	'mouthYPosition',
+	'mouthScale',
+	'mouthHorizontalStretch',
+	'glassesYPosition',
+	'glassesScale',
+	'mustacheYPosition',
+	'mustacheScale',
+	'moleYPosition',
+	'moleXPosition',
+	'moleScale',
+	'height',
+	'build',
+	'miiName',
+	'creatorName',
+	'birthDay',
+	'birthMonth',
+].forEach((prop) => {
+	document.querySelector(`#${prop}`).value = mii[prop];
+	document.querySelector(`#${prop}`).defaultValue = mii[prop];
+	console.log(`[info] preselected value for ${prop}`);
+});
+
+
+[
+	'birthDay',
+	'birthMonth'
+].forEach((prop) => {
+	document.querySelector(`#${prop}`).addEventListener('input', (e) => {
+		handleRange(e);
+	});
+});
 
 // TABS, SUBTABS, AND ALL THE INHERENT JANK
 
@@ -136,19 +253,22 @@ function openTab(e, tabType) {
 	e.preventDefault();
 
 	// Deselect all subpages
-	document.querySelectorAll('.subtab.has-subpages .subpage.active').forEach((el) => {
-		el.classList?.remove('active');
-	});
+	document
+		.querySelectorAll('.subtab.has-subpages .subpage.active')
+		.forEach((el) => {
+			el.classList?.remove('active');
+		});
 	document.querySelectorAll('.subtab.active').forEach((el) => {
 		el.classList?.remove('active');
 	});
 
-	const buttonReplacement = tabType.charAt(0).toUpperCase() + tabType.slice(1);
+	const buttonReplacement =
+		tabType.charAt(0).toUpperCase() + tabType.slice(1);
 
-	document.querySelectorAll(`.${tabType}.active`).forEach(el => {
+	document.querySelectorAll(`.${tabType}.active`).forEach((el) => {
 		el?.classList?.remove('active');
 	});
-	document.querySelectorAll(`.${tabType}btn.active`).forEach(el => {
+	document.querySelectorAll(`.${tabType}btn.active`).forEach((el) => {
 		el?.classList?.remove('active');
 	});
 
@@ -170,9 +290,7 @@ function openTab(e, tabType) {
 	});
 
 	// Selects the first subpage if there is one
-	document
-		.querySelector(`#${selectedID} .subpage`)
-		?.classList?.add('active');
+	document.querySelector(`#${selectedID} .subpage`)?.classList?.add('active');
 }
 
 // Here we bind all of the functions to the corresponding buttons
@@ -223,26 +341,41 @@ document.querySelectorAll('button.page-btn').forEach((el) => {
 });
 
 // mii saving business (animation jank & actual saving)
-document.querySelector('#saveTab #saveButton').addEventListener('click', (e) => {
-	e.preventDefault();
+document
+	.querySelector('#saveTab #saveButton')
+	.addEventListener('click', (e) => {
+		e.preventDefault();
 
-	document.querySelector('#saveTab #saveButton').classList.add('inactive', 'fade-out');
-	document.querySelector('.tabs').style.pointerEvents = 'none';
-	document.querySelector('.mii-comparison.confirmed').style.opacity = 1;
-	document.querySelector('#saveTab p.save-prompt').classList.add('fade-out');
+		document
+			.querySelector('#saveTab #saveButton')
+			.classList.add('inactive', 'fade-out');
+		document.querySelector('.tabs').style.pointerEvents = 'none';
+		document.querySelector('.mii-comparison.confirmed').style.opacity = 1;
+		document
+			.querySelector('#saveTab p.save-prompt')
+			.classList.add('fade-out');
 
-	setTimeout(() => {
-		document.querySelector('.mii-comparison.unconfirmed').style.opacity = 0;
-	}, 500);
+		setTimeout(() => {
+			document.querySelector(
+				'.mii-comparison.unconfirmed'
+			).style.opacity = 0;
+		}, 500);
 
-	setTimeout(() => {
-		document.querySelector('.mii-comparison.confirmed .old-mii').classList.add('fade-out');
-		document.querySelector('.mii-comparison.confirmed svg').classList.add('fade-out');
-	}, 1500);
+		setTimeout(() => {
+			document
+				.querySelector('.mii-comparison.confirmed .old-mii')
+				.classList.add('fade-out');
+			document
+				.querySelector('.mii-comparison.confirmed svg')
+				.classList.add('fade-out');
+		}, 1500);
 
-	setTimeout(() => {
-		document.querySelector('.mii-comparison.confirmed .new-mii-wrapper').classList.add('centered-mii-img');
-	}, 2000);
+		setTimeout(() => {
+			document
+				.querySelector('.mii-comparison.confirmed .new-mii-wrapper')
+				.classList.add('centered-mii-img');
+		}, 2000);
 
-
-});
+		alert(mii.encode().toString('base64'));
+		// CHECK IF MII IS VALID SERVERSIDE
+	});

@@ -190,6 +190,49 @@ div.subtabs .subtabbtn.active:hover::before {
 	transform: scale(3);
 }
 
+.has-textinput {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-auto-rows: auto;
+	gap: 24px;
+}
+.has-textinput label {
+	display: block;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+div.birthday {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: end;
+	gap: 12px;
+}
+div.birthday span {
+	margin-bottom: 12px;
+}
+.has-textinput .icons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.has-textinput .icons input[type="checkbox"] {
+	box-sizing: border-box;
+	margin: 0;
+	height: 49px;
+	width:  49px;
+}
+
+input[type="checkbox"]#allowCopying:checked {
+	background: no-repeat center/80% url(../images/copy.svg), var(--accent-shade-0);
+}
+input[type="checkbox"]#disableSharing:checked {
+	background: no-repeat center/80% url(../images/share.svg), var(--accent-shade-0);
+}
+input[type="checkbox"]#favorite:checked {
+	background: no-repeat center/80% url(../images/star.svg), var(--accent-shade-0);
+}
+
 form.params {
 	grid-template-columns: repeat(2, auto);
 	height: 618px;
@@ -593,7 +636,7 @@ button * {
 		grid-row: 4;
 	}
 
-	fieldset:not(.has-sliders) {
+	fieldset:not(.has-sliders, .has-textinput) {
 		position: relative;
 		margin-bottom: -60px;
 	}
@@ -647,6 +690,10 @@ button * {
 	div.subtabs .subtabbtn {
 		width: 36px;
 		height: 36px;
+	}
+
+	.has-textinput {
+		grid-template-columns: 1fr;
 	}
 }
 

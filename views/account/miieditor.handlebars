@@ -37,8 +37,8 @@
 				<button class="tabbtn" id="noseTypeButton" style="--assetcol: 4"></button>
 				<button class="tabbtn" id="mouthTypeButton" style="--assetcol: 5"></button>
 				<button class="tabbtn" id="glassesTypeButton" style="--assetcol: 6"></button>
-				<button class="tabbtn" id="facialHairTypeButton"style="--assetcol: 7"></button>
-				<button class="tabbtn" id="moleEnableButton" style="--assetcol: 8"></button>
+				<button class="tabbtn" id="beardTypeButton"style="--assetcol: 7"></button>
+				<button class="tabbtn" id="moleEnabledButton" style="--assetcol: 8"></button>
 				<button class="tabbtn" id="miiscButton" style="--assetcol: 9"></button>
 				<button class="tabbtn" id="saveButton" style="--assetcol: 10"></button>
 			</div>
@@ -46,9 +46,9 @@
 			<div class="tab active" id="faceTypeTab">
 				<div class="subtabs">
 					<button class="subtabbtn active" id="faceTypeSubButton" style="--assetcol: 0"></button>
-					<button class="subtabbtn" id="faceMakeupSubButton" style="--assetcol: 1"></button>
-					<button class="subtabbtn" id="faceWrinklesSubButton" style="--assetcol: 2"></button>
-					<button class="subtabbtn" id="faceColorSubButton" style="--assetcol: 12"></button>
+					<button class="subtabbtn" id="makeupTypeSubButton" style="--assetcol: 1"></button>
+					<button class="subtabbtn" id="wrinklesTypeSubButton" style="--assetcol: 2"></button>
+					<button class="subtabbtn" id="skinColorSubButton" style="--assetcol: 12"></button>
 				</div>
 
 					<fieldset class="subtab active" id="faceType" style="--assetrow: 0">
@@ -58,32 +58,32 @@
 					{{/each}}
 					</fieldset>
 
-					<fieldset id="faceColor" class="subtab color">
-						<input type="radio" name="faceColor" id="faceColor0" value="0" />
-						<label for="faceColor0" style="background: #FFCE98 !important;" ></label>
-						<input type="radio" name="faceColor" id="faceColor1" value="1" />
-						<label for="faceColor1" style="background: #FFBA64 !important;" ></label>
-						<input type="radio" name="faceColor" id="faceColor2" value="2" />
-						<label for="faceColor2" style="background: #FF7C3E !important;" ></label>
-						<input type="radio" name="faceColor" id="faceColor3" value="3" />
-						<label for="faceColor3" style="background: #FFB184 !important;" ></label>
-						<input type="radio" name="faceColor" id="faceColor4" value="4" />
-						<label for="faceColor4" style="background: #CA5326 !important;" ></label>
-						<input type="radio" name="faceColor" id="faceColor5" value="5" />
-						<label for="faceColor5" style="background: #752E17 !important;" ></label>
+					<fieldset id="skinColor" class="subtab color">
+						<input type="radio" name="skinColor" id="skinColor0" value="0" />
+						<label for="skinColor0" style="background: #FFCE98 !important;" ></label>
+						<input type="radio" name="skinColor" id="skinColor1" value="1" />
+						<label for="skinColor1" style="background: #FFBA64 !important;" ></label>
+						<input type="radio" name="skinColor" id="skinColor2" value="2" />
+						<label for="skinColor2" style="background: #FF7C3E !important;" ></label>
+						<input type="radio" name="skinColor" id="skinColor3" value="3" />
+						<label for="skinColor3" style="background: #FFB184 !important;" ></label>
+						<input type="radio" name="skinColor" id="skinColor4" value="4" />
+						<label for="skinColor4" style="background: #CA5326 !important;" ></label>
+						<input type="radio" name="skinColor" id="skinColor5" value="5" />
+						<label for="skinColor5" style="background: #752E17 !important;" ></label>
 					</fieldset>
 
-					<fieldset id="faceMakeup" class="subtab" style="--assetrow: 1">
+					<fieldset id="makeupType" class="subtab" style="--assetrow: 1">
 						{{#each editorJSON.arrayOf12}}
-							<input type="radio" name="faceMakeup" id="faceMakeup{{this}}" value="{{this}}" />
-							<label for="faceMakeup{{this}}" style="--assetcol: {{@key}}"></label>
+							<input type="radio" name="makeupType" id="makeupType{{this}}" value="{{this}}" />
+							<label for="makeupType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 					</fieldset>
 
-					<fieldset id="faceWrinkles" class="subtab" style="--assetrow: 2">
+					<fieldset id="wrinklesType" class="subtab" style="--assetrow: 2">
 						{{#each editorJSON.arrayOf12}}
-							<input type="radio" name="faceWrinkles" id="faceWrinkles{{this}}" value="{{this}}" />
-							<label for="faceWrinkles{{this}}" style="--assetcol: {{@key}}"></label>
+							<input type="radio" name="wrinklesType" id="wrinklesType{{this}}" value="{{this}}" />
+							<label for="wrinklesType{{this}}" style="--assetcol: {{@key}}"></label>
 						{{/each}}
 					</fieldset>
 
@@ -173,16 +173,16 @@
 				</fieldset>
 
 				<fieldset id="eyebrowPosition" class="subtab has-sliders">
-					<label for="eyebrowVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="eyebrowVertical" id="eyebrowVertical" min="3" max="18" />
-					<label for="eyebrowHorizontal" style="--assetcol: 4"></label>
-					<input type="range" list="tickmarks" name="eyebrowHorizontal" id="eyebrowHorizontal" min="0" max="12" />
+					<label for="eyebrowYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="eyebrowYPosition" id="eyebrowYPosition" min="3" max="18" />
+					<label for="eyebrowSpacing" style="--assetcol: 4"></label>
+					<input type="range" list="tickmarks" name="eyebrowSpacing" id="eyebrowSpacing" min="0" max="12" />
 					<label for="eyebrowRotation" style="--assetcol: 5"></label>
 					<input type="range" list="tickmarks" class="invert" name="eyebrowRotation" id="eyebrowRotation" min="0" max="11" />
-					<label for="eyebrowSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="eyebrowSize" id="eyebrowSize" min="0" max="8" />
-					<label for="eyebrowStretch" style="--assetcol: 7"></label>
-					<input type="range" list="tickmarks" name="eyebrowStretch" id="eyebrowStretch" min="0" max="6" />
+					<label for="eyebrowScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="eyebrowScale" id="eyebrowScale" min="0" max="8" />
+					<label for="eyebrowVerticalStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="eyebrowVerticalStretch" id="eyebrowVerticalStretch" min="0" max="6" />
 				</fieldset>
 
 				<fieldset id="eyebrowColor" class="subtab color">
@@ -251,16 +251,16 @@
 				</fieldset>
 
 				<fieldset id="eyePosition" class="subtab has-sliders">
-					<label for="eyeVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="eyeVertical" id="eyeVertical" min="0" max="18" />
-					<label for="eyeHorizontal" style="--assetcol: 4"></label>
-					<input type="range" list="tickmarks" name="eyeHorizontal" id="eyeHorizontal" min="0" max="12" />
+					<label for="eyeYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="eyeYPosition" id="eyeYPosition" min="0" max="18" />
+					<label for="eyeSpacing" style="--assetcol: 4"></label>
+					<input type="range" list="tickmarks" name="eyeSpacing" id="eyeSpacing" min="0" max="12" />
 					<label for="eyeRotation" style="--assetcol: 5"></label>
 					<input type="range" class="invert" list="tickmarks" name="eyeRotation" id="eyeRotation" min="0" max="7" />
-					<label for="eyeSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="eyeSize" id="eyeSize" min="0" max="7" />
-					<label for="eyeStretch" style="--assetcol: 7"></label>
-					<input type="range" list="tickmarks" name="eyeStretch" id="eyeStretch" min="0" max="6" />
+					<label for="eyeScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="eyeScale" id="eyeScale" min="0" max="7" />
+					<label for="eyeVerticalStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="eyeVerticalStretch" id="eyeVerticalStretch" min="0" max="6" />
 				</fieldset>
 			</div>
 
@@ -294,10 +294,10 @@
 				</fieldset>
 
 				<fieldset id="nosePosition" class="subtab has-sliders">
-					<label for="noseVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="noseVertical" id="noseVertical" min="0" max="18" />
-					<label for="noseSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="noseSize" id="noseSize" min="0" max="8" />
+					<label for="noseYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="noseYPosition" id="noseYPosition" min="0" max="18" />
+					<label for="noseScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="noseScale" id="noseScale" min="0" max="8" />
 
 				</fieldset>
 			</div>
@@ -346,12 +346,12 @@
 				</fieldset>
 
 				<fieldset id="mouthPosition" class="subtab has-sliders">
-					<label for="mouthVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="mouthVertical" id="mouthVertical" min="0" max="18" />
-					<label for="mouthSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="mouthSize" id="mouthSize" min="0" max="8" />
-					<label for="mouthStretch" style="--assetcol: 7"></label>
-					<input type="range" list="tickmarks" name="mouthStretch" id="mouthStretch" min="0" max="6" />
+					<label for="mouthYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="mouthYPosition" id="mouthYPosition" min="0" max="18" />
+					<label for="mouthScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="mouthScale" id="mouthScale" min="0" max="8" />
+					<label for="mouthHorizontalStretch" style="--assetcol: 7"></label>
+					<input type="range" list="tickmarks" name="mouthHorizontalStretch" id="mouthHorizontalStretch" min="0" max="6" />
 				</fieldset>
 			</div>
 
@@ -384,25 +384,25 @@
 				</fieldset>
 
 				<fieldset id="glassesPosition" class="subtab has-sliders">
-					<label for="glassesVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="glassesVertical" id="glassesVertical" min="0" max="20" />
-					<label for="glassesSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="glassesSize" id="glassesSize" min="0" max="7" />
+					<label for="glassesYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="glassesYPosition" id="glassesYPosition" min="0" max="20" />
+					<label for="glassesScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="glassesScale" id="glassesScale" min="0" max="7" />
 
 				</fieldset>
 			</div>
 
-			<div class="tab" id="facialHairTypeTab">
+			<div class="tab" id="beardTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="facialHairTypeSubButton" style="--assetcol: 8"></button>
-					<button class="subtabbtn" id="facialHairMustacheSubButton" style="--assetcol: 9"></button>
+					<button class="subtabbtn active" id="beardTypeSubButton" style="--assetcol: 8"></button>
+					<button class="subtabbtn" id="mustacheTypeSubButton" style="--assetcol: 9"></button>
 					<button class="subtabbtn" id="facialHairPositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="facialHairColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="facialHairType" class="subtab active" style="--assetrow: 9">
+				<fieldset id="beardType" class="subtab active" style="--assetrow: 9">
 					{{#each editorJSON.arrayOf6}}
-						<input type="radio" name="facialHairType" id="facialHairType{{this}}" value="{{this}}" />
-						<label for="facialHairType{{this}}" style="--assetcol: {{@key}}"></label>
+						<input type="radio" name="beardType" id="beardType{{this}}" value="{{this}}" />
+						<label for="beardType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
 				</fieldset>
 
@@ -425,40 +425,40 @@
 					<label for="facialHairColor7" style="background: #FEB454 !important;" ></label>
 				</fieldset>
 
-				<fieldset id="facialHairMustache" class="subtab active" style="--assetrow: 10">
+				<fieldset id="mustacheType" class="subtab active" style="--assetrow: 10">
 					{{#each editorJSON.arrayOf6}}
-						<input type="radio" name="facialHairMustache" id="facialHairMustache{{this}}" value="{{this}}" />
-						<label for="facialHairMustache{{this}}" style="--assetcol: {{@key}}"></label>
+						<input type="radio" name="mustacheType" id="mustacheType{{this}}" value="{{this}}" />
+						<label for="mustacheType{{this}}" style="--assetcol: {{@key}}"></label>
 					{{/each}}
 				</fieldset>
 
 				<fieldset id="facialHairPosition" class="subtab has-sliders">
-					<label for="facialHairVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="facialHairVertical" id="facialHairVertical" min="0" max="16" />
-					<label for="facialHairSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="facialHairSize" id="facialHairSize" min="0" max="8" />
+					<label for="mustacheYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="mustacheYPosition" id="mustacheYPosition" min="0" max="16" />
+					<label for="mustacheScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="mustacheScale" id="mustacheScale" min="0" max="8" />
 				</fieldset>
 			</div>
 
-			<div class="tab" id="moleEnableTab">
+			<div class="tab" id="moleEnabledTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="moleEnableSubButton" style="--assetcol: 10"></button>
+					<button class="subtabbtn active" id="moleEnabledSubButton" style="--assetcol: 10"></button>
 					<button class="subtabbtn" id="molePositionSubButton" style="--assetcol: 13"></button>
 				</div>
-				<fieldset id="moleEnable" class="subtab active" style="--assetrow: 11">
-					<input type="radio" name="moleEnable" id="moleEnable0" value="0" />
-					<label for="moleEnable0" style="--assetcol: 0"></label>
-					<input type="radio" name="moleEnable" id="moleEnable1" value="1" />
-					<label for="moleEnable1" style="--assetcol: 1"></label>
+				<fieldset id="moleEnabled" class="subtab active" style="--assetrow: 11">
+					<input type="radio" name="moleEnabled" id="moleEnabledfalse" value="false" />
+					<label for="moleEnabledfalse" style="--assetcol: 0"></label>
+					<input type="radio" name="moleEnabled" id="moleEnabledtrue" value="true" />
+					<label for="moleEnabledtrue" style="--assetcol: 1"></label>
 				</fieldset>
 
 				<fieldset id="molePosition" class="subtab has-sliders">
-					<label for="moleVertical" style="--assetcol: 2"></label>
-					<input type="range" list="tickmarks" class="invert" name="moleVertical" id="moleVertical" min="0" max="30" />
-					<label for="moleHorizontal" style="--assetcol: 3"></label>
-					<input type="range" list="tickmarks" name="moleHorizontal" id="moleHorizontal" min="0" max="16" />
-					<label for="moleSize" style="--assetcol: 6"></label>
-					<input type="range" list="tickmarks" name="moleSize" id="moleSize" min="0" max="8" />
+					<label for="moleYPosition" style="--assetcol: 2"></label>
+					<input type="range" list="tickmarks" class="invert" name="moleYPosition" id="moleYPosition" min="0" max="30" />
+					<label for="moleXPosition" style="--assetcol: 3"></label>
+					<input type="range" list="tickmarks" name="moleXPosition" id="moleXPosition" min="0" max="16" />
+					<label for="moleScale" style="--assetcol: 6"></label>
+					<input type="range" list="tickmarks" name="moleScale" id="moleScale" min="0" max="8" />
 				</fieldset>
 			</div>
 
@@ -467,6 +467,7 @@
 					<button class="subtabbtn active" id="sizeSubButton" style="--assetcol: 14"></button>
 					<button class="subtabbtn" id="genderSubButton" style="--assetcol: 11"></button>
 					<button class="subtabbtn" id="favoriteColorSubButton" style="--assetcol: 12"></button>
+					<button class="subtabbtn" id="infoSubButton" style="--assetcol: 15"></button>
 				</div>
 
 				<fieldset id="size" class="subtab active has-sliders">
@@ -481,6 +482,42 @@
 					<label for="gender0" style="--assetcol: 0"></label>
 					<input type="radio" name="gender" id="gender1" value="1" />
 					<label for="gender1" style="--assetcol: 1"></label>
+				</fieldset>
+
+				<fieldset id="info" class="subtab active has-textinput">
+					<div>
+						<label for="miiName">Nickname</label>
+						<input type="text" name="miiName" id="miiName" minLength="1" maxLength="10" />
+					</div>
+					<div>
+						<label for="creatorName">Creator</label>
+						<input type="text" name="creatorName" id="creatorName" minLength="1" maxLength="10" />
+					</div>
+					<div class="birthday">
+						<div>
+							<label for="birthDay">Birth day</label>
+							<input type="number" name="birthDay" id="birthDay" min="1" max="31" />
+						</div>
+						<span>/</span>
+						<div>
+							<label for="birthMonth">Month</label>
+							<input type="number" name="birthMonth" id="birthMonth" min="1" max="12" />
+						</div>
+					</div>
+					<div class="icons">
+						<div>
+							<label for="favorite">Favorite</label>
+							<input type="checkbox" name="favorite" id="favorite" />
+						</div>
+						<div>
+							<label for="disableSharing">Sharing</label>
+							<input type="checkbox" name="disableSharing" id="disableSharing"  />
+						</div>
+						<div>
+							<label for="allowCopying">Copying</label>
+							<input type="checkbox" name="allowCopying" id="allowCopying" />
+						</div>
+					</div>
 				</fieldset>
 
 				<fieldset id="favoriteColor" class="subtab">
