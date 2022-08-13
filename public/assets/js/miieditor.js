@@ -104,35 +104,13 @@ function updateMii(e, type) {
 	renderMii(type);
 }
 
-// prevent the user from inputting values out of the range
-function handleRange(e) {
-	if (e.target.value === '') return;
-
-	const value = parseInt(e.target.value);
-
-	// if the value is out of range, set to the nearest in-range value
-	if (value > e.target.max) {
-		e.target.value = e.target.max;
-	} else if (value < e.target.min) {
-		e.target.value = e.target.min;
-	}
-}
-
 function handleCalendar(e) {
-	const month = parseInt(e.target.value);
+	const valueArray = e.target.value.split('-');
+	const day = valueArray[2];
+	const month = valueArray[1];
 
-	// we get the days in the month (hardcoded to 2024 'cause it's a leap year)
-	const daysInMonth = new Date(2024, month, 0).getDate();
-
-	const birthDayElement = document.querySelector('input[type=\'number\']#birthDay');
-
-	// we set the max value for the day selector to the days in the month
-	birthDayElement.max = daysInMonth;
-
-	// if the day is greater than the days in the month, set it to the max
-	if (parseInt(birthDayElement.value) > daysInMonth) {
-		birthDayElement.value = daysInMonth;
-	}
+	mii.birthDay = parseInt(day);
+	mii.birthMonth = parseInt(month);
 }
 
 function preventEmpty(e) {
@@ -153,7 +131,7 @@ document.querySelectorAll('input[type=\'text\'], input[type=\'number\']').forEac
 	input.addEventListener('blur', (e) => preventEmpty(e));
 });
 
-document.querySelector('input[type=\'number\']#birthMonth').addEventListener('blur', (e) => handleCalendar(e));
+document.querySelector('input[type=\'date\']#birthDate').addEventListener('change', (e) => handleCalendar(e));
 
 // FORM
 
@@ -229,23 +207,17 @@ console.log('[info] preselected value for disableSharing');
 	'build',
 	'miiName',
 	'creatorName',
-	'birthDay',
-	'birthMonth',
 ].forEach((prop) => {
 	document.querySelector(`#${prop}`).value = mii[prop];
 	document.querySelector(`#${prop}`).defaultValue = mii[prop];
 	console.log(`[info] preselected value for ${prop}`);
 });
 
-
-[
-	'birthDay',
-	'birthMonth'
-].forEach((prop) => {
-	document.querySelector(`#${prop}`).addEventListener('input', (e) => {
-		handleRange(e);
-	});
-});
+const paddedBirthDay = mii.birthDay.toString().padStart(2, '0');
+const paddedBirthMonth = mii.birthMonth.toString().padStart(2, '0');
+document.querySelector('input[type=\'date\']#birthDate')
+	.value = `2024-${paddedBirthMonth}-${paddedBirthDay}`;
+console.log('[info] preselected value for birthMonth && birthDay');
 
 // TABS, SUBTABS, AND ALL THE INHERENT JANK
 
