@@ -8,7 +8,7 @@ window.addEventListener('beforeunload', function (e) {
 
 let currentTab = '';
 
-// this makes it so the canvas fits in the target x and y
+// this makes it so the canvas fits in the target element
 function setCanvasScale() {
 	let targetX;
 	let targetY;
@@ -80,7 +80,7 @@ const encodedUserMiiData = document.querySelector(
 	'script#encodedUserMiiData'
 ).textContent;
 document.querySelector('script#encodedUserMiiData').remove();
-console.log(encodedUserMiiData);
+console.log('encodedMiiData', encodedUserMiiData);
 
 // We initialize the Mii object
 const mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
@@ -99,50 +99,59 @@ document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
 document.querySelector('.mii-comparison.confirmed img.old-mii').src =
 	miiStudioSorrowUrl;
 
+// we keeep the images here so we can cache them when we need to change the build/height
+const miiFaceImg = new Image();
+const baldMiiFaceImg = new Image();
+const miiBodyImg = new Image();
+
 // Initial mii render
 renderMii();
-
 // This function renders the Mii on the canvas
-function renderMii() {
+function renderMii(heightOverride, buildOverride) {
 	const canvas = document.querySelector('canvas#miiCanvas');
 	const ctx = canvas.getContext('2d');
+	const height = heightOverride || mii.height;
+	const build = buildOverride || mii.build;
 
-	// we set the filter to show the user something's loading
-	canvas.style.filter = 'blur(4px) brightness(70%)';
+	// if there isn't an override or the images haven't been cached, we load the images
+	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !baldMiiFaceImg.src || !miiBodyImg.src) {
+		canvas.style.filter = 'blur(4px) brightness(70%)';
 
-	// we create a copy of the mii and make it bald
-	const baldMii = Object.create(
-		Object.getPrototypeOf(mii),
-		Object.getOwnPropertyDescriptors(mii)
-	);
-	baldMii.hairType = 30;
-	const baldMiiFaceOnlyUrl = baldMii.studioUrl({
-		width: 512,
-		bgColor: '13173300',
-		type: 'face_only',
-	});
-	const miiFaceOnlyUrl = mii.studioUrl({
-		width: 512,
-		bgColor: '13173300',
-		type: 'face_only',
-	});
-	const miiBodyUrl = `https://mii-studio.akamaized.net/editor/1/webp/1024/${bodies[mii.gender][mii.favoriteColor]}.webp`;
+		// we create a copy of the mii and make it bald
+		const baldMii = Object.create(
+			Object.getPrototypeOf(mii),
+			Object.getOwnPropertyDescriptors(mii)
+		);
+		baldMii.hairType = 30;
+		baldMiiFaceImg.src = baldMii.studioUrl({
+			width: 512,
+			bgColor: '13173300',
+			type: 'face_only',
+		});
+		miiFaceImg.src = mii.studioUrl({
+			width: 512,
+			bgColor: '13173300',
+			type: 'face_only',
+		});
+		miiBodyImg.src = `https://mii-studio.akamaized.net/editor/1/webp/1024/${bodies[mii.gender][mii.favoriteColor]}.webp`;
+	}
 
-	const miiFaceImg = new Image();
-	miiFaceImg.src = miiFaceOnlyUrl;
-	const baldMiiFaceImg = new Image();
-	baldMiiFaceImg.src = baldMiiFaceOnlyUrl;
-	const miiBodyImg = new Image();
-	miiBodyImg.src = miiBodyUrl;
-
-	const bodyWidth = (mii.build * 1.7 + 220) * (0.003 * mii.height + 0.6);
-	const bodyHeight = mii.height * 3.5 + 227;
+	// misc calculations
+	const bodyWidth = (build * 1.7 + 220) * (0.003 * height + 0.6);
+	const bodyHeight = height * 3.5 + 227;
 	const bodyXPos = (canvas.width - bodyWidth) / 2;
 	const bodyYPos = canvas.height - bodyHeight;
 	const headYPos = bodyYPos - 408;
 
 	// we make sure every image is loaded before rendering
-	miiFaceImg.onload = () => {
+	if (miiFaceImg.complete) {
+		onMiiFaceImgLoad();
+	} else {
+		miiFaceImg.onload = () => {
+			onMiiFaceImgLoad();
+		};
+	}
+	function onMiiFaceImgLoad() {
 		if (miiBodyImg.complete) {
 			onBodyImgLoad();
 		} else {
@@ -150,7 +159,7 @@ function renderMii() {
 				onBodyImgLoad();
 			};
 		}
-	};
+	}
 	function onBodyImgLoad() {
 		if (baldMiiFaceImg.complete) {
 			onBaldMiiFaceImgLoad();
@@ -170,24 +179,22 @@ function renderMii() {
 		canvas.style.filter = '';
 	}
 
+	if (!heightOverride && !buildOverride) {
+		const faceMiiStudioUrl = mii.studioUrl({
+			width: 512,
+			bgColor: '13173300',
+		});
 
-	const faceMiiStudioUrl = mii.studioUrl({
-		width: 512,
-		bgColor: '13173300',
-	});
+		const faceMiiStudioSmileUrl = mii.studioUrl({
+			width: 512,
+			bgColor: '13173300',
+			expression: 'smile'
+		});
 
-	const faceMiiStudioSmileUrl = mii.studioUrl({
-		width: 512,
-		bgColor: '13173300',
-		expression: 'smile'
-	});
-
-	// sets the new mii in the save tab to the new mii
-	document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
-	document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
-
-
-	console.log(mii);
+		// sets the new mii in the save tab to the new mii
+		document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
+		document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
+	}
 }
 
 // This function updates a prop of the Mii and rerenders it
@@ -216,7 +223,15 @@ function updateMii(e) {
 		mii[prop] = parseInt(value);
 	}
 
-	renderMii();
+	// if the user is editing the height or the build, we render the mii with the correct override, else we do a straight render
+	if (prop === 'height') {
+		renderMii(value, false);
+	} else if (prop === 'build') {
+		renderMii(false, value);
+	} else {
+		renderMii();
+		console.log(mii);
+	}
 }
 
 function handleCalendar(e) {
@@ -235,22 +250,19 @@ function preventEmpty(e) {
 }
 
 document.querySelectorAll('fieldset').forEach((fieldset) => {
-	fieldset.addEventListener('change', (e) => updateMii(e));
+	fieldset.addEventListener('change', updateMii);
 });
-
 document.querySelectorAll('input[type=\'range\']').forEach((input) => {
-	input.addEventListener('change', (e) => updateMii(e));
+	input.addEventListener('input', updateMii);
 });
-
 document
 	.querySelectorAll('input[type=\'text\'], input[type=\'number\']')
 	.forEach((input) => {
-		input.addEventListener('blur', (e) => preventEmpty(e));
+		input.addEventListener('blur', preventEmpty);
 	});
-
 document
 	.querySelector('input[type=\'date\']#birthDate')
-	.addEventListener('change', (e) => handleCalendar(e));
+	.addEventListener('change', handleCalendar);
 
 // FORM
 
