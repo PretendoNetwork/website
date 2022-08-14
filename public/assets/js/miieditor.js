@@ -6,19 +6,12 @@ window.addEventListener('beforeunload', function (e) {
 	e.returnValue = '';
 });
 
-let currentTab = '';
-
 // this makes it so the canvas fits in the target element
 function setCanvasScale() {
 	let targetX;
 	let targetY;
 
-	if (currentTab === 'size'||
-		currentTab === 'miiscTab' ||
-		currentTab === 'gender' ||
-		currentTab === 'favoriteColor' ||
-		currentTab === 'saveTab' ||
-		window.innerWidth <= 1080) {
+	if (window.innerWidth <= 1080) {
 		const canvasWrapper = document.querySelector('.canvas-wrapper');
 
 		targetX = canvasWrapper.offsetWidth;
@@ -385,7 +378,6 @@ function openTab(e, tabType) {
 		document.querySelector(`#${selectedID} .subtabbtn`)?.click();
 	}
 
-	currentTab = selectedID;
 	setCanvasScale();
 
 	// We hide all subpages

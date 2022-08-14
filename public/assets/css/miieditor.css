@@ -63,16 +63,16 @@ svg.logotype {
 	position: relative;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
 
 canvas#miiCanvas {
-	margin: auto;
 	width: auto;
 	height: auto;
-	transform-origin: top center;
+	transform-origin: center;
 	transition: transform 200ms, filter 200ms;
 }
 
