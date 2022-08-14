@@ -6,15 +6,81 @@ window.addEventListener('beforeunload', function (e) {
 	e.returnValue = '';
 });
 
-const Mii = require('mii-js');
+let currentTab = '';
+
+// this makes it so the canvas fits in the target x and y
+function setCanvasScale() {
+	let targetX;
+	let targetY;
+
+	if (currentTab === 'size'||
+		currentTab === 'miiscTab' ||
+		currentTab === 'gender' ||
+		currentTab === 'favoriteColor' ||
+		currentTab === 'saveTab' ||
+		window.innerWidth <= 1080) {
+		const canvasWrapper = document.querySelector('.canvas-wrapper');
+
+		targetX = canvasWrapper.offsetWidth;
+		targetY = canvasWrapper.offsetHeight;
+	} else {
+		targetX = window.innerWidth * 0.9;
+		targetY = window.innerHeight * 0.9;
+	}
+
+	const canvas = document.querySelector('canvas#miiCanvas');
+	const XScale = targetX / canvas.width;
+	const YScale = targetY / canvas.height;
+	canvas.style.transform = `scale(${Math.min(XScale, YScale)})`;
+}
+
+setCanvasScale();
+window.addEventListener('resize', () => {
+	setCanvasScale();
+});
+
+// an array of mii bodies which can be accessed with bodies[mii.gender][mii.favoriteColor]
+const bodies = [
+	[
+		'1/2/9/302cf838e',
+		'a/1/a/f566b5882',
+		'8/0/5/4e6c8e40f',
+		'c/9/d/debd43468',
+		'7/9/c/385972617',
+		'b/5/b/cd851b631',
+		'9/0/a/e1f7181a6',
+		'6/3/4/cf2bc03a3',
+		'7/a/d/5eaa9736c',
+		'8/2/d/3a32ad1cd',
+		'0/9/0/cc8eb01cc',
+		'9/a/3/d0e61957d'
+	],
+	[
+		'7/e/8/606f4fe49',
+		'7/a/b/1cf206fac',
+		'd/e/2/526e11ecf',
+		'f/0/f/52cae5867',
+		'c/1/a/7436d0d18',
+		'e/6/4/5c0a064e8',
+		'f/5/7/20e676637',
+		'0/0/e/5b151a232',
+		'8/c/e/344a00817',
+		'7/d/d/81a00dd54',
+		'3/b/f/29b5e1311',
+		'c/8/e/766672439'
+	]
+];
 
 // MII RENDERER
+
+const Mii = require('mii-js');
 
 // The Mii data is stored in a script tag in the HTML, so we can just grab it and then remove the element
 const encodedUserMiiData = document.querySelector(
 	'script#encodedUserMiiData'
 ).textContent;
 document.querySelector('script#encodedUserMiiData').remove();
+console.log(encodedUserMiiData);
 
 // We initialize the Mii object
 const mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
@@ -36,13 +102,74 @@ document.querySelector('.mii-comparison.confirmed img.old-mii').src =
 // Initial mii render
 renderMii();
 
-// This function renders the Mii on the page
-function renderMii(type) {
-	const miiStudioUrl = mii.studioUrl({
+// This function renders the Mii on the canvas
+function renderMii() {
+	const canvas = document.querySelector('canvas#miiCanvas');
+	const ctx = canvas.getContext('2d');
+
+	// we set the filter to show the user something's loading
+	canvas.style.filter = 'blur(4px) brightness(70%)';
+
+	// we create a copy of the mii and make it bald
+	const baldMii = Object.create(
+		Object.getPrototypeOf(mii),
+		Object.getOwnPropertyDescriptors(mii)
+	);
+	baldMii.hairType = 30;
+	const baldMiiFaceOnlyUrl = baldMii.studioUrl({
 		width: 512,
 		bgColor: '13173300',
-		type: type || 'all_body',
+		type: 'face_only',
 	});
+	const miiFaceOnlyUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+		type: 'face_only',
+	});
+	const miiBodyUrl = `https://mii-studio.akamaized.net/editor/1/webp/1024/${bodies[mii.gender][mii.favoriteColor]}.webp`;
+
+	const miiFaceImg = new Image();
+	miiFaceImg.src = miiFaceOnlyUrl;
+	const baldMiiFaceImg = new Image();
+	baldMiiFaceImg.src = baldMiiFaceOnlyUrl;
+	const miiBodyImg = new Image();
+	miiBodyImg.src = miiBodyUrl;
+
+	const bodyWidth = (mii.build * 1.7 + 220) * (0.003 * mii.height + 0.6);
+	const bodyHeight = mii.height * 3.5 + 227;
+	const bodyXPos = (canvas.width - bodyWidth) / 2;
+	const bodyYPos = canvas.height - bodyHeight;
+	const headYPos = bodyYPos - 408;
+
+	// we make sure every image is loaded before rendering
+	miiFaceImg.onload = () => {
+		if (miiBodyImg.complete) {
+			onBodyImgLoad();
+		} else {
+			miiBodyImg.onload = () => {
+				onBodyImgLoad();
+			};
+		}
+	};
+	function onBodyImgLoad() {
+		if (baldMiiFaceImg.complete) {
+			onBaldMiiFaceImgLoad();
+		} else {
+			baldMiiFaceImg.onload = () => {
+				onBaldMiiFaceImgLoad();
+			};
+		}
+	}
+	function onBaldMiiFaceImgLoad() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.drawImage(miiFaceImg, 0, headYPos);
+		ctx.drawImage(miiBodyImg, bodyXPos, bodyYPos, bodyWidth, bodyHeight);
+
+		// we draw a portion of the bald mii on top of the normal mii to hide the mii's neck (see https://i.imgur.com/U0fpkwi.png)
+		ctx.drawImage(baldMiiFaceImg, 196, 384, 120, 120, 196, headYPos + 384, 120, 120);
+		canvas.style.filter = '';
+	}
+
 
 	const faceMiiStudioUrl = mii.studioUrl({
 		width: 512,
@@ -55,28 +182,16 @@ function renderMii(type) {
 		expression: 'smile'
 	});
 
-	// sets the mii
-	document.querySelector('img#mii-img').src = miiStudioUrl;
-
 	// sets the new mii in the save tab to the new mii
 	document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
 	document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
 
-	// this sets the mii height so that the face width stays the same
-	document.querySelector('img#mii-img').style.height = `${
-		mii.height * mii.height * 0.0023 + mii.height * 1.058 + 384
-	}px`;
-
-	// this sets the bottom position so that the mii's feet stay in the same position
-	document.querySelector('img#mii-img').style.bottom = `${
-		mii.height * mii.height * -0.00468135 + mii.height * 0.28 - 0.052435
-	}px`;
 
 	console.log(mii);
 }
 
 // This function updates a prop of the Mii and rerenders it
-function updateMii(e, type) {
+function updateMii(e) {
 	const prop = e.target.name;
 	let value = e.target.value || e.target.defaultValue;
 
@@ -93,7 +208,7 @@ function updateMii(e, type) {
 	// Handle booleans, on/offs and strings
 	if (value === 'true' || value === 'false') {
 		mii[prop] = value === 'true';
-	}	else if (value === 'on' || value === 'off') {
+	} else if (value === 'on' || value === 'off') {
 		mii[prop] = value === 'on';
 	} else if (isNaN(parseInt(value))) {
 		mii[prop] = value;
@@ -101,7 +216,7 @@ function updateMii(e, type) {
 		mii[prop] = parseInt(value);
 	}
 
-	renderMii(type);
+	renderMii();
 }
 
 function handleCalendar(e) {
@@ -124,14 +239,18 @@ document.querySelectorAll('fieldset').forEach((fieldset) => {
 });
 
 document.querySelectorAll('input[type=\'range\']').forEach((input) => {
-	input.addEventListener('input', (e) => updateMii(e));
+	input.addEventListener('change', (e) => updateMii(e));
 });
 
-document.querySelectorAll('input[type=\'text\'], input[type=\'number\']').forEach((input) => {
-	input.addEventListener('blur', (e) => preventEmpty(e));
-});
+document
+	.querySelectorAll('input[type=\'text\'], input[type=\'number\']')
+	.forEach((input) => {
+		input.addEventListener('blur', (e) => preventEmpty(e));
+	});
 
-document.querySelector('input[type=\'date\']#birthDate').addEventListener('change', (e) => handleCalendar(e));
+document
+	.querySelector('input[type=\'date\']#birthDate')
+	.addEventListener('change', (e) => handleCalendar(e));
 
 // FORM
 
@@ -166,10 +285,7 @@ document.querySelector('input[type=\'date\']#birthDate').addEventListener('chang
 	console.log(`[info] preselected value for ${prop}`);
 });
 
-[
-	'favorite',
-	'allowCopying'
-].forEach((prop) => {
+['favorite', 'allowCopying'].forEach((prop) => {
 	const el = document.querySelector(`#${prop}`);
 	if (el) {
 		el.checked = mii[prop];
@@ -215,8 +331,9 @@ console.log('[info] preselected value for disableSharing');
 
 const paddedBirthDay = mii.birthDay.toString().padStart(2, '0');
 const paddedBirthMonth = mii.birthMonth.toString().padStart(2, '0');
-document.querySelector('input[type=\'date\']#birthDate')
-	.value = `2024-${paddedBirthMonth}-${paddedBirthDay}`;
+document.querySelector(
+	'input[type=\'date\']#birthDate'
+).value = `2024-${paddedBirthMonth}-${paddedBirthDay}`;
 console.log('[info] preselected value for birthMonth && birthDay');
 
 // TABS, SUBTABS, AND ALL THE INHERENT JANK
@@ -255,6 +372,9 @@ function openTab(e, tabType) {
 		// Click the first subtab button, if there is one
 		document.querySelector(`#${selectedID} .subtabbtn`)?.click();
 	}
+
+	currentTab = selectedID;
+	setCanvasScale();
 
 	// We hide all subpages
 	document.querySelectorAll('.subpage').forEach((el) => {
@@ -348,6 +468,9 @@ document
 				.classList.add('centered-mii-img');
 		}, 2000);
 
-		alert(mii.encode().toString('base64'));
+		const miiData = mii.encode().toString('base64');
+
+		alert(miiData);
+		console.log('mii data:', miiData);
 		// CHECK IF MII IS VALID SERVERSIDE
 	});
