@@ -32,38 +32,6 @@ window.addEventListener('resize', () => {
 	setCanvasScale();
 });
 
-// an array of mii bodies which can be accessed with bodies[mii.gender][mii.favoriteColor]
-const bodies = [
-	[
-		'1/2/9/302cf838e',
-		'a/1/a/f566b5882',
-		'8/0/5/4e6c8e40f',
-		'c/9/d/debd43468',
-		'7/9/c/385972617',
-		'b/5/b/cd851b631',
-		'9/0/a/e1f7181a6',
-		'6/3/4/cf2bc03a3',
-		'7/a/d/5eaa9736c',
-		'8/2/d/3a32ad1cd',
-		'0/9/0/cc8eb01cc',
-		'9/a/3/d0e61957d'
-	],
-	[
-		'7/e/8/606f4fe49',
-		'7/a/b/1cf206fac',
-		'd/e/2/526e11ecf',
-		'f/0/f/52cae5867',
-		'c/1/a/7436d0d18',
-		'e/6/4/5c0a064e8',
-		'f/5/7/20e676637',
-		'0/0/e/5b151a232',
-		'8/c/e/344a00817',
-		'7/d/d/81a00dd54',
-		'3/b/f/29b5e1311',
-		'c/8/e/766672439'
-	]
-];
-
 // MII RENDERER
 
 const Mii = require('mii-js');
@@ -126,7 +94,7 @@ function renderMii(heightOverride, buildOverride) {
 			bgColor: '13173300',
 			type: 'face_only',
 		});
-		miiBodyImg.src = `https://mii-studio.akamaized.net/editor/1/webp/1024/${bodies[mii.gender][mii.favoriteColor]}.webp`;
+		miiBodyImg.src = mii.studioAssetUrlBody();
 	}
 
 	// misc calculations
