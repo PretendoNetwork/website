@@ -531,6 +531,9 @@ button * {
 	svg.logotype {
 		left: 0;
 	}
+	svg.logotype text#Pretendo {
+		display: none;
+	}
 
 	.miieditor-wrapper {
 		grid-template-columns: auto;
