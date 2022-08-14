@@ -7,7 +7,7 @@ const { uri, database, options } = accountServerConfig;
 let accountServerDBConnection;
 let PNID;
 
-async function connect() {/*
+async function connect() {
 	accountServerDBConnection = await mongoose.createConnection(`${uri}/${database}`, options);
 	accountServerDBConnection.on('error', console.error.bind(console, 'Mongoose connection error:'));
 	accountServerDBConnection.on('close', () => {
@@ -18,7 +18,7 @@ async function connect() {/*
 
 	PNID = accountServerDBConnection.model('PNID', PNIDSchema);
 
-	module.exports.PNID = PNID;*/
+	module.exports.PNID = PNID;
 }
 
 module.exports = {
