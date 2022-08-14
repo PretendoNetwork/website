@@ -76,11 +76,33 @@
 	border-color: #5AFF15;
 }
 
-.account-sidebar .user .mii {
+.account-sidebar .user a.mii {
+	position: relative;
+	display: block;
 	width: 128px;
 	height: 128px;
+	overflow: hidden;
 	border-radius: 100%;
 	background: var(--bg-shade-3);
+}
+.account-sidebar .user a.mii::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: no-repeat center/40% url("/assets/images/edit.svg"), rgba(55, 60, 101, 0.7);
+	opacity: 0;
+	transition: opacity 150ms;
+}
+.account-sidebar .user a.mii:hover::after {
+	opacity: 1;
+}
+
+.account-sidebar .user .mii {
+	width: 100%;
+	height: 100%;
 }
 .account-sidebar .buttons a {
 	display: flex;

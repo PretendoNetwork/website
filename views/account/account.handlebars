@@ -7,7 +7,9 @@
 	<div class="account-wrapper">
 		<div class="account-sidebar">
 			<div class="user">
-				<img src="{{account.mii.image_url}}" class="mii" />
+				<a href="/account/miieditor" class="mii">
+					<img src="{{account.mii.image_url}}" alt="Mii image" />
+				</a>
 				<p class="miiname">{{account.mii.name}}</p>
 				<p class="username" value="{{account.username}}">PNID: {{account.username}}</p>
 				{{#if tierName}}
