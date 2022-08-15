@@ -313,6 +313,9 @@ button#openSidebar {
 		grid-column: 2 / span 1;
 		grid-row: 2 / span 1;
 	}
+	.docs-wrapper .content.open-sidebar {
+		border-top-left-radius: 8px;
+	}
 	.docs-wrapper .content-inner {
 		max-width: none;
 	}
