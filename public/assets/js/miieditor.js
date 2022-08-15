@@ -136,7 +136,7 @@ function renderMii(heightOverride, buildOverride) {
 		ctx.drawImage(miiBodyImg, bodyXPos, bodyYPos, bodyWidth, bodyHeight);
 
 		// we draw a portion of the bald mii on top of the normal mii to hide the mii's neck (see https://i.imgur.com/U0fpkwi.png)
-		ctx.drawImage(baldMiiFaceImg, 196, 384, 120, 120, 196, headYPos + 384, 120, 120);
+		ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
 		canvas.style.filter = '';
 	}
 
