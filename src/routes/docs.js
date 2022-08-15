@@ -28,8 +28,8 @@ router.get('/install', async (request, response) => {
 
 function getRawDocs(locale, subpath, pageName) {
 
-	const localePath = path.join(__dirname, '../../docs', locale, subpath, `${pageName}.md`);
-	const defaultPath = path.join(__dirname, '../../docs', 'en-US', subpath, `${pageName}.md`);
+	const localePath = path.join(__dirname, '../../docs', locale.replace('-', '_'), subpath, `${pageName}.md`);
+	const defaultPath = path.join(__dirname, '../../docs', 'en_US', subpath, `${pageName}.md`);
 
 	if (fs.existsSync(localePath)) {
 		return {
