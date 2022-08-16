@@ -30,5 +30,8 @@
 	"gmail": {
 		"user": "email@gmail.com",
 		"pass": "app-password"
+	},
+	"github": {
+		"graphql_token": "graphql_token"
 	}
 }
