@@ -3,11 +3,6 @@
 		"port": 80,
 		"base_url": "http://localhost:80"
 	},
-	"trello": {
-		"api_key": "key",
-		"api_token": "token",
-		"board_name": "name"
-	},
 	"discord": {
 		"client_id": "client_id",
 		"client_secret": "client_secret",
