@@ -2,11 +2,11 @@
 	"nav": {
 		"about": "عنا",
 		"faq": "أسئلة",
-		"docs": "Docs",
+		"docs": "دليل",
 		"credits": "الفريق",
 		"progress": "التقدم",
 		"blog": "البلوج",
-		"account": "Account"
+		"account": "حساب"
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
@@ -152,7 +152,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "تبادل المعلومات الميفيرز",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -165,13 +165,13 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "أيقونات لمحرر المي وردود فعل زنكس",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "المساهمين على جيتهاب",
+				"caption": "الترجمة والمساهمات الأخرى",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
