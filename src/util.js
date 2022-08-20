@@ -1,11 +1,14 @@
+const path = require('path');
 const fs = require('fs-extra');
 const got = require('got');
 const crypto = require('crypto');
 const Stripe = require('stripe');
+const { marked } = require('marked');
 const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
 const config = require('../config.json');
+
 
 const stripe = new Stripe(config.stripe.secret_key);
 
@@ -23,6 +26,45 @@ function getLocale(region, language) {
 	logger.warn(`Could not find locale ${region}_${language}! Loading US_en`);
 
 	return require(`${__dirname}/../locales/US_en.json`);
+}
+
+function getRawDocs(locale, subpath, pageName) {
+
+	const localePath = path.join(__dirname, '../docs', locale.replace('-', '_'), subpath, `${pageName}.md`);
+	const defaultPath = path.join(__dirname, '../docs', 'en_US', subpath, `${pageName}.md`);
+
+	if (fs.existsSync(localePath)) {
+		return {
+			content: parseDocs(fs.readFileSync(localePath, 'utf8')),
+			MDLocale: locale,
+		};
+	} else if (fs.existsSync(defaultPath)) {
+		return {
+			content: parseDocs(fs.readFileSync(defaultPath, 'utf8')),
+			MDLocale: 'en-US'
+		};
+	}
+
+	return {
+		content: null,
+		MDLocale: null
+	};
+}
+
+function parseDocs(rawDocs) {
+	if (!rawDocs) {
+		return null;
+	}
+
+	let markedContent = marked(rawDocs);
+	markedContent = markedContent.replaceAll(/\[yt-iframe\]\(.{11}\)/g, (match) => {
+		const videoIDRegex = /(?<=\[yt-iframe\]\().*(?=\))/g;
+		const videoID = match.match(videoIDRegex)[0];
+		return `<div class="aspectratio-fallback"><iframe src="https://www.youtube-nocookie.com/embed/${videoID}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+	});
+
+	const htmlContent = marked.parse(markedContent);
+	return htmlContent;
 }
 
 function apiGetRequest(path, headers) {
@@ -338,6 +380,8 @@ async function handleStripeEvent(event) {
 module.exports = {
 	fullUrl,
 	getLocale,
+	getRawDocs,
+	parseDocs,
 	apiGetRequest,
 	apiPostGetRequest,
 	apiDeleteGetRequest,
