@@ -6,7 +6,11 @@
 		"credits": "Créditos",
 		"progress": "Progreso",
 		"blog": "Blog",
-		"account": "Cuenta"
+		"account": "Cuenta",
+		"accountWidget": {
+			"settings": "Configuración",
+			"logout": "Cerrar Sesión"
+		}
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
@@ -25,6 +29,7 @@
 	},
 	"progress": {
 		"title": "Progreso",
+		"githubRepo": "Repositorio de GitHub",
 		"paragraphs": [
 			"Actualmente, estamos trabajando en Miiverse, junto con los servidores de cuentas y la integración con los servicios.",
 			"En 3DS también trabajamos en el soporte de Mario Kart 7, con el deseo de continuar trabajando en otros juegos en cuanto sea posible."
@@ -56,7 +61,7 @@
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-			"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
+				"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
 			},
 			{
 				"question": "¿Pretendo soportará Wii/Switch?",
@@ -73,57 +78,56 @@
 		"text": "Nuestro proyecto se compone de muchas cosas. Estas son algunas de ellas.",
 		"cards": [
 			{
-				"title": "Servidores de juegos",
-				"caption": "Traemos de vuelta tus juegos y contenidos favoritos usando servidores propios."
+				"title": "Servidores de juego",
+				"caption": "Trayendo de vuelta tus juegos favoritos y contenido usando servidores propios."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Un version re-imaginada de Miiverse, como si hubiera sido creada en la era moderna."
+				"caption": "Reimaginando Miiverse, como si fuese hecho en la era moderna.."
 			},
 			{
 				"title": "Soporte para Cemu",
-				"caption": "¡Juega a tus títulos de Wii U favoritos incluso sin una consola!"
+				"caption": "¡Juega tus titulos favoritos de Wii U, incluso sin una consola!"
 			}
-
 		]
 	},
 	"credits": {
-		"title": "Equipo",
-		"text": "Conoce al equipo tras el proyecto",
+		"title": "El equipo",
+		"text": "Conozca al equipo detras del proyecto",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Líder del proyecto y desarrollador principal",
+				"caption": "Dueño del proyecto y lider del equipo",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Estudio y desarrollo de Miiverse",
+				"caption": "Investigación y desarrollo de Miiverse",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Instalador de la red y estudio de consolas",
+				"caption": "Instalador de la Red y investigación de la consola",
 				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/NexoDevelopment"
+				"github": "https://github.com/Rambo6Glaz"
 			},
 			{
 				"name": "quarky",
-				"caption": "Estudio BOSS y desarrollo de parches",
+				"caption": "Investigación de BOSS y desarrollo del Parche",
 				"picture": "https://github.com/QuarkTheAwesome.png",
 				"github": "https://github.com/QuarkTheAwesome"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Estudio de consolas y otros sistemas",
+				"caption": "Investigación de la consola y otros sistemash",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Líder del desarrollo web",
+				"caption": "Lider del desarrollo de la Web",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -143,108 +147,186 @@
 	},
 	"specialThanks": {
 		"title": "Agradecimientos especiales",
-		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
+		"text": "Sin ellos, Pretendo no seria lo que es hoy en día.",
 		"people": [
 			{
 				"name": "superwhiskers",
-				"caption": "Desarrollo de librerías crunch",
+				"caption": "Desarrollo de la libreria crunch",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "Stary",
-				"caption": "Desarrollador de 3DS y diseccionador NEX",
+				"caption": "Investigador de 3DS y NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservacionista",
+				"caption": "Conservacionista",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Estudio de Mario Kart 7 y 3DS",
+				"caption": "Investigación sobre Mario Kart 7 y 3DS",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Información de Miiverse compartida",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"name": "Kinnay",
-				"special": "Agradecimientos",
-				"caption": "Estudio de las estructuras de datos de Nintendo",
+				"special": "Muchas gracias.",
+				"caption": "Investigación de las estructuras de datos de Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			},
 			{
 				"name": "NinStar",
-				"caption": "Iconos para el Editor de Mii y reacciones de Juxt",
+				"caption": "Iconos para el Editor de Mii y las reacciones en Juxt",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "Contribuidores de GitHub",
-				"caption": "Localizaciones y otras contribuciones",
+				"name": "Contribuidores en GitHub",
+				"caption": "Traducciones y otras contribuciones",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Mantente al día",
-		"text": "Únete a nuestro servidor de Discord para recibir las últimas actualizaciones sobre el proyecto.",
+		"title": "Mantente al día!",
+		"text": "Entra a nuestro servidor de Discord para obtener las ultimas actualizaciones del proyecto.",
 		"widget": {
-			"text": "Recibe actualizaciones en tiempo real sobre nuestro progreso",
-			"button": "Únete al servidor"
+			"text": "Obten actualizaciones en tiempo real de nuestro proceso",
+			"button": "Entra al servidor"
 		}
 	},
 	"footer": {
 		"socials": "Redes sociales",
-		"usefulLinks": "Énlaces útiles",
+		"usefulLinks": "Links interesantes",
 		"widget": {
 			"captions": [
-				"¿Quieres estar al tanto?",
-				"¡Únete a nuestro servidor de Discord!"
+				"¿Quieres estarte al día?",
+				"Entra a nuestro servidor de Discord!"
 			],
-			"button": "¡Únete ahora!"
+			"button": "Entra ahora!"
 		}
 	},
 	"progressPage": {
-		"title": "Progreso",
-		"description": "¡Comprueba el progreso y las metas pendientes! (Se actualiza cada hora aproximadamente, así que no refleja TODAS nuestras metas o el progreso total)"
+		"title": "Nuestro proceso",
+		"description": "Consulta el proceso del proyecto y nuestras metas! (Actualizado cada hora aproximadamente, no reflecta TODOS las metas del proyecto o nuestro progreso)"
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Las últimas actualizaciones en pequeñas cantidades. Si quieres ver actualizaciones más frecuentes, considera apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Las ultimas actualizaciones se cuentan aquí. Si tu quieres ver las actualizaciones mas frecuentes, considere apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Publicado por",
+		"publishedOn": "en"
+	},
+	"account": {
+		"loginForm": {
+			"login": "Iniciar Sesión",
+			"register": "Registrarme",
+			"detailsPrompt": "Ingrese los datos de su cuenta a continuación",
+			"username": "Apodo",
+			"password": "Contraseña",
+			"confirmPassword": "Confirme su contraseña",
+			"email": "Correo electronico",
+			"miiName": "Nombre de su Mii",
+			"forgotPassword": "¿Olvido su contraseña?",
+			"registerPrompt": "¿No tiene una cuenta?",
+			"loginPrompt": "¿Ya tiene una cuenta?"
+		},
+		"settings": {
+			"downloadFiles": "Descargar los archivos de mi cuenta",
+			"downloadFilesDescription": "(No funciona bajo Nintendo Network)",
+			"upgrade": "Mejorar cuenta",
+			"settingCards": {
+				"profile": "Perfil",
+				"nickname": "Apodo",
+				"birthDate": "Cumpleaños",
+				"gender": "Genero",
+				"country": "País/Región",
+				"timezone": "Zona horaria",
+				"serverEnv": "Servidor de entorno",
+				"production": "Producción",
+				"beta": "Acceso anticipado",
+				"upgradePrompt": "Los servidores de acceso anticipado son exclusivo para los probadores.<br>Para convertirte en un probador, Mejora tu cuenta a otro nivel.",
+				"hasAccessPrompt": "Ya eres un probador de los servidores. Genial!",
+				"signInSecurity": "Inicio de sesión y seguridad",
+				"email": "Email",
+				"password": "Contraseña",
+				"passwordResetNotice": "Despues de cambiar tu contraseña, tu sesión se cerrara en todos tus dispocitivos.",
+				"signInHistory": "Historial de inicios de sesión",
+				"fullSignInHistory": "Ver todo tu historial de inicios de sesión",
+				"otherSettings": "Otros ajustes",
+				"discord": "Discord",
+				"connectedToDiscord": "Conectado con Discord como",
+				"removeDiscord": "Desconectar cuenta de Discord",
+				"noDiscordLinked": "No se ha conectado una cuenta de Discord.",
+				"linkDiscord": "Conectar una cuenta de Discord",
+				"newsletter": "Noticias",
+				"newsletterPrompt": "Reciva las actualizaciones vía correo electronico (Puedes deshabilitar esto en cualquier momento)",
+				"passwordPrompt": "Ingrese la contraseña de su PNID para descargar los archivos para Cemu"
+			}
+		},
+		"accountLevel": [
+			"Estandar",
+			"Probador",
+			"Moderador",
+			"desarrollador"
+		],
+		"banned": "Expulsado"
+	},
+	"upgrade": {
+		"title": "Mejorar",
+		"description": "Al alcanzar la meta mensual nuestro equipo puede dedicarse a proveer una mejor calidad a Pretendo, y hacerlo un trabajo de tiempo completo, desarrollando actualizaciones de mejor calidad y a un ritmo más rápido.",
+		"month": "Mes",
+		"tierSelectPrompt": "Seleccione un nivel",
+		"unsub": "Retirar subscripción",
+		"unsubPrompt": "Esta seguro de retirar la subscripción del nivel <span>tiername</span>? You will lose access to the perks associated with that tier.",
+		"unsubConfirm": "Retirar subscripción",
+		"changeTier": "Cambiar nivel",
+		"changeTierPrompt": "¿Esta seguro de retirar la subscripción del nivel <span class='oldtier'>oldtiername</span> y suscribirse al <span class='newtier'>newtiername</span> nivel?",
+		"changeTierConfirm": "Cambiar nivel",
+		"back": "Regresar"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> para la meta mensual.",
+		"upgradePush": "Para se un patrocinador y tener acceso a cosas interesantes,, visite el sitio <a href=\"/account/upgrade\">Mejorar cuenta</a>."
 	},
 	"localizationPage": {
-		"title": "Vamos a localizar",
-		"description": "Pega un enlace a una localización JSON accesible pulicamente para probarla en el sitio",
-		"instructions": "Ver instrucciones de localización",
+		"title": "Vamos a traducir",
+		"description": "Pegue un enlace con un archivo JSON leible para probarlo en el sitio",
+		"instructions": "Vea las instrucciones de traducción",
 		"fileInput": "Archivo a probar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Probar archivo"
 	},
 	"docs": {
-		"missingInLocale": "Esta página no está disponible en tu idioma. Por favor, comprueba la página en Inglés más abajo.",
+		"missingInLocale": "Esta página no esta disponible en su idioma. Por favor consulte la versión en Ingles.",
 		"quickLinks": {
-			"header": "Acceso rápido",
+			"header": "Contenido util",
 			"links": [
 				{
 					"header": "Instalar Pretendo",
-					"caption": "Mira las instrucciones de instalación"
+					"caption": "Vea las guia de instalación"
 				},
 				{
-					"header": "¿Has tenido un error?",
-					"caption": "Búscalo aquí"
+					"header": "Encontraste un error?",
+					"caption": "Buscalo aquí"
 				}
 			]
 		}
+	},
+	"modals": {
+		"cancel": "Cancelar",
+		"confirm": "Aceptar"
 	}
 }
