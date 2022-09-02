@@ -8,7 +8,8 @@
 		"blog": "Blog",
 		"account": "Compte",
 		"accountWidget": {
-			"logout": "Déconnexion"
+			"logout": "Déconnexion",
+			"settings": "Réglages"
 		}
 	},
 	"hero": {
@@ -28,10 +29,7 @@
 	},
 	"progress": {
 		"title": "Progression",
-		"paragraphs": [
-			null,
-			"Pour la 3DS, nous travaillons également sur Mario Kart 7, avec la volonté de continuer à travailler sur d'autres jeux dès que possible."
-		]
+		"githubRepo": "Dépôt GitHub"
 	},
 	"faq": {
 		"title": "Foire Aux Questions",
