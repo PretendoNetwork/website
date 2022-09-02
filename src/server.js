@@ -47,6 +47,7 @@ app.use(expressLocale({
 		pt: 'pt-BR',
 		ro: 'ro-RO',
 		ru: 'ru-RU',
+		uk: 'uk-UA',
 	},
 	allowed: [
 		'en', 'en-US', 'en-GB', 'en-AU', 'en-CA',
@@ -64,6 +65,7 @@ app.use(expressLocale({
 		'pt', 'pt-BR',
 		'ro', 'ro-RO',
 		'ru', 'ru-RU',
+		'uk', 'uk-UA',
 	],
 	'default': 'en-US'
 }));
