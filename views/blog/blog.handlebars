@@ -18,12 +18,12 @@
 				<h2 class="title">{{{ this.postInfo.title }}}</h2>
 				<p class="caption">{{{ this.postInfo.caption }}}</p>
 				<div class="pub-info">
-					<span>Published by</span>
+					<span>{{ localeHelper ../locale "blogPage.published" }}</span>
 					<div class="profile">
 						<img class="profile-picture" src="{{ this.postInfo.author_image }}" alt>
 						<span>{{{ this.postInfo.author }}}</span>
 					</div>
-					<span>on
+					<span>{{ localeHelper ../locale "blogPage.publishedOn" }}
 						<span class="date">{{{ this.postInfo.date }}}</span>
 					</span>
 				</div>
