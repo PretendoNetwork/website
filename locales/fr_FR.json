@@ -6,7 +6,10 @@
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
-		"account": "Compte"
+		"account": "Compte",
+		"accountWidget": {
+			"logout": "Déconnexion"
+		}
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeu",
@@ -220,7 +223,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"publishedOn": "le",
+		"published": "Publié par"
 	},
 	"localizationPage": {
 		"title": "Localisons",
@@ -244,6 +249,39 @@
 					"caption": "Cherchez-la ici"
 				}
 			]
+		}
+	},
+	"account": {
+		"loginForm": {
+			"login": "Connexion",
+			"detailsPrompt": "Entrez les informations du compte ci-dessous",
+			"password": "Mot de Passe",
+			"loginPrompt": "Déjà un Compte ?",
+			"username": "Pseudo",
+			"register": "S'inscrire",
+			"confirmPassword": "Confirmez le Mot de Passe",
+			"email": "Email",
+			"miiName": "Nom du Mii",
+			"forgotPassword": "Mot de Passe oublié ?",
+			"registerPrompt": "Pas de Compte ?"
+		},
+		"settings": {
+			"downloadFiles": "Télécharger fichiers du compte",
+			"settingCards": {
+				"gender": "Genre",
+				"profile": "Profil",
+				"nickname": "Surnom",
+				"birthDate": "Date de Naissance",
+				"country": "Pays/Région",
+				"timezone": "Décalage Horaire",
+				"serverEnv": "Environment du Serveur",
+				"production": "Production",
+				"beta": "Beta",
+				"upgradePrompt": "Les Serveurs Beta sont exclusifs au Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
+				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super!"
+			},
+			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
+			"upgrade": "Mettre à Niveau le compte"
 		}
 	}
 }
