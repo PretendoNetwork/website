@@ -4,12 +4,18 @@
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Credits",
-		"progress": "Vooruitgang"
+		"progress": "Vooruitgang",
+		"blog": "Blog",
+		"account": "Account",
+		"accountWidget": {
+			"settings": "Instellingen",
+			"logout": "Uitloggen"
+		}
 	},
 	"hero": {
 		"subtitle": "Game servers",
 		"title": "Nagemaakt",
-		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers stoppen",
+		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers permanent gestopt worden",
 		"buttons": {
 			"readMore": "Lees meer"
 		}
@@ -24,9 +30,10 @@
 	"progress": {
 		"title": "Vooruitgang",
 		"paragraphs": [
-			"We werken momentele aan Miiverse, de account servers, en de intergratie met de servers.",
+			null,
 			"We werken ook aan Mario Kart 7 voor de 3DS, met een wens om aan andere games te werken wanneer we die kans krijgen."
-		]
+		],
+		"githubRepo": "GitHub repository"
 	},
 	"faq": {
 		"title": "Veelgestelde vragen",
@@ -34,7 +41,7 @@
 		"QAs": [
 			{
 				"question": "Wat is Pretendo?",
-				"answer": "Pretendo is een open source Nintendo Network vervanger met het doel om custom servers voor de Wii U en 3DS familie te maken. Ons doel is om de online functionaliteit van deze consoles te behouden, zodat spelers hun favoriete Wii U en 3DS games kunnen blijven spelen."
+				"answer": "Pretendo is een open source Nintendo Network vervanging met als doel om custom servers voor de Wii U en 3DS familie te maken. Ons doel is om de online functionaliteit van deze consoles te behouden, zodat spelers hun favoriete Wii U en 3DS games kunnen blijven spelen."
 			},
 			{
 				"question": "Blijft mijn bestaande NNID werken op Pretendo?",
@@ -45,24 +52,24 @@
 				"answer": "Pretendo is momenteel nog niet klaar voor publiekelijk gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
 			},
 			{
-				"question": "Wanneer is <feature> klaar?",
-				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt dan bijvoorbeeld door één developer ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
+				"question": "Wanneer is &lt;feature/dienst&gt; klaar?",
+				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt bijvoorbeeld door één ontwikkelaar ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
 			},
 			{
 				"question": "Werkt Pretendo op Cemu of andere emulators?",
-				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN support, Cemu. Cemu ondersteunt niet officieel custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
+				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN support, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
 			},
 			{
-				"question": "Als ik van Nintendo Network verbannen ben, blijf ik dan verbannen op Pretendo?",
-				"answer": "Nee. We hebben geen toegang tot de bans van Nintendo Network, dus je zal niet direct verbannen zijn op onze dienst. Echter zullen wij wel regels hebben bij het gebruik van onze diensten. Als je deze breekt, zal je verbannen worden."
+				"question": "Als ik van Nintendo Network gebanned ben, blijf ik dan gebanned op Pretendo?",
+				"answer": "Nee. We hebben geen toegang tot de bans van Nintendo Network, dus je zal niet direct gebanned zijn op onze dienst. Echter zullen wij wel regels hebben bij het gebruik van onze diensten. Als je deze breekt, zal je gebanned worden."
 			},
 			{
 				"question": "Gaat Pretendo ook de Wii of Switch ondersteunen?",
 				"answer": "Er zijn al custom servers voor Wii, namelijk <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Wij willen op het moment de Switch niet ondersteunen omdat Switch online betaald is, en compleet anders is dan Nintendo Network."
 			},
 			{
-				"question": "Ga ik hacks nodig hebben om te verbinden met Pretendo?",
-				"answer": "ja, je zal inderdaad hacks nodig hebben. Op de Wii U heb je enkel de Homebrew launcher (d.m.v bijvoorbeeld Haxchi, Coldboot Haxchi, of zelfs de web browser exploit) nodig. Over de 3DS plaatsen we in de toekomst meer informatie."
+				"question": "Heb ik hacks nodig om te verbinden met Pretendo?",
+				"answer": "ja, je zal inderdaad je apparaat moeten hacken. Op de Wii U heb je enkel de Homebrew launcher (d.m.v bijvoorbeeld Haxchi, Coldboot Haxchi, of zelfs de web browser exploit) nodig. Over de 3DS plaatsen we in de toekomst meer informatie."
 			}
 		]
 	},
@@ -84,7 +91,7 @@
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Netwerk installeerder en console research",
+				"caption": "Netwerkinstallatie tools en console research",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
@@ -102,7 +109,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Website ontwikkelaar",
+				"caption": "Hoofd website ontwikkeling",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -122,7 +129,7 @@
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
-		"text": "Zonder deze mensen zou Pretendo vandaag niet zijn waar het is.",
+		"text": "Zonder hen zou Pretendo vandaag niet zijn waar het is.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -156,20 +163,20 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "Special thanks",
+				"special": "Speciale dank",
 				"caption": "Onderzoek naar Nintendo data structuur",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Icoontjes voor de Mii Editor en Just reacties",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
 				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"caption": "Vertalingen en andere contributions",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
@@ -181,14 +188,145 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "De meest recente samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen."
+		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen.",
+		"published": "Gepubliceerd door",
+		"publishedOn": "op"
 	},
 	"localizationPage": {
-		"title": "Laten we meer talen toe voegen!",
+		"title": "Laten we meer talen toevoegen!",
 		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen.",
 		"instructions": "Zie hier instructies voor het vertalen",
 		"fileInput": "Bestand om te testen",
 		"filePlaceholder": "https://een.link.naar/het_bestand.json",
 		"button": "Test bestand"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de a href=\"/account/upgrade\"&gt;upgrade pagina."
+	},
+	"upgrade": {
+		"changeTierPrompt": "Weet je zeker dat je je abonnement op <span class=\"oldtier\">oldtiername</span> wilt opzeggen en je wilt aanmelden voor <span class=\"newtier\">newtiername</span>?",
+		"back": "Terug",
+		"title": "Upgraden",
+		"description": "Het bereiken van de maandelijkse doelstelling maakt van Pretendo een fulltime baan, wat zorgt voor snellere updates van een hogere kwaliteit.",
+		"month": "Maand",
+		"tierSelectPrompt": "Selecteer een tier",
+		"unsub": "Opzeggen",
+		"unsubPrompt": "Weet je zeker dat je je abonnement voor <span>tiername</span> wilt opzeggen? Je verliest toegang tot de voordelen voor die tier.",
+		"unsubConfirm": "Opzeggen",
+		"changeTier": "Verander tier",
+		"changeTierConfirm": "Verander van tier"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Wij brengen jouw favoriete games en content terug via custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Een nieuwe versie van Miiverse, alsof het in de moderne tijd is gemaakt."
+			},
+			{
+				"caption": "Speel jouw favoriete Wii U spellen, zelfs zonder een console!",
+				"title": "Cemu ondersteuning"
+			}
+		],
+		"title": "Wat wij maken",
+		"text": "Ons project heeft veel onderdelen. Hier zijn een paar voorbeelden."
+	},
+	"discordJoin": {
+		"text": "Word lid van onze Discord server om de laatste updates over het project te ontvangen.",
+		"title": "Blijf up-to-date",
+		"widget": {
+			"text": "Krijg realtime updates over onze voortgang",
+			"button": "Word lid van de server"
+		}
+	},
+	"footer": {
+		"socials": "Socialmedia profielen",
+		"usefulLinks": "Nuttige links",
+		"widget": {
+			"captions": [
+				"Wil je up-to-date blijven?",
+				"Word lid van onze Discord server!"
+			],
+			"button": "Word nu lid!"
+		}
+	},
+	"account": {
+		"loginForm": {
+			"login": "Login",
+			"register": "Registreer",
+			"detailsPrompt": "Voor jouw account gegevens hieronder in",
+			"username": "Gebruikersnaam",
+			"password": "Wachtwoord",
+			"confirmPassword": "Bevestig wachtwoord",
+			"email": "E-mail adres",
+			"miiName": "Mii naam",
+			"forgotPassword": "Wachtwoord vergeten?",
+			"registerPrompt": "Nog geen account?",
+			"loginPrompt": "Heb je al een account?"
+		},
+		"settings": {
+			"downloadFiles": "Download account bestanden",
+			"upgrade": "Upgrade account",
+			"settingCards": {
+				"nickname": "Bijnaam",
+				"profile": "Profiel",
+				"birthDate": "Geboortedatum",
+				"gender": "Geslacht",
+				"country": "Land/regio",
+				"timezone": "Tijdszone",
+				"serverEnv": "Server environment",
+				"production": "Production",
+				"beta": "Beta",
+				"upgradePrompt": "Beta servers zijn exclusief voor beta testers.<br>Om een beta tester te worden, moet je je account upgraden naar een hogere tier.",
+				"hasAccessPrompt": "Jouw huidige tier geeft je beta server toegang. Cool!",
+				"email": "E-mail adres",
+				"password": "Wachtwoord",
+				"signInSecurity": "Aanmeldgegevens en beveiliging",
+				"otherSettings": "Andere instellingen",
+				"discord": "Discord",
+				"connectedToDiscord": "Verbonden met Discord als",
+				"removeDiscord": "Verwijder Discord account",
+				"noDiscordLinked": "Geen Discord account gekoppeld.",
+				"linkDiscord": "Koppel Discord account",
+				"newsletter": "Nieuwsbrief",
+				"newsletterPrompt": "Ontvang project updates via e-mail (je kan je op elk moment afmelden)",
+				"passwordPrompt": "Voer je PNID wachtwoord in om Cemu bestanden te downloaden",
+				"passwordResetNotice": "Na het wijzigen van je wachtwoord, word je uitgelogd van al je apparaten.",
+				"fullSignInHistory": "Bekijk volledige aanmeld geschiedenis",
+				"signInHistory": "Aanmeld geschiedenis"
+			},
+			"downloadFilesDescription": "(werkt niet op Nintendo Network)"
+		},
+		"accountLevel": [
+			"Standaard",
+			"Tester",
+			"Moderator",
+			"Ontwikkelaar"
+		],
+		"banned": "Gebanned"
+	},
+	"modals": {
+		"cancel": "Annuleren",
+		"confirm": "Bevestigen"
+	},
+	"docs": {
+		"missingInLocale": "Deze pagina is niet beschikbaar in je huidige taal. Bekijk de Engelse versie hieronder.",
+		"quickLinks": {
+			"header": "Snelkoppelingen",
+			"links": [
+				{
+					"header": "Installeer Pretendo",
+					"caption": "Bekijk de installatie instructies"
+				},
+				{
+					"header": "Heb je een foutmelding gekregen?",
+					"caption": "Bekijk het hier"
+				}
+			]
+		}
 	}
 }

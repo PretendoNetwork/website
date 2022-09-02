@@ -24,7 +24,7 @@
 	"progress": {
 		"title": "Progres",
 		"paragraphs": [
-			"Momentan, lucrăm la Miiverse, împreună cu serverele de conturi și integrarea de servicii.",
+			null,
 			"Pentru 3DS, lucrăm de asemenea la Mario Kart 7, cu dorința de a continua să lucrăm și la alte jocuri dacă este posibil."
 		]
 	},
@@ -82,7 +82,6 @@
 				"title": "Suport Cemu",
 				"caption": "Joacă jocurile tale preferate de pe Wii U chiar și fără o consolă!"
 			}
-
 		]
 	},
 	"credits": {

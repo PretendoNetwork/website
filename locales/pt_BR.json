@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Progresso",
 		"paragraphs": [
-			"Atualmente estamos trabalhando no Miiverse, assim como no nossos servidores de contas e suas integrações com os serviços.",
+			null,
 			"Para o Nintendo 3DS também estamos trabalhando no Mario Kart 7, pretendemos trabalhar em outros jogos quando possível."
 		]
 	},
@@ -84,7 +84,6 @@
 				"title": "Suporte para Cemu",
 				"caption": "Jogue seus títulos favoritos do Wii U mesmo sem um console!"
 			}
-
 		]
 	},
 	"credits": {

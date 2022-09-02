@@ -6,7 +6,11 @@
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Account"
+		"account": "Account",
+		"accountWidget": {
+			"settings": "Impostazioni",
+			"logout": "Logout"
+		}
 	},
 	"hero": {
 		"subtitle": "Server online",
@@ -26,9 +30,10 @@
 	"progress": {
 		"title": "Progresso",
 		"paragraphs": [
-			"Al momento stiamo lavorando su Miiverse, insieme ai nostri server per gli account e alle loro integrazioni con gli altri servizi.",
+			null,
 			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
-		]
+		],
+		"githubRepo": "Repository GitHub"
 	},
 	"faq": {
 		"title": "Domande frequenti (FAQ)",
@@ -84,7 +89,6 @@
 				"title": "Supporto per Cemu",
 				"caption": "Gioca ai tuoi giochi preferiti per Wii U anche senza avere una console!"
 			}
-
 		]
 	},
 	"credits": {
@@ -145,7 +149,6 @@
 		"title": "Ringraziamenti speciali",
 		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
 		"people": [
-
 			{
 				"name": "superwhiskers",
 				"caption": "Sviluppo libreria crunch",
@@ -222,7 +225,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Pubblicato da",
+		"publishedOn": "il"
 	},
 	"account": {
 		"accountLevel": [
@@ -231,7 +236,53 @@
 			"Moderatore",
 			"Sviluppatore"
 		],
-		"banned": "Bannato"
+		"banned": "Bannato",
+		"loginForm": {
+			"username": "Nome utente",
+			"password": "Password",
+			"miiName": "Nome Mii",
+			"forgotPassword": "Hai dimenticato la password?",
+			"login": "Accedi",
+			"register": "Registrati",
+			"detailsPrompt": "Inserisci le informazioni relative al tuo account qui sotto",
+			"loginPrompt": "Hai già un account?",
+			"confirmPassword": "Conferma password",
+			"email": "Email",
+			"registerPrompt": "Non hai un account?"
+		},
+		"settings": {
+			"downloadFilesDescription": "(non funzioneranno su Nintendo Network)",
+			"downloadFiles": "Scarica file dell'account",
+			"settingCards": {
+				"profile": "Profilo",
+				"nickname": "Nickname",
+				"birthDate": "Data di nascita",
+				"gender": "Genere",
+				"country": "Paese/regione",
+				"timezone": "Fuso orario",
+				"serverEnv": "Ambiente del server",
+				"production": "Produzione",
+				"beta": "Beta",
+				"upgradePrompt": "I server beta sono esclusivi per i beta tester.<br>Per diventare un beta tester, iscriviti a un livello dell'account più alto.",
+				"hasAccessPrompt": "Il tuo livello ti dà accesso ai server beta. Forte!",
+				"signInSecurity": "Accesso e sicurezza",
+				"email": "Email",
+				"password": "Password",
+				"passwordResetNotice": "Dopo aver cambiato la tua password, verrai disconnesso da tutti i tuoi dispositivi.",
+				"signInHistory": "Cronologia di accesso",
+				"fullSignInHistory": "Mostra cronologia di accesso completa",
+				"otherSettings": "Altre impostazioni",
+				"discord": "Discord",
+				"connectedToDiscord": "Connesso a Discord come",
+				"removeDiscord": "Rimuovi account Discord",
+				"noDiscordLinked": "Nessun account Discord collegato.",
+				"linkDiscord": "Collega account Discord",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Ricevi aggiornamenti riguardo al progetto via email (puoi annullare in qualunque momento)",
+				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu"
+			},
+			"upgrade": "Iscriviti a un livello superiore"
+		}
 	},
 	"localizationPage": {
 		"title": "Localizziamo",
@@ -256,5 +307,26 @@
 				}
 			]
 		}
+	},
+	"upgrade": {
+		"unsubPrompt": "Sei sicuro di voler annullare l'iscrizione a <span>tiername</span>? Perderai accesso ai benefici associati con quel livello.",
+		"description": "Raggiungere il goal mensile renderà Pretendo un lavoro a tempo pieno, permettendo di fornire aggiornamenti di maggiore qualità in meno tempo.",
+		"month": "mese",
+		"tierSelectPrompt": "Seleziona un livello",
+		"unsub": "Annulla l'iscrizione",
+		"unsubConfirm": "Annulla l'iscrizione",
+		"changeTier": "Cambia livello",
+		"changeTierPrompt": "Sei sicuro di voler annullare l'iscrizione a <span class=\"oldtier\">oldtiername</span> e iscriverti a <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Cambia livello",
+		"back": "Indietro",
+		"title": "Iscriviti"
+	},
+	"modals": {
+		"cancel": "Annulla",
+		"confirm": "Conferma"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> di <span>$${goald}</span>/mese, <span>${perc}%</span> del goal mensile.",
+		"upgradePush": "Per diventare un abbonato e accedere a fantastici vantaggi, visita la <a href=\"/account/upgrade\">pagina per l'upgrade</a>."
 	}
 }
