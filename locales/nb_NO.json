@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Framgang",
 		"paragraphs": [
-			"Akkurat nå, jobber vi med Miiverse, samtidig med våres konto serverene og dens integrasjon med tjenestene.",
+			null,
 			"For 3DS-en, jobber vi også med Mario Kart 7, med en lyst til å jobbe med andre spill når det er mulig."
 		]
 	},
@@ -84,7 +84,6 @@
 				"title": "Støtte for cemu",
 				"caption": "Spill dine favoritt Wii U titler til og med uten en Wii U-konsoll!"
 			}
-
 		]
 	},
 	"credits": {

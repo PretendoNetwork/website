@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Progression",
 		"paragraphs": [
-			"Actuellement, nous travaillons sur Miiverse, ainsi que sur nos serveurs de comptes et son intégration avec nos services.",
+			null,
 			"Pour la 3DS, nous travaillons également sur Mario Kart 7, avec la volonté de continuer à travailler sur d'autres jeux dès que possible."
 		]
 	},
@@ -41,7 +41,6 @@
 			{
 				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
 				"answer": "Malheuresement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration de NNID à PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
-
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
@@ -50,7 +49,6 @@
 			{
 				"question": "Savez-vous quand <fonctionnalité/service> sera prêt ?",
 				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont développés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
-
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
@@ -86,7 +84,6 @@
 				"title": "Support de Cemu",
 				"caption": "Jouez à vos titres Wii U préférés même sans console !"
 			}
-
 		]
 	},
 	"credits": {

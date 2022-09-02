@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Progresso",
 		"paragraphs": [
-			"Al momento stiamo lavorando su Miiverse, insieme ai nostri server per gli account e alle loro integrazioni con gli altri servizi.",
+			null,
 			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
 		]
 	},
@@ -84,7 +84,6 @@
 				"title": "Supporto per Cemu",
 				"caption": "Gioca ai tuoi giochi preferiti per Wii U anche senza avere una console!"
 			}
-
 		]
 	},
 	"credits": {
@@ -145,7 +144,6 @@
 		"title": "Ringraziamenti speciali",
 		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
 		"people": [
-
 			{
 				"name": "superwhiskers",
 				"caption": "Sviluppo libreria crunch",

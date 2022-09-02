@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Postęp",
 		"paragraphs": [
-			"Aktualnie pracujemy nad Miiverse, razem z obsługą kont online oraz integracją z różnymi usługami.",
+			null,
 			"Mówiąc o konsoli 3DS, aktualnie pracujemy również nad Mario Kart 7, a w przyszłości mamy nadzieję, że możemy popracować nad innymi grami."
 		]
 	},
@@ -84,7 +84,6 @@
 				"title": "Wsparcie dla Cemu",
 				"caption": "Graj w twoje ulubione gry na Wii U bez tej konsoli!"
 			}
-
 		]
 	},
 	"credits": {

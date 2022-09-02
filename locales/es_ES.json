@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "Progreso",
 		"paragraphs": [
-			"Actualmente, estamos trabajando en Miiverse, junto con los servidores de cuentas y la integración con los servicios.",
+			null,
 			"En 3DS también trabajamos en el soporte de Mario Kart 7, con el deseo de continuar trabajando en otros juegos en cuanto sea posible."
 		]
 	},
@@ -56,7 +56,7 @@
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-			"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
+				"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
 			},
 			{
 				"question": "¿Pretendo soportará Wii/Switch?",
@@ -84,7 +84,6 @@
 				"title": "Soporte para Cemu",
 				"caption": "¡Juega a tus títulos de Wii U favoritos incluso sin una consola!"
 			}
-
 		]
 	},
 	"credits": {
