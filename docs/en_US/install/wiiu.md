@@ -1,6 +1,9 @@
-<div class="tip green">This Guide may be missing some info or incomplete.</div>
-
 # Wii U
+
+<div class="tip">
+	ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://wiiu.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
+</div>
+
 ## Select your homebrew environment
 
 - ### [Tiramisu](#tiramisu-1)
