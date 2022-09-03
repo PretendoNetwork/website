@@ -1,9 +1,3 @@
-<div class="tip red">
-	<strong>Note!</strong>
-	<br>
-	Pretendo Network is currently in closed beta! The servers are only accessible to testers. To become a tester, upgrade your <a href="/account/upgrade" target="_blank">PNID here</a>
-</div>
-
 <div class="tip green">This Guide may be missing some info or incomplete.</div>
 
 # 3DS/2DS Family
