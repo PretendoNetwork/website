@@ -10,7 +10,7 @@
 ## Online files
 Cemu requires the use of several files obtained via dumping from real hardware. You may use those files if you have a physical Wii U, they will work just fine. If you _don't_ have a real Wii U navigate to [your account page](/account) and select <strong>`Download account files`</strong>
 
-<center><img src="/assets/images/docs/download-account-files.png"/></center>
+<center><img src="/assets/images/docs/install/cemu/download-account-files.png"/></center>
 
 ## Setup Cemu for online
 After obtaining the files needed for online play refer to the official [Cemu Online Play](https://cemu.cfw.guide/online-play.html) guide
