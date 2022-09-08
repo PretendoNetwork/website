@@ -45,11 +45,15 @@ footer a:hover {
 	color: var(--text-shade-3);
 	text-decoration: underline;
 }
+footer div.discord-server-card-wrapper {
+	z-index: 2;
+	justify-self: end;
+}
 footer div.discord-server-card {
+	position: relative;
 	background: var(--bg-shade-2);
 	border-radius: 12px;
 	padding: 30px 90px 30px 36px;
-	justify-self: end;
 }
 footer div.discord-server-card h1 {
 	font-size: 25px;
@@ -78,6 +82,17 @@ footer div.discord-server-card svg {
 	stroke-width: 3px;
 	margin-right: 4px;
 }
+footer div.discord-server-card::after {
+	content: "";
+	position: absolute;
+	top: -120px;
+	right: 0px;
+	width: 192px;
+	height: 192px;
+	background: no-repeat center/cover url(/assets/images/bandwidth.png);
+	transform: rotate(-19deg);
+	z-index: -1;
+}
 
 @media screen and (max-width: 900px) {
 	footer {
@@ -88,10 +103,20 @@ footer div.discord-server-card svg {
 	footer div {
 		justify-self: center;
 	}
-	footer div.discord-server-card {
+	footer div.discord-server-card-wrapper {
 		grid-column: 1 / span 4;
-		width: calc(100% - 126px);
+		width: 100%;
 		justify-self: normal;
+	}
+	footer div.discord-server-card::after {
+		bottom: -72px;
+		top: unset;
+		z-index: 0;
+	}
+	footer div.discord-server-card {
+		box-sizing: border-box;
+		width: 100%;
+		overflow: hidden;
 	}
 }
 
@@ -103,9 +128,22 @@ footer div.discord-server-card svg {
 	footer div {
 		justify-self: start;
 	}
-	footer div.discord-server-card {
+	footer div.discord-server-card-wrapper {
 		grid-column: 1 / span 1;
+	}
+	footer div.discord-server-card {
 		padding: 30px;
-		width: calc(100% - 60px);
+		overflow: visible;
+	}
+	footer div.discord-server-card::after {
+		bottom: unset;
+		top: -120px;
+		z-index: -1;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	footer div.discord-server-card::after {
+		display: none;
 	}
 }
