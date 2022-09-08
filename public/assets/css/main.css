@@ -443,6 +443,7 @@ section.team {
 section.team-helpers {
 	position: relative;
 	margin-top: 160px;
+	overflow: hidden;
 }
 section.team-helpers .text {
 	max-width: 504px;
@@ -1002,4 +1003,10 @@ section.update-signup div.circle {
 		margin: auto !important;
 	}
 
+}
+
+@media screen and (min-width: 2256px) {
+	.purple-circle {
+		display: none;
+	}
 }
