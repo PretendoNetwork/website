@@ -89,8 +89,7 @@ footer div.discord-server-card::after {
 	right: 0px;
 	width: 192px;
 	height: 192px;
-	background: no-repeat center/cover url(/assets/images/bandwidth.png);
-	transform: rotate(-19deg);
+	background: no-repeat center/cover url(/assets/images/bandwidth.svg);
 	z-index: -1;
 }
 
