@@ -67,16 +67,17 @@
 	const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
 	let i = 0;
 
+	function unescapeHTML(string) {
+  	const el = document.createElement("span");
+  	el.innerHTML = string;
+  	return el.innerText;
+	}
+
 	const randomSentences = [
-		'I\'m Bandwidth the Raccoon, and I love biting the cables going into Pretendo Network\'s servers. Yum!',
-		'Many people ask us if we\'re gonna get in legal trouble with Nintendo over this; I am happy to say that my aunt works at Nintendo and she says it\'s fine.',
-		'Webkit v537 is the best version of Webkit for Wii U. No, we\'re not going to port Chrome to the Wii U.',
-		'I can\'t wait for the clock to reach 03:14:08 UTC on the 19th of January 2038!',
-		'The Wii U is actually an underrated system: the commercials were like really bad, but the console is great. Huh, wait a second, I\'m not sure why but my Gamepad isn\'t connecting to my Wii.',
-		'Super Mario World 2 - Yoshi\'s Island\'s main theme is an absolute bop and there\'s no way you\'re gonna convince me otherwise.',
-		'My favorite Nintendo Switch releases have been Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima\'s Brain Training / Brain Age "You Really Liked The Nintendo Wii U Virtual Console Title, So We\'re Bringing It Back" Pack. You can really tell Nintendo cares.',
-		'Like “You know Ash, bless her heart, she UwU’s all day” is the southern nice way of saying “Ash uwus all the time and it’s really weird and stupid and I wish they didn’t”',
-		'My first video on my channel!! iv been wanting to make videos for a long time now but my laptop ran pretty bad and i couldn\'t run fraps, skype and minecraft all at once. but now thats over! with some help from my IT teacher my laptop runs alot better and i can record now! i hope y\'all enjoy and if you do please like and subscribe!!!', ];
+	{{#times 9}}
+		`${unescapeHTML("{{localeHelper locale "footer.bandwidthRaccoonQuotes" this }}")}`,
+	{{/times}}
+	]
 
 	bandwidthRaccoon.addEventListener("click", () =>
 	{
