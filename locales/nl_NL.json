@@ -193,8 +193,8 @@
 		"publishedOn": "op"
 	},
 	"localizationPage": {
-		"title": "Laten we meer talen toevoegen!",
-		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen.",
+		"title": "Laten we meer talen toevoegen",
+		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen",
 		"instructions": "Zie hier instructies voor het vertalen",
 		"fileInput": "Bestand om te testen",
 		"filePlaceholder": "https://een.link.naar/het_bestand.json",
