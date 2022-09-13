@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "À propos",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Documentation",
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
@@ -13,9 +13,9 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Serveurs de jeu",
+		"subtitle": "Serveurs de jeux",
 		"title": "Recréés",
-		"text": "Pretendo est un remplacement gratuit et open-source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels.",
+		"text": "Pretendo est une alternative gratuit et open source des serveurs Nintendo pour la 3DS et la Wii U permettant la connexion en ligne pour tous, y compris après l'arrêt des serveurs officiels.",
 		"buttons": {
 			"readMore": "En savoir plus"
 		}
@@ -23,8 +23,8 @@
 	"aboutUs": {
 		"title": "À propos de nous",
 		"paragraphs": [
-			"Pretendo est un projet open-source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
-			"Puisque nos services seront à la fois gratuits et open-source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
+			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
+			"Puisque nos services seront à la fois gratuits et open source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
 		]
 	},
 	"progress": {
@@ -37,11 +37,11 @@
 		"QAs": [
 			{
 				"question": "Qu'est-ce que Pretendo ?",
-				"answer": "Pretendo est un remplacement open-source du Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
+				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
 				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
-				"answer": "Malheuresement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration de NNID à PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
+				"answer": "Malheureusement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration des NNID aux PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
-				"answer": "Oui, vous devrez modifier votre appareil afin de vous connecter; cependant sur Wii U un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
+				"answer": "Oui, vous devrez hack votre appareil afin de vous connecter; cependant sur Wii U, un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
 			}
 		]
 	},
