@@ -6,7 +6,11 @@
 		"credits": "Créditos",
 		"progress": "Progreso",
 		"blog": "Blog",
-		"account": "Cuenta"
+		"account": "Cuenta",
+		"accountWidget": {
+			"settings": "Ajustes",
+			"logout": "Cerrar Sesión"
+		}
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
@@ -28,7 +32,8 @@
 		"paragraphs": [
 			null,
 			"En 3DS también trabajamos en el soporte de Mario Kart 7, con el deseo de continuar trabajando en otros juegos en cuanto sea posible."
-		]
+		],
+		"githubRepo": "Repositorio de Github"
 	},
 	"faq": {
 		"title": "Preguntas frecuentes",
@@ -220,7 +225,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Las últimas actualizaciones en pequeñas cantidades. Si quieres ver actualizaciones más frecuentes, considera apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Las últimas actualizaciones en pequeñas cantidades. Si quieres ver actualizaciones más frecuentes, considera apoyarnos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Publicado por",
+		"publishedOn": "en"
 	},
 	"localizationPage": {
 		"title": "Vamos a localizar",
@@ -245,5 +252,80 @@
 				}
 			]
 		}
+	},
+	"account": {
+		"loginForm": {
+			"register": "Registrar",
+			"detailsPrompt": "Ingrese los datos de su cuenta a continuación",
+			"registerPrompt": "¿No tienes una cuenta?",
+			"password": "Contraseña",
+			"login": "Iniciar Sesión",
+			"email": "Correo electrónico",
+			"miiName": "Nombre de Mii",
+			"loginPrompt": "¿Ya tienes una cuenta?",
+			"confirmPassword": "Confirmar contraseña",
+			"forgotPassword": "¿Olvidaste tu contraseña?",
+			"username": "Nombre de usuario"
+		},
+		"settings": {
+			"settingCards": {
+				"birthDate": "Fecha de nacimiento",
+				"profile": "Perfil",
+				"gender": "Sexo",
+				"country": "País",
+				"production": "Producción",
+				"timezone": "Zona horaria",
+				"serverEnv": "Entorno del servidor",
+				"beta": "Beta",
+				"hasAccessPrompt": "Tu rango actual tiene acceso a los servidores beta. Cool!",
+				"signInSecurity": "Inicio de sesión y seguridad",
+				"email": "Correo electrónico",
+				"password": "Contraseña",
+				"passwordResetNotice": "Después de cambiar tu contraseña, se cerrará la sesión de todos los dispositivos.",
+				"signInHistory": "Historial de inicio de sesión",
+				"fullSignInHistory": "Ver historial de inicio de sesión completo",
+				"otherSettings": "Otros ajustes",
+				"discord": "Discord",
+				"connectedToDiscord": "Conectado a discord como",
+				"removeDiscord": "Eliminar cuenta de Discord",
+				"noDiscordLinked": "No hay cuenta de Discord vinculada.",
+				"linkDiscord": "Vincular cuenta de Discord",
+				"newsletter": "Boletín",
+				"newsletterPrompt": "Reciba actualizaciones del proyecto por correo electrónico (puede optar por no participar en cualquier momento)",
+				"passwordPrompt": "Ingresa la contraseña de tu PNID para descargar los archivos de Cemu",
+				"nickname": "Apodo",
+				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior."
+			},
+			"downloadFiles": "Descargar datos de cuenta",
+			"downloadFilesDescription": "(no funcionara en Nintendo Network)",
+			"upgrade": "Subir de rango"
+		},
+		"accountLevel": [
+			"Estándar",
+			"Tester",
+			"Moderador",
+			"Desarrollador"
+		],
+		"banned": "Baneado"
+	},
+	"upgrade": {
+		"description": "Alcanzar la meta mensual hará de Pretendo un trabajo de tiempo completo, brindando actualizaciones de mejor calidad a un ritmo más rápido.",
+		"month": "mes",
+		"tierSelectPrompt": "Selecciona un rango",
+		"unsub": "Cancelar suscripción",
+		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá el acceso a las ventajas asociadas con ese nivel.",
+		"unsubConfirm": "Cancelar suscripción",
+		"changeTier": "Cambiar rango",
+		"changeTierPrompt": "¿Está seguro de que desea darse de baja de <span class=\"oldtier\">oldtiername</span> y suscribirse a <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Cambiar rango",
+		"back": "Atrás"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> del objetivo mensual.",
+		"upgradePush": "Para convertirse en suscriptor y obtener acceso a beneficios geniales, visite la página <a href=\"/account/upgrade\">actualizar</a>."
+	},
+	"modals": {
+		"cancel": "Cancelar",
+		"confirm": "Confirmar"
 	}
 }
