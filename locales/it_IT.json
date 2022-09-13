@@ -13,9 +13,9 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Server online",
+		"subtitle": "Server di gioco",
 		"title": "Ricreati",
-		"text": "Pretendo è un'alternativa gratuita e open source ai server Nintendo per 3DS e Wii U, con l'obiettivo di permettere di connettersi online anche dopo la terminazione dei server originali",
+		"text": "Pretendo è un'alternativa gratuita e open source ai server Nintendo per 3DS e Wii U che permette la comunicazione online anche dopo la chiusura dei server ufficiali",
 		"buttons": {
 			"readMore": "Scopri di più"
 		}
@@ -24,7 +24,7 @@
 		"title": "Informazioni",
 		"paragraphs": [
 			"Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
-			"Dato che i nostri server saranno gratuiti e open source, essi potranno esistere anche molto dopo l'inevitabile chiusura di Nintendo Network."
+			"Visto che i nostri server saranno gratuiti e open source, essi potranno esistere anche dopo l'inevitabile chiusura di Nintendo Network."
 		]
 	},
 	"progress": {
@@ -36,46 +36,46 @@
 		"githubRepo": "Repository GitHub"
 	},
 	"faq": {
-		"title": "Domande frequenti (FAQ)",
-		"text": "Ecco alcune domande che ci vengono poste frequentemente.",
+		"title": "Domande frequenti",
+		"text": "Ecco alcune domande frequenti.",
 		"QAs": [
 			{
 				"question": "Cos'è Pretendo?",
-				"answer": "Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, per permettere ai giocatori di continuare a divertirsi con i loro giochi preferiti per Wii U e 3DS al massimo della loro capacità."
+				"answer": "Pretendo è un'alternativa open source a Nintendo Network con l'obiettivo di creare dei server custom per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, in modo che i giocatori possano continuare a giocare ai loro giochi Wii U e 3DS preferiti al massimo delle loro potenzialità."
 			},
 			{
-				"question": "Potrò continuare ad utilizzare i miei NNID su Pretendo?",
+				"question": "I miei NNID esistenti funzioneranno su Pretendo?",
 				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo, poiché solo Nintendo è in possesso dei tuoi dati utente; benché una migrazione da-NNID-a-PNID sia teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che preferiremmo non avere."
 			},
 			{
 				"question": "Come si usa Pretendo?",
-				"answer": "Pretendo non è ancora pronta per l'uso pubblico. Quando lo sarà, per usare Pretendo ti basterà eseguire il nostro patcher homebrew sulla tua console."
+				"answer": "Pretendo non è ancora in uno stato tale da poter essere usata dal pubblico. Tuttavia, quando lo sarà potrai usare Pretendo semplicemente eseguendo il nostro patcher homebrew sulla tua console."
 			},
 			{
-				"question": "Sapete quando <funzionalità/servizio> sarà pronta/o?",
-				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo sapere quanto tempo manca al completamento."
+				"question": "Sapete quando una determinata funzionalità/servizio sarà pronta/o?",
+				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS a cuore; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma utilizzare Pretendo con Cemu dovrebbe comunque essere possibile.<br>Al momento Pretendo non supporta Cemu."
+				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS in mente; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma dovrebbe comunque essere possibile utilizzare Pretendo con Cemu .<br>Al momento Pretendo non supporta Cemu."
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
-				"answer": "Non avremo accesso ai ban di Nintendo Network, quindi quegli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio, che se non verranno seguite potranno portare a un ban."
+				"answer": "Noi non avremo accesso alla lista degli utenti bannati da Nintendo Network, quindi quegli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio, e il mancato rispetto di queste regole potrebbe portare a un ban."
 			},
 			{
 				"question": "Pretendo supporterà la Wii/Switch?",
-				"answer": "Esistono già server custom per Wii forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento ed è completamente diverso da Nintendo Network."
+				"answer": "La Wii dispone già di server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento e completamente diverso da Nintendo Network."
 			},
 			{
-				"question": "Avrò bisogno di hack per connettermi?",
-				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, su Wii U avrai solo bisogno di poter accedere all'Homebrew Launcher (es. Haxchi, Coldboot Haxchi, o anche l'exploit web per browser). Informazioni su come connettersi su 3DS saranno disponibili in futuro."
+				"question": "Dovrò modificare la mia console per connettermi?",
+				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, sulla Wii U è sufficiente poter accedere all'Homebrew Launcher (via Haxchi, Coldboot Haxchi, o anche solo l'exploit web per browser). Informazioni su come connettersi su 3DS saranno fornite in futuro."
 			}
 		]
 	},
 	"showcase": {
-		"title": "Cosa facciamo",
-		"text": "Il nostro progetto ha vari componenti. Eccone alcuni.",
+		"title": "Ciò che facciamo",
+		"text": "Il nostro progetto è composto da diverse parti. Eccone alcune.",
 		"cards": [
 			{
 				"title": "Server di gioco",
@@ -83,17 +83,17 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Una reimmaginazione di Miiverse, come se fosse stato fatto nell'era moderna."
+				"caption": "Una versione reimmaginata di Miiverse, come se fosse stato creato nell'era moderna."
 			},
 			{
 				"title": "Supporto per Cemu",
-				"caption": "Gioca ai tuoi giochi preferiti per Wii U anche senza avere una console!"
+				"caption": "Gioca ai tuoi titoli preferiti per Wii U anche senza avere una console!"
 			}
 		]
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Ecco il team dietro al progetto",
+		"text": "Incontra il team dietro al progetto",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -109,7 +109,7 @@
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Installer di rete e ricerca su console",
+				"caption": "Installer della rete e ricerca su console",
 				"picture": "https://github.com/Rambo6Glaz.png",
 				"github": "https://github.com/Rambo6Glaz"
 			},
@@ -127,7 +127,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Sviluppo web principale",
+				"caption": "Leader dello sviluppo web",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -139,7 +139,7 @@
 			},
 			{
 				"name": "mrjvs",
-				"caption": "Designer",
+				"caption": "Disegnatore",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs"
 			}
@@ -151,13 +151,13 @@
 		"people": [
 			{
 				"name": "superwhiskers",
-				"caption": "Sviluppo libreria crunch",
+				"caption": "Sviluppo della libreria crunch",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
 				"name": "Stary",
-				"caption": "Sviluppo 3DS e strumento di analisi NEX",
+				"caption": "Sviluppo 3DS e dissettore NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
@@ -201,19 +201,19 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Resta aggiornato",
-		"text": "Entra nel nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
+		"title": "Tienti aggiornato",
+		"text": "Unisciti al nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
 		"widget": {
-			"text": "Ricevi aggiornamenti in tempo reale",
+			"text": "Ricevi aggiornamenti in tempo reale sul nostro progresso",
 			"button": "Unisciti al server"
 		}
 	},
 	"footer": {
 		"socials": "Social",
-		"usefulLinks": "Link utili",
+		"usefulLinks": "Collegamenti utili",
 		"widget": {
 			"captions": [
-				"Vuoi rimanere aggiornato?",
+				"Vuoi tenerti aggiornato?",
 				"Unisciti al nostro server su Discord!"
 			],
 			"button": "Unisciti ora!"
@@ -221,11 +221,11 @@
 	},
 	"progressPage": {
 		"title": "Il nostro progresso",
-		"description": "Controlla il progresso del progetto e gli obiettivi! (Aggiornato circa ogni ora, non riflette TUTTI gli obiettivi e il progresso del progetto)"
+		"description": "Controlla il progresso e gli obiettivi del progetto! (Aggiornato ogni ora circa, non riflette TUTTI i nostri obiettivi e il nostro progresso)"
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Gli ultimi aggiornamenti, condensati. Se sei interessato a ricevere aggiornamenti più frequenti, considera l'idea di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
 		"published": "Pubblicato da",
 		"publishedOn": "il"
 	},
@@ -244,7 +244,7 @@
 			"forgotPassword": "Hai dimenticato la password?",
 			"login": "Accedi",
 			"register": "Registrati",
-			"detailsPrompt": "Inserisci le informazioni relative al tuo account qui sotto",
+			"detailsPrompt": "Inserisci le informazioni del tuo account qui sotto",
 			"loginPrompt": "Hai già un account?",
 			"confirmPassword": "Conferma password",
 			"email": "Email",
@@ -263,7 +263,7 @@
 				"serverEnv": "Ambiente del server",
 				"production": "Produzione",
 				"beta": "Beta",
-				"upgradePrompt": "I server beta sono esclusivi per i beta tester.<br>Per diventare un beta tester, iscriviti a un livello dell'account più alto.",
+				"upgradePrompt": "I server beta sono esclusivi per i beta tester.<br>Per diventare un beta tester, fai l'upgrade del tuo account a un livello più alto.",
 				"hasAccessPrompt": "Il tuo livello ti dà accesso ai server beta. Forte!",
 				"signInSecurity": "Accesso e sicurezza",
 				"email": "Email",
@@ -278,10 +278,10 @@
 				"noDiscordLinked": "Nessun account Discord collegato.",
 				"linkDiscord": "Collega account Discord",
 				"newsletter": "Newsletter",
-				"newsletterPrompt": "Ricevi aggiornamenti riguardo al progetto via email (puoi annullare in qualunque momento)",
+				"newsletterPrompt": "Ricevi aggiornamenti sul progetto via email (puoi annullare in qualunque momento)",
 				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu"
 			},
-			"upgrade": "Iscriviti a un livello superiore"
+			"upgrade": "Fai l'upgrade del tuo account"
 		}
 	},
 	"localizationPage": {
@@ -295,11 +295,11 @@
 	"docs": {
 		"missingInLocale": "Questa pagina non è disponibile nella tua lingua. Per favore, controlla la versione in inglese sotto.",
 		"quickLinks": {
-			"header": "Link rapidi",
+			"header": "Collegamenti rapidi",
 			"links": [
 				{
 					"header": "Installa Pretendo",
-					"caption": "Mostra le istruzioni di setup"
+					"caption": "Mostra le istruzioni di configurazione"
 				},
 				{
 					"header": "Hai un errore?",
@@ -309,7 +309,7 @@
 		}
 	},
 	"upgrade": {
-		"unsubPrompt": "Sei sicuro di voler annullare l'iscrizione a <span>tiername</span>? Perderai accesso ai benefici associati con quel livello.",
+		"unsubPrompt": "Sei sicuro di voler annullare l'iscrizione a <span>tiername</span>? Perderai tutte le ricompense associate a quel livello.",
 		"description": "Raggiungere il goal mensile renderà Pretendo un lavoro a tempo pieno, permettendo di fornire aggiornamenti di maggiore qualità in meno tempo.",
 		"month": "mese",
 		"tierSelectPrompt": "Seleziona un livello",
@@ -319,7 +319,7 @@
 		"changeTierPrompt": "Sei sicuro di voler annullare l'iscrizione a <span class=\"oldtier\">oldtiername</span> e iscriverti a <span class=\"newtier\">newtiername</span>?",
 		"changeTierConfirm": "Cambia livello",
 		"back": "Indietro",
-		"title": "Iscriviti"
+		"title": "Upgrade"
 	},
 	"modals": {
 		"cancel": "Annulla",
@@ -327,6 +327,6 @@
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> di <span>$${goald}</span>/mese, <span>${perc}%</span> del goal mensile.",
-		"upgradePush": "Per diventare un abbonato e accedere a fantastici vantaggi, visita la <a href=\"/account/upgrade\">pagina per l'upgrade</a>."
+		"upgradePush": "Per diventare un abbonato e accedere a ricompense speciali, visita la <a href=\"/account/upgrade\">pagina per fare l'upgrade</a>."
 	}
 }

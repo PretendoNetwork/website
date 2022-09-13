@@ -48,7 +48,7 @@
 				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
 			},
 			{
-				"question": "Do you know when <feature/service> will be ready?",
+				"question": "Do you know when feature/service will be ready?",
 				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
@@ -85,7 +85,6 @@
 				"title": "Cemu support",
 				"caption": "Play your favorite Wii U titles even without a console!"
 			}
-
 		]
 	},
 	"credits": {
