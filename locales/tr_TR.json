@@ -1,0 +1,61 @@
+{
+	"nav": {
+		"accountWidget": {
+			"logout": "Çıkış yap",
+			"settings": "Ayarlar"
+		},
+		"about": "Hakkında",
+		"faq": "SSS",
+		"docs": "Dökümanlar",
+		"progress": "İlerleme",
+		"blog": "Blog",
+		"account": "Hesap"
+	},
+	"hero": {
+		"subtitle": "Oyun sunucuları",
+		"title": "Yeniden oluşturuldu",
+		"buttons": {
+			"readMore": "Daha fazlasını oku"
+		}
+	},
+	"aboutUs": {
+		"title": "Hakkımızda"
+	},
+	"progress": {
+		"title": "İlerleme",
+		"githubRepo": "Github deposu"
+	},
+	"faq": {
+		"title": "Sık Sorulan Sorular",
+		"QAs": [
+			{
+				"question": "Pretendo ney?"
+			},
+			{
+				"question": "Zaten varolan NNIDlerim Pretendo'da çalışıcakmı?",
+				"answer": "Üzgünüz fakat hayır. Zaten varolan NNIDler Pretendo'da çalışmayacak."
+			},
+			{
+				"question": "Pretendo'yu nası kullanırım?",
+				"answer": "Pretendo şuanda kullanıma açık değil. Fakat kullanıma açık olduğunda Pretendo'yu bir homebrew yamalayıcısı çalıştırarak kullanabiliceksiniz."
+			},
+			{
+				"question": "Servis yada özelliğin ne zaman hazır olacağını biliyormusunuz?"
+			}
+		]
+	},
+	"showcase": {
+		"cards": [
+			{},
+			{
+				"title": "Juxtaposition"
+			},
+			{
+				"title": "Cemu desteği"
+			}
+		]
+	},
+	"credits": {
+		"title": "Takımımız"
+	}
+}
