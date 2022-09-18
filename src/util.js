@@ -292,7 +292,16 @@ async function handleStripeEvent(event) {
 		const discordId = pnid.get('connections.discord.id');
 
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
-			// Canceling old subscription, do nothing but update webhook date
+			// Canceling old subscription, do nothing but update webhook date and remove Discord roles
+			if (product.metadata.beta === 'true') {
+				removeDiscordMemberTesterRole(discordId).catch(error => {
+					logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+				});
+			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 
 			const updateData = {
 				'connections.stripe.latest_webhook_timestamp': event.created
