@@ -41,15 +41,51 @@
 		<a href="/blog">{{ localeHelper locale "nav.blog" }}</a>
 		<a href="/account">{{ localeHelper locale "nav.account" }}</a>
 	</div>
-	<div class="discord-server-card">
-		<h1>{{ localeHelper locale "footer.widget.captions.0" }}</h1>
-		<h2>{{ localeHelper locale "footer.widget.captions.1" }}</h2>
-		<a href="https://invite.gg/pretendo">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-				<line x1="5" y1="12" x2="19" y2="12"></line>
-				<polyline points="12 5 19 12 12 19"></polyline>
-			</svg>
-			{{ localeHelper locale "footer.widget.button" }}
-		</a>
+	<div class="discord-server-card-wrapper">
+		<div class="discord-server-card">
+			<h1>{{ localeHelper locale "footer.widget.captions.0" }}</h1>
+			<h2>{{ localeHelper locale "footer.widget.captions.1" }}</h2>
+			<a href="https://invite.gg/pretendo">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+					<line x1="5" y1="12" x2="19" y2="12"></line>
+					<polyline points="12 5 19 12 12 19"></polyline>
+				</svg>
+				{{ localeHelper locale "footer.widget.button" }}
+			</a>
+		</div>
+		<div class="bandwidth-raccoon-wrapper">
+			<div class="text-bubble">
+				<p>I'm a raccoon, and I love eating grapes!</p>
+			</div>
+			<img src="/assets/images/bandwidth.svg" class="bandwidth-raccoon" />
+		</div>
 	</div>
 </footer>
+<script>
+	const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
+	const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
+	const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
+	let i = 0;
+
+	function unescapeHTML(string) {
+  	const el = document.createElement("span");
+  	el.innerHTML = string;
+  	return el.innerText;
+	}
+
+	const randomSentences = [
+	{{#times 9}}
+		`${unescapeHTML("{{localeHelper locale "footer.bandwidthRaccoonQuotes" this }}")}`,
+	{{/times}}
+	]
+
+	bandwidthRaccoon.addEventListener("click", () =>
+	{
+		bandwidthRaccoonWrapper.classList.add("speak");
+		if (!randomSentences[i]) {
+			i = 0
+		}
+		bandwidthRaccoonBubbleText.innerText = randomSentences[i];
+		i += 1;
+	})
+</script>
