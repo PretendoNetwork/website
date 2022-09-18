@@ -26,7 +26,7 @@
 	"progress": {
 		"title": "進行状況",
 		"paragraphs": [
-			"現在、私たちはいろんなサービスとの連携を含めたアカウントサーバーと共に、主にMiiverseに着手しています。",
+			null,
 			"3DSに関しては、マリオカート7に主に取り組んでいて、可能な場合は他のゲームにも取り組んでいます。"
 		]
 	},
@@ -84,7 +84,6 @@
 				"title": "Cemuサポート",
 				"caption": "あなたの好きなWii Uタイトルを、Wii Uなしでプレイできます!"
 			}
-
 		]
 	},
 	"credits": {
@@ -222,15 +221,6 @@
 	"blogPage": {
 		"title": "ブログ（英語）",
 		"description": "最新のアップデートをまとめてお届けします。もっと多くのアップデートを貰いたい方は、<a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>での寄付をご検討ください。"
-	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
 	},
 	"localizationPage": {
 		"title": "レッツローカライズ",

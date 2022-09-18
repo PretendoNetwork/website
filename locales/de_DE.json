@@ -4,9 +4,7 @@
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Mitwirkende",
-		"progress": "Fortschritt",
-		"blog": "Blog",
-		"account": "Account"
+		"progress": "Fortschritt"
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
@@ -26,7 +24,7 @@
 	"progress": {
 		"title": "Fortschritt",
 		"paragraphs": [
-			"Aktuell arbeiten wir am Miiverse, unseren Account-Servern und deren Integration mit den Diensten.",
+			null,
 			"Für den 3DS arbeiten wir nebenbei auch an Mario Kart 7, mit dem Wunsch, nach Möglichkeit auch an anderen Spielen zu arbeiten."
 		]
 	},
@@ -84,7 +82,6 @@
 				"title": "Cemu Unterstützung",
 				"caption": "Spiele deine Lieblings WII U Spiele sogar ohne eine Konsole!"
 			}
-
 		]
 	},
 	"credits": {
@@ -222,38 +219,5 @@
 	"blogPage": {
 		"title": "Blog",
 		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
-	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
-	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
-		"fileInput": "File to test",
-		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "Test file"
-	},
-	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
-		"quickLinks": {
-			"header": "Quick links",
-			"links": [
-				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
-				},
-				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
-				}
-			]
-		}
 	}
 }

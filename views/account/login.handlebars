@@ -6,22 +6,22 @@
 
 	<div class="account-form-wrapper">
 		<form action="/account/login" method="post" class="account">
-			<h2>Sign in</h2>
-			<p>Enter your account details below</p>
+			<h2>{{ localeHelper locale "account.loginForm.login" }}</h2>
+			<p>{{ localeHelper locale "account.loginForm.detailsPrompt" }}</p>
 			<div>
-				<label for="username">Username</label>
+				<label for="username">{{ localeHelper locale "account.loginForm.username" }}</label>
 				<input name="username" id="username" required>
 			</div>
 			<div>
-				<label for="password">Password</label>
+				<label for="password">{{ localeHelper locale "account.loginForm.password" }}</label>
 				<input name="password" id="password" type="password" required>
-				<a href="/account/passwordreset" class="pwdreset">Forgot your password?</a>
+				<a href="/account/passwordreset" class="pwdreset">{{ localeHelper locale "account.loginForm.forgotPassword" }}</a>
 			</div>
 			<input name="grant_type" id="grant_type" type="hidden" value="password">
 			<input name="redirect" id="redirect" type="hidden" value="{{redirect}}">
 			<div class="buttons">
-				<button type="submit">Login</button>
-			<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">Don't have an account?</a>
+				<button type="submit">{{ localeHelper locale "account.loginForm.login" }}</button>
+			<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">{{ localeHelper locale "account.loginForm.registerPrompt" }}</a>
 			</div>
 		</form>
 	</div>

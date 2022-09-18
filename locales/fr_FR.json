@@ -6,7 +6,11 @@
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
-		"account": "Compte"
+		"account": "Compte",
+		"accountWidget": {
+			"logout": "Déconnexion",
+			"settings": "Réglages"
+		}
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeu",
@@ -25,10 +29,7 @@
 	},
 	"progress": {
 		"title": "Progression",
-		"paragraphs": [
-			"Actuellement, nous travaillons sur Miiverse, ainsi que sur nos serveurs de comptes et son intégration avec nos services.",
-			"Pour la 3DS, nous travaillons également sur Mario Kart 7, avec la volonté de continuer à travailler sur d'autres jeux dès que possible."
-		]
+		"githubRepo": "Dépôt GitHub"
 	},
 	"faq": {
 		"title": "Foire Aux Questions",
@@ -41,7 +42,6 @@
 			{
 				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
 				"answer": "Malheuresement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration de NNID à PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
-
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
@@ -50,7 +50,6 @@
 			{
 				"question": "Savez-vous quand <fonctionnalité/service> sera prêt ?",
 				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont développés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
-
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
@@ -86,7 +85,6 @@
 				"title": "Support de Cemu",
 				"caption": "Jouez à vos titres Wii U préférés même sans console !"
 			}
-
 		]
 	},
 	"credits": {
@@ -223,16 +221,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
-	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"publishedOn": "le",
+		"published": "Publié par"
 	},
 	"localizationPage": {
 		"title": "Localisons",
@@ -256,6 +247,39 @@
 					"caption": "Cherchez-la ici"
 				}
 			]
+		}
+	},
+	"account": {
+		"loginForm": {
+			"login": "Connexion",
+			"detailsPrompt": "Entrez les informations du compte ci-dessous",
+			"password": "Mot de Passe",
+			"loginPrompt": "Déjà un Compte ?",
+			"username": "Pseudo",
+			"register": "S'inscrire",
+			"confirmPassword": "Confirmez le Mot de Passe",
+			"email": "Email",
+			"miiName": "Nom du Mii",
+			"forgotPassword": "Mot de Passe oublié ?",
+			"registerPrompt": "Pas de Compte ?"
+		},
+		"settings": {
+			"downloadFiles": "Télécharger fichiers du compte",
+			"settingCards": {
+				"gender": "Genre",
+				"profile": "Profil",
+				"nickname": "Surnom",
+				"birthDate": "Date de Naissance",
+				"country": "Pays/Région",
+				"timezone": "Décalage Horaire",
+				"serverEnv": "Environment du Serveur",
+				"production": "Production",
+				"beta": "Beta",
+				"upgradePrompt": "Les Serveurs Beta sont exclusifs au Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
+				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super!"
+			},
+			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
+			"upgrade": "Mettre à Niveau le compte"
 		}
 	}
 }

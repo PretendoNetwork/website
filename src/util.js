@@ -16,16 +16,16 @@ function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
 }
 
-function getLocale(region, language) {
-	const path = `${__dirname}/../locales/${region}_${language}.json`;
+function getLocale(language, region) {
+	const path = `${__dirname}/../locales/${language}_${region}.json`;
 
 	if (fs.pathExistsSync(path)) {
 		return require(path);
 	}
 
-	logger.warn(`Could not find locale ${region}_${language}! Loading US_en`);
+	logger.warn(`Could not find locale ${language}_${region}! Loading en_US`);
 
-	return require(`${__dirname}/../locales/US_en.json`);
+	return require(`${__dirname}/../locales/en_US.json`);
 }
 
 function getRawDocs(locale, subpath, pageName) {
@@ -141,6 +141,10 @@ async function refreshLogin(request, response) {
 	response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
 	response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
 	response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+	request.cookies.refresh_token = tokens.refresh_token;
+	request.cookies.access_token = tokens.access_token;
+	request.cookies.token_type = tokens.token_type;
 }
 
 async function getUserAccountData(request, response, fromRetry=false) {

@@ -4,9 +4,7 @@
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Mulțumiri",
-		"progress": "Progres",
-		"blog": "Blog",
-		"account": "Account"
+		"progress": "Progres"
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
@@ -26,7 +24,7 @@
 	"progress": {
 		"title": "Progres",
 		"paragraphs": [
-			"Momentan, lucrăm la Miiverse, împreună cu serverele de conturi și integrarea de servicii.",
+			null,
 			"Pentru 3DS, lucrăm de asemenea la Mario Kart 7, cu dorința de a continua să lucrăm și la alte jocuri dacă este posibil."
 		]
 	},
@@ -84,7 +82,6 @@
 				"title": "Suport Cemu",
 				"caption": "Joacă jocurile tale preferate de pe Wii U chiar și fără o consolă!"
 			}
-
 		]
 	},
 	"credits": {
@@ -223,15 +220,6 @@
 		"title": "Blog",
 		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
 	},
-	"account": {
-		"accountLevel": [
-			"Standard",
-			"Tester",
-			"Moderator",
-			"Developer"
-		],
-		"banned": "Banned"
-	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
 		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",
@@ -239,21 +227,5 @@
 		"fileInput": "Fișier de testare",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Testează fișier"
-	},
-	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
-		"quickLinks": {
-			"header": "Quick links",
-			"links": [
-				{
-					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
-				},
-				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
-				}
-			]
-		}
 	}
 }

@@ -1,98 +1,131 @@
-const Trello = require('trello');
+const { GraphQLClient, gql } = require('graphql-request');
 const Stripe = require('stripe');
-const got = require('got');
 const config = require('../config.json');
 
-const trello = new Trello(config.trello.api_key, config.trello.api_token);
+const graphql = new GraphQLClient('https://api.github.com/graphql', {
+	headers: {
+		Authorization: `bearer ${config.github.graphql_token}`,
+	}
+});
 const stripe = new Stripe(config.stripe.secret_key);
 
-const VALID_LIST_NAMES = ['Not Started', 'Started', 'Completed'];
-let trelloCache;
+const getProjectCards = gql`
+    fragment ItemContent on Node {
+        __typename
+        ... on DraftIssue {
+            title
+        }
+        ... on Issue {
+            title
+        }
+    }
+
+    fragment Itemfields on Node {
+        __typename
+        ... on ProjectV2ItemFieldSingleSelectValue {
+            name,
+            field {
+                ... on ProjectV2SingleSelectField {
+                    name
+                }
+            }
+        }
+    }
+
+    query getProjectCards($orgName: String!) {
+        organization(login: $orgName) {
+            projectsV2(first: 100) {
+                nodes {
+                    repositories(first: 1) {
+                        nodes {
+                            url
+                        }
+                    }
+                    title
+                    items(first: 100) {
+                        nodes {
+                            id
+                            content {
+                                ...ItemContent
+                            }
+                            fieldValues(first: 20) {
+                                nodes {
+                                    ...Itemfields
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
+
+let githubProjectsCache;
 let stripeDonationCache;
 
-async function getTrelloCache() {
-	const available = await trelloAPIAvailable();
-	if (!available) {
-		return trelloCache || {
-			update_time: 0,
-			sections: [{
-				title: 'Upstream API error',
-				id: '',
-				percentage_complete: '',
-				progress: {
-					not_started: [ 'Trello API unavailable' ],
-					started: [],
-					completed: []
-				}
-			}],
-		};
+async function getGithubProjectsCache() {
+	if (!githubProjectsCache) {
+		githubProjectsCache = await updateGithubProjectsCache();
 	}
 
-	if (!trelloCache) {
-		trelloCache = await updateTrelloCache();
+	if (githubProjectsCache.update_time < Date.now() - (1000 * 60 * 60)) {
+		githubProjectsCache = await updateGithubProjectsCache();
 	}
 
-	if (trelloCache.update_time < Date.now() - (1000 * 60 * 60)) {
-		trelloCache = await updateTrelloCache();
-	}
-
-	return trelloCache;
+	return githubProjectsCache;
 }
 
-async function updateTrelloCache() {
-	const progressCache = {
+function getProgressField(fields) {
+	const found = fields.nodes.find(v => v.field?.name === 'Status');
+	return found?.name ?? undefined;
+}
+
+async function updateGithubProjectsCache() {
+	const projectsCacheData = {
 		update_time: Date.now(),
 		sections: []
 	};
 
-	const boards = await trello.getOrgBoards(config.trello.board_name);
+	const data = await graphql.request(getProjectCards, {
+		orgName: 'PretendoNetwork',
+	});
 
-	for (const board of boards) {
-		const meta = {
-			title: '',
-			id: '',
-			percentage_complete: 0,
-			progress: {
-				not_started: [],
-				started: [],
-				completed: []
-			}
-		};
+	const projects = data.organization.projectsV2.nodes;
 
-		meta.title = board.name;
-		meta.id = board.shortLink;
-
-		const lists = await trello.getListsOnBoard(board.id);
-
-		const listNames = lists.map(list => list.name);
-		const hasAllValidLists = listNames.every(name => VALID_LIST_NAMES.includes(name));
-
-		if (!hasAllValidLists) {
+	for (const project of projects) {
+		if (!project.repositories.nodes[0]) {
 			continue;
 		}
 
-		const cards = await trello.getCardsOnBoard(board.id);
-
-		for (const card of cards) {
-			const cardList = lists.find(({ id }) => id === card.idList);
-			const listName = cardList.name.toLowerCase().replace(' ', '_');
-
-			if (meta.progress[listName]) {
-				meta.progress[listName].push(card.name);
+		const extractedData = {
+			title: project.title,
+			url: project.repositories.nodes[0]?.url,
+			cards: {
+				done: [],
+				in_progress: [],
+				todo: []
 			}
+		};
+
+		for (const { content, fieldValues } of project.items.nodes) {
+			const progress = getProgressField(fieldValues);
+
+			if (!['DraftIssue'].includes(content.__typename)) {
+				continue; // not a supported card, skip
+			}
+
+			if (!progress) {
+				continue; // entry does not have a status, skip
+			}
+
+			extractedData.cards[progress.toLowerCase().replace(' ', '_')]?.push(content.title);
 		}
 
-		if (meta.progress.not_started.length !== 0 || meta.progress.started.length !== 0 || meta.progress.completed.length !== 0) {
-			progressCache.sections.push(meta);
-		}
+		projectsCacheData.sections.push(extractedData);
 	}
 
-	return progressCache;
-}
-
-async function trelloAPIAvailable() {
-	const { status } = await got('https://trello.status.atlassian.com/api/v2/status.json').json();
-	return status.indicator !== 'major' && status.indicator !== 'critical';
+	return projectsCacheData;
 }
 
 async function getStripeDonationCache() {
@@ -147,6 +180,6 @@ async function updateStripeDonationCache() {
 }
 
 module.exports = {
-	getTrelloCache,
+	getGithubProjectsCache,
 	getStripeDonationCache
 };

@@ -1,21 +1,22 @@
 {
 	"http": {
-		"port": 80,
-		"base_url": "http://localhost:80"
-	},
-	"trello": {
-		"api_key": "key",
-		"api_token": "token",
-		"board_name": "name"
+		"port": 3000,
+		"base_url": "http://localhost:3000"
 	},
 	"discord": {
 		"client_id": "client_id",
 		"client_secret": "client_secret",
-		"bot_token": "token"
+		"guild_id": "408718485913468928",
+		"bot_token": "bot_token",
+		"tester_roles": [
+			"419704440333926401",
+			"882247322933801030"
+		]
 	},
 	"stripe": {
-		"secret_key": "sk_secret",
-		"webhook_secret": "whsec_secret"
+		"goal_cents": 300000,
+		"secret_key": "secret_key",
+		"webhook_secret": "webhook_secret"
 	},
 	"database": {
 		"account": {
@@ -28,7 +29,12 @@
 		}
 	},
 	"gmail": {
-		"user": "email@gmail.com",
-		"pass": "app-password"
-	}
+		"user": "username",
+		"pass": "app-password",
+		"from": "User Name <email@domain.name>"
+	},
+	"github": {
+		"graphql_token": "graphql_token"
+	},
+	"aes_key": "aes_key"
 }

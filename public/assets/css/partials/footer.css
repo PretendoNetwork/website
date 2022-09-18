@@ -2,7 +2,7 @@ footer {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(3, fit-content(100%)) 1fr;
-	gap: 7.7vw;
+	gap: min(48px, 7.7vw);
 	color: var(--text-shade-1);
 	margin-top: 120px;
 	position: relative;

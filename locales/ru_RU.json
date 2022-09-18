@@ -4,9 +4,7 @@
 		"faq": "ЧаВо",
 		"docs": "Docs",
 		"credits": "Команда",
-		"progress": "Прогресс",
-		"blog": "Blog",
-		"account": "Account"
+		"progress": "Прогресс"
 	},
 	"hero": {
 		"subtitle": "Игровые сервера",
@@ -26,7 +24,7 @@
 	"progress": {
 		"title": "Прогресс",
 		"paragraphs": [
-			"На данный момент, мы работаем над Miiverse, вместе с нашими серверами аккаунтов и их интеграция в другие сервисы.",
+			null,
 			"Насчёт 3DS, мы также работаем над Mario Kart 7, а также если возможно, продолжить работу и над другими онлайн играми."
 		]
 	},
@@ -66,25 +64,6 @@
 				"question": "Нужно ли мне прошивать консоль?",
 				"answer": "Да, вам понадобится прошить консоль, чтобы подключиться. Однако, на Wii U вам понадобится только доступ к Homebrew Launcher (т.е. Haxchi, Coldboot Haxchi, или web browser exploit). Информация о подключении с 3DS будет опубликована позже."
 			}
-		]
-	},
-	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
-		"cards": [
-			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
-			},
-			{
-				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
-			},
-			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
-			}
-
 		]
 	},
 	"credits": {

@@ -28,14 +28,14 @@ svg.logotype {
 	max-width: 1920px;
 	height: 100%;
 	margin: auto;
-	gap: 0 48px;
+	gap: 0 120px;
 }
 .params-wrapper::before {
 	content: "";
 	display: block;
 	position: absolute;
 	background: var(--bg-shade-1);
-	border-radius: 100%;
+	border-radius: 100% 0 0 100%;
 	width: 1300px;
 	height: 1700px;
 	top: 50%;
@@ -59,23 +59,23 @@ svg.logotype {
 	z-index: -1;
 }
 
-div.mii-img-wrapper {
+.canvas-wrapper {
 	position: relative;
-	margin: auto;
 	display: flex;
 	justify-content: center;
-	width: 512px;
-	left: -48px;
+	align-items: center;
+	width: 100%;
 	height: 100%;
-	max-height: 384px;
+	overflow: hidden;
 }
-img#mii-img {
-	position: absolute;
-	bottom: 0;
+
+canvas#miiCanvas {
 	width: auto;
-	height: 512px;
-	z-index: 2;
+	height: auto;
+	transform-origin: center;
+	transition: transform 200ms, filter 200ms;
 }
+
 div.mii-img-wrapper::before {
 	content: "";
 	position: absolute;
@@ -188,6 +188,41 @@ div.subtabs .subtabbtn.active:hover::before {
 	background: url("/assets/images/miieditor.svg");
 	background-position: calc(var(--assetcol) * -16px) -336px;
 	transform: scale(3);
+}
+
+.has-textinput {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-auto-rows: auto;
+	gap: 24px;
+}
+.has-textinput label {
+	display: block;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.has-textinput .icons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.has-textinput .icons input[type="checkbox"] {
+	box-sizing: border-box;
+	margin: 0;
+	height: 49px;
+	width:  49px;
+}
+
+input[type="checkbox"]#allowCopying:checked {
+	background: no-repeat center/80% url(../images/copy.svg), var(--accent-shade-0);
+}
+input[type="checkbox"]#disableSharing:checked {
+	background: no-repeat center/80% url(../images/share.svg), var(--accent-shade-0);
+}
+input[type="checkbox"]#favorite:checked {
+	background: no-repeat center/80% url(../images/star.svg), var(--accent-shade-0);
 }
 
 form.params {
@@ -418,10 +453,6 @@ button * {
 		gap: 12px;
 	}
 
-	div.mii-img-wrapper {
-		left: -36px;
-	}
-
 	div.params-wrapper {
 		margin-right: 24px;
 	}
@@ -445,10 +476,6 @@ button * {
 	fieldset,
 	fieldset.has-subpages .subpage {
 		gap: 8px;
-	}
-
-	div.mii-img-wrapper {
-		left: -36px;
 	}
 
 	div.params-wrapper {
@@ -497,16 +524,15 @@ button * {
 }
 
 @media screen and (max-width: 1080px) {
-	div.mii-img-wrapper {
-		left: 0;
-		top: 0;
-	}
-	img#mii-img {
-		max-height: 150%;
+	.canvas-wrapper {
+		height: calc(100% - 12px);
 	}
 
 	svg.logotype {
 		left: 0;
+	}
+	svg.logotype text#Pretendo {
+		display: none;
 	}
 
 	.miieditor-wrapper {
@@ -527,11 +553,6 @@ button * {
 	div.subtabs {
 		order: 2;
 		margin-top: 1rem;
-	}
-
-	div.mii-img-wrapper {
-		width: 100%;
-		max-width: 512px;
 	}
 
 	fieldset {
@@ -593,7 +614,7 @@ button * {
 		grid-row: 4;
 	}
 
-	fieldset:not(.has-sliders) {
+	fieldset:not(.has-sliders, .has-textinput) {
 		position: relative;
 		margin-bottom: -60px;
 	}
@@ -647,6 +668,15 @@ button * {
 	div.subtabs .subtabbtn {
 		width: 36px;
 		height: 36px;
+	}
+
+	div.pagination {
+		transform: scale(0.7);
+		transform-origin: right;
+	}
+
+	.has-textinput {
+		grid-template-columns: 1fr;
 	}
 }
 
