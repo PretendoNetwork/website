@@ -81,7 +81,7 @@ function apiGetRequest(path, headers) {
 	});
 }
 
-function apiPostGetRequest(path, headers, json) {
+function apiPostRequest(path, headers, json) {
 	return got.post(`https://api.pretendo.cc${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
@@ -93,7 +93,7 @@ function apiPostGetRequest(path, headers, json) {
 	});
 }
 
-function apiDeleteGetRequest(path, headers, json) {
+function apiDeleteRequest(path, headers, json) {
 	return got.delete(`https://api.pretendo.cc${path}`, {
 		throwHttpErrors: false,
 		https: {
@@ -105,7 +105,7 @@ function apiDeleteGetRequest(path, headers, json) {
 }
 
 async function register(registerData) {
-	const apiResponse = await apiPostGetRequest('/v1/register', {}, registerData);
+	const apiResponse = await apiPostRequest('/v1/register', {}, registerData);
 
 	if (apiResponse.statusCode !== 200) {
 		throw new Error(apiResponse.body.error);
@@ -115,7 +115,7 @@ async function register(registerData) {
 }
 
 async function login(username, password) {
-	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+	const apiResponse = await apiPostRequest('/v1/login', {}, {
 		username,
 		password,
 		grant_type: 'password'
@@ -129,7 +129,7 @@ async function login(username, password) {
 }
 
 async function refreshLogin(request, response) {
-	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+	const apiResponse = await apiPostRequest('/v1/login', {}, {
 		refresh_token: request.cookies.refresh_token,
 		grant_type: 'refresh_token'
 	});
@@ -169,7 +169,7 @@ async function getUserAccountData(request, response, fromRetry=false) {
 }
 
 async function updateDiscordConnection(discordUser, request, response, fromRetry=false) {
-	const apiResponse = await apiPostGetRequest('/v1/connections/add/discord', {
+	const apiResponse = await apiPostRequest('/v1/connections/add/discord', {
 		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
 	}, {
 		data: {
@@ -437,8 +437,8 @@ module.exports = {
 	getRawDocs,
 	parseDocs,
 	apiGetRequest,
-	apiPostGetRequest,
-	apiDeleteGetRequest,
+	apiPostRequest,
+	apiDeleteRequest,
 	register,
 	login,
 	refreshLogin,
