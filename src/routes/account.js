@@ -147,6 +147,7 @@ router.get('/logout', async(_request, response) => {
 });
 
 router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {
+	const { pnid } = request;
 	let tokens;
 	try {
 		// Attempt to get OAuth2 tokens
@@ -166,8 +167,52 @@ router.get('/connect/discord', requireLoginMiddleware, async (request, response)
 	try {
 		await util.updateDiscordConnection(discordUser, request, response);
 
+		const priceId = pnid.get('connections.stripe.price_id');
+
+		if (priceId && priceId.trim() !== '') {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product);
+			const discordRoleId = product.metadata.discord_role_id;
+			const discordId = discordUser.id;
+
+			await util.assignDiscordMemberSupporterRole(discordId, discordRoleId);
+
+			if (product.metadata.beta === 'true') {
+				await util.assignDiscordMemberTesterRole(discordId);
+			}
+		}
+
 		response.cookie('success_message', 'Discord account linked successfully', { domain: '.pretendo.network' });
-		response.redirect('/account');
+		return response.redirect('/account');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
+});
+
+router.get('/remove/discord', requireLoginMiddleware, async (request, response) => {
+	const { account, pnid } = request;
+
+	try {
+		await util.removeDiscordConnection(request, response);
+
+		const priceId = pnid.get('connections.stripe.price_id');
+
+		if (priceId && priceId.trim() !== '') {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product);
+			const discordRoleId = product.metadata.discord_role_id;
+			const discordId = account.connections.discord.id;
+
+			await util.removeDiscordMemberSupporterRole(discordId, discordRoleId);
+
+			if (product.metadata.beta === 'true') {
+				await util.removeDiscordMemberTesterRole(discordId);
+			}
+		}
+		
+		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
+		return response.redirect('/account');
 	} catch (error) {
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account');

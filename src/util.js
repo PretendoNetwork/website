@@ -188,6 +188,22 @@ async function updateDiscordConnection(discordUser, request, response, fromRetry
 	}
 }
 
+async function removeDiscordConnection(request, response, fromRetry = false) {
+	const apiResponse = await apiDeleteRequest('/v1/connections/remove/discord', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200 && fromRetry === true) {
+		// TODO: Error message
+		throw new Error('Bad');
+	}
+
+	if (apiResponse.statusCode !== 200) {
+		await refreshLogin(request, response);
+		await removeDiscordConnection(request, response, true);
+	}
+}
+
 function nintendoPasswordHash(password, pid) {
 	const pidBuffer = Buffer.alloc(4);
 	pidBuffer.writeUInt32LE(pid);
@@ -444,6 +460,11 @@ module.exports = {
 	refreshLogin,
 	getUserAccountData,
 	updateDiscordConnection,
+	removeDiscordConnection,
 	nintendoPasswordHash,
-	handleStripeEvent
+	handleStripeEvent,
+	assignDiscordMemberSupporterRole,
+	assignDiscordMemberTesterRole,
+	removeDiscordMemberSupporterRole,
+	removeDiscordMemberTesterRole
 };
