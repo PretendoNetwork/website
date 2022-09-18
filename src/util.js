@@ -4,11 +4,14 @@ const got = require('got');
 const crypto = require('crypto');
 const Stripe = require('stripe');
 const { marked } = require('marked');
+const { REST: DiscordRest } = require('@discordjs/rest');
+const { Routes: DiscordRoutes } = require('discord-api-types/v10');
 const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
 const config = require('../config.json');
 
+const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
 
 const stripe = new Stripe(config.stripe.secret_key);
 
@@ -270,6 +273,7 @@ async function handleStripeEvent(event) {
 		}
 
 		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
+		const discordId = pnid.get('connections.discord.id');
 
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
 			// Canceling old subscription, do nothing but update webhook date
@@ -302,6 +306,10 @@ async function handleStripeEvent(event) {
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 1;
 					}
+
+					assignDiscordMemberTesterRole(discordId).catch(error => {
+						logger.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+					});
 					break;
 
 				case 'canceled': // Subscription was canceled
@@ -309,6 +317,10 @@ async function handleStripeEvent(event) {
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 0;
 					}
+
+					removeDiscordMemberTesterRole(discordId).catch(error => {
+						logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+					});
 					break;
 
 				default:
@@ -353,6 +365,10 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
 
 		if (subscription.status === 'canceled') {
@@ -365,6 +381,10 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
 
 		if (subscription.status === 'unpaid') {
@@ -377,7 +397,37 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
+	}
+}
+
+async function assignDiscordMemberSupporterRole(memberId, roleId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, roleId));
+	}
+}
+
+async function assignDiscordMemberTesterRole(memberId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.tester));
+	}
+}
+
+async function removeDiscordMemberSupporterRole(memberId, roleId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, roleId));
+	}
+}
+
+async function removeDiscordMemberTesterRole(memberId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.tester));
 	}
 }
 

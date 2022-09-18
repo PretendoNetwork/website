@@ -298,8 +298,8 @@ router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request,
 	const pnid = await database.PNID.findOne({ pid });
 
 	if (pnid.get('access_level') >= 2) {
-		response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
-		return response.redirect('/account');
+		//response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		//return response.redirect('/account');
 	}
 
 	try {
@@ -365,14 +365,15 @@ router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, respo
 	return response.redirect('/account');
 });
 
-router.post('/stripe/webhook', express.raw({ type: 'application/json' }), async (request, response) => {
+router.post('/stripe/webhook', async (request, response) => {
 	const stripeSignature = request.headers['stripe-signature'];
 	let event;
 
 	try {
-		event = stripe.webhooks.constructEvent(request.body, stripeSignature, config.stripe.webhook_secret);
-	} catch (err) {
-		return response.status(400).send(`Webhook Error: ${err.message}`);
+		event = stripe.webhooks.constructEvent(request.rawBody, stripeSignature, config.stripe.webhook_secret);
+	} catch (error) {
+		logger.error(error.message);
+		return response.status(400).send(`Webhook Error: ${error.message}`);
 	}
 
 	await util.handleStripeEvent(event);
