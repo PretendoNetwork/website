@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "À propos",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Documentation",
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
@@ -13,9 +13,9 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Serveurs de jeu",
+		"subtitle": "Serveurs de jeux",
 		"title": "Recréés",
-		"text": "Pretendo est un remplacement gratuit et open-source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels.",
+		"text": "Pretendo est une alternative gratuite et open source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels",
 		"buttons": {
 			"readMore": "En savoir plus"
 		}
@@ -23,8 +23,8 @@
 	"aboutUs": {
 		"title": "À propos de nous",
 		"paragraphs": [
-			"Pretendo est un projet open-source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
-			"Puisque nos services seront à la fois gratuits et open-source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
+			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
+			"Puisque nos services seront à la fois gratuits et open source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
 		]
 	},
 	"progress": {
@@ -37,23 +37,23 @@
 		"QAs": [
 			{
 				"question": "Qu'est-ce que Pretendo ?",
-				"answer": "Pretendo est un remplacement open-source du Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
+				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
 				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
-				"answer": "Malheuresement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration de NNID à PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
+				"answer": "Malheureusement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration des NNID aux PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
 				"answer": "Pretendo n'est actuellement pas dans un état prêt à être utilisé par le public. Cependant, dès qu'il le sera, vous pourrez utiliser Pretendo en exécutant simplement notre patcheur homebrew sur votre console."
 			},
 			{
-				"question": "Savez-vous quand <fonctionnalité/service> sera prêt ?",
+				"question": "Savez-vous quand fonctionnalité/service sera prêt ?",
 				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont développés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo est conçu pour la Wii U et la 3DS; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait tout de mêtre possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
+				"answer": "Pretendo est conçu pour la Wii U et la 3DS ; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait tout de mêtre possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
-				"answer": "Oui, vous devrez modifier votre appareil afin de vous connecter; cependant sur Wii U un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
+				"answer": "Oui, vous devrez hack votre appareil afin de vous connecter ; cependant sur Wii U, un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
 			}
 		]
 	},
@@ -171,7 +171,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Partage d'information Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -189,7 +189,7 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
+				"name": "Contributeurs GitHub",
 				"caption": "Localisations et autres contributions",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
@@ -217,7 +217,7 @@
 	},
 	"progressPage": {
 		"title": "Notre progression",
-		"description": "Vérifiez l'avancement et les objectifs du projet ! (Mis à jour environ toute les heures, ne reflète pas TOUS nos objectifs et notre progression)."
+		"description": "Vérifiez l'avancement et les objectifs du projet ! (Mis à jour environ toute les heures, ne reflète pas TOUS nos objectifs et notre progression)"
 	},
 	"blogPage": {
 		"title": "Blog",
@@ -276,10 +276,53 @@
 				"production": "Production",
 				"beta": "Beta",
 				"upgradePrompt": "Les Serveurs Beta sont exclusifs au Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
-				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super!"
+				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super !",
+				"newsletterPrompt": "Recevoir les mises à jour via email (vous pourrez toujours changer ça plus tard)",
+				"signInSecurity": "Inscription et sécurité",
+				"email": "Email",
+				"password": "Mot de Passe",
+				"passwordResetNotice": "Une fois votre mot de passe changé, vous serez déconnecté de tous les appareils.",
+				"signInHistory": "Historique de Connexion",
+				"fullSignInHistory": "Voir l'historique de connexion complète",
+				"otherSettings": "Autres Paramètres",
+				"discord": "Discord",
+				"connectedToDiscord": "Connecté à Discord en tant que",
+				"removeDiscord": "Délier le compte Discord",
+				"noDiscordLinked": "Pas de compte Discord associé.",
+				"linkDiscord": "Associer un compte Discord",
+				"newsletter": "Newsletter",
+				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu"
 			},
 			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
 			"upgrade": "Mettre à Niveau le compte"
-		}
+		},
+		"banned": "Banni",
+		"accountLevel": [
+			"Standard",
+			"Testeur",
+			"Modérateur",
+			"Développeur"
+		]
+	},
+	"upgrade": {
+		"title": "Mise à Niveau",
+		"changeTierPrompt": "Êtes-vous sûr de vouloir vous désabonner de <span class=\"oldtier\">oldertiername</span> et vous abonner à <span class=\"newtier\">newtiername</span> ?",
+		"description": "Atteindre le but mensuel fera de Pretendo un travail complet, proposant des mises à jour de meilleures qualité à une plus grande vitesse.",
+		"month": "mois",
+		"tierSelectPrompt": "Sélectionnez un niveau",
+		"unsub": "Se désabonner",
+		"unsubPrompt": "Êtes-vous sûr de vouloir vous désabonner du <span>tiername</span> ? Vous perdrez toutes les récompenses associées à ce niveau.",
+		"unsubConfirm": "Se désabonner",
+		"changeTier": "Changer de niveau",
+		"changeTierConfirm": "Changer de niveau",
+		"back": "Retour"
+	},
+	"donation": {
+		"upgradePush": "Pour s'abonner et avoir accès à des récompenses spéciales, visitez <a href=\"/account/upgrade\">la page de mise à niveau</a>.",
+		"progress": "<span>$${totd}</span> sur <span>$${goald}</span>/mois, <span>${perc}%</span> du but mensuel."
+	},
+	"modals": {
+		"cancel": "Annuler",
+		"confirm": "Confirmer"
 	}
 }

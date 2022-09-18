@@ -4,12 +4,18 @@
 		"faq": "FAQ",
 		"docs": "Docs",
 		"credits": "Mitwirkende",
-		"progress": "Fortschritt"
+		"progress": "Fortschritt",
+		"blog": "Blog",
+		"account": "Account",
+		"accountWidget": {
+			"settings": "Einstellungen",
+			"logout": "Abmelden"
+		}
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
 		"title": "Rekonstruiert",
-		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der offiziellen Einstellung des NNs, ermöglicht.",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der offiziellen Einstellung des NNs, ermöglicht",
 		"buttons": {
 			"readMore": "Mehr lesen"
 		}
@@ -23,14 +29,11 @@
 	},
 	"progress": {
 		"title": "Fortschritt",
-		"paragraphs": [
-			null,
-			"Für den 3DS arbeiten wir nebenbei auch an Mario Kart 7, mit dem Wunsch, nach Möglichkeit auch an anderen Spielen zu arbeiten."
-		]
+		"githubRepo": "Github-Repository"
 	},
 	"faq": {
 		"title": "Frequently Asked Questions (Häufig gestellte Fragen)",
-		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen:",
+		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen, zur schnellen Informationsbeschaffung.",
 		"QAs": [
 			{
 				"question": "Was ist Pretendo?",
@@ -45,7 +48,7 @@
 				"answer": "Pretendo ist aktuell nicht für die öffentliche Nutzung verfügbar. Sobald das Pretendo Network bereit ist, kannst du es einfach durch unseren Homebrew-Patcher auf deiner Konsole nutzen."
 			},
 			{
-				"question": "Weißt du, wann <Funktion/Dienst> bereit ist?",
+				"question": "Weißt du, wann Funktion/Dienst bereit ist?",
 				"answer": "Nein. Viele der Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet), deshalb können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
@@ -72,7 +75,7 @@
 		"cards": [
 			{
 				"title": "Spiele Server",
-				"caption": " Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
+				"caption": "Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
 			},
 			{
 				"title": "Juxtaposition",
@@ -168,7 +171,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Miiverse Informationsaustausch",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -186,7 +189,7 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
+				"name": "GitHub-Mitwirkende",
 				"caption": "Übersetzungen und andere Beiträge",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
@@ -218,6 +221,108 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Veröffentlicht von",
+		"publishedOn": "am"
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Entwickler"
+		],
+		"loginForm": {
+			"login": "Anmelden",
+			"detailsPrompt": "Gib deine Accountdaten unten ein",
+			"register": "Registrieren",
+			"username": "Benutzername",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"email": "E-Mail",
+			"miiName": "Mii-Name",
+			"forgotPassword": "Passwort vergessen?",
+			"registerPrompt": "Du hast noch keinen Account?",
+			"loginPrompt": "Du hast schon einen Account?"
+		},
+		"settings": {
+			"settingCards": {
+				"profile": "Profil",
+				"nickname": "Spitzname",
+				"birthDate": "Geburtsdatum",
+				"gender": "Geschlecht",
+				"country": "Land/Region",
+				"timezone": "Zeitzone",
+				"production": "Produktion",
+				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Account-Stufe durchführen.",
+				"signInSecurity": "Anmeldung und Sicherheit",
+				"signInHistory": "Anmeldeverlauf",
+				"fullSignInHistory": "Vollständigen Anmeldeverlauf anzeigen",
+				"otherSettings": "Andere Einstellungen",
+				"discord": "Discord",
+				"connectedToDiscord": "Verbunden mit Discord als",
+				"linkDiscord": "Discord-Konto verknüpfen",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Erhalt von Projektinformationen per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
+				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
+				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
+				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
+				"serverEnv": "Server-Umgebung",
+				"beta": "Beta",
+				"email": "E-Mail",
+				"password": "Passwort",
+				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
+				"removeDiscord": "Discord-Konto entfernen"
+			},
+			"downloadFiles": "Account-Dateien herunterladen",
+			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
+			"upgrade": "Konto upgraden"
+		},
+		"banned": "Gebannt"
+	},
+	"upgrade": {
+		"title": "Upgrade",
+		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
+		"month": "Monat",
+		"tierSelectPrompt": "Wähle eine Stufe",
+		"unsub": "Deabonnieren",
+		"unsubPrompt": "Bist du dir sicher, dass du <span>tiername</span> deabonnieren möchtest? Du wirst den Zugang zu den Vorteilen verlieren, die mit dieser Stufe verbunden sind.",
+		"unsubConfirm": "Deabonnieren",
+		"changeTier": "Stufe ändern",
+		"changeTierPrompt": "Bist du dir sicher, dass du <span class=\"oldtier\">oldtiername</span> deabonnieren und <span class=\"newtier\">newtiername</span> abonnieren möchtest?",
+		"back": "Zurück",
+		"changeTierConfirm": "Stufe ändern"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> von <span>$${goald}</span>/Monat, <span>${perc}%</span> des monatlichen Ziels.",
+		"upgradePush": "Um Abonnent zu werden und Zugang zu coolen Vorteilen zu erhalten, besuche die <a href=\"/account/upgrade\">Upgrade-Seite</a>."
+	},
+	"localizationPage": {
+		"description": "Füge einen Link zu einem öffentlich zugänglichen JSON-Locale ein, um es auf der Website zu testen",
+		"filePlaceholder": "https://ein.link.zu/der_datei.json",
+		"button": "Test-Datei",
+		"title": "Lass uns lokalisieren",
+		"instructions": "Anweisungen zur Lokalisierung anzeigen",
+		"fileInput": "Zu testende Datei"
+	},
+	"docs": {
+		"missingInLocale": "Diese Seite ist in deinem Land nicht verfügbar. Bitte schau dir die englische Version unten an.",
+		"quickLinks": {
+			"header": "Schnelle Links",
+			"links": [
+				{
+					"header": "Pretendo installieren",
+					"caption": "Einrichtungsanweisungen anzeigen"
+				},
+				{
+					"header": "Hast du einen Fehler?",
+					"caption": "Suche nach diesem hier"
+				}
+			]
+		}
+	},
+	"modals": {
+		"cancel": "Abbrechen",
+		"confirm": "Bestätigen"
 	}
 }

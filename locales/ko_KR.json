@@ -78,7 +78,7 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "최근에 처음 만들어진 것처럼 만드는, Miiverse의 재제작입니다. "
+				"caption": "최근에 처음 만들어진 것처럼 만드는, Miiverse의 재제작입니다."
 			},
 			{
 				"title": "Cemu 지원",
@@ -220,10 +220,10 @@
 	},
 	"blogPage": {
 		"title": "블로그",
-		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면,  <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
+		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면, <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
 	},
 	"localizationPage": {
-		"title": "같이 번역해 주세요!",
+		"title": "같이 번역해 주세요",
 		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",
 		"instructions": "로컬라이즈",
 		"fileInput": "테스트할 파일",

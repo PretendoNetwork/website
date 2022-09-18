@@ -52,7 +52,7 @@
 				"answer": "Pretendo is momenteel nog niet klaar voor publiekelijk gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
 			},
 			{
-				"question": "Wanneer is &lt;feature/dienst&gt; klaar?",
+				"question": "Wanneer is feature/dienst klaar?",
 				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt bijvoorbeeld door één ontwikkelaar ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
 			},
 			{
@@ -193,8 +193,8 @@
 		"publishedOn": "op"
 	},
 	"localizationPage": {
-		"title": "Laten we meer talen toevoegen!",
-		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen.",
+		"title": "Laten we meer talen toevoegen",
+		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen",
 		"instructions": "Zie hier instructies voor het vertalen",
 		"fileInput": "Bestand om te testen",
 		"filePlaceholder": "https://een.link.naar/het_bestand.json",
