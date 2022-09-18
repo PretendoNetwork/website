@@ -1,5 +1,4 @@
 /* Removing until it's done */
-.setting-card a.edit,
 .sign-in-history a {
 	display: none;
 }
@@ -172,6 +171,9 @@
 .setting-card .edit:hover {
 	background: var(--bg-shade-3);
 	color: var(--text-shade-3);
+}
+.setting-card .edit svg {
+	pointer-events: none;
 }
 
 .setting-card .header {
