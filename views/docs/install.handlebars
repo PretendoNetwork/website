@@ -36,80 +36,37 @@
 
 	{{> docs-sidebar}}
 
-	<div class="content search">
+	<div class="content">
 		<div class="content-inner">
-			<div class="purple-card">
-				<h1>Got an error code?</h1>
-				<p>Type it in the box below to get information on your issue!</p>
-				<label for="errorCode">Error code</label>
-				<div class="input-wrapper">
-					<input id="errorCode" placeholder="ABC-012-3456" required />
-					<div class="matches">
-					</div>
-				</div>
+			<h1>Installation</h1>
+			<p>
+				Please choose your platform below.
+			</p>
+			<div class="platform-grid">
+				<a href="/docs/install/wiiu">
+					<img src="/assets/images/docs/install/icons/wiiu-gamepad.svg" alt="Illustration of a Wii U Gamepad" />
+					<span>Wii U</span>
+				</a>
+				<a href="/docs/install/3ds">
+					<img src="/assets/images/docs/install/icons/2ds.svg" alt="Illustration of a New Nintendo 2DS XL" />
+					<span>3DS Family</span>
+				</a>
+				<a href="/docs/install/cemu">
+					<img src="/assets/images/docs/install/icons/cemu.svg" alt="Cemu logo" />
+					<span>Cemu</span>
+				</a>
+				<a href="/docs/install/citra">
+					<img src="/assets/images/docs/install/icons/citra.svg" alt="Citra logo" />
+					<span>Citra</span>
+				</a>
 			</div>
-
 		</div>
 	</div>
 </div>
 
 <script src="/assets/js/docssidebarhandler.js"></script>
 
-<script id="errorList" type="application/json">
-  {{{errorList}}}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
-
-<script>
-	// Get the error list from the script tag
-	let rawErrorList = JSON.parse(document.getElementById('errorList').innerHTML);
-
-	// Convert the error list to a single flat array
-	rawErrorList = Object.values(rawErrorList).flat();
-
-	// We remove the unknown characters (e.g. the X in JXT-598-2XXX), so fuse.js will be able to match the error codes
-	const errorList = rawErrorList.map(error => {
-		return error.replace(/X*$/g, '');
-	});
-
-	const fuse = new Fuse(errorList, {includeMatches: true, threshold: 0.4});
-	const cleave = new Cleave('input#errorCode', {
-    delimiter: '-',
-    blocks: [3, 3, 4],
-    uppercase: true
-	});
-
-	const matchesContainer = document.querySelector('.matches');
-	const input = document.querySelector('input#errorCode');
-
-	input.addEventListener('input', (e) => {
-		const errorCode = e.target.value;
-		const matches = fuse.search(errorCode);
-
-		if (!errorCode) {
-			matchesContainer.innerHTML = '';
-			input.classList.remove('has-matches');
-			return
-		}
-
-		matchesContainer.innerHTML = '';
-		input.classList.add('has-matches');
-
-		if (matches.length > 0) {
-			matches.forEach(match => {
-				const errorCode = match.item.padEnd(12, 'X');
-				const matchLink = document.createElement('a');
-				matchLink.innerText = errorCode;
-				matchLink.href = `/docs/errors/${errorCode}`;
-				matchesContainer.appendChild(matchLink);
-			});
-		} else {
-			const noMatch = document.createElement('p');
-			noMatch.innerText = 'No matches found';
-			matchesContainer.appendChild(noMatch);
-		}
-	});
-</script>
-
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<link rel="stylesheet" href="/assets/css/highlightjs.css">
+<script>hljs.highlightAll();</script>

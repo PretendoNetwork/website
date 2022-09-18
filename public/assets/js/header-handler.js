@@ -49,7 +49,7 @@ document.addEventListener('scroll', () => {
 	localeDropdownOptions.forEach((el) => el.classList.remove('active'));
 	localeDropdownToggle.classList.remove('active');
 
-	userWidget.classList.remove('active');
+	userWidget?.classList.remove('active');
 });
 
 // click outside of dropdown will close all dropdowns
@@ -59,17 +59,17 @@ document.addEventListener('click', (e) => {
 	let found = false;
 	if (
 		localeDropdown == targetElement ||
-	localeDropdown.contains(targetElement)
+		localeDropdown?.contains(targetElement)
 	) {
 		found = true;
-		userWidget.classList.remove('active');
+		userWidget?.classList.remove('active');
 	}
 
 	if (
 		userWidget == targetElement ||
-	userWidget.contains(targetElement) ||
+	userWidget?.contains(targetElement) ||
 	userWidgetToggle == targetElement ||
-	userWidgetToggle.contains(targetElement)
+	userWidgetToggle?.contains(targetElement)
 	) {
 		found = true;
 		localeDropdownToggle.classList.remove('active');
@@ -79,7 +79,7 @@ document.addEventListener('click', (e) => {
 	if (found) return;
 
 	// click outside of dropdowns
-	userWidget.classList.remove('active');
+	userWidget?.classList.remove('active');
 	localeDropdownToggle.classList.remove('active');
 	localeOptionsContainer.classList.remove('active');
 });
