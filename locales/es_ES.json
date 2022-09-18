@@ -318,7 +318,8 @@
 		"changeTier": "Cambiar rango",
 		"changeTierPrompt": "¿Está seguro de que desea darse de baja de <span class=\"oldtier\">oldtiername</span> y suscribirse a <span class=\"newtier\">newtiername</span>?",
 		"changeTierConfirm": "Cambiar rango",
-		"back": "Atrás"
+		"back": "Atrás",
+		"title": "Subir rango"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> del objetivo mensual.",

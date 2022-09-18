@@ -6,7 +6,11 @@
 		"credits": "贡献者",
 		"progress": "进度",
 		"blog": "博客",
-		"account": "用户"
+		"account": "用户",
+		"accountWidget": {
+			"settings": "设置",
+			"logout": "登出"
+		}
 	},
 	"hero": {
 		"subtitle": "游戏服务器",
@@ -28,7 +32,8 @@
 		"paragraphs": [
 			null,
 			"对于 3DS，我们也在创建《马里奥赛车 7》的服务器，并希望在可能的情况下继续为他游戏做服务器。"
-		]
+		],
+		"githubRepo": "Github 信息库"
 	},
 	"faq": {
 		"title": "常见问题",
@@ -170,7 +175,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Miiverse 信息共享",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -188,7 +193,7 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
+				"name": "GitHub 贡献者",
 				"caption": "本地化和其他贡献",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
@@ -220,7 +225,9 @@
 	},
 	"blogPage": {
 		"title": "博客",
-		"description": "压缩块的最新更新。如果您想看到更频繁的更新，请考虑在 <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> 上支持我们。"
+		"description": "压缩块的最新更新。如果您想看到更频繁的更新，请考虑在 <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> 上支持我们。",
+		"published": "作者",
+		"publishedOn": "在"
 	},
 	"localizationPage": {
 		"title": "让我们本地化",
@@ -245,5 +252,81 @@
 				}
 			]
 		}
+	},
+	"account": {
+		"loginForm": {
+			"login": "登录",
+			"confirmPassword": "再次输入密码",
+			"username": "用户名",
+			"detailsPrompt": "请在下面输入您的账号信息",
+			"register": "注册",
+			"password": "密码",
+			"email": "邮件",
+			"miiName": "Mii 账号名",
+			"forgotPassword": "忘记了密码？",
+			"registerPrompt": "没有一个账号？",
+			"loginPrompt": "已经有了一个账号？"
+		},
+		"settings": {
+			"settingCards": {
+				"newsletterPrompt": "通过电子邮件接收项目更新（您可以随时选择退出）",
+				"discord": "Discord 聊天",
+				"connectedToDiscord": "连接Discord的身份:",
+				"removeDiscord": "移除Discord账号",
+				"passwordPrompt": "输入您的 PNID 密码以下载 Cemu 文件",
+				"profile": "账号信息",
+				"nickname": "昵称",
+				"birthDate": "出生日期",
+				"gender": "性别",
+				"country": "国家/地区",
+				"timezone": "时区",
+				"serverEnv": "服务器环境",
+				"production": "制作",
+				"beta": "Beta 版本",
+				"upgradePrompt": "Beta 服务器仅供 Beta 测试人员使用。<br>要成为 Beta 测试人员，请升级到更高的帐户等级。",
+				"hasAccessPrompt": "您当前的等级为您提供 Beta 服务器访问权限。耶！",
+				"signInSecurity": "登录和安全",
+				"email": "邮件",
+				"password": "密码",
+				"passwordResetNotice": "在修改密码后，所有登入的系统会登出。",
+				"signInHistory": "登录历史",
+				"fullSignInHistory": "查看所有登录活动",
+				"otherSettings": "其他设置",
+				"noDiscordLinked": "没有连接的Discord账号。",
+				"linkDiscord": "连接Discord账号",
+				"newsletter": "通讯"
+			},
+			"downloadFiles": "下载账号文件",
+			"downloadFilesDescription": "（无法在任天堂网络上使用）",
+			"upgrade": "升级账号"
+		},
+		"accountLevel": [
+			"标准",
+			"测试人员",
+			"版主",
+			"开发人员"
+		],
+		"banned": "禁止"
+	},
+	"upgrade": {
+		"title": "升级",
+		"description": "达到每月目标将使 Pretendo 成为全职工作，以更快的速度提供更高质量的更新。",
+		"month": "月",
+		"tierSelectPrompt": "选择一个级别",
+		"unsub": "退订",
+		"unsubPrompt": "您确定要退订 <span>tiername</span> 吗？您将无法使用与该等级相关的福利。",
+		"unsubConfirm": "退订",
+		"changeTier": "修改级别",
+		"changeTierPrompt": "您确定要取消订阅 <span class=\"oldtier\">oldtiername</span> 并订阅 <span class=\"newtier\">newtiername</span> 吗？",
+		"changeTierConfirm": "修改级别",
+		"back": "退回"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> <span>$${goald}</span>/月，<span>${perc}%</span> 的每月目标。",
+		"upgradePush": "要成为订阅者并获得超值福利，请访问<a href=\"/account/upgrade\">升级页面</a>。"
+	},
+	"modals": {
+		"cancel": "取消",
+		"confirm": "确认"
 	}
 }
