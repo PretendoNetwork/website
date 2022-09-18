@@ -143,7 +143,7 @@ app.engine('handlebars', handlebars({
 			}
 			return accum;
 		},
-		localeHelper(locale, propString, propVar) {
+		localeHelper(locale, propString, propVar, extra) {
 			/*
 				locale: the json locale object
 				propString: the "path" to the property to get (e.g. "faq.title")
@@ -177,6 +177,11 @@ app.engine('handlebars', handlebars({
 				} catch (e) {
 					logger.error(`Could not find locale property ${props.join('.')}`);
 				}
+			}
+
+			// TODO: Make this more dynamic
+			if (extra) {
+				value = value[extra];
 			}
 
 			return value;
