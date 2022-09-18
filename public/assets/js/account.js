@@ -26,6 +26,9 @@ const onlineFilesModalButtonConfirm = document.getElementById('onlineFilesConfir
 const onlineFilesModalButtonClose = document.getElementById('onlineFilesCloseButton');
 const onlineFilesModalPasswordInput = document.getElementById('password');
 
+const editSettingsModal = document.querySelector('.modal-wrapper#edit-settings');
+const editSettingsModalButtonClose = document.getElementById('editSettingsCloseButton');
+
 document.getElementById('download-cemu-files')?.addEventListener('click', event => {
 	event.preventDefault();
 
@@ -58,4 +61,16 @@ onlineFilesModalButtonConfirm?.addEventListener('click', () => {
 
 onlineFilesModalButtonClose?.addEventListener('click', () => {
 	onlineFilesModal.classList.add('hidden');
+});
+
+editSettingsModalButtonClose?.addEventListener('click', () => {
+	editSettingsModal.classList.add('hidden');
+});
+
+document.addEventListener('click', event => {
+	if (event.target.classList.contains('edit')) {
+		event.preventDefault();
+		
+		editSettingsModal.classList.remove('hidden');
+	}
 });

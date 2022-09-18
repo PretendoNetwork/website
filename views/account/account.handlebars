@@ -125,6 +125,7 @@
 
 			<div class="setting-card sign-in-history">
 				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.signInHistory" }}</h2>
+				<p>Sign in history not currently tracked. Check back again later</p>
 				<ul class="setting-list">
 					{{#each account.devices }}
 						<li>
@@ -151,16 +152,18 @@
 
 			<div class="setting-card">
 				<h2 class="header">{{ localeHelper locale "account.settings.settingCards.newsletter" }}</h2>
+				<p>Newsletter not currently available. Check back again later</p>
+				<!--
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
 					<label for="marketing">{{ localeHelper locale "account.settings.settingCards.newsletterPrompt" }}</label>
 				</form>
+				-->
 			</div>
 		</div>
 	</div>
 	{{> footer }}
 </div>
-
 
 {{#if success_message}}
 <div class="banner-notice success">
@@ -186,6 +189,17 @@
 		<div class="modal-button-wrapper">
 			<button class="button cancel" id="onlineFilesCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
 			<button class="button primary confirm" id="onlineFilesConfirmButton">{{ localeHelper locale "modals.confirm" }}</button>
+		</div>
+	</div>
+</div>
+
+<!-- TODO: Localize this -->
+<div class="modal-wrapper hidden" id="edit-settings">
+	<div class="modal">
+		<h1 class="title dot">Unavailable</h1>
+		<p class="modal-caption">Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console</p>
+		<div class="modal-button-wrapper">
+			<button class="button primary confirm" id="editSettingsCloseButton">Close</button>
 		</div>
 	</div>
 </div>
