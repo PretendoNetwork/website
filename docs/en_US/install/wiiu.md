@@ -24,7 +24,7 @@ Now download the `30_nimble.rpx` file from the latest release
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/rpx-highlight.png" width=100% height=auto/>
 
-Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/tiramisu/setup`
+Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/tiramisu/modules/setup`
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/sd-card.png" width=100% height=auto/>
 
@@ -43,7 +43,7 @@ Select the `nimble` artifact. This will download a `nimble.zip` zip file
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/artifact-highlight.png" width=100% height=auto/>
 
-Extract `nimble.zip` and place the extracted `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/tiramisu/setup`
+Extract `nimble.zip` and place the extracted `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/tiramisu/modules/setup`
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/sd-card.png" width=100% height=auto/>
 
