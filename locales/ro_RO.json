@@ -1,0 +1,231 @@
+{
+	"nav": {
+		"about": "Despre",
+		"faq": "FAQ",
+		"docs": "Docs",
+		"credits": "Mulțumiri",
+		"progress": "Progres"
+	},
+	"hero": {
+		"subtitle": "Servere de Jocuri",
+		"title": "Recreate",
+		"text": "Pretendo este un înlocuitor gratuit și open source al serverelor Nintendo pentru 3DS și Wii U, permițând conectivitate pentru toți, chiar și după ce serverele oficiale sunt oprite",
+		"buttons": {
+			"readMore": "Citiți mai multe"
+		}
+	},
+	"aboutUs": {
+		"title": "Despre noi",
+		"paragraphs": [
+			"Pretendo este un proiect open-source ce are ca scop să recreeze Nintendo Network pentru 3DS și Wii U folosind inginerie inversă.",
+			"Pentru că serviciile noastre sunt gratuite și open source, ele pot exista cu mult după inevitabila închidere a serverelor Nintendo Network."
+		]
+	},
+	"progress": {
+		"title": "Progres",
+		"paragraphs": [
+			null,
+			"Pentru 3DS, lucrăm de asemenea la Mario Kart 7, cu dorința de a continua să lucrăm și la alte jocuri dacă este posibil."
+		]
+	},
+	"faq": {
+		"title": "Întrebări Puse Frecvent",
+		"text": "Aici sunt câteva întrebări puse frecvent pentru informații simple.",
+		"QAs": [
+			{
+				"question": "Ce este Pretendo?",
+				"answer": "Pretendo este un înlocuitor gratuit al Nintendo Network ce are ca scop să construiască servere private pentru consolele Nintendo 3DS și Wii U. Scopul nostru este să prezervăm funcționalitatea online a acestor console, pentru a permite jucătorilor să joace în continuare jocurile lor preferate de pe Wii U și 3DS la capacitatea lor maximă."
+			},
+			{
+				"question": "Va merge NNID-ul meu pe Pretendo?",
+				"answer": "Din păcate, nu. NNID-urile existente nu vor funcționa pe Pretendo, deoarece numai Nintendo deține datele tale; chiar dacă o migrație NNID către PNID este teoretic posibilă, asta ar fi riscant și poate conține date sensibile ale utilizatorilor pe care nu le dorim să le avem."
+			},
+			{
+				"question": "Cum folosesc Pretendo?",
+				"answer": "Pretendo nu este momentan într-un stadiu pregătit pentru uzul public. Dar, odată ce este gata poți folosi Pretendo doar dacă rulezi patcher-ul nostru pe consola ta."
+			},
+			{
+				"question": "Știți când caracteristică/serviciu va fi gata?",
+				"answer": "Nu. Majoritatea caracteristicilor/serviciilor sunt dezvoltate independent (spre exemplu, Miiverse poate fii dezvoltat de o persoană iar Conturile și Prietenii sunt dezvoltate de altcineva) și de aceea nu putem oferii o estimare a timpului necesar finisării."
+			},
+			{
+				"question": "Funcționează Pretendo pe Cemu/emulatoare?",
+				"answer": "Pretendo este făcut pentru consolele Wii U și 3DS la suflet; momentan singurul emulator pentru aceste console cu suport NN este Cemu. Cemu nu suportă oficial servere personalizate, dar tot este posibil să folosiți Pretendo cu Cemu.<br>Pretendo nu suportă momentan Cemu."
+			},
+			{
+				"question": "Dacă sunt restricționat de pe Nintendo Network, o să rămân restricționat și pe Pretendo?",
+				"answer": "Nu vom avea acces la restricțiile de pe Nintendo Network, și nici un utilizator nu va fi restricționat de pe Pretendo. Însă, vom avea reguli de urmat când folosești serviciul iar nerespectarea regulilor poate duce la o restricție."
+			},
+			{
+				"question": "Va avea Pretendo suport pentru Wii/Switch?",
+				"answer": "Wii are deja servere personalizate furnizate de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Deocamdată nu dorim să ne legăm de Switch deoarece costă și este diferit de Nintendo Network."
+			},
+			{
+				"question": "Va trebui să îmi modific consola?",
+				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploit-ul de pe browser-ul web), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
+			}
+		]
+	},
+	"showcase": {
+		"title": "Ce creăm",
+		"text": "Proiectul nostru are multe componente. Aici sunt câteva dintre ele.",
+		"cards": [
+			{
+				"title": "Servere de jocuri",
+				"caption": "Îți aducem înapoi jocurile și conținuturile tale preferate folosind servere personalizate."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "O reimaginare a Miiverse, ca și când ar fi din era modernă."
+			},
+			{
+				"title": "Suport Cemu",
+				"caption": "Joacă jocurile tale preferate de pe Wii U chiar și fără o consolă!"
+			}
+		]
+	},
+	"credits": {
+		"title": "Echipa",
+		"text": "Întâlnește echipa din spatele proiectului",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Deținătorul proiectului și dezvoltatorul principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Cercetare și dezvoltare Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Instalator Conexiune și cercetare consolă",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "Cercetare BOSS și dezvoltare patch",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Cercetare console și alte sisteme",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Șeful dezvoltării web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "Dezvoltare web",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Designer",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Mulțumiri speciale",
+		"text": "Fără ei, Pretendo nu ar ajunge unde este astăzi.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "Dezvoltare librărie crunch ",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "Dezvolator și disector NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Furnizor de dump-uri",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Cercetare Mario Kart 7 și 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse information sharing",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Mulțumiri speciale",
+				"caption": "Cercetare pe structurile de date de la Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "Fii la zi",
+		"text": "Alătură-te serverului nostru de Discord pentru a primi ultimele actualizări despre proiectele noastre.",
+		"widget": {
+			"text": "Obține noutăți despre progresul nostru în timp real",
+			"button": "Alătură-te serverului"
+		}
+	},
+	"footer": {
+		"socials": "Rețele sociale",
+		"usefulLinks": "Link-uri folositoare",
+		"widget": {
+			"captions": [
+				"Vrei să obții ultimele actualizări?",
+				"Alătură-te serverului nostru de Discord!"
+			],
+			"button": "Alătură-te!"
+		}
+	},
+	"progressPage": {
+		"title": "Progresul nostru",
+		"description": "Verificați progresul proiectului și țintele! (Actualizat de obicei la fiecare oră, nu reflectă TOATE progresele și țintele proiectului)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"localizationPage": {
+		"title": "Hai să localizăm",
+		"description": "Inserați un link către un JSON public pentru a testa traducerea pe site",
+		"instructions": "Vedeți instrucțiunile de localizare",
+		"fileInput": "Fișier de testare",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Testează fișier"
+	}
+}

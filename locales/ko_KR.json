@@ -1,0 +1,249 @@
+{
+	"nav": {
+		"about": "",
+		"faq": "",
+		"docs": "문서",
+		"credits": "",
+		"progress": "진행률",
+		"blog": "블로그",
+		"account": "계정"
+	},
+	"hero": {
+		"subtitle": "",
+		"title": "",
+		"text": "",
+		"buttons": {
+			"readMore": ""
+		}
+	},
+	"aboutUs": {
+		"title": "",
+		"paragraphs": [
+			"",
+			"저희 프로젝트는 무료이면서 오픈 소스이기 때문에 닌텐도 네트워크가 종료되고 긴 세월이 지나고도 운영될 수 있습니다."
+		]
+	},
+	"progress": {
+		"title": "",
+		"paragraphs": [
+			null,
+			"3DS에서는, 가능하면 다른 프로젝트도 시도하려 하고 있으나 현재는 마리오 카트 7에 집중하고 있습니다."
+		]
+	},
+	"faq": {
+		"title": "자주 묻는 질문 (FAQ)",
+		"text": "빠른 정보 제공을 위한, FAQ에 대한 답변입니다.",
+		"QAs": [
+			{
+				"question": "",
+				"answer": "Pretendo는 오픈 소스 닌텐도 네트워크 대체 프로젝트이며 Wii U와 3DS의 대체 서버를 만드려 합니다. 저희의 목표는 이 콘솔들의 온라인 기능을 유지시켜, 플레이어가 좋아하는 Wii U와 3DS 게임에서 최고의 경험을 할 수 있게 하는 것입니다."
+			},
+			{
+				"question": "현재 사용하고 있는 닌텐도 네트워크 ID (NNID)가 Pretendo에서도 작동할까요?",
+				"answer": "안타깝지만, 그렇지 않습니다. 닌텐도만이 관련 정보를 소지하고 있기 때문에 Pretendo에서 NNID는 사용할 수 없습니다.  NNID에서 Pretendo 네트위크 ID (PNID)로의 전환은 이론상 가능하지만, 위험할 것이며 저희가 원치 않는 중요한 개인정보를 수집할 겁니다."
+			},
+			{
+				"question": "Pretendo는 어떻게 접속하나요?",
+				"answer": "Pretendo는 아직 공용으로 사용할 수 없습니다. 그러나, 사용이 가능해지면 콘솔에서 홈브루 패쳐를 작동시키면 접속할 수 있게 될 것입니다."
+			},
+			{
+				"question": "",
+				"answer": "아니요. 대부분의 Pretendo 기능/서비스는 독립적으로 개발되고 있기 때문에 (예를 들어, 한 개발자가 Miiverse의 작업을 하고 있을 때 계정과 친구 서비스는 다른 개발자가 작업함), 예상 시간은 말씀드릴 수 없습니다."
+			},
+			{
+				"question": "",
+				"answer": "Pretendo는 Wii U와 3DS 하드웨어만을 대상으로 제작하고 있습니다. 현재까지 닌텐도 네트워크 지원이 되는 에뮬레이터는 Cemu 뿐이나, Cemu는 공식적으로 커스텀 서버를 지원하지 않습니다. 그러나 Cemu에서도 Pretendo를 이용할 수 있게 될 것입니다.<br>Pretendo는 아직 Cemu를 지원하지 않습니다."
+			},
+			{
+				"question": "제가 닌텐도 네트워크에서 영구 정지가 되어 있다면 Pretendo Network에서도 영구 정지된 상태일까요?",
+				"answer": "저희는 닌텐도 네트워크의 영구 정지 리스트에 대한 권한이 없기 때문에, 저희 서비스를 사용할 때 정지가 되지는 않을 겁니다. 그러나, 저희는 저희만의 운영원칙이 있을 것이며, 그에 따르지 않는 것은 결국 영구 정지에 이어질 것입니다."
+			},
+			{
+				"question": "",
+				"answer": "Wii의 서비스는 이미 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>가 제공하고 있습니다. 스위치의 Nintendo Switch Online은 유료이며 닌텐도 네트워크와 전혀 다르기 때문에, 현재로서도 지원할 계획은 없습니다."
+			},
+			{
+				"question": "",
+				"answer": "네, 연결하기 위해 콘솔 해킹은 필요할 것입니다. 다만, Wii U에서는 홈브루 런처의 접근 권한만 있으면 됩니다 (예. Haxchi, Coldboot Haxchi, 웹 브라우저 취약점). 3DS에서의 연결 방법은 추후에 공개될 것입니다."
+			}
+		]
+	},
+	"showcase": {
+		"title": "저희가 만드는 것들",
+		"text": "저희 프로젝트는 여러 부분으로 나뉘어져 있습니다. 그 중 몇개를 여기서 확인하시죠.",
+		"cards": [
+			{
+				"title": "게임 서버",
+				"caption": "유저들이 좋아하는 게임과 컨텐츠를 커스텀 서버로 부활시킵니다."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "최근에 처음 만들어진 것처럼 만드는, Miiverse의 재제작입니다."
+			},
+			{
+				"title": "Cemu 지원",
+				"caption": "당신이 좋아하는 Wii U 타이틀을 콘솔 없이 플레이하세요!"
+			}
+		]
+	},
+	"credits": {
+		"title": "개발 팀",
+		"text": "",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Project owner and lead developer",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse research and development",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Network installer and console research",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS 연구 및 패치 개발",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Console and other system research",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "웹 개발 주도",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "Web development",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "디자이너",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Special Thanks",
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "crunch 라이브러리 개발",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS 개발 및 NEX 해부",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "프로젝트 보존",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 and 3DS research",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse information sharing",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Special Thanks",
+				"caption": "Research on Nintendo datastructures",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "GitHub 기여자들",
+				"caption": "로컬라이징 및 다른 기여",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "최신 정보",
+		"text": "저희의 최신 정보를 얻으려면 저희 Discord 서버에 참여하세요.",
+		"widget": {
+			"text": "저희 진행도의 실시간 업데이트를 얻으세요",
+			"button": "서버 참여하기"
+		}
+	},
+	"footer": {
+		"socials": "소셜",
+		"usefulLinks": "쓸모있는 링크",
+		"widget": {
+			"captions": [
+				"지속적 업데이트를 받고 싶으세요?",
+				"저희 Discord 서버에 참여하세요!!"
+			],
+			"button": "지금 참여하기!"
+		}
+	},
+	"progressPage": {
+		"title": "프로젝트 진행률",
+		"description": "프로젝트 진행률 및 목표를 확인하세요! (매시간 갱신, 모든 목표나 진행률은 공개되지 않습니다)"
+	},
+	"blogPage": {
+		"title": "블로그",
+		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면, <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
+	},
+	"localizationPage": {
+		"title": "같이 번역해 주세요",
+		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",
+		"instructions": "로컬라이즈",
+		"fileInput": "테스트할 파일",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "파일 테스트"
+	},
+	"docs": {
+		"missingInLocale": "이 페이지는 한국어로 번역되어 있지 않습니다. 아래의 영어판을 참고해 주세요.",
+		"quickLinks": {
+			"header": "바로가기",
+			"links": [
+				{
+					"header": "Pretendo를 설치",
+					"caption": "설정 방법을 보기"
+				},
+				{
+					"header": "에러가 발생했나요?",
+					"caption": "여기서 검색하기"
+				}
+			]
+		}
+	}
+}

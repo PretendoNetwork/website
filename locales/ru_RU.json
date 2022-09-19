@@ -1,0 +1,238 @@
+{
+	"nav": {
+		"about": "О нас",
+		"faq": "ЧаВо",
+		"docs": "Docs",
+		"credits": "Команда",
+		"progress": "Прогресс"
+	},
+	"hero": {
+		"subtitle": "Игровые сервера",
+		"title": "Воссозданы",
+		"text": "Pretendo - бесплатная замена игровых серверов для 3DS и Wii U с открытым исходным кодом, обеспечивающая онлайн функции данных консолей, даже после закрытия официальных серверов",
+		"buttons": {
+			"readMore": "Читать больше"
+		}
+	},
+	"aboutUs": {
+		"title": "О нас",
+		"paragraphs": [
+			"Pretendo - проект с открытым исходным кодом, цель которого воссоздать Nintendo Network для консолей 3DS и Wii U, используя обратную-разработку (reverse engineering).",
+			"Так как наши сервисы бесплатны и имеют открытый исходный код, то существовать Pretendo может ещё очень долго после закрытия официального Nintendo Network."
+		]
+	},
+	"progress": {
+		"title": "Прогресс",
+		"paragraphs": [
+			null,
+			"Насчёт 3DS, мы также работаем над Mario Kart 7, а также если возможно, продолжить работу и над другими онлайн играми."
+		]
+	},
+	"faq": {
+		"title": "Часто задаваемые Вопросы (ЧаВо)",
+		"text": "Здесь мы собрали ответы на вопросы, которые нам часто задают.",
+		"QAs": [
+			{
+				"question": "Что такое Pretendo?",
+				"answer": "Pretendo - проект с открытым исходным кодом, цель которого воссоздать Nintendo Network для консолей 3DS и Wii U. Наша главная задача - сохранить онлайн функционал данных консолей, чтобы игроки и дальше смогли бы играть в свои любимые игры с мультиплеером, даже после закрытия официальных серверов."
+			},
+			{
+				"question": "Будет ли мой существующий NNID работать в Pretendo?",
+				"answer": "К сожалению - нет. Существующий NNID не смогут работать в Pretendo, так как только Nintendo хранит у себя информацию о пользователях. Конечно миграция с NNID на PNID чисто теоретически возможна, но для этого нам придётся хранить всю информацию о пользователях у себя. А это то, чего мы не хотим делать во избежание утечек конфиденциальной информации."
+			},
+			{
+				"question": "Как мне подключиться к Pretendo?",
+				"answer": "На данный момент Pretendo ещё не готово для нормального использования. Однако, когда мы закончим разработку базовых функций, вы сможете подключиться к Pretendo просто запуская наше homebrew-приложение на вашей консоли."
+			},
+			{
+				"question": "Знаете ли вы, когда что-либо из функций и сервисов будет сделано?",
+				"answer": "Нет. Большинство сервисов Pretendo разрабатываются разными разработчиками (Например, над Miiverse может работать один из разработчиков, а над профилями и друзьями может работать совсем другой разработчик) и в целом мы не можем сказать сколько времени займёт разработка, так как сами этого не знаем."
+			},
+			{
+				"question": "Работает ли Pretendo на эмуляторах/Cemu?",
+				"answer": "Pretendo сделано специально для оборудования Wii U и 3DS; на данный момент единственный эмулятор с поддержкой Nintendo Network является Cemu. Cemu официально не поддерживает неофициальные сервера, однако Pretendo может работать и на Cemu.<br>Pretendo на данный момент не поддерживает Cemu."
+			},
+			{
+				"question": "Если я забанен в Nintendo Network, буду ли я забанен в Pretendo?",
+				"answer": "Нет. Все пользователи, которые имеют бан в официальном Nintendo Network, смогут пользоваться Pretendo. Однако, у нас есть правила использования и при их нарушении вы можете получить бан."
+			},
+			{
+				"question": "Будет ли Pretendo поддерживать Wii/Switch?",
+				"answer": "У Wii уже есть неофициальные сервера, под названием <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. На данный момент мы не собираемся работать с онлайном Switch, так как сервис платный и кардинально отличается от Nintendo Network."
+			},
+			{
+				"question": "Нужно ли мне прошивать консоль?",
+				"answer": "Да, вам понадобится прошить консоль, чтобы подключиться. Однако, на Wii U вам понадобится только доступ к Homebrew Launcher (т.е. Haxchi, Coldboot Haxchi, или web browser exploit). Информация о подключении с 3DS будет опубликована позже."
+			}
+		]
+	},
+	"credits": {
+		"title": "Наша команда",
+		"text": "Ознакомьтесь с командой, которая работает над разработкой Pretendo.",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Руководитель проекта и гл. разработчик",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Исследование, разработка Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Установщик сервисов и исследование консолей",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS research and patch development",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Исследование консолей и другого оборудования",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Web development lead",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "Web-разработка",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Designer",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Special thanks",
+		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "Разработка библиотек «crunch»",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS dev and NEX dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Preservationist",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Исследование Mario Kart 7 и 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse information sharing",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Особая благодарность",
+				"caption": "Исследование структуры данных Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		}
+	},
+	"progressPage": {
+		"title": "Наш прогресс",
+		"description": "Посмотрите на то, сколько мы уже успели сделать! (обновляется каждый час, не все цели Pretendo указаны здесь.)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
+	"localizationPage": {
+		"title": "Let's localize",
+		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
+		"instructions": "View localization instructions",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		}
+	}
+}

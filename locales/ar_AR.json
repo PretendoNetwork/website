@@ -1,0 +1,332 @@
+{
+	"nav": {
+		"about": "عنا",
+		"faq": "أسئلة",
+		"docs": "دليل",
+		"credits": "الفريق",
+		"progress": "التقدم",
+		"blog": "البلوج",
+		"account": "حساب",
+		"accountWidget": {
+			"settings": "إعدادات",
+			"logout": "تسجيل الخروج"
+		}
+	},
+	"hero": {
+		"subtitle": "سيرفرات الألعاب",
+		"title": "إعادة إنشاء",
+		"text": "إن بريتندو بديل مجاني و مصدر مفتوح لسيرفرات ال3دي اس و الوي يو ,يسمح بالاتصال عبر الإنترنت حتي بعد إغلاق السيرفرات الأصلية",
+		"buttons": {
+			"readMore": "أقرأ اكثر"
+		}
+	},
+	"aboutUs": {
+		"title": "معلومات عنا",
+		"paragraphs": [
+			"إن بريتندو مشروع مصدر مفتوح هدفه إعادة إنشاء شبكة نينتندو لل3دي اس و الوي يو عن طريق الهندسة العكسية.",
+			"خدماتنا ستكون مجاناً ومصدرها مفتوح، فستعيش وقتا طويلاً حتي بعد إغلاق شبكة نينتندو."
+		]
+	},
+	"progress": {
+		"title": "تقدم",
+		"paragraphs": [
+			null,
+			"و نعمل علي ماريوكارت 7 لل3دي اس و نريد ان نعمل علي الألعاب الآخري في اسرع وقت"
+		],
+		"githubRepo": "ريبو الجيتهب"
+	},
+	"faq": {
+		"title": "بعض الأسئلة المكررة",
+		"text": "هنا بعض الأسئلة المتكررة بإجابتها للحصول على معلومات سهلة.",
+		"QAs": [
+			{
+				"question": "ما هو بريتندو؟",
+				"answer": "إن بريتندو مصدر مفتوح بديل عن شبكة نينتندو هدفها إنشاء سيرفرات لعائلة ال3 دي اس و الوي يو. هدفنا الحفاظ علي الاجزاء الاونلاين و لجعل اللاعبين يستمتعون باقصي حد."
+			},
+			{
+				"question": "هل هويتي الشخصية علي شبكة نينتندو ستستمر علي بريتندو؟",
+				"answer": "للأسف، لا. اي الهويات الشخصية لشبكة نينتندو لن تعمل علي بريتندو لأن نينتندو لديم المعلومات الشخصية؛ و من الرغم من أن هجرة الهوية الشخصية من شبكة نينتندو إلي بريتندو ممكنة إلا انها لها خطر و لا نريد أن يكون معنا المعلومات الشخصية."
+			},
+			{
+				"question": "كيف استخدم بريتندو؟",
+				"answer": "إن بريتندو ليس جاهز للاستخدام العام ولكن عندما يكون جاهزا ستسطيع أن نسخدمه من خلال الهومبرو باتشر."
+			},
+			{
+				"question": "هل تعرف متي تكون خدمة او خاصية جاهزة؟",
+				"answer": "لا، معظم خدمات بريتندو يتم إنشائها مفردة إي شخص قد يعمل علي الميفيرز و شخصاً أخر قد يعمل علي الاصدقاء و الاكونتات فلا نستطيع أن نعرف متي ستكون جاهزة."
+			},
+			{
+				"question": "هل بريتندو يعمل علي سيمو و المحاكيات؟",
+				"answer": "إن بريتندو مصمم لل3 دي اس و الوي يو؛ و في الوقت الحالي سيمو هو المحاكية الوحيد يدعِم شبكة نينتندو. سي مو لا يدعم شبكة بريتندو مباشرا و لكن ستصتطتيع استخدامه (حالياً سيمو لا يدعم شبكة بريتندو)إن بريتندو مصمم لل3 دي اس و الوي يو؛ و في الوقت الحالي سيمو هو المحاكية الوحيد يدعِم شبكة نينتندو سي مد لا يدعم شبكة بريتندو مباشرا و لكن ستصتيع استخدامه (حالياً سيمو لا يدعم شبكة بريتندو)."
+			},
+			{
+				"question": "لو اتمنعنت من شبكة بريتندو هل سأستمتر ممتنع من بريتندو؟",
+				"answer": "لا، جميع المستخدمين لن يكونوا محرمين و لكن يجب أن تمشي وراء القوانين او سيتمامتناعك."
+			},
+			{
+				"question": "هل سيدعم بريتندو الوى و السوتش؟",
+				"answer": "<a href=\"https://wiimmfi.de/\" target=\"_blank\">الوي لديها سيرفرات مخصصة من ويميفاي.</a> و ليس لدينا الهدف للسويتش بسبب اختلافها عن شبكة نينتندو."
+			},
+			{
+				"question": "هل احتاج أن اهكر حتي اتصل؟",
+				"answer": "نعم، ستحتاج إلي تهكير جهازك لكن علي الوي يو تحتاج فقط إلي الهومبرو لانشر اي هاكسي او موخا اما علي ال3 دي اس سيتم الاعلان في وقتا لاحقاً."
+			}
+		]
+	},
+	"credits": {
+		"title": "الفريق",
+		"text": "قابل الفريق وراء المشروع",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "مالك المشروع والمطور الرئيسي",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "باحث و مطور الميفيرز",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "مثبت الشبكة و باحث الأجهزة",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "مباحث البوس و مبرمج التصحيحات",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"github": "https://github.com/QuarkTheAwesome"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "باحث الأجهزة",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "مطور الويب والبحث المبكر للالمحل الإلكتروني",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "مطور الويب",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "مصمم الويب",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "شكرا خاصة",
+		"text": "من غيرهم، بريتندو لن نكن بشكلها.",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "مطور مكتبة كرانش",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "مبرمج و مففك ال3 دي اس و نكس",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "المحافظ",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "باحث ماريو كارت 7 و ال3 دي اس",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "تبادل المعلومات الميفيرز",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "شكر خاص",
+				"caption": "باحث في هياكل بيانات نينتندو",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "أيقونات لمحرر المي وردود فعل زنكس",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "المساهمين على جيتهاب",
+				"caption": "الترجمة والمساهمات الأخرى",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"progressPage": {
+		"title": "تقدمنا",
+		"description": "تحقق من تقدم المشروع والأهداف! (يتم تحديثه كل ساعة أو نحو ذلك ، ولا يعكس جميع أهداف المشروع أو تقدمه)"
+	},
+	"blogPage": {
+		"title": "البلوج",
+		"description": "آخر التحديثات في أجزاء مكثفة. إذا كنت ترغب في رؤية المزيد من التحديثات المتكررة ، ففكر في دعمنا على <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\"> Patreon </a>.",
+		"published": "صادرة من",
+		"publishedOn": "نشرت في"
+	},
+	"localizationPage": {
+		"title": "لنترجم",
+		"description": "الصق رابطا إلي لغة الزيسون يمكن الوصول إليها بشكل عام لاختبارها على موقع الويب",
+		"instructions": "اظهر خطوات الترجمة",
+		"fileInput": "ملف للتجربة",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "ملف الاختبار"
+	},
+	"footer": {
+		"usefulLinks": "لنكات مفيدة",
+		"widget": {
+			"captions": [
+				"تريد أن تبقى على اطلاع؟",
+				"انضم إلى سيرفرنا علي ديسكورد!"
+			],
+			"button": "إنضم الآن!"
+		},
+		"socials": "مواقع الاتصال"
+	},
+	"discordJoin": {
+		"text": "انضم إلى سيرفرنا علي ديسكورد للحصول على آخر التحديثات حول بريتندو.",
+		"widget": {
+			"text": "أحصل علي آخر التحديثات",
+			"button": "إنضم إلي سيرفرنا"
+		},
+		"title": "ابق على إطلاع"
+	},
+	"account": {
+		"settings": {
+			"downloadFilesDescription": "(لن يعمل على شبكة نينتندو)",
+			"downloadFiles": "تحميل ملفات الحساب",
+			"settingCards": {
+				"profile": "الملف الشخصي",
+				"nickname": "لقب",
+				"birthDate": "تاريخ الميلاد",
+				"gender": "الجنس",
+				"country": "البلد/المنطقة",
+				"timezone": "المنطقة الزمنية",
+				"serverEnv": "بيئة السيرفر",
+				"production": "الإنتاج",
+				"beta": "بيتا",
+				"upgradePrompt": "سيرفرات بيتا حصرية لمختبري الإصدارات التجريبية. <br> لتصبح أحد مختبري الإصدار بيتا ، قم بالترقية إلى مستوى حساب أعلى.",
+				"hasAccessPrompt": "تمنحك الطبقة الحالية إمكانية الوصول إلى سيرفرات بيتا. رائع!",
+				"signInSecurity": "تسجيل الدخول والأمان",
+				"email": "البريد الإلكتروني",
+				"password": "كلمة السر",
+				"passwordResetNotice": "بعد تغيير كلمة المرور الخاصة بك ، سيتم تسجيل خروجك من جميع الأجهزة.",
+				"signInHistory": "سجل تسجيل الدخول",
+				"fullSignInHistory": "عرض سجل تسجيل الدخول الكامل",
+				"otherSettings": "إعدادات أخرى",
+				"discord": "ديسكورد",
+				"connectedToDiscord": "متصل الديسكورد ب",
+				"removeDiscord": "إزالة حساب الديسكورد",
+				"noDiscordLinked": "لا يوجد حساب ديسكورد متصل.",
+				"linkDiscord": "توصيل حساب ديسكورد",
+				"newsletter": "الرسالة الإخبارية",
+				"newsletterPrompt": "تلقي تحديثات المشروع عبر البريد الإلكتروني (يمكنك إلغاء الاشتراك في أي وقت)",
+				"passwordPrompt": "أدخل كلمة مرور حسابك البريتندو و لتنزيل ملفات سيمو"
+			},
+			"upgrade": "رفع مستوى الحساب"
+		},
+		"banned": "محظور",
+		"loginForm": {
+			"login": "تسجيل الدخول",
+			"register": "سجل",
+			"password": "كلمة السر",
+			"email": "البريد الإلكتروني",
+			"detailsPrompt": "أدخل تفاصيل حسابك أدناه",
+			"username": "اسم المستخدم",
+			"forgotPassword": "نسيت كلمة سرك؟",
+			"loginPrompt": "هل لديك حساب؟",
+			"confirmPassword": "تأكيد كلمة المرور",
+			"registerPrompt": "ليس لديك حساب؟",
+			"miiName": "اسم المي"
+		},
+		"accountLevel": [
+			"اساسي",
+			"مختبر",
+			"مشرف",
+			"مطور"
+		]
+	},
+	"upgrade": {
+		"unsubPrompt": "هل أنت متأكد من أنك تريد إلغاء الاشتراك من <span>tiername</span>؟ ستفقد الوصول إلى الامتيازات المرتبطة بهذه الطبقة.",
+		"changeTierPrompt": "هل أنت متأكد من رغبتك في إلغاء الاشتراك من <span class=\"oldtier\">oldtiername والاشتراك في <span class=\"newtier\">newtiername</span></span>؟",
+		"title": "ترقيه",
+		"description": "إن الوصول إلى الهدف الشهري سيجعل بريتندو وظيفة بدوام كامل ، مما يوفر تحديثات ذات جودة أفضل بمعدل أسرع.",
+		"month": "شهر",
+		"tierSelectPrompt": "حدد فئة",
+		"unsub": "إلغاء الاشتراك",
+		"unsubConfirm": "إلغاء الاشتراك",
+		"changeTier": "تغيير الطبقة",
+		"changeTierConfirm": "تغيير الطبقة",
+		"back": "العودة"
+	},
+	"docs": {
+		"missingInLocale": "هذه الصفحة غير متوفرة في الإعدادات المحلية. يرجى التحقق من النسخة الإنجليزية أدناه.",
+		"quickLinks": {
+			"header": "روابط سريعة",
+			"links": [
+				{
+					"header": "تحميل بريتندو",
+					"caption": "عرض إرشادات الإعداد"
+				},
+				{
+					"header": "هل لديك خطأ؟",
+					"caption": "ابحث عنه هنا"
+				}
+			]
+		}
+	},
+	"donation": {
+		"upgradePush": "لتصبح مشتركا والوصول إلى الامتيازات الرائعة ، تفضل بزيارة صفحة <a href=\"/account/upgrade\">upgrade</a>.",
+		"progress": "<span> $$ {totd} </span> من <span> $$ {goald} </span> / شهريًا ، <span> $ {perc}٪ </span> من الهدف الشهري."
+	},
+	"showcase": {
+		"title": "ماذا نقوم به",
+		"cards": [
+			{
+				"title": "سيرفرات ألعاب",
+				"caption": "إعادة إحياء ألعابك المفضلة و محتوياتها بإستخدام سيرفرات مخصصة."
+			},
+			{
+				"title": "زونكسابوسيشن",
+				"caption": "إعادة تخيل الميفيرز، كما لو كانت مصنوعة في العصر الحديث."
+			},
+			{
+				"title": "دعم سيمو",
+				"caption": "إلعب افضل ألعاب الوي يو من دون جهاز!"
+			}
+		],
+		"text": "يحتوي مشروعنا على العديد من المكونات. هنا بعض منهم."
+	},
+	"modals": {
+		"cancel": "إلغاء",
+		"confirm": "تأكيد"
+	}
+}

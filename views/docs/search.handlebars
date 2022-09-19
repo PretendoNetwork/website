@@ -2,7 +2,7 @@
 
 <div class="docs-wrapper">
 
-    <a href="/" class="logo-link">
+	<a href="/" class="logo-link">
 		<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
 			<g id="logo_type" data-name="logo type" transform="translate(-553 -467)">
 				<g id="logo" transform="translate(553 467)">
@@ -27,14 +27,89 @@
 		</svg>
 	</a>
 
-    {{> header}}
-    
-    {{> docs-sidebar}}
+	<div class="header-wrapper">
+		<button id="openSidebar" class="nostyle">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+		</button>
+		{{> header}}
+	</div>
 
-    <div class="content">
-      	<div class="content-inner">
-			  <div class="card"></div>
-      	</div>
-    </div>
+	{{> docs-sidebar}}
+
+	<div class="content search">
+		<div class="content-inner">
+			<div class="purple-card">
+				<h1>Got an error code?</h1>
+				<p>Type it in the box below to get information on your issue!</p>
+				<label for="errorCode">Error code</label>
+				<div class="input-wrapper">
+					<input id="errorCode" placeholder="ABC-012-3456" required />
+					<div class="matches">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </div>
+
+<script src="/assets/js/docssidebarhandler.js"></script>
+
+<script id="errorList" type="application/json">
+  {{{errorList}}}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+<script>
+	// Get the error list from the script tag
+	let rawErrorList = JSON.parse(document.getElementById('errorList').innerHTML);
+
+	// Convert the error list to a single flat array
+	rawErrorList = Object.values(rawErrorList).flat();
+
+	// We remove the unknown characters (e.g. the X in JXT-598-2XXX), so fuse.js will be able to match the error codes
+	const errorList = rawErrorList.map(error => {
+		return error.replace(/X*$/g, '');
+	});
+
+	const fuse = new Fuse(errorList, {includeMatches: true, threshold: 0.4});
+	const cleave = new Cleave('input#errorCode', {
+    delimiter: '-',
+    blocks: [3, 3, 4],
+    uppercase: true
+	});
+
+	const matchesContainer = document.querySelector('.matches');
+	const input = document.querySelector('input#errorCode');
+
+	input.addEventListener('input', (e) => {
+		const errorCode = e.target.value;
+		const matches = fuse.search(errorCode);
+
+		if (!errorCode) {
+			matchesContainer.innerHTML = '';
+			input.classList.remove('has-matches');
+			return
+		}
+
+		matchesContainer.innerHTML = '';
+		input.classList.add('has-matches');
+
+		if (matches.length > 0) {
+			matches.forEach(match => {
+				const errorCode = match.item.padEnd(12, 'X');
+				const matchLink = document.createElement('a');
+				matchLink.innerText = errorCode;
+				matchLink.href = `/docs/errors/${errorCode}`;
+				matchesContainer.appendChild(matchLink);
+			});
+		} else {
+			const noMatch = document.createElement('p');
+			noMatch.innerText = 'No matches found';
+			matchesContainer.appendChild(noMatch);
+		}
+	});
+</script>
 
