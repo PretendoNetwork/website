@@ -1,3 +1,13 @@
 /*
 MOVE PROGRESS CSS HERE
 */
+#quick-nav a {
+	color: var(--text-shade-1);
+	text-decoration: none;
+	width: fit-content;
+}
+
+#quick-nav a:hover {
+	color: var(--text-shade-3);
+	text-decoration: underline;
+}

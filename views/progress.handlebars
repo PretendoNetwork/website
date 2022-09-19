@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/assets/css/progress.css">
+
 <div class="wrapper">
 
 	{{> header}}
@@ -19,8 +21,19 @@
 			<p class="localeReplace">{{{ localeHelper locale "donation.progress" }}} {{{ localeHelper locale "donation.upgradePush" }}}</p>
 		</div>
 
+		<div id="quick-nav">
+			<h1 class="title dot">Quick Nav</h1>
+			<ul>
+				{{#each progressLists.sections}}
+				<li>
+					<a href="#{{slug this.title}}">{{this.title}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<br>
 		{{#each progressLists.sections}}
-		<div class="purple-card">
+		<div class="purple-card" id="{{slug this.title}}">
 			{{> progress-list data=this }}
 		</div>
 		{{/each}}

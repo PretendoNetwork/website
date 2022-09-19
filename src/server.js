@@ -187,6 +187,9 @@ app.engine('handlebars', handlebars({
 
 			return value;
 		},
+		slug(string) {
+			return string.toLowerCase().replaceAll(/ /g, '-');
+		}
 	}
 }));
 app.set('view engine', 'handlebars');
