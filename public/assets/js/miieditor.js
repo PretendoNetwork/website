@@ -1,10 +1,10 @@
 // This file gets automatically bundled with browserify when running the start script. This also means that after any update you're gonna need to restart the server to see any changes.
 
 // Prevent the user from reloading or leaving the page
-window.addEventListener('beforeunload', function (e) {
+window.onbeforeunload = function (e) {
 	e?.preventDefault();
 	e.returnValue = '';
-});
+};
 
 // this makes it so the canvas fits in the target element
 function setCanvasScale() {
@@ -440,9 +440,35 @@ document
 				.classList.add('centered-mii-img');
 		}, 2000);
 
-		const miiData = mii.encode().toString('base64');
-
-		alert(miiData);
-		console.log('mii data:', miiData);
+		try {
+			const miiData = mii.encode().toString('base64');
+			const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];
+			const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
+			
+			fetch('http://api.pretendo.cc/v1/user', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+					'Authorization': `${tokenType} ${decodeURIComponent(accessToken)}`
+				},
+				body: JSON.stringify({
+					mii: {
+						name: mii.miiName,
+						primary: 'Y',
+						data: miiData,
+					}
+				})
+			})
+				.then(({ status }) => {
+					if (status === 200) {
+						window.onbeforeunload = null;
+						window.location.assign('/account');
+					}
+				})
+				.catch(console.log);
 		// CHECK IF MII IS VALID SERVERSIDE
+		} catch (error) {
+			alert(error);
+		}
 	});
