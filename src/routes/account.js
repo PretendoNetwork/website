@@ -147,6 +147,7 @@ router.get('/logout', async(_request, response) => {
 });
 
 router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {
+	const { pnid } = request;
 	let tokens;
 	try {
 		// Attempt to get OAuth2 tokens
@@ -166,8 +167,52 @@ router.get('/connect/discord', requireLoginMiddleware, async (request, response)
 	try {
 		await util.updateDiscordConnection(discordUser, request, response);
 
+		const priceId = pnid.get('connections.stripe.price_id');
+
+		if (priceId && priceId.trim() !== '') {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product);
+			const discordRoleId = product.metadata.discord_role_id;
+			const discordId = discordUser.id;
+
+			await util.assignDiscordMemberSupporterRole(discordId, discordRoleId);
+
+			if (product.metadata.beta === 'true') {
+				await util.assignDiscordMemberTesterRole(discordId);
+			}
+		}
+
 		response.cookie('success_message', 'Discord account linked successfully', { domain: '.pretendo.network' });
-		response.redirect('/account');
+		return response.redirect('/account');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account');
+	}
+});
+
+router.get('/remove/discord', requireLoginMiddleware, async (request, response) => {
+	const { account, pnid } = request;
+
+	try {
+		await util.removeDiscordConnection(request, response);
+
+		const priceId = pnid.get('connections.stripe.price_id');
+
+		if (priceId && priceId.trim() !== '') {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product);
+			const discordRoleId = product.metadata.discord_role_id;
+			const discordId = account.connections.discord.id;
+
+			await util.removeDiscordMemberSupporterRole(discordId, discordRoleId);
+
+			if (product.metadata.beta === 'true') {
+				await util.removeDiscordMemberTesterRole(discordId);
+			}
+		}
+		
+		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
+		return response.redirect('/account');
 	} catch (error) {
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account');
@@ -298,8 +343,8 @@ router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request,
 	const pnid = await database.PNID.findOne({ pid });
 
 	if (pnid.get('access_level') >= 2) {
-		response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
-		return response.redirect('/account');
+		//response.cookie('error_message', 'Staff members do not need to purchase tiers', { domain: '.pretendo.network' });
+		//return response.redirect('/account');
 	}
 
 	try {
@@ -365,14 +410,15 @@ router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, respo
 	return response.redirect('/account');
 });
 
-router.post('/stripe/webhook', express.raw({ type: 'application/json' }), async (request, response) => {
+router.post('/stripe/webhook', async (request, response) => {
 	const stripeSignature = request.headers['stripe-signature'];
 	let event;
 
 	try {
-		event = stripe.webhooks.constructEvent(request.body, stripeSignature, config.stripe.webhook_secret);
-	} catch (err) {
-		return response.status(400).send(`Webhook Error: ${err.message}`);
+		event = stripe.webhooks.constructEvent(request.rawBody, stripeSignature, config.stripe.webhook_secret);
+	} catch (error) {
+		logger.error(error.message);
+		return response.status(400).send(`Webhook Error: ${error.message}`);
 	}
 
 	await util.handleStripeEvent(event);

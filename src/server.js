@@ -20,7 +20,8 @@ const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
-app.use(express.json());
+//app.use(express.json());
+app.use(express.json({ verify: (req, res, buf) => { req.rawBody = buf; } }));
 app.use(express.urlencoded({
 	extended: true
 }));

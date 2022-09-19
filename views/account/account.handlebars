@@ -144,7 +144,9 @@
 					<h2 class="header">{{ localeHelper locale "account.settings.settingCards.discord" }}</h2>
 						{{#if discordUser}}
 					<p>{{ localeHelper locale "account.settings.settingCards.connectedToDiscord" }} {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
-					<button class="button secondary" id="remove-discord-connection">{{ localeHelper locale "account.settings.settingCards.removeDiscord" }}</button>
+					<a href="/account/remove/discord">
+						<button class="button secondary" id="remove-discord-connection">{{ localeHelper locale "account.settings.settingCards.removeDiscord" }}</button>
+					</a>
 				{{else}}
 					<p>{{ localeHelper locale "account.settings.settingCards.noDiscordLinked" }} <a href="{{ discordAuthURL }}">{{ localeHelper locale "account.settings.settingCards.linkDiscord" }}</a></p>
 				{{/if}}

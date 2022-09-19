@@ -4,11 +4,14 @@ const got = require('got');
 const crypto = require('crypto');
 const Stripe = require('stripe');
 const { marked } = require('marked');
+const { REST: DiscordRest } = require('@discordjs/rest');
+const { Routes: DiscordRoutes } = require('discord-api-types/v10');
 const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
 const config = require('../config.json');
 
+const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
 
 const stripe = new Stripe(config.stripe.secret_key);
 
@@ -78,7 +81,7 @@ function apiGetRequest(path, headers) {
 	});
 }
 
-function apiPostGetRequest(path, headers, json) {
+function apiPostRequest(path, headers, json) {
 	return got.post(`https://api.pretendo.cc${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
@@ -90,7 +93,7 @@ function apiPostGetRequest(path, headers, json) {
 	});
 }
 
-function apiDeleteGetRequest(path, headers, json) {
+function apiDeleteRequest(path, headers, json) {
 	return got.delete(`https://api.pretendo.cc${path}`, {
 		throwHttpErrors: false,
 		https: {
@@ -102,7 +105,7 @@ function apiDeleteGetRequest(path, headers, json) {
 }
 
 async function register(registerData) {
-	const apiResponse = await apiPostGetRequest('/v1/register', {}, registerData);
+	const apiResponse = await apiPostRequest('/v1/register', {}, registerData);
 
 	if (apiResponse.statusCode !== 200) {
 		throw new Error(apiResponse.body.error);
@@ -112,7 +115,7 @@ async function register(registerData) {
 }
 
 async function login(username, password) {
-	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+	const apiResponse = await apiPostRequest('/v1/login', {}, {
 		username,
 		password,
 		grant_type: 'password'
@@ -126,7 +129,7 @@ async function login(username, password) {
 }
 
 async function refreshLogin(request, response) {
-	const apiResponse = await apiPostGetRequest('/v1/login', {}, {
+	const apiResponse = await apiPostRequest('/v1/login', {}, {
 		refresh_token: request.cookies.refresh_token,
 		grant_type: 'refresh_token'
 	});
@@ -166,7 +169,7 @@ async function getUserAccountData(request, response, fromRetry=false) {
 }
 
 async function updateDiscordConnection(discordUser, request, response, fromRetry=false) {
-	const apiResponse = await apiPostGetRequest('/v1/connections/add/discord', {
+	const apiResponse = await apiPostRequest('/v1/connections/add/discord', {
 		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
 	}, {
 		data: {
@@ -182,6 +185,22 @@ async function updateDiscordConnection(discordUser, request, response, fromRetry
 	if (apiResponse.statusCode !== 200) {
 		await refreshLogin(request, response);
 		await updateDiscordConnection(discordUser, request, response, true);
+	}
+}
+
+async function removeDiscordConnection(request, response, fromRetry = false) {
+	const apiResponse = await apiDeleteRequest('/v1/connections/remove/discord', {
+		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+	});
+
+	if (apiResponse.statusCode !== 200 && fromRetry === true) {
+		// TODO: Error message
+		throw new Error('Bad');
+	}
+
+	if (apiResponse.statusCode !== 200) {
+		await refreshLogin(request, response);
+		await removeDiscordConnection(request, response, true);
 	}
 }
 
@@ -270,9 +289,19 @@ async function handleStripeEvent(event) {
 		}
 
 		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
+		const discordId = pnid.get('connections.discord.id');
 
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
-			// Canceling old subscription, do nothing but update webhook date
+			// Canceling old subscription, do nothing but update webhook date and remove Discord roles
+			if (product.metadata.beta === 'true') {
+				removeDiscordMemberTesterRole(discordId).catch(error => {
+					logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+				});
+			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 
 			const updateData = {
 				'connections.stripe.latest_webhook_timestamp': event.created
@@ -302,6 +331,10 @@ async function handleStripeEvent(event) {
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 1;
 					}
+
+					assignDiscordMemberTesterRole(discordId).catch(error => {
+						logger.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+					});
 					break;
 
 				case 'canceled': // Subscription was canceled
@@ -309,6 +342,10 @@ async function handleStripeEvent(event) {
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 0;
 					}
+
+					removeDiscordMemberTesterRole(discordId).catch(error => {
+						logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+					});
 					break;
 
 				default:
@@ -353,6 +390,10 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
 
 		if (subscription.status === 'canceled') {
@@ -365,6 +406,10 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
 
 		if (subscription.status === 'unpaid') {
@@ -377,7 +422,37 @@ async function handleStripeEvent(event) {
 			} catch (error) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
+
+			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
 		}
+	}
+}
+
+async function assignDiscordMemberSupporterRole(memberId, roleId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, roleId));
+	}
+}
+
+async function assignDiscordMemberTesterRole(memberId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.tester));
+	}
+}
+
+async function removeDiscordMemberSupporterRole(memberId, roleId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, roleId));
+	}
+}
+
+async function removeDiscordMemberTesterRole(memberId) {
+	if (memberId && memberId.trim() !== '') {
+		await discordRest.delete(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.tester));
 	}
 }
 
@@ -387,13 +462,18 @@ module.exports = {
 	getRawDocs,
 	parseDocs,
 	apiGetRequest,
-	apiPostGetRequest,
-	apiDeleteGetRequest,
+	apiPostRequest,
+	apiDeleteRequest,
 	register,
 	login,
 	refreshLogin,
 	getUserAccountData,
 	updateDiscordConnection,
+	removeDiscordConnection,
 	nintendoPasswordHash,
-	handleStripeEvent
+	handleStripeEvent,
+	assignDiscordMemberSupporterRole,
+	assignDiscordMemberTesterRole,
+	removeDiscordMemberSupporterRole,
+	removeDiscordMemberTesterRole
 };
