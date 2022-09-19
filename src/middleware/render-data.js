@@ -6,6 +6,10 @@ async function renderDataMiddleware(request, response, next) {
 		return next();
 	}
 
+	if (request.path.startsWith('/account/logout')) {
+		return next();
+	}
+
 	// Get user local
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.language, reqLocale.region);
