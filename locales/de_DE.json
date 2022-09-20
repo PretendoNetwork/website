@@ -10,7 +10,8 @@
 		"accountWidget": {
 			"settings": "Einstellungen",
 			"logout": "Abmelden"
-		}
+		},
+		"donate": "Spenden"
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
@@ -213,7 +214,18 @@
 				"Tritt dem Discord server bei!"
 			],
 			"button": "Tritt noch heute bei!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Ich bin Bandwidth, der Waschbär, und ich liebe es, in die Kabel der Server vom Pretendo Network zu beißen. Lecker!",
+			"Viele Leute fragen uns, ob wir deswegen rechtliche Probleme mit Nintendo bekommen werden. Ich bin froh, sagen zu können, dass meine Tante bei Nintendo arbeitet, und sie sagt, es sei in Ordnung.",
+			"Webkit v537 ist die beste Version von Webkit für die Wii U. Nein, wir werden Chrome nicht auf die Wii U porten.",
+			"Ich kann es kaum erwarten, dass die Uhr den 19. Januar 2038, 03:14:08 UTC anzeigt!",
+			"Die Wii U ist eigentlich ein unterschätztes System: Die Werbung war wirklich schlecht, aber die Konsole ist großartig. Moment mal, keine Ahnung warum, aber mein Gamepad lässt sich nicht mit meiner Wii verbinden.",
+			"Das Hauptthema von Super Mario World 2 - Yoshi's Island ist ein absoluter Hit, und es gibt keine Möglichkeit, mich vom Gegenteil zu überzeugen.",
+			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
+			"So etwas wie \"Du kennst Ash, Gott segne sie, sie schreibt den ganzen Tag UwU's\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU's und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
+			"Mein ehrstes Video auf meinem Kanal!!! Ich hab schon immer gewollt, Viedeos zu machen, aber mein Laptop war echt schlecht und ich konnte Fraps, Skype und Minecraft nie gleichzeitig laufen lassne. ABER JETZT NICHT MEHR! Mit der Hilfe von meinem Programmierlehrer läuft mein Laptop fiel besser und ich kann jetzt aufnehmen! Ich hoffe ihr mögt meine Videos und bitte bitte aboniert und likt!!!"
+		]
 	},
 	"progressPage": {
 		"title": "Unser Fortschritt",
@@ -272,13 +284,19 @@
 				"email": "E-Mail",
 				"password": "Passwort",
 				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
-				"removeDiscord": "Discord-Konto entfernen"
+				"removeDiscord": "Discord-Konto entfernen",
+				"no_signins_notice": "Login verlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
+				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
+				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
+				"userSettings": "Nutzer Einstellungen"
 			},
 			"downloadFiles": "Account-Dateien herunterladen",
 			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
-			"upgrade": "Konto upgraden"
+			"upgrade": "Konto upgraden",
+			"unavailable": "Nicht verfügbar"
 		},
-		"banned": "Gebannt"
+		"banned": "Gebannt",
+		"account": "Account"
 	},
 	"upgrade": {
 		"title": "Upgrade",
@@ -319,10 +337,25 @@
 					"caption": "Suche nach diesem hier"
 				}
 			]
+		},
+		"search": {
+			"title": "Hast du ein Fehlercode bekommen?",
+			"caption": "Schreib es in das untere Feld um Informationen zu deinem Problem zu erhalten!",
+			"label": "Fehlercode",
+			"no_match": "Kein Ergebnis"
+		},
+		"sidebar": {
+			"getting_started": "Erste Schritte",
+			"welcome": "Willkommen",
+			"install_extended": "Pretendo Installieren",
+			"install": "Installieren",
+			"search": "Suchen",
+			"juxt_err": "Fehlercodes - Juxt"
 		}
 	},
 	"modals": {
 		"cancel": "Abbrechen",
-		"confirm": "Bestätigen"
+		"confirm": "Bestätigen",
+		"close": "Schließen"
 	}
 }

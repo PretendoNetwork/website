@@ -6,7 +6,12 @@
 		"credits": "Créditos",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Conta"
+		"account": "Conta",
+		"accountWidget": {
+			"settings": "Configurações",
+			"logout": "Sair"
+		},
+		"donate": "Doar"
 	},
 	"hero": {
 		"subtitle": "Servidores de jogos",
@@ -28,7 +33,8 @@
 		"paragraphs": [
 			null,
 			"Para o Nintendo 3DS também estamos trabalhando no Mario Kart 7, pretendemos trabalhar em outros jogos quando possível."
-		]
+		],
+		"githubRepo": "Repositório do GitHub"
 	},
 	"faq": {
 		"title": "Perguntas frequentes",
@@ -212,7 +218,14 @@
 				"Se junte ao nosso servidor do Discord!"
 			],
 			"button": "Se juntar agora!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Eu sou Bandolino, o Guaxinim, e adoro morder os cabos que vão para os servidores da Pretendo Network. Nham nham!",
+			"Muitas pessoas nos perguntam se teremos problemas legais com a Nintendo por causa disso; Eu fico feliz em dizer que minha tia trabalha na Nintendo e ela disse que está tudo bem.",
+			"Webkit v537 é a melhor versão do Webkit para o Wii U. Não, nós não vamos portar o Chrome para o Wii U.",
+			"Mal posso esperar para dar 00:14:08 (horário de Brasília) do dia 19 de Janeiro de 2038!",
+			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii."
+		]
 	},
 	"progressPage": {
 		"title": "Nosso progresso",
@@ -220,7 +233,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Publicado por",
+		"publishedOn": "em"
 	},
 	"localizationPage": {
 		"title": "Vamos traduzir",
@@ -229,5 +244,34 @@
 		"fileInput": "Arquivo para testar",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Testar aqui"
+	},
+	"account": {
+		"loginForm": {
+			"loginPrompt": "Já tem uma conta?",
+			"login": "Entrar",
+			"register": "Criar conta",
+			"detailsPrompt": "Insira seus detalhes de conta abaixo",
+			"username": "Nome de usuário",
+			"password": "Senha",
+			"confirmPassword": "Confirme a senha",
+			"email": "E-mail",
+			"miiName": "Nome do Mii",
+			"forgotPassword": "Esqueceu a senha?",
+			"registerPrompt": "Não tem uma conta?"
+		},
+		"settings": {
+			"settingCards": {
+				"beta": "Beta",
+				"profile": "Perfil",
+				"nickname": "Apelido",
+				"birthDate": "Data de nascimento",
+				"gender": "Gênero",
+				"country": "País/região",
+				"timezone": "Fuso horário",
+				"production": "Produção"
+			},
+			"downloadFiles": "Baixar arquivos de conta",
+			"downloadFilesDescription": "(não funcionará na Nintendo Network)"
+		}
 	}
 }
