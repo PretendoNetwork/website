@@ -38,9 +38,15 @@
 
 	<div class="content">
 		<div class="content-inner">
-
+			<div class="tip red">
+				<strong>Note!</strong>
+				<br>
+				Pretendo Network is currently in closed beta! The servers are only accessible to testers. To become a tester,
+				upgrade your <a href="/account/upgrade" target="_blank">PNID here</a>
+			</div>
+			
 			{{#if missingInLocale}}
-				<p class="missing-in-locale-notice">{{ locale.docs.missingInLocale }}</p>
+				<p class="missing-in-locale-notice">{{ localeHelper locale "docs.missingInLocale" }}</p>
 			{{/if}}
 
 			{{{ content }}}

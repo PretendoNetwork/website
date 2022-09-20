@@ -44,7 +44,7 @@
 
 	<div class="content">
 		<div class="content-inner">
-			<h1>{{ locale.docs.quickLinks.header }}</h1>
+			<h1>{{ localeHelper locale "docs.quickLinks.header" }}</h1>
 			<div class="quick-links-grid">
 				<a href="/docs/install">
 					<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
@@ -55,8 +55,8 @@
 						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
 					<div>
-						<p class="header">{{ locale.docs.quickLinks.links.[0].header }}</p>
-						<p>{{ locale.docs.quickLinks.links.[0].caption }}</p>
+						<p class="header">{{ localeHelper locale "docs.quickLinks.links" 0 "header" }}</p>
+						<p>{{ localeHelper locale "docs.quickLinks.links" 0 "caption" }}</p>
 					</div>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -73,8 +73,8 @@
 						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
 					</svg>
 					<div>
-						<p class="header">{{ locale.docs.quickLinks.links.[1].header }}</p>
-						<p>{{ locale.docs.quickLinks.links.[1].caption }}</p>
+						<p class="header">{{ localeHelper locale "docs.quickLinks.links" 1 "header" }}</p>
+						<p>{{ localeHelper locale "docs.quickLinks.links" 1 "caption" }}</p>
 					</div>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

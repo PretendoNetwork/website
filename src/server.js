@@ -12,6 +12,7 @@ const database = require('./database');
 const util = require('./util');
 const logger = require('./logger');
 const config = require('../config.json');
+const defaultLocale = require('../locales/en_US.json');
 
 const { http: { port } } = config;
 const app = express();
@@ -135,6 +136,56 @@ app.engine('handlebars', handlebars({
 		},
 		neq(value1, value2) {
 			return value1 !== value2;
+		},
+		times(n, block) {
+			let accum = '';
+			for(let i = 0; i < n; i++) {
+				accum += block.fn(i);
+			}
+			return accum;
+		},
+		localeHelper(locale, propString, propVar, extra) {
+			/*
+				locale: the json locale object
+				propString: the "path" to the property to get (e.g. "faq.title")
+				propVar: the dynamic property name to get after the "path" (e.g. localeHelper locale "account.level" would result in )
+					e.g. localeHelper locale "account.test" "account.level" would result in locale.account.test[account.level]
+			*/
+
+			let value = locale;
+			const props = propString.split('.');
+
+			if ( typeof propVar === 'string' ||	propVar instanceof String ||
+				typeof propVar === 'number' || propVar instanceof Number ) {
+				props.push(propVar);
+			}
+
+			function getPropFromLocale(value, props) {
+				for (const p of props) {
+					value = value[p];
+				}
+
+				return value;
+			}
+
+			// fall back to english if the prop doesn't exist in the current locale
+			try {
+				value = getPropFromLocale(value, props);
+			} catch (e) {
+				value = defaultLocale;
+				try {
+					value = getPropFromLocale(value, props);
+				} catch (e) {
+					logger.error(`Could not find locale property ${props.join('.')}`);
+				}
+			}
+
+			// TODO: Make this more dynamic
+			if (extra) {
+				value = value[extra];
+			}
+
+			return value;
 		},
 		slug(string) {
 			return string.toLowerCase().replaceAll(/ /g, '-');

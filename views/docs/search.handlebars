@@ -39,9 +39,9 @@
 	<div class="content search">
 		<div class="content-inner">
 			<div class="purple-card">
-				<h1>{{ locale.docs.search.title }}</h1>
-				<p>{{ locale.docs.search.caption }}</p>
-				<label for="errorCode">{{ locale.docs.search.label }}</label>
+				<h1>Got an error code?</h1>
+				<p>Type it in the box below to get information on your issue!</p>
+				<label for="errorCode">Error code</label>
 				<div class="input-wrapper">
 					<input id="errorCode" placeholder="ABC-012-3456" required />
 					<div class="matches">
@@ -107,7 +107,7 @@
 			});
 		} else {
 			const noMatch = document.createElement('p');
-			noMatch.innerText = '{{ locale.docs.search.no_match }}';
+			noMatch.innerText = 'No matches found';
 			matchesContainer.appendChild(noMatch);
 		}
 	});

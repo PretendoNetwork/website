@@ -7,7 +7,6 @@
 		"progress": "Progress",
 		"blog": "Blog",
 		"account": "Account",
-		"donate": "Donate",
 		"accountWidget": {
 			"settings": "Settings",
 			"logout": "Logout"
@@ -238,7 +237,6 @@
 		"publishedOn": "on"
 	},
 	"account": {
-		"account": "Account",
 		"loginForm": {
 			"login": "Login",
 			"register": "Register",
@@ -256,9 +254,7 @@
 			"downloadFiles": "Download account files",
 			"downloadFilesDescription": "(will not work on Nintendo Network)",
 			"upgrade": "Upgrade account",
-			"unavailable": "Unavailable",
 			"settingCards": {
-				"userSettings": "User settings",
 				"profile": "Profile",
 				"nickname": "Nickname",
 				"birthDate": "Birth date",
@@ -284,10 +280,7 @@
 				"linkDiscord": "Link Discord account",
 				"newsletter": "Newsletter",
 				"newsletterPrompt": "Receive project updates via email (you can opt-out at any time)",
-				"passwordPrompt": "Enter your PNID password to download Cemu files",
-				"no_signins_notice": "Sign in history not currently tracked. Check back again later!",
-				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
-				"no_edit_from_dashboard": "Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console"
+				"passwordPrompt": "Enter your PNID password to download Cemu files"
 			}
 		},
 		"accountLevel": [
@@ -337,26 +330,10 @@
 					"caption": "Search for it here"
 				}
 			]
-		},
-		"search": {
-			"title": "Got an error code?",
-			"caption": "Type it in the box below to get information on your issue!",
-			"label": "Error code",
-			"no_match": "No matches found"
-		},
-		"sidebar": {
-			"getting_started": "Getting started",
-			"welcome": "Welcome",
-			"install_extended": "Install Pretendo",
-			"install": "Install",
-			"search": "Search",
-			"juxt_err": "Error codes - Juxt"
-
 		}
 	},
 	"modals": {
 		"cancel": "Cancel",
-		"confirm": "Confirm",
-		"close": "Close"
+		"confirm": "Confirm"
 	}
 }

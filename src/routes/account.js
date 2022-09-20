@@ -70,11 +70,7 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 });
 
 router.get('/login', async (request, response) => {
-	const renderData = {
-		error: request.cookies.error_message
-	};
-
-	response.render('account/login', renderData);
+	response.render('account/login');
 });
 
 router.post('/login', async (request, response) => {
@@ -101,7 +97,6 @@ router.get('/register', async (request, response) => {
 		email: request.cookies.email,
 		username: request.cookies.username,
 		mii_name: request.cookies.mii_name,
-		error: request.cookies.error_message
 	};
 
 	response.clearCookie('email', { domain: '.pretendo.network' });
