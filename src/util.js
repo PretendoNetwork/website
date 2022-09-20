@@ -6,11 +6,14 @@ const Stripe = require('stripe');
 const { marked } = require('marked');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
+const merge = require('lodash.merge');
+
 const mailer = require('./mailer');
 const database = require('./database');
 const logger = require('./logger');
-const config = require('../config.json');
 
+const config = require('../config.json');
+const baseLocale = require(`${__dirname}/../locales/en_US.json`);
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
 
 const stripe = new Stripe(config.stripe.secret_key);
@@ -23,12 +26,15 @@ function getLocale(language, region) {
 	const path = `${__dirname}/../locales/${language}_${region}.json`;
 
 	if (fs.pathExistsSync(path)) {
-		return require(path);
+		const selectedLocale = require(path);
+		const finalLocale = merge(baseLocale, selectedLocale);
+
+		return finalLocale;
 	}
 
 	logger.warn(`Could not find locale ${language}_${region}! Loading en_US`);
 
-	return require(`${__dirname}/../locales/en_US.json`);
+	return baseLocale;
 }
 
 function getRawDocs(locale, subpath, pageName) {
