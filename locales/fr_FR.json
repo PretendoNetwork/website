@@ -10,7 +10,8 @@
 		"accountWidget": {
 			"logout": "Déconnexion",
 			"settings": "Réglages"
-		}
+		},
+		"donate": "Donations"
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeux",
@@ -213,7 +214,18 @@
 				"Rejoignez notre serveur Discord !"
 			],
 			"button": "Rejoignez maintenant !"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Je suis Bandy le raton laveur, j'adore mordiller les cables de Prentedo Network!",
+			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo pour ça; moi je leur répond que ma tante qui travaille à Nintendo a dit qu'elle était d'accord.",
+			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Ce serait trop compliqué de créer une version de Chrome pour la Wii U.",
+			"J'ai hâte qu'on soit le 19 janvier 2038 à 3H14 !",
+			"La Wii U n'était pas si nulle que ça, les Pub étaient vraiment mauvaises par contres. Ah, attends mon Gamepad n'arrive pas à se connecter à ma Wii.",
+			"La musique principale de Super *Mario World 2 - Yoshi's Island* est la meilleure musique du monde et tu ne peux pas changer mon avis.",
+			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un port sans importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"vous l'aimiez vraiment beaucoup sur la console virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
+			"\"tu vois Ash  ? Ouais, bah elle fait UwU tout le temps\" est vraiment la façon la plus gentille possible de dire \"Ash fait UwU tout le temps et j'en ai marre\".",
+			"Ma premièr vidéo!!! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !!!!!"
+		]
 	},
 	"progressPage": {
 		"title": "Notre progression",
