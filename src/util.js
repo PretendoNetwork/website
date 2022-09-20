@@ -27,7 +27,7 @@ function getLocale(language, region) {
 
 	if (fs.pathExistsSync(path)) {
 		const selectedLocale = require(path);
-		const finalLocale = merge(baseLocale, selectedLocale);
+		const finalLocale = merge({}, baseLocale, selectedLocale);
 
 		return finalLocale;
 	}
