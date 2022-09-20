@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="settings-wrapper">
-			<h2 class="section-header" id="user-settings">User settings</h2>
+			<h2 class="section-header" id="user-settings">{{ locale.account.settings.settingCards.userSettings }}</h2>
 			<div class="setting-card">
 				<h2 class="header">{{ locale.account.settings.settingCards.profile }}</h2>
 				<a href="/account/edit/profile" class="edit">
@@ -104,7 +104,7 @@
 
 			<h2 class="section-header" id="security">{{ locale.account.settings.settingCards.signInSecurity }}</h2>
 			<div class="setting-card">
-				<h2 class="header">Account</h2>
+				<h2 class="header">{{ locale.account.account }}</h2>
 				<a href="/account/edit/login-info" class="edit">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
@@ -125,7 +125,7 @@
 
 			<div class="setting-card sign-in-history">
 				<h2 class="header">{{ locale.account.settings.settingCards.signInHistory }}</h2>
-				<p>Sign in history not currently tracked. Check back again later</p>
+				<p>{{ locale.account.settings.settingCards.no_signins_notice }}</p>
 				<ul class="setting-list">
 					{{#each account.devices }}
 						<li>
@@ -154,7 +154,7 @@
 
 			<div class="setting-card">
 				<h2 class="header">{{ locale.account.settings.settingCards.newsletter }}</h2>
-				<p>Newsletter not currently available. Check back again later</p>
+				<p>{{ locale.account.settings.settingCards.no_newsletter_notice }}</p>
 				<!--
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
@@ -195,13 +195,12 @@
 	</div>
 </div>
 
-<!-- TODO: Localize this -->
 <div class="modal-wrapper hidden" id="edit-settings">
 	<div class="modal">
-		<h1 class="title dot">Unavailable</h1>
-		<p class="modal-caption">Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console</p>
+		<h1 class="title dot">{{ locale.account.settings.unavailable }}</h1>
+		<p class="modal-caption">{{ locale.account.settings.settingCards.no_edit_from_dashboard }}</p>
 		<div class="modal-button-wrapper">
-			<button class="button primary confirm" id="editSettingsCloseButton">Close</button>
+			<button class="button primary confirm" id="editSettingsCloseButton">{{ locale.modals.close }}</button>
 		</div>
 	</div>
 </div>
