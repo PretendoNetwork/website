@@ -10,7 +10,8 @@
 		"accountWidget": {
 			"settings": "Einstellungen",
 			"logout": "Abmelden"
-		}
+		},
+		"donate": "Spenden"
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
@@ -283,13 +284,19 @@
 				"email": "E-Mail",
 				"password": "Passwort",
 				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
-				"removeDiscord": "Discord-Konto entfernen"
+				"removeDiscord": "Discord-Konto entfernen",
+				"no_signins_notice": "Login verlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
+				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
+				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
+				"userSettings": "Nutzer Einstellungen"
 			},
 			"downloadFiles": "Account-Dateien herunterladen",
 			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
-			"upgrade": "Konto upgraden"
+			"upgrade": "Konto upgraden",
+			"unavailable": "Nicht verfügbar"
 		},
-		"banned": "Gebannt"
+		"banned": "Gebannt",
+		"account": "Account"
 	},
 	"upgrade": {
 		"title": "Upgrade",
@@ -330,10 +337,25 @@
 					"caption": "Suche nach diesem hier"
 				}
 			]
+		},
+		"search": {
+			"title": "Hast du ein Fehlercode bekommen?",
+			"caption": "Schreib es in das untere Feld um Informationen zu deinem Problem zu erhalten!",
+			"label": "Fehlercode",
+			"no_match": "Kein Ergebnis"
+		},
+		"sidebar": {
+			"getting_started": "Erste Schritte",
+			"welcome": "Willkommen",
+			"install_extended": "Pretendo Installieren",
+			"install": "Installieren",
+			"search": "Suchen",
+			"juxt_err": "Fehlercodes - Juxt"
 		}
 	},
 	"modals": {
 		"cancel": "Abbrechen",
-		"confirm": "Bestätigen"
+		"confirm": "Bestätigen",
+		"close": "Schließen"
 	}
 }
