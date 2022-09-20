@@ -6,7 +6,11 @@
 		"credits": "クレジット",
 		"progress": "進行状況",
 		"blog": "ブログ",
-		"account": "アカウント"
+		"account": "アカウント",
+		"accountWidget": {
+			"settings": "設定",
+			"logout": "ログアウト"
+		}
 	},
 	"hero": {
 		"subtitle": "再構築された",
@@ -28,7 +32,8 @@
 		"paragraphs": [
 			null,
 			"3DSに関しては、マリオカート7に主に取り組んでいて、可能な場合は他のゲームにも取り組んでいます。"
-		]
+		],
+		"githubRepo": "GitHubレポジトリ"
 	},
 	"faq": {
 		"title": "よく聞かれる質問（FAQ）",
@@ -212,7 +217,12 @@
 				"Discordサーバーに参加してください!"
 			],
 			"button": "すぐ参加する!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"僕はアライグマのBandwidthだよ！Pretendo Networkのサーバーを繋いでいる電線を噛むのが好きなんだ。美味しい！",
+			"みんな、任天堂と法的に問題ができるんじゃないか、と質問してくるね。ぼくのおばさんが任天堂で働いてるけど、大丈夫だって。",
+			"Webkit v537がWii U用の最高のWebkitのバージョンだよ。ううん、ChromeをWii Uには移さないよ。"
+		]
 	},
 	"progressPage": {
 		"title": "進行状況（英語）",
