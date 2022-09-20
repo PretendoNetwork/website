@@ -2,7 +2,7 @@
 <div class="wrapper">
 	<a href="/account" class="back-arrow">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-		<span>{{ locale.upgrade.back }}</span>
+		<span>{{ localeHelper locale "upgrade.back" }}</span>
 	</a>
 
 	<div class="account-form-wrapper">
@@ -31,15 +31,15 @@
 			</svg>
 		</a>
 
-		<h1 class="title dot">{{ locale.upgrade.title }}</h1>
-		<p class="caption">{{ locale.upgrade.description }}</p>
+		<h1 class="title dot">{{ localeHelper locale "upgrade.title" }}</h1>
+		<p class="caption">{{ localeHelper locale "upgrade.description" }}</p>
 
 		<div class="progress-bar-wrapper">
 			<div class="progress-bar">
 				<div class="progress-bar-inner" style="width: {{ donationCache.completed_capped }}%;" ></div>
 			</div>
 			<p class="localeReplace">
-				{{{ locale.donation.progress }}}
+				{{{ localeHelper locale "donation.progress" }}}
 			</p>
 		</div>
 		<form method="post" data-current-tier="{{currentTier}}">
@@ -62,36 +62,36 @@
 						</div>
 					</div>
 					<p class="price">
-						<span>{{this.price}}</span> / {{ locale.upgrade.month }}
+						<span>{{this.price}}</span> / {{ localeHelper locale "upgrade.month" }}
 					</p>
 				</label>
 			{{/each}}
 
 			<div class="button-wrapper">
-				<button class="disabled" type="submit" id="submitButton">{{ locale.upgrade.tierSelectPrompt }}</button>
-				<button class="unsubscribe hidden" id="unsubModalShowButton">{{ locale.upgrade.unsub }}</button>
+				<button class="disabled" type="submit" id="submitButton">{{ localeHelper locale "upgrade.tierSelectPrompt" }}</button>
+				<button class="unsubscribe hidden" id="unsubModalShowButton">{{ localeHelper locale "upgrade.unsub" }}</button>
 			</div>
 		</form>
 	</div>
 
 	<div class="modal-wrapper hidden" id="unsub">
 		<div class="modal">
-			<h1 class="title dot">{{ locale.upgrade.unsub }}</h1>
-			<p class="modal-caption">{{{ locale.upgrade.unsubPrompt }}}</p>
+			<h1 class="title dot">{{ localeHelper locale "upgrade.unsub" }}</h1>
+			<p class="modal-caption">{{{ localeHelper locale "upgrade.unsubPrompt" }}}</p>
 			<div class="modal-button-wrapper">
-				<button class="button cancel" id="unsubModalCloseButton">{{ locale.modals.cancel }}</button>
-				<button class="button primary confirm" id="unsubModalConfirmButton">{{ locale.upgrade.unsubConfirm }}</button>
+				<button class="button cancel" id="unsubModalCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
+				<button class="button primary confirm" id="unsubModalConfirmButton">{{ localeHelper locale "upgrade.unsubConfirm" }}</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="modal-wrapper hidden" id="switchtier">
 		<div class="modal">
-			<h1 class="title dot">{{ locale.upgrade.changeTier }}</h1>
-			<p class="modal-caption">{{{ locale.upgrade.changeTierPrompt }}}</p>
+			<h1 class="title dot">{{ localeHelper locale "upgrade.changeTier" }}</h1>
+			<p class="modal-caption">{{{ localeHelper locale "upgrade.changeTierPrompt" }}}</p>
 			<div class="modal-button-wrapper">
-				<button class="button cancel" id="switchTierCloseButton">{{ locale.modals.cancel }}</button>
-				<button class="button primary confirm" id="switchTierConfirmButton">{{ locale.modals.confirm }}</button>
+				<button class="button cancel" id="switchTierCloseButton">{{ localeHelper locale "modals.cancel" }}</button>
+				<button class="button primary confirm" id="switchTierConfirmButton">{{ localeHelper locale "modals.confirm" }}</button>
 			</div>
 		</div>
 	</div>
