@@ -88,6 +88,7 @@ if (!validMiiData) {
 	const shouldContinue = window.confirm('Found corrupted mii data, want to continue with a new Mii?');
 	if (!shouldContinue)
 		window.location.assign('/account');
+	initializeMiiData(newMiiData);
 }
 
 // we keeep the images here so we can cache them when we need to change the build/height
