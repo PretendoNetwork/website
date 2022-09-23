@@ -1,4 +1,11 @@
-// This file gets automatically bundled with browserify when running the start script. This also means that after any update you're gonna need to restart the server to see any changes.
+/**
+ * Compilation note:
+ * This file gets automatically bundled with browserify when running the start script.
+ * This also means that after any update you're gonna need to restart the server to see any changes.
+ *
+ * browserify is needed for the use of require() in the browser
+ */
+const Mii = require('mii-js');
 
 // Prevent the user from reloading or leaving the page
 window.onbeforeunload = function (e) {
@@ -32,33 +39,57 @@ window.addEventListener('resize', () => {
 	setCanvasScale();
 });
 
-// MII RENDERER
+let mii; // global mii object
 
-const Mii = require('mii-js');
+// this initalizes a mii for editing
+// returns if mii data was parsed successfully
+function initializeMiiData(encodedUserMiiData) {
+	console.group('Initalizing Mii data');
+	console.log('encoded mii data:', encodedUserMiiData);
+
+	// We initialize the Mii object
+	try {
+		console.log('Attempting to parse mii data');
+		mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
+	} catch (err) {
+		console.error('failed to decode mii data', err);
+		console.groupEnd();
+		return false;
+	}
+
+	// We set the img sources for the unedited miis in the save animation
+	console.log('grabbing rendered miis for later use');
+	const miiStudioNeutralUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+	});
+	const miiStudioSorrowUrl = mii.studioUrl({
+		width: 512,
+		bgColor: '13173300',
+		expression: 'sorrow',
+	});
+	document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
+	document.querySelector('.mii-comparison.confirmed img.old-mii').src = miiStudioSorrowUrl;
+	console.log('initialization complete');
+	console.groupEnd();
+	return true;
+}
 
 // The Mii data is stored in a script tag in the HTML, so we can just grab it and then remove the element
 const encodedUserMiiData = document.querySelector(
 	'script#encodedUserMiiData'
 ).textContent;
 document.querySelector('script#encodedUserMiiData').remove();
-console.log('encodedMiiData', encodedUserMiiData);
 
-// We initialize the Mii object
-const mii = new Mii(Buffer.from(encodedUserMiiData, 'base64'));
-
-// We set the img sources for the unedited miis in the save animation
-const miiStudioNeutralUrl = mii.studioUrl({
-	width: 512,
-	bgColor: '13173300',
-});
-const miiStudioSorrowUrl = mii.studioUrl({
-	width: 512,
-	bgColor: '13173300',
-	expression: 'sorrow',
-});
-document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
-document.querySelector('.mii-comparison.confirmed img.old-mii').src =
-	miiStudioSorrowUrl;
+// is valid mii data
+const validMiiData = initializeMiiData(encodedUserMiiData);
+if (!validMiiData) {
+	const shouldContinue = window.confirm('Found corrupted mii data, want to continue with a new Mii?');
+	if (!shouldContinue)
+		window.location.assign('/account');
+	const newMii = 'AAEAQCpE2oVAJPDA1/vMZJrD1O74rwAAqWFCAEIAAAAAAAAAAAAAAAAAAAAAAGZfBABgAbFGYxYkFEUSwRITZg8ACCUwSqNYYQBzAGgAbQAAAAAAAAAAAAAAAAAAAKCF';
+	initializeMiiData(newMii);
+}
 
 // we keeep the images here so we can cache them when we need to change the build/height
 const miiFaceImg = new Image();
@@ -444,8 +475,8 @@ document
 			const miiData = mii.encode().toString('base64');
 			const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];
 			const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
-			
-			fetch('http://api.pretendo.cc/v1/user', {
+
+			fetch('https://api.pretendo.cc/v1/user', {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',
