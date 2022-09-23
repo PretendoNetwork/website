@@ -6,6 +6,7 @@
  * browserify is needed for the use of require() in the browser
  */
 const Mii = require('mii-js');
+const newMiiData = 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 
 // Prevent the user from reloading or leaving the page
 window.onbeforeunload = function (e) {
@@ -87,8 +88,6 @@ if (!validMiiData) {
 	const shouldContinue = window.confirm('Found corrupted mii data, want to continue with a new Mii?');
 	if (!shouldContinue)
 		window.location.assign('/account');
-	const newMii = 'AAEAQCpE2oVAJPDA1/vMZJrD1O74rwAAqWFCAEIAAAAAAAAAAAAAAAAAAAAAAGZfBABgAbFGYxYkFEUSwRITZg8ACCUwSqNYYQBzAGgAbQAAAAAAAAAAAAAAAAAAAKCF';
-	initializeMiiData(newMii);
 }
 
 // we keeep the images here so we can cache them when we need to change the build/height
