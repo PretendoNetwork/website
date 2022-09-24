@@ -78,6 +78,7 @@
 .account-sidebar .user a.mii {
 	position: relative;
 	display: block;
+	margin-top: 18px;
 	width: 128px;
 	height: 128px;
 	overflow: hidden;
