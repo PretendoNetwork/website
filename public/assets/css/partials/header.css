@@ -33,6 +33,7 @@ header .dropdown-arrow {
 	margin-left: -10px;
 	margin-bottom: -10px;
 	transition: left 180ms, margin-bottom 180ms, opacity 180ms;
+	pointer-events: none;
 }
 
 header.dropdown-active .dropdown-arrow {
