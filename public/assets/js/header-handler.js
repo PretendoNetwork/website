@@ -3,18 +3,33 @@
 const header = document.querySelector('header');
 const dropdownButtonWrapper = document.querySelector('.dropdown-button-wrapper');
 const dropdown = document.querySelector('header div.dropdown');
+const allDropdownButtons = dropdownButtonWrapper.querySelectorAll('button.dropdown-button');
 function navbarDropdownHandler(buttonID) {
 	const allDropdownContents = dropdown.querySelectorAll('div.dropdown-content');
 	const dropdownContent = document.querySelector(`.dropdown-content#${buttonID}-dropdown-content`);
+	const dropdownButton = document.querySelector(`button.dropdown-button#${buttonID}-button`);
+	const dropdownArrow = document.querySelector('.dropdown-arrow#navbar-dropdown-arrow');
 
 	// hide all contents
 	allDropdownContents.forEach((content) => {
 		content.classList.remove('show');
 	});
+	// deselect all buttons
+	allDropdownButtons.forEach((button) => {
+		button.classList.remove('active');
+	});
 	// show the content of the clicked button
 	dropdownContent.classList.add('show');
+	// select the clicked button
+	dropdownButton.classList.add('active');
 	// set the dropdown height to the height of the content
 	dropdown.style.height = `${dropdownContent.offsetHeight}px`;
+
+	// move the arrow to the selected button
+	dropdownArrow.style.left = `${dropdownButton.offsetLeft + dropdownButton.offsetWidth / 2 - 5}px`;
+
+	const buttonRect = dropdownButton.getBoundingClientRect();
+	const dropdownRect = dropdown.getBoundingClientRect();
 
 	// dim the rest of the page
 	header.classList.add('dropdown-active');
@@ -35,6 +50,10 @@ dropdownButtonWrapper.addEventListener('mouseleave', (e) => {
 	if (targetElement !== dropdown && !dropdown.contains(targetElement)) {
 		dropdown.style.height = '0';
 		header.classList.remove('dropdown-active');
+		// deselect all buttons
+		allDropdownButtons.forEach((button) => {
+			button.classList.remove('active');
+		});
 	}
 });
 dropdown.addEventListener('mouseleave', (e) => {
@@ -42,6 +61,10 @@ dropdown.addEventListener('mouseleave', (e) => {
 	if (targetElement !== dropdownButtonWrapper && !dropdown.contains(targetElement)) {
 		dropdown.style.height = '0';
 		header.classList.remove('dropdown-active');
+		// deselect all buttons
+		allDropdownButtons.forEach((button) => {
+			button.classList.remove('active');
+		});
 	}
 });
 

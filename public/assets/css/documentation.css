@@ -28,6 +28,11 @@ button#openSidebar {
 	margin: 20px;
 	margin-left: 0;
 }
+.docs-wrapper header::before {
+	content: none;
+	background: none;
+	pointer-events: none;
+}
 .docs-wrapper header a.logo-link {
 	display: none;
 }
