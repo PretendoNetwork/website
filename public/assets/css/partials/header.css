@@ -17,6 +17,10 @@ header::before {
 	width: 120vw;
 	height: calc(100% + 35px + 35px);
 	background: rgba(27, 31, 59, 0.98);
+	transition: background 180ms;
+}
+header.transparent::before {
+	background: rgba(27, 31, 59, 0);
 }
 header.dropdown-active {
 	box-shadow: 0 0 0 600vw rgba(27, 31, 59, 0.8);

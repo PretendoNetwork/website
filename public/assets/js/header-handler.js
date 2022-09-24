@@ -33,8 +33,20 @@ function navbarDropdownHandler(buttonID) {
 
 	// dim the rest of the page
 	header.classList.add('dropdown-active');
-
 }
+
+// make the header background trnasparent if near the top of the page
+function makeHeaderBackgroundTransparent() {
+	if(window.pageYOffset < 100) {
+		header.classList.add('transparent');
+	} else {
+		header.classList.remove('transparent');
+	}
+}
+makeHeaderBackgroundTransparent();
+window.addEventListener('scroll', () => {
+	makeHeaderBackgroundTransparent();
+});
 
 const navbarDropdownBtns = document.querySelectorAll('header .dropdown-button-wrapper button.dropdown-button');
 navbarDropdownBtns.forEach((btn) => {
