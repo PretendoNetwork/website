@@ -31,13 +31,15 @@ navbarDropdownBtns.forEach((btn) => {
 	});
 });
 dropdownButtonWrapper.addEventListener('mouseleave', (e) => {
-	if (e.toElement !== dropdown && !dropdown.contains(e.toElement)) {
+	const targetElement = e.relatedTarget || e.toElement;
+	if (targetElement !== dropdown && !dropdown.contains(targetElement)) {
 		dropdown.style.height = '0';
 		header.classList.remove('dropdown-active');
 	}
 });
 dropdown.addEventListener('mouseleave', (e) => {
-	if (e.toElement !== dropdownButtonWrapper && !dropdown.contains(dropdownButtonWrapper)) {
+	const targetElement = e.relatedTarget || e.toElement;
+	if (targetElement !== dropdownButtonWrapper && !dropdown.contains(targetElement)) {
 		dropdown.style.height = '0';
 		header.classList.remove('dropdown-active');
 	}
