@@ -11,6 +11,15 @@
 		"accountWidget": {
 			"settings": "Settings",
 			"logout": "Logout"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Meet the team",
+				"about": "About the project",
+				"faq": "Frequently asked questions",
+				"blog": "Our latest updates, condensed",
+				"progress": "Check the project progress and goals"
+			}
 		}
 	},
 	"hero": {

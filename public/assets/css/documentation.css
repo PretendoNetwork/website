@@ -23,6 +23,7 @@ button#openSidebar {
 }
 
 .docs-wrapper header {
+	position: relative;
 	box-sizing: border-box;
 	margin: 20px;
 	margin-left: 0;
@@ -278,6 +279,7 @@ button#openSidebar {
 	.docs-wrapper header {
 		margin-left: 20px;
 		width: 100%;
+		left: 0;
 	}
 
 	.docs-wrapper {
@@ -326,6 +328,16 @@ button#openSidebar {
 	.platform-grid {
 		grid-template-columns: 1fr;
 		grid-auto-rows: 1fr;
+	}
+
+	.docs-wrapper header a.logo-link {
+		margin-right: 6px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.docs-wrapper header div.dropdown {
+		left: calc(-39.876px - 6px - 30px - 40px);
 	}
 }
 
