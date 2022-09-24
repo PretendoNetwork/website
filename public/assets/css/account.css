@@ -12,9 +12,11 @@
 
 /* Account settings sidebar */
 .account-sidebar .user {
-	text-align: center;
 	margin: 55px auto;
 	width: fit-content;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 }
 .account-sidebar .user .miiname {
 	font-size: 1.2rem;
