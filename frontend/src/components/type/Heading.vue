@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 </script>
 
-<style>
+<style scoped>
 .dot::after {
   content: '';
   width: 0.6rem;
