@@ -10,7 +10,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     '@nuxtjs/eslint-config-typescript',
     'plugin:prettier/recommended',
+    'plugin:@dword-design/import-alias/recommended',
   ],
+
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -20,5 +22,13 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'vue/multi-word-component-names': 'off',
+    '@dword-design/import-alias/prefer-alias': [
+      'warning',
+      {
+        alias: {
+          '@': './src',
+        },
+      },
+    ],
   },
 };
