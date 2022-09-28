@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     strict: true,
     typeCheck: true,
   },
+  imports: {
+    autoImport: false,
+  },
   vite: {
     plugins: [eslint()],
   },
