@@ -638,8 +638,8 @@ section.update-signup div.circle {
 	/* the next 4 lines make it so the circle is always the same aspect ratio and covers enough of the screen */
 	width: 2591px;
 	height: 1454px;
-	min-width: 135vw;
-	min-height: 76vw; /* yes, this is supposed to be in vw */
+	min-width: 145vw;
+	min-height: 13vw; /* yes, this is supposed to be in vw */
 	border-radius: 100%;
 	position: absolute;
 	top: 0;
