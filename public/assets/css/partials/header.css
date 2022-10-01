@@ -1,7 +1,53 @@
 header {
+	position: fixed;
+	top: 0;
+	left: 2.5%;
 	display: flex;
 	align-items: center;
+	width: 95%;
 	margin-top: 35px;
+	z-index: 60;
+	transition: box-shadow 180ms, background 180ms;
+}
+header * {
+	z-index: 1;
+}
+header::before {
+	content: "";
+	position: absolute;
+	top: -35px;
+	left: -10vw;
+	width: 120vw;
+	height: calc(100% + 35px + 35px);
+	background: rgba(27, 31, 59, 0.98);
+	transition: background 180ms;
+}
+header.transparent,
+header.transparent::before {
+	background: rgba(27, 31, 59, 0);
+}
+header.dropdown-active {
+	background: rgba(27, 31, 59, 0.98);
+	box-shadow: 0 0 0 600vw rgba(27, 31, 59, 0.8);
+}
+header .dropdown-arrow {
+	opacity: 0;
+	position: absolute;
+	width: 0;
+	border-style: solid;
+	border-color: var(--bg-shade-3) transparent;
+	border-width: 0 14px 14px;
+	bottom: -26px;
+	margin-left: -10px;
+	margin-bottom: -10px;
+	transition: left 180ms, margin-bottom 180ms, opacity 180ms;
+	pointer-events: none;
+}
+
+header.dropdown-active .dropdown-arrow {
+	opacity: 1;
+	display: block;
+	margin-bottom: 0;
 }
 header a {
 	text-decoration: none;
@@ -10,23 +56,225 @@ header .logo-link,
 header .logo-link svg {
 	display: block;
 }
-header nav a:first-child {
+
+header div.left-section {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+header nav {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
 	margin-left: 40px;
 }
-header nav a {
+header button.dropdown-button#mobile-button {
+	display: none;
+	background: none;
+	padding: 0;
+	margin-right: 12px;
+	transition: transform 200ms;
+}
+header button.dropdown-button#mobile-button.active {
+	transform: rotate(90deg);
+}
+
+header div.dropdown-button-wrapper {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+}
+/* these are safezones where the dropdown will not close */
+header div.dropdown-button-wrapper::before {
+	content: "";
+	position: absolute;
+	top: -16px;
+	bottom: 100%;
+	left: 0;
+	right: -12px;
+}
+header div.dropdown-button-wrapper::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	bottom: -32px;
+	left: 0;
+	right: -12px;
+}
+
+header nav button {
+	background: none;
 	color: var(--text-shade-1);
 	margin: 0 17px;
-	text-decoration: none;
+	padding: 0;
 }
-header nav a:hover {
+header nav button:hover,
+header nav button.active {
+	background: none;
 	color: var(--text-shade-3);
-	transition: color 50ms ease-in-out;
+}
+header nav a.donate button {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 4px;
+	font-weight: bold;
+	background: #332b61;
+	color: var(--accent-shade-3);
+	padding: 2px 12px;
+	border-radius: 24px;
+}
+header nav a.donate button svg {
+	height: 1rem;
+	width: 1rem;
+}
+header nav a.donate button:hover {
+	background: var(--accent-shade-0);
+	color: #fff;
+}
+header nav a.donate button.dropdown-button::after {
+	content: "";
+	display: inline-block;
+	align-items: center;
+	width: 16px;
+	height: 8px;
+	bottom: 0;
+	margin-left: 0.3rem;
+	background: no-repeat center url("/assets/images/down-arrow.svg");
+	filter: brightness(0) invert(78%) sepia(2%) saturate(5488%) hue-rotate(197deg)
+		brightness(88%) contrast(93%);
+
+	transition: transform 100ms;
+}
+header nav button.dropdown-button.active::after {
+	transform: scaleY(-1);
+	filter: none;
+}
+
+header div.dropdown {
+	position: absolute;
+	top: 100%;
+	margin-top: 24px;
+	left: 0;
+	display: block;
+	background: var(--bg-shade-3);
+	border-radius: 8px;
+	width: 420px;
+	height: 0;
+	overflow-y: hidden;
+	transition: height 180ms;
+}
+header div.dropdown * {
+	box-sizing: border-box;
+}
+
+header div.dropdown-content {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 180ms;
+}
+header div.dropdown-content.show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+header div.dropdown .top {
+	padding: 32px 18px;
+}
+header div.dropdown .top a {
+	position: relative;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 16px;
+	justify-content: start;
+	align-items: center;
+	color: var(--text-shade-1);
+	padding: 16px;
+	border-radius: 8px;
+}
+header div.dropdown .top a .icon {
+	background: var(--bg-shade-2);
+	color: var(--accent-shade-3);
+	height: 56px;
+	width: 56px;
+	border-radius: 8px;
+}
+header div.dropdown .top a:hover .icon {
+	background: #151b44;
+	color: var(--accent-shade-1);
+}
+header div.dropdown .top a .icon svg {
+	width: 32px;
+	height: 32px;
+	margin: 12px;
+}
+header div.dropdown .top a .title {
+	margin: 0;
+	font-weight: bold;
+	color: var(--text-shade-3);
+}
+header div.dropdown .top a .caption {
+	margin: 0;
+}
+header div.dropdown .top a:hover {
+	background: var(--bg-shade-2-5);
+}
+header div.dropdown .top a:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 24px;
+	width: 24px;
+	height: 100%;
+	background: no-repeat center url("/assets/images/arrow-right.svg");
+	/* garbage to make it look the same color */
+	filter: brightness(0) invert(60%) sepia(70%) saturate(453%) hue-rotate(208deg)
+		brightness(113%) contrast(97%);
+}
+header div.dropdown .top a:hover .title {
+	color: var(--accent-shade-3);
+}
+
+header div.dropdown .bottom {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: center;
+	gap: 24px;
+	background: var(--bg-shade-3-5);
+	padding: 22px;
+	width: 100%;
+	box-sizing: border-box;
+}
+header div.dropdown .bottom a {
+	width: 48px;
+	height: 48px;
+	background: var(--bg-shade-3);
+	color: var(--text-shade-3);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header div.dropdown .bottom a:hover {
+	background: var(--bg-shade-2);
+}
+header div.dropdown .bottom a svg {
+	width: 24px;
+	height: auto;
+}
+
+header div.dropdown .top a.show-on-mobile {
+	display: none;
 }
 
 header .right-section {
 	display: grid;
 	grid-auto-flow: column;
-	grid-gap: 24px;
+	gap: 24px;
 	margin-left: auto;
 	z-index: 2;
 	color: var(--text-shade-1);
@@ -46,12 +294,14 @@ header .locale-dropdown-toggle.active {
 }
 
 header .user-widget-wrapper {
-	height: 24px;
+	height: auto;
 }
 
 header .user-widget-wrapper a.login-link {
 	color: var(--text-shade-1);
 	text-decoration: none;
+	display: block;
+  height: 32px;
 	transition: color 150ms;
 }
 header .user-widget-wrapper a.login-link:hover {
@@ -128,16 +378,83 @@ header .user-widget .button.logout {
 }
 
 @media screen and (max-width: 900px) {
-	header nav a:not(.keep-on-mobile) {
-		display: none;
+	header {
+		position: relative;
+		justify-content: flex-end;
+		width: 90%;
+		left: 5%;
 	}
 
-	header .logo-link {
-		margin-right: 20px;
+	header .hide-on-mobile {
+		display: none !important;
+	}
+	header button.dropdown-button#mobile-button {
+		display: block;
+	}
+	header .left-section {
+		margin-right: auto;
+	}
+	header .right-section {
+		margin-left: 24px;
+	}
+	header nav a.donate button {
+		margin: 0;
+	}
+
+	header div.dropdown {
+		left: unset;
+		right: -104px;
+		width: 90vw;
+	}
+	header div.dropdown .top {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
+	header div.dropdown .top {
+		grid-template-columns: 1fr;
+	}
+	header div.dropdown .top {
+		padding: 16px 9px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header nav a.donate button span {
+		display: none;
+	}
+	header nav a.donate button {
+		padding: 6px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	header nav a.donate button {
+		display: none;
+	}
+	header .right-section {
+		margin-left: 0;
+	}
+	header div.dropdown {
+		right: -80px;
+	}
+	header div.dropdown .top a {
+		padding: 8px;
+	}
+	header div.dropdown .top a .icon {
+		height: 40px;
+		width: 40px;
+	}
+	header div.dropdown .top a .icon svg {
+		width: 24px;
+		height: 24px;
+		margin: 8px;
+	}
+}
+
+@media screen and (max-width: 330px) {
 	header .logo-link svg text {
 		display: none;
 	}
@@ -147,9 +464,6 @@ header .user-widget .button.logout {
 	}
 
 	header .logo-link {
-		margin-right: 10px;
-	}
-	header nav a {
-		margin: 0 10px;
+		margin-right: 6px;
 	}
 }

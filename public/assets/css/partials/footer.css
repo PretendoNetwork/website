@@ -127,8 +127,8 @@ footer .bandwidth-raccoon-wrapper .text-bubble:after {
 	z-index: 1;
 	border-style: solid;
 	border-color: var(--bg-shade-3) transparent;
-	border-width: 10px 10px 0;
-	bottom: -10px;
+	border-width: 12px 12px 0;
+	bottom: -9px;
 	right: 60px;
 	margin-left: -10px;
 }
