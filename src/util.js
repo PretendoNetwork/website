@@ -77,7 +77,7 @@ function parseDocs(rawDocs) {
 }
 
 function apiGetRequest(path, headers) {
-	return got.get(`https://api.pretendo.cc${path}`, {
+	return got.get(`${config.api_base}${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
@@ -88,7 +88,7 @@ function apiGetRequest(path, headers) {
 }
 
 function apiPostRequest(path, headers, json) {
-	return got.post(`https://api.pretendo.cc${path}`, {
+	return got.post(`${config.api_base}${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
@@ -100,7 +100,7 @@ function apiPostRequest(path, headers, json) {
 }
 
 function apiDeleteRequest(path, headers, json) {
-	return got.delete(`https://api.pretendo.cc${path}`, {
+	return got.delete(`${config.api_base}${path}`, {
 		throwHttpErrors: false,
 		https: {
 			rejectUnauthorized: false, // Needed for self-signed certificates on localhost testing
