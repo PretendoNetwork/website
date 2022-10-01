@@ -1012,3 +1012,21 @@ section.update-signup div.circle {
 		display: none;
 	}
 }
+
+/* Scrollbar styling 'cause it's fancy */
+html::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+html::-webkit-scrollbar-track {
+	background: var(--bg-shade-1);
+}
+html::-webkit-scrollbar-thumb {
+	background-color: var(--text-shade-0);
+	border-radius: 24px;
+	border: 3px solid var(--bg-shade-1);
+}
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-shade-0) var(--bg-shade-1);
+}
