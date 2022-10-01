@@ -294,7 +294,7 @@ async function handleStripeEvent(event) {
 
 		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
 
-		if (latestWebhookTimestamp && latestWebhookTimestamp > event.created) {
+		if (latestWebhookTimestamp && latestWebhookTimestamp >= event.created) {
 			// Do nothing, this webhook is older than the latest seen
 			return;
 		}
