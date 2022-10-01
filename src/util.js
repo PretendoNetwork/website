@@ -284,7 +284,6 @@ async function handleStripeEvent(event) {
 					logger.error(`Error refunding subscription | ${customer.id}, ${subscription.id} | - ${error.message}`);
 				}
 
-
 				try {
 					await mailer.sendMail({
 						to: customer.email,

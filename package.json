@@ -4,7 +4,11 @@
 	"description": "",
 	"main": "src/server.js",
 	"scripts": {
-		"start": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js && node src/server.js"
+		"start": "npm run build && node src/server.js",
+		"build": "npm run build-miieditor && npm run build-forgot-password && npm run build-reset-password",
+		"build-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
+		"build-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
+		"build-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
 	"repository": {
 		"type": "git",

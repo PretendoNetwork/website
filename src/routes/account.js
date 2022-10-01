@@ -143,12 +143,24 @@ router.post('/register', async (request, response) => {
 	}
 });
 
-router.get('/logout', async(_request, response) => {
+router.get('/logout', async (_request, response) => {
 	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
 	response.clearCookie('access_token', { domain: '.pretendo.network' });
 	response.clearCookie('token_type', { domain: '.pretendo.network' });
 
 	response.redirect('/');
+});
+
+router.get('/forgot-password', async (request, response) => {
+	response.render('account/forgot-password');
+});
+
+router.get('/reset-password', async (request, response) => {
+	const renderData = {
+		token: decodeURIComponent(request.query.token)
+	};
+
+	response.render('account/reset-password', renderData);
 });
 
 router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {

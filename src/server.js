@@ -151,7 +151,7 @@ database.connect().then(() => {
 		});
 
 		for (const event of events.data) {
-			await util.handleStripeEvent(event);
+			//await util.handleStripeEvent(event);
 		}
 
 		logger.success(`Server listening on http://localhost:${port}`);
