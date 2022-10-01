@@ -263,13 +263,6 @@ async function handleStripeEvent(event) {
 		const pid = Number(customer.metadata.pnid_pid);
 		const pnid = await database.PNID.findOne({ pid });
 
-		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
-
-		if (latestWebhookTimestamp && latestWebhookTimestamp > event.created) {
-			// Do nothing, this webhook is older than the latest seen
-			return;
-		}
-
 		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
 			// PNID does not exist. Abort and refund!
 			logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
@@ -291,6 +284,13 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
 			}
 
+			return;
+		}
+
+		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
+
+		if (latestWebhookTimestamp && latestWebhookTimestamp > event.created) {
+			// Do nothing, this webhook is older than the latest seen
 			return;
 		}
 
