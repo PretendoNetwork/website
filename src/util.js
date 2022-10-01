@@ -263,25 +263,30 @@ async function handleStripeEvent(event) {
 		const pid = Number(customer.metadata.pnid_pid);
 		const pnid = await database.PNID.findOne({ pid });
 
-		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
-			// PNID does not exist. Abort and refund!
-			logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
+		if (!pnid) {
+			// PNID does not exist
+			if (subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+				// Abort and refund!
+				logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
 
-			await stripe.subscriptions.del(subscription.id);
+				await stripe.subscriptions.del(subscription.id);
 
-			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-			await stripe.refunds.create({
-				payment_intent: invoice.payment_intent
-			});
-
-			try {
-				await mailer.sendMail({
-					to: customer.email,
-					subject: 'Pretendo Network Subscription Failed - PNID Not Found',
-					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
+				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+				await stripe.refunds.create({
+					payment_intent: invoice.payment_intent
 				});
-			} catch (error) {
-				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+
+				try {
+					await mailer.sendMail({
+						to: customer.email,
+						subject: 'Pretendo Network Subscription Failed - PNID Not Found',
+						text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
+					});
+				} catch (error) {
+					logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+				}
+			} else {
+				logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}!`);
 			}
 
 			return;
