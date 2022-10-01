@@ -237,12 +237,16 @@ async function handleStripeEvent(event) {
 				// Abort and refund!
 				logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
-				await stripe.subscriptions.del(subscription.id);
+				try {
+					await stripe.subscriptions.del(subscription.id);
 
-				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-				await stripe.refunds.create({
-					payment_intent: invoice.payment_intent
-				});
+					const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+					await stripe.refunds.create({
+						payment_intent: invoice.payment_intent
+					});
+				} catch (error) {
+					logger.error(`Error refunding subscription | ${customer.id}, ${subscription.id} | - ${error.message}`);
+				}
 
 				try {
 					await mailer.sendMail({
@@ -269,12 +273,17 @@ async function handleStripeEvent(event) {
 				// Abort and refund!
 				logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
 
-				await stripe.subscriptions.del(subscription.id);
+				try {
+					await stripe.subscriptions.del(subscription.id);
 
-				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-				await stripe.refunds.create({
-					payment_intent: invoice.payment_intent
-				});
+					const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+					await stripe.refunds.create({
+						payment_intent: invoice.payment_intent
+					});
+				} catch (error) {
+					logger.error(`Error refunding subscription | ${customer.id}, ${subscription.id} | - ${error.message}`);
+				}
+
 
 				try {
 					await mailer.sendMail({
