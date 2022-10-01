@@ -9,6 +9,9 @@ header {
 	z-index: 60;
 	transition: box-shadow 180ms, background 180ms;
 }
+header * {
+	z-index: 1;
+}
 header::before {
 	content: "";
 	position: absolute;
@@ -19,17 +22,18 @@ header::before {
 	background: rgba(27, 31, 59, 0.98);
 	transition: background 180ms;
 }
+header.transparent,
 header.transparent::before {
 	background: rgba(27, 31, 59, 0);
 }
 header.dropdown-active {
+	background: rgba(27, 31, 59, 0.98);
 	box-shadow: 0 0 0 600vw rgba(27, 31, 59, 0.8);
 }
 header .dropdown-arrow {
 	opacity: 0;
 	position: absolute;
 	width: 0;
-	z-index: 1;
 	border-style: solid;
 	border-color: var(--bg-shade-3) transparent;
 	border-width: 0 14px 14px;
@@ -51,7 +55,11 @@ header a {
 header .logo-link,
 header .logo-link svg {
 	display: block;
-	z-index: 1;
+}
+
+header div.left-section {
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 header nav {
@@ -61,6 +69,17 @@ header nav {
 	align-items: center;
 	margin-left: 40px;
 }
+header button.dropdown-button#mobile-button {
+	display: none;
+	background: none;
+	padding: 0;
+	margin-right: 12px;
+	transition: transform 200ms;
+}
+header button.dropdown-button#mobile-button.active {
+	transform: rotate(90deg);
+}
+
 header div.dropdown-button-wrapper {
 	position: relative;
 	display: flex;
@@ -95,7 +114,7 @@ header nav button.active {
 	background: none;
 	color: var(--text-shade-3);
 }
-header nav button.donate {
+header nav a.donate button {
 	display: grid;
 	grid-auto-flow: column;
 	align-items: center;
@@ -106,15 +125,15 @@ header nav button.donate {
 	padding: 2px 12px;
 	border-radius: 24px;
 }
-header nav button.donate svg {
+header nav a.donate button svg {
 	height: 1rem;
 	width: 1rem;
 }
-header nav button.donate:hover {
+header nav a.donate button:hover {
 	background: var(--accent-shade-0);
 	color: #fff;
 }
-header nav button.dropdown-button::after {
+header nav a.donate button.dropdown-button::after {
 	content: "";
 	display: inline-block;
 	align-items: center;
@@ -145,6 +164,9 @@ header div.dropdown {
 	height: 0;
 	overflow-y: hidden;
 	transition: height 180ms;
+}
+header div.dropdown * {
+	box-sizing: border-box;
 }
 
 header div.dropdown-content {
@@ -272,12 +294,14 @@ header .locale-dropdown-toggle.active {
 }
 
 header .user-widget-wrapper {
-	height: 24px;
+	height: auto;
 }
 
 header .user-widget-wrapper a.login-link {
 	color: var(--text-shade-1);
 	text-decoration: none;
+	display: block;
+  height: 32px;
 	transition: color 150ms;
 }
 header .user-widget-wrapper a.login-link:hover {
@@ -355,28 +379,82 @@ header .user-widget .button.logout {
 
 @media screen and (max-width: 900px) {
 	header {
+		position: relative;
+		justify-content: flex-end;
 		width: 90%;
 		left: 5%;
 	}
 
-	header .logo-link {
-		margin-right: 20px;
+	header .hide-on-mobile {
+		display: none !important;
+	}
+	header button.dropdown-button#mobile-button {
+		display: block;
+	}
+	header .left-section {
+		margin-right: auto;
+	}
+	header .right-section {
+		margin-left: 24px;
+	}
+	header nav a.donate button {
+		margin: 0;
+	}
+
+	header div.dropdown {
+		left: unset;
+		right: -104px;
+		width: 90vw;
+	}
+	header div.dropdown .top {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
-@media screen and (max-width: 768px) {
-	header nav {
-		margin-left: 0;
+@media screen and (max-width: 600px) {
+	header div.dropdown .top {
+		grid-template-columns: 1fr;
 	}
-	header .hide-on-mobile {
+	header div.dropdown .top {
+		padding: 16px 9px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header nav a.donate button span {
 		display: none;
 	}
-	header div.dropdown .top a.show-on-mobile {
-		display: grid;
+	header nav a.donate button {
+		padding: 6px;
 	}
 }
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 420px) {
+	header nav a.donate button {
+		display: none;
+	}
+	header .right-section {
+		margin-left: 0;
+	}
+	header div.dropdown {
+		right: -80px;
+	}
+	header div.dropdown .top a {
+		padding: 8px;
+	}
+	header div.dropdown .top a .icon {
+		height: 40px;
+		width: 40px;
+	}
+	header div.dropdown .top a .icon svg {
+		width: 24px;
+		height: 24px;
+		margin: 8px;
+	}
+}
+
+@media screen and (max-width: 330px) {
 	header .logo-link svg text {
 		display: none;
 	}
@@ -387,59 +465,5 @@ header .user-widget .button.logout {
 
 	header .logo-link {
 		margin-right: 6px;
-	}
-}
-
-@media screen and (max-width: 576px) {
-	header div.dropdown {
-		left: calc(-39.876px - 6px - 5vw);
-		width: 100vw;
-		box-sizing: border-box;
-		border-radius: 0;
-	}
-}
-
-@media screen and (max-width: 504px) {
-	header nav button.donate span {
-		display: none;
-	}
-
-	header nav button.donate {
-		padding: 8px;
-		margin: 0;
-	}
-
-	header nav > a {
-		margin: 0 10px;
-	}
-}
-
-@media screen and (max-width: 420px) {
-	header .right-section {
-		gap: 12px;
-	}
-
-	header nav button,
-	header nav > a {
-		margin: 0 24px 0 0;
-	}
-
-	header div.dropdown .top a .caption {
-		display: none;
-	}
-
-	header div.dropdown .top a {
-		padding: 8px;
-	}
-}
-
-@media screen and (max-width: 348px) {
-	header .right-section {
-		gap: 12px;
-	}
-
-	header nav button,
-	header nav > a {
-		margin: 0 12px 0 0;
 	}
 }
