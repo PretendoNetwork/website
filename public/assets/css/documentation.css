@@ -328,6 +328,18 @@ button#openSidebar {
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.docs-wrapper header button.dropdown-button#mobile-button {
+		display: none;
+	}
+	.docs-wrapper header .logo-link svg text {
+		display: block;
+	}
+	.docs-wrapper header .logo-link svg {
+		width: 120px;
+	}
+}
+
 @media screen and (max-width: 820px) {
 	.docs-wrapper .content .quick-links-grid,
 	.platform-grid {
