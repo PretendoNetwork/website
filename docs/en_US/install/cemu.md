@@ -2,15 +2,23 @@
 
 # Cemu
 
+## Download
 <div class="tip red">
-	<strong>Cemu support is experimental!</strong>
-	Cemu does not currently have a (working) way of redriecting to custom servers. Because of this, we must hook into the Cemu process and patch parts of the program memory, much like how our Wii U patch works. This is not officially supported by Cemu or it's developers, and may have issues or fail to work entirely.
+	<strong>Note:</strong>
+	Only experimental builds of Cemu 2.0 are supported. At this time Cemu does not have a stable release of Cemu 2.0 which supports Pretendo
 </div>
 
+Cemu 2.0 has official built-in support for Pretendo as of October 10, 2022. Head to the Cemu GitHub [releases](https://github.com/cemu-project/Cemu/releases) page and download the latest Cemu experimental release (tagged as `Pre-release`). Only `Cemu 2.0-5 (Experimental)` and above is supported at the moment. Additionally you may build Cemu from source using the provided [build instructions](https://github.com/cemu-project/Cemu/blob/main/BUILD.md)
+
 ## Online files
-Cemu requires the use of several files obtained via dumping from real hardware. You may use those files if you have a physical Wii U, they will work just fine. If you _don't_ have a real Wii U navigate to [your account page](/account) and select <strong>`Download account files`</strong>
+Cemu requires the use of several files obtained via dumping from real hardware. You may use those files if you have a physical Wii U, they will work just fine when connecting to Pretendo. If you _don't_ have a real Wii U navigate to [your account page](/account) and select <strong>`Download account files`</strong>
 
 <center><img src="/assets/images/docs/install/cemu/download-account-files.png"/></center>
+
+<div class="tip red">
+	<strong>Note:</strong>
+	These online files are scrubbed of all console information and are stubbed enough for Cemu to think they are from real hardware. These files <strong>MAY</strong> fail to work correctly. Support for these files is very limited, and it is recommended to use files from a real console
+</div>
 
 ## Setup Cemu for online
 After obtaining the files needed for online play refer to the official [Cemu Online Play](https://cemu.cfw.guide/online-play.html) guide
@@ -19,20 +27,10 @@ After obtaining the files needed for online play refer to the official [Cemu Onl
 	<strong>Note! If you downloaded the account files from your Pretendo Network account you may skip the steps on the Cemu guide which dumps them from a console. However these files will not work on Nintendo Network. For compatibility with both servers, use files dumped from a real console</strong>
 </div>
 
-## Installing Pretendo
-Once you have Cemu setup for online play navigate to our [Cemu Patcher](https://github.com/PretendoNetwork/cemu-patcher) repository. To build from scratch, clone the repository and open in Visual Studio and build the solution. To download the latest pre-built release, head to the [releases](https://github.com/PretendoNetwork/cemu-patcher/releases) page and download the latest `cemuhook.dll`
+## Connecting to Pretendo
+Once you have Cemu setup for online play navigate to `Options > Genral settings > Account`. You should now see a section titled `Network Service`. Select your PNID from the `Active account` menu and select the `Pretendo` Network Service option. Cemu should now be connected to Pretendo's servers
 
-Place `cemuhook.dll` in the same folder as `Cemu.exe` and run Cemu. Cemu should automatically detect `cemuhook.dll` and load it. You may now go online with Pretendo!
+<center><img src="/assets/images/docs/install/cemu/network-services-settings.png"/></center>
 
-## The patch doesn't seem to work?
-Due to the experimental state of Cemu support, our patch may fail to load at times. This could be caused by changes in Cemu, your systems anti-virus, bugs in our programming, and more. We are looking into more stable patches. If the hook fails to load, try renaming `cemuhook.dll` to `dbghelp.dll` and restarting Cemu. If this does not work, you may need to contact a developer. Please be patient as we try to figure out the cause of the issue and any potential solutions
-
-<div class="tip">
-	<strong>Please be warned that in some cases the patch fails for completely unknown reasons. There have been cases where different users on the same operating system, using the same Cemu version, playing the same game, experience different results. In these cases there is not much to do besides trying a different machine or Cemu version.</strong>
-</div>
-
-## What about Cemuhook by Rajkosto?
-You may have noticed that Cemu automatically searches for loads DLL files named `cemuhook.dll`. This is intended for use with Cemuhook developed by Rajkosto. We hijack the DLL name in order to get Cemu to load our hook automatically. If you would like to still use Cemuhook by Rajkosto with Pretendo, name the Cemuhook by Rajkosto DLL to `true_cemuhook.dll` while keeping the Pretendo hook named `cemuhook.dll`. Our patcher will look for a DLL named `true_cemuhook.dll` and load it automatically. This is not officially supported by Rajkosto and may cause issues. Use at your own risk.
-
-## Wine/Linux support?
-The Pretendo patches do work under wine. Rename `cemuhook.dll` to `dbghelp.dll` and place `dbghelp.dll` in the same folder as `Cemu.exe`. Run `winecfg` and navigate to `Libraries` and make sure `dbghelp` is added to the override list. Select it and click `Edit` and ensure the override is set to `Native then Builtin`. Wine should now allow your local `dbghelp.dll` override the built-in DLL
+## Miiverse
+Cemu has limited to no Miiverse support as of now. Currently no Miiverse features, including the Miiverse applet as well as Miiverse features in games, will function.
