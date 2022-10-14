@@ -54,7 +54,7 @@ Place your SD card back into your console and boot like normal. You should now b
 To connect to Pretendo Network using Aroma you must use the [Inkay](https://github.com/PretendoNetwork/Inkay) plugin. There are 2 ways of obtaining the patch, either the stable release version or the bleeding edge version.
 
 ### Aroma - Stable
-Navigate to the [releases](https://github.com/PretendoNetwork/Aroma/releases) page on the Aroma GitHub repository
+Navigate to the [releases](https://github.com/PretendoNetwork/Inkay/releases) page on the Aroma GitHub repository
 
 <img src="/assets/images/docs/install/wiiu/aroma/releases-highlight.png" width=100% height=auto/>
 
@@ -69,7 +69,7 @@ Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/envi
 Place your SD card back into your console and boot like normal. You should now be connected to Pretendo Network
 
 ### Aroma - Bleeding Edge
-Navigate to the [actions](https://github.com/PretendoNetwork/Aroma/actions) page on the Aroma GitHub repository
+Navigate to the [actions](https://github.com/PretendoNetwork/Inkay/actions) page on the Aroma GitHub repository
 
 <img src="/assets/images/docs/install/wiiu/aroma/actions-highlight.png" width=100% height=auto/>
 
