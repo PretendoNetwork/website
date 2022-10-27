@@ -16,7 +16,8 @@
 	"stripe": {
 		"goal_cents": 300000,
 		"secret_key": "secret_key",
-		"webhook_secret": "webhook_secret"
+		"webhook_secret": "webhook_secret",
+		"notification_emails": []
 	},
 	"database": {
 		"account": {

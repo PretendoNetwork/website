@@ -400,6 +400,19 @@ async function handleStripeEvent(event) {
 			assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
 				logger.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
+
+			for (const email of config.stripe.notification_emails) {
+				// * Send notification emails for new sub
+				try {
+					await mailer.sendMail({
+						to: email,
+						subject: `[Pretendo] - New ${product.name} subscription`,
+						text: `${pnid.get('username')} just became a ${product.name} tier subscriber`
+					});
+				} catch (error) {
+					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
+				}
+			}
 		}
 
 		if (subscription.status === 'canceled') {
@@ -416,6 +429,19 @@ async function handleStripeEvent(event) {
 			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
+
+			for (const email of config.stripe.notification_emails) {
+				// * Send notification emails for new sub
+				try {
+					await mailer.sendMail({
+						to: email,
+						subject: `[Pretendo] - Canceled ${product.name} subscription`,
+						text: `${pnid.get('username')} just canceled their ${product.name} tier subscription`
+					});
+				} catch (error) {
+					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
+				}
+			}
 		}
 
 		if (subscription.status === 'unpaid') {
@@ -432,6 +458,19 @@ async function handleStripeEvent(event) {
 			removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
+
+			for (const email of config.stripe.notification_emails) {
+				// * Send notification emails for new sub
+				try {
+					await mailer.sendMail({
+						to: email,
+						subject: `[Pretendo] - Removed ${product.name} subscription`,
+						text: `${pnid.get('username')}'s ${product.name} tier subscription has been canceled due to non payment`
+					});
+				} catch (error) {
+					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
+				}
+			}
 		}
 	}
 }
