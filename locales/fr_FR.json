@@ -41,7 +41,7 @@
 				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
+				"question": "Mes Identifiants Réseau de Nintendo existants fonctionneront-ils sur Pretendo ?",
 				"answer": "Malheureusement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration des NNID aux PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
 			},
 			{
@@ -217,14 +217,14 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Je suis Bandwidth le Raton Laveur, j'adore mordiller les cables de Pretendo Network ! Miam !",
-			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo; Moi je leur réponds que ma tante qui travaille chez Nintendo a dit qu'elle était d'accord.",
+			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo ; Moi je leur réponds que ma tante qui travaille chez Nintendo a dit qu'elle était d'accord.",
 			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
 			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
 			"La Wii U n'était pas si nulle que ça, mais les pubs étaient vraiment mauvaises par contre. Ah, attends mon Gamepad n'arrive pas à se connecter à ma Wii.",
 			"La musique principale de Super Mario World 2 - Yoshi's Island est la meilleure musique du monde et tu ne peux pas changer mon avis.",
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
 			"\"Tu vois Ash ? Ouais, bah elle fait UwU tout le temps\" est vraiment la façon la plus gentille possible de dire \"Ash fait UwU tout le temps et j'en ai marre\"",
-			"Ma premièr video !!!!1! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11!!"
+			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !"
 		]
 	},
 	"progressPage": {
@@ -255,13 +255,24 @@
 					"caption": "Afficher les instructions de configuration"
 				},
 				{
-					"header": "Vous avez une erreur ?",
+					"header": "Vous avez une erreur ?",
 					"caption": "Cherchez-la ici"
 				}
 			]
 		},
 		"search": {
-			"title": "Vous avez un code d'erreur ?"
+			"title": "Vous avez un code d'erreur ?",
+			"label": "Code d'erreur",
+			"caption": "Écrivez dans la case ci-dessous pour obtenir des informations sur votre problème !",
+			"no_match": "Aucun Résultat"
+		},
+		"sidebar": {
+			"search": "Recherche",
+			"juxt_err": "Codes d'erreur - Juxt",
+			"install_extended": "Installation de Pretendo",
+			"welcome": "Bienvenue",
+			"getting_started": "Débuter",
+			"install": "Installation"
 		}
 	},
 	"account": {
@@ -307,7 +318,7 @@
 				"linkDiscord": "Associer un compte Discord",
 				"newsletter": "Nouveautés",
 				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu",
-				"no_edit_from_dashboard": "La modification des paramètres PNID à partir du tableau de bord de l'utilisateur n'est actuellement pas disponible. Veuillez mettre à jour les paramètres utilisateur à partir de votre console de jeu associée.",
+				"no_edit_from_dashboard": "Le changement des préférences du IDNP dans le menu d'utilisateur n'est pas disponsible. Veuillez changer les préférences de profil sur votre console de jeu",
 				"userSettings": "Paramètres Utilisateurs",
 				"no_signins_notice": "L'historique de connexion n'est actuellement pas suivi. Revenez plus tard !",
 				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
@@ -344,6 +355,7 @@
 	},
 	"modals": {
 		"cancel": "Annuler",
-		"confirm": "Confirmer"
+		"confirm": "Confirmer",
+		"close": "Fermer"
 	}
 }
