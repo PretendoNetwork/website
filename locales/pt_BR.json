@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progresso",
-		"paragraphs": [
-			null,
-			"Para o Nintendo 3DS também estamos trabalhando no Mario Kart 7, pretendemos trabalhar em outros jogos quando possível."
-		],
 		"githubRepo": "Repositório do GitHub"
 	},
 	"faq": {
@@ -320,7 +316,7 @@
 		"banned": "Banido"
 	},
 	"docs": {
-		"missingInLocale": "Essa Pagina não esta disponível na sua língua. Por favor confira a versão Inglês abaixo",
+		"missingInLocale": "Essa Pagina não esta disponível na sua língua. Por favor confira a versão Inglês abaixo.",
 		"quickLinks": {
 			"header": "Links rápidos",
 			"links": [
