@@ -1,0 +1,118 @@
+{
+	"nav": {
+		"progress": "Progrés",
+		"blog": "Blog",
+		"account": "Compte",
+		"donate": "Dona",
+		"accountWidget": {
+			"settings": "Paràmetres",
+			"logout": "Tanca la sessió"
+		},
+		"about": "Sobre",
+		"docs": "Documentació",
+		"faq": "Preguntes freqüents",
+		"credits": "Crèdits"
+	},
+	"hero": {
+		"subtitle": "Servidors en línia",
+		"buttons": {
+			"readMore": "Més informació"
+		},
+		"title": "Recreats",
+		"text": "Pretendo és una alternativa gratuïta i de codi obert als servidors de Nintendo per a la 3DS i la Wii U, permetent la connectivitat en línia per a tothom, encara que es tanquin els servidors originals"
+	},
+	"aboutUs": {
+		"title": "Sobre nosaltres",
+		"paragraphs": [
+			"Pretendo és un projecte de codi obert que pretén recrear la Nintendo Network per a 3DS i Wii U mitjançant enginyeria inversa.",
+			"Com que els nostres serveis són gratuïts i de codi obert, poden existir fins i tot després del tancament inevitable de la Nintendo Network."
+		]
+	},
+	"progress": {
+		"title": "Progrés",
+		"githubRepo": "Repositori al GitHub"
+	},
+	"faq": {
+		"title": "Preguntes freqüents",
+		"text": "Aquestes són algunes de les preguntes que ens fan sovint per obtenir informació fàcilment.",
+		"QAs": [
+			{
+				"question": "Què és Pretendo?",
+				"answer": "Pretendo és una alternativa de codi obert a la Nintendo Network que pretén crear servidors personalitzats per a la família de consoles Wii U i 3DS. El nostre objectiu és preservar la funcionalitat en línia d'aquestes consoles, per permetre als jugadors continuar jugant als seus jocs preferits de Wii U i 3DS al màxim."
+			},
+			{
+				"question": "Els meus NNID existents funcionaran al Pretendo?",
+				"answer": "Malauradament, no. Els NNID existents no funcionaran a Pretendo, ja que només Nintendo té les dades dels usuaris; tot i que una migració de NNID a PNID és teòricament possible, seria arriscat i requeriria dades d'usuari sensibles que no volem tenir."
+			},
+			{
+				"question": "Com faig servir el Pretendo?",
+				"answer": "Pretendo no es troba actualment en un estat llest per a l'ús públic. Tanmateix, un cop ho sigui, podràs utilitzar-lo simplement executant el nostre patcher homebrew a la teva consola."
+			},
+			{
+				"question": "Sabeu quan estarà llesta una funció o un servei?",
+				"answer": "No. Moltes de les funcions i dels serveis del Pretendo es desenvolupen de manera independent (per exemple, un desenvolupador pot treballar en Miiverse mentre que Comptes i Amics ho fa un altre) i, per tant, no podem donar una estimació de quant de temps trigarà tot en general."
+			},
+			{
+				"question": "Funciona el Pretendo al Cemu o als emuladors?",
+				"answer": "Pretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
+			},
+			{
+				"question": "Si se'm va prohibir l'accés a la Nintendo Network, continuarà prohibit al Pretendo?",
+				"answer": "No tindrem accés a les prohibicions d'accés de la Nintendo Network i a tots els usuaris no se'ls prohibirà utilitzar el nostre servei. Malgrat això, tindrem normes a seguir abans d'utilitzar el servei i, si aquestes normes no es compleixen, podria resultar en la prohibició del nostre servei."
+			},
+			{
+				"question": "Pretendo afegirà compatibilitat amb la Wii o la Switch?",
+				"answer": "La Wii ja té servidors personalitzats a través del <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no volem orientar-nos a la Switch, ja que és de pagament i està completament fora de la Nintendo Network."
+			},
+			{
+				"question": "Necessitaré hacks per connectar-me?",
+				"answer": "Sí, caldrà una consola hackejada per connectar-se; tanmateix, els usuaris de la Wii U només necessitaran accés al Homebrew Launcher (és a dir, Haxchi, Coldboot Haxchi o fins i tot l'exploit del navegador web) i informació sobre com es connectarà la 3DS arribarà més endavant."
+			}
+		]
+	},
+	"showcase": {
+		"title": "El que fem",
+		"text": "El nostre projecte té molts components. Aquests són alguns d'ells.",
+		"cards": [
+			{
+				"title": "Servidors en línia",
+				"caption": "Tornem els teus jocs en línia preferits mitjançant servidors personalitzats."
+			},
+			{
+				"caption": "Una re-imaginació del Miiverse, com si s'hagués fet en una època més moderna.",
+				"title": "Juxtaposition"
+			},
+			{
+				"title": "Compatibilitat amb el Cemu",
+				"caption": "Juga als teus jocs preferits de Wii U sense necessitat de consola!"
+			}
+		]
+	},
+	"credits": {
+		"title": "L'equip",
+		"text": "Coneix l'equip que hi ha darrere del projecte",
+		"people": [
+			{
+				"picture": "https://github.com/jonbarrow.png",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Propietari del projecte i desenvolupador principal",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"caption": "Recerca i desenvolupament per al Miiverse",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png"
+			},
+			{
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz",
+				"name": "Rambo6Glaz",
+				"caption": "Instal·lador de la xarxa i recerca sobre la consola"
+			},
+			{
+				"name": "quarky"
+			}
+		]
+	}
+}
