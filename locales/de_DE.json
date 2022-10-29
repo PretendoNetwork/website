@@ -6,7 +6,7 @@
 		"credits": "Mitwirkende",
 		"progress": "Fortschritt",
 		"blog": "Blog",
-		"account": "Account",
+		"account": "Konto",
 		"accountWidget": {
 			"settings": "Einstellungen",
 			"logout": "Abmelden"
@@ -14,7 +14,7 @@
 		"donate": "Spenden",
 		"dropdown": {
 			"captions": {
-				"credits": "Triff das Team",
+				"credits": "Lerne das Team kennen",
 				"about": "Über das Projekt",
 				"faq": "Häufig gestellte Fragen",
 				"blog": "Unsere neuesten Updates, zusammengefasst",
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spiel-Server",
 		"title": "Rekonstruiert",
-		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der offiziellen Einstellung des NNs, ermöglicht",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
 		"buttons": {
 			"readMore": "Mehr lesen"
 		}
@@ -228,7 +228,7 @@
 			"Ich bin Bandwidth der Waschbär und ich liebe es, in die Kabel der Server des Pretendo Networks zu beißen. Lecker!",
 			"Viele Leute fragen uns ob wir für das hier in legale Schwierigkeiten mit Nintendo kommen; voller Freude berichte ich, dass meine Tante bei Nintendo arbeitet, und sagt es ist in Ordnung.",
 			"Webkit v537 ist die beste Webkit-Version für die Wii U. Nein, wir werden Chrome nicht auf die Wii U bringen.",
-			"Ich kann es kaum erwarten, dass wir die Uhrzeit 03:14:08 am 19. Januar 2038 erreichen!",
+			"Ich kann es kaum erwarten, dass die Uhrzeit 03:14:08 UTC am 19. Januar 2038 erreicht wird!",
 			"Die Wii U ist ein unterbewertetes System: die Werbungen waren wirklich schlecht, aber die Konsole ist toll! Hmm, moment mal, ich bin mir nicht sicher, warum sich mein GamePad nicht mit der Wii verbindet.",
 			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
@@ -255,7 +255,7 @@
 		],
 		"loginForm": {
 			"login": "Anmelden",
-			"detailsPrompt": "Gib deine Accountdaten unten ein",
+			"detailsPrompt": "Gib deine Kontodaten unten ein",
 			"register": "Registrieren",
 			"username": "Benutzername",
 			"password": "Passwort",
@@ -263,8 +263,8 @@
 			"email": "E-Mail",
 			"miiName": "Mii-Name",
 			"forgotPassword": "Passwort vergessen?",
-			"registerPrompt": "Du hast noch keinen Account?",
-			"loginPrompt": "Du hast schon einen Account?"
+			"registerPrompt": "Du hast noch kein Konto?",
+			"loginPrompt": "Du hast schon ein Konto?"
 		},
 		"settings": {
 			"settingCards": {
@@ -283,8 +283,8 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
-				"newsletter": "Infomails",
-				"newsletterPrompt": "Erhalt von Projektinformationen per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
 				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
@@ -294,18 +294,18 @@
 				"password": "Passwort",
 				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
 				"removeDiscord": "Discord-Konto entfernen",
-				"no_signins_notice": "Login verlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
+				"no_signins_notice": "Anmeldeverlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
 				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
 				"userSettings": "Nutzer-Einstellungen"
 			},
-			"downloadFiles": "Account-Dateien herunterladen",
+			"downloadFiles": "Konto-Dateien herunterladen",
 			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
 			"upgrade": "Konto upgraden",
 			"unavailable": "Nicht verfügbar"
 		},
 		"banned": "Gebannt",
-		"account": "Account"
+		"account": "Konto"
 	},
 	"upgrade": {
 		"title": "Upgrade",
@@ -348,13 +348,13 @@
 			]
 		},
 		"search": {
-			"title": "Hast du ein Fehlercode bekommen?",
+			"title": "Hast du einen Fehlercode bekommen?",
 			"caption": "Beschreibe, unten in der Box, was für ein Problem du hast, um Infos zu erhalten.",
 			"label": "Fehler-Code",
 			"no_match": "Keine Ergebnisse gefunden"
 		},
 		"sidebar": {
-			"getting_started": "Ersten Schritte",
+			"getting_started": "Erste Schritte",
 			"welcome": "Herzlich willkommen",
 			"install_extended": "Pretendo installieren",
 			"install": "Installieren",
@@ -363,7 +363,7 @@
 		}
 	},
 	"modals": {
-		"cancel": "Abbruch",
+		"cancel": "Abbrechen",
 		"confirm": "Bestätigen",
 		"close": "Schließen"
 	}
