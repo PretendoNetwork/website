@@ -10,7 +10,8 @@
 		"accountWidget": {
 			"settings": "设置",
 			"logout": "登出"
-		}
+		},
+		"donate": "捐赠"
 	},
 	"hero": {
 		"subtitle": "游戏服务器",
