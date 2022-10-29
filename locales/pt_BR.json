@@ -176,7 +176,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Compartilhamento de informações do Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -274,12 +274,21 @@
 				"upgradePrompt": "Os servidores Beta são exclusivos para beta testers.<br>Para se tornar um beta tester, aprimore sua conta para um nível superior.",
 				"hasAccessPrompt": "O seu nível atual lhe dá acesso ao servidor beta. Legal!",
 				"userSettings": "Preferências de usuário",
-				"serverEnv": "Ambiente do servidor"
+				"serverEnv": "Ambiente do servidor",
+				"email": "E-mail",
+				"otherSettings": "Mais Configurações",
+				"linkDiscord": "Vincular uma conta do Discord",
+				"removeDiscord": "Remover conta do Discord",
+				"noDiscordLinked": "Nenhuma conta do Discord esta vinculado.",
+				"connectedToDiscord": "Conectado no Discord como"
 			},
 			"downloadFiles": "Baixar arquivos de conta",
 			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível"
 		},
 		"account": "Conta"
+	},
+	"docs": {
+		"missingInLocale": "Essa Pagina não esta disponível na sua língua. Por favor confira a versão Inglês abaixo"
 	}
 }

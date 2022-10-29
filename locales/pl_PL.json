@@ -6,7 +6,11 @@
 		"credits": "Podziękowania",
 		"progress": "Postęp",
 		"blog": "Blog",
-		"account": "Konto"
+		"account": "Konto",
+		"donate": "",
+		"accountWidget": {
+			"settings": "Ustawienia"
+		}
 	},
 	"hero": {
 		"subtitle": "Serwery gier",
