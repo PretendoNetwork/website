@@ -216,15 +216,15 @@
 			"button": "Tritt noch heute bei!"
 		},
 		"bandwidthRaccoonQuotes": [
-			"Ich bin Bandwidth, der Waschbär, und ich liebe es, in die Kabel der Server vom Pretendo Network zu beißen. Lecker!",
-			"Viele Leute fragen uns, ob wir deswegen rechtliche Probleme mit Nintendo bekommen werden. Ich bin froh, sagen zu können, dass meine Tante bei Nintendo arbeitet, und sie sagt, es sei in Ordnung.",
-			"Webkit v537 ist die beste Version von Webkit für die Wii U. Nein, wir werden Chrome nicht auf die Wii U porten.",
-			"Ich kann es kaum erwarten, dass die Uhr den 19. Januar 2038, 03:14:08 UTC anzeigt!",
-			"Die Wii U ist eigentlich ein unterschätztes System: Die Werbung war wirklich schlecht, aber die Konsole ist großartig. Moment mal, keine Ahnung warum, aber mein Gamepad lässt sich nicht mit meiner Wii verbinden.",
-			"Das Hauptthema von Super Mario World 2 - Yoshi's Island ist ein absoluter Hit, und es gibt keine Möglichkeit, mich vom Gegenteil zu überzeugen.",
+			"Ich bin Herr Bandbreite, der Waschbär, und ich liebe es, in die Kabel der Server vom pretendo Network zu essen. Lecker!",
+			"Viele Leute fragen uns, ob wir deswegen rechtliche Probleme mit Nintendo bekommen werden. Ich bin froh, sagen zu können, dass meine Tante bei Nintendo arbeitet, und sie sagt, es gäbe keine Probleme.",
+			"Webkit v537 ist die beste Webkit Version für die Wii U. Nein, wir werden Chrome nicht auf die Wii U bringen.",
+			"Ich kann es kaum erwarten, dass wir die uhrzeit 03:14:08 am 19. Jänner/Januar 2038 erreichen!",
+			"Die Wii U ist ein unterbewertetes System: die Werbungen waren wirklich schlecht, aber die Konsole ist toll! Hmm, moment mal, ich bin mir nicht sicher warum sich mein Gamepad nicht mit der Wii verbindet.",
+			"Super Mario World 2 - Yoshi's Islands Titelmusik ist ein absoluter Bop und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
-			"So etwas wie \"Du kennst Ash, Gott segne sie, sie schreibt den ganzen Tag UwU's\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU's und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
-			"Mein ehrstes Video auf meinem Kanal!!! Ich hab schon immer gewollt, Viedeos zu machen, aber mein Laptop war echt schlecht und ich konnte Fraps, Skype und Minecraft nie gleichzeitig laufen lassne. ABER JETZT NICHT MEHR! Mit der Hilfe von meinem Programmierlehrer läuft mein Laptop fiel besser und ich kann jetzt aufnehmen! Ich hoffe ihr mögt meine Videos und bitte bitte aboniert und likt!!!"
+			"So etwas wie \"Du kennst Ash, Gott segne Ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es net tun\"",
+			"Mein erstes Video auf meinem Kanal!!! Ich hab schon immer gewollt, Videos zu machen, aber mein Laptop war echt schlecht und ich konnte Fraps, Skype und Minecraft nie gleichzeitig laufen lassen. ABER JETZT NICHT MEHR! Mit der Hilfe von meinem Programmierlehrer läuft mein Laptop fiel besser und ich kann jetzt aufnehmen! Ich hoffe ihr mögt meine Videos und bitte bitte abonniert und liked!!!"
 		]
 	},
 	"progressPage": {
@@ -240,8 +240,8 @@
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Tester",
-			"Moderator",
+			"Probierende/er",
+			"Moderator*in",
 			"Entwickler"
 		],
 		"loginForm": {
@@ -274,7 +274,7 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
-				"newsletter": "Newsletter",
+				"newsletter": "Infomails",
 				"newsletterPrompt": "Erhalt von Projektinformationen per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
@@ -299,7 +299,7 @@
 		"account": "Account"
 	},
 	"upgrade": {
-		"title": "Upgrade",
+		"title": "Erneuerung/en",
 		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
@@ -340,21 +340,21 @@
 		},
 		"search": {
 			"title": "Hast du ein Fehlercode bekommen?",
-			"caption": "Schreib es in das untere Feld um Informationen zu deinem Problem zu erhalten!",
-			"label": "Fehlercode",
-			"no_match": "Keine Ergebnisse"
+			"caption": "Um Informationen zu Ihren problem zu erhalten Schreiben sie was für ein Problem sie haben unten in die Box!",
+			"label": "Fehler nummer",
+			"no_match": "Keine Ergebnisse gefunden"
 		},
 		"sidebar": {
-			"getting_started": "Erste Schritte",
-			"welcome": "Willkommen",
-			"install_extended": "Pretendo Installieren",
-			"install": "Installieren",
+			"getting_started": "Die Ersten schritte",
+			"welcome": "Herzlich willkommen",
+			"install_extended": "Installieren sie Pretendo",
+			"install": "Installiere",
 			"search": "Suchen",
-			"juxt_err": "Fehlercodes - Juxt"
+			"juxt_err": "Fehler Nummern - Juxt"
 		}
 	},
 	"modals": {
-		"cancel": "Abbrechen",
+		"cancel": "Abbruch",
 		"confirm": "Bestätigen",
 		"close": "Schließen"
 	}
