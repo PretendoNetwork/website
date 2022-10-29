@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "À propos",
+		"about": "Au Sujet de",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -259,6 +259,9 @@
 					"caption": "Cherchez-la ici"
 				}
 			]
+		},
+		"search": {
+			"title": "Vous avez un code d'erreur ?"
 		}
 	},
 	"account": {
@@ -303,10 +306,15 @@
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
 				"newsletter": "Nouveautés",
-				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu"
+				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu",
+				"no_edit_from_dashboard": "La modification des paramètres PNID à partir du tableau de bord de l'utilisateur n'est actuellement pas disponible. Veuillez mettre à jour les paramètres utilisateur à partir de votre console de jeu associée.",
+				"userSettings": "Paramètres Utilisateurs",
+				"no_signins_notice": "L'historique de connexion n'est actuellement pas suivi. Revenez plus tard !",
+				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
 			},
 			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
-			"upgrade": "Mettre à Niveau le compte"
+			"upgrade": "Mettre à Niveau le compte",
+			"unavailable": "Indisponible"
 		},
 		"banned": "Banni",
 		"accountLevel": [
@@ -314,7 +322,8 @@
 			"Testeur",
 			"Modérateur",
 			"Développeur"
-		]
+		],
+		"account": "Compte"
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",
