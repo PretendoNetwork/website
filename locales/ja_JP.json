@@ -20,7 +20,7 @@
 				"faq": "よくある質問"
 			}
 		},
-		"donate": "寄付する"
+		"donate": "寄付"
 	},
 	"hero": {
 		"subtitle": "ゲームサーバー",
@@ -126,8 +126,8 @@
 			{
 				"name": "quarky",
 				"caption": "BOSS研究、パッチ開発",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -156,7 +156,7 @@
 		]
 	},
 	"specialThanks": {
-		"title": "特別な感謝",
+		"title": "Special thanks",
 		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。",
 		"people": [
 			{
@@ -185,13 +185,13 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverseの情報共有",
+				"caption": "Miiverse information sharing",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"name": "Kinnay",
-				"special": "特別な感謝",
+				"special": "Special thanks",
 				"caption": "任天堂データ構造研究",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
@@ -256,7 +256,7 @@
 		"instructions": "ローカライズ方法を開く",
 		"fileInput": "試してみるファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "テストファイル"
+		"button": "ファイルを試す！"
 	},
 	"docs": {
 		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
@@ -282,7 +282,7 @@
 			"install_extended": "Pretendo をインストールする"
 		},
 		"search": {
-			"caption": "下のボックスに入力して、問題に関する情報を入手してください。!",
+			"caption": "下のボックスに入力して、問題に関する情報を入手してください。",
 			"label": "エラーコード",
 			"no_match": "一致するものが見つかりませんでした",
 			"title": "エラーコードを取得しましたか?"
