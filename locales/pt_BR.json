@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "Sobre",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Documentação",
 		"credits": "Créditos",
 		"progress": "Progresso",
 		"blog": "Blog",
@@ -316,7 +316,7 @@
 		"banned": "Banido"
 	},
 	"docs": {
-		"missingInLocale": "Essa Pagina não esta disponível na sua língua. Por favor confira a versão Inglês abaixo.",
+		"missingInLocale": "Esta página não está disponível no seu idioma. Por favor, confira a versão em Inglês abaixo.",
 		"quickLinks": {
 			"header": "Links rápidos",
 			"links": [
