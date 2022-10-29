@@ -224,7 +224,9 @@
 			"Muitas pessoas nos perguntam se teremos problemas legais com a Nintendo por causa disso; Eu fico feliz em dizer que minha tia trabalha na Nintendo e ela disse que está tudo bem.",
 			"Webkit v537 é a melhor versão do Webkit para o Wii U. Não, nós não vamos portar o Chrome para o Wii U.",
 			"Mal posso esperar para dar 00:14:08 (horário de Brasília) do dia 19 de Janeiro de 2038!",
-			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii."
+			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii.",
+			"O tema principal de Super Mario World 2 - Yoshi's Island tem uma batida muito top e ninguém nunca irá me convencer do contrário.",
+			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Idade e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa."
 		]
 	},
 	"progressPage": {
@@ -268,10 +270,16 @@
 				"gender": "Gênero",
 				"country": "País/região",
 				"timezone": "Fuso horário",
-				"production": "Produção"
+				"production": "Produção",
+				"upgradePrompt": "Os servidores Beta são exclusivos para beta testers.<br>Para se tornar um beta tester, aprimore sua conta para um nível superior.",
+				"hasAccessPrompt": "O seu nível atual lhe dá acesso ao servidor beta. Legal!",
+				"userSettings": "Preferências de usuário",
+				"serverEnv": "Ambiente do servidor"
 			},
 			"downloadFiles": "Baixar arquivos de conta",
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)"
-		}
+			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
+			"unavailable": "Indisponível"
+		},
+		"account": "Conta"
 	}
 }
