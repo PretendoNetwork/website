@@ -10,7 +10,8 @@
 		"accountWidget": {
 			"settings": "Ajustes",
 			"logout": "Cerrar Sesión"
-		}
+		},
+		"donate": "Donar"
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
@@ -217,7 +218,18 @@
 				"¡Únete a nuestro servidor de Discord!"
 			],
 			"button": "¡Únete ahora!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Soy Bandwidth el Mapache y me encanta morder los cables que van a los servidores de Pretendo Network. ¡mmm!",
+			"Muchas personas preguntan si tendremos problemas legales con Nintendo por esto; te puedo decir que mi tía trabaja en Nintendo y me dijo que está bien.",
+			"Webkit v537 es la mejor verción de Webkit para Wii U. No, no vamos a portear Chrome a la Wii U.",
+			"No puedo esperar a que el reloj llegue a 03:14:08 UTC el 19 de enero de 2038",
+			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi Gamepad no se conecta a mi Wii.",
+			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
+			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
+			"Decir “Conoces a Ash, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir  “Ash hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
+			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!"
+		]
 	},
 	"progressPage": {
 		"title": "Progreso",
@@ -251,6 +263,20 @@
 					"caption": "Búscalo aquí"
 				}
 			]
+		},
+		"search": {
+			"title": "¿Tienes un código de error?",
+			"caption": "Escribe el codigo de error el el cuadro para obtener informacion de tu problema!",
+			"label": "Codigo de error",
+			"no_match": "No se encontraron coincidencias"
+		},
+		"sidebar": {
+			"getting_started": "Empezando",
+			"install_extended": "Instalar Pretendo",
+			"search": "Buscar",
+			"juxt_err": "Codigos de error - Juxt",
+			"install": "Instalar",
+			"welcome": "Bienvenido"
 		}
 	},
 	"account": {
@@ -294,11 +320,16 @@
 				"newsletterPrompt": "Reciba actualizaciones del proyecto por correo electrónico (puede optar por no participar en cualquier momento)",
 				"passwordPrompt": "Ingresa la contraseña de tu PNID para descargar los archivos de Cemu",
 				"nickname": "Apodo",
-				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior."
+				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior.",
+				"userSettings": "Ajustes de usuario",
+				"no_signins_notice": "El historial de inicios de sesión no es vigilado. Vuelve más tarde!",
+				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelva a consultar más tarde",
+				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
 			"downloadFiles": "Descargar datos de cuenta",
 			"downloadFilesDescription": "(no funcionara en Nintendo Network)",
-			"upgrade": "Subir de rango"
+			"upgrade": "Subir de rango",
+			"unavailable": "No disponible"
 		},
 		"accountLevel": [
 			"Estándar",
@@ -306,7 +337,8 @@
 			"Moderador",
 			"Desarrollador"
 		],
-		"banned": "Baneado"
+		"banned": "Baneado",
+		"account": "Cuenta"
 	},
 	"upgrade": {
 		"description": "Alcanzar la meta mensual hará de Pretendo un trabajo de tiempo completo, brindando actualizaciones de mejor calidad a un ritmo más rápido.",
@@ -327,6 +359,7 @@
 	},
 	"modals": {
 		"cancel": "Cancelar",
-		"confirm": "Confirmar"
+		"confirm": "Confirmar",
+		"close": "Cerrar"
 	}
 }
