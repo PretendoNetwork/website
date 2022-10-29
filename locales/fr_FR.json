@@ -11,7 +11,16 @@
 			"logout": "Déconnexion",
 			"settings": "Réglages"
 		},
-		"donate": "Faire un don"
+		"donate": "Faire un don",
+		"dropdown": {
+			"captions": {
+				"about": "À propos du projet",
+				"blog": "Nos dernières mises à jour, en condensé",
+				"progress": "Vérifier l'avancement et les objectifs du projet",
+				"credits": "Rencontrez l'équipe",
+				"faq": "Questions fréquemment posées"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeux",
