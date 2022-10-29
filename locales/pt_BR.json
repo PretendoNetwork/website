@@ -304,7 +304,7 @@
 			"downloadFiles": "Baixar arquivos de conta",
 			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível",
-			"upgrade": "Atualizar conta"
+			"upgrade": "Aprimorar conta"
 		},
 		"account": "Conta",
 		"accountLevel": [
@@ -355,7 +355,7 @@
 		"unsubPrompt": "Tem certeza que quer desinscrever-se de <span>tiername</span>? Você vai perder accesso aos benefícios.",
 		"description": "Conseguir o objetivo mensal irá fazer com que a Pretendo vire um trabalho, e assim poderemos fazer atualizações com mais rapidez.",
 		"month": "mês",
-		"title": "Fazer upgrade",
+		"title": "Aprimorar",
 		"tierSelectPrompt": "Selecione uma assinatura"
 	},
 	"modals": {
