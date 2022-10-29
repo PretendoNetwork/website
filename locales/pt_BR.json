@@ -226,7 +226,9 @@
 			"Mal posso esperar para dar 00:14:08 (horário de Brasília) do dia 19 de Janeiro de 2038!",
 			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii.",
 			"O tema principal de Super Mario World 2 - Yoshi's Island tem uma batida muito top e ninguém nunca irá me convencer do contrário.",
-			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Idade e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa."
+			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Idade e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa.",
+			null,
+			"Meu primeiro vídeo no canal!! Eu tava querendo fazer vídeos há muito tempo, mas meu notebook tava horrível e eu não conseguia usar o Fraps, Skype e Minecraft ao mesmo tempo. Mas agora isso acabou! Com alguma ajuda do meu professor de TI, agora meu notebook tá bem melhor e eu já posso gravar! Espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!"
 		]
 	},
 	"progressPage": {
@@ -280,13 +282,31 @@
 				"linkDiscord": "Vincular uma conta do Discord",
 				"removeDiscord": "Remover conta do Discord",
 				"noDiscordLinked": "Nenhuma conta do Discord esta vinculado.",
-				"connectedToDiscord": "Conectado no Discord como"
+				"connectedToDiscord": "Conectado no Discord como",
+				"password": "Senha",
+				"passwordResetNotice": "Depois de trocar sua senha, você será desconectado de todos os dispositivos.",
+				"fullSignInHistory": "Ver o histórico de acessos completo",
+				"signInHistory": "Histórico de acessos",
+				"discord": "Discord",
+				"newsletter": "Notícias",
+				"newsletterPrompt": "Receba atualizações do projeto via e-mail (você pode se desinscrever a qualquer momento)",
+				"passwordPrompt": "Insira a senha do seu PNID para baixar os arquivos do Cemu",
+				"no_signins_notice": "O histórico de acessos não está sendo rastreado. Verifique novamente depois!",
+				"no_newsletter_notice": "Notícias não estão disponíveis no momento. Volte novamente depois",
+				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do usuário não está disponível no momento. Atualize as configurações do usuário do seu console de jogos vinculado"
 			},
 			"downloadFiles": "Baixar arquivos de conta",
 			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível"
 		},
-		"account": "Conta"
+		"account": "Conta",
+		"accountLevel": [
+			"Padrão",
+			"Testador",
+			"Moderador",
+			"Desenvolvedor"
+		],
+		"banned": "Banido"
 	},
 	"docs": {
 		"missingInLocale": "Essa Pagina não esta disponível na sua língua. Por favor confira a versão Inglês abaixo"
