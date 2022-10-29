@@ -11,7 +11,16 @@
 			"settings": "Einstellungen",
 			"logout": "Abmelden"
 		},
-		"donate": "Spenden"
+		"donate": "Spenden",
+		"dropdown": {
+			"captions": {
+				"credits": "Triff das Team",
+				"about": "Über das Projekt",
+				"faq": "Häufig gestellte Fragen",
+				"blog": "Unsere neuesten Updates, zusammengefasst",
+				"progress": "Überprüfe den Projektfortschritt und die Ziele"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Spiel-Server",
@@ -75,7 +84,7 @@
 		"text": "Unser Projekt hat viele Komponenten, hier sind einige davon.",
 		"cards": [
 			{
-				"title": "Spiele Server",
+				"title": "Spiel-Server",
 				"caption": "Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
 			},
 			{
@@ -83,8 +92,8 @@
 				"caption": "Eine Neuinterpretation des Miiverse, als ob es im modernen Zeitalter entwickelt wurde."
 			},
 			{
-				"title": "Cemu Unterstützung",
-				"caption": "Spiele deine Lieblings WII U Spiele sogar ohne eine Konsole!"
+				"title": "Cemu-Unterstützung",
+				"caption": "Spiele deine Lieblings-Wii U-Spiele, sogar ohne eine Konsole!"
 			}
 		]
 	},
@@ -172,7 +181,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse Informationsaustausch",
+				"caption": "Miiverse-Informationsaustausch",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -185,7 +194,7 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons für den Mii Editor und Juxt Reaktionen",
+				"caption": "Icons für den Mii-Editor und Juxt-Reaktionen",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
@@ -199,9 +208,9 @@
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
-		"text": "Tritt unserem Discord Server bei um die neuesten Updates des Projektes zu erhalten.",
+		"text": "Tritt unserem Discord-Server bei um die neuesten Updates des Projektes zu erhalten.",
 		"widget": {
-			"text": "Erhalte Echtzeit informationen über unseren Fortschritt",
+			"text": "Erhalte Echtzeitinformationen über unseren Fortschritt",
 			"button": "Tritt dem Server bei"
 		}
 	},
@@ -211,20 +220,20 @@
 		"widget": {
 			"captions": [
 				"Du möchtest auf dem Laufenden bleiben?",
-				"Tritt dem Discord server bei!"
+				"Tritt dem Discord-Server bei!"
 			],
 			"button": "Tritt noch heute bei!"
 		},
 		"bandwidthRaccoonQuotes": [
-			"Ich bin Herr Bandbreite, der Waschbär, und ich liebe es, in die Kabel der Server vom pretendo Network zu essen. Lecker!",
-			"Viele Leute fragen uns, ob wir deswegen rechtliche Probleme mit Nintendo bekommen werden. Ich bin froh, sagen zu können, dass meine Tante bei Nintendo arbeitet, und sie sagt, es gäbe keine Probleme.",
-			"Webkit v537 ist die beste Webkit Version für die Wii U. Nein, wir werden Chrome nicht auf die Wii U bringen.",
-			"Ich kann es kaum erwarten, dass wir die uhrzeit 03:14:08 am 19. Jänner/Januar 2038 erreichen!",
-			"Die Wii U ist ein unterbewertetes System: die Werbungen waren wirklich schlecht, aber die Konsole ist toll! Hmm, moment mal, ich bin mir nicht sicher warum sich mein Gamepad nicht mit der Wii verbindet.",
-			"Super Mario World 2 - Yoshi's Islands Titelmusik ist ein absoluter Bop und niemand kann mir das Gegenteil beweisen.",
+			"Ich bin Herr Bandbreite, der Waschbär, und ich liebe es, in die Kabel der Server vom Pretendo Network zu essen. Lecker!",
+			"Viele Leute fragen uns ob wir für das hier in legale Schwierigkeiten mit Nintendo kommen; voller Freude berichte ich, dass meine Tante bei Nintendo arbeitet, und sagt es ist in Ordnung.",
+			"Webkit v537 ist die beste Webkit-Version für die Wii U. Nein, wir werden Chrome nicht auf die Wii U bringen.",
+			"Ich kann es kaum erwarten, dass wir die Uhrzeit 03:14:08 am 19. Januar 2038 erreichen!",
+			"Die Wii U ist ein unterbewertetes System: die Werbungen waren wirklich schlecht, aber die Konsole ist toll! Hmm, moment mal, ich bin mir nicht sicher, warum sich mein GamePad nicht mit der Wii verbindet.",
+			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
-			"So etwas wie \"Du kennst Ash, Gott segne Ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es net tun\"",
-			"Mein erstes Video auf meinem Kanal!!! Ich hab schon immer gewollt, Videos zu machen, aber mein Laptop war echt schlecht und ich konnte Fraps, Skype und Minecraft nie gleichzeitig laufen lassen. ABER JETZT NICHT MEHR! Mit der Hilfe von meinem Programmierlehrer läuft mein Laptop fiel besser und ich kann jetzt aufnehmen! Ich hoffe ihr mögt meine Videos und bitte bitte abonniert und liked!!!"
+			"So etwas wie \"Du kennst Ash, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
+			"Mein erstes Video auf meinem Kanal! Ich hab schon immer gewollt, Videos zu machen, aber mein Laptop war echt schlecht und ich konnte Fraps, Skype und Minecraft nie gleichzeitig laufen lassen. ABER JETZT NICHT MEHR! Mit der Hilfe von meinem Programmierlehrer läuft mein Laptop viel besser und ich kann jetzt aufnehmen! Ich hoffe, ihr mögt meine Videos und bitte abonniert und gebt den Daumen nach oben!!!"
 		]
 	},
 	"progressPage": {
@@ -240,8 +249,8 @@
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Probierende/er",
-			"Moderator*in",
+			"Tester*innen",
+			"Moderator*innen",
 			"Entwickler"
 		],
 		"loginForm": {
@@ -288,7 +297,7 @@
 				"no_signins_notice": "Login verlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
 				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
-				"userSettings": "Nutzer Einstellungen"
+				"userSettings": "Nutzer-Einstellungen"
 			},
 			"downloadFiles": "Account-Dateien herunterladen",
 			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
@@ -299,7 +308,7 @@
 		"account": "Account"
 	},
 	"upgrade": {
-		"title": "Erneuerung/en",
+		"title": "Upgrade",
 		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
@@ -324,7 +333,7 @@
 		"fileInput": "Zu testende Datei"
 	},
 	"docs": {
-		"missingInLocale": "Diese Seite ist in deinem Land nicht verfügbar. Bitte schau dir die englische Version unten an.",
+		"missingInLocale": "Diese Seite ist nicht auf Deutsch verfügbar. Bitte schau dir die englische Version unten an.",
 		"quickLinks": {
 			"header": "Schnelle Links",
 			"links": [
@@ -340,17 +349,17 @@
 		},
 		"search": {
 			"title": "Hast du ein Fehlercode bekommen?",
-			"caption": "Um Informationen zu Ihren problem zu erhalten Schreiben sie was für ein Problem sie haben unten in die Box!",
-			"label": "Fehler nummer",
+			"caption": "Beschreibe, unten in der Box, was für ein Problem du hast, um Infos zu erhalten.",
+			"label": "Fehler-Code",
 			"no_match": "Keine Ergebnisse gefunden"
 		},
 		"sidebar": {
-			"getting_started": "Die Ersten schritte",
+			"getting_started": "Ersten Schritte",
 			"welcome": "Herzlich willkommen",
-			"install_extended": "Installieren sie Pretendo",
-			"install": "Installiere",
+			"install_extended": "Pretendo installieren",
+			"install": "Installieren",
 			"search": "Suchen",
-			"juxt_err": "Fehler Nummern - Juxt"
+			"juxt_err": "Fehler-Codes - Juxt"
 		}
 	},
 	"modals": {
