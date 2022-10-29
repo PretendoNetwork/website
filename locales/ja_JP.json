@@ -256,7 +256,7 @@
 		"instructions": "ローカライズ方法を開く",
 		"fileInput": "試してみるファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "ファイルを試す！"
+		"button": "ファイルを試す"
 	},
 	"docs": {
 		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
@@ -282,7 +282,7 @@
 			"install_extended": "Pretendo をインストールする"
 		},
 		"search": {
-			"caption": "下のボックスに入力して、問題に関する情報を入手してください。",
+			"caption": "下のボックスに入力して、問題に関する情報を入手してください！",
 			"label": "エラーコード",
 			"no_match": "一致するものが見つかりませんでした",
 			"title": "エラーコードを取得しましたか?"

@@ -282,7 +282,7 @@
 			"settingCards": {
 				"newsletterPrompt": "通过电子邮件接收项目更新（您可以随时选择退出）",
 				"discord": "Discord 聊天",
-				"connectedToDiscord": "连接Discord的身份:",
+				"connectedToDiscord": "连接Discord的身份",
 				"removeDiscord": "移除Discord账号",
 				"passwordPrompt": "输入您的 PNID 密码以下载 Cemu 文件",
 				"profile": "账号信息",

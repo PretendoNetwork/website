@@ -1,5 +1,233 @@
 {
 	"nav": {
-		"about": "關于"
+		"about": "關於",
+		"dropdown": {
+			"captions": {
+				"about": "關於專案",
+				"progress": "檢視專案進度與目標",
+				"credits": "認識團隊",
+				"faq": "常見問題",
+				"blog": "更新摘要"
+			}
+		},
+		"docs": "文件",
+		"credits": "貢獻者",
+		"progress": "進度",
+		"blog": "部落格",
+		"account": "帳號",
+		"accountWidget": {
+			"settings": "設定",
+			"logout": "登出"
+		},
+		"faq": "常見問題",
+		"donate": "捐款"
+	},
+	"hero": {
+		"buttons": {
+			"readMore": "閱讀更多"
+		},
+		"text": "Pretendo 是為了官方伺服器終止後，還能讓 3DS 和 Wii U 繼續用Nintendo Network的另解，免費且開源的專案",
+		"subtitle": "遊戲伺服器",
+		"title": "重製"
+	},
+	"credits": {
+		"people": [
+			{
+				"github": "https://github.com/jonbarrow",
+				"caption": "專案所有人和首席開發人員",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse 的研究與開發",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"caption": "網路安裝程式與主機系統研究",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"github": "https://github.com/QuarkTheAwesome",
+				"picture": "https://github.com/QuarkTheAwesome.png",
+				"caption": "BOSS研究與補丁開發",
+				"name": "quarky"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"caption": "主機以及其他系統研究",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom"
+			},
+			{
+				"caption": "Web 開發首席",
+				"name": "Jip Fr",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"picture": "https://github.com/ashmonty.png",
+				"name": "monty",
+				"caption": "Web 開發",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"picture": "https://github.com/mrjvs.png",
+				"name": "mrjvs",
+				"caption": "Designer",
+				"github": "https://github.com/mrjvs"
+			}
+		],
+		"text": "見見在專案背後努力的團隊",
+		"title": "開發團隊"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"title": "遊戲伺服器",
+				"caption": "用客製伺服器還原你最愛的遊戲體驗。"
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "一個 Miiverse 的重新塑造，會讓你以為在現代製作的。"
+			},
+			{
+				"caption": "即使沒有主機，也能玩你最喜歡的 Wii U 遊戲！",
+				"title": "Cemu 支援"
+			}
+		],
+		"text": "我們的專案有很多細項，這裡是其中一些。",
+		"title": "我們正在做什麼"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Pretendo 是什麼?"
+			},
+			{
+				"question": "我現有的 NNID 可以用在 Pretendo 上嗎?",
+				"answer": "很抱歉，不行。你現有的 NNID 不能用於 Pretendo，你的帳號資料都在任天堂手上，雖然 NNID 到 PNID 的遷徙理論上是能做到的，但是存在風險並且會包含我們不想知道的個人隱私。"
+			},
+			{
+				"question": "如何使用 Pretendo ?",
+				"answer": "Pretendo 目前還在內測，但是一旦完成，只要在系統上執行自製補丁就能使用 Pretendo。"
+			},
+			{
+				"answer": "不知道。許多 Pretendo 功能都是獨立開發的（例如 : Miiverse 可能由一位人員開發，而 Accounts 和 Friends 正在由另一位人員開發），因此我們無法告訴你確切的完成時間。",
+				"question": "這些 功能/服務 什麼時候才會完成?"
+			},
+			{
+				"answer": "Pretendo 主要為了實體 Wii U 和 3DS 而開發，目前為止支援NintendoNetwork(NN)的只有 Cemu。",
+				"question": "Pretendo 能用在 Cemu 之類的模擬器上嗎?"
+			},
+			{
+				"question": "如果我在 Nintendo Network 上被ban帳號，我在用 Pretendo 時還會是鎖著的嗎？",
+				"answer": "我們無法知道你在Nintendo Network有沒有被ban，我們也不會亂ban人。然而，我們之後會制定規則，違者將會被ban。"
+			},
+			{
+				"answer": "Wii已經有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的客製伺服器. Switch 的部分，他既是收費項目，運作方式也與Nintendo Network全然不同，將不支援。",
+				"question": "Pretendo 會支援 Wii/Switch 嗎？"
+			},
+			{
+				"answer": "是的，你必須破解主機才能連上。然而，Wii U 的話只要有 Homebrew Launcher 就能連接 (軟解)，之後會提供 3DS 連接的指南。",
+				"question": "要連接的話，我需要破解主機嗎 ?"
+			}
+		],
+		"title": "常見問題",
+		"text": "為了讓你快速理解，我們準備了一些常見問題。"
+	},
+	"specialThanks": {
+		"people": [
+			{
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "crunch library 開發",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png"
+			},
+			{
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy",
+				"caption": "Preservationist",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"caption": "馬力歐賽車 7 和 3DS 研究"
+			},
+			{
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"caption": "Miiverse 資訊分享",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"caption": "任天堂資料結構研究",
+				"name": "Kinnay",
+				"special": "特別感謝",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Mii 編輯器和 Juxt reactions 的圖標",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"caption": "翻譯和其他貢獻",
+				"name": "GitHub 貢獻者",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		],
+		"title": "特別感謝",
+		"text": "沒有他們，Pretendo 就不會是今天的樣子。"
+	},
+	"footer": {
+		"widget": {
+			"captions": [
+				"想知道最新動態?",
+				"加入我們的 Discord!"
+			],
+			"button": "現在就加入 !"
+		},
+		"usefulLinks": "相關連結",
+		"bandwidthRaccoonQuotes": [
+			"我是浣熊\"頻寬\" ! 我最愛咬連上 Pretendo Network 的線路，真美味 !",
+			"很多人問我們是否會因此與任天堂發生法律糾紛；我很高興我的阿姨在任天堂工作，她說是合法的。",
+			"Webkit v537 是用於 Wii U 的最佳 Webkit 版本。然而，我們並不會移植 Chrome 轉到 Wii U。",
+			"迫不及待地等待時鐘到達2038年1月19日03:14:08 UTC !",
+			"Wii U实际上是一个被低估的系统：广告好像真的很糟糕，但控制台是伟大的。嗯，等一下，我不知道为什么，但我的游戏手柄没有连接到我的Wii上。"
+		],
+		"socials": "社群帳號"
+	},
+	"aboutUs": {
+		"title": "關於我們",
+		"paragraphs": [
+			"Pretendo 是一個旨在為了還原 3DS 和 Wii U 的 Nintendo Network，合法使用逆向工程的開源專案。",
+			"我們的服務會是免費和開源的。就算Nintendo Network因為特殊原因中止，還是能繼續使用。"
+		]
+	},
+	"progress": {
+		"title": "進度",
+		"githubRepo": "Github 倉庫"
+	},
+	"discordJoin": {
+		"title": "持續獲得最新資訊",
+		"text": "加入我们的Discord服务器，获取项目的最新进展。",
+		"widget": {
+			"text": "獲取我們進度的即時更新",
+			"button": "加入伺服器"
+		}
 	}
 }
