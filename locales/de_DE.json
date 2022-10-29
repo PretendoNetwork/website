@@ -342,7 +342,7 @@
 			"title": "Hast du ein Fehlercode bekommen?",
 			"caption": "Schreib es in das untere Feld um Informationen zu deinem Problem zu erhalten!",
 			"label": "Fehlercode",
-			"no_match": "Kein Ergebnis"
+			"no_match": "Keine Ergebnisse"
 		},
 		"sidebar": {
 			"getting_started": "Erste Schritte",
