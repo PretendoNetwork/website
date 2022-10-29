@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Au Sujet de",
+		"about": "À Propos",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -11,7 +11,7 @@
 			"logout": "Déconnexion",
 			"settings": "Réglages"
 		},
-		"donate": "Donations"
+		"donate": "Faire un don"
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeux",
