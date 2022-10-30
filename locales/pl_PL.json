@@ -6,7 +6,12 @@
 		"credits": "Podziękowania",
 		"progress": "Postęp",
 		"blog": "Blog",
-		"account": "Konto"
+		"account": "Konto",
+		"donate": "",
+		"accountWidget": {
+			"settings": "Ustawienia",
+			"logout": "Wyloguj się"
+		}
 	},
 	"hero": {
 		"subtitle": "Serwery gier",
@@ -28,7 +33,8 @@
 		"paragraphs": [
 			null,
 			"Mówiąc o konsoli 3DS, aktualnie pracujemy również nad Mario Kart 7, a w przyszłości mamy nadzieję, że możemy popracować nad innymi grami."
-		]
+		],
+		"githubRepo": "Repozytorium GitHub"
 	},
 	"faq": {
 		"title": "Często zadawane pytania",
@@ -111,8 +117,8 @@
 			{
 				"name": "quarky",
 				"caption": "Research w sprawie BOSS oraz programowanie łatek",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -190,7 +196,8 @@
 			{
 				"name": "Ofiarodawcy z GitHub",
 				"caption": "Tłumaczenia oraz inne wkłady",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -211,7 +218,13 @@
 				"Dołącz na nasz serwer Discord!"
 			],
 			"button": "Dołącz teraz!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Jestem Szop Bandwidth, i kocham gryźć kable od serwerów Pretendo Network! Mniam!",
+			"Wiele ludzie pyta nas czy z tego powodu będziemy mieli kłopoty prawne z Nintendo; mogę szczęśliwie powiedzieć, że moja ciotka pracuje w Nintendo i mówi, że to OK.",
+			"Webkit v537 to najlepsza wersja Webkit na Wii U. Nie, nie będziemy portować Chrome'a na Wii U.",
+			"Nie mogę poczekać aż zegar dotrze do 03:14:08 czasu UTC 19 stycznia 2038!"
+		]
 	},
 	"progressPage": {
 		"title": "Nasz postęp",

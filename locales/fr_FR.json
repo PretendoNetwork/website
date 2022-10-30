@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "À propos",
+		"about": "À Propos",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -11,7 +11,16 @@
 			"logout": "Déconnexion",
 			"settings": "Réglages"
 		},
-		"donate": "Donations"
+		"donate": "Faire un don",
+		"dropdown": {
+			"captions": {
+				"about": "À propos du projet",
+				"blog": "Nos dernières mises à jour, en condensé",
+				"progress": "Vérifier l'avancement et les objectifs du projet",
+				"credits": "Rencontrez l'équipe",
+				"faq": "Questions fréquemment posées"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Serveurs de jeux",
@@ -41,12 +50,12 @@
 				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "Mes NNIDs existants fonctionneront-ils sur Pretendo ?",
+				"question": "Mes Identifiants Réseau de Nintendo existants fonctionneront-ils sur Pretendo ?",
 				"answer": "Malheureusement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration des NNID aux PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
-				"answer": "Pretendo n'est actuellement pas dans un état prêt à être utilisé par le public. Cependant, dès qu'il le sera, vous pourrez utiliser Pretendo en exécutant simplement notre patcheur homebrew sur votre console."
+				"answer": "Pretendo n'est actuellement pas dans un état prêt à être utilisé par le public. Cependant, dès qu'il le sera, vous pourrez utiliser Pretendo en exécutant simplement notre logiciel Homebrew sur votre console."
 			},
 			{
 				"question": "Savez-vous quand fonctionnalité/service sera prêt ?",
@@ -54,7 +63,7 @@
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo est conçu pour la Wii U et la 3DS ; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait tout de mêtre possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
+				"answer": "Pretendo est conçu pour la Wii U et la 3DS ; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait être possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
@@ -113,8 +122,8 @@
 			{
 				"name": "quarky",
 				"caption": "Recherche de BOSS et développement de correctifs",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -201,12 +210,12 @@
 		"title": "Tiens-toi à jour",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
-			"text": "Recevez des mises à jour en temps réel de nos progrès",
+			"text": "Recevez des mises à jour en temps réel",
 			"button": "Rejoignez le serveur"
 		}
 	},
 	"footer": {
-		"socials": "Sociales",
+		"socials": "Liens Sociaux",
 		"usefulLinks": "Liens utiles",
 		"widget": {
 			"captions": [
@@ -216,15 +225,15 @@
 			"button": "Rejoignez maintenant !"
 		},
 		"bandwidthRaccoonQuotes": [
-			"Je suis Bandy le raton laveur, j'adore mordiller les cables de Prentedo Network!",
-			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo pour ça; moi je leur répond que ma tante qui travaille à Nintendo a dit qu'elle était d'accord.",
-			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Ce serait trop compliqué de créer une version de Chrome pour la Wii U.",
-			"J'ai hâte qu'on soit le 19 janvier 2038 à 3H14 !",
-			"La Wii U n'était pas si nulle que ça, les Pub étaient vraiment mauvaises par contres. Ah, attends mon Gamepad n'arrive pas à se connecter à ma Wii.",
-			"La musique principale de Super *Mario World 2 - Yoshi's Island* est la meilleure musique du monde et tu ne peux pas changer mon avis.",
-			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un port sans importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"vous l'aimiez vraiment beaucoup sur la console virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
-			"\"tu vois Ash  ? Ouais, bah elle fait UwU tout le temps\" est vraiment la façon la plus gentille possible de dire \"Ash fait UwU tout le temps et j'en ai marre\".",
-			"Ma premièr vidéo!!! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !!!!!"
+			"Je suis Bandwidth le Raton Laveur, j'adore mordiller les cables de Pretendo Network ! Miam !",
+			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo ; Moi je leur réponds que ma tante qui travaille chez Nintendo a dit qu'elle était d'accord.",
+			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
+			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
+			"La Wii U n'était pas si nulle que ça, mais les pubs étaient vraiment mauvaises par contre. Ah, attends mon Gamepad n'arrive pas à se connecter à ma Wii.",
+			"La musique principale de Super Mario World 2 - Yoshi's Island est la meilleure musique du monde et tu ne peux pas changer mon avis.",
+			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
+			"\"Tu vois Ash ? Ouais, bah elle fait UwU tout le temps\" est vraiment la façon la plus gentille possible de dire \"Ash fait UwU tout le temps et j'en ai marre\"",
+			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !"
 		]
 	},
 	"progressPage": {
@@ -255,10 +264,24 @@
 					"caption": "Afficher les instructions de configuration"
 				},
 				{
-					"header": "Vous avez une erreur ?",
+					"header": "Vous avez une erreur ?",
 					"caption": "Cherchez-la ici"
 				}
 			]
+		},
+		"search": {
+			"title": "Avez-vous un code d'erreur ?",
+			"label": "Code d'erreur",
+			"caption": "Écrivez dans la case ci-dessous pour obtenir des informations sur votre problème !",
+			"no_match": "Aucun Résultat"
+		},
+		"sidebar": {
+			"search": "Recherche",
+			"juxt_err": "Codes d'erreur - Juxt",
+			"install_extended": "Installation de Pretendo",
+			"welcome": "Bienvenue",
+			"getting_started": "Débuter",
+			"install": "Installation"
 		}
 	},
 	"account": {
@@ -302,11 +325,16 @@
 				"removeDiscord": "Délier le compte Discord",
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
-				"newsletter": "Newsletter",
-				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu"
+				"newsletter": "Nouveautés",
+				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu",
+				"no_edit_from_dashboard": "Le changement des préférences du IDNP dans le menu d'utilisateur n'est pas disponsible. Veuillez changer les préférences de profil sur votre console de jeu",
+				"userSettings": "Paramètres du Compte",
+				"no_signins_notice": "L'historique de connexion n'est actuellement pas sauvegardé. Revenez plus tard !",
+				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
 			},
 			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
-			"upgrade": "Mettre à Niveau le compte"
+			"upgrade": "Mettre à Niveau le compte",
+			"unavailable": "Non disponible"
 		},
 		"banned": "Banni",
 		"accountLevel": [
@@ -314,7 +342,8 @@
 			"Testeur",
 			"Modérateur",
 			"Développeur"
-		]
+		],
+		"account": "Compte"
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",
@@ -335,6 +364,7 @@
 	},
 	"modals": {
 		"cancel": "Annuler",
-		"confirm": "Confirmer"
+		"confirm": "Confirmer",
+		"close": "Fermer"
 	}
 }

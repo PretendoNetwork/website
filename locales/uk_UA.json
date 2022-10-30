@@ -85,8 +85,8 @@
 			{
 				"name": "quarky",
 				"caption": "Дослідження та розробка виправлень BOSS",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -127,7 +127,8 @@
 			"logout": "Вийти"
 		},
 		"docs": "Документи",
-		"account": "Аккаунт"
+		"account": "Аккаунт",
+		"donate": "Донат"
 	},
 	"hero": {
 		"subtitle": "Ігрові сервери",
@@ -213,7 +214,10 @@
 				"Приєднуйтесь до нашого сервера Discord!"
 			],
 			"button": "Приєднуйся зараз!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Я Бандвих Єнот і мені подобається перекушувати кабелі до серверів Pretendo Network. Ням!"
+		]
 	},
 	"blogPage": {
 		"title": "Блог",

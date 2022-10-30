@@ -1,23 +1,37 @@
 {
 	"nav": {
-		"about": "",
-		"faq": "",
+		"about": "···에 대하여",
+		"faq": "FAQ",
 		"docs": "문서",
-		"credits": "",
+		"credits": "크레딧",
 		"progress": "진행률",
 		"blog": "블로그",
-		"account": "계정"
+		"account": "계정",
+		"dropdown": {
+			"captions": {
+				"credits": "팀을 만나보세요",
+				"about": "이 프로젝트에 대하여",
+				"faq": "자주 묻는 질문",
+				"blog": "우리의 최신 업데이트 (요약)",
+				"progress": "프로젝트 진행 상황과 목표를 확인하세요"
+			}
+		},
+		"donate": "후원",
+		"accountWidget": {
+			"settings": "설정",
+			"logout": "로그아웃"
+		}
 	},
 	"hero": {
-		"subtitle": "",
+		"subtitle": "게임 서버",
 		"title": "",
-		"text": "",
+		"text": "Pretendo는 무료이며 3DS와 Wii U를 위한 Nintendo의 서버의 오픈 소스 대체제이고, 원래 서버가 닫힌 된 후에도 모두를 위해 온라인 연결을 제공합니다",
 		"buttons": {
-			"readMore": ""
+			"readMore": "더 읽어보기"
 		}
 	},
 	"aboutUs": {
-		"title": "",
+		"title": "우리들에 대해서",
 		"paragraphs": [
 			"",
 			"저희 프로젝트는 무료이면서 오픈 소스이기 때문에 닌텐도 네트워크가 종료되고 긴 세월이 지나고도 운영될 수 있습니다."
@@ -28,30 +42,31 @@
 		"paragraphs": [
 			null,
 			"3DS에서는, 가능하면 다른 프로젝트도 시도하려 하고 있으나 현재는 마리오 카트 7에 집중하고 있습니다."
-		]
+		],
+		"githubRepo": "Github 저장소"
 	},
 	"faq": {
 		"title": "자주 묻는 질문 (FAQ)",
 		"text": "빠른 정보 제공을 위한, FAQ에 대한 답변입니다.",
 		"QAs": [
 			{
-				"question": "",
+				"question": "Pretendo가 무엇인가요?",
 				"answer": "Pretendo는 오픈 소스 닌텐도 네트워크 대체 프로젝트이며 Wii U와 3DS의 대체 서버를 만드려 합니다. 저희의 목표는 이 콘솔들의 온라인 기능을 유지시켜, 플레이어가 좋아하는 Wii U와 3DS 게임에서 최고의 경험을 할 수 있게 하는 것입니다."
 			},
 			{
 				"question": "현재 사용하고 있는 닌텐도 네트워크 ID (NNID)가 Pretendo에서도 작동할까요?",
-				"answer": "안타깝지만, 그렇지 않습니다. 닌텐도만이 관련 정보를 소지하고 있기 때문에 Pretendo에서 NNID는 사용할 수 없습니다.  NNID에서 Pretendo 네트위크 ID (PNID)로의 전환은 이론상 가능하지만, 위험할 것이며 저희가 원치 않는 중요한 개인정보를 수집할 겁니다."
+				"answer": "안타깝지만, 그렇지 않습니다. 닌텐도만이 관련 정보를 소지하고 있기 때문에 Pretendo에서 NNID는 사용할 수 없습니다. NNID에서 Pretendo 네트위크 ID (PNID)로의 전환은 이론상 가능하지만, 위험할 것이며 저희가 원치 않는 중요한 개인정보를 수집할 겁니다."
 			},
 			{
 				"question": "Pretendo는 어떻게 접속하나요?",
 				"answer": "Pretendo는 아직 공용으로 사용할 수 없습니다. 그러나, 사용이 가능해지면 콘솔에서 홈브루 패쳐를 작동시키면 접속할 수 있게 될 것입니다."
 			},
 			{
-				"question": "",
+				"question": "기능/서비스가 언제 준비될지 알고 싶나요?",
 				"answer": "아니요. 대부분의 Pretendo 기능/서비스는 독립적으로 개발되고 있기 때문에 (예를 들어, 한 개발자가 Miiverse의 작업을 하고 있을 때 계정과 친구 서비스는 다른 개발자가 작업함), 예상 시간은 말씀드릴 수 없습니다."
 			},
 			{
-				"question": "",
+				"question": "Pretendo가 Cemu/에뮬레이터에서 작동하나요?",
 				"answer": "Pretendo는 Wii U와 3DS 하드웨어만을 대상으로 제작하고 있습니다. 현재까지 닌텐도 네트워크 지원이 되는 에뮬레이터는 Cemu 뿐이나, Cemu는 공식적으로 커스텀 서버를 지원하지 않습니다. 그러나 Cemu에서도 Pretendo를 이용할 수 있게 될 것입니다.<br>Pretendo는 아직 Cemu를 지원하지 않습니다."
 			},
 			{
@@ -59,11 +74,11 @@
 				"answer": "저희는 닌텐도 네트워크의 영구 정지 리스트에 대한 권한이 없기 때문에, 저희 서비스를 사용할 때 정지가 되지는 않을 겁니다. 그러나, 저희는 저희만의 운영원칙이 있을 것이며, 그에 따르지 않는 것은 결국 영구 정지에 이어질 것입니다."
 			},
 			{
-				"question": "",
+				"question": "Pretendo가 Wii/스위치를 지원하나요?",
 				"answer": "Wii의 서비스는 이미 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>가 제공하고 있습니다. 스위치의 Nintendo Switch Online은 유료이며 닌텐도 네트워크와 전혀 다르기 때문에, 현재로서도 지원할 계획은 없습니다."
 			},
 			{
-				"question": "",
+				"question": "연결하려면 해킹이 필요한가요?",
 				"answer": "네, 연결하기 위해 콘솔 해킹은 필요할 것입니다. 다만, Wii U에서는 홈브루 런처의 접근 권한만 있으면 됩니다 (예. Haxchi, Coldboot Haxchi, 웹 브라우저 취약점). 3DS에서의 연결 방법은 추후에 공개될 것입니다."
 			}
 		]
@@ -88,7 +103,7 @@
 	},
 	"credits": {
 		"title": "개발 팀",
-		"text": "",
+		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -111,8 +126,8 @@
 			{
 				"name": "quarky",
 				"caption": "BOSS 연구 및 패치 개발",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -128,7 +143,7 @@
 			},
 			{
 				"name": "monty",
-				"caption": "Web development",
+				"caption": "웹 개발",
 				"picture": "https://github.com/ashmonty.png",
 				"github": "https://github.com/ashmonty"
 			},
@@ -224,7 +239,7 @@
 	},
 	"localizationPage": {
 		"title": "같이 번역해 주세요",
-		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요!",
+		"description": "액세스 가능한 JSON의 링크를 붙여넣어서, 웹사이트에서 테스트해 보세요",
 		"instructions": "로컬라이즈",
 		"fileInput": "테스트할 파일",
 		"filePlaceholder": "https://a.link.to/the_file.json",
@@ -245,5 +260,9 @@
 				}
 			]
 		}
+	},
+	"modals": {
+		"close": "닫기",
+		"cancel": "취소"
 	}
 }

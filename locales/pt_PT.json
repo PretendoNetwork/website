@@ -1,1 +1,15 @@
-{}
+{
+	"nav": {
+		"faq": "Perguntas Frequentes"
+	},
+	"credits": {
+		"people": [
+			{},
+			{},
+			{},
+			{
+				"picture": "https://github.com/ashquarky.png"
+			}
+		]
+	}
+}

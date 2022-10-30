@@ -6,7 +6,19 @@
 		"credits": "Kreditt",
 		"progress": "Framgang",
 		"blog": "Blogg",
-		"account": "Konto"
+		"account": "Konto",
+		"dropdown": {
+			"captions": {
+				"credits": "Møt teamet",
+				"about": "Om prosjektet",
+				"faq": "FAQ"
+			}
+		},
+		"donate": "Doner",
+		"accountWidget": {
+			"settings": "Innstillinger",
+			"logout": "Logg ut"
+		}
 	},
 	"hero": {
 		"subtitle": "Spillservere",
@@ -111,8 +123,8 @@
 			{
 				"name": "quarky",
 				"caption": "Forskning på BOSS og utvikling av patcher",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -212,7 +224,18 @@
 				"Bli med i våres Discord server!"
 			],
 			"button": "Bli med nå!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			null,
+			"Mange folk spør oss hvis vi kommer til å komme i noe lovlig trøbbel med Nintendo om dette, jeg er glad til å si at min tante jobber på Nintendo og hun sier at det går fint.",
+			null,
+			null,
+			null,
+			null,
+			null,
+			null,
+			"Min første viedo på min kanal!!! jg har ventet to lage videor så lenge men min laptop kjørte veldig dårlig og jg kunne ikke kjøre fraps,skype og minecraft samtidig. nå er det over! med litt hjelp fra min IT lærer min latop kjører mye bedre og jeg kan filme skjermen min da!! håper dere liker denne videon og hvis dere gjør lik og abonner for flere videor!"
+		]
 	},
 	"progressPage": {
 		"title": "Våres fremgang",
@@ -220,7 +243,8 @@
 	},
 	"blogPage": {
 		"title": "Blogg",
-		"description": "De nyeste oppdateringen er i kondensert biter. Hvis du har lyst til å se mer hyppig oppdateringen, tenk om å støtte oss på <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "De nyeste oppdateringen er i kondensert biter. Hvis du har lyst til å se mer hyppig oppdateringen, tenk om å støtte oss på <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Publisert av"
 	},
 	"localizationPage": {
 		"title": "La oss lokalisere",
@@ -244,6 +268,24 @@
 					"caption": "Søk for det her"
 				}
 			]
+		}
+	},
+	"account": {
+		"account": "Bruker",
+		"loginForm": {
+			"miiName": "Mii navn",
+			"confirmPassword": "Gjenta passord",
+			"register": "Registrer",
+			"email": "E-post",
+			"login": "Logg inn"
+		},
+		"settings": {
+			"unavailable": "Utilgjengelig",
+			"upgrade": "Oppgrader konto",
+			"settingCards": {
+				"gender": "Kjønn",
+				"beta": "Beta"
+			}
 		}
 	}
 }
