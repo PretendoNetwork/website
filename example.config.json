@@ -17,9 +17,10 @@
 		"bot_token": "bot_token"
 	},
 	"stripe": {
-		"goal_cents": 0,
-		"secret_key": "sk_...",
-		"webhook_secret": "whsec_..."
+		"goal_cents": 300000,
+		"secret_key": "secret_key",
+		"webhook_secret": "webhook_secret",
+		"notification_emails": []
 	},
 	"database": {
 		"account": {
