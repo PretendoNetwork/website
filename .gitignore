@@ -67,3 +67,6 @@ static-text.json
 
 # keep browserified files out
 *.bundled.js
+
+# Next.js server files
+.next

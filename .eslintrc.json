@@ -9,9 +9,9 @@
 		"document": true
 	},
 	"parserOptions": {
-		"ecmaVersion": 2021
+		"ecmaVersion": "latest"
 	},
-	"extends": "eslint:recommended",
+	"extends": "next/core-web-vitals",
 	"rules": {
 		"no-case-declarations": "off",
 		"no-empty": "off",
