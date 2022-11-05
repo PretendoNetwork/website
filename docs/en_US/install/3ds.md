@@ -1,35 +1,52 @@
 # 3DS/2DS Family
 
 <div class="tip">
-	ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
+	ℹ️ This guide assumes that you have a real 3DS/2DS family system running homebrew (the Luma3DS custom firmware, to be more specific). If you don't, please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
 </div>
 
-To connect to Pretendo Network using a 3DS/2DS system you must use the Nimbus homebrew and Luma patches
+To connect to Pretendo Network using a 3DS/2DS family system, you must use the Nimbus homebrew and Luma patches.
 
-Navigate to the [releases](https://github.com/PretendoNetwork/Nimbus) page on the Nimbus GitHub repository
-
-<img src="/assets/images/docs/install/3ds/releases-highlight.png" width=100% height=auto/>
-
-Now download the `nimbus.zip` file from the latest release
-
-<img src="/assets/images/docs/install/3ds/zip-highlight.png" width=100% height=auto/>
-
-Extract `nimbus.zip` and copy the `3ds` and `luma` folders to the root of your SD card. You should now have the `0004013000002F02`, `0004013000003202`, and `0004013000003802` Luma patches along with the `nimbus.3dsx` homebrew
+Download the `nimbus.zip` file by clicking [here](https://github.com/PretendoNetwork/Nimbus/releases/latest/download/nimbus.zip). Extract `nimbus.zip`, and copy the `3ds` and `luma` folders to the root of your SD card. You should now have the `0004013000002F02`, `0004013000003202`, and `0004013000003802` Luma patches, along with the `nimbus.3dsx` homebrew.
 
 <img src="/assets/images/docs/install/3ds/sd-card-luma.png" width=100% height=auto/>
 <img src="/assets/images/docs/install/3ds/sd-card-3ds.png" width=100% height=auto/>
 
-Place your SD card back into your console. Boot your console and ensure Luma patches are enabled. Run the Nimbus homebrew and select the network you wish to use (Nintendo Network, or Pretendo Network)
+Place your SD card back into your console.
 
-## Luma patches
-We make use of 3 Luma patches to connect your console to Pretendo:
+Turn on your console and hold (Select) *at the same time* to load the Luma3DS configuration menu. Make sure that game patches are enabled; if they're not, select it before pressing (Start) to exit to the home menu.
 
-1) `0004013000002F02` - SSL system module. This patch disables SSL verification, allowing your console to establish an SSL connection with our servers
-2) `0004013000003202` - Friends system module. This patch replaces the `https://nasc.nintendowifi.net` URL with our servers URL 
-3) `0004013000003802` - act system module. This patch replaces the `https://account.nintendo.net/v1/api/` URL with our servers URL
+Run Nimbus like you would run anything from the Homebrew Launcher, and select whether you'd like to use Nintendo Network or Pretendo Network! You may freely switch between Pretendo and Nintendo at any time, and your selected network will persist between reboots.
 
-## How does it work?
-Nimbus will create a 2nd local account set to the `test` NASC environment. The IPS patches will set the `test` NASC environment URLs to point to Pretendo. You may freely switch between Pretendo and Nintendo. Your selected mode will persist between reboots.
+---
 
-## 2nd local account?
-You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS only _normally_ supports one account, and you may only have one account active at a time. However Nintendo implemented support for multiple local accounts on the 3DS/2DS which remains unused on all retail units. On a normal retail unit only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create sandboxed local accounts with different environments
+# Creating a Pretendo Network ID
+
+Now that Pretendo Network's patches have been installed, we can create a Pretendo Network ID.
+
+Run the Nimbus homebrew, and select *Pretendo*. Your screen will go black and you'll be taken to the home menu. You're on the Pretendo Network!
+
+At this time, you cannot create a Pretendo Network ID from your console; you must make it from the website or <a href="/docs/install/wiiu">from a Wii U</a>. 
+
+To do so from the website, go to the account login page [here](/account) and click `Don't have an account?` to register.
+
+<img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" width=100% height=auto/>
+
+Do not use the same Pretendo Network ID as your current Nintendo Network ID. The Wii U will not let you add what it thinks is a Nintendo Network ID more than once.
+
+Go into *System Settings* > *Nintendo Network ID Settings*.
+
+---
+
+# Setting up the Juxtaposition applet (optional)
+
+Some games come with Miiverse support, and Juxtaposition is our Miiverse reimagining. Nimbus already takes care of most in-game patches for Miiverse, but the applet can also be patched separately.
+
+First, download `Juxt.zip` from [here](https://cdn.discordapp.com/attachments/911878047895023637/937516295069515866/Juxt.zip).
+
+Extract `Juxt.zip`, and copy the `3ds` and `luma` folders to the root of your SD card. You should now have the `000400300000BC02`, `000400300000BD02`, and `000400300000BE02` Luma patches, along with the `juxt.pem` cert.
+
+<img src="/assets/images/docs/install/3ds/sd-card-juxt.png" width=100% height=auto/>
+
+Place your SD card back into your console, and start it.
+
+The Juxtaposition applet has now been set up! Have fun!
