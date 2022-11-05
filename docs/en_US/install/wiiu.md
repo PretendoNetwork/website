@@ -4,7 +4,7 @@
 	ℹ️ This guide assumes that you have a real Wii U console running homebrew. If you don't, please first follow <a href="https://wiiu.hacks.guide/" target="_blank">this guide</a> on how to homebrew your system, or <a href="/docs/install/cemu">this guide</a> on how to connect to Pretendo Network on Cemu.
 </div>
 
-Welcome to Pretendo Network! [Already have Pretendo installed, but need help making your Pretendo Network ID?](#pnid-setup-1)
+Welcome to Pretendo Network! [Already have Pretendo installed, but need help making your Pretendo Network ID?](#creating-and-using-a-pretendo-network-id)
 
 Select the homebrew environment you're currently using:
 - ### [Tiramisu](#tiramisu-1)
@@ -87,14 +87,6 @@ Legacy releases of the patcher may be found in old [releases](https://github.com
 
 Now that Pretendo Network's basic patches have been installed, we can create a Pretendo Network ID. There are currently two ways of creating a PNID; either by directly creating an account on your Wii U, or creating it with the website and linking later.
 
-<div class="tip red">
-	⚠️ When registering for a PNID, make sure to save your password on some sort of note, as you are *not* be able to reset your password at this time. 
-	<!-- TODO: There's currently a pull request for the website that, 
-	once merged, will make this notice obsolete and let the password 
-	reset feature go live! 🎉 
-	https://github.com/PretendoNetwork/website/pull/177 -->
-</div>
-
 ### Wii U
 
 Start up your Wii U and get to the user selection screen. For some users, this will be where they first go, but others may have to press a profile icon in the top-left. After pressing the icon, press `Switch Account` or `Switch User`.
@@ -122,8 +114,6 @@ You *also* get to register an email to your Pretendo Network ID, and get to tell
 Once you've confirmed that everything is good, the Wii U will tell you a confirmation email has been sent.
 
 <img src="/assets/images/docs/install/wiiu/pnid/pnid-confirmation.png" width=100% height=auto/>
-
-Don't go looking for it. *It doesn't exist.* Pretendo Network IDs cannot have emails confirmed at this time.
 
 You've now created and started using a Pretendo Network ID! Keep scrolling past this section to learn about how to install Juxtaposition and restore the functionality of the YouTube app.
 
@@ -161,12 +151,6 @@ After confirming the information is correct, you'll be asked if you're sure that
 You've now created and started using a Pretendo Network ID!
 
 <img src="/assets/images/docs/install/wiiu/pnid/pnid-created.png" width=100% height=auto/>
-
-Note that whenever you login to your account, you may see a screen like this:
-
-<img src="/assets/images/docs/install/wiiu/pnid/pnid-confirmation2.png" width=100% height=auto/>
-
-Do not go looking for a confirmation email. *It doesn't exist.* Pretendo Network IDs cannot have emails confirmed at this time.
 
 ---
 

@@ -358,8 +358,7 @@
 			"welcome": "Herzlich willkommen",
 			"install_extended": "Pretendo installieren",
 			"install": "Installieren",
-			"search": "Suchen",
-			"juxt_err": "Fehler-Codes - Juxt"
+			"search": "Suchen"
 		}
 	},
 	"modals": {
