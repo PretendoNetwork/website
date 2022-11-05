@@ -27,6 +27,8 @@ If `50_hbl_launcher.rpx` is on your SD card, remove it for now - otherwise, it'l
 Place your SD card back into your console and boot like normal. [Click here to continue setup!](#creating-and-using-a-pretendo-network-id)
 
 ### Bleeding Edge
+[Login to your GitHub account](https://github.com/login) (or [create one](https://github.com/signup) if you don't already have one).
+
 Navigate to the [Actions](https://github.com/PretendoNetwork/Nimble/actions) page on the Nimble GitHub repository.
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/actions-highlight.png" width=100% height=auto/>
@@ -57,6 +59,8 @@ Download Inkay by clicking [here](https://github.com/PretendoNetwork/Inkay/relea
 Place your SD card back into your console and boot like normal. [Click here to continue setup!](#creating-and-using-a-pretendo-network-id)
 
 ### Bleeding Edge
+[Login to your GitHub account](https://github.com/login) (or [create one](https://github.com/signup) if you don't already have one).
+
 Navigate to the [Actions](https://github.com/PretendoNetwork/Inkay/actions) page on the Aroma GitHub repository.
 
 <img src="/assets/images/docs/install/wiiu/aroma/actions-highlight.png" width=100% height=auto/>
@@ -115,7 +119,11 @@ Once you've confirmed that everything is good, the Wii U will tell you a confirm
 
 <img src="/assets/images/docs/install/wiiu/pnid/pnid-confirmation.png" width=100% height=auto/>
 
-You've now created and started using a Pretendo Network ID! Keep scrolling past this section to learn about how to install Juxtaposition and restore the functionality of the YouTube app.
+You've now created and started using a Pretendo Network ID! 
+
+<img src="/assets/images/docs/install/wiiu/pnid/pnid-created.png" width=100% height=auto/>
+
+Keep scrolling past this section to learn about how to install Juxtaposition and restore the functionality of the YouTube app.
 
 ### Website
 Go to the account login page [here](/account) and click `Don't have an account?` to register.
@@ -134,7 +142,7 @@ If you *did* get error 102-2402 when logging in, then you're connected to Preten
 
 If it reads as above (or, at the very least, mentions Pretendo), then you're connected to Pretendo Network and can progress safely. Otherwise, make sure you've [installed Pretendo Network's basic patches](#select-your-homebrew-environment).
 
-Now that we've checked, scroll back up to continue along.
+Now that we've checked, scroll back up to the top of the menu to continue along.
 
 Press `Switch Account` or `Switch User` to get to the user selection screen, then press (Plus) or `Add New User`. 
 
