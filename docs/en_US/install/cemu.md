@@ -1,4 +1,4 @@
-<div class="tip green">This Guide may be missing some info or incomplete.</div>
+<div class="tip green">This guide may be missing some info or incomplete.</div>
 
 # Cemu
 
@@ -8,7 +8,7 @@
 	Only experimental builds of Cemu 2.0 are supported. At this time, Cemu does not have a stable release of Cemu 2.0 which supports Pretendo.
 </div>
 
-Cemu 2.0 introduced official built-in support for Pretendo on October 10th, 2022. Head to the Cemu GitHub [releases](https://github.com/cemu-project/Cemu/releases) page and download the latest Cemu experimental release (tagged as `Pre-release`). Only `Cemu 2.0-5 (Experimental)` and above is supported at the moment. Additionally, you may build Cemu from source using the provided [build instructions](https://github.com/cemu-project/Cemu/blob/main/BUILD.md).
+Cemu 2.0 introduced official built-in support for Pretendo on October 10th, 2022. Head to the Cemu GitHub [releases](https://github.com/cemu-project/Cemu/releases) page and download the latest Cemu experimental release (tagged as `Pre-release`). Only `Cemu 2.0-5 (Experimental)` and above is supported at the moment. Alternatively, you may build Cemu from source using the provided [build instructions](https://github.com/cemu-project/Cemu/blob/main/BUILD.md).
 
 ## Online files
 Cemu requires the use of several files obtained via dumping from real hardware. You may use those files if you have a physical Wii U, and they will work just fine when connecting to Pretendo. If you _don't_ have a real Wii U, navigate to [your account page](/account) and select <strong>`Download account files`</strong>.
@@ -28,7 +28,7 @@ After obtaining the files needed for online play refer to the official [Cemu Onl
 </div>
 
 ## Connecting to Pretendo
-Once you have Cemu setup for online play navigate to `Options > General settings > Account`. You should now see a section titled `Network Service`. Select your PNID from the `Active account` menu and select the `Pretendo` Network Service option. Cemu should now be connected to Pretendo's servers.
+Once you have Cemu setup for online play, navigate to `Options > General settings > Account`. You should now see a section titled `Network Service`. Select your PNID from the `Active account` menu and select the `Pretendo` Network Service option. Cemu should now be connected to Pretendo's servers.
 
 <center><img src="/assets/images/docs/install/cemu/network-services-settings.png"/></center>
 

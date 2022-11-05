@@ -25,13 +25,13 @@ Now that Pretendo Network's patches have been installed, we can create a Pretend
 
 Run the Nimbus homebrew, and select *Pretendo*. Your screen will go black and you'll be taken to the home menu. You're on the Pretendo Network!
 
-At this time, you cannot create a Pretendo Network ID from your console; you must make it from the website or <a href="/docs/install/wiiu">from a Wii U</a>. 
+At this time, you cannot create a Pretendo Network ID from your 3DS/2DS family system; you must make it from the website or <a href="/docs/install/wiiu">from a Wii U</a>. 
 
 To do so from the website, go to the account login page [here](/account) and click `Don't have an account?` to register.
 
 <img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" width=100% height=auto/>
 
-Do not use the same Pretendo Network ID as your current Nintendo Network ID. The Wii U will not let you add what it thinks is a Nintendo Network ID more than once.
+Do not use the same Pretendo Network ID as your current Nintendo Network ID.
 
 Go into *System Settings* > *Nintendo Network ID Settings*.
 
@@ -45,8 +45,15 @@ First, download `Juxt.zip` from [here](https://cdn.discordapp.com/attachments/91
 
 Extract `Juxt.zip`, and copy the `3ds` and `luma` folders to the root of your SD card. You should now have the `000400300000BC02`, `000400300000BD02`, and `000400300000BE02` Luma patches, along with the `juxt.pem` cert.
 
-<img src="/assets/images/docs/install/3ds/sd-card-juxt.png" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/sd-card-juxt-luma.png" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/sd-card-juxt-3ds.png" width=100% height=auto/>
 
 Place your SD card back into your console, and start it.
 
 The Juxtaposition applet has now been set up! Have fun!
+
+---
+
+Welcome to Pretendo Network!
+
+If you encounter (or have encountered) any errors, try [searching](/docs/search) for the error code. If that doesn't work, join our [Discord](https://invite.gg/pretendo), and either ask the #support channel for help or get in touch with a developer.

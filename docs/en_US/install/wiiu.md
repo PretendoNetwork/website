@@ -6,8 +6,7 @@
 
 Welcome to Pretendo Network! [Already have Pretendo installed, but need help making your Pretendo Network ID?](#pnid-setup-1)
 
-## Select your homebrew environment
-
+Select the homebrew environment you're currently using:
 - ### [Tiramisu](#tiramisu-1)
 - ### [Aroma](#aroma-1)
 - ### [Other](#other-1)
@@ -16,7 +15,7 @@ Welcome to Pretendo Network! [Already have Pretendo installed, but need help mak
 
 To connect to Pretendo Network using Tiramisu, you must use the [Nimble](https://github.com/PretendoNetwork/Nimble) module. There are 2 ways of obtaining the patch; either the stable release version, or the bleeding edge version.
 
-### Tiramisu - Stable
+### Stable
 Download Nimble by clicking [here](https://github.com/PretendoNetwork/Nimble/releases/latest/download/30_nimble.rpx). A `30_nimble.rpx` file will download. 
 
 Place that file on your SD card at `sd:/wiiu/environments/tiramisu/modules/setup/`.
@@ -27,7 +26,7 @@ If `50_hbl_launcher.rpx` is on your SD card, remove it for now - otherwise, it'l
 
 Place your SD card back into your console and boot like normal. [Click here to continue setup!](#creating-and-using-a-pretendo-network-id)
 
-### Tiramisu - Bleeding Edge
+### Bleeding Edge
 Navigate to the [Actions](https://github.com/PretendoNetwork/Nimble/actions) page on the Nimble GitHub repository.
 
 <img src="/assets/images/docs/install/wiiu/tiramisu/actions-highlight.png" width=100% height=auto/>
@@ -50,14 +49,14 @@ Place your SD card back into your console and boot like normal. [Click here to c
 
 To connect to Pretendo Network using Aroma, you must use the [Inkay](https://github.com/PretendoNetwork/Inkay) plugin. There are 2 ways of obtaining the patch; either the stable release version, or the bleeding edge version.
 
-### Aroma - Stable
+### Stable
 Download Inkay by clicking [here](https://github.com/PretendoNetwork/Inkay/releases/latest/download/Inkay-pretendo.wps). A `Inkay-pretendo.wps` file will download. Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/environments/aroma/plugins/`.
 
 <img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width=100% height=auto/>
 
 Place your SD card back into your console and boot like normal. [Click here to continue setup!](#creating-and-using-a-pretendo-network-id)
 
-### Aroma - Bleeding Edge
+### Bleeding Edge
 Navigate to the [Actions](https://github.com/PretendoNetwork/Inkay/actions) page on the Aroma GitHub repository.
 
 <img src="/assets/images/docs/install/wiiu/aroma/actions-highlight.png" width=100% height=auto/>
@@ -102,7 +101,7 @@ Start up your Wii U and get to the user selection screen. For some users, this w
 
 Once you get to the user selection screen, press (Plus) or `Add New User`. 
 
-When asked if you already have a Nintendo Network ID, choose `No`. You will immediately be greeted with a language selection that will take you to the Network Services Agreement.
+When asked if you already have a Nintendo Network ID, choose `No`. You will immediately be greeted with a language selection that will take you to a Network Services Agreement.
 
 **STOP!** Read carefully, and make sure that this is the Pretendo Network Services Agreement and not just the regular Network Services Agreement.
 
@@ -118,8 +117,6 @@ Now it's time to... create your "Nintendo Network ID!" This is actually your *Pr
 
 Once you've made your Pretendo Network ID and your password, you get to tell Pretendo whether or not you want you want to be able to login to your Pretendo Network ID through your other devices, on services like Miiverse.
 
-<img src="/assets/images/docs/install/wiiu/pnid/pnid-access.png" width=100% height=auto/>
-
 You *also* get to register an email to your Pretendo Network ID, and get to tell Pretendo whether or not you want to stay in touch via e-mail. (More realistically, though, you'd stay in touch via [our Discord server](https://invite.gg/pretendo).)
 
 Once you've confirmed that everything is good, the Wii U will tell you a confirmation email has been sent.
@@ -128,7 +125,7 @@ Once you've confirmed that everything is good, the Wii U will tell you a confirm
 
 Don't go looking for it. *It doesn't exist.* Pretendo Network IDs cannot have emails confirmed at this time.
 
-You've now created and started using a Pretendo Network ID!
+You've now created and started using a Pretendo Network ID! Keep scrolling past this section to learn about how to install Juxtaposition and restore the functionality of the YouTube app.
 
 ### Website
 Go to the account login page [here](/account) and click `Don't have an account?` to register.
@@ -159,9 +156,17 @@ Enter the username, password, and email we entered on the website.
 
 After confirming the information is correct, you'll be asked if you're sure that you want to link the account. Choose `Link`.
 
-<img src="/assets/images/docs/install/wiiu/pnid/pnid-confirmation2.png" width=100% height=auto/>
+<img src="/assets/images/docs/install/wiiu/pnid/pnid-link.png" width=100% height=auto/>
 
 You've now created and started using a Pretendo Network ID!
+
+<img src="/assets/images/docs/install/wiiu/pnid/pnid-created.png" width=100% height=auto/>
+
+Note that whenever you login to your account, you may see a screen like this:
+
+<img src="/assets/images/docs/install/wiiu/pnid/pnid-confirmation2.png" width=100% height=auto/>
+
+Do not go looking for a confirmation email. *It doesn't exist.* Pretendo Network IDs cannot have emails confirmed at this time.
 
 ---
 
@@ -169,7 +174,7 @@ You've now created and started using a Pretendo Network ID!
 
 Some games come with Miiverse support. Juxtaposition, or Juxt for short, is our Miiverse reimagining. Nimble and Inkay already take care of in-game patches for Miiverse, but the applet can also be patched separately.
 
-Note that the modifications Martini makes are "permanent" - they can be reverted, but unlike our other patches, they write to a console's NAND and persist across reboots. 
+Note that the modifications Martini makes are "permanent" - they can be reverted, but unlike our other patches, they write to a console's NAND and persist across reboots. At this time, Juxt cannot be uninstalled once you patch the applet.
 
 You can also access Juxtaposition using a Nintendo Network ID, although note that when doing so, you will be in Guest Mode, which limits you from Yeahing posts or making posts of your own.
 
