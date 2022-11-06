@@ -251,7 +251,7 @@
 		"description": "Cole um link para um arquivo JSON acessível publicamente para testá-lo no site",
 		"instructions": "Veja as instruções de localização e tradução",
 		"fileInput": "Arquivo para testar",
-		"filePlaceholder": "https://a.link.to/the_file.json",
+		"filePlaceholder": "https://um.link.para/o_arquivo.json",
 		"button": "Testar aqui"
 	},
 	"account": {
