@@ -11,6 +11,15 @@
 		"accountWidget": {
 			"settings": "Settings",
 			"logout": "Logout"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Meet the team",
+				"about": "About the project",
+				"faq": "Frequently asked questions",
+				"blog": "Our latest updates, condensed",
+				"progress": "Check the project progress and goals"
+			}
 		}
 	},
 	"hero": {
@@ -113,8 +122,8 @@
 			{
 				"name": "quarky",
 				"caption": "BOSS research and patch development",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -215,7 +224,7 @@
 			],
 			"button": "Join now!"
 		},
-		"bandwidthRaccoonQuotes":	[
+		"bandwidthRaccoonQuotes": [
 			"I'm Bandwidth the Raccoon, and I love biting the cables going into Pretendo Network's servers. Yum!",
 			"Many people ask us if we're gonna get in legal trouble with Nintendo over this; I am happy to say that my aunt works at Nintendo and she says it's fine.",
 			"Webkit v537 is the best version of Webkit for Wii U. No, we're not going to port Chrome to the Wii U.",
@@ -351,7 +360,6 @@
 			"install": "Install",
 			"search": "Search",
 			"juxt_err": "Error codes - Juxt"
-
 		}
 	},
 	"modals": {

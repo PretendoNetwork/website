@@ -9,17 +9,33 @@
 		"docs": "Dökümanlar",
 		"progress": "İlerleme",
 		"blog": "Blog",
-		"account": "Hesap"
+		"account": "Hesap",
+		"dropdown": {
+			"captions": {
+				"credits": "Ekip ile tanışın",
+				"faq": "Sıkça sorulan sorular",
+				"about": "Proje hakkında",
+				"progress": "Projenin ilerleyişi ve hedeflerine göz atın",
+				"blog": "En son güncellemelerimiz"
+			}
+		},
+		"donate": "Bağış",
+		"credits": "Katkıda bulunanlar"
 	},
 	"hero": {
 		"subtitle": "Oyun sunucuları",
 		"title": "Yeniden oluşturuldu",
 		"buttons": {
 			"readMore": "Daha fazlasını oku"
-		}
+		},
+		"text": "Pretendo, Nintendo'nun hem 3DS hem de Wii U sunucuları için ücretsiz ve açık kaynaklı bir alternatiftir ve orijinal sunucular kapatıldıktan sonra bile herkes için çevrimiçi bağlantıya izin verir"
 	},
 	"aboutUs": {
-		"title": "Hakkımızda"
+		"title": "Hakkımızda",
+		"paragraphs": [
+			"Pretendo, tersine mühendislik kullanarak 3DS ve Wii U için Nintendo Network'ü yeniden oluşturmayı amaçlayan açık kaynaklı bir projedir.",
+			"Hizmetlerimiz hem ücretsiz hem de açık kaynak olacağından, Nintendo Network'ün kaçınılmaz olarak kapanışından çok daha sonra var olabilirler."
+		]
 	},
 	"progress": {
 		"title": "İlerleme",
@@ -29,33 +45,326 @@
 		"title": "Sık Sorulan Sorular",
 		"QAs": [
 			{
-				"question": "Pretendo ney?"
+				"question": "Pretendo ne?",
+				"answer": "Pretendo, Wii U ve 3DS konsol ailesi için özel sunucular oluşturmayı amaçlayan açık kaynaklı bir Nintendo Network alternatifidir. Amacımız, oyuncuların en sevdikleri Wii U ve 3DS oyunlarını tam kapasiteyle oynamaya devam etmelerini sağlamak için bu konsolların çevrimiçi işlevselliğini korumaktır."
 			},
 			{
-				"question": "Zaten varolan NNIDlerim Pretendo'da çalışıcakmı?",
-				"answer": "Üzgünüz fakat hayır. Zaten varolan NNIDler Pretendo'da çalışmayacak."
+				"question": "Zaten varolan NNIDlerim Pretendo'da çalışacak mı?",
+				"answer": "Üzgünüz ki hayır. Kullanıcı verileri yalnızca Nintendo sunucularında bulunduğundan mevcut NNID'ler Pretendo'da çalışmayacaktır. NNID'den PNID'ye geçiş teorik olarak mümkün olsa da, riskli olur ve tutmak istemediğimiz hassas kullanıcı verilerini gerektirir."
 			},
 			{
-				"question": "Pretendo'yu nası kullanırım?",
-				"answer": "Pretendo şuanda kullanıma açık değil. Fakat kullanıma açık olduğunda Pretendo'yu bir homebrew yamalayıcısı çalıştırarak kullanabiliceksiniz."
+				"question": "Pretendo'yu nasıl kullanırım?",
+				"answer": "Pretendo şuanda genel kullanım için hazır değil. Fakat hazır olduğunda Pretendo'yu konsolunuzda bir homebrew yamalayıcısı çalıştırarak kullanabileceksiniz."
 			},
 			{
-				"question": "Servis yada özelliğin ne zaman hazır olacağını biliyormusunuz?"
+				"question": "Servis ya da bir özelliğin ne zaman hazır olacağını biliyor musunuz?",
+				"answer": "Hayır. Pretendo'nun birçok özelliği/hizmeti bağımsız olarak geliştirilmektedir (örneğin, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışırken Miiverse üzerinde başka bir geliştirici çalışır.) ve bu nedenle, bunun ne kadar süreceği konusunda genel bir tahmini süre veremiyoruz."
+			},
+			{
+				"question": "Pretendo Cemu/emülatörlerde çalışır mı?",
+				"answer": "Pretendo, özünde Wii U ve 3DS donanımı için tasarlanmıştır; Şu anda bu konsollar için Nintendo Network destekli tek emülatör Cemu'dur. Cemu, özel sunucuları resmi olarak desteklememektedir, ancak Pretendo'yu Cemu ile kullanmak yine de mümkündür.<br>Pretendo, şu anda Cemu'yu desteklememektedir."
+			},
+			{
+				"question": "Nintendo Network'te yasaklandıysam, Pretendo kullanırken yasaklı kalacak mıyım?",
+				"answer": "Nintendo Network'ün yasaklarına erişimimiz yok ve tüm kullanıcılar hizmetimizde yasaklı olmayacak. Ancak, hizmeti kullanırken uymanız gereken kurallarımız olacaktır ve bu kurallara uyulmaması yasaklama ile sonuçlanabilir."
+			},
+			{
+				"question": "Pretendo Wii/Switch'i destekleyecek mi?",
+				"answer": "Wii'nin zaten <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları var. Şu anda Switch'i hem ücretli hem de Nintendo Network'ten tamamen farklı olduğu için hedeflemek istemiyoruz."
+			},
+			{
+				"question": "Bağlanmak için hacklere ihtiyacım olacak mı?",
+				"answer": "Evet, bağlanmak için cihazınızı hacklemeniz gerekecek; ancak Wii U'da yalnızca Homebrew Launcher'a (yani Haxchi, Coldboot Haxchi ve hatta web tarayıcısı açıklarından yararlanma) erişmeniz gerekir ve 3DS'nin nasıl bağlanacağı hakkında daha sonra bilgi verilecektir."
 			}
-		]
+		],
+		"text": "Burada, bize kolay bilgi için sorulan bazı genel sorular yer almaktadır."
 	},
 	"showcase": {
 		"cards": [
-			{},
 			{
-				"title": "Juxtaposition"
+				"title": "Oyun sunucuları",
+				"caption": "Özel sunucular kullanarak favori oyunlarınızı ve içeriğinizi geri getirir."
 			},
 			{
-				"title": "Cemu desteği"
+				"title": "Juxtaposition",
+				"caption": "Miiverse'nin modern çağda yapılmış gibi yeniden bir oluşumu."
+			},
+			{
+				"title": "Cemu desteği",
+				"caption": "En sevdiğiniz Wii U oyunlarını konsolunuz olmadan da oynayın!"
 			}
-		]
+		],
+		"text": "Projemizin birçok bileşeni var. İşte bunlardan bazıları.",
+		"title": "Yaptığımız şeyler"
 	},
 	"credits": {
-		"title": "Takımımız"
+		"title": "Takımımız",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Proje sahibi ve baş geliştirici",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse araştırma ve geliştirme",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"caption": "Ağ kurulumu ve konsol araştırması",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"caption": "BOSS araştırma ve yama geliştirme"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png",
+				"caption": "Konsol ve diğer sistem araştırmaları",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"caption": "Web geliştirme lideri",
+				"picture": "https://github.com/jipfr.png",
+				"name": "Jip Fr",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"github": "https://github.com/ashmonty",
+				"picture": "https://github.com/ashmonty.png",
+				"name": "monty",
+				"caption": "Web geliştirme"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Tasarımcı",
+				"github": "https://github.com/mrjvs",
+				"picture": "https://github.com/mrjvs.png"
+			}
+		],
+		"text": "Projenin arkasındaki ekip ile tanışın"
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"linkDiscord": "Discord hesabı bağla",
+				"removeDiscord": "Discord hesabını kaldır",
+				"signInHistory": "Giriş yapma geçmişi",
+				"newsletterPrompt": "Proje güncellemelerini e-posta ile alın (istediğiniz zaman vazgeçebilirsiniz)",
+				"newsletter": "Bülten",
+				"profile": "Profil",
+				"nickname": "Takma ad",
+				"serverEnv": "Sunucu ortamı",
+				"production": "Üretim",
+				"beta": "Beta",
+				"gender": "Cinsiyet",
+				"noDiscordLinked": "Bağlı bir Discord hesabı yok.",
+				"passwordPrompt": "Cemu dosyalarını indirmek için PNID şifrenizi girin",
+				"birthDate": "Doğum tarihi",
+				"no_signins_notice": "Oturum açma geçmişi şu anda takip edilmiyor. Daha sonra tekrar kontrol edin!",
+				"no_newsletter_notice": "Bülten şu anda mevcut değil. Daha sonra tekrar kontrol edin",
+				"no_edit_from_dashboard": "Kullanıcı panosundan PNID ayarlarını düzenlemek şu anda mevcut değil. Lütfen bağlı oyun konsolunuzdan kullanıcı ayarlarınızı güncelleyin",
+				"userSettings": "Kullanıcı ayarları",
+				"country": "Ülke/bölge",
+				"timezone": "Zaman dilimi",
+				"hasAccessPrompt": "Mevcut seviyeniz size beta sunucu erişimi sağlıyor. Havalı!",
+				"upgradePrompt": "Beta sunucuları, beta test kullanıcılarına özeldir.<br>Beta test kullanıcısı olmak için hesabınızı yükseltin.",
+				"email": "E-posta",
+				"signInSecurity": "Oturum açma ve güvenlik",
+				"passwordResetNotice": "Şifrenizi değiştirdikten sonra tüm cihazlardaki oturumlarınız kapatılacaktır.",
+				"fullSignInHistory": "Tam oturum açma geçmişini görüntüle",
+				"password": "Şifre",
+				"otherSettings": "Diğer ayarlar",
+				"connectedToDiscord": "Discord'a bu hesap ile bağlanıldı",
+				"discord": "Discord"
+			},
+			"downloadFiles": "Hesap dosyalarını indir",
+			"upgrade": "Hesabı yükselt",
+			"unavailable": "Mevcut değil",
+			"downloadFilesDescription": "(Nintendo Network'te çalışmayacak)"
+		},
+		"loginForm": {
+			"forgotPassword": "Şifreni mi unuttun?",
+			"loginPrompt": "Zaten hesabınız var mı?",
+			"miiName": "Mii adı",
+			"registerPrompt": "Hesabınız yok mu?",
+			"login": "Giriş",
+			"detailsPrompt": "Hesap bilgilerinizi aşağıya girin",
+			"register": "Kayıt",
+			"username": "Kullanıcı adı",
+			"password": "Şifre",
+			"confirmPassword": "Şifreyi onayla",
+			"email": "E-posta"
+		},
+		"accountLevel": [
+			"Standart",
+			"Testçi",
+			"Moderatör",
+			"Geliştirici"
+		],
+		"account": "Hesap",
+		"banned": "Yasaklı"
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Ben Rakun Bandwidth'im ve Pretendo Network'ün sunucularına giden kabloları ısırmayı seviyorum. Lezzetli!",
+			"Birçok kişi bize bu konuda Nintendo ile yasal bir sorun yaşayıp yaşamayacağımızı soruyor; Teyzemin Nintendo'da çalıştığını söylemekten mutluyum ve o da bir sorun olmayacağını söylüyor.",
+			"WebKit v537, Wii U için WebKit'in en iyi sürümüdür. Hayır, Chrome'u Wii U'ya portlamayacağız.",
+			"19 Ocak 2038'de saatin 03:14:08 UTC'ye ulaşmasını sabırsızlıkla bekliyorum!",
+			"Wii U aslında değeri bilinmeyen bir sistem: reklamlar gerçekten kötüydü ama konsol harika. Bir saniye, neden olduğundan emin değilim ama Gamepad'im Wii'ime bağlanmıyor.",
+			"Super Mario World 2 - Yoshi's Island'ın ana teması tam bir klasik ve beni başka türlü ikna etmenin bir yolu yok.",
+			"En sevdiğim Nintendo Switch oyunları Nintendo Switch Online + Genişletme Paketi, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Çevrimdışı Oynama Paketi, Nintendo Switch Online + Bir Port daha Paketi ve Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Nintendo Wii U Sanal Konsol Oyunlarını Gerçekten Sevdiniz, Bu yüzden Geri Getiriyoruz\" Paketi. Nintendo'nun umursadığını gerçekten söyleyebilirsin.",
+			"\"Ash'i biliyorsun, kalbini korusun, o bütün gün UwUlar\" gibi, \"Ash her zaman uwular ve bu gerçekten garip ve aptalca ve keşke yapmasalar\" demenin güneydeki güzel yolu",
+			"Kanalımdaki ilk videom!! bn uzun zamandır video yapmak istiyordum ama dizüstü bilgisayarım oldukça kötü çalıştı ve fraps, skype ve minecraft'ı aynı anda çalıştıramadım. ama artık bitti! BT öğretmenimin biraz yardımıyla dizüstü bilgisayarım çok daha iyi çalışıyor ve şimdi kayıt yapabiliyorum! umarım eğlenirsiniz ve beğendiyseniz lütfen beğenip abone olun!!!"
+		],
+		"widget": {
+			"button": "Şimdi katıl!",
+			"captions": [
+				"Güncel kalmak mı istiyorsunuz?",
+				"Discord sunucumuza katılın!"
+			]
+		},
+		"socials": "Sosyal",
+		"usefulLinks": "Kullanışlı bağlantılar"
+	},
+	"docs": {
+		"search": {
+			"no_match": "Eşleşme bulunamadı",
+			"caption": "Sorununuz hakkında bilgi almak için hata kodunu aşağıdaki kutuya yazın!",
+			"title": "Hata kodu mu aldınız?",
+			"label": "Hata kodu"
+		},
+		"quickLinks": {
+			"links": [
+				{
+					"header": "Pretendo'yu kur",
+					"caption": "Kurulum yönergelerini görüntüle"
+				},
+				{
+					"header": "Hata mı aldın?",
+					"caption": "Burada arayın"
+				}
+			],
+			"header": "Hızlı linkler"
+		},
+		"sidebar": {
+			"welcome": "Hoşgeldiniz",
+			"install_extended": "Pretendo'yu kur",
+			"getting_started": "Başlarken",
+			"install": "Kur",
+			"search": "Ara",
+			"juxt_err": "Hata kodları - Juxt"
+		},
+		"missingInLocale": "Bu sayfa dilinizde kullanılamıyor. Lütfen aşağıdaki İngilizce sürümüne göz atın."
+	},
+	"discordJoin": {
+		"widget": {
+			"button": "Sunucuya katıl",
+			"text": "İlerlememiz için gerçek zamanlı güncellemeler alın"
+		},
+		"title": "Güncel kalın",
+		"text": "Projeyle ilgili en son güncellemeleri almak için Discord sunucumuza katılın."
+	},
+	"localizationPage": {
+		"instructions": "Yerelleştirme yönergelerini göster",
+		"fileInput": "Test edilecek dosya",
+		"title": "Hadi yerelleştirelim",
+		"description": "Web sitesinde test etmek için herkese açık bir JSON lokaline bir bağlantı yapıştırın",
+		"button": "Test dosyası",
+		"filePlaceholder": "https://a.link.to/the_file.json"
+	},
+	"specialThanks": {
+		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
+		"people": [
+			{
+				"caption": "crunch kütüphane geliştirme",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS geliştirici ve NEX disektörü",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy",
+				"caption": "Korumacı"
+			},
+			{
+				"github": "https://github.com/shutterbug2000",
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 ve 3DS araştırma",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse bilgi paylaşımı",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Ayrıca teşekkürler",
+				"caption": "Nintendo veri yapıları üzerine araştırma",
+				"github": "https://github.com/Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Mii Editörü için ikonlar ve Juxt tepkileri",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHub katılımcıları",
+				"caption": "Yerelleştirmeler ve diğer katkılar"
+			}
+		],
+		"title": "Ayrıca teşekkürler"
+	},
+	"donation": {
+		"upgradePush": "Abone olmak ve harika avantajlara erişmek için <a href=\"/account/upgrade\">yükseltme sayfasını</a> ziyaret edin.",
+		"progress": "Ayda <span>$${totd}</span>, <span>$${goald}</span>/ay, aylık hedefin <span>%${perc}</span>."
+	},
+	"blogPage": {
+		"published": "Tarafından yayınlandı",
+		"title": "Blog",
+		"description": "Yoğunlaştırılmış parçalardaki en son güncellemeler. Daha sık güncellemeler görmek istiyorsanız, bizi <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> üzerinden destekleyin.",
+		"publishedOn": "şu tarihte"
+	},
+	"upgrade": {
+		"back": "Geri",
+		"tierSelectPrompt": "Bir seviye seçin",
+		"month": "ay",
+		"description": "Aylık hedefe ulaşmak, Pretendo'yu tam zamanlı bir iş haline getirecek ve daha hızlı bir oranda daha kaliteli güncellemeler sağlayacaktır.",
+		"title": "Yükselt",
+		"unsubPrompt": "<span>tiername</span> aboneliğinden çıkmak istediğinizden emin misiniz? Bu seviye ile ilişkili ayrıcalıklara erişiminizi kaybedeceksiniz.",
+		"unsub": "Abonelikten çık",
+		"unsubConfirm": "Abonelikten çık",
+		"changeTier": "Seviye değiştir",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> aboneliğinden çıkmak ve <span class=\"newtier\">newtiername</span>'e abone olmak istediğinizden emin misiniz?",
+		"changeTierConfirm": "Seviye değiştir"
+	},
+	"progressPage": {
+		"title": "İlerlememiz",
+		"description": "Proje ilerlemesini ve hedeflerini kontrol edin! (Saatte bir güncellenir, Tüm proje hedeflerini veya ilerlemesini yansıtmaz)"
+	},
+	"modals": {
+		"close": "Kapat",
+		"confirm": "Onayla",
+		"cancel": "İptal"
 	}
 }

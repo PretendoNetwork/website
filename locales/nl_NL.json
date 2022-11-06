@@ -10,6 +10,16 @@
 		"accountWidget": {
 			"settings": "Instellingen",
 			"logout": "Uitloggen"
+		},
+		"donate": "Doneer",
+		"dropdown": {
+			"captions": {
+				"credits": "Ontmoet het team",
+				"blog": "Onze laatste updates, samengevat",
+				"progress": "Bekijk onze voortgang en doelen",
+				"about": "Over het project",
+				"faq": "Veelgestelde vragen"
+			}
 		}
 	},
 	"hero": {
@@ -45,11 +55,11 @@
 			},
 			{
 				"question": "Blijft mijn bestaande NNID werken op Pretendo?",
-				"answer": "Jammer genoeg niet. Bestande NNIDs zullen niet gaan werken op Pretendo, omdat enkel Nintendo je informatie heeft; Al is het zo dat een NNID-naar-PNID migratie technisch mogelijk, het zou wel gevaarlijk zijn en zouden we gevoelige gebruikers informatie krijgen die we niet willen bewaren."
+				"answer": "Jammer genoeg niet. Bestande NNIDs zullen niet gaan werken op Pretendo, omdat enkel Nintendo je informatie heeft; Al is een NNID-naar-PNID migratie technisch mogelijk, toch is het wel gevaarlijk en zouden we gevoelige gebruikers informatie krijgen die we niet willen bewaren."
 			},
 			{
 				"question": "Hoe installeer ik Pretendo?",
-				"answer": "Pretendo is momenteel nog niet klaar voor publiekelijk gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
+				"answer": "Pretendo is momenteel nog niet klaar voor algemeen gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
 			},
 			{
 				"question": "Wanneer is feature/dienst klaar?",
@@ -57,7 +67,7 @@
 			},
 			{
 				"question": "Werkt Pretendo op Cemu of andere emulators?",
-				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN support, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
+				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
 			},
 			{
 				"question": "Als ik van Nintendo Network gebanned ben, blijf ik dan gebanned op Pretendo?",
@@ -98,12 +108,12 @@
 			{
 				"name": "quarky",
 				"caption": "Onderzoek naar BOSS en patch ontwikkeling",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Onderzoek naar console en andere systemen",
+				"caption": "Research voor consoles en andere systemen",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
@@ -129,7 +139,7 @@
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
-		"text": "Zonder hen zou Pretendo vandaag niet zijn waar het is.",
+		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -308,9 +318,14 @@
 				"passwordPrompt": "Voer je PNID wachtwoord in om Cemu bestanden te downloaden",
 				"passwordResetNotice": "Na het wijzigen van je wachtwoord, word je uitgelogd van al je apparaten.",
 				"fullSignInHistory": "Bekijk volledige aanmeld geschiedenis",
-				"signInHistory": "Aanmeld geschiedenis"
+				"signInHistory": "Aanmeld geschiedenis",
+				"no_signins_notice": "Log in geschiedenis wordt momenteel niet opgeslagen. Kom later weer terug!",
+				"userSettings": "Gebruikers instellingen",
+				"no_newsletter_notice": "Nieuwsbrief is momenteel niet beschikbaar. Kom later weer terug",
+				"no_edit_from_dashboard": "Het aanpassen van PNID instellingen via het gebruikers dashboard is momenteel niet mogelijk. Pas de gebruikers instellingen aan via je gelinkte game console"
 			},
-			"downloadFilesDescription": "(werkt niet op Nintendo Network)"
+			"downloadFilesDescription": "(werkt niet op Nintendo Network)",
+			"unavailable": "Niet beschikbaar"
 		},
 		"accountLevel": [
 			"Standaard",
@@ -318,11 +333,13 @@
 			"Moderator",
 			"Ontwikkelaar"
 		],
-		"banned": "Gebanned"
+		"banned": "Gebanned",
+		"account": "Account"
 	},
 	"modals": {
 		"cancel": "Annuleren",
-		"confirm": "Bevestigen"
+		"confirm": "Bevestigen",
+		"close": "Sluiten"
 	},
 	"docs": {
 		"missingInLocale": "Deze pagina is niet beschikbaar in je huidige taal. Bekijk de Engelse versie hieronder.",
@@ -338,6 +355,20 @@
 					"caption": "Bekijk het hier"
 				}
 			]
+		},
+		"search": {
+			"no_match": "Geen wedstrijden gevonden",
+			"label": "Foutcode",
+			"caption": "Voer het hieronder in om informatie over je fout te krijgen!",
+			"title": "Heb je een foutcode?"
+		},
+		"sidebar": {
+			"getting_started": "Startinstructies",
+			"search": "Zoek",
+			"welcome": "Welkom",
+			"install_extended": "Installeer Pretendo",
+			"install": "Installeer",
+			"juxt_err": "Foutcodes - Juxt"
 		}
 	}
 }

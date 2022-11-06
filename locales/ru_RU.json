@@ -2,9 +2,25 @@
 	"nav": {
 		"about": "О нас",
 		"faq": "ЧаВо",
-		"docs": "Docs",
-		"credits": "Команда",
-		"progress": "Прогресс"
+		"docs": "Документы",
+		"credits": "Титры",
+		"progress": "Прогресс",
+		"donate": "Пожертвование",
+		"blog": "Блог",
+		"account": "Учётная запись",
+		"accountWidget": {
+			"settings": "Настройки",
+			"logout": "Выйти"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Встречайте команду",
+				"about": "О проекте",
+				"faq": "Часто задаваемые вопросы",
+				"blog": "Наши последние обновления",
+				"progress": "Проверьте прогресс и цели проекта"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Игровые сервера",
@@ -26,7 +42,8 @@
 		"paragraphs": [
 			null,
 			"Насчёт 3DS, мы также работаем над Mario Kart 7, а также если возможно, продолжить работу и над другими онлайн играми."
-		]
+		],
+		"githubRepo": "Репозиторий Github"
 	},
 	"faq": {
 		"title": "Часто задаваемые Вопросы (ЧаВо)",
@@ -68,7 +85,7 @@
 	},
 	"credits": {
 		"title": "Наша команда",
-		"text": "Ознакомьтесь с командой, которая работает над разработкой Pretendo.",
+		"text": "Ознакомьтесь с командой, которая работает над разработкой Pretendo",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -90,9 +107,9 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"caption": "Изучение BOSS и разработка патчей",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -102,7 +119,7 @@
 			},
 			{
 				"name": "Jip Fr",
-				"caption": "Web development lead",
+				"caption": "Руководитель веб-разработки",
 				"picture": "https://github.com/jipfr.png",
 				"github": "https://github.com/jipfr"
 			},
@@ -121,8 +138,8 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
-		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"title": "Особая благодарность",
+		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -132,13 +149,13 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS разработчик и диссектор NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "Охранник",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -150,7 +167,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Поделились информацией о Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -163,36 +180,47 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Иконки для редактора Mii и реакций Juxt",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "GitHub участники",
+				"caption": "Локализация и другие взносы",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Stay up to date",
-		"text": "Join our Discord server to get the latest updates on the project.",
+		"title": "Будьте в курсе всех новостей",
+		"text": "Присоединяйтесь к нашему Discord серверу чтобы получать последние обновления по проекту.",
 		"widget": {
-			"text": "Get realtime updates to our progress",
+			"text": "Получайте новости о нашем прогрессе в режиме реального времени",
 			"button": "Join the server"
 		}
 	},
 	"footer": {
-		"socials": "Socials",
-		"usefulLinks": "Useful links",
+		"socials": "Социальные сети",
+		"usefulLinks": "Полезные ссылки",
 		"widget": {
 			"captions": [
-				"Want to keep updated?",
-				"Join our Discord server!"
+				"Хотите быть в курсе новостей?",
+				"Присоединяйтесь к нашему Discord серверу!"
 			],
-			"button": "Join now!"
-		}
+			"button": "Присоединяйся сейчас!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Я , енот Бэндвиф и я люблю кусать кабеля серверов Pretendo Network'а . Ням!",
+			"Многие люди спрашивают у нас, можем ли попасть в неприятности из-за Нинтендо? Я очень рад всем рассказать, что моя тетя ,работающая в Нинтендо, сказала, что всё будет норм.",
+			"Webkit v537 - лучшая версия Webkit для Wii U. Нет, мы не будет портировать Chrome на Wii U.",
+			"Не могу дождаться пока на часах не будет 03:14:08 UTC , 19 января 2038 года!",
+			"Wii U на самом деле - недооценённая система : рекламы были ужасными , но сама консоль - замечательная. Эм? Подождите секунду... Я не уверен почему мой геймпад не подключается к моему Wii.",
+			"Главная музыкальная тема Super Mario World 2 - Yoshi's Island , просто бомба! Ты не можешь доказать мне обратное.",
+			"Мои любимые релизы на Nintendo Switch были - Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Еще Один Порт Игры Pack, and Nintendo Switch Online + Тренировка мозга доктора Кавасимы в регионах PAL \"Тебе Действительно Понравился Этот Тайтл Wii U , Поэтому Мы Возвращаем Его\" Пак. Ты с уверенностью можешь сказать что Nintendo заботится о нас.",
+			"Например, \"Ты знаешь Эш, благослови её бог , она UwU'ет целый день\" - это хороший пример южного произношения - \"Эш uwu'ет всё время , это очень странно так и еще и раздражает , я надеюсь чтобы она этого не никогда не делала\"",
+			"Мой первый видео на моём канале!!!! Йа хотел сделать видео уже очень давно но мой ноутбук работал очеьн млохо и яне мог открыть фрапс , скайп и майнкрфт одновреммено. но тепеьр этрому конец! с помощью моего учителя по инрофрматике мой ноутбук стал быстрм и я теперь могу снимат ура!!! я надеюсь вам понравится пж ставьте лайк и подписывайтесь!!!!!!!"
+		]
 	},
 	"progressPage": {
 		"title": "Наш прогресс",
@@ -200,39 +228,147 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Последние обновления в сжатом формате. Если вы хотите видеть обновления более чаще, задумайтесь поддержать нас в <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Опубликовано",
+		"publishedOn": "в"
 	},
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Tester",
-			"Moderator",
+			"Тестер",
+			"Модератор",
 			"Developer"
 		],
-		"banned": "Banned"
+		"banned": "Забанен",
+		"loginForm": {
+			"login": "Войти",
+			"register": "Зарегистрироваться",
+			"email": "Электронная почта",
+			"password": "Пароль",
+			"loginPrompt": "Уже есть учётная запись?",
+			"registerPrompt": "Нету учетной записи?",
+			"confirmPassword": "Подтвердить пароль",
+			"miiName": "Имя Mii",
+			"detailsPrompt": "Введите детали вашей учетной записи ниже",
+			"username": "Имя пользователя",
+			"forgotPassword": "Забыли пароль?"
+		},
+		"settings": {
+			"downloadFilesDescription": "(не будут работать в Nintendo Network)",
+			"settingCards": {
+				"profile": "Профиль",
+				"timezone": "Часовой пояс",
+				"birthDate": "Дата рождения",
+				"gender": "Пол",
+				"nickname": "Никнейм",
+				"country": "Страна/регион",
+				"production": "Продукция",
+				"upgradePrompt": "Бета-сервера эксклюзив для бета-тестеров.Чтобы стать им , улучшите учётную запись.",
+				"serverEnv": "Серверная среда",
+				"beta": "Бета",
+				"signInSecurity": "Вход и безопасность",
+				"password": "Пароль",
+				"email": "Электронная почта",
+				"passwordResetNotice": "После смены пароля , вы выйдете из всех устройств.",
+				"signInHistory": "История входов",
+				"hasAccessPrompt": "На данный момент ваш уровень даём вам доступ к бета-серверам. Крутяк!",
+				"discord": "Discord",
+				"connectedToDiscord": "Подключен к Discord как",
+				"removeDiscord": "Удалить учётную запись Discord",
+				"fullSignInHistory": "Посмотреть полную историю входов",
+				"otherSettings": "Другие настройки",
+				"linkDiscord": "Привязать учётную запись Discord",
+				"newsletterPrompt": "Получать новости о проекте на почту (вы можете отменить рассылку в любое время)",
+				"noDiscordLinked": "Ни одна учётная запись Discord не привязана.",
+				"passwordPrompt": "Введите пароль PNID чтобы скачать файлы Cemu",
+				"userSettings": "Настройки пользователя",
+				"no_newsletter_notice": "Газета на данный момент не доступна. Вернитесь попозже",
+				"no_signins_notice": "История входов на данный момент не отслеживается. Возвращайтесь попозже!",
+				"no_edit_from_dashboard": "Изменение настроек PNID на данный момент невозможна. Пожалуйста, обновите данные о пользователе с привязанной игровой консоли",
+				"newsletter": "Газета"
+			},
+			"downloadFiles": "Скачать данные учетной записи",
+			"unavailable": "Недоступно",
+			"upgrade": "Улучшить учётную запись"
+		},
+		"account": "Учетная запись"
 	},
 	"localizationPage": {
-		"title": "Let's localize",
-		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
-		"instructions": "View localization instructions",
+		"title": "Давайте локализовать",
+		"description": "Вставьте ссылку с публично доступном файлом JSON чтобы проверить его на сайте",
+		"instructions": "Просмотреть инструкции для локализации",
 		"fileInput": "File to test",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Test file"
 	},
 	"docs": {
-		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"missingInLocale": "Эта страница не доступна на вашем языке. Пожалуйста просмотрите английскую версию ниже.",
 		"quickLinks": {
-			"header": "Quick links",
+			"header": "Быстрые ссылки",
 			"links": [
 				{
 					"header": "Install Pretendo",
-					"caption": "View the setup instructions"
+					"caption": "Посмотреть инструкцию для установки"
 				},
 				{
-					"header": "Got an error?",
-					"caption": "Search for it here"
+					"header": "Получили ошибку?",
+					"caption": "Поищите это здесь"
 				}
 			]
+		},
+		"search": {
+			"caption": "Введите его в графу чтобы узнать больше информации о вашей ошибке!",
+			"label": "Код ошибки",
+			"no_match": "Ничего не найдено",
+			"title": "Получили код ошибки?"
+		},
+		"sidebar": {
+			"getting_started": "Всё для начала",
+			"install_extended": "Установить Pretendo",
+			"search": "Поиск",
+			"juxt_err": "Коды ошибок - Juxt",
+			"install": "Установить",
+			"welcome": "Добро пожаловать"
 		}
+	},
+	"upgrade": {
+		"title": "Обновить",
+		"description": "Достижение цели месяца сделает Pretendo - работой на полную ставку, предоставляя качественные обновления быстрее чем когда либо.",
+		"month": "месяц",
+		"tierSelectPrompt": "Выберите уровень",
+		"unsub": "Отписаться",
+		"unsubConfirm": "Отписаться",
+		"changeTierConfirm": "Поменять уровень",
+		"changeTier": "Поменять уровень",
+		"changeTierPrompt": "Вы уверены что хотите отписаться от <span class=\"oldtier\">oldtiername</span> и подписаться на <span class=\"newtier\">newtiername</span>?",
+		"back": "Назад",
+		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете права на дополнения которые шли вместе с данным уровнем."
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/в месяц ,<span>${perc}%</span> от месячной цели.",
+		"upgradePush": "Чтобы стать подписчиком и получить доступ к крутым дополнениям , посетите <a href=\"/account/upgrade\">upgrade page</a>."
+	},
+	"modals": {
+		"cancel": "Отменить",
+		"confirm": "Подтвердить",
+		"close": "Закрыть"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "Возвращаем обратно ваши любые игры и контент используя пользовательские сервера.",
+				"title": "Игровые сервера"
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Переосмысление Miiverse, словно бы он был создан в современной эре."
+			},
+			{
+				"title": "Поддержка эмулятора Cemu",
+				"caption": "Играйте в свои любимые тайтлы с Wii U даже без консоли!"
+			}
+		],
+		"text": "Наш проект имеет множество компонентов. Вот некоторые из них.",
+		"title": "Что мы делаем"
 	}
 }

@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "Sobre",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Documentação",
 		"credits": "Créditos",
 		"progress": "Progresso",
 		"blog": "Blog",
@@ -11,7 +11,16 @@
 			"settings": "Configurações",
 			"logout": "Sair"
 		},
-		"donate": "Doar"
+		"donate": "Doar",
+		"dropdown": {
+			"captions": {
+				"credits": "Conheça a nossa equipe",
+				"about": "Sobre o projeto",
+				"faq": "FAQ",
+				"blog": "Atualizações recentes",
+				"progress": "Veja o progresso do nosso projeto e os objetivos"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Servidores de jogos",
@@ -30,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progresso",
-		"paragraphs": [
-			null,
-			"Para o Nintendo 3DS também estamos trabalhando no Mario Kart 7, pretendemos trabalhar em outros jogos quando possível."
-		],
 		"githubRepo": "Repositório do GitHub"
 	},
 	"faq": {
@@ -117,8 +122,8 @@
 			{
 				"name": "quarky",
 				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -176,7 +181,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Compartilhamento de informações do Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -224,7 +229,11 @@
 			"Muitas pessoas nos perguntam se teremos problemas legais com a Nintendo por causa disso; Eu fico feliz em dizer que minha tia trabalha na Nintendo e ela disse que está tudo bem.",
 			"Webkit v537 é a melhor versão do Webkit para o Wii U. Não, nós não vamos portar o Chrome para o Wii U.",
 			"Mal posso esperar para dar 00:14:08 (horário de Brasília) do dia 19 de Janeiro de 2038!",
-			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii."
+			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii.",
+			"O tema principal de Super Mario World 2 - Yoshi's Island tem uma batida muito top e ninguém nunca irá me convencer do contrário.",
+			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Idade e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa.",
+			"Tipo \"Você conhece a Ash, abençoe o coração dela, ela faz UwU o dia inteiro\" é uma forma simpática do sul de dizer \"Ash faz UwU o tempo todo e é estranho e estúpido e eu queria que ela não fizesse isso\"",
+			"Meu primeiro vídeo no canal!! Eu tava querendo fazer vídeos há muito tempo, mas meu notebook tava horrível e eu não conseguia usar o Fraps, Skype e Minecraft ao mesmo tempo. Mas agora isso acabou! Com alguma ajuda do meu professor de TI, agora meu notebook tá bem melhor e eu já posso gravar! Espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!"
 		]
 	},
 	"progressPage": {
@@ -242,7 +251,7 @@
 		"description": "Cole um link para um arquivo JSON acessível publicamente para testá-lo no site",
 		"instructions": "Veja as instruções de localização e tradução",
 		"fileInput": "Arquivo para testar",
-		"filePlaceholder": "https://a.link.to/the_file.json",
+		"filePlaceholder": "https://um.link.para/o_arquivo.json",
 		"button": "Testar aqui"
 	},
 	"account": {
@@ -268,10 +277,94 @@
 				"gender": "Gênero",
 				"country": "País/região",
 				"timezone": "Fuso horário",
-				"production": "Produção"
+				"production": "Produção",
+				"upgradePrompt": "Os servidores Beta são exclusivos para beta testers.<br>Para se tornar um beta tester, aprimore sua conta para um nível superior.",
+				"hasAccessPrompt": "O seu nível atual lhe dá acesso ao servidor beta. Legal!",
+				"userSettings": "Preferências de usuário",
+				"serverEnv": "Ambiente do servidor",
+				"email": "E-mail",
+				"otherSettings": "Mais Configurações",
+				"linkDiscord": "Vincular uma conta do Discord",
+				"removeDiscord": "Remover conta do Discord",
+				"noDiscordLinked": "Nenhuma conta do Discord esta vinculado.",
+				"connectedToDiscord": "Conectado no Discord como",
+				"password": "Senha",
+				"passwordResetNotice": "Depois de trocar sua senha, você será desconectado de todos os dispositivos.",
+				"fullSignInHistory": "Ver o histórico de acessos completo",
+				"signInHistory": "Histórico de acessos",
+				"discord": "Discord",
+				"newsletter": "Notícias",
+				"newsletterPrompt": "Receba atualizações do projeto via e-mail (você pode se desinscrever a qualquer momento)",
+				"passwordPrompt": "Insira a senha do seu PNID para baixar os arquivos do Cemu",
+				"no_signins_notice": "O histórico de acessos não está sendo rastreado. Verifique novamente depois!",
+				"no_newsletter_notice": "Notícias não estão disponíveis no momento. Volte novamente depois",
+				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do usuário não está disponível no momento. Atualize as configurações do usuário do seu console de jogos vinculado",
+				"signInSecurity": "Acesso e segurança"
 			},
 			"downloadFiles": "Baixar arquivos de conta",
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)"
+			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
+			"unavailable": "Indisponível",
+			"upgrade": "Aprimorar conta"
+		},
+		"account": "Conta",
+		"accountLevel": [
+			"Padrão",
+			"Testador",
+			"Moderador",
+			"Desenvolvedor"
+		],
+		"banned": "Banido"
+	},
+	"docs": {
+		"missingInLocale": "Esta página não está disponível no seu idioma. Por favor, confira a versão em Inglês abaixo.",
+		"quickLinks": {
+			"header": "Links rápidos",
+			"links": [
+				{
+					"caption": "Ver as instruções de configuração",
+					"header": "Instalar a Pretendo"
+				},
+				{
+					"caption": "Pesquise por ele aqui",
+					"header": "Deu erro?"
+				}
+			]
+		},
+		"search": {
+			"label": "Código de erro",
+			"title": "Tem um código de erro?",
+			"caption": "Digite o código de erro abaixo para conseguir informações sobre ele!",
+			"no_match": "Nenhum resultado encontrado"
+		},
+		"sidebar": {
+			"getting_started": "Começando",
+			"welcome": "Bem-vindo",
+			"install_extended": "Instalar a Pretendo",
+			"search": "Pesquisar",
+			"install": "Instalar",
+			"juxt_err": "Códigos de erro - Juxt"
 		}
+	},
+	"upgrade": {
+		"unsub": "Desinscrever",
+		"changeTierPrompt": "Tem certeza que deseja cancelar a assinatura de <span class=\"oldtier\">oldtiername</span> e assinar o <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Mudar tipo de assinatura",
+		"back": "Voltar",
+		"unsubConfirm": "Desinscrever",
+		"changeTier": "Mudar tipo de assinatura",
+		"unsubPrompt": "Tem certeza que quer desinscrever-se de <span>tiername</span>? Você vai perder accesso aos benefícios.",
+		"description": "Conseguir o objetivo mensal irá fazer com que a Pretendo vire um trabalho, e assim poderemos fazer atualizações com mais rapidez.",
+		"month": "mês",
+		"title": "Aprimorar",
+		"tierSelectPrompt": "Selecione uma assinatura"
+	},
+	"modals": {
+		"cancel": "Cancelar",
+		"confirm": "Confirmar",
+		"close": "Fechar"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> de <span>$${goald}</span> por mês, o que significa <span>${perc}%</span> do objetivo mensal.",
+		"upgradePush": "Para se tornar um doador e ganhar acesso a vários benefícios legais, visite a página de <a href=\"/account/upgrade\">upgrade</a>."
 	}
 }

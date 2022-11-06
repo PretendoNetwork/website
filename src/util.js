@@ -77,7 +77,7 @@ function parseDocs(rawDocs) {
 }
 
 function apiGetRequest(path, headers) {
-	return got.get(`https://api.pretendo.cc${path}`, {
+	return got.get(`${config.api_base}${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
@@ -88,7 +88,7 @@ function apiGetRequest(path, headers) {
 }
 
 function apiPostRequest(path, headers, json) {
-	return got.post(`https://api.pretendo.cc${path}`, {
+	return got.post(`${config.api_base}${path}`, {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
@@ -100,7 +100,7 @@ function apiPostRequest(path, headers, json) {
 }
 
 function apiDeleteRequest(path, headers, json) {
-	return got.delete(`https://api.pretendo.cc${path}`, {
+	return got.delete(`${config.api_base}${path}`, {
 		throwHttpErrors: false,
 		https: {
 			rejectUnauthorized: false, // Needed for self-signed certificates on localhost testing
@@ -237,12 +237,16 @@ async function handleStripeEvent(event) {
 				// Abort and refund!
 				logger.error(`Stripe user ${customer.id} has no PNID linked! Refunding order`);
 
-				await stripe.subscriptions.del(subscription.id);
+				try {
+					await stripe.subscriptions.del(subscription.id);
 
-				const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-				await stripe.refunds.create({
-					payment_intent: invoice.payment_intent
-				});
+					const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+					await stripe.refunds.create({
+						payment_intent: invoice.payment_intent
+					});
+				} catch (error) {
+					logger.error(`Error refunding subscription | ${customer.id}, ${subscription.id} | - ${error.message}`);
+				}
 
 				try {
 					await mailer.sendMail({
@@ -263,34 +267,44 @@ async function handleStripeEvent(event) {
 		const pid = Number(customer.metadata.pnid_pid);
 		const pnid = await database.PNID.findOne({ pid });
 
-		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
+		if (!pnid) {
+			// PNID does not exist
+			if (subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
+				// Abort and refund!
+				logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
 
-		if (latestWebhookTimestamp && latestWebhookTimestamp > event.created) {
-			// Do nothing, this webhook is older than the latest seen
+				try {
+					await stripe.subscriptions.del(subscription.id);
+
+					const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
+					await stripe.refunds.create({
+						payment_intent: invoice.payment_intent
+					});
+				} catch (error) {
+					logger.error(`Error refunding subscription | ${customer.id}, ${subscription.id} | - ${error.message}`);
+				}
+
+
+				try {
+					await mailer.sendMail({
+						to: customer.email,
+						subject: 'Pretendo Network Subscription Failed - PNID Not Found',
+						text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
+					});
+				} catch (error) {
+					logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
+				}
+			} else {
+				logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}!`);
+			}
+
 			return;
 		}
 
-		if (!pnid && subscription.status !== 'canceled' && subscription.status !== 'unpaid') {
-			// PNID does not exist. Abort and refund!
-			logger.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}! Refunding order`);
+		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
 
-			await stripe.subscriptions.del(subscription.id);
-
-			const invoice = await stripe.invoices.retrieve(subscription.latest_invoice);
-			await stripe.refunds.create({
-				payment_intent: invoice.payment_intent
-			});
-
-			try {
-				await mailer.sendMail({
-					to: customer.email,
-					subject: 'Pretendo Network Subscription Failed - PNID Not Found',
-					text: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
-				});
-			} catch (error) {
-				logger.error(`Error sending email | ${customer.id}, ${customer.email} | - ${error.message}`);
-			}
-
+		if (latestWebhookTimestamp && latestWebhookTimestamp >= event.created) {
+			// Do nothing, this webhook is older than the latest seen
 			return;
 		}
 

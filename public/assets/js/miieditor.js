@@ -6,6 +6,7 @@
  * browserify is needed for the use of require() in the browser
  */
 const Mii = require('mii-js');
+const config = require('../../../config.json');
 const newMiiData = 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 
 // Prevent the user from reloading or leaving the page
@@ -476,7 +477,7 @@ document
 			const tokenType = document.cookie.split('; ').find(row => row.startsWith('token_type=')).split('=')[1];
 			const accessToken = document.cookie.split('; ').find(row => row.startsWith('access_token=')).split('=')[1];
 
-			fetch('https://api.pretendo.cc/v1/user', {
+			fetch(`${config.api_base}/v1/user`, {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',

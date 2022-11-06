@@ -291,7 +291,7 @@ router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 		.filter(product => product.active)
 		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
 		.map(product => {
-			const price = prices.find(price => price.product === product.id);
+			const price = prices.find(price => price.id === product.default_price);
 			const perks = [];
 
 			if (product.metadata.discord_read === 'true') {

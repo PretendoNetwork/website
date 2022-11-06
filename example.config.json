@@ -3,15 +3,18 @@
 		"port": 3000,
 		"base_url": "http://localhost:3000"
 	},
+	"github": {
+		"graphql_token": "ghp_..."
+	},
 	"discord": {
+		"roles": {
+			"supporter": "role_id",
+			"tester": "role_id"
+		},
+		"guild_id": "guild_id",
 		"client_id": "client_id",
 		"client_secret": "client_secret",
-		"guild_id": "408718485913468928",
-		"bot_token": "bot_token",
-		"tester_roles": [
-			"419704440333926401",
-			"882247322933801030"
-		]
+		"bot_token": "bot_token"
 	},
 	"stripe": {
 		"goal_cents": 300000,
@@ -22,7 +25,7 @@
 	"database": {
 		"account": {
 			"uri": "mongodb://127.0.0.1:27017",
-			"database": "pretendo",
+			"database": "database_name",
 			"options": {
 				"useNewUrlParser": true,
 				"useUnifiedTopology": true
@@ -31,11 +34,13 @@
 	},
 	"gmail": {
 		"user": "username",
-		"pass": "app-password",
-		"from": "User Name <email@domain.name>"
+		"pass": "password",
+		"from": "Firstname Lastname <user@domain.com>"
 	},
-	"github": {
-		"graphql_token": "graphql_token"
+	"trello": {
+		"api_key": "api_key",
+		"api_token": "api_token",
+		"board_name": "board_name"
 	},
-	"aes_key": "aes_key"
+	"api_base": "https://api.domain.com"
 }

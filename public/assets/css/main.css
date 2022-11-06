@@ -4,7 +4,9 @@
 	--bg-shade-0: #131733;
 	--bg-shade-1: #1B1F3B;
 	--bg-shade-2: #23274A;
+	--bg-shade-2-5: #2D3258;
 	--bg-shade-3: #373C65;
+	--bg-shade-3-5: #404673;
 	--bg-shade-4: #494F81;
 
 	--accent-shade-0: #673DB6;
@@ -65,7 +67,7 @@ body, .main-body {
 .wrapper {
 	width: 95%;
 	max-width: 1590px;
-	margin: 0 auto;
+	margin: 48px auto 0;
 }
 
 h1.dot:not([data-title-suffix]):after, h2.dot:not([data-title-suffix]):after {
@@ -636,8 +638,8 @@ section.update-signup div.circle {
 	/* the next 4 lines make it so the circle is always the same aspect ratio and covers enough of the screen */
 	width: 2591px;
 	height: 1454px;
-	min-width: 135vw;
-	min-height: 76vw; /* yes, this is supposed to be in vw */
+	min-width: 145vw;
+	min-height: 13vw; /* yes, this is supposed to be in vw */
 	border-radius: 100%;
 	position: absolute;
 	top: 0;
@@ -864,8 +866,8 @@ section.update-signup div.circle {
 		padding: 8px 27px;
 	}
 	.button.secondary.icon-btn {
-		width: 41px;
-		height: 41px;
+		width: 41px !important;
+		height: 41px !important;
 	}
 	.button.icon-btn svg {
 		min-width: 30px;
@@ -1009,4 +1011,22 @@ section.update-signup div.circle {
 	.purple-circle {
 		display: none;
 	}
+}
+
+/* Scrollbar styling 'cause it's fancy */
+html::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+html::-webkit-scrollbar-track {
+	background: var(--bg-shade-1);
+}
+html::-webkit-scrollbar-thumb {
+	background-color: var(--text-shade-0);
+	border-radius: 24px;
+	border: 3px solid var(--bg-shade-1);
+}
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-shade-0) var(--bg-shade-1);
 }

@@ -1,7 +1,7 @@
 {
 	"nav": {
 		"about": "紹介",
-		"faq": "FAQ",
+		"faq": "よくある質問",
 		"docs": "ドキュメント",
 		"credits": "クレジット",
 		"progress": "進行状況",
@@ -10,11 +10,21 @@
 		"accountWidget": {
 			"settings": "設定",
 			"logout": "ログアウト"
-		}
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "チーム紹介",
+				"about": "プロジェクトについて",
+				"blog": "要約された最新のアップデート",
+				"progress": "プロジェクトの進捗状況と目標を確認する",
+				"faq": "よくある質問"
+			}
+		},
+		"donate": "寄付"
 	},
 	"hero": {
-		"subtitle": "再構築された",
-		"title": "ゲームサーバー",
+		"subtitle": "ゲームサーバー",
+		"title": "再作成",
 		"text": "Pretendoは、公式のサーバーが終了した後も続けてオンライン接続ができるように作成されている、3DSとWii Uの両方のための、ニンテンドーネットワークを代用する無料のオープンソースサーバーです",
 		"buttons": {
 			"readMore": "もっと読む"
@@ -116,8 +126,8 @@
 			{
 				"name": "quarky",
 				"caption": "BOSS研究、パッチ開発",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -221,7 +231,13 @@
 		"bandwidthRaccoonQuotes": [
 			"僕はアライグマのBandwidthだよ！Pretendo Networkのサーバーを繋いでいる電線を噛むのが好きなんだ。美味しい！",
 			"みんな、任天堂と法的に問題ができるんじゃないか、と質問してくるね。ぼくのおばさんが任天堂で働いてるけど、大丈夫だって。",
-			"Webkit v537がWii U用の最高のWebkitのバージョンだよ。ううん、ChromeをWii Uには移さないよ。"
+			"Webkit v537がWii U用の最高のWebkitのバージョンだよ。ううん、ChromeをWii Uには移さないよ。",
+			"時計が 2038 年 1 月 19 日の 03:14:08 UTC に達するのが待ちきれません!",
+			"Wii U は実際には過小評価されているシステムです。コマーシャルは本当にひどいものでしたが、コンソールは素晴らしいです。えっと、ちょっと待ってください、理由はわかりませんが、ゲームパッドが Wii に接続されていません。",
+			"スーパー マリオ ワールド 2 - ヨッシー アイランドのメイン テーマは絶対的なバップです。",
+			"私のお気に入りの Nintendo Switch リリースは、Nintendo Switch Online + Expansion Pack、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet Another Port Pack、Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain です。エイジ「ニンテンドーWii Uバーチャルコンソールタイトルを本当に気に入ってくれたので、復活させます」パック。あなたは本当に任天堂が気にかけていると言うことができます.",
+			"「あなたはアッシュを知っている、彼女の心を祝福しなさい、彼女は一日中UwUの」というように、南部の素敵な言い方です \"Ash uwusはいつも、それは本当に奇妙で愚かで、私は彼らがそうしなかったらいいのに\"",
+			"私のチャンネルでの私の最初のビデオ!! iv 長い間ビデオを作りたいと思っていましたが、ラップトップの動作がかなり悪く、fraps、skype、minecraft を一度に実行できませんでした。しかし、今は終わりです！ IT の先生の助けを借りて、ラップトップの動作が大幅に改善され、録音できるようになりました。皆さんが楽しんでくれることを願っています。!!!"
 		]
 	},
 	"progressPage": {
@@ -230,7 +246,9 @@
 	},
 	"blogPage": {
 		"title": "ブログ（英語）",
-		"description": "最新のアップデートをまとめてお届けします。もっと多くのアップデートを貰いたい方は、<a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>での寄付をご検討ください。"
+		"description": "最新のアップデートをまとめてお届けします。もっと多くのアップデートを貰いたい方は、<a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>での寄付をご検討ください。",
+		"publishedOn": "の上",
+		"published": "発行者"
 	},
 	"localizationPage": {
 		"title": "レッツローカライズ",
@@ -238,7 +256,7 @@
 		"instructions": "ローカライズ方法を開く",
 		"fileInput": "試してみるファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "ファイルを試す！"
+		"button": "ファイルを試す"
 	},
 	"docs": {
 		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
@@ -254,6 +272,103 @@
 					"caption": "ここで検索する"
 				}
 			]
+		},
+		"sidebar": {
+			"install": "インストール",
+			"search": "探す",
+			"juxt_err": "エラーコード - Juxt",
+			"getting_started": "入門",
+			"welcome": "いらっしゃいませ",
+			"install_extended": "Pretendo をインストールする"
+		},
+		"search": {
+			"caption": "下のボックスに入力して、問題に関する情報を入手してください！",
+			"label": "エラーコード",
+			"no_match": "一致するものが見つかりませんでした",
+			"title": "エラーコードを取得しましたか?"
 		}
+	},
+	"account": {
+		"settings": {
+			"downloadFiles": "アカウントファイルをダウンロード",
+			"downloadFilesDescription": "（ニンテンドーネットワークでは動作しません）",
+			"upgrade": "アカウントのアップグレード",
+			"unavailable": "利用不可",
+			"settingCards": {
+				"userSettings": "ユーザー設定",
+				"profile": "プロフィール",
+				"nickname": "ニックネーム",
+				"timezone": "タイムゾーン",
+				"beta": "ベータ",
+				"upgradePrompt": "ベータ サーバーはベータ テスター専用です。<br>ベータ テスターになるには、より高いアカウント ティアにアップグレードしてください。",
+				"signInSecurity": "サインインとセキュリティ",
+				"email": "Eメール",
+				"password": "パスワード",
+				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからサインアウトされます。",
+				"signInHistory": "サインイン履歴",
+				"fullSignInHistory": "サインイン履歴をすべて表示する",
+				"connectedToDiscord": "Discord に接続済み",
+				"newsletterPrompt": "プロジェクトの最新情報をメールで受け取る (いつでもオプトアウトできます)",
+				"passwordPrompt": "Cemu ファイルをダウンロードするには、PNID パスワードを入力してください",
+				"no_edit_from_dashboard": "現在、ユーザー ダッシュボードから PNID 設定を編集することはできません。リンクしたゲーム機からユーザー設定を更新してください",
+				"gender": "性別",
+				"country": "国/地域",
+				"production": "製造",
+				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへのアクセスが提供されます。涼しい！",
+				"newsletter": "ニュースレター",
+				"discord": "不和",
+				"noDiscordLinked": "Discord アカウントがリンクされていません。",
+				"birthDate": "生年月日",
+				"serverEnv": "サーバー環境",
+				"otherSettings": "その他の設定",
+				"removeDiscord": "Discord アカウントを削除する",
+				"linkDiscord": "Discordアカウントをリンクする",
+				"no_signins_notice": "サインイン履歴は現在追跡されていません。後でもう一度確認してください。!",
+				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度確認してください"
+			}
+		},
+		"accountLevel": [
+			"標準\\",
+			"テスター",
+			"モデレータ",
+			"デベロッパー"
+		],
+		"banned": "禁止された",
+		"loginForm": {
+			"register": "登録",
+			"detailsPrompt": "以下にアカウントの詳細を入力してください",
+			"username": "ユーザー名",
+			"password": "パスワード",
+			"email": "Eメール",
+			"miiName": "みいの名前",
+			"loginPrompt": "すでにアカウントをお持ちですか？",
+			"login": "ログイン",
+			"confirmPassword": "パスワードを認証する",
+			"forgotPassword": "パスワードをお忘れですか？",
+			"registerPrompt": "アカウントをお持ちでない場合?"
+		},
+		"account": "アカウント"
+	},
+	"upgrade": {
+		"title": "アップグレード",
+		"description": "毎月の目標を達成すると、Pretendo はフルタイムの仕事になり、より良い品質の更新をより速い速度で提供します。",
+		"month": "月",
+		"changeTier": "ティアを変更",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> の登録を解除し、<span class=\"newtier\">newtiername</span> を登録してもよろしいですか?",
+		"back": "戻る",
+		"changeTierConfirm": "ティアを変更",
+		"unsub": "登録解除",
+		"unsubConfirm": "登録解除",
+		"tierSelectPrompt": "ティアを選択",
+		"unsubPrompt": "<span>tiername</span> から退会してもよろしいですか?そのティアに関連付けられた特典にアクセスできなくなります。"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span>/月 <span>$${goald}</span>、月間目標の <span>${perc}%</span>。",
+		"upgradePush": "サブスクライバーになってクールな特典にアクセスするには、<a href=\"/account/upgrade\">アップグレード ページ</a>にアクセスしてください。"
+	},
+	"modals": {
+		"confirm": "確認",
+		"close": "近い",
+		"cancel": "キャンセル"
 	}
 }

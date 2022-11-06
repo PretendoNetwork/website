@@ -10,6 +10,16 @@
 		"accountWidget": {
 			"settings": "Impostazioni",
 			"logout": "Logout"
+		},
+		"donate": "Dona",
+		"dropdown": {
+			"captions": {
+				"credits": "Incontra il team",
+				"about": "Riguardo al progetto",
+				"faq": "Domande chieste frequentemente",
+				"blog": "I nostri ultimi aggiornamenti, sintetizzati",
+				"progress": "Controlla lo stato di avanzamento del progetto e gli obiettivi"
+			}
 		}
 	},
 	"hero": {
@@ -116,8 +126,8 @@
 			{
 				"name": "quarky",
 				"caption": "Ricerca BOSS e sviluppo patch",
-				"picture": "https://github.com/QuarkTheAwesome.png",
-				"github": "https://github.com/QuarkTheAwesome"
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -290,10 +300,16 @@
 				"linkDiscord": "Collega account Discord",
 				"newsletter": "Newsletter",
 				"newsletterPrompt": "Ricevi aggiornamenti sul progetto via email (puoi annullare in qualunque momento)",
-				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu"
+				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu",
+				"userSettings": "Impostazioni utente",
+				"no_signins_notice": "La cronologia degli accessi non è al momento tracciata. Ricontrolla più tardi!",
+				"no_edit_from_dashboard": "La modifica delle impostazioni PNID dalla pagina utente non è al momento disponibile. Per favore, aggiorna le impostazioni utente dalla tua console di giochi collegata",
+				"no_newsletter_notice": "La newsletter non è al momento disponibile. Ricontrolla più tardi"
 			},
-			"upgrade": "Fai l'upgrade del tuo account"
-		}
+			"upgrade": "Fai l'upgrade del tuo account",
+			"unavailable": "Non disponibile"
+		},
+		"account": "Account"
 	},
 	"localizationPage": {
 		"title": "Localizziamo",
@@ -317,6 +333,20 @@
 					"caption": "Cercalo qui"
 				}
 			]
+		},
+		"search": {
+			"title": "Hai un codice errore?",
+			"caption": "Scrivilo nello spazio qui sotto per ricevere informazioni sul tuo problema!",
+			"label": "Codice errore",
+			"no_match": "Nessuna corrispondenza"
+		},
+		"sidebar": {
+			"search": "Cerca",
+			"juxt_err": "Codici d'errore - Juxt",
+			"welcome": "Benvenuto",
+			"install_extended": "Installa Pretendo",
+			"getting_started": "Per iniziare",
+			"install": "Installa"
 		}
 	},
 	"upgrade": {
@@ -334,7 +364,8 @@
 	},
 	"modals": {
 		"cancel": "Annulla",
-		"confirm": "Conferma"
+		"confirm": "Conferma",
+		"close": "Chiudi"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> di <span>$${goald}</span>/mese, <span>${perc}%</span> del goal mensile.",
