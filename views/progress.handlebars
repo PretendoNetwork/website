@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/progress.css">
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/progress.css">
+{{/section}}
 
 {{> header}}
 
@@ -43,12 +45,14 @@
 
 </div>
 
-<script>
-	/* this jank is needed to have data mixed in with a localized string */
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${totd}', '{{donationCache.total_dollars}}');
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${goald}', '{{donationCache.goal_dollars}}');
-	document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
-		.replace('${perc}', '{{donationCache.completed_real}}');
-</script>
+{{#section 'foot'}}
+	<script>
+		/* this jank is needed to have data mixed in with a localized string */
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${totd}', '{{donationCache.total_dollars}}');
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${goald}', '{{donationCache.goal_dollars}}');
+		document.querySelector('.localeReplace').innerHTML = document.querySelector('.localeReplace').innerHTML
+			.replace('${perc}', '{{donationCache.completed_real}}');
+	</script>
+{{/section}}

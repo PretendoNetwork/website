@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/documentation.css" />
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/documentation.css" />
+{{/section}}
 
 <div class="docs-wrapper">
 
@@ -92,9 +94,11 @@
 	</div>
 </div>
 
-<script src="/assets/js/docssidebarhandler.js"></script>
+{{#section 'foot'}}
+	<script src="/assets/js/docssidebarhandler.js"></script>
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-<link rel="stylesheet" href="/assets/css/highlightjs.css">
-<script>hljs.highlightAll();</script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/highlightjs.css">
+	<script>hljs.highlightAll();</script>
+{{/section}}

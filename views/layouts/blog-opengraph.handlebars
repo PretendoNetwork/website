@@ -62,6 +62,10 @@
 			}
 		</script>
 
+		{{#each _sections.head}}
+			{{{this}}}
+		{{/each}}
+
 		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ea6695987d664a7f90874c9c0dee9385"}'></script><!-- End Cloudflare Web Analytics -->
 	</head>
 	<body>
@@ -72,5 +76,8 @@
 		<script src="/assets/js/progress-charts.js"></script>
 		<script src="/assets/js/locale-dropdown-handler.js"></script>
 
+		{{#each _sections.foot}}
+			{{{this}}}
+		{{/each}}
 	</body>
 </html>
