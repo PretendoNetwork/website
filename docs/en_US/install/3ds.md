@@ -31,26 +31,11 @@ To do so from the website, go to the account login page [here](/account) and cli
 
 <img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" width=100% height=auto/>
 
-Do not use the same Pretendo Network ID as your current Nintendo Network ID.
+Do not use the same Pretendo Network ID as your current Nintendo Network ID. The 3DS will not let you add the same ID more than once.
 
 Go into *System Settings* > *Nintendo Network ID Settings*.
 
----
-
-# Setting up the Juxtaposition applet (optional)
-
-Some games come with Miiverse support, and Juxtaposition is our Miiverse reimagining. Nimbus already takes care of most in-game patches for Miiverse, but the applet can also be patched separately.
-
-First, download `Juxt.zip` from [here](https://cdn.discordapp.com/attachments/911878047895023637/937516295069515866/Juxt.zip).
-
-Extract `Juxt.zip`, and copy the `3ds` and `luma` folders to the root of your SD card. You should now have the `000400300000BC02`, `000400300000BD02`, and `000400300000BE02` Luma patches, along with the `juxt.pem` cert.
-
-<img src="/assets/images/docs/install/3ds/sd-card-juxt-luma.png" width=100% height=auto/>
-<img src="/assets/images/docs/install/3ds/sd-card-juxt-3ds.png" width=100% height=auto/>
-
-Place your SD card back into your console, and start it.
-
-The Juxtaposition applet has now been set up! Have fun!
+If you'd additionally like to setup Miiverse, [head here to learn how](/docs/install/juxt).
 
 ---
 

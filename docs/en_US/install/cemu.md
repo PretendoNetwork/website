@@ -20,7 +20,7 @@ Cemu requires the use of several files obtained via dumping from real hardware. 
 	These online files are scrubbed of all console information and are stubbed enough for Cemu to think they are from real hardware. These files <strong>MAY</strong> fail to work correctly. Support for these files is very limited, and it is recommended to use files from a real console.
 </div>
 
-## Setup Cemu for online
+## Setup Cemu for online play
 After obtaining the files needed for online play refer to the official [Cemu Online Play](https://cemu.cfw.guide/online-play.html) guide.
 
 <div class="tip">
@@ -34,3 +34,9 @@ Once you have Cemu setup for online play, navigate to `Options > General setting
 
 ## Miiverse
 Cemu has limited to no Miiverse support as of now. Currently, no Miiverse features, including the Miiverse applet as well as Miiverse features in games, will function.
+
+---
+
+Welcome to Pretendo Network!
+
+If you encounter (or have encountered) any errors, try [searching](/docs/search) for the error code. If that doesn't work, join our [Discord](https://invite.gg/pretendo), and either ask the #support channel for help or get in touch with a developer.
