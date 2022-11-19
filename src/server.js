@@ -138,6 +138,12 @@ app.engine('handlebars', handlebars({
 		},
 		slug(string) {
 			return string.toLowerCase().replaceAll(/ /g, '-');
+		},
+		section(name, options) {
+			if (!this._sections) this._sections = {};
+			if (!this._sections[name]) this._sections[name] = [];
+			this._sections[name].push(options.fn(this));
+			return null;
 		}
 	}
 }));
