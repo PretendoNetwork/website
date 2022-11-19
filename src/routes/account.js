@@ -112,8 +112,8 @@ router.get('/register', async (request, response) => {
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
-
+	const { email, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	const username = request.body.username.toLowerCase()
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
 	response.cookie('mii_name', mii_name, { domain: '.pretendo.network' });
