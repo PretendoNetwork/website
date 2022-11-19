@@ -61,6 +61,10 @@
 				twemoji.parse(document.body, {folder: 'svg', ext: '.svg'});
 			}
 		</script>
+
+		{{#each _sections.head}}
+			{{{this}}}
+		{{/each}}
 	</head>
 	<body>
 		<div class="main-body">
@@ -68,6 +72,10 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 		<script src="/assets/js/progress-charts.js"></script>
+
+		{{#each _sections.foot}}
+			{{{this}}}
+		{{/each}}
 
 	</body>
 </html>

@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/partials/footer.css" /></link>
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/partials/footer.css" />
+{{/section}}
 
 <footer>
 	<div>
@@ -63,32 +65,35 @@
 		</div>
 	</div>
 </footer>
-<script>
-	const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
-	const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
-	const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
-	let i = 0;
 
-	function unescapeHTML(string) {
-  	const el = document.createElement("span");
-  	el.innerHTML = string;
-  	return el.innerText;
-	}
+{{#section 'foot'}}
+	<script>
+		const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
+		const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
+		const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
+		let i = 0;
 
-
-	const randomSentences = [
-	{{#each locale.footer.bandwidthRaccoonQuotes}}
-		`${unescapeHTML("{{this}}")}`,
-	{{/each}}
-	]
-
-	bandwidthRaccoon.addEventListener("click", () =>
-	{
-		bandwidthRaccoonWrapper.classList.add("speak");
-		if (!randomSentences[i]) {
-			i = 0
+		function unescapeHTML(string) {
+			const el = document.createElement("span");
+			el.innerHTML = string;
+			return el.innerText;
 		}
-		bandwidthRaccoonBubbleText.innerText = randomSentences[i];
-		i += 1;
-	})
-</script>
+
+
+		const randomSentences = [
+		{{#each locale.footer.bandwidthRaccoonQuotes}}
+			`${unescapeHTML("{{this}}")}`,
+		{{/each}}
+		]
+
+		bandwidthRaccoon.addEventListener("click", () =>
+		{
+			bandwidthRaccoonWrapper.classList.add("speak");
+			if (!randomSentences[i]) {
+				i = 0
+			}
+			bandwidthRaccoonBubbleText.innerText = randomSentences[i];
+			i += 1;
+		})
+	</script>
+{{/section}}

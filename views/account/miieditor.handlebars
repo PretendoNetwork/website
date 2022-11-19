@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="/assets/css/miieditor.css" />
+{{#section 'head'}}
+	<link rel="stylesheet" href="/assets/css/miieditor.css" />
+{{/section}}
 	<div class="miieditor-wrapper">
 
 		<svg class="logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 39.876" preserveAspectRatio="xMinYMin meet">
@@ -567,7 +569,9 @@
 		</div>
 	</div>
 
-<script id="encodedUserMiiData" type="text/plain">
-  {{encodedUserMiiData}}
-</script>
-<script src="/assets/js/miieditor.bundled.js"></script>
+{{#section 'foot'}}
+	<script id="encodedUserMiiData" type="text/plain">
+		{{encodedUserMiiData}}
+	</script>
+	<script src="/assets/js/miieditor.bundled.js"></script>
+{{/section}}
