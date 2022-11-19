@@ -250,6 +250,10 @@ fieldset {
 	grid-column: 1 / span 2;
 }
 
+.modal-caption input {
+	background-color: var(--bg-shade-4);
+}
+
 @keyframes banner-notice {
 	0% {
 		top: -150px;

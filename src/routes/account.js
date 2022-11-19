@@ -227,7 +227,7 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 router.post('/online-files', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 	const { password } = request.body;
-
+	if (!password) {return;}
 	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
 
 	const miiNameBuffer = Buffer.alloc(0x16);
