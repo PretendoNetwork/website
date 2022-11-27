@@ -1,6 +1,9 @@
 :root {
-	/* 1 is the base color, <1 are darker variations and >1 are lighter */
 
+	--width: 1400px;
+	--maxwidth: min(var(--width), 90%);
+
+	/* 1 is the base color, <1 are darker variations and >1 are lighter */
 	--bg-shade-0: #131733;
 	--bg-shade-1: #1B1F3B;
 	--bg-shade-2: #23274A;
@@ -23,8 +26,6 @@
 	--green-shade-1: #59c9a5;
 
 	--red-shade-1: #a9375b;
-
-	--border: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -34,12 +35,20 @@ body {
 body {
 	width: 100%;
 	max-width: 100vw;
+	height: 100vh;
+	max-height: 100%;
 	position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
 	overflow-x: hidden;
+	overflow-y: auto;
 	margin: 0;
-	color: var(--text-shade-3);
+	color: var(--text-shade-1);
 	justify-content: center;
-	font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: var(--accent-shade-1);
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /* Scrollbar styling 'cause it's fancy */

@@ -79,24 +79,23 @@
 			}
 		]
 	},
-	"showcase": {
-		"title": "What we make",
-		"text": "Our project has many components. Here are some of them.",
-		"cards": [
-			{
-				"title": "Game servers",
-				"caption": "Bringing back your favorite games and content using custom servers."
-			},
-			{
-				"title": "Juxtaposition",
-				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
-			},
-			{
-				"title": "Cemu support",
-				"caption": "Play your favorite Wii U titles even without a console!"
-			}
-		]
-	},
+	"showcase" : [
+		{
+			"title": "Online play.",
+			"caption": "Dash down Mount Wario on Wii U, [some 3DS stuff we have implemented], upload a course to Mario Maker on CEMU and more, online with Pretendo Network!",
+			"image": "network"
+		},
+		{
+			"title": "Juxtaposition.",
+			"caption": "Juxtaposition is our reimagining of Miiverse for the modern era. With a refreshingly modern design and in-game posting support, insert text insert text insert text insert text insert text!",
+			"image": "juxt"
+		},
+		{
+			"title": "Emulators.",
+			"caption": "See you later, emulator! I wish I had something to put here instead of dummy text, and yet...",
+			"image": "pcmouse"
+		}
+	],
 	"credits": {
 		"title": "The team",
 		"text": "Meet the team behind the project",

@@ -1,0 +1,16 @@
+.sectionWrapper {
+	display: flex;
+	padding: 180px 0;
+}
+
+.sectionWrapper .content {
+	width: 100%;
+	max-width: var(--maxwidth);
+	margin: auto;
+}
+
+@media screen and (max-width: 840px) {
+	.sectionWrapper {
+		padding: 90px 0;
+	}
+}
