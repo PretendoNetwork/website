@@ -11,7 +11,16 @@
 			"settings": "Impostazioni",
 			"logout": "Logout"
 		},
-		"donate": "Dona"
+		"donate": "Dona",
+		"dropdown": {
+			"captions": {
+				"credits": "Incontra il team",
+				"about": "Riguardo al progetto",
+				"faq": "Domande chieste frequentemente",
+				"blog": "I nostri ultimi aggiornamenti, sintetizzati",
+				"progress": "Controlla lo stato di avanzamento del progetto e gli obiettivi"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "Server di gioco",

@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo is designed for the Wii U and 3DS hardware at heart; at this time the only emulator for these consoles with NN support is Cemu. Cemu does not officially support custom servers, but it should still be possible to use Pretendo with Cemu.<br>Pretendo does not currently support Cemu."
+				"answer": "Pretendo supports any client that can interact with Nintendo Network. Currently the only emulator with this kind of functionality is Cemu. Cemu 2.0 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Citra does not support true online play and thus does not work with Pretendo, and does not show signs of supporting true online play at all. Mikage, a 3DS emulator for mobile devices, may provide support in the future though this is far from certain."
 			},
 			{
 				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
