@@ -1,0 +1,23 @@
+.button {
+	appearance: none;
+	background: var(--bg-shade-3);
+	color: var(--text-shade-3);
+	border: 0;
+	border-radius: 6px;
+	padding: 12px 48px;
+	font-size: 1rem;
+	font-family: var(--font-family);
+	cursor: pointer;
+}
+
+.button:hover {
+	background: var(--bg-shade-3-5);
+}
+
+.button.primary {
+	background: var(--accent-shade-0);
+}
+
+.button.primary:hover {
+	background: var(--accent-shade-1);
+}
