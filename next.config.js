@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+import { getLocaleList } from './utils/locale.js';
 
-module.exports = nextConfig
+const nextConfig = {
+	reactStrictMode: true,
+	i18n: {
+		locales: getLocaleList(),
+		defaultLocale: 'en-US',
+	}
+};
+
+export default nextConfig;
