@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
-				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN Unterstützung. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
+				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
 			},
 			{
 				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
@@ -275,7 +275,7 @@
 				"country": "Land/Region",
 				"timezone": "Zeitzone",
 				"production": "Produktion",
-				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Account-Stufe durchführen.",
+				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Konto-Stufe durchführen.",
 				"signInSecurity": "Anmeldung und Sicherheit",
 				"signInHistory": "Anmeldeverlauf",
 				"fullSignInHistory": "Vollständigen Anmeldeverlauf anzeigen",
@@ -284,7 +284,7 @@
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
 				"newsletter": "Mitteilungsblatt",
-				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit ablehnen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
 				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
