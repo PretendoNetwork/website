@@ -62,7 +62,7 @@
 			},
 			{
 				"question": "Pretendo Cemu/emülatörlerde çalışır mı?",
-				"answer": "Pretendo, özünde Wii U ve 3DS donanımı için tasarlanmıştır; Şu anda bu konsollar için Nintendo Network destekli tek emülatör Cemu'dur. Cemu, özel sunucuları resmi olarak desteklememektedir, ancak Pretendo'yu Cemu ile kullanmak yine de mümkündür.<br>Pretendo, şu anda Cemu'yu desteklememektedir."
+				"answer": "Pretendo, Nintendo Network ile etkileşebilen herhangi bir istemciyi destekler. Şu anda bu tür işlevselliğe sahip tek emülatör Cemu'dur. Cemu 2.0, emülator ağ hesabı seçenekleri altında Pretendo'yu resmi olarak destekler. Cemu ile nasıl başlayacağınızla ilgili bilgi için <a href=\"https://pretendo.network/docs/install/cemu\">dökümanlara</a> bakın.<br>Citra gerçek çevrimiçi oyun oynamayı desteklemiyor ve bu nedenle Pretendo ile çalışmaz ve destekleyeceğine dair hiçbir işarette göstermiyor. Mobil cihazlar için bir 3DS emülatörü olan Mikage, kesin olmamakla birlikte gelecekte destek sağlayabilir."
 			},
 			{
 				"question": "Nintendo Network'te yasaklandıysam, Pretendo kullanırken yasaklı kalacak mıyım?",
