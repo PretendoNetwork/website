@@ -1,8 +1,8 @@
 {
 	"nav": {
-		"about": "紹介",
-		"faq": "よくある質問",
-		"docs": "ドキュメント",
+		"about": "ご紹介",
+		"faq": "Q&amp;A",
+		"docs": "書類",
 		"credits": "クレジット",
 		"progress": "進行状況",
 		"blog": "ブログ",
@@ -13,19 +13,19 @@
 		},
 		"dropdown": {
 			"captions": {
-				"credits": "チーム紹介",
+				"credits": "チームご紹介",
 				"about": "プロジェクトについて",
-				"blog": "要約された最新のアップデート",
-				"progress": "プロジェクトの進捗状況と目標を確認する",
-				"faq": "よくある質問"
+				"blog": "最新のアップデート",
+				"progress": "プロジェクトの進行状況と目的をチェックして",
+				"faq": "よくあるご質問"
 			}
 		},
 		"donate": "寄付"
 	},
 	"hero": {
-		"subtitle": "ゲームサーバー",
-		"title": "再作成",
-		"text": "Pretendoは、公式のサーバーが終了した後も続けてオンライン接続ができるように作成されている、3DSとWii Uの両方のための、ニンテンドーネットワークを代用する無料のオープンソースサーバーです",
+		"subtitle": "ネットワークサービス",
+		"title": "復活した",
+		"text": "Pretendo（プリーテンドー）は、任天堂の3DSとWii Uネットワークサービスは終了するなら、みんなの楽しみが続けてることになるの無料とオープンソース復活です",
 		"buttons": {
 			"readMore": "もっと読む"
 		}
@@ -33,8 +33,8 @@
 	"aboutUs": {
 		"title": "私たちについて",
 		"paragraphs": [
-			"Pretendoは3DSとWii Uのためのニンテンドーネットワークの代用サーバーを作ることを目的とする、合法のリバースエンジニアリングプロジェクトです。",
-			"私たちのサービスは無料とともにオープンソースなので、ニンテンドーネットワークが終了した後も末長く存在できます。"
+			"Pretendo（プリーテンドー）は、3DSとWii Uのニンテンドーネットワーク「クリーンルーム・リバースエンジニアリング」で復活ねらうことのオープンソースプロジェクトである。",
+			"プリーテンドーのサービスは無料とオープンソースので、ニンテンドーネットワークの終了後、存在続けることができるのです。"
 		]
 	},
 	"progress": {
@@ -46,11 +46,11 @@
 		"githubRepo": "GitHubレポジトリ"
 	},
 	"faq": {
-		"title": "よく聞かれる質問（FAQ）",
-		"text": "簡単に情報を知ってもらうために、良く聞かれている質問についての回答を載せておきます。",
+		"title": "Q&amp;A（よくあるご質問）",
+		"text": "こちらはよく聞かした質問集です。",
 		"QAs": [
 			{
-				"question": "Pretendoってなんですか?",
+				"question": "Pretendo（プリーテンドー）ってなんですか?",
 				"answer": "Pretendoは Wii Uと3DSシリーズのカスタムサーバーを作ろうとしている、オープンソースのニンテンドーネットワーク代替プロジェクトです。私たちの目標はこのゲーム機器たちのオンライン機能を維持させ、プレイヤーたちが好むゲームたちをフルでできるようにすることです。"
 			},
 			{
@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "PretendoはCemu/エミュレーターで動作しますか?",
-				"answer": "PretendoはWii Uと3DSの本体のために開発しているつもりです。現在、ニンテンドーネットワークに対応しているのはCemuだけです。Cemuは公式ではカスタムサーバーに対応してはいませんが、まだ、PretendoをCemuで使うのは可能です。<br>Pretendoは現在、Cemuに対応していません。"
+				"answer": "Pretendoはニンテンドーネットワークに接続できる全てのクライエントに対応します。現在、このような機能に対応しているのはCemuだけです。Cemu 2.0はプログラムのネットワークアカウント設定で公式的にPretendoに対応しています。Cemuを使って接続するには、<a href=\"https://pretendo.network/docs/install/cemu\">このページ</a>を参考にしてください。<br>Citraは完全なオンラインプレイに対応せずそのような兆しもないため、Pretendoに対応しません。モバイル機器のためのエミュレーターであるMikageとは将来対応するかもしれませんが、確定はしていません。"
 			},
 			{
 				"question": "もしニンテンドーネットワークでBANされた場合は、PretendoでもBANされたままですか?",
@@ -156,7 +156,7 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Special thanks",
+		"title": "スペシャルサンクス",
 		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。",
 		"people": [
 			{
@@ -185,13 +185,13 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Miiverse情報共有",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"name": "Kinnay",
-				"special": "Special thanks",
+				"special": "Special Thanks",
 				"caption": "任天堂データ構造研究",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"

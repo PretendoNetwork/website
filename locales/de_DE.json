@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
-				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN Unterstützung. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
+				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
 			},
 			{
 				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
@@ -233,7 +233,7 @@
 			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
 			"So etwas wie \"Du kennst Ash, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
-			"Mein erstes Video auf meinem Kanal!! Ich wolte schon lange videos machen, aber mein leptop wahr zu schwach um Fraps, Skype und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklehrer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bitte gebt einen daumen nach oben und aboniert!!!"
+			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!"
 		]
 	},
 	"progressPage": {
@@ -275,7 +275,7 @@
 				"country": "Land/Region",
 				"timezone": "Zeitzone",
 				"production": "Produktion",
-				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Account-Stufe durchführen.",
+				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Konto-Stufe durchführen.",
 				"signInSecurity": "Anmeldung und Sicherheit",
 				"signInHistory": "Anmeldeverlauf",
 				"fullSignInHistory": "Vollständigen Anmeldeverlauf anzeigen",
@@ -283,8 +283,8 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
-				"newsletter": "Newsletter",
-				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
+				"newsletter": "Mitteilungsblatt",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit ablehnen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
 				"noDiscordLinked": "Kein Discord-Konto verknüpft.",

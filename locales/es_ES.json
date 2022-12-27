@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Pretendo está diseñado con el hardware de Wii U y 3DS en mente. Hasta ahora, el único emulador para esas consolas con soporte de NN es Cemu. Cemu no soporta oficialmente servidores personalizados, pero debería ser posible en un futuro llegar a usar Pretendo con Cemu.<br>A día de hoy, Pretendo no soporta Cemu."
+				"answer": "Pretendo soporta cualquier cliente que puede interactuar con el Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 oficialmente soporta a Pretendo, en las opciones de cuenta en línea en el emulador . Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no soporta verdadero juego en línea, por eso no funciona con Pretendo, y no demuestra señales de que soportará verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría proporcionar soporte en el futuro aunque esto esta lejos de ser cierto."
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
@@ -230,10 +230,10 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Soy Bandwidth el Mapache y me encanta morder los cables que van a los servidores de Pretendo Network. ¡mmm!",
-			"Muchas personas preguntan si tendremos problemas legales con Nintendo por esto; me hace feliz anunciar que mi tía trabaja en Nintendo y me dijo que está bien.",
-			"Webkit v537 es la mejor versión de Webkit para Wii U. No, no vamos a portear Chrome a la Wii U.",
+			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto; pues me alegro de anunciar que mi tía trabaja en Nintendo y me dijo que no pasa nada.",
+			"Webkit v537 es la mejor versión de Webkit para Wii U. No, no pensamos portear Chrome a la Wii U.",
 			"¡No puedo esperar a que el reloj llegue a la 03:14:08 UTC el 19 de enero de 2038!",
-			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi Gamepad no se conecta a mi Wii.",
+			"La Wii U es en verdad un sistema infravalorado. Sus anuncios eran muy malos, pero la consola es genial. Oye, espera un segundo, no se porqué, pero por algún motivo el Gamepad no se quiere conectar a mi Wii.",
 			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
 			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
 			"Decir “Conoces a Ash, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Ash hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
