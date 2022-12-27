@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Pretendo está diseñado con el hardware de Wii U y 3DS en mente. Hasta ahora, el único emulador para esas consolas con soporte de NN es Cemu. Cemu no soporta oficialmente servidores personalizados, pero debería ser posible en un futuro llegar a usar Pretendo con Cemu.<br>A día de hoy, Pretendo no soporta Cemu."
+				"answer": "Pretendo soporta cualquier cliente que puede interactuar con el Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 oficialmente soporta a Pretendo, en las opciones de cuenta en línea en el emulador . Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no soporta verdadero juego en línea, por eso no funciona con Pretendo, y no demuestra señales de que soportará verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría proporcionar soporte en el futuro aunque esto esta lejos de ser cierto."
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
