@@ -11,7 +11,16 @@
 			"settings": "设置",
 			"logout": "登出"
 		},
-		"donate": "捐赠"
+		"donate": "捐赠",
+		"dropdown": {
+			"captions": {
+				"about": "我们的项目",
+				"faq": "经常问到的问题",
+				"blog": "我们最近的更新（简化版）",
+				"credits": "我们的团队",
+				"progress": "查看目前的进度与目标"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "游戏服务器",
@@ -58,7 +67,7 @@
 			},
 			{
 				"question": "Pretendo 是否适用于 Cemu/模拟器?",
-				"answer": "Pretendo 是专为 Wii U 和 3DS 设计的；目前，这些支持 NN 的硬件的唯一模拟器是 Cemu。 Cemu 不正式支持自定义服务器，但仍然可以将 Pretendo 与 Cemu 一起使用。<br>Pretendo 目前不支持 Cemu。"
+				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有这种功能的虚拟机是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下正式官方支持 Pretendo。有关如何开始使用 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>Citra 不支持真实在线多人联接，并且因此不适用于 Pretendo，并且根本没有显示出支持真正在线游戏的迹象。 Mikage，一种用于移动设备的 3DS 模拟器，可能会在未来提供支持，尽管这还远未确定。"
 			},
 			{
 				"question": "如果我在 Nintendo Network 上被封账号，我在使用 Pretendo 时还会被禁吗？",
