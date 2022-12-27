@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "PretendoはCemu/エミュレーターで動作しますか?",
-				"answer": "PretendoはWii Uと3DSの本体のために開発しているつもりです。現在、ニンテンドーネットワークに対応しているのはCemuだけです。Cemuは公式ではカスタムサーバーに対応してはいませんが、まだ、PretendoをCemuで使うのは可能です。<br>Pretendoは現在、Cemuに対応していません。"
+				"answer": "Pretendoはニンテンドーネットワークに接続できる全てのクライエントに対応します。現在、このような機能に対応しているのはCemuだけです。Cemu 2.0はプログラムのネットワークアカウント設定で公式的にPretendoに対応しています。Cemuを使って接続するには、<a href=\"https://pretendo.network/docs/install/cemu\">このページ</a>を参考にしてください。<br>Citraは完全なオンラインプレイに対応せずそのような兆しもないため、Pretendoに対応しません。モバイル機器のためのエミュレーターであるMikageとは将来対応するかもしれませんが、確定はしていません。"
 			},
 			{
 				"question": "もしニンテンドーネットワークでBANされた場合は、PretendoでもBANされたままですか?",
@@ -185,13 +185,13 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Miiverse情報共有",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"name": "Kinnay",
-				"special": "Special thanks",
+				"special": "Special Thanks",
 				"caption": "任天堂データ構造研究",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
