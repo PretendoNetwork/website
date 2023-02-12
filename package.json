@@ -28,7 +28,7 @@
 		"express-handlebars": "^5.3.1",
 		"express-locale": "^2.0.0",
 		"fs-extra": "^9.1.0",
-		"got": "^11.8.5",
+		"got": "^12.5.3",
 		"graphql-request": "^4.3.0",
 		"gray-matter": "^4.0.3",
 		"kaitai-struct": "^0.9.0",
