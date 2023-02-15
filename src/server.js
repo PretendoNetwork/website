@@ -5,7 +5,7 @@ const handlebars = require('express-handlebars');
 const morgan = require('morgan');
 const expressLocale = require('express-locale');
 const cookieParser = require('cookie-parser');
-const Stripe = require('stripe');
+//const Stripe = require('stripe');
 const redirectMiddleware = require('./middleware/redirect');
 const renderDataMiddleware = require('./middleware/render-data');
 const database = require('./database');
@@ -15,7 +15,7 @@ const config = require('../config.json');
 
 const { http: { port } } = config;
 const app = express();
-const stripe = new Stripe(config.stripe.secret_key);
+//const stripe = new Stripe(config.stripe.secret_key);
 
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
