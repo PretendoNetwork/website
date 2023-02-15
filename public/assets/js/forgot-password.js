@@ -1,10 +1,8 @@
-const config = require('../../../config.json');
-
 const input = document.querySelector('#input');
 document.querySelector('form').addEventListener('submit', function (event) {
 	event.preventDefault();
 
-	fetch(`${config.api_base}/v1/forgot-password`, {
+	fetch('/account/forgot-password', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',

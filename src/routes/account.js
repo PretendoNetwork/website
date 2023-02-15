@@ -155,6 +155,11 @@ router.get('/forgot-password', async (request, response) => {
 	response.render('account/forgot-password');
 });
 
+router.post('/forgot-password', async (request, response) => {
+	const apiResponse = await util.apiPostRequest('/v1/forgot-password', {}, request.body);
+	response.json(apiResponse.body);
+});
+
 router.get('/reset-password', async (request, response) => {
 	const renderData = {
 		token: decodeURIComponent(request.query.token)
@@ -227,7 +232,7 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 				await util.removeDiscordMemberTesterRole(discordId);
 			}
 		}
-		
+
 		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	} catch (error) {
