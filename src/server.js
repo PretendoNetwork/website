@@ -146,6 +146,7 @@ app.set('view engine', 'handlebars');
 logger.info('Starting server');
 database.connect().then(() => {
 	app.listen(port, async () => {
+		/*
 		const events = await stripe.events.list({
 			delivery_success: false // failed webhooks
 		});
@@ -153,6 +154,7 @@ database.connect().then(() => {
 		for (const event of events.data) {
 			await util.handleStripeEvent(event);
 		}
+		*/
 
 		logger.success(`Server listening on http://localhost:${port}`);
 	});
