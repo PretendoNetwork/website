@@ -5,7 +5,22 @@
 		"docs": "Docs",
 		"credits": "Mulțumiri",
 		"progress": "Progres",
-		"blog": "Blog"
+		"blog": "Blog",
+		"dropdown": {
+			"captions": {
+				"about": "Despre proiect",
+				"progress": "Vezi progresul și obiectivele proiectului",
+				"faq": "Întrebări puse frecvent",
+				"credits": "Cunoaște echipa",
+				"blog": "Ultimele actualizări, pe scurt"
+			}
+		},
+		"donate": "Donează",
+		"account": "Cont",
+		"accountWidget": {
+			"settings": "Setări",
+			"logout": "Deloghează-te"
+		}
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
@@ -27,7 +42,8 @@
 		"paragraphs": [
 			null,
 			"Pentru 3DS, lucrăm de asemenea la Mario Kart 7, cu dorința de a continua să lucrăm și la alte jocuri dacă este posibil."
-		]
+		],
+		"githubRepo": "Repozitoriul Github"
 	},
 	"faq": {
 		"title": "Întrebări Puse Frecvent",
@@ -46,12 +62,12 @@
 				"answer": "Pretendo nu este momentan într-un stadiu pregătit pentru uzul public. Dar, odată ce este gata poți folosi Pretendo doar dacă rulezi patcher-ul nostru pe consola ta."
 			},
 			{
-				"question": "Știți când caracteristică/serviciu va fi gata?",
+				"question": "Știți când X caracteristică/serviciu va fi gata?",
 				"answer": "Nu. Majoritatea caracteristicilor/serviciilor sunt dezvoltate independent (spre exemplu, Miiverse poate fii dezvoltat de o persoană iar Conturile și Prietenii sunt dezvoltate de altcineva) și de aceea nu putem oferii o estimare a timpului necesar finisării."
 			},
 			{
 				"question": "Funcționează Pretendo pe Cemu/emulatoare?",
-				"answer": "Pretendo este făcut pentru consolele Wii U și 3DS la suflet; momentan singurul emulator pentru aceste console cu suport NN este Cemu. Cemu nu suportă oficial servere personalizate, dar tot este posibil să folosiți Pretendo cu Cemu.<br>Pretendo nu suportă momentan Cemu."
+				"answer": "Pretendo funcționează pe orice client care poate interacționa cu Nintendo Network. Momentan singurul emulator cu această funcționalitate este Cemu. Cemu 2.0 permite folosirea Pretendo prin schimbarea setărilor legate de cont. Pentru începe să folosiți Cemu, vedeți <a href=\"https://pretendo.network/docs/install/cemu\">documentația</a>.<br>Citra nu oferă nici un fel de funcționalitate online, deci nu poate folosi Pretendo și nu sunt semne că va permite vreodată funcționalitate online. Mikage, un emulator 3DS pentru dispozitive mobile, ar putea oferi această funcționalitate, dar nu avem nimic mai mult de spus."
 			},
 			{
 				"question": "Dacă sunt restricționat de pe Nintendo Network, o să rămân restricționat și pe Pretendo?",
@@ -169,7 +185,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Distribuirea informațiilor despre Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -182,13 +198,13 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Iconițele pentru Mii Editor și Juxt reactions",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
+				"name": "Contribuitorii GitHub",
+				"caption": "Localizări și alte contribuții",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
@@ -211,7 +227,18 @@
 				"Alătură-te serverului nostru de Discord!"
 			],
 			"button": "Alătură-te!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"Eu sunt Ratonul Bandwidth, și ce-mi mai place să rod cablurile care ajung la serverele Pretendo Network. Yum!",
+			"Mulți ne întreabă dacă o să avem probleme legale cu Nintendo de la asta; sunt bucuros să vă anunț că mătușa lucrează la Nintendo și a zis că e ok.",
+			"Webkit v537 este cea mai bună versiune de Webkit pentru Wii U. Nu, n-o să portăm Chrome pe Wii U.",
+			"Abia aștept ca ceasul să bată 03:14:08 UTC pe 19 ianuarie 2038!",
+			"Wii U chiar a fost un sistem subapreciat; reclamele erau, gen, foarte proaste, dar consola e tare. Ăă, stai un pic, nu știu de ce Gamepad-ul nu se conectează la Wii.",
+			"Genericul de la Super Mario World 2 - Yoshi's Island e absolut genial și n-ai cum să mă convingi altfel.",
+			"Lansările mele preferate pe Nintendo Switch au fost Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Încă niște porturi Pack și Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Chiar v-a plăcut jocul ăsta pe Wii U Virtual Console așa de mult că vi-l aducem din nou\" Pack. Poți vedea că lui Nintendo chiar îi pasă.",
+			"Gen \"Știi pe Ash, să-i dea Dumnezeu sănătate, face UwU-uri toată ziua\" e modul de la țară de a zice \"Ash face numai UwU-uri și e foarte aiurea și stupid și mi-aș dori să nu mai facă\"",
+			"primu meu video pe canalul meu!! mereu miam dorit să fac videouri da laptopu era praf si nu mergeau fraps, skype sau minecraft in același timp, dar acum gata! profa de TIC ma ajutat și acum laptopu merge mult mai bn și pot să și filmez! sper să vă placă și nu uitati sa dati un like și subscribe!!!"
+		]
 	},
 	"progressPage": {
 		"title": "Progresul nostru",
@@ -219,7 +246,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>."
+		"description": "Ultimele actualizări în bucăți condensate. Dacă vrei să vezi mai multe actualizări, consideră să ne susții pe <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"published": "Publicată de",
+		"publishedOn": "pe"
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
@@ -228,5 +257,118 @@
 		"fileInput": "Fișier de testare",
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"button": "Testează fișier"
+	},
+	"modals": {
+		"close": "Închide",
+		"cancel": "Anulează",
+		"confirm": "Confirmă"
+	},
+	"account": {
+		"loginForm": {
+			"login": "Loghează-te",
+			"register": "Înregistrează-te",
+			"detailsPrompt": "Introdu datele contului mai jos",
+			"username": "Nume de utilizator",
+			"password": "Parolă",
+			"confirmPassword": "Confirmă parola",
+			"email": "Email",
+			"miiName": "Numele Mii-ului",
+			"forgotPassword": "Ți-ai uitat parola?",
+			"registerPrompt": "Nu ai un cont?",
+			"loginPrompt": "Ai deja un cont?"
+		},
+		"settings": {
+			"upgrade": "Trece-ți contul la un nivel superior",
+			"settingCards": {
+				"profile": "Profil",
+				"nickname": "Poreclă",
+				"birthDate": "Data nașterii",
+				"gender": "Gen",
+				"country": "Țară/regiune",
+				"timezone": "Fus orar",
+				"production": "Producția",
+				"beta": "Beta",
+				"upgradePrompt": "Serverele beta sunt destinate exclusiv testerilor beta<br>Pentru a deveni un tester beta, treceți-vă contul la un nivel mai mare.",
+				"serverEnv": "Mediul serverului",
+				"no_edit_from_dashboard": "Momentan nu este disponibilă editarea setărilor PNID-ului din panoul de control al utilizatorilorului. Vă rugăm să vă editați setările din consola asociată",
+				"signInSecurity": "Logare și securitate",
+				"email": "Email",
+				"password": "Parolă",
+				"fullSignInHistory": "Vezi întregul istoric al logărilor",
+				"otherSettings": "Alte setări",
+				"discord": "Discord",
+				"passwordResetNotice": "După ce îți vei schimba parola, vei fi deconectat de pe toate dispozitivele.",
+				"removeDiscord": "Elimină contul de Discord",
+				"noDiscordLinked": "Niciun cont de Discord asociat.",
+				"linkDiscord": "Asociază un cont de Discord",
+				"userSettings": "Setări de utilizator",
+				"hasAccessPrompt": "Nivelul tău curent îți oferă acces la servere beta. Tare!",
+				"signInHistory": "Istoricul logărilor",
+				"connectedToDiscord": "Conectat la Discord drept",
+				"newsletterPrompt": "Primește știri despre proiect pe email (te poți dezabona oricând)",
+				"passwordPrompt": "Introdu parola pentru PNID-ul tău pentru a-ți descărca fișierele Cemu",
+				"no_signins_notice": "Istoricul logărilor nu este urmărită. Reveniți mai târziu!",
+				"no_newsletter_notice": "Buletin indisponibil. Reveniți mai târziu",
+				"newsletter": "Buletin informativ"
+			},
+			"downloadFiles": "Descarcă fișierele contului",
+			"downloadFilesDescription": "(nu va funcționa pe Nintendo Network)",
+			"unavailable": "Indisponibil"
+		},
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Dezvoltator"
+		],
+		"banned": "Acces interzis",
+		"account": "Cont"
+	},
+	"docs": {
+		"search": {
+			"caption": "Scrie-l aici pentru a găsi informații despre problema întâmpinată!",
+			"label": "Cod de eroare",
+			"no_match": "Nu s-au găsit rezultate",
+			"title": "Ai un cod de eroare?"
+		},
+		"sidebar": {
+			"install": "Instalează",
+			"search": "Caută",
+			"juxt_err": "Coduri de eroare - Juxt",
+			"getting_started": "Pentru început",
+			"welcome": "Bun venit",
+			"install_extended": "Instalează Pretendo"
+		},
+		"quickLinks": {
+			"header": "Linkuri rapide",
+			"links": [
+				{
+					"header": "Instalează Pretendo",
+					"caption": "Vezi instrucțiunile de instalare"
+				},
+				{
+					"header": "Ai o eroare?",
+					"caption": "Caută aici"
+				}
+			]
+		},
+		"missingInLocale": "Această pagină nu este disponibilă în localul d-voastră. Urmăriți varianta in engleză mai jos."
+	},
+	"upgrade": {
+		"description": "Atingerea țintei lunare va face din Pretendo un job normal, aducându-vă actualizări de mare calitate mult mai rapid.",
+		"title": "Treci la un nivel superior",
+		"unsub": "Dezabonează-te",
+		"unsubConfirm": "Dezabonează-te",
+		"changeTierPrompt": "Ești sigur că vrei să te dezabonezi de la <span class=\"oldtier\">oldtiername</span> și să te abonezi la <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Schimbă nivelul",
+		"back": "Înapoi",
+		"unsubPrompt": "Ești sigur că vrei să te dezabonezi de la <span>tiername</span>? Vei pierde accesul la toate beneficile asociate acestui nivel.",
+		"month": "lună",
+		"tierSelectPrompt": "Alege un nivel",
+		"changeTier": "Schimbă nivelul"
+	},
+	"donation": {
+		"progress": "<span>${totd}$</span> din <span>${goald}$</span>/lună, <span>${perc}%</span> din ținta lunară.",
+		"upgradePush": "Pentru a te abona și să ai acces la benefici faine, vizitează <a href=\"/account/upgrade\">această pagină</a>."
 	}
 }
