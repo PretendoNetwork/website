@@ -1,0 +1,370 @@
+{
+	"faq": {
+		"QAs": [
+			{
+				"question": "Mikä on Pretendo?",
+				"answer": "Pretendo on avoimen lähdekoodin Nintendo Network:in korvaaja joka tähtää korvavien palvelinten luontiin Wii U:lle ja 3DS konsoliperheelle. Tähtäimenämme on säilyttää näiden konsoleiden nettitoiminnot, jotta pelaajat voivat pelata Wii U ja 3DS suosikkipelejään täysin ominaisuuksin."
+			},
+			{
+				"question": "Toimiiko olemassaoleva NNID:ni Pretendossa?",
+				"answer": "Ei, valitettavasti. Olemassa olevat NNID:t eivät tule toimimaan Pretendossa, sillä vain Nintendolla on tiedossaan käyttäjätietosi. Vaikka NNID-PNID tietojensiirto on teoriassa mahdollista, se on riskialtista ja vaatii arkaluonteisia käyttäjätietoja, joita emme halua haltuumme."
+			},
+			{
+				"question": "Kuinka käytän Pretendoa?",
+				"answer": "Pretendo ei ole vielä valmiina yleiseen käyttöön. Kuitenkin, heti kun se on, voit ottaa Pretendon käyttöösi suorittamalla homebrew-paikaajamme konsolissasi."
+			},
+			{
+				"answer": "Emme. Monia Pretendon palveluita kehitetään toisistaan riippumatta (esimerkiksi Miiverseä voi kehittää eri kehittäjä, kuin Käyttäjätilejä tai Ystäviä). Tästä johtuen emme voi antaa arviota siitä, kuinka kauan kehitystyö vie aikaa.",
+				"question": "Tiedättekö milloin toiminnallisuus/palvelu on valmis?"
+			},
+			{
+				"question": "Toimiiko Pretendo Cemu:lla/emulaattoreissa?",
+				"answer": "Pretendo tukee kaikkia asiakasohjelmia, jotka pystyvät keskustelemaan Nintendo Network:in kanssa. Tällä hetkellä ainoa emulaattori, jossa on nämä toiminnallisuudet on Cemu. Cemu 2.0 tukee Pretendoa virallisesti emulaattorin verkkotili-asetusten kautta. LIsäinformaatiota siitä, kuinka pääset alkuun Cemu:n kanssa löytyy <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra ei tue todellista online-pelaamista ja ei sikäli siis toimi Pretendon kanssa, myöskään tulevaisuuden suunnitelmissa ei näytä olevan todellista online-tukea. Mikage, 3DS-emulaattori mobiililaitteille saattaa tulevaisuudessa tukea verkkotoimintoja, mutta tämä on yhä hyvin epävarmaa."
+			},
+			{
+				"question": "Jos minut on bännätty Nintendo Networkista, pysynkö bännissä myös Pretendossa?",
+				"answer": "Meillä ei ole pääsyä Nintendo Network:in bännäystietoihin ja kaikilla käyttäjillä on siis pääsy palveluihimme. Kuitenkin meillä on sääntömme, joita tulee noudattaa palvelua käytettäessä ja näiden sääntöjen noudattamatta jättäminen voi johtaa bänniin."
+			},
+			{
+				"question": "Tuleeko Pretendo tukemaan Wii:tä/Switch:iä?",
+				"answer": "Wii:lle on jo omat palvelimensa jotka tarjoaa <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Meillä ei tällä hetkellä ole halua kohdentaa palveluitamme Switch:ille, sillä kyseessä on maksullinen täysin Nintendo Network:ista poikkeava palvelu."
+			},
+			{
+				"question": "Tarvitsenko murretun konsolin?",
+				"answer": "Kyllä, sinun pitää murtaa konsolisi yhteyttä varten. Lisätietoja asentamisesta löydät &lt;a href=\"https://pretendo.network/docs/install/wiiu\"&gt;täältä&lt;/a&gt;."
+			}
+		],
+		"title": "Usein Kysytyt Kysymykset",
+		"text": "Joitain yleisiä meiltä kysyttyjä kysymyksiä nopeana yhteenvetona."
+	},
+	"nav": {
+		"dropdown": {
+			"captions": {
+				"blog": "Viimeisimmät päivitykset, tiivistettyinä",
+				"credits": "Tutustu tiimiin",
+				"about": "Tietoja projektista",
+				"faq": "Usein kysytyt kysymykset",
+				"progress": "Tutustu projektin edistymiseen ja tavoitteisiin"
+			}
+		},
+		"about": "Tietoja",
+		"account": "Käyttäjätili",
+		"faq": "UKK",
+		"docs": "Dokumentaatio",
+		"progress": "Edistyminen",
+		"accountWidget": {
+			"settings": "Asetukset",
+			"logout": "Kirjaudu ulos"
+		},
+		"donate": "Lahjoita",
+		"blog": "Blogi",
+		"credits": "Krediitit"
+	},
+	"hero": {
+		"subtitle": "Pelipalvelimet",
+		"title": "Toisinnettu",
+		"buttons": {
+			"readMore": "Lue lisää"
+		},
+		"text": "Pretendo on Nintendon palvelimien korvaajaksi tarkoitettu ilmainen avoimen lähdekoodin ratkaisu sekä 3DS:lle, että WiiU:lle, joka tarjoaa verkkotoiminnallisuudet kaikille, jopa sen jälkeen kun alkuperäiset palvelut suljetaan"
+	},
+	"progress": {
+		"title": "Edistyminen",
+		"githubRepo": "Github -arkisto"
+	},
+	"aboutUs": {
+		"title": "Tietoja meistä",
+		"paragraphs": [
+			"Pretendo on avoimen lähdekoodin projekti, joka tähtää Nintendo Network:in palveluiden toisintamiseen käyttäen takaisinmallinnusta puhtaalta pöydältä.",
+			"Koska palvelumme tulevat olemaan ilmaisia ja avoimeen lähdekoodiin perustuvia, niiden olemassaolo voi jatkua pitkään tulevan Nintendo Network:in palveluiden sulkemisen jälkeenkin."
+		]
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "Tuo takaisin suosikkipelisi ja sisällöt käyttäen mukautettuja palvelimia.",
+				"title": "Pelipalvelimet"
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Miiversen uudelleenluonti, kuten se olisi syntynyt tähän päivään."
+			},
+			{
+				"title": "Cemu -tuki",
+				"caption": "Pelaa Wii U suosikkipelejäsi jopa ilman konsolia!"
+			}
+		],
+		"title": "Mitä kehitämme",
+		"text": "Projektissamme on useita komponentteja. Tässä on osa niistä."
+	},
+	"credits": {
+		"text": "Tutustu tiimiin projektin takana",
+		"people": [
+			{
+				"caption": "Projektin omistaja ja johtava kehittäjä",
+				"github": "https://github.com/jonbarrow",
+				"picture": "https://github.com/jonbarrow.png",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"github": "https://github.com/CaramelKat",
+				"caption": "Miiversen tutkiminen ja kehitys",
+				"picture": "https://github.com/caramelkat.png"
+			},
+			{
+				"caption": "Asentajan kehitys ja konsolitutkimus",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/Rambo6Glaz.png",
+				"github": "https://github.com/Rambo6Glaz"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS tutkimus ja paikkausten kehittäminen",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"caption": "Konsoli- ja muu järjestelmätutkimus",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"picture": "https://github.com/jipfr.png",
+				"caption": "Johtava web-kehittäjä",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "monty",
+				"caption": "Web-kehittäjä",
+				"github": "https://github.com/ashmonty",
+				"picture": "https://github.com/ashmonty.png"
+			},
+			{
+				"github": "https://github.com/mrjvs",
+				"caption": "Suunnittelija",
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png"
+			}
+		],
+		"title": "Tiimi"
+	},
+	"specialThanks": {
+		"title": "Erityiskiitokset",
+		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
+		"people": [
+			{
+				"caption": "crunch-kirjaston kehitys",
+				"picture": "https://github.com/superwhiskers.png",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001",
+				"caption": "3DS kehittäjä ja NEX:in purku"
+			},
+			{
+				"name": "Billy",
+				"caption": "Säilytystyö",
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png"
+			},
+			{
+				"caption": "Mario Kart 7 ja 3DS tutkimus",
+				"github": "https://github.com/shutterbug2000",
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse tiedonjako",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Erityiskiitokset",
+				"caption": "Nintendon tietorakenteiden tutkimus",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"github": "https://github.com/ninstar",
+				"name": "NinStar",
+				"caption": "Mii-editorin ja Juxt-reaktioiden kuvakkeet",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"name": "GitHub -osallistujat",
+				"caption": "Lokalisaatiot ja muu osallistuminen",
+				"github": "https://github.com/PretendoNetwork",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "Pysy ajan tasalla",
+		"text": "Liity Discord -palvelimellemme saadaksesi tietoa projektin viimeisimmistä päivityksistä.",
+		"widget": {
+			"text": "Saa päivitystieto reaaliajassa",
+			"button": "Liity palvelimelle"
+		}
+	},
+	"footer": {
+		"socials": "Sosiaaliset",
+		"usefulLinks": "Tärkeitä linkkejä",
+		"widget": {
+			"captions": [
+				"Haluatko pysyä ajan tasalla?",
+				"Liity Discordiimme!"
+			],
+			"button": "Liity nyt!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Olen Bandwidth pesukarhu, ja rakastan Pretendo Network:in palvelimille menevien kaapeleiden pureskelua. Nam!",
+			"Monet kysyvät meiltä joudummeko oikeudellisiin ongelmiin Nintendon kanssa tästä; Tyytyväisenä ilmoitan tätini työskentelevän Nintendolle ja hän sanoo kaiken olevan kunnossa.",
+			"Webkit v537 on paras Wii U:n webkit-versio. Ei, emme ole tekemässä Chromea Wii U:lle.",
+			"Jospa olisi jo 19. tammikuuta 2038 kello 03:14:08 UTC!",
+			"Wii U on oikeasti aliarvostettu: mainonta oli kaameaa, mutta konsoli itsessään oli hyvä: Hei hetkonen, en tiedä miksi, mutta Gamepadini ei saa yhteyttä Wiihini.",
+			"Super Mario World 2 - Yoshi's Island:in pääteema on kuminta hottia, ja et voi millään saada minua muuttamaan mielipidettäni.",
+			"Omat lempi Switch-julkaisuni ovat Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Piditte pelistä Wii U:lla niin paljon, että toimme sen takaisin\" Pack. Näkee selvästi, että Nintendo välittää.",
+			"\"Tiedäthän rakkaan Ashin, joka söpöilee koko ajan\" on kaunis tapa sanoa \"Ash söpöstelee koko ajan ja se on tosi outoa ja tyhmää ja toivoisin että ne eivät tekisi sitä\"",
+			"Munekavideomunomallakanavalla!! oon halunnut tehä viteoita jo kauan, mutta mun läppäri oli huono, eikä pyörittäny frapsia , skypeä ja minecrafia yhtaikaa! nyt se on ohi! mun ATK-maikka autto ja nytmun läppäri pyörii paljon paremmin ja voin nauhottaa! toivottavasti tykkäätte ja laittakaa tykkäykseen ja tilaukseen!!!"
+		]
+	},
+	"progressPage": {
+		"title": "Edistymisemme",
+		"description": "Tutustu edistymiseen ja päämääriin! (Päivittyy noin kerran tunnissa, ei näytä KAIKKEA projektin tavoitteista tai edistymistä)"
+	},
+	"blogPage": {
+		"title": "Blogi",
+		"description": "Vimeisimmät päivitykset tiivistelminä. Jos haluat päivityksiä lyhyemmin aikavälein harkitse tukemistamme <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreonissa</a>.",
+		"published": "Julkaissut",
+		"publishedOn": "-"
+	},
+	"account": {
+		"loginForm": {
+			"login": "Kirjaudu",
+			"register": "Rekisteröidy",
+			"detailsPrompt": "Anna tilitietosi",
+			"password": "Salasana",
+			"confirmPassword": "Varmista salasana",
+			"email": "Sähköposti",
+			"miiName": "Mii:n nimi",
+			"forgotPassword": "Unohditko salasanasi?",
+			"loginPrompt": "Onko tili jo luotu?",
+			"username": "Käyttäjänimi",
+			"registerPrompt": "Ei vielä tiliä?"
+		},
+		"settings": {
+			"downloadFiles": "Lataa tilin tiedostot",
+			"downloadFilesDescription": "(ei toimi Nintendo Network:issa)",
+			"upgrade": "Nosta tililuokkaa",
+			"unavailable": "Ei saatavissa",
+			"settingCards": {
+				"userSettings": "Käyttäjän asetukset",
+				"profile": "Profiili",
+				"nickname": "Lempinimi",
+				"birthDate": "Syntymäpäivä",
+				"gender": "Sukupuoli",
+				"timezone": "Aikavyöhyke",
+				"serverEnv": "Palvelinympäristö",
+				"production": "Tuotanto",
+				"beta": "Beta",
+				"signInHistory": "Kirjautumishistoria",
+				"fullSignInHistory": "Näytä koko kirjautumishistoria",
+				"connectedToDiscord": "Littetty Discord -tiliin",
+				"removeDiscord": "Poista Discord -tili",
+				"noDiscordLinked": "Ei liitettyä Discord -tiliä.",
+				"newsletter": "Uutiskirje",
+				"passwordPrompt": "Anna PNID salasanasi ladataksesi Cemu -tiedostot",
+				"password": "Salasana",
+				"country": "Maa/alue",
+				"upgradePrompt": "Betapalvelimet ovat van betatestaajille.<br>Jos haluat mukaan betatestiin, nosta tililuokkaa.",
+				"hasAccessPrompt": "Nykyinen tililuokituksesi antaa sinulle oikeudet betapalvelimille. Mahtavaa!",
+				"signInSecurity": "Kirjautuminen ja tietoturva",
+				"discord": "Discord",
+				"otherSettings": "Muut asetukset",
+				"email": "Sähköposti",
+				"passwordResetNotice": "Vaihdettuasi salasanan, sinut kirjataan ulos kaikilta laitteilta.",
+				"linkDiscord": "Liitä Discord -tili",
+				"newsletterPrompt": "Saa tietoja projektin etenemisestä sähköpostiisi (voit perua kirjeen milloin vain)",
+				"no_newsletter_notice": "Uutiskirje ei ole tällä hetkellä saatavilla. Palaa asiaan myöhemmin",
+				"no_signins_notice": "Kirjautumishistoriaa ei toistaiseksi seurata. Palaa asiaan myöhemmin!",
+				"no_edit_from_dashboard": "PNID -asetuksia ei toistaiseksi voi muokata koontinäytöltä. Päivitä asetukset linkitetyltä konsoliltasi"
+			}
+		},
+		"accountLevel": [
+			"Vakio",
+			"Testaaja",
+			"Moderaattori",
+			"Kehittäjä"
+		],
+		"banned": "Bännätty",
+		"account": "Käyttäjätili"
+	},
+	"upgrade": {
+		"title": "Tilikorotus",
+		"unsub": "Lopeta tilaus",
+		"unsubConfirm": "Lopeta tilaus",
+		"changeTier": "Vaihda tilitasoa",
+		"changeTierConfirm": "Vaihda tilitasoa",
+		"back": "Takaisin",
+		"changeTierPrompt": "Oletko varma, että haluat perua tilauksesi tasolta <span class=\"oldtier\">oldtiername</span> ja vaihtaa sen tasolle <span class=\"newtier\">newtiername</span>?",
+		"description": "Tähän kuukausitavoitteeseen pääsy tekee Pretendosta kokopäivätyön, tarkoittaen paremman laatuisia päivityksiä pienemmin aikavälein.",
+		"month": "kuukausi",
+		"tierSelectPrompt": "Valitse taso",
+		"unsubPrompt": "Oletko varma haluavasi lopettaa <span>tiername</span> tason tilauksesi? Menetät pääsyn kaikkiin tilitason antamiin etuihin."
+	},
+	"localizationPage": {
+		"title": "Lokalisoidaan",
+		"instructions": "Näytä lokalisaatio-ohjeet",
+		"fileInput": "Testattava tiedosto",
+		"button": "Testitiedosto",
+		"description": "Liitä linkki julkiseen JSON-lokalisaatioon kokeillaksesi sitä sivustolla",
+		"filePlaceholder": "https://verkko.linkki/tiedostoon.json"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Pikalinkit",
+			"links": [
+				{
+					"caption": "Näytä asennusohjeet",
+					"header": "Asenna Pretendo"
+				},
+				{
+					"header": "Saitko virheilmoituksen?",
+					"caption": "Etsi se täältä"
+				}
+			]
+		},
+		"search": {
+			"title": "Saitko virhekoodin?",
+			"no_match": "Ei osumia",
+			"caption": "Kirjoita se allaolevaan laatikkoon saadaksesi lisätietoa ongelmastasi!",
+			"label": "Virhekoodi"
+		},
+		"sidebar": {
+			"getting_started": "Aloitus",
+			"welcome": "Tervetuloa",
+			"install_extended": "Asenna Pretendo",
+			"search": "Etsi",
+			"juxt_err": "Virhekoodit - Juxt",
+			"install": "Asenna"
+		},
+		"missingInLocale": "Sivua ei ole saatavilla kielellesi. Ole hyvä ja tarkasta englanninkielinen versio alta."
+	},
+	"modals": {
+		"cancel": "Peru",
+		"close": "Sulje",
+		"confirm": "Vahvista"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> tavoitteesta <span>$${goald}</span>/kuussa, <span>${perc}%</span> kuukausitavoitteesta.",
+		"upgradePush": "Tullaksesi tilaajaksi ja saadaksesi siistejä etuja, vieraile <a href=\"/account/upgrade\">tilityypin korotussivulla</a>."
+	}
+}
