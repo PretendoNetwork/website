@@ -191,7 +191,8 @@
 	"blogPage": {
 		"description": "Қысылған пішімдегі соңғы жаңартулар. Жаңартуларды жиі көргіңіз келсе, бізге <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> арқылы қолдау көрсетіңіз!",
 		"published": "Жарияланды:",
-		"title": "Блог"
+		"title": "Блог",
+		"publishedOn": ","
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -244,5 +245,126 @@
 				"caption": "Wii U-ның сүйікті ойындары ойна, консольсіз."
 			}
 		]
+	},
+	"account": {
+		"account": "Аккаунтым",
+		"loginForm": {
+			"login": "Кіру",
+			"register": "Тіркеу",
+			"username": "Пайданалушының аты",
+			"password": "Құпиясөз",
+			"detailsPrompt": "Тіркелгіңіздің мәліметтерін төменде енгізіңіз",
+			"confirmPassword": "Құпиясөзді қайтарыңыз",
+			"miiName": "Mii-ның аты",
+			"forgotPassword": "Құпиясөзімді ұмыттым...",
+			"loginPrompt": "Менде аккаунтым бар",
+			"registerPrompt": "Әлі тіркелмегенсіз бе?",
+			"email": "Пошта"
+		},
+		"settings": {
+			"downloadFiles": "Аккаунтының ақпаратты жүктеу",
+			"downloadFilesDescription": "(Nintendo Network-пен жұмыс істемейді)",
+			"upgrade": "Аккаунтты жақсарту",
+			"unavailable": "Қолжетімсіз",
+			"settingCards": {
+				"userSettings": "Пайдаланушы параметрлері",
+				"profile": "Профилім",
+				"nickname": "Никнейм",
+				"birthDate": "Туған кезі",
+				"gender": "Жынысы",
+				"country": "Ел/Аймақ",
+				"timezone": "Сағаттық белдеу",
+				"serverEnv": "Сервер ортасы",
+				"production": "Өндіріс",
+				"beta": "Бета",
+				"upgradePrompt": "Бета серверлері бета тестерлеріне ғана арналған. Біреуі болу үшін аккаунтты жаңартыңыз.",
+				"signInSecurity": "Кіру және қауіпсіздік",
+				"email": "Пошта",
+				"password": "Құпиясөз",
+				"passwordResetNotice": "Құпиясөзді өзгерткеннен кейін сіз барлық құрылғылардан шығасыз.",
+				"signInHistory": "Кіру тарихы",
+				"fullSignInHistory": "Толық кіру тарихын көру",
+				"otherSettings": "Басқа параметрлер",
+				"discord": "Discord",
+				"connectedToDiscord": "Discord желісіне қосылған:",
+				"removeDiscord": "Discord тіркелгісін жою",
+				"noDiscordLinked": "Ешқандай Discord тіркелгісі байланыспаған.",
+				"linkDiscord": "Discord тіркелгісін байланыстырыңыз",
+				"newsletter": "Газет",
+				"newsletterPrompt": "Жоба туралы жаңалықтарды электрондық пошта арқылы алыңыз (сіз кез келген уақытта жазылымнан бас тарта аласыз)",
+				"passwordPrompt": "Cemu файлдарын жүктеп алу үшін PNID құпиясөзін енгізіңіз",
+				"no_signins_notice": "Кіру тарихы қазір бақыланбайды. Кейінірек оралыңыз!",
+				"no_newsletter_notice": "Газет қазір қолжетімді емес. Кейінірек оралыңыз",
+				"no_edit_from_dashboard": "PNID параметрлерін өзгерту қазір мүмкін емес. Байланыстырылған ойын консолінен пайдаланушы деректерін жаңартыңыз",
+				"hasAccessPrompt": "Қазіргі уақытта сіздің деңгейіңіз бета серверлеріне қол жеткізуге мүмкіндік береді. Керемет!"
+			}
+		},
+		"accountLevel": [
+			"Standard",
+			"Тестер",
+			"Модератор",
+			"Developer"
+		],
+		"banned": "Тыйым салынған"
+	},
+	"upgrade": {
+		"title": "Жаңарту",
+		"description": "Осы айдағы мақсатқа жету Pretendo-ны сапалы жаңартуларды бұрынғыдан да жылдам жеткізе отырып, толық уақытты жұмысқа айналдырады.",
+		"month": "ай",
+		"tierSelectPrompt": "Деңгейді таңдаңыз",
+		"unsub": "Жазылудан бас тарту",
+		"unsubConfirm": "Жазылудан бас тарту",
+		"changeTier": "Деңгейді өзгерту",
+		"back": "Артқа",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> жазылуын тоқтатып, <span class=\"newtier\">newtiername</span> жазылуын шынымен де қалдырғыңыз келе ме?",
+		"changeTierConfirm": "Деңгейді өзгерту",
+		"unsubPrompt": "<span>tiername</span> жазылуынан бас тартқыңыз келетініне сенімдісіз бе? Осы деңгеймен бірге келген қондырмалардың құқықтарын жоғалтасыз."
+	},
+	"donation": {
+		"upgradePush": "Жазылу және керемет қондырмаларға қол жеткізу үшін <a href=\"/account/upgrade\">жаңарту бетіне</a> кіріңіз.",
+		"progress": "<span>$${totd}</span>/айына <span>$${goald}</span>, айлық мақсаттың <span>${perc}%</span>."
+	},
+	"localizationPage": {
+		"title": "Жергілікті жерлестірейік",
+		"description": "Сайтта оны тексеру үшін жалпыға қолжетімді JSON файлы бар сілтемені қойыңыз",
+		"instructions": "Локализацияға арналған нұсқауларды қараңыз",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Жылдам сілтемелер",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "Орнату нұсқауларын қараңыз"
+				},
+				{
+					"header": "Қате бар ма?",
+					"caption": "Осы жерден іздеңіз"
+				}
+			]
+		},
+		"search": {
+			"title": "Қате коды бар ма?",
+			"label": "Қате коды",
+			"no_match": "Ештеңе табылмады",
+			"caption": "Қатеңіз туралы қосымша ақпаратты білу үшін оны өріске енгізіңіз!"
+		},
+		"sidebar": {
+			"getting_started": "Бәрі бастау үшін",
+			"welcome": "Қош келдіңіз",
+			"install_extended": "Pretendo-ны жүктеу",
+			"install": "Жүктеу",
+			"search": "Іздеу",
+			"juxt_err": "Қате кодтары - Juxt"
+		},
+		"missingInLocale": "Бұл бет сіздің тіліңізде қолжетімді емес. Төмендегі ағылшын нұсқасын қараңыз."
+	},
+	"modals": {
+		"cancel": "Болдырмау",
+		"confirm": "Растау",
+		"close": "Жабу"
 	}
 }
