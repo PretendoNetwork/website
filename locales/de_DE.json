@@ -349,7 +349,7 @@
 		},
 		"search": {
 			"title": "Hast du einen Fehlercode bekommen?",
-			"caption": "Beschreibe, unten in der Box, was für ein Problem du hast, um Infos zu erhalten.",
+			"caption": "Schreibe unten in die Box, was für ein Problem du hast, um Infos zu erhalten!",
 			"label": "Fehler-Code",
 			"no_match": "Keine Ergebnisse gefunden"
 		},
