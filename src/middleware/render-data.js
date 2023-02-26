@@ -10,8 +10,21 @@ async function renderDataMiddleware(request, response, next) {
 		return next();
 	}
 
-	// Get user local
-	const reqLocale = request.locale;
+	// Get user locale from cookies
+	
+	const cookielocale = request.cookies.preferredLocale
+	let reqLocale
+
+	if (!cookielocale) {
+		//No Prefered Language in Cookies
+		reqLocale = request.locale
+	}
+	else {
+		 reqLocale = {
+			language: cookielocale.split("-")[0],
+			region: cookielocale.split("-")[1]
+		}
+	}
 	const locale = util.getLocale(reqLocale.language, reqLocale.region);
 
 	response.locals.locale = locale;
