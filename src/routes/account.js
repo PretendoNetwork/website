@@ -143,12 +143,29 @@ router.post('/register', async (request, response) => {
 	}
 });
 
-router.get('/logout', async(_request, response) => {
+router.get('/logout', async (_request, response) => {
 	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
 	response.clearCookie('access_token', { domain: '.pretendo.network' });
 	response.clearCookie('token_type', { domain: '.pretendo.network' });
 
 	response.redirect('/');
+});
+
+router.get('/forgot-password', async (request, response) => {
+	response.render('account/forgot-password');
+});
+
+router.post('/forgot-password', async (request, response) => {
+	const apiResponse = await util.apiPostRequest('/v1/forgot-password', {}, request.body);
+	response.json(apiResponse.body);
+});
+
+router.get('/reset-password', async (request, response) => {
+	const renderData = {
+		token: decodeURIComponent(request.query.token)
+	};
+
+	response.render('account/reset-password', renderData);
 });
 
 router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {
@@ -215,7 +232,7 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 				await util.removeDiscordMemberTesterRole(discordId);
 			}
 		}
-		
+
 		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	} catch (error) {

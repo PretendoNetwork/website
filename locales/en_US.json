@@ -261,6 +261,19 @@
 			"registerPrompt": "Don't have an account?",
 			"loginPrompt": "Already have an account?"
 		},
+		"forgotPassword": {
+			"header": "Forgot Password",
+			"sub": "Enter your email address/PNID below",
+			"input": "Email address or PNID",
+			"submit": "Submit"
+		},
+		"resetPassword": {
+			"header": "Reset Password",
+			"sub": "Enter new password below",
+			"password": "Password",
+			"confirmPassword": "Confirm password",
+			"submit": "Submit"
+		},
 		"settings": {
 			"downloadFiles": "Download account files",
 			"downloadFilesDescription": "(will not work on Nintendo Network)",
