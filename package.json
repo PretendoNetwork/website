@@ -35,7 +35,7 @@
 		"got": "^11.8.5",
 		"graphql-request": "^4.3.0",
 		"gray-matter": "^4.0.3",
-		"kaitai-struct": "^0.9.0",
+		"lodash.merge": "^4.6.2",
 		"marked": "^4.0.10",
 		"mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
 		"mongoose": "^6.4.0",
