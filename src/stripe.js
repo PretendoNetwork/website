@@ -131,6 +131,7 @@ async function handleStripeEvent(event) {
 				case 'active':
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 1;
+						updateData.server_access_level = 'test';
 					}
 
 					util.assignDiscordMemberTesterRole(discordId).catch(error => {
@@ -142,6 +143,7 @@ async function handleStripeEvent(event) {
 				case 'unpaid': // User missed too many payments
 					if (pnid.access_level < 2) { // only change access level if not staff member
 						updateData.access_level = 0;
+						updateData.server_access_level = 'prod';
 					}
 
 					util.removeDiscordMemberTesterRole(discordId).catch(error => {
