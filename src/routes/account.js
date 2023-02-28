@@ -10,6 +10,7 @@ const requireLoginMiddleware = require('../middleware/require-login');
 const database = require('../database');
 const cache = require('../cache');
 const util = require('../util');
+const { handleStripeEvent } = require('../stripe');
 const logger = require('../logger');
 const config = require('../../config.json');
 const editorJSON =  require('../json/miieditor.json');
@@ -215,7 +216,7 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 				await util.removeDiscordMemberTesterRole(discordId);
 			}
 		}
-		
+
 		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	} catch (error) {
@@ -426,7 +427,7 @@ router.post('/stripe/webhook', async (request, response) => {
 		return response.status(400).send(`Webhook Error: ${error.message}`);
 	}
 
-	await util.handleStripeEvent(event);
+	await handleStripeEvent(event);
 
 	response.json({ received: true });
 });
