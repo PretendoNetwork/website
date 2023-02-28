@@ -10,6 +10,7 @@ const requireLoginMiddleware = require('../middleware/require-login');
 const database = require('../database');
 const cache = require('../cache');
 const util = require('../util');
+const { handleStripeEvent } = require('../stripe');
 const logger = require('../logger');
 const config = require('../../config.json');
 const editorJSON =  require('../json/miieditor.json');
@@ -143,12 +144,29 @@ router.post('/register', async (request, response) => {
 	}
 });
 
-router.get('/logout', async(_request, response) => {
+router.get('/logout', async (_request, response) => {
 	response.clearCookie('refresh_token', { domain: '.pretendo.network' });
 	response.clearCookie('access_token', { domain: '.pretendo.network' });
 	response.clearCookie('token_type', { domain: '.pretendo.network' });
 
 	response.redirect('/');
+});
+
+router.get('/forgot-password', async (request, response) => {
+	response.render('account/forgot-password');
+});
+
+router.post('/forgot-password', async (request, response) => {
+	const apiResponse = await util.apiPostRequest('/v1/forgot-password', {}, request.body);
+	response.json(apiResponse.body);
+});
+
+router.get('/reset-password', async (request, response) => {
+	const renderData = {
+		token: decodeURIComponent(request.query.token)
+	};
+
+	response.render('account/reset-password', renderData);
 });
 
 router.get('/connect/discord', requireLoginMiddleware, async (request, response) => {
@@ -215,7 +233,7 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 				await util.removeDiscordMemberTesterRole(discordId);
 			}
 		}
-		
+
 		response.cookie('success_message', 'Discord account removed successfully', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	} catch (error) {
@@ -426,7 +444,7 @@ router.post('/stripe/webhook', async (request, response) => {
 		return response.status(400).send(`Webhook Error: ${error.message}`);
 	}
 
-	await util.handleStripeEvent(event);
+	await handleStripeEvent(event);
 
 	response.json({ received: true });
 });
