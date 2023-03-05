@@ -1,5 +1,3 @@
-const config = require('../../../config.json');
-
 const passwordInput = document.querySelector('#password');
 const passwordConfirmInput = document.querySelector('#password_confirm');
 const tokenInput = document.querySelector('#token');
@@ -7,7 +5,7 @@ const tokenInput = document.querySelector('#token');
 document.querySelector('form').addEventListener('submit', function (event) {
 	event.preventDefault();
 
-	fetch(`${config.api_base}/v1/reset-password`, {
+	fetch('https://api.pretendo.cc/v1/reset-password', {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
