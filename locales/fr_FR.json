@@ -343,7 +343,20 @@
 			"Modérateur",
 			"Développeur"
 		],
-		"account": "Compte"
+		"account": "Compte",
+		"forgotPassword": {
+			"input": "Adresse mail ou PNID",
+			"submit": "Soumettre",
+			"header": "Mot de passe oublié",
+			"sub": "Entrez votre adresse email/PNID ci-dessous"
+		},
+		"resetPassword": {
+			"header": "Réinitialiser le mot de passe",
+			"sub": "Entrez le nouveau mot de passe ci-dessous",
+			"password": "Mot de Passe",
+			"confirmPassword": "Confirmez le mot de passe",
+			"submit": "Soumettre"
+		}
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",
