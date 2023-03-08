@@ -305,7 +305,20 @@
 			"unavailable": "Nicht verfügbar"
 		},
 		"banned": "Gebannt",
-		"account": "Konto"
+		"account": "Konto",
+		"forgotPassword": {
+			"sub": "Gib deine E-Mail oder deine PNID ein",
+			"input": "Email-Adresse oder PNID",
+			"header": "Passwort vergessen",
+			"submit": "Bestätigen"
+		},
+		"resetPassword": {
+			"header": "Passwort zurücksetzen",
+			"sub": "Gib das neue Passwort ein",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"submit": "Bestätigen"
+		}
 	},
 	"upgrade": {
 		"title": "Upgrade",
