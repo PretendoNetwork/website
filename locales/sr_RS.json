@@ -1,5 +1,76 @@
 {
 	"nav": {
-		"account": "Nalog"
+		"account": "Nalog",
+		"credits": "Zasluge",
+		"docs": "Dokumentacija",
+		"faq": "FAQ",
+		"blog": "Blog",
+		"donate": "Doniraj",
+		"accountWidget": {
+			"logout": "Odjavi se",
+			"settings": "Podešavanja"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Upoznaj tim",
+				"about": "O projektu",
+				"faq": "Najčešće postavljena pitanja",
+				"progress": "Proveri napredak i ciljeve projekta"
+			}
+		},
+		"progress": "Napredak",
+		"about": "Opis"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Šta je Pretendo?"
+			},
+			{
+				"question": "Da li će moji postojeći NNID-evi raditi na Pretendu?"
+			},
+			{
+				"question": "Kako da koristim Pretendo?"
+			},
+			{},
+			{},
+			{},
+			{
+				"question": "Da li će Pretendo podržavati Wii/Switch?"
+			},
+			{
+				"question": "Da li će mi trebati hakovi za povezivanje?"
+			}
+		],
+		"title": "Najčešće postavljena pitanja"
+	},
+	"progress": {
+		"title": "Napredak"
+	},
+	"hero": {
+		"buttons": {
+			"readMore": "Pročitaj više"
+		}
+	},
+	"aboutUs": {
+		"title": "O nama"
+	},
+	"modals": {
+		"cancel": "Otkaži",
+		"close": "Zatvori",
+		"confirm": "Potvrdi"
+	},
+	"showcase": {
+		"title": "Šta mi pravimo"
+	},
+	"docs": {
+		"search": {
+			"label": "Kod greške"
+		},
+		"sidebar": {
+			"install": "Instaliraj",
+			"search": "Pretraga",
+			"welcome": "Dobrodošli"
+		}
 	}
 }
