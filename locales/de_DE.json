@@ -321,7 +321,7 @@
 		}
 	},
 	"upgrade": {
-		"title": "Upgrade",
+		"title": "Upgraden",
 		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
