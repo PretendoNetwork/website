@@ -347,7 +347,20 @@
 			"Desarrollador"
 		],
 		"banned": "Baneado",
-		"account": "Cuenta"
+		"account": "Cuenta",
+		"forgotPassword": {
+			"header": "Olvidé mi contraseña",
+			"sub": "Introduzca su dirección de correo electrónico/PNID a continuación",
+			"input": "Dirección de correo electrónico o PNID",
+			"submit": "Enviar"
+		},
+		"resetPassword": {
+			"password": "Contraseña",
+			"confirmPassword": "Confirme la contraseña",
+			"submit": "Enviar",
+			"header": "Restablecer la contraseña",
+			"sub": "Introduzca una nueva contraseña"
+		}
 	},
 	"upgrade": {
 		"description": "Alcanzar la meta mensual hará de Pretendo un trabajo de tiempo completo, brindando actualizaciones de mejor calidad a un ritmo más rápido.",

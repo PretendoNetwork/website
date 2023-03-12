@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spiel-Server",
 		"title": "Rekonstruiert",
-		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS und die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
 		"buttons": {
 			"readMore": "Mehr lesen"
 		}
@@ -305,10 +305,23 @@
 			"unavailable": "Nicht verfügbar"
 		},
 		"banned": "Gebannt",
-		"account": "Konto"
+		"account": "Konto",
+		"forgotPassword": {
+			"sub": "Gib deine E-Mail oder deine PNID ein",
+			"input": "Email-Adresse oder PNID",
+			"header": "Passwort vergessen",
+			"submit": "Bestätigen"
+		},
+		"resetPassword": {
+			"header": "Passwort zurücksetzen",
+			"sub": "Gib das neue Passwort ein",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"submit": "Bestätigen"
+		}
 	},
 	"upgrade": {
-		"title": "Upgrade",
+		"title": "Upgraden",
 		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",

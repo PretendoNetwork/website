@@ -298,7 +298,7 @@
 				"removeDiscord": "Rimuovi account Discord",
 				"noDiscordLinked": "Nessun account Discord collegato.",
 				"linkDiscord": "Collega account Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Notizie",
 				"newsletterPrompt": "Ricevi aggiornamenti sul progetto via email (puoi annullare in qualunque momento)",
 				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu",
 				"userSettings": "Impostazioni utente",
@@ -309,7 +309,20 @@
 			"upgrade": "Fai l'upgrade del tuo account",
 			"unavailable": "Non disponibile"
 		},
-		"account": "Account"
+		"account": "Account",
+		"forgotPassword": {
+			"header": "Password Dimenticata",
+			"sub": "Inserisci qua sotto il tuo indirizzo email o PNID",
+			"input": "Indirizzo email o PNID",
+			"submit": "Invia"
+		},
+		"resetPassword": {
+			"header": "Ripristino password",
+			"sub": "Inserisci qua sotto la nuova password",
+			"password": "Password",
+			"submit": "Invia",
+			"confirmPassword": "Conferma password"
+		}
 	},
 	"localizationPage": {
 		"title": "Localizziamo",
