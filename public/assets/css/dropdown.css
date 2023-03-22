@@ -11,7 +11,7 @@
 
 .select-box .options-container {
 	max-height: 0;
-	width: fit-content;
+	width: min(90vw, 240px);
 	opacity: 0;
 	transition: all 0.4s;
 	overflow: hidden;
@@ -35,7 +35,7 @@
 }
 
 .select-box .options-container.active {
-	max-height: 240px;
+	max-height: 320px;
 	opacity: 1;
 	overflow-y: auto;
 }

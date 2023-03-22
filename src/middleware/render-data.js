@@ -1,5 +1,7 @@
 const util = require('../util');
 const database = require('../database');
+const fs = require('fs');
+const localeFileNames = fs.readdirSync(`${__dirname}/../../locales`);
 
 async function renderDataMiddleware(request, response, next) {
 	if (request.path.startsWith('/assets')) {
@@ -13,6 +15,62 @@ async function renderDataMiddleware(request, response, next) {
 	// Get user local
 	const reqLocale = request.locale;
 	const locale = util.getLocale(reqLocale.language, reqLocale.region);
+
+	let localeList = localeFileNames.map(locale => {
+		const code = locale.replace('.json', '').replace('_', '-');
+
+		// Check if it's a real language code, or a custom one
+		if (!code.includes('@')) {
+			const enDisp = new Intl.DisplayNames([code], {
+				type: 'language',
+				languageDisplay: 'standard'
+			});
+			const languageName = enDisp.of(code);
+
+			return {
+				code,
+				languageName
+			};
+		} else {
+			switch (code) {
+				case 'en@uwu':
+					return {
+						code,
+						languageName: 'English (lolcat)'
+					};
+
+				default:
+					return {
+						code,
+						languageName: 'Unknown'
+					};
+			}
+		}
+	});
+
+	// sort the array alphabetically by languageName while making sure that objects with language codes starting with 'en' are at the top
+	localeList = localeList.sort((a, b) => {
+		if (a.code.startsWith('en') && !b.code.startsWith('en')) {
+			return -1;
+		} else if (!a.code.startsWith('en') && b.code.startsWith('en')) {
+			return 1;
+		} else {
+			return a.languageName.localeCompare(b.languageName);
+		}
+	});
+
+	// move all the objects with language codes containing '@' to the end of the array
+	localeList = localeList.sort((a, b) => {
+		if (a.code.includes('@') && !b.code.includes('@')) {
+			return 1;
+		} else if (!a.code.includes('@') && b.code.includes('@')) {
+			return -1;
+		} else {
+			return 0;
+		}
+	});
+
+	response.locals.localeList = localeList;
 
 	response.locals.locale = locale;
 	response.locals.localeString = reqLocale.toString();
