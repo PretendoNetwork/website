@@ -208,141 +208,14 @@
 		<!-- Ordered the locales in the same way Google orders them -->
 		<div class="select-box locale-dropdown" data-dropdown>
 			<div class="options-container">
-				<div class="option">
-					<input type="radio" class="radio" id="en-US" name="category" />
-					<label for="en-US">
-						<div class="item"><span class="locale-names">English</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ast" name="category" />
-					<label for="ast">
-						<div class="item"><span class="locale-names">Asturianu</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ca-ES" name="category" />
-					<label for="ca-ES">
-						<div class="item"><span class="locale-names">Català</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="cs-CZ" name="category" />
-					<label for="cs-CZ">
-						<div class="item"><span class="locale-names">Čeština</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="de-DE" name="category" />
-					<label for="de-DE">
-						<div class="item"><span class="locale-names">Deutsch</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="es-ES" name="category" />
-					<label for="es-ES">
-						<div class="item"><span class="locale-names">Español</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="fr-FR" name="category" />
-					<label for="fr-FR">
-						<div class="item"><span class="locale-names">Français</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="it-IT" name="category" />
-					<label for="it-IT">
-						<div class="item"><span class="locale-names">Italiano</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="nl-NL" name="category" />
-					<label for="nl-NL">
-						<div class="item"><span class="locale-names">Nederlands</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="nb-NO" name="category" />
-					<label for="nb-NO">
-						<div class="item"><span class="locale-names">Norsk</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="pl-PL" name="category" />
-					<label for="pl-PL">
-						<div class="item"><span class="locale-names">Polski</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="pt-PT" name="category" />
-					<label for="pt-PT">
-						<div class="item"><span class="locale-names">Português</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="pt-BR" name="category" />
-					<label for="pt-BR">
-						<div class="item"><span class="locale-names">Português (Brasil)</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ro-RO" name="category" />
-					<label for="ro-RO">
-						<div class="item"><span class="locale-names">Română</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="tr-TR" name="category" />
-					<label for="tr-TR">
-						<div class="item"><span class="locale-names">Türkçe</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="kk-KZ" name="category" />
-					<label for="kk-KZ">
-						<div class="item"><span class="locale-names">қазақ тілі</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ru-RU" name="category" />
-					<label for="ru-RU">
-						<div class="item"><span class="locale-names">Pусский</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="uk-UA" name="category" />
-					<label for="uk-UA">
-						<div class="item"><span class="locale-names">Yкраї́нська</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ar-AR" name="category" />
-					<label for="ar-AR">
-						<div class="item"><span class="locale-names">اَلْعَرَبِيَّةُ</span></div>
-					</label>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="zh-CN" name="category" />
-					<label for="zh-CN">
-						<div class="item"><span class="locale-names">中文（简体）</span></div>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="zh-Hant" name="category" />
-					<label for="zh-Hant">
-						<div class="item"><span class="locale-names">中文（繁體）</span></div>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ja-JP" name="category" />
-					<label for="ja-JP">
-						<div class="item"><span class="locale-names">日本語</span></div>
-				</div>
-				<div class="option">
-					<input type="radio" class="radio" id="ko-KR" name="category" />
-					<label for="ko-KR">
-						<div class="item"><span class="locale-names">한국어</span></div>
-					</label>
-				</div>
+				{{#each localeList}}
+					<div class="option">
+						<input type="radio" class="radio" id="{{code}}" name="category" />
+						<label for="{{code}}">
+							<div class="item"><span class="locale-names">{{languageName}}</span></div>
+						</label>
+					</div>
+				{{/each}}
 			</div>
 			<div class="locale-dropdown-toggle">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
