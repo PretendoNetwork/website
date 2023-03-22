@@ -12,9 +12,9 @@ async function renderDataMiddleware(request, response, next) {
 		return next();
 	}
 
-	// Get user local
-	const reqLocale = request.locale;
-	const locale = util.getLocale(reqLocale.language, reqLocale.region);
+	// Get user locale
+	const reqLocale = request.cookies.preferredLocale || request.locale.toString();
+	const locale = util.getLocale(reqLocale);
 
 	let localeList = localeFileNames.map(locale => {
 		const code = locale.replace('.json', '').replace('_', '-');
@@ -73,7 +73,7 @@ async function renderDataMiddleware(request, response, next) {
 	response.locals.localeList = localeList;
 
 	response.locals.locale = locale;
-	response.locals.localeString = reqLocale.toString();
+	response.locals.localeString = reqLocale;
 
 	// Get message cookies
 	response.locals.success_message = request.cookies.success_message;
