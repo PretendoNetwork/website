@@ -16,8 +16,10 @@ function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
 }
 
-function getLocale(language, region) {
-	const path = `${__dirname}/../locales/${language}_${region}.json`;
+function getLocale(locale) {
+	const localeFileName = locale.replace('-', '_');
+
+	const path = `${__dirname}/../locales/${localeFileName}.json`;
 
 	if (fs.pathExistsSync(path)) {
 		const selectedLocale = require(path);
@@ -26,7 +28,7 @@ function getLocale(language, region) {
 		return finalLocale;
 	}
 
-	logger.warn(`Could not find locale ${language}_${region}! Loading en_US`);
+	logger.warn(`Could not find locale ${localeFileName}! Loading en_US`);
 
 	return baseLocale;
 }
