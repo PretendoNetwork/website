@@ -1,1 +1,236 @@
-{}
+{
+	"nav": {
+		"about": "infoz",
+		"docs": "doks",
+		"credits": "kwedits",
+		"blog": "readinz",
+		"account": "kitteh",
+		"donate": "MUNY $$$",
+		"accountWidget": {
+			"logout": "kthxbai",
+			"settings": "opshuns"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "see kittehs",
+				"about": "seez infomations",
+				"faq": "frekuent questionz askd",
+				"progress": "see projekt progrez",
+				"blog": "new thingzz, but smol"
+			}
+		},
+		"progress": "eta wen"
+	},
+	"hero": {
+		"subtitle": "onlien gamez!!",
+		"title": "bak from teh dead",
+		"buttons": {
+			"readMore": "reed mor!!"
+		},
+		"text": "pretender iz fre an sethru replazement 4 meanie netwrk's servrs for thre d s an wee yu, letin you plae gaems aftr dey leav"
+	},
+	"aboutUs": {
+		"title": "whut doez it do?!!?!!?!",
+		"paragraphs": [
+			"pretender iz a sethru projekt 4 makin zombiz of teh thre d s an wee yu onlien wif shinie lookinz",
+			"bcuz it iz fre an sethru, it livez forevahh!!"
+		]
+	},
+	"progress": {
+		"title": "eta wen!?",
+		"githubRepo": "octokat repozitori"
+	},
+	"faq": {
+		"title": "frekuent questionz askd",
+		"QAs": [
+			{
+				"question": "whut iz pretender??",
+				"answer": "pretender iz a sethru meanie network replazment 4 wee yu an thre d s. kittehs want to kep gaemin, so we maek it again!!"
+			},
+			{
+				"question": "kan i keep my meanie network id 4 pretender?",
+				"answer": "noo!!!! we don wanna keep ur senzitiv dataz!! only pretender id!!"
+			},
+			{
+				"question": "how doez kitteh use pretender??",
+				"answer": "pretender iz only 4 kittehz wif subzcription!! soemtimez pretender haz open betaz 4 u doe! wil be fre latr."
+			},
+			{
+				"question": "eta wen 4 gaem??",
+				"answer": "gud question. kitteh haz no idea!! multiple kittehs be workin on stuffs."
+			},
+			{
+				"question": "doez pretender work on me faek gaemr!?",
+				"answer": "yez! anythin that workz wif meanie network workz wif pretender. <a href=\"https://pretendo.network/docs/install/cemu\">only cemu haz it tho rite now!</a>"
+			},
+			{
+				"question": "if kitteh ban'd from teh meanie network, iz still ban'd on pretender?",
+				"answer": "no!! yu is not ban'd! ther is rulez tho, so yu can stil get bananad!!"
+			},
+			{
+				"question": "can kitteh gaem on othr kitteh gaemin??",
+				"answer": "nonO!! kitteh can only gaem on teh wee yu an thre d s! <a href=\"https://wiimmfi.de/\" target=\"_blank\">wee has wiimmfi tho!!</a>"
+			},
+			{
+				"question": "doez kitteh need hax to gaem?!",
+				"answer": "yez!! kitteh needz hax to gaem. mak sure kitteh press alt f4 4 epik gaemin!!"
+			}
+		],
+		"text": "herez sum questionz yu lik 2 ask!!"
+	},
+	"showcase": {
+		"title": "thiz iz whut kittehs maek",
+		"text": "we gots lotz of stuffs! herez sum stuffs.",
+		"cards": [
+			{
+				"title": "onlien gamez!!",
+				"caption": "play ur gaemz wit othr kittehs!"
+			},
+			{
+				"title": "kittehverse",
+				"caption": "a remeow of mewverse if kittehs made it shiny!!"
+			},
+			{
+				"title": "cemu gaemin!!",
+				"caption": "gaem on ur shiny magik box!!"
+			}
+		]
+	},
+	"credits": {
+		"title": "dev kittehs",
+		"text": "see kittehz who maek pretender!!",
+		"people": [
+			{
+				"name": "swagtastic kitteh",
+				"picture": "https://github.com/jonbarrow.png",
+				"caption": "projekt owner an dev kitteh",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"name": "jemmeow (caramelkitteh)",
+				"caption": "kittehverse reserch an dev",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"name": "rambo6meow",
+				"caption": "onlien instalr an konsole reserch",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "quarkat",
+				"caption": "BOSS reserch an patchy dev",
+				"github": "https://github.com/ashquarky",
+				"picture": "https://github.com/ashquarky.png"
+			},
+			{
+				"caption": "konsole reserch",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "supermariodakitteh",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"name": "catjip fr",
+				"caption": "interwebz dev",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "pinkkittehs",
+				"caption": "interwebs dev",
+				"picture": "https://github.com/ashmonty.png",
+				"github": "https://github.com/ashmonty"
+			},
+			{
+				"name": "mrkat",
+				"caption": "paintr",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"text": "theze kittehs helpd!!",
+		"people": [
+			{
+				"name": "katwhiskers",
+				"caption": "crunchy bookz dev",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "starykitteh",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "thre d s dev an nex inspektor",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "billehkitteh",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "findr of teh stuffs"
+			},
+			{
+				"name": "shutterkat2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "kitteh kart 7 an thre d s reserch"
+			},
+			{
+				"name": "revers",
+				"caption": "mewverse infos sharer",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "kittay",
+				"special": "speshul thx",
+				"caption": "reserch on de meanie networks datas",
+				"github": "https://github.com/Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"name": "katstar",
+				"github": "https://github.com/ninstar",
+				"caption": "arts 4 de mew editr an kittehverse reaktions",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"name": "octokat kittehs",
+				"caption": "meows an stuffs",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		],
+		"title": "speshul thx"
+	},
+	"discordJoin": {
+		"text": "entr de discord for new infoz from kittehs 4 pretender!!",
+		"widget": {
+			"text": "see whut kittehs r up 2",
+			"button": "waltz rite in"
+		},
+		"title": "listen 2 teh kittehs"
+	},
+	"footer": {
+		"socials": "soshuls",
+		"usefulLinks": "linkies",
+		"widget": {
+			"captions": [
+				"meow wit other kittehs!",
+				"join teh discord!"
+			],
+			"button": "waltz in!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"im bandwidth teh rakoon, an i luv bitin teh cablez goin into pretender's serverz. yummer!!",
+			"sumtimez, kittehs ask meh, u gonna get meanie network on u? i sez that my aunt is meanie company employz an iz fine!!",
+			"interwebzkit 537 iz teh bezt verzion of webzkit for wee yu. nu, we arent gonna purrt krome 2 teh wee yu.",
+			"i cant wait 4 teh eventual annihilashun of teh clok!",
+			"teh wee yu is aktually a sneak rate konsole: teh komershuls wer relly bad, but teh konsole is gret!! ..huh. wait, meh kittehpad isnt konnekting to meh wee..",
+			"sooper maro wurld too - yoshees is land's theme is amazng!!",
+			"meh favorit nontendo swatch releses hav ben nontendo swatch onlien + expanshun pak, nontendo swatch onlien + rumbly pak, nontendo swatch online + oflin pley pak, nontendo swatch onlin + yet anotha port pak, an nontendo swatch onlin + bren smert trainin pak. yu kan rely tel nontendo kares."
+		]
+	}
+}
