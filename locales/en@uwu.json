@@ -19,7 +19,8 @@
 				"blog": "new thingzz, but smol"
 			}
 		},
-		"progress": "eta wen"
+		"progress": "eta wen",
+		"faq": "faqz"
 	},
 	"hero": {
 		"subtitle": "onlien gamez!!",
@@ -102,7 +103,7 @@
 		"people": [
 			{
 				"name": "swagtastic kitteh",
-				"picture": "https://i.imgur.com/Yd7XfHp.png",
+				"picture": "https://github.com/jonbarrow.png",
 				"caption": "projekt owner an dev kitteh",
 				"github": "https://github.com/jonbarrow"
 			},
@@ -231,11 +232,152 @@
 			"teh wee yu is aktually a sneak rate konsole: teh komershuls wer relly bad, but teh konsole is gret!! ..huh. wait, meh kittehpad isnt konnekting to meh wee..",
 			"sooper maro wurld too - yoshees is land's theme is amazng!!",
 			"meh favorit nontendo swatch releses hav ben nontendo swatch onlien + expanshun pak, nontendo swatch onlien + rumbly pak, nontendo swatch online + oflin pley pak, nontendo swatch onlin + yet anotha port pak, an nontendo swatch onlin + bren smert trainin pak. yu kan rely tel nontendo kares.",
-			null,
+			"liek, \"yu kno ash, bles her heawt, she uwus all day\" is the sothern nice wae of sayin \"ash uwus all teh tiem and its realy weird an stupid an i wish they didnt\"",
 			"Connection terminated. I'm sorry to interrupt you, Elizabeth, if you still even remember that name, But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for blood has driven you in endless circles, chasing the cries of children in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. None of you will. This is where your story ends. And to you, my brave volunteer, who somehow found this job listing not intended for you, although there was a way out planned for you, I have a feeling that's not what you want. I have a feeling that you are right where you want to be. I am remaining as well. I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fade away. As the agony of every tragedy should. And to you monsters trapped in the corridors, be still and give up your spirits. They don't belong to you. For most of you, I believe there is peace and perhaps more waiting for you after the smoke clears. Although, for one of you, the darkest pit of Hell has opened to swallow you whole, so don't keep the devil waiting, old friend. My daughter, if you can hear me, I knew you would return as well. It's in your nature to protect the innocent. I'm sorry that on that day, the day you were shut out and left to die, no one was there to lift you up into their arms the way you lifted others into yours, and then, what became of you. I should have known you wouldn't be content to disappear, not my daughter. I couldn't save you then, so let me save you now. It's time to rest - for you, and for those you have carried in your arms. This ends for all of us. End communication."
 		]
 	},
 	"progressPage": {
-		"title": "R pogrez!!"
+		"title": "projekt progress",
+		"description": "see teh projekt stuffs!! (kitteh refresh evry hour!!)"
+	},
+	"account": {
+		"loginForm": {
+			"email": "katmail",
+			"password": "secret kitteh word",
+			"register": "new kitteh!",
+			"login": "login to kitteh",
+			"detailsPrompt": "smash in yor kitteh infoz belo",
+			"miiName": "mew name",
+			"loginPrompt": "im alredy a kitteh!",
+			"username": "kitteh name",
+			"forgotPassword": "i forget secret kitteh word!! halp!",
+			"confirmPassword": "confirm secret kitteh words",
+			"registerPrompt": "maek a new kitteh"
+		},
+		"settings": {
+			"settingCards": {
+				"userSettings": "kitteh opshuns",
+				"profile": "kitteh",
+				"nickname": "kitteh faek naem",
+				"birthDate": "kitteh birtday",
+				"gender": "kitteh type",
+				"timezone": "kitteh clok",
+				"serverEnv": "kitteh gaeming plaec",
+				"signInSecurity": "kitteh login an sekure",
+				"country": "kitteh home",
+				"production": "produkton",
+				"beta": "early kitteh",
+				"upgradePrompt": "early kitteh gaeming is only 4 early kittehs!<br>bekom a super kitteh to akces.",
+				"hasAccessPrompt": "you r early kitteh!! :3",
+				"email": "katmail",
+				"passwordResetNotice": "if secret kitteh words are changd, you wont stay logged in to kitteh!!",
+				"signInHistory": "kitteh login watchin",
+				"discord": "discord",
+				"newsletterPrompt": "get projekt infoz in yor katmail (you can alwayz stop getin newz)",
+				"password": "secret kitteh word",
+				"fullSignInHistory": "sho all kitteh login watchin",
+				"otherSettings": "other opshuns",
+				"connectedToDiscord": "meowing in discord as",
+				"removeDiscord": "stop meowing wit discord :(",
+				"linkDiscord": "meow wit discord :3",
+				"noDiscordLinked": "not meowin wit discord!! :(",
+				"newsletter": "new kitteh infoz",
+				"passwordPrompt": "entr yor kitteh secret wordz 4 cemu datas",
+				"no_newsletter_notice": "sori.. no new kitteh infoz.. try latr!!",
+				"no_signins_notice": "kitteh is not watchin logins... i wil latr!!",
+				"no_edit_from_dashboard": "changin yor kitteh opshuns from interwebs is nono!! do from yor konsole."
+			},
+			"downloadFiles": "downlod kitteh datas",
+			"downloadFilesDescription": "(kitteh datas wil not work on meanie network!!)",
+			"unavailable": "no :(",
+			"upgrade": "become super kitteh"
+		},
+		"account": "kitteh",
+		"forgotPassword": {
+			"header": "forgot secret kitteh word",
+			"sub": "entr katmail or kitteh name belo",
+			"input": "katmail or kitteh name",
+			"submit": "gogo!!"
+		},
+		"resetPassword": {
+			"sub": "entr new secret kitteh word belo",
+			"submit": "gogo!!",
+			"header": "new secret kitteh word",
+			"password": "secret kitteh word",
+			"confirmPassword": "confirm secret kitteh word"
+		},
+		"accountLevel": [
+			"normal kitteh",
+			"early kitteh",
+			"watchin kitteh",
+			"dev kitteh"
+		],
+		"banned": "bad kitteh &gt;:("
+	},
+	"upgrade": {
+		"unsubConfirm": "yea, i wan leave",
+		"changeTierPrompt": "are u sur u wanna stop bein <span class=\"oldtier\">oldtiername</span> an go 2 <span class=\"newtier\">newtiername</span>?!",
+		"title": "bekom super kitteh",
+		"month": "munth",
+		"tierSelectPrompt": "select super kitteh level",
+		"unsub": "stop being super kitteh :(",
+		"description": "reachin goal givez kittehz muns for devin, gettin better new stuffz fastr!!",
+		"back": "bak",
+		"unsubPrompt": "are u sur u wanna stop bein <span>tiername</span>?! u will lose all kitteh perkz instantly!!",
+		"changeTier": "change super kitteh level",
+		"changeTierConfirm": "yezyez, change!!"
+	},
+	"docs": {
+		"quickLinks": {
+			"links": [
+				{
+					"header": "get pretender",
+					"caption": "view teh settin up instruktions"
+				},
+				{
+					"caption": "find here!!",
+					"header": "o noes!! eror?!"
+				}
+			],
+			"header": "speedy linkz"
+		},
+		"sidebar": {
+			"install_extended": "get pretender",
+			"install": "instal",
+			"welcome": "helo!!",
+			"search": "serch",
+			"juxt_err": "eror kodes - kittehverse",
+			"getting_started": "getin start!!"
+		},
+		"search": {
+			"caption": "tell kitteh eror and u wil find whut u seek..",
+			"no_match": "o no.. eror not found?!",
+			"title": "o noes!! u got eror?!",
+			"label": "eror kode"
+		},
+		"missingInLocale": "this pag doezn't work in LOLCAT!? crazi!! herez englizh verson.."
+	},
+	"modals": {
+		"close": "byebye",
+		"confirm": "yaya!!",
+		"cancel": "nono!!"
+	},
+	"blogPage": {
+		"title": "readinz",
+		"description": "new thingz, but smol! if kitteh wants mor, <a href=\"https://pretendo.network/account/upgrade\" target=\"_blank\">support dev kittehs!</a>",
+		"published": "keybord smash'd by",
+		"publishedOn": "on"
+	},
+	"localizationPage": {
+		"button": "testin datas",
+		"fileInput": "datas 4 testin",
+		"title": "letz meow!!",
+		"description": "gimme a jzon i kan see to test!",
+		"instructions": "see meowin instruktions",
+		"filePlaceholder": "mew://a.meow.site/4_jzon.jzon"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/munth, <span>${perc}%</span> of teh monthly goal",
+		"upgradePush": "u wanna become super kitteh and get kool perkz?? <a href=\"/account/upgrade\">upgrade now!!</a>"
 	}
 }
