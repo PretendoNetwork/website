@@ -39,7 +39,7 @@
 	},
 	"progress": {
 		"title": "Progress",
-		"githubRepo": "Github repository"
+		"githubRepo": "GitHub repository"
 	},
 	"faq": {
 		"title": "Frequently Asked Questions",
@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is, you will be able to use Pretendo by following the instructions in our documentation."
 			},
 			{
 				"question": "Do you know when feature/service will be ready?",
@@ -75,7 +75,7 @@
 			},
 			{
 				"question": "Will I need hacks to connect?",
-				"answer": "Yes, you will need to hack your device to connect; however, on Wii U you will only need access to the Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
+				"answer": "Yes, you will need to hack your device to connect. Please see the <a href=\"https://wiiu.hacks.guide\" target=\"_blank\">Wii U</a> and <a href=\"https://3ds.hacks.guide\" target=\"_blank\">3DS</a> hacking guides to do so."
 			}
 		]
 	},
@@ -371,8 +371,7 @@
 			"welcome": "Welcome",
 			"install_extended": "Install Pretendo",
 			"install": "Install",
-			"search": "Search",
-			"juxt_err": "Error codes - Juxt"
+			"search": "Search"
 		}
 	},
 	"modals": {

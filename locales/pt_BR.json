@@ -341,8 +341,7 @@
 			"welcome": "Bem-vindo",
 			"install_extended": "Instalar a Pretendo",
 			"search": "Pesquisar",
-			"install": "Instalar",
-			"juxt_err": "Códigos de erro - Juxt"
+			"install": "Instalar"
 		}
 	},
 	"upgrade": {
