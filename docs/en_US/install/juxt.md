@@ -44,7 +44,7 @@ Once the patcher is done running and your console has rebooted, you're done! Hav
 
 <img src="/assets/images/docs/install/juxt/martini-success.png" width=100% height=auto/>
 
-If you encountered any errors, try [searching](/docs/search) for the error code. If that doesn't work, get in touch with a developer in our [Discord](https://invite.gg/pretendo).
+If you encountered any errors, try [searching](/docs/search) for the error code. If that doesn't work, get in touch with a developer in our [Discord](https://discord.gg/pretendo).
 
 
 
