@@ -212,7 +212,7 @@
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de a href=\"/account/upgrade\"&gt;upgrade pagina."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade pagina</a>."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet je zeker dat je je abonnement op <span class=\"oldtier\">oldtiername</span> wilt opzeggen en je wilt aanmelden voor <span class=\"newtier\">newtiername</span>?",
