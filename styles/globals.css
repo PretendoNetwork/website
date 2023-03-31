@@ -1,6 +1,6 @@
 :root {
 
-	--width: 1400px;
+	--width: 1500px;
 	--maxwidth: min(var(--width), 90%);
 
 	/* 1 is the base color, <1 are darker variations and >1 are lighter */
