@@ -5,6 +5,22 @@
 	margin: 1.5rem 0;
 }
 
+.showcaseSection {
+	position: relative;
+	padding-bottom: 0;
+}
+
+.showcaseSection::after {
+	content: "";
+	width: 400vw;
+	height: calc(100% + 256px);
+	margin-left: -50vw;
+	background: linear-gradient(0deg, rgba(19, 22, 36, 0) 0%, var(--bg-shade-0) 100%);
+	position: absolute;
+	top: 48px;
+	z-index: -1;
+}
+
 .showcaseTail {
 	display: flex;
 	align-items: center;

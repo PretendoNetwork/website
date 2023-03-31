@@ -5,6 +5,7 @@ import Title from '../components/Title/Title';
 import Section from '../components/Section/Section';
 import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
 import Faq from '../components/Faq/Faq';
+import Hero from '../components/Hero/Hero';
 
 import Image from 'next/image';
 
@@ -16,6 +17,7 @@ import juxtImage from '../public/assets/images/showcase/juxt.png';
 import networkImage from '../public/assets/images/showcase/network.png';
 import pcmouseImage from '../public/assets/images/showcase/pcmouse.png';
 import wiiuchatImage from '../public/assets/images/showcase/wiiuchat.png';
+import Caption from '../components/Caption/Caption';
 
 const showcaseImages = {
 	juxt: juxtImage,
@@ -38,7 +40,16 @@ export default function Home({ locale }) {
 	const router = useRouter();
 	return (
 		<main>
+			<Section>
+				<Hero />
+			</Section>
 			<div id="showcase">
+				<Section className={styles.showcaseSection}>
+					<Title>What we make.</Title>
+					<Caption>
+						Our project has many components. Here are some of them.
+					</Caption>
+				</Section>
 				{locale.showcase.map((element, i) => {
 					return (
 						<ShowcaseSection
@@ -74,12 +85,12 @@ export default function Home({ locale }) {
 						</Button>
 					</div>
 				</Section>
-				<Section>
-					<Title id="faq">Frequently Asked Questions.</Title>
-					<p className={styles.caption}>{locale.faq.text}</p>
-					<Faq questionObject={locale.faq.QAs} />
-				</Section>
 			</div>
+			<Section>
+				<Title id="faq">{locale.faq.title}</Title>
+				<p className={styles.caption}>{locale.faq.text}</p>
+				<Faq questionObject={locale.faq.QAs} />
+			</Section>
 		</main>
 	);
 }

@@ -1,0 +1,89 @@
+.hero {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	align-items: center;
+}
+
+.subtitle {
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 0;
+	margin-bottom: -0.75rem;
+	color: var(--text-shade-3);
+}
+
+.buttons {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	gap: 1rem;
+	margin-top: 2.5rem;
+}
+
+
+.images .lightCircle {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--accent-shade-3);
+	border-radius: 50%;
+	width: 512px;
+	height: 512px;
+}
+
+.images .lightCircle::before {
+	content: '';
+	position: absolute;
+	background: var(--bg-shade-0);
+	width: 2048px;
+	height: 2048px;
+	bottom: 0;
+	left: 0;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.images .lightCircle .n2ds {
+	transform: translateX(-7.5%);
+}
+
+.images svg {
+	position: absolute;
+	top: -128px;
+}
+
+.animateDot {
+	animation: dotAnimation 10s infinite;
+}
+@keyframes dotAnimation {
+	0% {
+		cx: 0;
+		cy: 0;
+	}
+	50% {
+		cx: 10px;
+		cy: 10px;
+	}
+	100% {
+		cx: 0;
+		cy: 0;
+	}
+}
+
+
+@media screen and (max-width: 1500px) {
+	.images {
+		transform: scale(0.75);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.hero {
+		grid-template-columns: 1fr;
+	}
+
+	.images {
+		display: none;
+	}
+}
