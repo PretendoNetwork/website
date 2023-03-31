@@ -10,6 +10,13 @@
 	cursor: pointer;
 }
 
+.button.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+}
+
 .button:hover {
 	background: var(--bg-shade-3-5);
 }
