@@ -313,7 +313,20 @@
 			"Moderador",
 			"Desenvolvedor"
 		],
-		"banned": "Banido"
+		"banned": "Banido",
+		"forgotPassword": {
+			"header": "Esqueci a senha",
+			"input": "E-mail ou PNID",
+			"submit": "Enviar",
+			"sub": "Coloque seu e-mail ou PNID abaixo"
+		},
+		"resetPassword": {
+			"header": "Resetar Senha",
+			"sub": "Insira sua nova senha abaixo",
+			"password": "Senha",
+			"confirmPassword": "Confirmar senha",
+			"submit": "Enviar"
+		}
 	},
 	"docs": {
 		"missingInLocale": "Esta página não está disponível no seu idioma. Por favor, confira a versão em Inglês abaixo.",
@@ -326,7 +339,7 @@
 				},
 				{
 					"caption": "Pesquise por ele aqui",
-					"header": "Deu erro?"
+					"header": "Ocorreu um erro?"
 				}
 			]
 		},
