@@ -6,7 +6,7 @@
 			<svg width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8ZM40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16Zm176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16Z"/></svg>
 		</button>
 		<a href="/" class="logo-link">
-			<svg xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
+			<svg role="img" aria-label="Pretendo" xmlns="http://www.w3.org/2000/svg" width="120" height="39.876">
 				<g id="logo_type" data-name="logo type" transform="translate(-553 -467)">
 					<g id="logo" transform="translate(553 467)">
 						<rect id="XMLID_158_" width="39.876" height="39.876" fill="#9d6ff3" opacity="0" />
@@ -207,7 +207,7 @@
 	<div class="right-section">
 		<!-- Ordered the locales in the same way Google orders them -->
 		<div class="select-box locale-dropdown" data-dropdown>
-			<div class="options-container">
+			<div class="options-container" id="toggable-languages">
 				{{#each localeList}}
 					<div class="option">
 						<input type="radio" class="radio" id="{{code}}" name="category" />
@@ -217,8 +217,8 @@
 					</div>
 				{{/each}}
 			</div>
-			<div class="locale-dropdown-toggle">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+			<div class="locale-dropdown-toggle" aria-controls="toggable-languages">
+				<svg role="img" aria-label="Toggle Language List" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 			</div>
 		</div>
 
@@ -252,7 +252,7 @@
 		{{else}}
 			<div class="user-widget-wrapper">
 				<a class="login-link" href="/account/login">
-					<svg width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M232 128a104 104 0 1 0-174.2 76.7l1.3 1.2a104 104 0 0 0 137.8 0l1.3-1.2A103.7 103.7 0 0 0 232 128Zm-192 0a88 88 0 1 1 153.8 58.4a79.2 79.2 0 0 0-36.1-28.7a48 48 0 1 0-59.4 0a79.2 79.2 0 0 0-36.1 28.7A87.6 87.6 0 0 1 40 128Zm56-8a32 32 0 1 1 32 32a32.1 32.1 0 0 1-32-32Zm-21.9 77.5a64 64 0 0 1 107.8 0a87.8 87.8 0 0 1-107.8 0Z"/></svg>
+					<svg role="img" aria-label="Login" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M232 128a104 104 0 1 0-174.2 76.7l1.3 1.2a104 104 0 0 0 137.8 0l1.3-1.2A103.7 103.7 0 0 0 232 128Zm-192 0a88 88 0 1 1 153.8 58.4a79.2 79.2 0 0 0-36.1-28.7a48 48 0 1 0-59.4 0a79.2 79.2 0 0 0-36.1 28.7A87.6 87.6 0 0 1 40 128Zm56-8a32 32 0 1 1 32 32a32.1 32.1 0 0 1-32-32Zm-21.9 77.5a64 64 0 0 1 107.8 0a87.8 87.8 0 0 1-107.8 0Z"/></svg>
 				</a>
 			</div>
 		{{/if}}
