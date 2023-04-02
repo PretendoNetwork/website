@@ -46,15 +46,15 @@
 		"QAs": [
 			{
 				"question": "whut iz pretender??",
-				"answer": "pretender iz a sethru meanie network replazment 4 wee yu an thre d s. kittehs want to kep gaemin, so we maek it again!!"
+				"answer": "pretender iz a sethru meanie netwrk replazment 4 wee yu an thre d s. kittehs want to kep gaemin, so we maek it again!!"
 			},
 			{
-				"question": "kan i keep my meanie network id 4 pretender?",
+				"question": "kan i keep my meanie netwrk id 4 pretender?",
 				"answer": "noo!!!! we don wanna keep ur senzitiv dataz!! only pretender id!!"
 			},
 			{
 				"question": "how doez kitteh use pretender??",
-				"answer": "pretender iz only 4 kittehz wif subzcription!! soemtimez pretender haz open betaz 4 u doe! wil be fre latr."
+				"answer": "pretender iz only 4 kittehz wif subzcription!! soemtimez pretender haz open betaz 4 u tho! wil be fre latr."
 			},
 			{
 				"question": "eta wen 4 gaem??",
@@ -62,10 +62,10 @@
 			},
 			{
 				"question": "doez pretender work on me faek gaemr!?",
-				"answer": "yez! anythin that workz wif meanie network workz wif pretender. <a href=\"https://pretendo.network/docs/install/cemu\">only cemu haz it tho rite now!</a>"
+				"answer": "yez! anythin that workz wif meanie netwrk workz wif pretender. <a href=\"https://pretendo.network/docs/install/cemu\">only cemu haz it tho rite now!</a>"
 			},
 			{
-				"question": "if kitteh ban'd from teh meanie network, iz still ban'd on pretender?",
+				"question": "if kitteh ban'd from teh meanie netwrk, iz still ban'd on pretender?",
 				"answer": "no!! yu is not ban'd! ther is rulez tho, so yu can stil get bananad!!"
 			},
 			{
@@ -187,7 +187,7 @@
 			{
 				"name": "kittay",
 				"special": "speshul thx",
-				"caption": "reserch on de meanie networks datas",
+				"caption": "reserch on de meanie netwrks datas",
 				"github": "https://github.com/Kinnay",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
 			},
@@ -226,7 +226,7 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"im bandwidth teh rakoon, an i luv bitin teh cablez goin into pretender's serverz. yummer!!",
-			"sumtimez, kittehs ask meh, u gonna get meanie network on u? i sez that my aunt is meanie company employz an iz fine!!",
+			"sumtimez, kittehs ask meh, u gonna get meanie netwrk on u? i sez that my aunt is meanie company employz an iz fine!!",
 			"interwebzkit 537 iz teh bezt verzion of webzkit for wee yu. nu, we arent gonna purrt krome 2 teh wee yu.",
 			"i cant wait 4 teh eventual annihilashun of teh clok!",
 			"teh wee yu is aktually a sneak rate konsole: teh komershuls wer relly bad, but teh konsole is gret!! ..huh. wait, meh kittehpad isnt konnekting to meh wee..",
@@ -288,7 +288,7 @@
 				"no_edit_from_dashboard": "changin yor kitteh opshuns from interwebs is nono!! do from yor konsole."
 			},
 			"downloadFiles": "downlod kitteh datas",
-			"downloadFilesDescription": "(kitteh datas wil not work on meanie network!!)",
+			"downloadFilesDescription": "(kitteh datas wil not work on meanie netwrk!!)",
 			"unavailable": "no :(",
 			"upgrade": "become super kitteh"
 		},
