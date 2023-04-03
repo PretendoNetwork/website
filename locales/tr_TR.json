@@ -210,7 +210,20 @@
 			"Geliştirici"
 		],
 		"account": "Hesap",
-		"banned": "Yasaklı"
+		"banned": "Yasaklı",
+		"forgotPassword": {
+			"header": "Şifremi Unuttum",
+			"sub": "Aşağıya e-posta adresinizi veya PNID'nizi girin",
+			"input": "E-posta adresi ya da PNID",
+			"submit": "Gönder"
+		},
+		"resetPassword": {
+			"header": "Şifreyi Sıfırla",
+			"sub": "Aşağıya yeni şifrenizi girin",
+			"password": "Şifre",
+			"confirmPassword": "Şifreyi onayla",
+			"submit": "Gönder"
+		}
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
