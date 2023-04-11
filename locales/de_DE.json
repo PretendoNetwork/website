@@ -283,7 +283,7 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
-				"newsletter": "Newsletter",
+				"newsletter": "Mitteilungsblatt",
 				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit ablehnen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
@@ -356,7 +356,7 @@
 				},
 				{
 					"header": "Hast du einen Fehler?",
-					"caption": "Suche nach diesem hier"
+					"caption": "Suche hier nach ihm"
 				}
 			]
 		},
