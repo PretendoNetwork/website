@@ -322,7 +322,20 @@
 			"Dezvoltator"
 		],
 		"banned": "Acces interzis",
-		"account": "Cont"
+		"account": "Cont",
+		"forgotPassword": {
+			"header": "Am uitat parola",
+			"sub": "Introduceți adresa dvs. de e-mail/PNID mai jos",
+			"input": "Adresa de e-mail sau PNID",
+			"submit": "Trimiteți"
+		},
+		"resetPassword": {
+			"header": "Resetare parolă",
+			"password": "Parola",
+			"confirmPassword": "Confirmați parola",
+			"sub": "Introduceți parola nouă mai jos",
+			"submit": "Trimiteți"
+		}
 	},
 	"docs": {
 		"search": {

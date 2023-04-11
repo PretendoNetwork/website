@@ -135,7 +135,20 @@
 			"unavailable": "Indisponível"
 		},
 		"banned": "Banido",
-		"account": "Conta"
+		"account": "Conta",
+		"forgotPassword": {
+			"input": "Endereço e-mail ou IDPN",
+			"submit": "Submeter",
+			"header": "Esqueci-me da palavra-passe",
+			"sub": "Insira o seu endereço e-mail/IDPN em baixo"
+		},
+		"resetPassword": {
+			"password": "Palavra-passe",
+			"header": "Trocar Palavra-passe",
+			"sub": "Insira nova palavra-passe em baixo",
+			"confirmPassword": "Confirmar a palavra-passe",
+			"submit": "Submeter"
+		}
 	},
 	"upgrade": {
 		"changeTierConfirm": "Mudar tipo de assinatura",
