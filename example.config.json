@@ -26,6 +26,7 @@
 		"account": {
 			"uri": "mongodb://127.0.0.1:27017",
 			"database": "database_name",
+			"connection_string": "mongodb://127.0.0.1:27017",
 			"options": {
 				"useNewUrlParser": true,
 				"useUnifiedTopology": true
