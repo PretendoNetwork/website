@@ -5,7 +5,12 @@
 			"settings": "Nastavení",
 			"logout": "Odhlásit se"
 		},
-		"faq": "Často kladené dotazy"
+		"faq": "Často kladené dotazy",
+		"about": "O stránkách",
+		"docs": "Dokumenty",
+		"credits": "Kredity",
+		"progress": "Progres",
+		"blog": "Blog"
 	},
 	"hero": {
 		"subtitle": "Herní servery"

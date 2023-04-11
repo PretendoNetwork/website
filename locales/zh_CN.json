@@ -229,11 +229,11 @@
 			"button": "现在加入!"
 		},
 		"bandwidthRaccoonQuotes": [
-			"我是 狐狸Bandwidth，我喜欢咬连接 Pretendo Network 服务器的电缆。真好吃！",
+			"我是浣熊Bandwidth，我喜欢咬连接 Pretendo Network 服务器的电缆。真好吃！",
 			"许多人问我们是否会因此与任天堂发生法律纠纷；我很高兴我的阿姨在任天堂工作，她说是合法的。",
 			"Webkit v537 是用于 Wii U 的最佳 Webkit 版本。但是，我们不会将 Chrome 转到 Wii U。",
 			"我迫不及待地等待时钟在 2038 年 1 月 19 日到达 03:14:08 UTC！",
-			"Wii U 实际上是一个被低估的系统：广告非常糟糕，但控制台很棒。嗯，等一下，我不知道为什么，但我的游戏手柄没有连接到我的 Wii。",
+			"Wii U 实际上是一个被低估的游戏机：营销非常糟糕，但游戏机很棒。嗯，等一下，我不知道为什么，但我的Gamepad没有连接到我的 Wii。",
 			"超级马里奥世界 2 - 耀西岛 的主题是绝对的爆好听，你无法说服我。",
 			"我最喜欢的 Nintendo Switch 版本是 Nintendo Switch Online + 扩展包、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet another Port Pack 和 Nintendo Switch Online + Kawashima 博士的大脑训练/Brain Age“你真的很喜欢 Nintendo Wii U 虚拟控制台标题，所以我们要把它带回来”包。你真的可以看出任天堂在不在乎。",
 			"就像“你知道 Ash，祝福她的心，她一整天都在 UwU”是南方的一种很好的说法，“Ash一直都是在 uwu ，这真的很奇怪和愚蠢，我希望他们没有”",
@@ -347,7 +347,20 @@
 			"开发人员"
 		],
 		"banned": "禁止",
-		"account": "账号"
+		"account": "账号",
+		"forgotPassword": {
+			"header": "忘记密码",
+			"sub": "在下面输入你的电子邮件地址/PNID",
+			"input": "电子邮件地址或PNID",
+			"submit": "提交"
+		},
+		"resetPassword": {
+			"header": "重置密码",
+			"sub": "在下面输入新密码",
+			"password": "密码",
+			"confirmPassword": "确认密码",
+			"submit": "提交"
+		}
 	},
 	"upgrade": {
 		"title": "升级",

@@ -24,7 +24,7 @@
 	},
 	"hero": {
 		"subtitle": "게임 서버",
-		"title": "",
+		"title": "재창조",
 		"text": "Pretendo는 무료이며 3DS와 Wii U를 위한 Nintendo의 서버의 오픈 소스 대체제이고, 원래 서버가 닫힌 된 후에도 모두를 위해 온라인 연결을 제공합니다",
 		"buttons": {
 			"readMore": "더 읽어보기"
@@ -38,7 +38,7 @@
 		]
 	},
 	"progress": {
-		"title": "",
+		"title": "진행 상황",
 		"paragraphs": [
 			null,
 			"3DS에서는, 가능하면 다른 프로젝트도 시도하려 하고 있으나 현재는 마리오 카트 7에 집중하고 있습니다."
@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Pretendo가 Cemu/에뮬레이터에서 작동하나요?",
-				"answer": "Pretendo는 Wii U와 3DS 하드웨어만을 대상으로 제작하고 있습니다. 현재까지 닌텐도 네트워크 지원이 되는 에뮬레이터는 Cemu 뿐이나, Cemu는 공식적으로 커스텀 서버를 지원하지 않습니다. 그러나 Cemu에서도 Pretendo를 이용할 수 있게 될 것입니다.<br>Pretendo는 아직 Cemu를 지원하지 않습니다."
+				"answer": "Pretendo는 Wii U와 3DS 하드웨어만을 대상으로 제작하고 있습니다. 현재까지 닌텐도 네트워크 지원이 되는 에뮬레이터는 Cemu 뿐이나, Cemu는 공식적으로 커스텀 서버를 지원하지 않습니다. 그러나 Cemu에서도 Pretendo를 이용할 수 있게 될 것입니다. Pretendo는 아직 Cemu를 지원하지 않습니다."
 			},
 			{
 				"question": "제가 닌텐도 네트워크에서 영구 정지가 되어 있다면 Pretendo Network에서도 영구 정지된 상태일까요?",
@@ -107,19 +107,19 @@
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Project owner and lead developer",
+				"caption": "프로젝트 소유자 및 리드 개발자",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse research and development",
+				"caption": "마이버스 연구 개발",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Network installer and console research",
+				"caption": "네트워크 설치 관리자 및 콘솔 연구",
 				"picture": "https://github.com/EpicUsername12.png",
 				"github": "https://github.com/EpicUsername12"
 			},
@@ -131,7 +131,7 @@
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Console and other system research",
+				"caption": "콘솔 및 기타 시스템 연구",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
@@ -179,26 +179,26 @@
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 and 3DS research",
+				"caption": "마리오 카트 7 및 3DS 연구",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "마이버스 정보 공유",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"name": "Kinnay",
 				"special": "Special Thanks",
-				"caption": "Research on Nintendo datastructures",
+				"caption": "닌텐도 데이터 구조에 대한 연구",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
 			},
 			{
 				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
+				"caption": "Mii 에디터 및 병치 반응 아이콘",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
@@ -227,7 +227,18 @@
 				"저희 Discord 서버에 참여하세요!!"
 			],
 			"button": "지금 참여하기!"
-		}
+		},
+		"bandwidthRaccoonQuotes": [
+			"저는 너구리 대역폭이고, Pretendo Network의 서버로 연결되는 케이블을 물어뜯는 것을 좋아합니다. 맛있어요!",
+			"많은 사람들이 이 문제로 닌텐도와 법적 문제가 생기지는 않을지 물어보는데, 다행히 제 이모가 닌텐도에서 일하고 있고 이모는 괜찮다고 말합니다.",
+			"웹킷 v537은 Wii U용 웹킷의 최상위 버전입니다. 아니요, Chrome을 Wii U로 포팅하지 않을 예정입니다.",
+			"2038년 1월 19일 03:14:08 UTC가 될 때까지 기다릴 수 없어요!",
+			"Wii U는 사실 과소평가된 시스템입니다. 광고는 정말 형편없었지만 콘솔은 훌륭합니다. 잠깐만요, 이유는 모르겠지만 게임 패드가 Wii에 연결되지 않아요.",
+			"슈퍼 마리오 월드 2 - 요시의 섬의 메인 테마는 정말 끝내주며, 그렇지 않다고 설득할 방법이 없습니다.",
+			"제가 가장 좋아하는 닌텐도 스위치 출시작은 닌텐도 스위치 온라인 + 확장팩, 닌텐도 스위치 온라인 + 럼블 팩, 닌텐도 스위치 온라인 + 오프라인 플레이 팩, 닌텐도 스위치 온라인 + 또 다른 포트 팩, 닌텐도 스위치 온라인 + 가와시마 박사의 두뇌 훈련/두뇌 나이 \"닌텐도 Wii U 가상 콘솔 타이틀을 정말 좋아해 주셔서 다시 가져왔습니다\" 팩입니다. 닌텐도가 정말 신경을 쓴다는 것을 알 수 있습니다.",
+			"\"애쉬 알잖아, 그녀의 마음을 축복해, 그녀는 하루 종일 우는 거야\"는 \"애쉬는 항상 우는데 정말 이상하고 멍청해서 그러지 않았으면 좋겠어\"라는 남부식 표현입니다.",
+			"내 채널의 첫 번째 비디오 !!! 나는 오랫동안 비디오를 만들고 싶었지만 노트북이 꽤 나빠서 프랩, 스카이프, 마인 크래프트를 한 번에 실행할 수 없었습니다. 하지만 이제 끝났습니다! IT 선생님의 도움으로 노트북이 훨씬 더 잘 실행되고 이제 녹화 할 수 있습니다! 모두 즐기시기 바랍니다 그리고 그렇게한다면 좋아요와 구독을 부탁드립니다!!!"
+		]
 	},
 	"progressPage": {
 		"title": "프로젝트 진행률",
@@ -235,7 +246,9 @@
 	},
 	"blogPage": {
 		"title": "블로그",
-		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면, <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요."
+		"description": "내용이 압축된 최신 업데이트입니다. 만약 더 많은 업데이트를 원하신다면, <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>에 기부하는 것을 검토해 주세요.",
+		"published": "게시자",
+		"publishedOn": "켜기"
 	},
 	"localizationPage": {
 		"title": "같이 번역해 주세요",
@@ -264,5 +277,18 @@
 	"modals": {
 		"close": "닫기",
 		"cancel": "취소"
+	},
+	"account": {
+		"loginForm": {
+			"password": "비밀번호",
+			"confirmPassword": "비밀번호 확인",
+			"email": "이메일",
+			"miiName": "미이 이름",
+			"detailsPrompt": "아래에 계정 정보를 입력하세요.",
+			"login": "로그인",
+			"register": "등록하기",
+			"username": "사용자 이름"
+		},
+		"account": "계정"
 	}
 }

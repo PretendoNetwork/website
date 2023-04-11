@@ -284,7 +284,7 @@
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
 				"newsletter": "Mitteilungsblatt",
-				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit ablehnen)",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst sie jederzeit abbestellen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
 				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
@@ -294,7 +294,7 @@
 				"password": "Passwort",
 				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
 				"removeDiscord": "Discord-Konto entfernen",
-				"no_signins_notice": "Anmeldeverlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
+				"no_signins_notice": "Der Anmeldeverlauf wird momentan nicht gespeichert. Schau später nochmal vorbei!",
 				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
 				"userSettings": "Nutzer-Einstellungen"
@@ -356,7 +356,7 @@
 				},
 				{
 					"header": "Hast du einen Fehler?",
-					"caption": "Suche nach diesem hier"
+					"caption": "Suche hier nach ihm"
 				}
 			]
 		},

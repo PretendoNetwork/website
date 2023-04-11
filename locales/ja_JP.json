@@ -17,7 +17,7 @@
 				"about": "プロジェクトについて",
 				"blog": "最新のアップデート",
 				"progress": "プロジェクトの進行状況と目的をチェックして",
-				"faq": "よくあるご質問"
+				"faq": "よくある質問"
 			}
 		},
 		"donate": "寄付"
@@ -46,7 +46,7 @@
 		"githubRepo": "GitHubレポジトリ"
 	},
 	"faq": {
-		"title": "Q&amp;A（よくあるご質問）",
+		"title": "よくある質問",
 		"text": "こちらはよく聞かした質問集です。",
 		"QAs": [
 			{
@@ -347,7 +347,20 @@
 			"forgotPassword": "パスワードをお忘れですか？",
 			"registerPrompt": "アカウントをお持ちでない場合?"
 		},
-		"account": "アカウント"
+		"account": "アカウント",
+		"forgotPassword": {
+			"header": "パスワードをお忘れの方",
+			"sub": "以下にメールアドレス/PNIDを入力してください。",
+			"input": "電子メールアドレスまたはPNID",
+			"submit": "送信"
+		},
+		"resetPassword": {
+			"header": "パスワードリセット",
+			"sub": "新しいパスワードを以下に入力",
+			"password": "パスワード",
+			"confirmPassword": "パスワードの確認",
+			"submit": "送信"
+		}
 	},
 	"upgrade": {
 		"title": "アップグレード",

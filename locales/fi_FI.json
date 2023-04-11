@@ -305,7 +305,20 @@
 			"Kehittäjä"
 		],
 		"banned": "Bännätty",
-		"account": "Käyttäjätili"
+		"account": "Käyttäjätili",
+		"forgotPassword": {
+			"header": "Unohtuiko salasana",
+			"sub": "Kirjoita sähköpostiosoitteesi/PNID alla",
+			"input": "Sähköpostiosoite tai PNID",
+			"submit": "Lähetä"
+		},
+		"resetPassword": {
+			"header": "Nollaa salasana",
+			"sub": "Syötä uusi salasana alla",
+			"password": "Salasana",
+			"confirmPassword": "Vahvista salasana",
+			"submit": "Lähetä"
+		}
 	},
 	"upgrade": {
 		"title": "Tilikorotus",
