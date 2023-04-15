@@ -697,6 +697,8 @@ section.update-signup div.circle {
 }
 .progress-bar-real {
 	background-color: var(--green-shade-1);
+	width: calc(var(--progress-bar-width) - 6px);
+	left: 6px;
 }
 
 .all-progress-lists {

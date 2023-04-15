@@ -16,9 +16,9 @@
 
 	<div class="all-progress-lists">
 		<div class="donation-progress">
-			<h1 class="title dot">Donation goal {{#if (greaterThan donationCache.completed_real 100) }}<img src="/assets/images/ganon.apng" alt="An animated image of Cucuí Ganon dancing" class="cucui-dance" />{{/if}}</h1>
+			<h1 class="title dot">Donation goal {{#if (greaterThan donationCache.completed_real 99) }}<img src="/assets/images/ganon.apng" alt="An animated image of Cucuí Ganon dancing" class="cucui-dance" />{{/if}}</h1>
 			<div class="progress-bar" style="--progress-bar-width: {{ donationCache.completed_real }}%;">
-				<div class="progress-bar-real"></div>
+				{{#if (greaterThan donationCache.completed_real 100) }}<div class="progress-bar-real"></div>{{/if}}
 				<div class="progress-bar-capped"></div>
 			</div>
 			<p class="localeReplace">{{{ locale.donation.progress }}} {{{ locale.donation.upgradePush }}}</p>
