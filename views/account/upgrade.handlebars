@@ -38,8 +38,9 @@
 		<p class="caption">{{ locale.upgrade.description }}</p>
 
 		<div class="progress-bar-wrapper">
-			<div class="progress-bar">
-				<div class="progress-bar-inner" style="width: {{ donationCache.completed_capped }}%;" ></div>
+			<div class="progress-bar" style="--progress-bar-width: {{ donationCache.completed_real }}%;">
+				<div class="progress-bar-real"></div>
+				<div class="progress-bar-capped"></div>
 			</div>
 			<p class="localeReplace">
 				{{{ locale.donation.progress }}}
