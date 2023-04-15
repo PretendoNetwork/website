@@ -54,17 +54,17 @@ router.get('/', async (request, response) => {
 		const sectionCompletionPercentage = ((done.length + in_progress.length * 0.5) / (done.length + in_progress.length + todo.length)) || 0;
 		totalProgress._calc.percentageSum += sectionCompletionPercentage;
 
-		const sectionTitle = `${section.title}  [${Math.round(sectionCompletionPercentage * 100)}%]`;
+		const sectionTitle = `${section.title}  [${Math.floor(sectionCompletionPercentage * 100)}%]`;
 
-		if (done !== [] && in_progress + todo === []) {
-			// if all the section tasks have been done, push to done
-			totalProgress.cards.done.push(sectionTitle);
-		} else if (todo !== [] && in_progress + done === []) {
-			// if none the section tasks have been done or in_progress, push to todo
-			totalProgress.cards.todo.push(sectionTitle);
-		} else {
-			// for all other combos, push to in_progress
-			totalProgress.cards.in_progress.push(sectionTitle);
+		switch(sectionCompletionPercentage) {
+			case 0:
+				totalProgress.cards.todo.push(sectionTitle);
+				break;
+			case 1:
+				totalProgress.cards.done.push(sectionTitle);
+				break;
+			default:
+				totalProgress.cards.in_progress.push(sectionTitle);
 		}
 	});
 
