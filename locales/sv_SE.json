@@ -12,7 +12,7 @@
 				"about": "Om projektet",
 				"credits": "Träffa teamet",
 				"blog": "Våra senaste uppdateringar, kondenserat",
-				"faq": "Ofta ställda frågor"
+				"faq": "Vanliga frågor"
 			}
 		},
 		"account": "Konto",
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spel servrar",
 		"text": "Pretendo är en gratis och med öppen källkods ersättning för Nintendo's servrar för både 3DSet och Wii U, som tillåter online anslutning för alla, även efter de originella servrarna är nerstängda",
-		"title": "Återkapat",
+		"title": "Återskapade",
 		"buttons": {
 			"readMore": "Läs mer"
 		}
@@ -33,7 +33,7 @@
 	"aboutUs": {
 		"title": "Om oss",
 		"paragraphs": [
-			"Pretendo är en ett projekt med öppen källkod som syftar till att återskapa Nintendo Nätverket för 3DSet och Wii U genom att använda renrum omvänd ingenjörskonst.",
+			"Pretendo är en ett projekt med öppen källkod som syftar till att återskapa Nintendo Nätverket för 3DS och Wii U genom att använda renrum baklängeskonstruktion.",
 			"Eftersom våra tjänster är både gratis och med öppen källkod, så kan de existera långt efter den ounvikliga stängningen av Nintendo Nätverket."
 		]
 	},
@@ -269,7 +269,7 @@
 		"QAs": [
 			{
 				"question": "Vad är Pretendo?",
-				"answer": "Pretendo är en med öppen källkods Nintendo Nätverk ersättning som syftar att skapa anpassade servrar för Wii Uet och 3DS familjen av konsoler. Vårt mål är att preservera online funktionaliteten av dessa konsoler, för att tillåta spelare att fortsätta spela deras favorit Wii U och 3DS spel till deras fulla kapacitet."
+				"answer": "Pretendo är en Nintendo Nätverk ersättning med öppen källkod som syftar att skapa anpassade servrar för Wii U och 3DS familjen av konsoler. Vårt mål är att preservera online funktionaliteten av dessa konsoler, för att tillåta spelare att fortsätta spela deras favorit Wii U och 3DS spel till deras fulla kapacitet."
 			},
 			{
 				"question": "Kommer mina existerande NNIDs fungera på Pretendo?",
@@ -300,7 +300,7 @@
 				"answer": "Ja, du kommer att behöva hacka din enhet för att ansluta; Dock på Wii U kommer du bara att behöva tillgång till Homebrew Launchern (dvs. Haxchi,Coldboot Haxchi, eller till och med webbläsar utnyttjandet), med information om hur 3DSet kommer ansluta kommande vid ett senare datum."
 			}
 		],
-		"title": "Ofta ställda frågor",
+		"title": "Vanliga frågor",
 		"text": "Här är några vanliga frågor vi blir frågade för enkel information."
 	},
 	"showcase": {
