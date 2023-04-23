@@ -150,6 +150,8 @@ label.tier .tier-thumbnail {
 	top: -50px;
 	z-index: 2;
 	background: var(--bg-shade-4);
+	padding: 8px;
+	box-sizing: border-box;
 }
 form .tier-radio:checked + label .tier-thumbnail::before {
 	content: "";
