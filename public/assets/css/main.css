@@ -853,6 +853,7 @@ section.update-signup div.circle {
 	}
 	.donation-progress {
 		grid-column: span 1;
+		padding: 50px 20px;
 	}
 
 	.hero-meta {
