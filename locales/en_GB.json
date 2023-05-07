@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider <a href=\"/account/upgrade\" target=\"_blank\">supporting us</a>.",
 		"published": "Published by",
 		"publishedOn": "on"
 	},

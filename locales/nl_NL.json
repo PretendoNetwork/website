@@ -198,7 +198,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen.",
+		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons <a href=\"/account/upgrade\" target=\"_blank\">ondersteunen</a>.",
 		"published": "Gepubliceerd door",
 		"publishedOn": "op"
 	},

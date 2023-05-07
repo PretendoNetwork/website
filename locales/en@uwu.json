@@ -364,7 +364,7 @@
 	},
 	"blogPage": {
 		"title": "readinz",
-		"description": "new thingz, but smol! if kitteh wants mor, <a href=\"https://pretendo.network/account/upgrade\" target=\"_blank\">support dev kittehs!</a>",
+		"description": "new thingz, but smol! if kitteh wants mor, <a href=\"/account/upgrade\" target=\"_blank\">support dev kittehs!</a>",
 		"published": "keybord smash'd by",
 		"publishedOn": "on"
 	},

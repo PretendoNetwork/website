@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blogi",
-		"description": "Vimeisimmät päivitykset tiivistelminä. Jos haluat päivityksiä lyhyemmin aikavälein harkitse tukemistamme <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreonissa</a>.",
+		"description": "",
 		"published": "Julkaissut",
 		"publishedOn": "-"
 	},

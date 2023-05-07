@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "",
 		"published": "Veröffentlicht von",
 		"publishedOn": "am"
 	},

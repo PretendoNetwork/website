@@ -246,7 +246,7 @@
 	},
 	"blogPage": {
 		"title": "博客",
-		"description": "压缩块的最新更新。如果您想看到更频繁的更新，请考虑在 <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> 上支持我们。",
+		"description": "",
 		"published": "作者",
 		"publishedOn": "在"
 	},

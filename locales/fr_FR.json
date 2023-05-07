@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez <a href=\"/account/upgrade\" target=\"_blank\">de nous soutenir</a>.",
 		"publishedOn": "le",
 		"published": "Publié par"
 	},
