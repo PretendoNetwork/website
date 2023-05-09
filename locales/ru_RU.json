@@ -228,7 +228,7 @@
 	},
 	"blogPage": {
 		"title": "Блог",
-		"description": "Последние обновления в сжатом формате. Если вы хотите видеть обновления более чаще, задумайтесь поддержать нас в <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "",
 		"published": "Опубликовано",
 		"publishedOn": "в"
 	},

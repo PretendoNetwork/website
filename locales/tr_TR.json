@@ -355,7 +355,7 @@
 	"blogPage": {
 		"published": "Tarafından yayınlandı",
 		"title": "Blog",
-		"description": "Yoğunlaştırılmış parçalardaki en son güncellemeler. Daha sık güncellemeler görmek istiyorsanız, bizi <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> üzerinden destekleyin.",
+		"description": "",
 		"publishedOn": "şu tarihte"
 	},
 	"upgrade": {

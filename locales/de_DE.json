@@ -47,7 +47,7 @@
 		"QAs": [
 			{
 				"question": "Was ist Pretendo?",
-				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen zu beibehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
+				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen beizubehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
 			},
 			{
 				"question": "Werden meine vorhandenen NNIDs mit Pretendo weiterhin funktionieren?",
@@ -153,7 +153,7 @@
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie, wäre Pretendo nicht, wo es heute ist.",
+		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -208,7 +208,7 @@
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
-		"text": "Tritt unserem Discord-Server bei um die neuesten Updates des Projektes zu erhalten.",
+		"text": "Tritt unserem Discord-Server bei, um die neuesten Updates des Projektes zu erhalten.",
 		"widget": {
 			"text": "Erhalte Echtzeitinformationen über unseren Fortschritt",
 			"button": "Tritt dem Server bei"
@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "",
 		"published": "Veröffentlicht von",
 		"publishedOn": "am"
 	},

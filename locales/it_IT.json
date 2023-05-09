@@ -246,7 +246,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di <a href=\"/account/upgrade\" target=\"_blank\">supportarci</a>.",
 		"published": "Pubblicato da",
 		"publishedOn": "il"
 	},

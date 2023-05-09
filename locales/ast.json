@@ -229,7 +229,7 @@
 		}
 	},
 	"blogPage": {
-		"description": "Los últimos anovamientos en cachos concentraos. Si quies ver anovamientos más frecuentes, piensa n'apoyanos en <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Los últimos anovamientos en cachos concentraos. Si quies ver anovamientos más frecuentes, piensa <a href=\"/account/upgrade\" target=\"_blank\">n'apoyanos</a>.",
 		"title": "Blogue",
 		"published": "Artículu de:",
 		"publishedOn": "el"
