@@ -127,32 +127,26 @@ async function handleStripeEvent(event) {
 		};
 
 		if (product.metadata.beta === 'true') {
-			switch (subscription.status) {
-				case 'active':
-					if (pnid.access_level < 2) { // only change access level if not staff member
-						updateData.access_level = 1;
-						updateData.server_access_level = 'test';
-					}
+			if (subscription.status === 'active') {
+				if (pnid.access_level < 2) { // * Only change access level if not staff member
+					updateData.access_level = 1;
+					updateData.server_access_level = 'test';
+				}
 
-					util.assignDiscordMemberTesterRole(discordId).catch(error => {
-						logger.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
-					});
-					break;
+				util.assignDiscordMemberTesterRole(discordId).catch(error => {
+					logger.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+				});
+			} else {
+				// * Assume any status other than active means payment has not been fulfilled
+				// * Once the payment goes through, status should update to active
+				if (pnid.access_level < 2) { // * Only change access level if not staff member
+					updateData.access_level = 0;
+					updateData.server_access_level = 'prod';
+				}
 
-				case 'canceled': // Subscription was canceled
-				case 'unpaid': // User missed too many payments
-					if (pnid.access_level < 2) { // only change access level if not staff member
-						updateData.access_level = 0;
-						updateData.server_access_level = 'prod';
-					}
-
-					util.removeDiscordMemberTesterRole(discordId).catch(error => {
-						logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
-					});
-					break;
-
-				default:
-					break;
+				util.removeDiscordMemberTesterRole(discordId).catch(error => {
+					logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
+				});
 			}
 		}
 
@@ -187,7 +181,7 @@ async function handleStripeEvent(event) {
 			try {
 				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Network Subscription - Active',
+					subject: `Pretendo Network ${product.name} Subscription - Active`,
 					text: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
 				});
 			} catch (error) {
@@ -210,13 +204,11 @@ async function handleStripeEvent(event) {
 					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
 				}
 			}
-		}
-
-		if (subscription.status === 'canceled') {
+		} else if (subscription.status === 'canceled') {
 			try {
 				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Network Subscription - Canceled',
+					subject: `Pretendo Network ${product.name} Subscription - Canceled`,
 					text: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
 				});
 			} catch (error) {
@@ -239,13 +231,11 @@ async function handleStripeEvent(event) {
 					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
 				}
 			}
-		}
-
-		if (subscription.status === 'unpaid') {
+		} else if (subscription.status === 'unpaid') {
 			try {
 				await mailer.sendMail({
 					to: customer.email,
-					subject: 'Pretendo Network Subscription - Unpaid',
+					subject: `Pretendo Network ${product.name} Subscription - Unpaid`,
 					text: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
 				});
 			} catch (error) {
@@ -263,6 +253,33 @@ async function handleStripeEvent(event) {
 						to: email,
 						subject: `[Pretendo] - Removed ${product.name} subscription`,
 						text: `${pnid.get('username')}'s ${product.name} tier subscription has been canceled due to non payment`
+					});
+				} catch (error) {
+					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
+				}
+			}
+		} else {
+			try {
+				await mailer.sendMail({
+					to: customer.email,
+					subject: `Pretendo Network ${product.name} Subscription - ${subscription.status}`,
+					text: `Your subscription for the ${product.name} tier has changed status to ${subscription.status}. This is usually caused by payment failure. Your account has been reverted back to default until payment resumes. If you believe this to be an error, please reach out for support on our Discord server, and we thank you for your previous support!`
+				});
+			} catch (error) {
+				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
+			}
+
+			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
+			});
+
+			for (const email of config.stripe.notification_emails) {
+				// * Send notification emails for new sub
+				try {
+					await mailer.sendMail({
+						to: email,
+						subject: `[Pretendo] - Removed ${product.name} subscription`,
+						text: `${pnid.username}'s ${product.name} tier subscription status has been changed to ${subscription.status}`
 					});
 				} catch (error) {
 					logger.error(`Error sending notification email | ${email} | - ${error.message}`);
