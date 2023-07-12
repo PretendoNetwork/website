@@ -25,12 +25,6 @@
 				{{/if}}
 			</div>
 			<div class="buttons">
-				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-					<p class="caption">{{ locale.account.settings.downloadFiles }}</p>
-					<p class="cemu-warning">{{ locale.account.settings.downloadFilesDescription }}</p>
-				</a>
-
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
 					<p class="caption">{{ locale.account.settings.upgrade }}</p>
 				</a>
@@ -184,18 +178,6 @@
 	</div>
 </div>
 {{/if}}
-
-<div class="modal-wrapper hidden" id="onlinefiles">
-	<div class="modal">
-		<h1 class="title dot">{{ locale.account.settings.settingCards.password }}</h1>
-		<p class="modal-caption">{{ locale.account.settings.settingCards.passwordPrompt }}</p>
-		<input name="password" id="password" type="password" required />
-		<div class="modal-button-wrapper">
-			<button class="button cancel" id="onlineFilesCloseButton">{{ locale.modals.cancel }}</button>
-			<button class="button primary confirm" id="onlineFilesConfirmButton">{{ locale.modals.confirm }}</button>
-		</div>
-	</div>
-</div>
 
 <div class="modal-wrapper hidden" id="edit-settings">
 	<div class="modal">
