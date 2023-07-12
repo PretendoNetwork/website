@@ -490,15 +490,15 @@ document
 						data: miiData,
 					}
 				})
-			})
-				.then(({ status }) => {
-					if (status === 200) {
-						window.onbeforeunload = null;
-						window.location.assign('/account');
-					}
-				})
-				.catch(console.log);
-		// CHECK IF MII IS VALID SERVERSIDE
+			}) .then(({ status }) => {
+				// TODO - Make this prettier
+				alert('Mii has been updated. It may take some time for the cached image on the website to update');
+
+				if (status === 200) {
+					window.onbeforeunload = null;
+					window.location.assign('/account');
+				}
+			}).catch(console.log);
 		} catch (error) {
 			alert(error);
 		}

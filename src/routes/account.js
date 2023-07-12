@@ -43,8 +43,9 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 	const { pnid } = request;
 
-	renderData.tierName = pnid.get('connections.stripe.tier_name');
-	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
+	renderData.environment = pnid.server_access_level;
+	renderData.tierName = pnid.connections.stripe.tier_name;
+	renderData.tierLevel = pnid.connections.stripe.tier_level;
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
 
