@@ -145,7 +145,7 @@
 				<div class="setting-card">
 					<h2 class="header">{{ locale.account.settings.settingCards.discord }}</h2>
 						{{#if discordUser}}
-					<p>{{ locale.account.settings.settingCards.connectedToDiscord }} {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
+					<p>{{ locale.account.settings.settingCards.connectedToDiscord }} {{ discordUser.username }}{{#ifCond discordUser.discriminator '#0'}}{{else}}#{{ discordUser.discriminator }}{{/ifCond}}</p>
 					<a href="/account/remove/discord">
 						<button class="button secondary" id="remove-discord-connection">{{ locale.account.settings.settingCards.removeDiscord }}</button>
 					</a>
