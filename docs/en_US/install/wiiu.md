@@ -93,6 +93,6 @@ Right before registering a PNID, please make sure to save your password on some 
 ### PNID Setup - Wii U
 Right before registering a PNID, please make sure to save your password on some sort of note, as you will not be able to reset your password. You will want to go on you Wii U while Pretendo is still active and press the top left profile icon. After pressing the icon, press `Switch Account`, and then `Add New User`. Set up this account as normal, but once it asks if you have an account, press `No` and go through the account process normally. When it asks you again to you want to link after adding a mii, press `Link`. Choose your language and then accept the Pretendo Network Service Agreement.
 
-<img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
 Finally, set up your pnid, email and password. Once all of this is done you will be able to use Pretendo Server
