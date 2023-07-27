@@ -6,6 +6,34 @@
 	Aroma using <a href="https://wiiu.hacks.guide/#/aroma/getting-started" target="_blank">this guide</a>.
 </div>
 
+You can get a Wii U onto Pretendo in just 3 steps:
+1. [RCE Patches](#rce-patches)
+2. [Connecting to Pretendo](#connecting-to-pretendo)
+3. [PNID Setup](#pnid-setup)
+
+# RCE Patches
+Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
+games on the 3DS, thus far they have neglected the Wii U. Pretendo has a patcher which attempts to fix these problems -
+this is **essential** to play online safely, whether on Pretendo Network or Nintendo Network.
+
+<div class="tip">
+⚠️ <b>Don't skip this step!</b>
+</div>
+
+To install the fix, naviagate to the
+[latest release of the RCE patcher](https://github.com/PretendoNetwork/rce_patches/releases/latest) on GitHub and
+download the `rce_patches.wps` file.
+
+<img src="/assets/images/docs/install/wiiu/aroma/rce-wps-highlight.png" width="100%">
+
+Place the downloaded `rce_patches.wps` file on your SD card at `sd:/wiiu/environments/aroma/plugins`. It's normal for other Aroma plugins to be in this folder too.
+
+<img src="/assets/images/docs/install/wiiu/aroma/rce-sd-card.png" width="100%">
+
+Place your SD card back into your console and boot like normal.
+
+# Connecting to Pretendo
+
 <div class="tip">
     ℹ️ Already have Pretendo installed? Skip ahead to <a href="#pnid-setup">PNID Setup</a>!
 </div>
