@@ -24,7 +24,7 @@ Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/envi
 
 Place your SD card back into your console and boot like normal. If it worked, you'll see a notification of your connection:
 
-<img src="/assets/images/docs/install/wiiu/aroma/working-notification.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
 
 You are now connected to Pretendo Network and can continue with [PNID Setup](#pnid-setup).
 
@@ -47,7 +47,7 @@ Extract `inkay.zip` and place the extracted `Inkay-pretendo.wps` file on your SD
 
 Place your SD card back into your console and boot like normal. If it worked, you'll see a notification of your connection:
 
-<img src="/assets/images/docs/install/wiiu/aroma/working-notification.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
 
 You are now connected to Pretendo Network and can continue with [PNID Setup](#pnid-setup).
 
