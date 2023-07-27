@@ -57,6 +57,9 @@ typings/
 # vscode settings
 .vscode
 
+# JetBrains settings
+.idea
+
 # dotenv environment variables file
 .env
 
