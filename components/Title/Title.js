@@ -13,12 +13,12 @@ import styles from './Title.module.css';
  */
 
 export default function Title(ctx) {
-	const { children: title, element, style, id } = ctx;
+	const { children: title = '', element, style, id } = ctx;
 
 	// regex to match all start/end punctuation except for parentheses and brackets. Please never make me do this again.
 	const punctuationRegex = {
-		prefix: /^((?![/\)\(\[\]\{\}])([\p{P}\p{S}]))+/ug,
-		suffix: /((?![/\)\(\[\]\{\}])([\p{P}\p{S}]))+$/ug,
+		prefix: /^((?![/\)\(\[\]\{\}])([\p{P}\p{S}]))+/gu,
+		suffix: /((?![/\)\(\[\]\{\}])([\p{P}\p{S}]))+$/gu,
 	};
 
 	// split the title into prefix, title, and suffix
@@ -45,7 +45,7 @@ export default function Title(ctx) {
 					{suffix}
 				</span>
 			);
-		})
+		  })
 		: null;
 
 	// create the title react element

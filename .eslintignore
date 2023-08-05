@@ -1,2 +1,2 @@
-# web javascript causes a lot of eslint warnings
-assets/js
+# not our code, we don't care!
+node_modules
