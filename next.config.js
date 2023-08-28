@@ -13,19 +13,25 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'github.com',
 				port: '',
-				pathname: '/*'
+				pathname: '/**'
 			},
 			{
 				protocol: 'https',
 				hostname: 'avatars.githubusercontent.com',
 				port: '',
-				pathname: '/u/*'
+				pathname: '/u/**'
+			},
+			{
+				protocol: 'https',
+				hostname: 'github.githubassets.com',
+				port: '',
+				pathname: '/images/**'
 			},
 			{
 				protocol: 'https',
 				hostname: 'cdn.discordapp.com',
 				port: '',
-				pathname: '/avatars/*'
+				pathname: '/avatars/**'
 			}
 		]
 	}

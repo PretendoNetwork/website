@@ -71,6 +71,11 @@
 	}
 }
 
+@media screen and (min-width: 2304px) {
+	.images .lightCircle::before {
+		display: none;
+	}
+}
 
 @media screen and (max-width: 1500px) {
 	.images {

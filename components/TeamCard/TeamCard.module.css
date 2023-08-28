@@ -1,6 +1,8 @@
+/* regular card */
+
 .card {
+	position: relative;
 	display: grid;
-	margin: 0.6rem;
 	padding: 1rem;
 	width: 100%;
 	max-width: 28rem;
@@ -18,19 +20,46 @@
 	box-shadow: 0 0 0 1px var(--bg-shade-3) inset;
 }
 
+.card.special {
+	box-shadow: 0 0 0 0.2rem var(--yellow-shade-1) inset;
+}
+
+.card.special .star {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(calc(50% - 0.1rem), calc(-50% + 0.1rem)) scale(1.25);
+	color: var(--yellow-shade-1);
+}
+
 .imageWrapper {
 	position: relative;
-	/* the .imageWrapper and .image radii differ to prevent a rendering bug where the image corners were glitchy */
-	border-radius: 0.6rem;
 	width: 110px;
 	height: 110px;
-	background-color: var(--accent-shade-3);
+}
+
+/*
+ * this garbage prevents a rendering bug when setting a simple bgcolor to the
+ * .imageWrapper where the corners would have a border. Just... deal with this.
+ */
+
+.imageWrapper::before {
+	content: '';
+	background-color: #fff;
+	display: block;
+	position: absolute;
+	width: 97%;
+	height: 97%;
+	top: 1.5%;
+	left: 1.5%;
+	border-radius: 0.6rem;
 }
 
 .image {
 	width: 100%;
 	height: 100%;
-	border-radius: 0.5rem;
+	border-radius: 0.6rem;
+	position: relative;
 }
 
 .text {
@@ -49,10 +78,54 @@
 	font-weight: 300;
 }
 
+/* compact card */
+
+.compact.card {
+	max-width: unset;
+	width: unset;
+	border-radius: 0.75rem;
+}
+
+.compact .imageWrapper {
+	width: 48px;
+	height: 48px;
+}
+
+.compact .imageWrapper::before {
+	border-radius: 100%;
+}
+
+.compact .image {
+	border-radius: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.compact .text {
+	flex-flow: row;
+	justify-content: start;
+	align-items: center;
+}
+
+.compact .text * {
+	margin: inherit;
+	line-height: 1;
+	font-size: inherit;
+	margin-right: 0.8ch;
+}
+
+.compact.card.special {
+	box-shadow: 0 0 0 0.1rem var(--yellow-shade-1) inset;
+}
+
+.compact.card.special .star {
+	transform: translate(calc(50% - 0.05rem), calc(-50% + 0.05rem));
+}
+
 @media screen and (max-width: 36rem) {
 	.card {
-		padding: .9rem;
-		border-radius: .7rem;
+		padding: 0.9rem;
+		border-radius: 0.7rem;
 	}
 
 	.imageWrapper {

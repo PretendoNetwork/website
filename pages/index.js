@@ -41,14 +41,16 @@ export default function Home({ locale }) {
 	const router = useRouter();
 	return (
 		<main>
-			<Section style={{ minHeight: '100vh', padding: 0 }}>
+			<Section>
 				<Hero />
 			</Section>
+
 			<div id="showcase">
 				<Section className={styles.showcaseSection}>
 					<Title>What we make.</Title>
 					<Caption>Our project has many components. Here are some of them.</Caption>
 				</Section>
+
 				{locale.showcase.map((el, i) => {
 					return (
 						<ShowcaseSection
@@ -60,6 +62,7 @@ export default function Home({ locale }) {
 						/>
 					);
 				})}
+
 				<Section className={styles.showcaseTail} contentClassName={styles.content}>
 					<Image
 						src={wiiuchatImage}
@@ -68,6 +71,7 @@ export default function Home({ locale }) {
 						quality={100}
 						sizes="(max-width: 840px) 100vw, 700px"
 					/>
+
 					<div className={styles.text}>
 						<Title>And much more!</Title>
 						<Caption center>
@@ -86,20 +90,76 @@ export default function Home({ locale }) {
 					</div>
 				</Section>
 			</div>
+
 			<Section style={{ paddingBottom: '72px' }}>
 				<Title id="faq">{locale.faq.title}</Title>
 				<Caption>{locale.faq.text}</Caption>
 				<Faq questionObject={locale.faq.QAs} />
 			</Section>
+
 			<Section>
-				<Title center id="credits">{locale.credits.title}</Title>
+				<Title center id="credits">
+					{locale.credits.title}
+				</Title>
 				<Caption center>{locale.credits.text}</Caption>
+
 				<div className={styles.teamWrapper}>
 					{locale.credits.people.map((el, i) => {
 						return (
 							<TeamCard name={el.name} caption={el.caption} pic={el.picture} link={el.github} key={i} />
 						);
 					})}
+				</div>
+			</Section>
+
+			<Section>
+				<Title id="special-thanks">{locale.specialThanks.title}</Title>
+				<Caption>{locale.specialThanks.text}</Caption>
+
+				<div className={styles.thanksAniWrap}>
+					<div className={styles.inner}>
+						<div className={styles.rowOne}>
+							{(() => {
+								let ar = locale.specialThanks.people;
+								ar = ar.slice(0, Math.round(ar.length / 2));
+								ar = ar.concat(ar).concat(ar);
+								return ar.map((el, i) => {
+									return (
+										<TeamCard
+											compact
+											special={el.special}
+											name={el.name}
+											caption={el.caption}
+											pic={el.picture}
+											link={el.github}
+											key={i}
+										/>
+									);
+								});
+							})()}
+						</div>
+
+						<div className={styles.rowTwo}>
+							{(() => {
+								let ar = locale.specialThanks.people;
+								ar = ar.slice(Math.round(ar.length / 2));
+								ar = ar.concat(ar).concat(ar);
+								return ar.map((el, i) => {
+									return (
+										<TeamCard
+											compact
+											special={el.special}
+											name={el.name}
+											caption={el.caption}
+											pic={el.picture}
+											link={el.github}
+											key={i}
+										/>
+									);
+								});
+							})()}
+						</div>
+					</div>
 				</div>
 			</Section>
 		</main>
