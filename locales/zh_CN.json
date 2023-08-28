@@ -11,7 +11,16 @@
 			"settings": "设置",
 			"logout": "登出"
 		},
-		"donate": "捐赠"
+		"donate": "捐赠",
+		"dropdown": {
+			"captions": {
+				"about": "我们的项目",
+				"faq": "经常问到的问题",
+				"blog": "我们最近的更新（简化版）",
+				"credits": "我们的团队",
+				"progress": "查看目前的进度与目标"
+			}
+		}
 	},
 	"hero": {
 		"subtitle": "游戏服务器",
@@ -58,7 +67,7 @@
 			},
 			{
 				"question": "Pretendo 是否适用于 Cemu/模拟器?",
-				"answer": "Pretendo 是专为 Wii U 和 3DS 设计的；目前，这些支持 NN 的硬件的唯一模拟器是 Cemu。 Cemu 不正式支持自定义服务器，但仍然可以将 Pretendo 与 Cemu 一起使用。<br>Pretendo 目前不支持 Cemu。"
+				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有这种功能的虚拟机是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下正式官方支持 Pretendo。有关如何开始使用 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>Citra 不支持真实在线多人联接，并且因此不适用于 Pretendo，并且根本没有显示出支持真正在线游戏的迹象。 Mikage，一种用于移动设备的 3DS 模拟器，可能会在未来提供支持，尽管这还远未确定。"
 			},
 			{
 				"question": "如果我在 Nintendo Network 上被封账号，我在使用 Pretendo 时还会被禁吗？",
@@ -111,8 +120,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "网络安装程序和系统研究",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -133,10 +142,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "网络开发",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -220,11 +229,11 @@
 			"button": "现在加入!"
 		},
 		"bandwidthRaccoonQuotes": [
-			"我是 狐狸Bandwidth，我喜欢咬连接 Pretendo Network 服务器的电缆。真好吃！",
+			"我是浣熊Bandwidth，我喜欢咬连接 Pretendo Network 服务器的电缆。真好吃！",
 			"许多人问我们是否会因此与任天堂发生法律纠纷；我很高兴我的阿姨在任天堂工作，她说是合法的。",
 			"Webkit v537 是用于 Wii U 的最佳 Webkit 版本。但是，我们不会将 Chrome 转到 Wii U。",
 			"我迫不及待地等待时钟在 2038 年 1 月 19 日到达 03:14:08 UTC！",
-			"Wii U 实际上是一个被低估的系统：广告非常糟糕，但控制台很棒。嗯，等一下，我不知道为什么，但我的游戏手柄没有连接到我的 Wii。",
+			"Wii U 实际上是一个被低估的游戏机：营销非常糟糕，但游戏机很棒。嗯，等一下，我不知道为什么，但我的Gamepad没有连接到我的 Wii。",
 			"超级马里奥世界 2 - 耀西岛 的主题是绝对的爆好听，你无法说服我。",
 			"我最喜欢的 Nintendo Switch 版本是 Nintendo Switch Online + 扩展包、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet another Port Pack 和 Nintendo Switch Online + Kawashima 博士的大脑训练/Brain Age“你真的很喜欢 Nintendo Wii U 虚拟控制台标题，所以我们要把它带回来”包。你真的可以看出任天堂在不在乎。",
 			"就像“你知道 Ash，祝福她的心，她一整天都在 UwU”是南方的一种很好的说法，“Ash一直都是在 uwu ，这真的很奇怪和愚蠢，我希望他们没有”",
@@ -237,7 +246,7 @@
 	},
 	"blogPage": {
 		"title": "博客",
-		"description": "压缩块的最新更新。如果您想看到更频繁的更新，请考虑在 <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> 上支持我们。",
+		"description": "",
 		"published": "作者",
 		"publishedOn": "在"
 	},
@@ -263,6 +272,20 @@
 					"caption": "在这里搜索"
 				}
 			]
+		},
+		"search": {
+			"label": "错误代码",
+			"no_match": "没有搜索结果",
+			"title": "得到了一个错误？",
+			"caption": "把错误代码输入在这里来得到帮助！"
+		},
+		"sidebar": {
+			"install": "安装",
+			"juxt_err": "Juxt 的错误代码",
+			"getting_started": "开始使用",
+			"welcome": "欢迎",
+			"install_extended": "安装 Pretendo",
+			"search": "搜索"
 		}
 	},
 	"account": {
@@ -306,11 +329,16 @@
 				"otherSettings": "其他设置",
 				"noDiscordLinked": "没有连接的Discord账号。",
 				"linkDiscord": "连接Discord账号",
-				"newsletter": "通讯"
+				"newsletter": "通讯",
+				"no_newsletter_notice": "目前没有新闻。请稍后再试",
+				"userSettings": "账号设置",
+				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
+				"no_edit_from_dashboard": "目前无法编辑在此页面修改 PNID 设置。请通过你的游戏设备修改"
 			},
 			"downloadFiles": "下载账号文件",
 			"downloadFilesDescription": "（无法在任天堂网络上使用）",
-			"upgrade": "升级账号"
+			"upgrade": "升级账号",
+			"unavailable": "无法获得"
 		},
 		"accountLevel": [
 			"标准",
@@ -318,7 +346,21 @@
 			"版主",
 			"开发人员"
 		],
-		"banned": "禁止"
+		"banned": "禁止",
+		"account": "账号",
+		"forgotPassword": {
+			"header": "忘记密码",
+			"sub": "在下面输入你的电子邮件地址/PNID",
+			"input": "电子邮件地址或PNID",
+			"submit": "提交"
+		},
+		"resetPassword": {
+			"header": "重置密码",
+			"sub": "在下面输入新密码",
+			"password": "密码",
+			"confirmPassword": "确认密码",
+			"submit": "提交"
+		}
 	},
 	"upgrade": {
 		"title": "升级",
@@ -339,6 +381,7 @@
 	},
 	"modals": {
 		"cancel": "取消",
-		"confirm": "确认"
+		"confirm": "确认",
+		"close": "关闭"
 	}
 }

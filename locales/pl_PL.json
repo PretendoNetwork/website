@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Czy Pretendo działa na Cemu/emulatorach?",
-				"answer": "Pretendo jest głównie zaprojektowane dla prawdziwych konsol Wii U i 3DS; w tej chwili jedynym emulatorem tych konsol z obsługą Nintendo Network jest Cemu. Cemu oficjalnie nie wspiera naszych serwerów, ale możliwe, że mimo tego zadziałają.<br>Pretendo aktualnie nie wspiera Cemu."
+				"answer": "Pretendo wspiera wszystko co interaktuje z Nintendo Network, Jedyny emulator który wspiera taką funkcjonalnośc jest Cemu. Cemu 2.0 oficjalnie wspiera Pretendo pod twoimi ustawieniami konta w emulatorze. Dla informacji jak zacząć z Cemu, zapoznaj się z <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra nie wspiera prawdziwej gry online, więc dlatego nie działa z Pretendo, i w ogóle nie pokazuje żadnych znaków wspierania prawdziwej gry online. Mikage, emulator 3DS na telefonach może zacząć wspierać tą funkcjonalność w przyszłości, lecz jest to daleko od pewności."
 			},
 			{
 				"question": "Jeśli jestem zbanowany na Nintendo Network, czy będę również zbanowany na Pretendo?",
@@ -120,8 +120,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Instalator sieci i research w sprawie konsoli",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -142,10 +142,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Programowanie webowe",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -246,7 +246,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Najnowsze informacje w krótkich tekstach. Jeśli chcesz otrzymywać częstsze aktualizacje, pomyśl nad wsparciem nas na <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreonie</a>.",
+		"description": "",
 		"published": "Opublikowany przez",
 		"publishedOn": "dnia"
 	},
@@ -332,7 +332,7 @@
 				"discord": "Discord",
 				"connectedToDiscord": "Połączono z Discordem jako",
 				"removeDiscord": "Usuń konto Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Biuletyn",
 				"linkDiscord": "Połącz konto Discord",
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
@@ -347,7 +347,20 @@
 			"Moderator",
 			"Deweloper"
 		],
-		"banned": "Zbanowany"
+		"banned": "Zbanowany",
+		"forgotPassword": {
+			"header": "Zapomniałem hasła",
+			"sub": "Wpisz swój adres e-mail/PNID na dole",
+			"input": "Adres e-mail lub PNID",
+			"submit": "Potwierdź"
+		},
+		"resetPassword": {
+			"header": "Zresetuj hasło",
+			"sub": "Wpisz nowe hasło na dole",
+			"submit": "Potwierdź",
+			"confirmPassword": "Potwierdź hasło",
+			"password": "Hasło"
+		}
 	},
 	"upgrade": {
 		"unsub": "Anuluj subskrypcję",

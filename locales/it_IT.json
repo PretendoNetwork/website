@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo è sviluppata con l'hardware Wii U e 3DS in mente; in questo momento l'unico emulatore per queste console che supporta NN è Cemu. Cemu non supporta server custom ufficialmente, ma dovrebbe comunque essere possibile utilizzare Pretendo con Cemu .<br>Al momento Pretendo non supporta Cemu."
+				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
@@ -120,8 +120,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Installer della rete e ricerca su console",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -142,10 +142,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Sviluppo web",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -211,7 +211,7 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Tienti aggiornato",
+		"title": "Tieniti aggiornato",
 		"text": "Unisciti al nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
 		"widget": {
 			"text": "Ricevi aggiornamenti in tempo reale sul nostro progresso",
@@ -246,7 +246,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di supportarci su <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Gli ultimi aggiornamenti in blocchi condensati. Se vuoi ricevere aggiornamenti più frequenti, considera di <a href=\"/account/upgrade\" target=\"_blank\">supportarci</a>.",
 		"published": "Pubblicato da",
 		"publishedOn": "il"
 	},
@@ -298,7 +298,7 @@
 				"removeDiscord": "Rimuovi account Discord",
 				"noDiscordLinked": "Nessun account Discord collegato.",
 				"linkDiscord": "Collega account Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Notizie",
 				"newsletterPrompt": "Ricevi aggiornamenti sul progetto via email (puoi annullare in qualunque momento)",
 				"passwordPrompt": "Inserisci la tua password PNID per scaricare i file per Cemu",
 				"userSettings": "Impostazioni utente",
@@ -309,7 +309,20 @@
 			"upgrade": "Fai l'upgrade del tuo account",
 			"unavailable": "Non disponibile"
 		},
-		"account": "Account"
+		"account": "Account",
+		"forgotPassword": {
+			"header": "Password Dimenticata",
+			"sub": "Inserisci qua sotto il tuo indirizzo email o PNID",
+			"input": "Indirizzo email o PNID",
+			"submit": "Invia"
+		},
+		"resetPassword": {
+			"header": "Ripristino password",
+			"sub": "Inserisci qua sotto la nuova password",
+			"password": "Password",
+			"submit": "Invia",
+			"confirmPassword": "Conferma password"
+		}
 	},
 	"localizationPage": {
 		"title": "Localizziamo",

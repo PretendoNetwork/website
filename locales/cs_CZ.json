@@ -1,0 +1,21 @@
+{
+	"nav": {
+		"account": "Účet",
+		"accountWidget": {
+			"settings": "Nastavení",
+			"logout": "Odhlásit se"
+		},
+		"faq": "Často kladené dotazy",
+		"about": "O stránkách",
+		"docs": "Dokumenty",
+		"credits": "Kredity",
+		"progress": "Progres",
+		"blog": "Blog"
+	},
+	"hero": {
+		"subtitle": "Herní servery"
+	},
+	"aboutUs": {
+		"title": "O nás"
+	}
+}

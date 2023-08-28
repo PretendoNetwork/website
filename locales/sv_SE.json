@@ -1,0 +1,383 @@
+{
+	"nav": {
+		"docs": "Dokument",
+		"progress": "Framsteg",
+		"blog": "Blogg",
+		"about": "Om",
+		"faq": "Vanliga Frågor",
+		"credits": "Lista Över Medverkande",
+		"dropdown": {
+			"captions": {
+				"progress": "Kolla projektets framsteg och mål",
+				"about": "Om projektet",
+				"credits": "Träffa teamet",
+				"blog": "Våra senaste uppdateringar, kondenserat",
+				"faq": "Vanliga frågor"
+			}
+		},
+		"account": "Konto",
+		"accountWidget": {
+			"settings": "Inställningar",
+			"logout": "Logga ut"
+		},
+		"donate": "Donera"
+	},
+	"hero": {
+		"subtitle": "Spel servrar",
+		"text": "Pretendo är en gratis och med öppen källkods ersättning för Nintendo's servrar för både 3DSet och Wii U, som tillåter online anslutning för alla, även efter de originella servrarna är nerstängda",
+		"title": "Återskapade",
+		"buttons": {
+			"readMore": "Läs mer"
+		}
+	},
+	"aboutUs": {
+		"title": "Om oss",
+		"paragraphs": [
+			"Pretendo är en ett projekt med öppen källkod som syftar till att återskapa Nintendo Nätverket för 3DS och Wii U genom att använda renrum baklängeskonstruktion.",
+			"Eftersom våra tjänster är både gratis och med öppen källkod, så kan de existera långt efter den ounvikliga stängningen av Nintendo Nätverket."
+		]
+	},
+	"credits": {
+		"title": "Teamet",
+		"people": [
+			{
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"caption": "Projektägare och ledande utvecklare",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Forskning och utveckling inom Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"name": "Rambo6Glaz",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Nätverks installerare och konsol forskning"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS forskning och patch utveckling",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"caption": "Forsking inom konsol och andra system"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Ledare för webbutveckling",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes",
+				"caption": "Webbutveckling"
+			},
+			{
+				"name": "mrjvs",
+				"github": "https://github.com/mrjvs",
+				"caption": "Designer",
+				"picture": "https://github.com/mrjvs.png"
+			}
+		],
+		"text": "Träffa teamet bakom projektet"
+	},
+	"specialThanks": {
+		"title": "Särskilda tack",
+		"people": [
+			{
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "crunch bibliotek utveckling",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"caption": "3Ds utvecklare och NEX dissektor",
+				"name": "Stary",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png"
+			},
+			{
+				"name": "Billy",
+				"caption": "Bevarare",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Forskning inom Mario Kart 7 och 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Delning av Miiverse information",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"special": "Särskilda tack",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay",
+				"name": "Kinnay",
+				"caption": "Forsking om Nintendo datastrukturer"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikoner för Mii-redigeraren och Juxt reaktioner",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHub bidragare",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"caption": "Lokaliseringar och andra bidrag"
+			}
+		],
+		"text": "Utan dem skulle Pretendo inte vara där det är idag."
+	},
+	"progressPage": {
+		"description": "Kolla in projektets framsteg och mål! (Updateras varje timme eller så, reflekterar inte ALLA projekt mål eller framsteg)",
+		"title": "Våra framsteg"
+	},
+	"blogPage": {
+		"title": "Blogg",
+		"published": "Publicerad av",
+		"publishedOn": "på",
+		"description": ""
+	},
+	"account": {
+		"loginForm": {
+			"detailsPrompt": "Ange dina kontouppgifter nedan",
+			"username": "Användarnamn",
+			"login": "Logga in",
+			"forgotPassword": "Glömde ditt lösenord?",
+			"email": "E-post",
+			"register": "Registrera",
+			"password": "Lösenord",
+			"confirmPassword": "Bekräfta lösenord",
+			"registerPrompt": "Har inte ett konto?",
+			"miiName": "Mii namn",
+			"loginPrompt": "Har redan ett konto?"
+		},
+		"settings": {
+			"downloadFiles": "Ladda ner kontofiler",
+			"upgrade": "Uppgradera konto",
+			"downloadFilesDescription": "(kommer inte att funka på Nintendo Nätverket)",
+			"settingCards": {
+				"userSettings": "Användarinställningar",
+				"profile": "Profil",
+				"nickname": "Smeknamn",
+				"gender": "Kön",
+				"birthDate": "Födelsedatum",
+				"country": "Land/Region",
+				"timezone": "Tidzon",
+				"serverEnv": "Servermiljö",
+				"production": "Produktion",
+				"beta": "Beta",
+				"upgradePrompt": "Betaservar är exlusiva till betatestare.<br>För att bli en beta testare, uppgradera till en högre kontonivå.",
+				"password": "Lösenord",
+				"noDiscordLinked": "Inget Discord-konto kopplat.",
+				"hasAccessPrompt": "Din nuvarande nivå ger dig betaserver tillgång. Coolt!",
+				"signInSecurity": "Inloggning och säkerhet",
+				"email": "E-post",
+				"passwordResetNotice": "Efter att du har ändrat ditt lösenord så kommer du bli utloggad från alla enheter.",
+				"otherSettings": "Andra inställningar",
+				"fullSignInHistory": "Visa hela inloggningshistoriken",
+				"signInHistory": "Inloggningshistorik",
+				"connectedToDiscord": "Ansluten till Discord som",
+				"linkDiscord": "Koppla Discord konto",
+				"discord": "Discord",
+				"removeDiscord": "Ta bort Discord-konto",
+				"passwordPrompt": "Ange ditt PNID lösenord för att ladda ner Cemu filer",
+				"no_signins_notice": "Inloggningshistorik inte spårad för nuvarande. Kom tillbaka senare!",
+				"newsletterPrompt": "Ta emot projekt uppdateringar via e-post (du kan avbryta när som helst)",
+				"newsletter": "Nyhetsbrev",
+				"no_newsletter_notice": "Nyhetsbrev inte tillgänligt för närvarande. Kom tillbaka senare",
+				"no_edit_from_dashboard": "Redigering av PNID-inställningar från användarinstrumentpanelen är inte tillgängligt för nuvarande. Vänligen uppdatera användarinställningar från din kopplade spelkonsol"
+			},
+			"unavailable": "Otillgänglig"
+		},
+		"resetPassword": {
+			"header": "Återställ Lösenord",
+			"sub": "Ange nytt lösenord nedan",
+			"password": "Lösenord",
+			"confirmPassword": "Bekräfta lösenord",
+			"submit": "Skicka in"
+		},
+		"account": "Konto",
+		"forgotPassword": {
+			"header": "Glömt Lösenord",
+			"sub": "Ange din e-postadress/PNID nedan",
+			"input": "E-postadress eller PNID",
+			"submit": "Skicka in"
+		},
+		"accountLevel": [
+			"Standard",
+			"Testare",
+			"Moderator",
+			"Utvecklare"
+		],
+		"banned": "Förbjuden"
+	},
+	"upgrade": {
+		"changeTierConfirm": "Ändra nivå",
+		"back": "Tillbaka",
+		"title": "Uppgradera",
+		"description": "Om du når månadsmålet så kommer Pretendo bli ett heltidsjobb och ge uppdateringar av högre kvalitet på en snabbare takt.",
+		"month": "månad",
+		"tierSelectPrompt": "Välj en nivå",
+		"unsub": "Avprenumerera",
+		"unsubConfirm": "Avprenumerera",
+		"changeTier": "Ändra nivå",
+		"unsubPrompt": "Är du saker att du vill avprenumerera från <span>tiername</span>? Du kommer att förlora tillgång till förmånerna som är knutna till den nivån.",
+		"changeTierPrompt": "Är du säker att du vill avprenumerera från <span class=\"oldtier\">oldtiername</span> and subscribe to <span class=\"newtier\">newtiername</span>?"
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Jag är Bredband Tvättbjörnen, och jag älskar att bita kabar som går in i Pretendo Nätverkets servrar. Mums!",
+			"Många personer frågar oss om vi kommar hamna i juridiska problem med Nintendo över det här; jag är glad att kunna säga att min faster jobbar på Nintendo och hon säger att det är okej.",
+			"Webkit v537 är den bästa versionen av Webkit för Wii U. Nej, vi kommer inte att porta Chrome till Wii Uet.",
+			"Jag kan inte vänta för klockan att nå 03:14:08 UTC på den 19 Januari 2038!",
+			"Wii Uet är faktiskt ett underskattat system: reklamfilmerna var typ riktigt dåliga, men konsolen är bra. Va, vänta en sekund, jag är inte säker varför men min Gamepad ansluter inte till mitt Wii.",
+			"Super Mario Värld 2 - Yoshi's Ö's huvud signaturmelodi är en absolut bop är det finns inget sätt att du kommer övertyga mig annars.",
+			"Mina favorit Nintendo Switch släpp har varit Nintendo Switch Online + Expansion Paket, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Spel Paket, Nintendo Switch Online + Ännu En Port Paket, och Nintendo Switch Online + Dr. Kawashima's Hjärn Träning / Hjärnålder \"Du Gillade Verkligen WII U Virtual Konsol Titeln, Så Vi Tar Den Tillbaka\" Paket. Du kan verkligen se att Nintendo bryr sig.",
+			"Som \"Du vet Ash, välsigna hennes hjärta, hon UwUar varje dag\" är det trevliga sydliga sättet att säga \"Ash uwuar hela tiden och det är verkligen konstigt och dumt och jag önskar att hen inte gjorde det\"",
+			"Min första video på min kanal!! Ja har velat göra videor länge nu men min laptop rann ganska dåligt och jag kunde inte köra fraps, skype och minecraft på samma gång. men nu är det över! med lite hjälp från min IT lärare kör min laptop mycket bättre och jag kan spela in nu! jag hoppas att ni alla tycker om den här videon och om du gör det snälla gilla och premenurera!!!"
+		],
+		"socials": "Sociala medier",
+		"usefulLinks": "Användbara länkar",
+		"widget": {
+			"captions": [
+				"Vill du hålla dig uppdaterad?",
+				"Gå med i våran Discord server!"
+			],
+			"button": "Gå med nu!"
+		}
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Vad är Pretendo?",
+				"answer": "Pretendo är en Nintendo Nätverk ersättning med öppen källkod som syftar att skapa anpassade servrar för Wii U och 3DS familjen av konsoler. Vårt mål är att preservera online funktionaliteten av dessa konsoler, för att tillåta spelare att fortsätta spela deras favorit Wii U och 3DS spel till deras fulla kapacitet."
+			},
+			{
+				"question": "Kommer mina existerande NNIDs fungera på Pretendo?",
+				"answer": "Tyvärr, nej. Existerande NNIDS kommer inte fungera på Pretendo, eftersom endast Nintendo hålder din användardata; medans en NNID-till-PNID migration är teoretiskt möjlig, skulle det vara riskfyllt och kräva känslig användardata som vi inte vill hålla i."
+			},
+			{
+				"question": "Hur använder jag Pretendo?",
+				"answer": "Pretendo är för nuvarande inte i ett tillstånd som är redo för offentlig användning. Men, när det är kommer du att kunna använda Pretendo helt enkelt genom att köra våran homebrew patcher på din konsol."
+			},
+			{
+				"answer": "Nej. Mängder av Pretendo's funktioner/tjänster är utvecklade självständigt (för exempel, Miiverse kan vara arbetad på av en utvecklare medans Konton och Vänner håller på att bli arbetad på av en annan) och därför kan vi inte ge en estimerad tid för hur länge detta kommer ta.",
+				"question": "Vet du när funktion/tjänst kommer bli redo?"
+			},
+			{
+				"answer": "Pretendo stödjer alla klienter som kan interagera med Nintendo Nätverket. För nuvarande så är den enda emulatorn med denna typ av funktionalitet Cemu. Cemu 2.0 stödjer officielt Pretendo under din nätverks konto inställning i emulatorn. För information om hur du kan komma igång med Cemu, kolla in<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra stödjer inte äkta online spelande och alltså fungerar inte med Pretendo, och visar inte tecken av att stödja äkta online spelande alls. Mikage, en 3DS emulator för mobila enheter, kan ge stöd i framtiden men detta är långt från säkert.",
+				"question": "Fungerar Pretendo på Cemu/emulatorer?"
+			},
+			{
+				"question": "Om jag är förbjuden på Nintendo Nätverket, kommer jag att förbli förbjuden när jag använder Pretendo?",
+				"answer": "Vi har inte tillgång till Nintendo Nätverket's förbjudelser, och alla användare kommer inte att vara bannade på vår tjänst. Vi kommer dock ha regler att följa när du använder tjänsten och misslyckande att följa dessa regler kan leda till en förbjudelse."
+			},
+			{
+				"question": "Kommer Pretendo att stödja Wiiet/Switchet?",
+				"answer": "Wiiet har redan anpassade servrar som tillhandahålls av <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Vi för nuvarande önskar inte att rikta in oss på Switchet eftersom den är både betald och helt annorlunda än Nintendo Nätverket."
+			},
+			{
+				"question": "Kommer jag behöva hacks för att ansluta?",
+				"answer": "Ja, du kommer att behöva hacka din enhet för att ansluta; Dock på Wii U kommer du bara att behöva tillgång till Homebrew Launchern (dvs. Haxchi,Coldboot Haxchi, eller till och med webbläsar utnyttjandet), med information om hur 3DSet kommer ansluta kommande vid ett senare datum."
+			}
+		],
+		"title": "Vanliga frågor",
+		"text": "Här är några vanliga frågor vi blir frågade för enkel information."
+	},
+	"showcase": {
+		"title": "Vad vi gör",
+		"text": "Vårt projekt har många komponenter. Här är några av de.",
+		"cards": [
+			{
+				"title": "Spel servrar",
+				"caption": "Tar tillbaka dina favorit spel och innehåll genom att använda anpassade servrar."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "En ny tolkning av Miiverse, som om den var gjord i den modern tid."
+			},
+			{
+				"title": "Cemu stöd",
+				"caption": "Spela dina favorita Wii U titlar till och med utan en konsol!"
+			}
+		]
+	},
+	"localizationPage": {
+		"title": "Låt oss lokalisera",
+		"fileInput": "Fil att testa",
+		"instructions": "Visa lokaliseringsinstruktioner",
+		"description": "Klistra in en link till en offentligt tillgänglig JSON locale för att testa den på hemsidan",
+		"filePlaceholder": "https://en.länk.till/filen.json",
+		"button": "Testfil"
+	},
+	"discordJoin": {
+		"widget": {
+			"button": "Gå med i servern",
+			"text": "Få uppdateringar i realtid till våra framsteg."
+		},
+		"title": "Håll dig uppdaterad",
+		"text": "Gå med i vår Discord server för att få dom senaste uppdateringarna på projektet."
+	},
+	"progress": {
+		"githubRepo": "Github arkiv",
+		"title": "Framsteg"
+	},
+	"docs": {
+		"search": {
+			"caption": "Skriv in den i rutan nedan för att få information om ditt problem!",
+			"title": "Har du fått en felkod?",
+			"no_match": "Inga matcher hittades",
+			"label": "Felkod"
+		},
+		"missingInLocale": "Den här sidan är otillgänglig i din locale. Vänligen kolla den Engelska versionen nedan.",
+		"quickLinks": {
+			"links": [
+				{
+					"header": "Installera Pretendo",
+					"caption": "Visa installationsinstruktionerna"
+				},
+				{
+					"header": "Har du fått ett fel?",
+					"caption": "Sök efter det här"
+				}
+			],
+			"header": "Snabblänkar"
+		},
+		"sidebar": {
+			"install": "Installera",
+			"getting_started": "Att komma igång",
+			"juxt_err": "Felkoder - Juxt",
+			"welcome": "Välkommen",
+			"install_extended": "Installera Pretendo",
+			"search": "Sök"
+		}
+	},
+	"donation": {
+		"upgradePush": "För att bli en prenumerant och få tillgång till coola förmåner, besök <a href=\"/account/upgrade\">uppgraderingssidan</a>.",
+		"progress": "<span>$${totd}</span> av <span>$${goald}</span>/månad, <span>${perc}%</span> av det månatliga målet."
+	},
+	"modals": {
+		"close": "Stäng",
+		"confirm": "Bekräfta",
+		"cancel": "Avbryt"
+	}
+}

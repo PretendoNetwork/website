@@ -1,0 +1,370 @@
+{
+	"nav": {
+		"accountWidget": {
+			"logout": "Zarrar la sesión",
+			"settings": "Configuración"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Conoz al equipu",
+				"about": "Información del proyeutu",
+				"faq": "Entrugues frecuentes",
+				"blog": "Los últimos anovamientos, concentraos",
+				"progress": "Revisa'l progresu ya les metes del proyetu"
+			}
+		},
+		"about": "Tocante a",
+		"faq": "FAQ",
+		"docs": "Documentación",
+		"credits": "Creitos",
+		"progress": "Progresu",
+		"blog": "Blogue",
+		"account": "Cuenta",
+		"donate": "Donar"
+	},
+	"hero": {
+		"subtitle": "Sirvidores de xuegu",
+		"title": "Recreaos",
+		"text": "Pretendo ye un reemplazu gratuitu ya de códigu abiertu de los sirvidores de Nintendo pa 3DS ya Wii U que permite la conectividá en llinia de los sirvidores orixinales que nun siguen en funcionamientu",
+		"buttons": {
+			"readMore": "Lleer más"
+		}
+	},
+	"aboutUs": {
+		"paragraphs": [
+			"Pretendo ye un proyeutu de códigu abiertu que tien l'oxetivu de recrear la Nintendo Network pa 3DS ya Wii U con inxeniería inverso de sala llimpia.",
+			"Darréu que los nuesos servicios son gratuitos ya de códigu abiertu, puen siguir esistiendo dempués del zarru inevitable de la Nintendo Network."
+		],
+		"title": "Tocante a nós"
+	},
+	"progress": {
+		"title": "Progresu",
+		"githubRepo": "Depósitu de GitHub"
+	},
+	"faq": {
+		"text": "Equí tienes dalgunes de les entrugues más habituales que nos faen pa consiguir más información.",
+		"QAs": [
+			{
+				"question": "¿Qué ye Pretendo?",
+				"answer": "Pretendo ye un reemplazu de códigu abiertu pa Nintendo Network que tien l'oxetivu de crear sirvidores personalizaos pa la familia de consoles de Wii U ya 3DS. La nuesa meta ye caltener les funciones en llinia d'estes consoles pa permitir que los xugadores sigan xugando al completu a los sos xuegos favoritos de Wii U ya 3DS."
+			},
+			{
+				"question": "¿Les mios NNIDs esistentes funcionen en Pretendo?",
+				"answer": "Desgraciadamente, non. Les NNIDs esistentes nun funcionen en Pretendo darréu que Nintendo ye la propietaria d'esos datos. Magar que la migración de NNID a PNID ye teóricamente posible, tien riesgos ya rique datos d'usuariu sensibles que nun queremos tener."
+			},
+			{
+				"question": "¿Cómo uso Pretendo?",
+				"answer": "Anguaño, Pretendo ye un serviciu que nun ta preparáu pal usu públicu. Por embargu, namás que lo tea vas ser a usalu pente la exeución del nuesu parchiador na to consola."
+			},
+			{
+				"question": "¿Sabéis cuándo xá se pue usar la función o'l serviciu X?",
+				"answer": "Non. Munches de les funciones ya munchos de los servicios de Pretendo desendólquense de forma independiente (por exemplu, Miiverse pue desendolcalu un persona mentanto que Cuentes ya Amigos otra) ya, polo tanto, nun podemos dar una data aproximada de cuándo van tar preparaos."
+			},
+			{
+				"question": "¿Pretendo funciona colos emuladores?",
+				"answer": "Pretendo ye compatible con cualesquier veceru qu'interactúe cola Nintendo Network. Anguaño, l'únicu emulador que ye compatible oficialmente con esti tipu de función ye Cemu na versión 2.0. Pa consiguir más información tocante a cómo comenzar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra nun ye compatible col xuegu en llinia de verdá ya nun hai señes de que lo seya nel futuru, poro, Pretendo nun funciona. Mikage, un emulador de 3DS pa preseos móviles, ye posible que forna esta compatibilidá nel futuru magar que nun se sabe."
+			},
+			{
+				"question": "Si toi espulsáu/ada de la Nintendo Network, ¿voi talo tamién en Pretendo?",
+				"answer": "Nun tenemos accesu a les espulsiones de la Nintendo Network y, polo tanto, el nuesu serviciu nun contien nengún perfil espulsáu. Por embargu, tenemos regles que s'han cumplir ya si nun lo faes podriemos espulsate."
+			},
+			{
+				"answer": "La Wii xá tien sirvidores personalizaos que forne <a href=\"https://wiimmfi.de/ \" target=\"_blank\">Wiimmfi</a>. Anguaño nun queremos centranos nes funciones en llinia de la Switch darréu que son de pagu ya completamente estremaes.",
+				"question": "¿Pretendo va ser compatible con Wii/Switch?"
+			},
+			{
+				"question": "¿Tengo d'usar hacks pa conectame?",
+				"answer": "Sí, tienes de hackiar la consola pa conectate. Por embargu, en Wii U namás tienes d'acceder al Homebrew Launcher (pente Haxchi, ColdBoot Haxchi o pente l'exploit del restolador web) ya en 3DS visita la documentación d'esti sitiu web pa saber cómo conectate."
+			}
+		],
+		"title": "Entrugues frecuentes"
+	},
+	"showcase": {
+		"title": "Lo que facemos",
+		"text": "El proyeutu tien munchos componentes, equí hai dalgunos.",
+		"cards": [
+			{
+				"title": "Sirvidores de xuegu",
+				"caption": "Restauramos los xuegos ya'l conteníu que prefieres pente l'usu de sirvidores personalizaos."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Volvemos interpretar la función de Miiverse p'adautala a la dómina moderna."
+			},
+			{
+				"title": "Compatibilidá con Cemu",
+				"caption": "¡Xuega los tos títulos favoritos de Wii U ensin tener la consola!"
+			}
+		]
+	},
+	"credits": {
+		"title": "L'equipu",
+		"text": "Conoz al equipu que ta detrás del proyeutu",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Propietariu del proyeutu ya desendolcador líder",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"caption": "Investigación ya desendolcu de Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"name": "Jemma (CaramelKat)",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Instalador per rede ya investigación en consoles",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "quarky",
+				"caption": "Investigación ya desendolcu de parches pa la función SpotPass",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Investigación en consoles ya otros sistemes",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Líder del desendolcu web",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"caption": "Desendolcu web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Diseñador",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"people": [
+			{
+				"caption": "Desendolcu de la biblioteca crunch",
+				"github": "https://github.com/superwhiskers",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png"
+			},
+			{
+				"caption": "Desendolcador de 3DS ya analista de NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"name": "Stary",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Caltenedor",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"name": "Shutterbug2000",
+				"caption": "Investigación de Mario Kart 7 ya 3DS"
+			},
+			{
+				"name": "rverse",
+				"caption": "Compartición de la información de Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Agradecimientu especial",
+				"caption": "Investigación de les estructures de datos de Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Iconos pal Editor de Mii ya les reaiciones de Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "Collaboradores de GitHub",
+				"caption": "Traducciones ya otres collaboraciones"
+			}
+		],
+		"title": "Agradecimientu especial",
+		"text": "Ensin estes persones, Pretendo nun taría onde ta güei."
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Soi'l mapache Bandwidth ya préstame pola vida royer los cables que van a los sirvidores de la Pretendo Network. ¡Qué ricos tán!",
+			"Muncha xente entrúganos si vamos tener problemes llegales con Nintendo pola mor d'esti proyeutu. Toi contentu de dicir que mio tía trabaya en Nintendo ya diz que nun hai nengún problema.",
+			"La versión 537 de Webkit ye la meyor versión de WebKit pa Wii U. Non, nun vamos portar Chrome a la Wii U.",
+			"¡Tengo permunches ganes de que'l reló marque les 4:14:08 del 19 de xineru de 2038!",
+			"La Wii U ye un sistema infravaloráu: los anuncios yeren mui malos, mas la consola ye xenial. Eh, espera un segundu… Nun sé porque'l mandu de la consola nun se conecta a la Wii.",
+			"La canción principal de Super Mario World 2 - Yoshi's Island ye mui bona ya nun hai forma de que me convenzas de lo contrario.",
+			"Les mios versiones de Nintendo Switch favorites foron: Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Otru Xuegu Portáu Pack ya Nintendo Switch Online + Brain Training / Brain Age «Prestóte muncho la versión de la Virtual Console de Wii U, poro volvemos trayela» del Dr. Kawashima Pack. Pa que dempués digas que Nintendo nun s'esmolez.",
+			"«Xá conoces a la bendita d'Ash, fai UwU tol día» ye la forma suave ya sureña de dicir «Ash fai UwU tol tiempu, ye bien rara ya fata. Axallá que nun lo fore»",
+			"¡¡El primer videu de la mio canal!! Quixi facer vídeos demientres munchu tiempu mas el mio portátil yera un poco malu ya nun podía executar FRAPS, Skype ya Minecraft al empar. ¡Agora xá nun ye asina! Cola ayuda del mio profe d'informática, el portátil funciona muncho meyor ya xá puedo grabar. Espero qu'esfrutéis ya que vos suscribáis si lo facéis."
+		],
+		"socials": "Redes sociales",
+		"usefulLinks": "Enllaces útiles",
+		"widget": {
+			"captions": [
+				"¿Quies tar al día?",
+				"¡Xúnite al nuesu sirvidor de Discord!"
+			],
+			"button": "¡Xunise xá!"
+		}
+	},
+	"blogPage": {
+		"description": "Los últimos anovamientos en cachos concentraos. Si quies ver anovamientos más frecuentes, piensa <a href=\"/account/upgrade\" target=\"_blank\">n'apoyanos</a>.",
+		"title": "Blogue",
+		"published": "Artículu de:",
+		"publishedOn": "el"
+	},
+	"account": {
+		"loginForm": {
+			"login": "Aniciu de sesión",
+			"register": "Rexistru",
+			"detailsPrompt": "Introduz abaxo los detalles de la cuenta",
+			"username": "Nome d'usuariu",
+			"password": "Contraseña",
+			"confirmPassword": "Confirmación de la contraseña",
+			"email": "Direición de corréu electrónicu",
+			"miiName": "Nome del Mii",
+			"forgotPassword": "¿Escaeciesti la contraseña?",
+			"registerPrompt": "¿Nun tienes una cuenta?",
+			"loginPrompt": "¿Xá tienes una cuenta?"
+		},
+		"settings": {
+			"downloadFiles": "Baxar los ficheros de la cuenta",
+			"downloadFilesDescription": "(nun funciona na Nintendo Network)",
+			"upgrade": "Anovar la cuenta",
+			"unavailable": "Nun ta disponible",
+			"settingCards": {
+				"userSettings": "Configuración del perfil",
+				"profile": "Perfil",
+				"nickname": "Nomatu",
+				"birthDate": "Data de nacencia",
+				"gender": "Xéneru",
+				"country": "País/rexón",
+				"timezone": "Fusu horariu",
+				"serverEnv": "Entornu del sirvidor",
+				"production": "Producción",
+				"beta": "Beta",
+				"upgradePrompt": "Los sirvidores beta son esclusivos pa probadores.<br>Pa ser probador/a beta, anueva a un nivel de cuenta superior.",
+				"hasAccessPrompt": "El to nivel actual date accesu al sirvidor beta. ¡Guai!",
+				"signInSecurity": "Aniciu de sesión ya seguranza",
+				"no_newsletter_notice": "El boletín nun ta disponible. Volvi equí dempués",
+				"no_edit_from_dashboard": "La edición de la configuración del PNID dende'l panel del perfil nun ta disponible. Anueva la configuración del perfil dende la consola enllaciada",
+				"email": "Direición de corréu electrónicu",
+				"password": "Contraseña",
+				"passwordResetNotice": "Dempués de camudar la contraseña, zárrase la sesión de tolos preseos.",
+				"signInHistory": "Historial d'anicios de sesión",
+				"fullSignInHistory": "Ver l'historial completu",
+				"otherSettings": "Otra configuración",
+				"discord": "Discord",
+				"connectedToDiscord": "Conectéstite a Discord como",
+				"removeDiscord": "Quitar la cuenta de Discord",
+				"noDiscordLinked": "Nun s'enllació nenguna cuenta de Discord.",
+				"linkDiscord": "Enllaciar una cuenta de Discord",
+				"newsletter": "Boletín",
+				"newsletterPrompt": "Recibi los anovamientos del proyeutu per corréu electrónicu (pues dexar de recibilos cuando quieras)",
+				"passwordPrompt": "Introduz la to contraseña de PNID pa baxar los ficheros de Cemu",
+				"no_signins_notice": "L'historial d'anicios de sesión nun se ta rexistrando. ¡Volvi equí dempués!"
+			}
+		},
+		"accountLevel": [
+			"Estándar",
+			"Probador/a",
+			"Moderador",
+			"Desendolcador/a"
+		],
+		"account": "Cuenta",
+		"banned": "Espulsáu/ada"
+	},
+	"upgrade": {
+		"unsubPrompt": "¿De xuru que quies dexar de tar soscritu/a a <span>tiername</span>? Vas perder l'accesu a tolos beneficios asociaos con esi nivel.",
+		"unsubConfirm": "Arrenunciar a la soscripción",
+		"changeTier": "Camudar de nivel",
+		"title": "Anovamientu",
+		"description": "Algamar la meta mensual fai que Pretendo se convierta nun trabayu a xornada completa lo que permitiría ameyorar la calidá ya ufrir anovamientos más rápido.",
+		"month": "mes",
+		"tierSelectPrompt": "Seleiciona un nivel",
+		"unsub": "Arrenunciu de la soscripción",
+		"changeTierPrompt": "¿De xuru que quies dexar de tar soscritu/a a <span class=\"oldtier\">oldtiername</span> ya soscribite a <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Cambéu de nivel",
+		"back": "Atrás"
+	},
+	"donation": {
+		"progress": "<span>${totd}$</span> de <span>${goald}$</span>/mes, <span>${perc}%</span> de la meta mensual.",
+		"upgradePush": "Pa convertise en soscriptor/a ya tener accesu a coses guais, visita la <a href=\"/account/upgrade\">páxina d'anovamientu</a>."
+	},
+	"docs": {
+		"missingInLocale": "Esta páxina nun ta disponible na to llingua. Revisa la versión n'inglés que ta abaxo.",
+		"quickLinks": {
+			"links": [
+				{
+					"header": "Instalación de Pretendo",
+					"caption": "Ver les instrucciones de configuración"
+				},
+				{
+					"header": "¿Tuviesti dalgún error?",
+					"caption": "Búscalu equí"
+				}
+			],
+			"header": "Enllaces rápidos"
+		},
+		"search": {
+			"caption": "¡Tecléxalu na caxa d'abaxo pa consiguir más información del problema!",
+			"label": "Códigu d'error",
+			"no_match": "Nun s'atopó nenguna coincidencia",
+			"title": "¿Tienes dalgún códigu d'error?"
+		},
+		"sidebar": {
+			"getting_started": "Comienzu",
+			"welcome": "Acoyida",
+			"install_extended": "Instalación de Pretendo",
+			"install": "Instalación",
+			"search": "Buscar",
+			"juxt_err": "Códigos d'error - Juxt"
+		}
+	},
+	"discordJoin": {
+		"title": "Anovamientos",
+		"text": "Xúnite al nuesu sirvidor de Discord pa consiguir los últimos anovamientos del proyeutu.",
+		"widget": {
+			"text": "Anovamientos en tiempu real del progresu",
+			"button": "Xunise al sirvidor"
+		}
+	},
+	"progressPage": {
+		"title": "Progresu",
+		"description": "¡Revisa'l progresu ya les metes del proyeutu! (Anuévense cada hora más nun reflexa TOLES metes o TOL progresu del proyeutu)"
+	},
+	"localizationPage": {
+		"title": "Vamos traducir",
+		"instructions": "Ver les instrucciones de traducción",
+		"fileInput": "Ficheru a probar",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Probar el ficheru",
+		"description": "Apiega l'enllaz d'una locale JSON accesible públicamente pa probala nel sitiu web"
+	},
+	"modals": {
+		"cancel": "Encaboxar",
+		"confirm": "Confirmar",
+		"close": "Zarrar"
+	}
+}

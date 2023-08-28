@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo est conçu pour la Wii U et la 3DS ; pour le moment, le seul émulateur pour ces consoles qui supporte le NN est Cemu. Cemu ne prend pas officiellement en charge les serveurs personnalisés, mais il devrait être possible d'utiliser Pretendo avec Cemu.<br>Pretendo ne prend pas en charge Cemu actuellement."
+				"answer": "Pretendo supporte n'importe quel client qui peut interagir avec le Nintendo Network. Actuellement, le seul émulateur avec cette fonctionnalité est Cemu. Cemu 2.0 supporte officiellement Pretendo dans les paramètres de votre compte dans l'émulateur. Pour plus d'informations sur l'utilisation de Cemu, visitez <a href=\"https://pretendo.network/docs/install/cemu\">la documentation</a>.<br> Citra ne supporte pas véritablement le jeu en ligne et ne fonctionne donc pas Pretendo, et l'émulateur ne semble pas présenter de signes d'un support prochain. Mikage, un émulateur 3DS pour appareils mobiles, sera peut-être compatible dans le futur, néanmoins cela reste incertain."
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
@@ -116,8 +116,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Installateur du réseau et études des consoles",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -138,10 +138,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Développement Web",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -152,7 +152,7 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Remerciement spécial",
+		"title": "Remerciements spéciaux",
 		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
 		"people": [
 			{
@@ -187,7 +187,7 @@
 			},
 			{
 				"name": "Kinnay",
-				"special": "Remerciement spéciaux",
+				"special": "Remerciements spéciaux",
 				"caption": "Étude des structures de données de Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez de nous soutenir sur <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "Les dernières mises à jour en blocs condensés. Si vous souhaitez voir des mises à jour plus fréquentes, envisagez <a href=\"/account/upgrade\" target=\"_blank\">de nous soutenir</a>.",
 		"publishedOn": "le",
 		"published": "Publié par"
 	},
@@ -343,7 +343,20 @@
 			"Modérateur",
 			"Développeur"
 		],
-		"account": "Compte"
+		"account": "Compte",
+		"forgotPassword": {
+			"input": "Adresse mail ou PNID",
+			"submit": "Soumettre",
+			"header": "Mot de passe oublié",
+			"sub": "Entrez votre adresse email/PNID ci-dessous"
+		},
+		"resetPassword": {
+			"header": "Réinitialiser le mot de passe",
+			"sub": "Entrez le nouveau mot de passe ci-dessous",
+			"password": "Mot de Passe",
+			"confirmPassword": "Confirmez le mot de passe",
+			"submit": "Soumettre"
+		}
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",

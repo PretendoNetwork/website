@@ -6,18 +6,20 @@
 
 ## Select your console
 
-- ### [Wii U](#wii-u-1)
+- ### [Wii U (Tiramisu)](#wii-u-tiramisu-1)
 - ### [3DS](#3ds-1)
 
-# Wii U
+# Wii U (Tiramisu)
 
-### In Game Patches
+<div class="tip">
+  ℹ️ <b>Aroma users</b>: The Aroma patcher already handles ingame patches and redirects the Miiverse applet to Juxtaposition - no further setup is needed.
+  The below instructions are <b>only for Tiramisu users</b>.<br/>
+</div>
+<div class="tip">
+  ⚠️ Note that Tiramisu is no longer supported by Pretendo and cannot receive the latest network and <b>security patches</b>. These instructions
+  are kept for legacy users only.
+</div>
 
-Nimble and Inkay already take care of in game patches for miiverse, so you're already good to go!
-
-<br>
-
-### Applet Patch
 Navigate to the [releases](https://github.com/PretendoNetwork/Martini/releases) page on the Martini GitHub repository
 
 <img src="/assets/images/docs/install/juxt/martini-highlight.png" width=100% height=auto/>
@@ -44,7 +46,7 @@ Once the patcher is done running and your console has rebooted, you're done! Hav
 
 <img src="/assets/images/docs/install/juxt/martini-success.png" width=100% height=auto/>
 
-If you encountered any errors, try [searching](/docs/search) for the error code. If that doesn't work, get in touch with a developer in our [Discord](https://invite.gg/pretendo).
+If you encountered any errors, try [searching](/docs/search) for the error code. If that doesn't work, get in touch with a developer in our [Discord](https://discord.gg/pretendo).
 
 
 

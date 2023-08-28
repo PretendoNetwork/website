@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "A Pretendo funciona em emuladores?",
-				"answer": "Pretendo é primariamente projetado para o Wii U e Nintendo 3DS; no momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu oficialmente não fornece suporte a servidores personalizados, mas ainda deve ser possível usar a Pretendo com o Cemu.<br>A Pretendo não oferece suporte ao Cemu no momento."
+				"answer": "Pretendo suporta qualquer cliente que possa interagir com a Nintendo Network. No momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu 2.0 oficialmente suporta a Pretendo nas configurações de conta do emulador. Para mais informações em como usar a Pretendo no Cemu, por favor visite <a href=\"https://pretendo.network/docs/install/cemu\">a documentação</a>.<br>Citra não suporta o modo online de verdade, e não funciona com a Pretendo, e também não demonstra nenhum sinal de suportar um modo online no futuro. Mikage, um outro emulador de 3DS para celulares, talvez haverá uma maneira de se conectar online no futuro."
 			},
 			{
 				"question": "Se eu for banido da Nintendo Network, continuarei banido ao usar a Pretendo?",
@@ -116,8 +116,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Instalador de rede e pesquisa de console",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -138,10 +138,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Desenvolvimento web",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -211,7 +211,7 @@
 		"text": "Junte-se ao nosso servidor do Discord para receber as atualizações mais recentes do projeto.",
 		"widget": {
 			"text": "Receba atualizações em tempo real sobre o nosso progresso",
-			"button": "Se juntar ao servidor"
+			"button": "Juntar-se ao servidor"
 		}
 	},
 	"footer": {
@@ -220,20 +220,20 @@
 		"widget": {
 			"captions": [
 				"Quer se manter atualizado?",
-				"Se junte ao nosso servidor do Discord!"
+				"Junte-se ao nosso servidor do Discord!"
 			],
-			"button": "Se juntar agora!"
+			"button": "Juntar-se agora!"
 		},
 		"bandwidthRaccoonQuotes": [
 			"Eu sou Bandolino, o Guaxinim, e adoro morder os cabos que vão para os servidores da Pretendo Network. Nham nham!",
 			"Muitas pessoas nos perguntam se teremos problemas legais com a Nintendo por causa disso; Eu fico feliz em dizer que minha tia trabalha na Nintendo e ela disse que está tudo bem.",
 			"Webkit v537 é a melhor versão do Webkit para o Wii U. Não, nós não vamos portar o Chrome para o Wii U.",
 			"Mal posso esperar para dar 00:14:08 (horário de Brasília) do dia 19 de Janeiro de 2038!",
-			"O Wii U é um sistema subestimado: os comerciais eram muito ruims, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii.",
+			"O Wii U é um sistema subestimado: os comerciais eram muito ruins, mas o console é ótimo. Ah, espera um momento. Eu não sei o porquê do meu Gamepad não estar conectando no meu Wii.",
 			"O tema principal de Super Mario World 2 - Yoshi's Island tem uma batida muito top e ninguém nunca irá me convencer do contrário.",
-			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Idade e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa.",
-			"Tipo \"Você conhece a Ash, abençoe o coração dela, ela faz UwU o dia inteiro\" é uma forma simpática do sul de dizer \"Ash faz UwU o tempo todo e é estranho e estúpido e eu queria que ela não fizesse isso\"",
-			"Meu primeiro vídeo no canal!! Eu tava querendo fazer vídeos há muito tempo, mas meu notebook tava horrível e eu não conseguia usar o Fraps, Skype e Minecraft ao mesmo tempo. Mas agora isso acabou! Com alguma ajuda do meu professor de TI, agora meu notebook tá bem melhor e eu já posso gravar! Espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!"
+			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Ainda Outro Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa.",
+			"Tipo \"Você conhece a Ash, abençoe o coração dela, ela faz UwU o dia inteiro\" é uma forma simpática do sul de dizer \"Ash faz UwU o tempo todo e é tãoestranho e estúpido que seria melhor que ela não fizesse isso\"",
+			"Meu primeiro video no canal!! eu tava querendo fazer videos faz muito tempo mas meu notebook tava horrivel e eu nao conseguia usar o fraps, skype e minecraft ao mesmo tempo. mas agora isso acabou! com ajuda do meu professor de TI, agora meu notebook ta bem melhor e eu ja posso gravar! espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!"
 		]
 	},
 	"progressPage": {
@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "As atualizações mais recentes em postagens condensadas. Se você quiser ver atualizações com mais frequência, considere nos ajudar no <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "",
 		"published": "Publicado por",
 		"publishedOn": "em"
 	},
@@ -313,7 +313,20 @@
 			"Moderador",
 			"Desenvolvedor"
 		],
-		"banned": "Banido"
+		"banned": "Banido",
+		"forgotPassword": {
+			"header": "Esqueci a senha",
+			"input": "E-mail ou PNID",
+			"submit": "Enviar",
+			"sub": "Coloque seu e-mail ou PNID abaixo"
+		},
+		"resetPassword": {
+			"header": "Resetar Senha",
+			"sub": "Insira sua nova senha abaixo",
+			"password": "Senha",
+			"confirmPassword": "Confirmar senha",
+			"submit": "Enviar"
+		}
 	},
 	"docs": {
 		"missingInLocale": "Esta página não está disponível no seu idioma. Por favor, confira a versão em Inglês abaixo.",
@@ -326,7 +339,7 @@
 				},
 				{
 					"caption": "Pesquise por ele aqui",
-					"header": "Deu erro?"
+					"header": "Ocorreu um erro?"
 				}
 			]
 		},

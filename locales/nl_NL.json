@@ -3,7 +3,7 @@
 		"about": "Over",
 		"faq": "FAQ",
 		"docs": "Docs",
-		"credits": "Credits",
+		"credits": "Krediet",
 		"progress": "Vooruitgang",
 		"blog": "Blog",
 		"account": "Account",
@@ -23,7 +23,7 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Game servers",
+		"subtitle": "Spelservers",
 		"title": "Nagemaakt",
 		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers permanent gestopt worden",
 		"buttons": {
@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Werkt Pretendo op Cemu of andere emulators?",
-				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu.<br>Momenteel ondersteunt Pretendo Cemu niet."
+				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu. Momenteel ondersteunt Pretendo Cemu niet."
 			},
 			{
 				"question": "Als ik van Nintendo Network gebanned ben, blijf ik dan gebanned op Pretendo?",
@@ -102,8 +102,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Netwerkinstallatie tools en console research",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -124,10 +124,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Website ontwikkelaar",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -167,7 +167,7 @@
 			},
 			{
 				"name": "rverse",
-				"caption": "Miiverse information sharing",
+				"caption": "Miiverse informatie delen",
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub"
 			},
@@ -185,7 +185,7 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub contributors",
+				"name": "GitHub medewerkers",
 				"caption": "Vertalingen en andere contributions",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
@@ -198,7 +198,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons op <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a> te ondersteunen.",
+		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons <a href=\"/account/upgrade\" target=\"_blank\">ondersteunen</a>.",
 		"published": "Gepubliceerd door",
 		"publishedOn": "op"
 	},
@@ -212,17 +212,17 @@
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de a href=\"/account/upgrade\"&gt;upgrade pagina."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"upgrade": {
-		"changeTierPrompt": "Weet je zeker dat je je abonnement op <span class=\"oldtier\">oldtiername</span> wilt opzeggen en je wilt aanmelden voor <span class=\"newtier\">newtiername</span>?",
+		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
 		"back": "Terug",
 		"title": "Upgraden",
 		"description": "Het bereiken van de maandelijkse doelstelling maakt van Pretendo een fulltime baan, wat zorgt voor snellere updates van een hogere kwaliteit.",
 		"month": "Maand",
 		"tierSelectPrompt": "Selecteer een tier",
 		"unsub": "Opzeggen",
-		"unsubPrompt": "Weet je zeker dat je je abonnement voor <span>tiername</span> wilt opzeggen? Je verliest toegang tot de voordelen voor die tier.",
+		"unsubPrompt": "Weet u zeker dat u zich wilt afmelden voor <span>tiername</span>? Je verliest de toegang tot de extraatjes die bij dat niveau horen.",
 		"unsubConfirm": "Opzeggen",
 		"changeTier": "Verander tier",
 		"changeTierConfirm": "Verander van tier"
@@ -230,7 +230,7 @@
 	"showcase": {
 		"cards": [
 			{
-				"title": "Game servers",
+				"title": "Spelservers",
 				"caption": "Wij brengen jouw favoriete games en content terug via custom servers."
 			},
 			{
@@ -291,7 +291,7 @@
 		},
 		"settings": {
 			"downloadFiles": "Download account bestanden",
-			"upgrade": "Upgrade account",
+			"upgrade": "Account upgraden",
 			"settingCards": {
 				"nickname": "Bijnaam",
 				"profile": "Profiel",
@@ -299,10 +299,10 @@
 				"gender": "Geslacht",
 				"country": "Land/regio",
 				"timezone": "Tijdszone",
-				"serverEnv": "Server environment",
-				"production": "Production",
+				"serverEnv": "Serveromgeving",
+				"production": "Productie",
 				"beta": "Beta",
-				"upgradePrompt": "Beta servers zijn exclusief voor beta testers.<br>Om een beta tester te worden, moet je je account upgraden naar een hogere tier.",
+				"upgradePrompt": "Beta servers zijn exclusief voor beta testers.<br>Om een beta tester te worden, upgrade naar een hogere account tier.",
 				"hasAccessPrompt": "Jouw huidige tier geeft je beta server toegang. Cool!",
 				"email": "E-mail adres",
 				"password": "Wachtwoord",
@@ -329,12 +329,25 @@
 		},
 		"accountLevel": [
 			"Standaard",
-			"Tester",
+			"Testapparaat",
 			"Moderator",
 			"Ontwikkelaar"
 		],
 		"banned": "Gebanned",
-		"account": "Account"
+		"account": "Account",
+		"forgotPassword": {
+			"header": "Wachtwoord vergeten",
+			"sub": "Vul hieronder uw e-mailadres/PNID in",
+			"input": "E-mailadres of PNID",
+			"submit": "Dien in"
+		},
+		"resetPassword": {
+			"header": "Wachtwoord resetten",
+			"sub": "Voer hieronder een nieuw wachtwoord in",
+			"password": "Wachtwoord",
+			"confirmPassword": "Wachtwoord bevestigen",
+			"submit": "Dien in"
+		}
 	},
 	"modals": {
 		"cancel": "Annuleren",

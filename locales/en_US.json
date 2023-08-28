@@ -115,8 +115,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Network installer and console research",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/Rambo6Glaz"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -137,10 +137,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Web development",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -241,7 +241,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider supporting us on <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider <a href=\"/account/upgrade\" target=\"_blank\">supporting us</a>.",
 		"published": "Published by",
 		"publishedOn": "on"
 	},
@@ -259,6 +259,19 @@
 			"forgotPassword": "Forgot your password?",
 			"registerPrompt": "Don't have an account?",
 			"loginPrompt": "Already have an account?"
+		},
+		"forgotPassword": {
+			"header": "Forgot Password",
+			"sub": "Enter your email address/PNID below",
+			"input": "Email address or PNID",
+			"submit": "Submit"
+		},
+		"resetPassword": {
+			"header": "Reset Password",
+			"sub": "Enter new password below",
+			"password": "Password",
+			"confirmPassword": "Confirm password",
+			"submit": "Submit"
 		},
 		"settings": {
 			"downloadFiles": "Download account files",

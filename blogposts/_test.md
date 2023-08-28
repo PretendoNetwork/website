@@ -1,7 +1,7 @@
 ---
 title: "Test"
-author: "monty"
-author_image: "https://www.github.com/ashmonty.png"
+author: "pinklimes"
+author_image: "https://github.com/pinklimes.png"
 date: "January 20, 2038"
 caption: "A post to test the styling of the various elements we might use (rename to _test.md before deploying the blog section)"
 cover_image: "https://media.discordapp.net/attachments/413884110667251722/886474243662037062/image1.jpg"

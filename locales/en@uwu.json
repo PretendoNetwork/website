@@ -1,0 +1,383 @@
+{
+	"nav": {
+		"about": "infoz",
+		"docs": "doks",
+		"credits": "kwedits",
+		"blog": "readinz",
+		"account": "kitteh",
+		"donate": "MUNY $$$",
+		"accountWidget": {
+			"logout": "kthxbai",
+			"settings": "opshuns"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "see kittehs",
+				"about": "seez infomations",
+				"faq": "frekuent questionz askd",
+				"progress": "see projekt progrez",
+				"blog": "new thingzz, but smol"
+			}
+		},
+		"progress": "eta wen",
+		"faq": "faqz"
+	},
+	"hero": {
+		"subtitle": "onlien gamez!!",
+		"title": "bak from teh dead",
+		"buttons": {
+			"readMore": "reed mor!!"
+		},
+		"text": "pretender iz fre an sethru replazement 4 meanie netwrk's servrs for thre d s an wee yu, letin you plae gaems aftr dey leav"
+	},
+	"aboutUs": {
+		"title": "whut doez it do?!!?!!?!",
+		"paragraphs": [
+			"pretender iz a sethru projekt 4 makin zombiz of teh thre d s an wee yu onlien wif shinie lookinz",
+			"bcuz it iz fre an sethru, it livez forevahh!!"
+		]
+	},
+	"progress": {
+		"title": "eta wen!?",
+		"githubRepo": "octokat repozitori"
+	},
+	"faq": {
+		"title": "frekuent questionz askd",
+		"QAs": [
+			{
+				"question": "whut iz pretender??",
+				"answer": "pretender iz a sethru meanie netwrk replazment 4 wee yu an thre d s. kittehs want to kep gaemin, so we maek it again!!"
+			},
+			{
+				"question": "kan i keep my meanie netwrk id 4 pretender?",
+				"answer": "noo!!!! we don wanna keep ur senzitiv dataz!! only pretender id!!"
+			},
+			{
+				"question": "how doez kitteh use pretender??",
+				"answer": "pretender iz only 4 kittehz wif subzcription!! soemtimez pretender haz open betaz 4 u tho! wil be fre latr."
+			},
+			{
+				"question": "eta wen 4 gaem??",
+				"answer": "gud question. kitteh haz no idea!! multiple kittehs be workin on stuffs."
+			},
+			{
+				"question": "doez pretender work on me faek gaemr!?",
+				"answer": "yez! anythin that workz wif meanie netwrk workz wif pretender. <a href=\"https://pretendo.network/docs/install/cemu\">only cemu haz it tho rite now!</a>"
+			},
+			{
+				"question": "if kitteh ban'd from teh meanie netwrk, iz still ban'd on pretender?",
+				"answer": "no!! yu is not ban'd! ther is rulez tho, so yu can stil get bananad!!"
+			},
+			{
+				"question": "can kitteh gaem on othr kitteh gaemin??",
+				"answer": "nonO!! kitteh can only gaem on teh wee yu an thre d s! <a href=\"https://wiimmfi.de/\" target=\"_blank\">wee has wiimmfi tho!!</a>"
+			},
+			{
+				"question": "doez kitteh need hax to gaem?!",
+				"answer": "yez!! kitteh needz hax to gaem. mak sure kitteh press alt f4 4 epik gaemin!!"
+			}
+		],
+		"text": "herez sum questionz yu lik 2 ask!!"
+	},
+	"showcase": {
+		"title": "thiz iz whut kittehs maek",
+		"text": "we gots lotz of stuffs! herez sum stuffs.",
+		"cards": [
+			{
+				"title": "onlien gamez!!",
+				"caption": "play ur gaemz wit othr kittehs!"
+			},
+			{
+				"title": "kittehverse",
+				"caption": "a remeow of mewverse if kittehs made it shiny!!"
+			},
+			{
+				"title": "cemu gaemin!!",
+				"caption": "gaem on ur shiny magik box!!"
+			}
+		]
+	},
+	"credits": {
+		"title": "dev kittehs",
+		"text": "see kittehz who maek pretender!!",
+		"people": [
+			{
+				"name": "swagtastic kitteh",
+				"picture": "https://i.imgur.com/Yd7XfHp.png",
+				"caption": "projekt owner an dev kitteh",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"name": "jemmeow (caramelkitteh)",
+				"caption": "kittehverse reserch an dev",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"name": "rambo6meow",
+				"caption": "onlien instalr an konsole reserch",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "quarkat",
+				"caption": "BOSS reserch an patchy dev",
+				"github": "https://github.com/ashquarky",
+				"picture": "https://github.com/ashquarky.png"
+			},
+			{
+				"caption": "konsole reserch",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "supermariodakitteh",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"name": "catjip fr",
+				"caption": "interwebz dev",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "pinkkittehs",
+				"caption": "interwebs dev",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "mrkat",
+				"caption": "paintr",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		]
+	},
+	"specialThanks": {
+		"text": "theze kittehs helpd!!",
+		"people": [
+			{
+				"name": "katwhiskers",
+				"caption": "crunchy bookz dev",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "starykitteh",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "thre d s dev an nex inspektor",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "billehkitteh",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "findr of teh stuffs"
+			},
+			{
+				"name": "shutterkat2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "kitteh kart 7 an thre d s reserch"
+			},
+			{
+				"name": "revers",
+				"caption": "mewverse infos sharer",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "kittay",
+				"special": "speshul thx",
+				"caption": "reserch on de meanie netwrks datas",
+				"github": "https://github.com/Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"name": "katstar",
+				"github": "https://github.com/ninstar",
+				"caption": "arts 4 de mew editr an kittehverse reaktions",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"name": "octokat kittehs",
+				"caption": "meows an stuffs",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		],
+		"title": "speshul thx"
+	},
+	"discordJoin": {
+		"text": "entr de discord for new infoz from kittehs 4 pretender!!",
+		"widget": {
+			"text": "see whut kittehs r up 2",
+			"button": "waltz rite in"
+		},
+		"title": "listen 2 teh kittehs"
+	},
+	"footer": {
+		"socials": "soshuls",
+		"usefulLinks": "linkies",
+		"widget": {
+			"captions": [
+				"meow wit other kittehs!",
+				"join teh discord!"
+			],
+			"button": "waltz in!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"im bandwidth teh rakoon, an i luv bitin teh cablez goin into pretender's serverz. yummer!!",
+			"sumtimez, kittehs ask meh, u gonna get meanie netwrk on u? i sez that my aunt is meanie company employz an iz fine!!",
+			"interwebzkit 537 iz teh bezt verzion of webzkit for wee yu. nu, we arent gonna purrt krome 2 teh wee yu.",
+			"i cant wait 4 teh eventual annihilashun of teh clok!",
+			"teh wee yu is aktually a sneak rate konsole: teh komershuls wer relly bad, but teh konsole is gret!! ..huh. wait, meh kittehpad isnt konnekting to meh wee..",
+			"sooper maro wurld too - yoshees is land's theme is amazng!!",
+			"meh favorit nontendo swatch releses hav ben nontendo swatch onlien + expanshun pak, nontendo swatch onlien + rumbly pak, nontendo swatch online + oflin pley pak, nontendo swatch onlin + yet anotha port pak, an nontendo swatch onlin + bren smert trainin pak. yu kan rely tel nontendo kares.",
+			"liek, \"yu kno ash, bles her heawt, she uwus all day\" is the sothern nice wae of sayin \"ash uwus all teh tiem and its realy weird an stupid an i wish they didnt\"",
+			"Connection terminated. I'm sorry to interrupt you, Elizabeth, if you still even remember that name, But I'm afraid you've been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You don't even realize that you are trapped. Your lust for blood has driven you in endless circles, chasing the cries of children in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. None of you will. This is where your story ends. And to you, my brave volunteer, who somehow found this job listing not intended for you, although there was a way out planned for you, I have a feeling that's not what you want. I have a feeling that you are right where you want to be. I am remaining as well. I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fade away. As the agony of every tragedy should. And to you monsters trapped in the corridors, be still and give up your spirits. They don't belong to you. For most of you, I believe there is peace and perhaps more waiting for you after the smoke clears. Although, for one of you, the darkest pit of Hell has opened to swallow you whole, so don't keep the devil waiting, old friend. My daughter, if you can hear me, I knew you would return as well. It's in your nature to protect the innocent. I'm sorry that on that day, the day you were shut out and left to die, no one was there to lift you up into their arms the way you lifted others into yours, and then, what became of you. I should have known you wouldn't be content to disappear, not my daughter. I couldn't save you then, so let me save you now. It's time to rest - for you, and for those you have carried in your arms. This ends for all of us. End communication."
+		]
+	},
+	"progressPage": {
+		"title": "projekt progress",
+		"description": "see teh projekt stuffs!! (kitteh refresh evry hour!!)"
+	},
+	"account": {
+		"loginForm": {
+			"email": "katmail",
+			"password": "secret kitteh word",
+			"register": "new kitteh!",
+			"login": "login to kitteh",
+			"detailsPrompt": "smash in yor kitteh infoz belo",
+			"miiName": "mew name",
+			"loginPrompt": "im alredy a kitteh!",
+			"username": "kitteh name",
+			"forgotPassword": "i forget secret kitteh word!! halp!",
+			"confirmPassword": "confirm secret kitteh words",
+			"registerPrompt": "maek a new kitteh"
+		},
+		"settings": {
+			"settingCards": {
+				"userSettings": "kitteh opshuns",
+				"profile": "kitteh",
+				"nickname": "kitteh faek naem",
+				"birthDate": "kitteh birtday",
+				"gender": "kitteh type",
+				"timezone": "kitteh clok",
+				"serverEnv": "kitteh gaeming plaec",
+				"signInSecurity": "kitteh login an sekure",
+				"country": "kitteh home",
+				"production": "produkton",
+				"beta": "early kitteh",
+				"upgradePrompt": "early kitteh gaeming is only 4 early kittehs!<br>bekom a super kitteh to akces.",
+				"hasAccessPrompt": "you r early kitteh!! :3",
+				"email": "katmail",
+				"passwordResetNotice": "if secret kitteh words are changd, you wont stay logged in to kitteh!!",
+				"signInHistory": "kitteh login watchin",
+				"discord": "discord",
+				"newsletterPrompt": "get projekt infoz in yor katmail (you can alwayz stop getin newz)",
+				"password": "secret kitteh word",
+				"fullSignInHistory": "sho all kitteh login watchin",
+				"otherSettings": "other opshuns",
+				"connectedToDiscord": "meowing in discord as",
+				"removeDiscord": "stop meowing wit discord :(",
+				"linkDiscord": "meow wit discord :3",
+				"noDiscordLinked": "not meowin wit discord!! :(",
+				"newsletter": "new kitteh infoz",
+				"passwordPrompt": "entr yor kitteh secret wordz 4 cemu datas",
+				"no_newsletter_notice": "sori.. no new kitteh infoz.. try latr!!",
+				"no_signins_notice": "kitteh is not watchin logins... i wil latr!!",
+				"no_edit_from_dashboard": "changin yor kitteh opshuns from interwebs is nono!! do from yor konsole."
+			},
+			"downloadFiles": "downlod kitteh datas",
+			"downloadFilesDescription": "(kitteh datas wil not work on meanie netwrk!!)",
+			"unavailable": "no :(",
+			"upgrade": "become super kitteh"
+		},
+		"account": "kitteh",
+		"forgotPassword": {
+			"header": "forgot secret kitteh word",
+			"sub": "entr katmail or kitteh name belo",
+			"input": "katmail or kitteh name",
+			"submit": "gogo!!"
+		},
+		"resetPassword": {
+			"sub": "entr new secret kitteh word belo",
+			"submit": "gogo!!",
+			"header": "new secret kitteh word",
+			"password": "secret kitteh word",
+			"confirmPassword": "confirm secret kitteh word"
+		},
+		"accountLevel": [
+			"normal kitteh",
+			"early kitteh",
+			"watchin kitteh",
+			"dev kitteh"
+		],
+		"banned": "bad kitteh &gt;:("
+	},
+	"upgrade": {
+		"unsubConfirm": "yea, i wan leave",
+		"changeTierPrompt": "are u sur u wanna stop bein <span class=\"oldtier\">oldtiername</span> an go 2 <span class=\"newtier\">newtiername</span>?!",
+		"title": "bekom super kitteh",
+		"month": "munth",
+		"tierSelectPrompt": "select super kitteh level",
+		"unsub": "stop being super kitteh :(",
+		"description": "reachin goal givez kittehz muns for devin, gettin better new stuffz fastr!!",
+		"back": "bak",
+		"unsubPrompt": "are u sur u wanna stop bein <span>tiername</span>?! u will lose all kitteh perkz instantly!!",
+		"changeTier": "change super kitteh level",
+		"changeTierConfirm": "yezyez, change!!"
+	},
+	"docs": {
+		"quickLinks": {
+			"links": [
+				{
+					"header": "get pretender",
+					"caption": "view teh settin up instruktions"
+				},
+				{
+					"caption": "find here!!",
+					"header": "o noes!! eror?!"
+				}
+			],
+			"header": "speedy linkz"
+		},
+		"sidebar": {
+			"install_extended": "get pretender",
+			"install": "instal",
+			"welcome": "helo!!",
+			"search": "serch",
+			"juxt_err": "eror kodes - kittehverse",
+			"getting_started": "getin start!!"
+		},
+		"search": {
+			"caption": "tell kitteh eror and u wil find whut u seek..",
+			"no_match": "o no.. eror not found?!",
+			"title": "o noes!! u got eror?!",
+			"label": "eror kode"
+		},
+		"missingInLocale": "this pag doezn't work in LOLCAT!? crazi!! herez englizh verson.. :("
+	},
+	"modals": {
+		"close": "byebye",
+		"confirm": "yaya!!",
+		"cancel": "nono!!"
+	},
+	"blogPage": {
+		"title": "readinz",
+		"description": "new thingz, but smol! if kitteh wants mor, <a href=\"/account/upgrade\" target=\"_blank\">support dev kittehs!</a>",
+		"published": "keybord smash'd by",
+		"publishedOn": "on"
+	},
+	"localizationPage": {
+		"button": "testin datas",
+		"fileInput": "datas 4 testin",
+		"title": "letz meow!!",
+		"description": "gimme a jzon i kan see to test!",
+		"instructions": "see meowin instruktions",
+		"filePlaceholder": "mew://a.meow.site/4_jzon.jzon"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/munth, <span>${perc}%</span> of teh monthly goal",
+		"upgradePush": "u wanna become super kitteh and get kool perkz?? <a href=\"/account/upgrade\">upgrade now!!</a>"
+	}
+}

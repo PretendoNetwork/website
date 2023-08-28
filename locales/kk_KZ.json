@@ -1,0 +1,370 @@
+{
+	"aboutUs": {
+		"paragraphs": [
+			"Pretendo – таза бөлмеде кері инженерияны қолданып, 3DS және Wii U үшін Nintendo желісін қайта құруға бағытталған ашық-жоба.",
+			"Біздің қызметтеріміз ақысыз және ашық бастапқы код болғандықтан, Pretendo ресми Nintendo желісі жойылғаннан кейін өте ұзақ уақыт бойы жұмыс істей беруі мүмкін."
+		],
+		"title": "Біз туралы"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Pretendo деген не?",
+				"answer": "Pretendo – 3DS және Wii U консольдері үшін Nintendo желісін қайта құруға бағытталған ашық бастапқы жоба. Біздің басты мақсатымыз осы консольдерді желіде ұстау, осылайша ойыншылар ресми серверлер жабылғаннан кейін де сүйікті көп ойыншы ойындарын ойнай алады."
+			},
+			{
+				"question": "Менің NNID Pretendo-да жұмыс істей ме?",
+				"answer": "Өкінішке орай жоқ. Қолданыстағы NNID-лер Pretendo-да жұмыс істей алмайды, өйткені пайдаланушылардың ақпарат тек Nintendo-да сақтайды. Әрине, NNID-тен PNID-ке көшу тек теориялық тұрғыдан мүмкін, бірақ ол үшін пайдаланушылар туралы барлық ақпаратты өзімізде сақтауға тура келеді. Құпия ақпараттың сыртқа шығып кетпеуі үшін біз мұны істегіміз келмейді."
+			},
+			{
+				"question": "Pretendo-ны қалай қолдана аламын?",
+				"answer": "Қазіргі уақытта Pretendo қалыпты пайдалануға әлі дайын емес. Дегенмен, біз негізгі функционалдылықты әзірлеуді аяқтағаннан кейін, консольде біздің Homebrew қолданбасын жай ғана іске қосу арқылы Pretendo-ға қосыла аласыз."
+			},
+			{
+				"question": "Қандай да бір мүмкіндіктер мен қызметтердің қашан жасалатынын білесіз бе?",
+				"answer": "Жоқ. Pretendo қызметтерінің көпшілігін әртүрлі әзірлеушілер әзірлейді (Мысалы, әзірлеушілердің бірі Miiverse-те жұмыс істей алады, ал мүлде басқа әзірлеуші профильдер мен достарда жұмыс істей алады) және тұтастай алғанда әзірлеуге қанша уақыт кететінін айта алмаймыз."
+			},
+			{
+				"answer": "Pretendo Wii U және 3DS аппараттық құралдары үшін арнайы жасалған; қазіргі уақытта Nintendo желісін қолдайтын жалғыз эмулятор - Cemu. Cemu ресми түрде бейресми серверлерді қолдамайды, бірақ Pretendo Cemu-де де жұмыс істей алады. Pretendo қазіргі уақытта Cemu-ға қолдау көрсетпейді.",
+				"question": "Pretendo эмуляторларда/Cemu-да жұмыс істей ме?"
+			},
+			{
+				"question": "Егер мен Nintendo Network-та бұғатталғанмын, Pretendo-ны қолдана аламын ба?",
+				"answer": "Біз Nintendo Network-тың тыйымдарына қол жеткізе алмаймыз және біздің қызметімізге барлық пайдаланушылар тыйым салынбайды. Дегенмен, біздің қызметтерімізде ережелер бар, оларды орындамау қызметтерімізді қолдануға тыйым салуға әкеледі."
+			},
+			{
+				"answer": "Wii үшін <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> деген қызмет бар. Қазіргі уақытта біз Switch-ті мақсатқа салғымыз келмейді, өйткені ол ақылы және Nintendo Network-қа мүлдем ұқсамайды.",
+				"question": "Pretendo-ні Wii және Switch ойын жүйелерде қолдана аламын ба?"
+			},
+			{
+				"answer": "Иә, қосылу үшін құрылғыны бұзу керек. Wii U үшін сізге тек Homebrew Launcher керек болады (Haxchi, Coldboot Haxchi т.б. сияқты). 3DS-пен қолдануға/қалай қосылатыны үшін ақпарат кейінірек қолжетімді болады.",
+				"question": "Pretendo-ні қолдау үшін, консольді бұзуға керекпін бе?"
+			}
+		],
+		"title": "Жиі Қойылатын Сұрақтар",
+		"text": "Мұнда біз жиі қойылатын сұрақтарға жауап жинадық."
+	},
+	"nav": {
+		"about": "Туралы",
+		"faq": "Сұрақтар",
+		"docs": "Құжаттар",
+		"credits": "Несиелер",
+		"progress": "Прогресс",
+		"blog": "Блог",
+		"account": "Аккаунт",
+		"donate": "Демеушілік",
+		"accountWidget": {
+			"settings": "Реттеулер",
+			"logout": "Шығу"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Командамен танысу",
+				"about": "Жоба туралы",
+				"faq": "Жақында қойылған сұрақтар",
+				"blog": "Біздің соңғы жаңартуларымыз қысқартылған",
+				"progress": "Жобаның барысы мен мақсаттарын тексеріңіз"
+			}
+		}
+	},
+	"hero": {
+		"subtitle": "Ойын серверлері",
+		"title": "Жаңадан құрылған",
+		"text": "Pretendo — Nintendo серверлерін 3DS және Wii U үшін тегін және ашық бастапқы ауыстыру, тіпті бастапқы серверлер тоқтатылғаннан кейін де барлығына онлайн қосылуға мүмкіндік береді.",
+		"buttons": {
+			"readMore": "Көбірек оқу"
+		}
+	},
+	"progress": {
+		"githubRepo": "Github-тағы репозиторий",
+		"title": "Прогресс"
+	},
+	"specialThanks": {
+		"people": [
+			{
+				"caption": "crunch library әзірлеу",
+				"picture": "https://github.com/superwhiskers.png",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS әзірлеуші және NEX диссектор",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Билли",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Қорғаушы",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 және 3DS зерттеу",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse туралы ақпарат",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Ерекше рақмет",
+				"caption": "Nintendo дата-серверлер зерттеу",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Mii Editor үшін суреттер, және Juxt реакциялар",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHub салымшылары",
+				"caption": "Локализация және басқа салымшылары",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			}
+		],
+		"text": "Оларсыз Pretendo қазіргідей болмас еді.",
+		"title": "Ерекше рақмет"
+	},
+	"credits": {
+		"people": [
+			{
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"name": "Джонатан Барроу (jonbarrow)",
+				"caption": "Жобаның иесі және бас әзірлеуші"
+			},
+			{
+				"name": "Джемма (CaramelKat)",
+				"caption": "Miiverse зерттеу және әзірлеу",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Желіні орнатушы және консольді зерттеу",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS зерттеулері және патчтарды әзірлеу",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Консоль және басқа жүйелік зерттеулер",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Веб әзірлеу басы",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr.png"
+			},
+			{
+				"caption": "Веб әзірлеу",
+				"github": "https://github.com/gitlimes",
+				"picture": "https://github.com/gitlimes.png",
+				"name": "pinklimes"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Дизайн",
+				"github": "https://github.com/mrjvs",
+				"picture": "https://github.com/mrjvs.png"
+			}
+		],
+		"title": "Команда",
+		"text": "Жобаның артында тұрған командамен танысыңыз"
+	},
+	"blogPage": {
+		"description": "",
+		"published": "Жарияланды:",
+		"title": "Блог",
+		"publishedOn": ","
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Мен, Бандвиф енот және мен Pretendo Network серверлерінің кабельдерін тістегенді жақсы көремін. Ям!",
+			"Көптеген адамдар бізден Nintendo-мен осыған байланысты заңды қиындықтарға тап боламыз ба деп сұрайды; Мен тәтем Nintendo-да жұмыс істейтініне қуаныштымын және ол жақсы дейді.",
+			"Webkit v537 — Wii U жүйесіне арналған Webkit бағдарламасының ең жақсы нұсқасы. Жоқ, біз Chrome-ды Wii U жүйесіне көшірмейміз.",
+			"Сағат 03:14:08 UTC, 2038 жылдың 19 қаңтарын көрсеткенше күте алмаймын!",
+			"Wii U шынымен де бағаланбаған жүйе: жарнамалар оғашты болды, бірақ консольдің өзі керемет. Эм? Бір секунд күте тұрыңыз... Мен контроллерімнің Wii-ге неге қосылмайды?!",
+			"Super Mario World 2 ойынының негізгі әні - Yoshi's Island - нақты бомба! Сіз маған басқаны дәлелдей алмайсыз.",
+			"Nintendo Switch-тегі менің сүйікті шығарылымдарым - Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Тағы Бір Порт Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Сізге Nintendo Wii U виртуалды консоль ойындары ұнады, сондықтан біз оларды қайтарып жатырмыз\" Pack. Сіз Nintendo бізге шынымен қамқорлық жасайтынын анық айта аласыз.",
+			"Мысалы, \"Сен Эшті білесің, Құдай оны жарылқасын, ол күні бойы UwU-п тұр\" - оңтүстік айтылуының жақсы мысалы - \"күл үнемі шығып UwU-п, бұл өте оғаш және тітіркендіргіш, ол мұны ешқашан жасамайды деп үміттенемін.\"",
+			"Минін каналымдағы бірінші бейееммм!!11!!!! Мен ұзақ уақыт бойы видео тусіргім келді, бирақ ноутбук өте байау болды, мен бір уақытта фрапс, скайп жане майнкамптты аша алмадым. бірақ енді бітті! инфраматика пәнінен мұғалімнің көмегімен ноутбук жылдам болды, енді мен сртке түсіре аламын!!! Сізге унәйды дйеп үміттенемін, лупил басып, жазылыңыз!!!!!!\""
+		],
+		"socials": "Әлеуметтік желілер",
+		"usefulLinks": "Пайдалы сілтемелер",
+		"widget": {
+			"captions": [
+				"Жаңалықтардан хабардар болғыңыз келе ме?",
+				"Біздің Discord серверімізге қосылыңыз!"
+			],
+			"button": "Қазір қосылыңыз!"
+		}
+	},
+	"discordJoin": {
+		"title": "Жаңартып отырыңыз",
+		"text": "Жобаның соңғы жаңартуларын алу үшін Discord серверімізге қосылыңыз.",
+		"widget": {
+			"text": "Нақты уақыттағы жетістіктеріміз туралы жаңартуларды алыңыз",
+			"button": "Серверге қосу"
+		}
+	},
+	"progressPage": {
+		"title": "Біздің прогрессіміз",
+		"description": "Қараңызшы, біз қазірдің өзінде қаншама іс тындырдық! (сағат сайын жаңартылып отырады, мұнда барлық Pretendo мақсаттары тізімделмеген.)"
+	},
+	"showcase": {
+		"title": "Нені жасап тұрмыз?",
+		"text": "Жобада көп компоненттер бар. Міне кейбір мысалдар.",
+		"cards": [
+			{
+				"title": "Ойын серверлер",
+				"caption": "Сенін ең сүйікті ойындарды біздің серверлерін пайдалану арқылы қалпына келтіреміз."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Miiverse-ті қайта елестету. Қазіргі дәуірде жасалған сияқты."
+			},
+			{
+				"title": "Cemu қолдауы",
+				"caption": "Wii U-ның сүйікті ойындары ойна, консольсіз."
+			}
+		]
+	},
+	"account": {
+		"account": "Аккаунтым",
+		"loginForm": {
+			"login": "Кіру",
+			"register": "Тіркеу",
+			"username": "Пайданалушының аты",
+			"password": "Құпиясөз",
+			"detailsPrompt": "Тіркелгіңіздің мәліметтерін төменде енгізіңіз",
+			"confirmPassword": "Құпиясөзді қайтарыңыз",
+			"miiName": "Mii-ның аты",
+			"forgotPassword": "Құпиясөзімді ұмыттым...",
+			"loginPrompt": "Менде аккаунтым бар",
+			"registerPrompt": "Әлі тіркелмегенсіз бе?",
+			"email": "Пошта"
+		},
+		"settings": {
+			"downloadFiles": "Аккаунтының ақпаратты жүктеу",
+			"downloadFilesDescription": "(Nintendo Network-пен жұмыс істемейді)",
+			"upgrade": "Аккаунтты жақсарту",
+			"unavailable": "Қолжетімсіз",
+			"settingCards": {
+				"userSettings": "Пайдаланушы параметрлері",
+				"profile": "Профилім",
+				"nickname": "Никнейм",
+				"birthDate": "Туған кезі",
+				"gender": "Жынысы",
+				"country": "Ел/Аймақ",
+				"timezone": "Сағаттық белдеу",
+				"serverEnv": "Сервер ортасы",
+				"production": "Өндіріс",
+				"beta": "Бета",
+				"upgradePrompt": "Бета серверлері бета тестерлеріне ғана арналған. Біреуі болу үшін аккаунтты жаңартыңыз.",
+				"signInSecurity": "Кіру және қауіпсіздік",
+				"email": "Пошта",
+				"password": "Құпиясөз",
+				"passwordResetNotice": "Құпиясөзді өзгерткеннен кейін сіз барлық құрылғылардан шығасыз.",
+				"signInHistory": "Кіру тарихы",
+				"fullSignInHistory": "Толық кіру тарихын көру",
+				"otherSettings": "Басқа параметрлер",
+				"discord": "Discord",
+				"connectedToDiscord": "Discord желісіне қосылған:",
+				"removeDiscord": "Discord тіркелгісін жою",
+				"noDiscordLinked": "Ешқандай Discord тіркелгісі байланыспаған.",
+				"linkDiscord": "Discord тіркелгісін байланыстырыңыз",
+				"newsletter": "Газет",
+				"newsletterPrompt": "Жоба туралы жаңалықтарды электрондық пошта арқылы алыңыз (сіз кез келген уақытта жазылымнан бас тарта аласыз)",
+				"passwordPrompt": "Cemu файлдарын жүктеп алу үшін PNID құпиясөзін енгізіңіз",
+				"no_signins_notice": "Кіру тарихы қазір бақыланбайды. Кейінірек оралыңыз!",
+				"no_newsletter_notice": "Газет қазір қолжетімді емес. Кейінірек оралыңыз",
+				"no_edit_from_dashboard": "PNID параметрлерін өзгерту қазір мүмкін емес. Байланыстырылған ойын консолінен пайдаланушы деректерін жаңартыңыз",
+				"hasAccessPrompt": "Қазіргі уақытта сіздің деңгейіңіз бета серверлеріне қол жеткізуге мүмкіндік береді. Керемет!"
+			}
+		},
+		"accountLevel": [
+			"Standard",
+			"Тестер",
+			"Модератор",
+			"Developer"
+		],
+		"banned": "Тыйым салынған"
+	},
+	"upgrade": {
+		"title": "Жаңарту",
+		"description": "Осы айдағы мақсатқа жету Pretendo-ны сапалы жаңартуларды бұрынғыдан да жылдам жеткізе отырып, толық уақытты жұмысқа айналдырады.",
+		"month": "ай",
+		"tierSelectPrompt": "Деңгейді таңдаңыз",
+		"unsub": "Жазылудан бас тарту",
+		"unsubConfirm": "Жазылудан бас тарту",
+		"changeTier": "Деңгейді өзгерту",
+		"back": "Артқа",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> жазылуын тоқтатып, <span class=\"newtier\">newtiername</span> жазылуын шынымен де қалдырғыңыз келе ме?",
+		"changeTierConfirm": "Деңгейді өзгерту",
+		"unsubPrompt": "<span>tiername</span> жазылуынан бас тартқыңыз келетініне сенімдісіз бе? Осы деңгеймен бірге келген қондырмалардың құқықтарын жоғалтасыз."
+	},
+	"donation": {
+		"upgradePush": "Жазылу және керемет қондырмаларға қол жеткізу үшін <a href=\"/account/upgrade\">жаңарту бетіне</a> кіріңіз.",
+		"progress": "<span>$${totd}</span>/айына <span>$${goald}</span>, айлық мақсаттың <span>${perc}%</span>."
+	},
+	"localizationPage": {
+		"title": "Жергілікті жерлестірейік",
+		"description": "Сайтта оны тексеру үшін жалпыға қолжетімді JSON файлы бар сілтемені қойыңыз",
+		"instructions": "Локализацияға арналған нұсқауларды қараңыз",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Жылдам сілтемелер",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "Орнату нұсқауларын қараңыз"
+				},
+				{
+					"header": "Қате бар ма?",
+					"caption": "Осы жерден іздеңіз"
+				}
+			]
+		},
+		"search": {
+			"title": "Қате коды бар ма?",
+			"label": "Қате коды",
+			"no_match": "Ештеңе табылмады",
+			"caption": "Қатеңіз туралы қосымша ақпаратты білу үшін оны өріске енгізіңіз!"
+		},
+		"sidebar": {
+			"getting_started": "Бәрі бастау үшін",
+			"welcome": "Қош келдіңіз",
+			"install_extended": "Pretendo-ны жүктеу",
+			"install": "Жүктеу",
+			"search": "Іздеу",
+			"juxt_err": "Қате кодтары - Juxt"
+		},
+		"missingInLocale": "Бұл бет сіздің тіліңізде қолжетімді емес. Төмендегі ағылшын нұсқасын қараңыз."
+	},
+	"modals": {
+		"cancel": "Болдырмау",
+		"confirm": "Растау",
+		"close": "Жабу"
+	}
+}

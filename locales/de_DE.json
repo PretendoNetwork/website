@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spiel-Server",
 		"title": "Rekonstruiert",
-		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS and die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS und die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
 		"buttons": {
 			"readMore": "Mehr lesen"
 		}
@@ -47,7 +47,7 @@
 		"QAs": [
 			{
 				"question": "Was ist Pretendo?",
-				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen zu beibehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
+				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen beizubehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
 			},
 			{
 				"question": "Werden meine vorhandenen NNIDs mit Pretendo weiterhin funktionieren?",
@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
-				"answer": "Pretendo wird hauptsächlich für die Hardware der Wii U und des 3DS entwickelt. Zu diesem Zeitpunkt ist CEMU der einzige Emulator für diese Konsolen mit NN Unterstützung. CEMU selbst unterstützt keine eigenen Server, aber es soll trotzdem möglich sein Pretendo mit CEMU zu verwenden.<br>CEMU wird aktuell von Pretendo nicht unterstützt."
+				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
 			},
 			{
 				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
@@ -116,8 +116,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"caption": "Network-Installer und Konsolenforschung",
-				"picture": "https://github.com/Rambo6Glaz.png",
-				"github": "https://github.com/NexoDevelopment"
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -138,10 +138,10 @@
 				"github": "https://github.com/jipfr"
 			},
 			{
-				"name": "monty",
+				"name": "pinklimes",
 				"caption": "Webentwicklung",
-				"picture": "https://github.com/ashmonty.png",
-				"github": "https://github.com/ashmonty"
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
 				"name": "mrjvs",
@@ -153,7 +153,7 @@
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie, wäre Pretendo nicht, wo es heute ist.",
+		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist.",
 		"people": [
 			{
 				"name": "superwhiskers",
@@ -208,7 +208,7 @@
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
-		"text": "Tritt unserem Discord-Server bei um die neuesten Updates des Projektes zu erhalten.",
+		"text": "Tritt unserem Discord-Server bei, um die neuesten Updates des Projektes zu erhalten.",
 		"widget": {
 			"text": "Erhalte Echtzeitinformationen über unseren Fortschritt",
 			"button": "Tritt dem Server bei"
@@ -233,7 +233,7 @@
 			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
 			"So etwas wie \"Du kennst Ash, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
-			"Mein erstes Video auf meinem Kanal!! Ich wolte schon lange videos machen, aber mein leptop wahr zu schwach um Fraps, Skype und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklehrer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bitte gebt einen daumen nach oben und aboniert!!!"
+			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!"
 		]
 	},
 	"progressPage": {
@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, unterstütze uns doch bei <a href=\"https://www.patreon.com/PretendoNetwork\" target=\"_blank\">Patreon</a>.",
+		"description": "",
 		"published": "Veröffentlicht von",
 		"publishedOn": "am"
 	},
@@ -275,7 +275,7 @@
 				"country": "Land/Region",
 				"timezone": "Zeitzone",
 				"production": "Produktion",
-				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Account-Stufe durchführen.",
+				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, musst du ein Upgrade auf eine höhere Konto-Stufe durchführen.",
 				"signInSecurity": "Anmeldung und Sicherheit",
 				"signInHistory": "Anmeldeverlauf",
 				"fullSignInHistory": "Vollständigen Anmeldeverlauf anzeigen",
@@ -284,7 +284,7 @@
 				"connectedToDiscord": "Verbunden mit Discord als",
 				"linkDiscord": "Discord-Konto verknüpfen",
 				"newsletter": "Newsletter",
-				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst den Newsletter jederzeit abbestellen)",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst sie jederzeit abbestellen)",
 				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
 				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
 				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
@@ -294,7 +294,7 @@
 				"password": "Passwort",
 				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
 				"removeDiscord": "Discord-Konto entfernen",
-				"no_signins_notice": "Anmeldeverlauf wird momentan nicht verfolgt. Schau später nochmal vorbei!",
+				"no_signins_notice": "Der Anmeldeverlauf wird momentan nicht gespeichert. Schau später nochmal vorbei!",
 				"no_edit_from_dashboard": "PNID Einstellungen vom Nutzer Dashboard sind momentan nicht verfügbar. Bitte aktualisiere die Benutzereinstellungen über deine verknüpfte Konsole",
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
 				"userSettings": "Nutzer-Einstellungen"
@@ -305,10 +305,23 @@
 			"unavailable": "Nicht verfügbar"
 		},
 		"banned": "Gebannt",
-		"account": "Konto"
+		"account": "Konto",
+		"forgotPassword": {
+			"sub": "Gib deine E-Mail oder deine PNID ein",
+			"input": "Email-Adresse oder PNID",
+			"header": "Passwort vergessen",
+			"submit": "Bestätigen"
+		},
+		"resetPassword": {
+			"header": "Passwort zurücksetzen",
+			"sub": "Gib das neue Passwort ein",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"submit": "Bestätigen"
+		}
 	},
 	"upgrade": {
-		"title": "Upgrade",
+		"title": "Upgraden",
 		"description": "Das Erreichen des monatlichen Ziels wird aus Pretendo eine Vollzeitbeschäftigung machen, die qualitativ bessere und schnellere Updates liefert.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
@@ -343,13 +356,13 @@
 				},
 				{
 					"header": "Hast du einen Fehler?",
-					"caption": "Suche nach diesem hier"
+					"caption": "Suche hier nach ihm"
 				}
 			]
 		},
 		"search": {
 			"title": "Hast du einen Fehlercode bekommen?",
-			"caption": "Beschreibe, unten in der Box, was für ein Problem du hast, um Infos zu erhalten.",
+			"caption": "Schreibe unten in die Box, was für ein Problem du hast, um Infos zu erhalten!",
 			"label": "Fehler-Code",
 			"no_match": "Keine Ergebnisse gefunden"
 		},
