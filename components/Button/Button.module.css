@@ -1,6 +1,6 @@
 .button {
 	appearance: none;
-	background: var(--bg-shade-3);
+	background: none;
 	color: var(--text-shade-3);
 	border: 0;
 	border-radius: 6px;
@@ -18,13 +18,9 @@
 }
 
 .button:hover {
-	background: var(--bg-shade-3-5);
-}
-
-.button.primary {
-	background: var(--accent-shade-0);
+	box-shadow: 0 0 0 1px var(--bg-shade-4) inset;
 }
 
 .button.primary:hover {
-	background: var(--accent-shade-1);
+	box-shadow: 0 0 0 1px var(--accent-shade-3) inset;
 }
