@@ -7,6 +7,7 @@ import styles from './Section.module.css';
  *
  * @param {import('react').ComponentClass} className - Custom classes to apply to the section.
  * @param {import('react').ComponentClass} contentClassName - Custom styles to apply to the content.
+ * @param {boolean} compact - make the padding more compact.
  * @param {string} style - Custom styles to apply to the section.
  * @param {string} id - The id of the section.
  *
@@ -18,10 +19,14 @@ import styles from './Section.module.css';
  */
 
 export default function Section(ctx) {
-	const { id, style, children, className, contentClassName } = ctx;
+	const { id, style, children, className, compact, contentClassName } = ctx;
 
 	return (
-		<section className={classNames(styles.sectionWrapper, className)} id={id} style={style}>
+		<section
+			className={classNames(styles.sectionWrapper, { [styles.compact]: compact }, className)}
+			id={id}
+			style={style}
+		>
 			<div className={classNames(styles.content, contentClassName)}>{children}</div>
 		</section>
 	);

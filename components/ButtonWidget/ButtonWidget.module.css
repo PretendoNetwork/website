@@ -1,0 +1,20 @@
+.widget {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(2, auto);
+	gap: 18px;
+	width: fit-content;
+	max-width: 100%;
+
+	background: var(--bg-shade-0);
+	border-radius: 6px;
+	padding: 18px;
+
+	overflow-x: hidden;
+}
+
+.widget p {
+	color: var(--text-shade-1);
+	margin: 0;
+	margin-right: 5rem;
+}

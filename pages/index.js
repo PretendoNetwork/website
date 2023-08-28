@@ -1,12 +1,15 @@
 import { getLocale } from '../utils/locale';
 
 import Button from '../components/Button/Button';
+import ButtonWidget from '../components/ButtonWidget/ButtonWidget';
+import Caption from '../components/Caption/Caption';
+import Faq from '../components/Faq/Faq';
+import Hero from '../components/Hero/Hero';
+import Logo from '../components/Logo/Logo';
+import TeamCard from '../components/TeamCard/TeamCard';
 import Title from '../components/Title/Title';
 import Section from '../components/Section/Section';
 import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
-import Faq from '../components/Faq/Faq';
-import Hero from '../components/Hero/Hero';
-import TeamCard from '../components/TeamCard/TeamCard';
 
 import Image from 'next/image';
 
@@ -18,7 +21,6 @@ import juxtImage from '../public/assets/images/showcase/juxt.png';
 import networkImage from '../public/assets/images/showcase/network.png';
 import pcmouseImage from '../public/assets/images/showcase/pcmouse.png';
 import wiiuchatImage from '../public/assets/images/showcase/wiiuchat.png';
-import Caption from '../components/Caption/Caption';
 
 const showcaseImages = {
 	juxt: juxtImage,
@@ -78,7 +80,7 @@ export default function Home({ locale }) {
 							Check out our progress page for an extensive list of our current progress and goals!
 						</Caption>
 						<Button
-							isPrimary
+							primary
 							onClick={(e) => {
 								e.preventDefault();
 								router.push('/progress');
@@ -161,6 +163,24 @@ export default function Home({ locale }) {
 						</div>
 					</div>
 				</div>
+			</Section>
+
+			<Section className={styles.discordJoin} style={{ marginTop: '4rem' }}>
+				<Section compact>
+					<Logo center size={96} style={{ marginBottom: '4rem' }} />
+					<Title center id="discord-join">
+						{locale.discordJoin.title}
+					</Title>
+					<Caption center>{locale.discordJoin.text}</Caption>
+				</Section>
+
+				<ButtonWidget
+					primary
+					buttonText={locale.discordJoin.widget.button + " TODO: ADD LINK"}
+					style={{ margin: '0 auto 4rem' }}
+				>
+					{locale.discordJoin.widget.text}
+				</ButtonWidget>
 			</Section>
 		</main>
 	);

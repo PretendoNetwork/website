@@ -61,7 +61,7 @@
 .thanksAniWrap {
 	position: relative;
 	transform: rotate(-5deg);
-	margin-top: 2rem;
+	margin-top: 4rem;
 }
 
 .thanksAniWrap .inner {
@@ -112,6 +112,19 @@
 	animation: infiniteScroll 30s linear infinite reverse;
 	position: relative;
 	right: 100%;
+}
+
+.discordJoin::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 3000px;
+	height: 1500px;
+	background: var(--bg-shade-2);
+	border-radius: 100%;
+	transform: translate(-50%, 0);
+	z-index: -1;
 }
 
 @keyframes infiniteScroll {

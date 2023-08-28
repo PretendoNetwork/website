@@ -24,3 +24,7 @@
 .button.primary:hover {
 	box-shadow: 0 0 0 1px var(--accent-shade-3) inset;
 }
+
+.button.compact {
+	padding: 9px 18px;
+}

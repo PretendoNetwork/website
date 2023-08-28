@@ -1,6 +1,11 @@
 .sectionWrapper {
+	position: relative;
 	display: flex;
 	padding: 180px 0;
+}
+
+.sectionWrapper.compact {
+	padding: 90px 0;
 }
 
 .sectionWrapper .content {
