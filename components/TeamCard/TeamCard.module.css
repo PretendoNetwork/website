@@ -1,0 +1,62 @@
+.card {
+	display: grid;
+	margin: 0.6rem;
+	padding: 1rem;
+	width: 100%;
+	max-width: 28rem;
+	background-color: var(--bg-shade-0);
+	color: var(--text-shade-1);
+	grid-template-columns: min-content auto;
+	align-items: center;
+	gap: 1.5rem;
+	border-radius: 1rem;
+	font-weight: inherit;
+}
+
+.card:hover {
+	background-color: var(--bg-shade-2);
+	box-shadow: 0 0 0 1px var(--bg-shade-3) inset;
+}
+
+.imageWrapper {
+	position: relative;
+	/* the .imageWrapper and .image radii differ to prevent a rendering bug where the image corners were glitchy */
+	border-radius: 0.6rem;
+	width: 110px;
+	height: 110px;
+	background-color: var(--accent-shade-3);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+}
+
+.text {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.text * {
+	margin: 0;
+	line-height: 2;
+}
+
+.text p {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+@media screen and (max-width: 36rem) {
+	.card {
+		padding: .9rem;
+		border-radius: .7rem;
+	}
+
+	.imageWrapper {
+		width: 64px;
+		height: 64px;
+	}
+}

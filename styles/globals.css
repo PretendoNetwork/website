@@ -1,25 +1,24 @@
 :root {
-
 	--width: 1500px;
 	--maxwidth: min(var(--width), 90%);
 
 	/* 1 is the base color, <1 are darker variations and >1 are lighter */
 	--bg-shade-0: #131733;
-	--bg-shade-1: #1B1F3B;
-	--bg-shade-2: #23274A;
-	--bg-shade-2-5: #2D3258;
-	--bg-shade-3: #373C65;
+	--bg-shade-1: #1b1f3b;
+	--bg-shade-2: #23274a;
+	--bg-shade-2-5: #2d3258;
+	--bg-shade-3: #373c65;
 	--bg-shade-3-5: #404673;
-	--bg-shade-4: #494F81;
+	--bg-shade-4: #494f81;
 
-	--accent-shade-0: #673DB6;
-	--accent-shade-1: #9D6FF3;
-	--accent-shade-2: #A185D6;
-	--accent-shade-3: #CAB1FB;
+	--accent-shade-0: #673db6;
+	--accent-shade-1: #9d6ff3;
+	--accent-shade-2: #a185d6;
+	--accent-shade-3: #cab1fb;
 
-	--text-shade-0: #8990C1;
-	--text-shade-1: #A1A8D9;
-	--text-shade-2: #CAC1F5;
+	--text-shade-0: #8990c1;
+	--text-shade-1: #a1a8d9;
+	--text-shade-2: #cac1f5;
 	--text-shade-3: #fff;
 
 	--green-shade-0: #37a985;
@@ -49,6 +48,15 @@ a {
 	color: var(--accent-shade-1);
 	text-decoration: none;
 	font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text-shade-3);
 }
 
 /* Scrollbar styling 'cause it's fancy */

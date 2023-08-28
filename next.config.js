@@ -6,6 +6,28 @@ const nextConfig = {
 	i18n: {
 		locales: getLocaleList(),
 		defaultLocale: 'en-US',
+	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'github.com',
+				port: '',
+				pathname: '/*'
+			},
+			{
+				protocol: 'https',
+				hostname: 'avatars.githubusercontent.com',
+				port: '',
+				pathname: '/u/*'
+			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.discordapp.com',
+				port: '',
+				pathname: '/avatars/*'
+			}
+		]
 	}
 };
 

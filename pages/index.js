@@ -6,6 +6,7 @@ import Section from '../components/Section/Section';
 import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
 import Faq from '../components/Faq/Faq';
 import Hero from '../components/Hero/Hero';
+import TeamCard from '../components/TeamCard/TeamCard';
 
 import Image from 'next/image';
 
@@ -40,22 +41,20 @@ export default function Home({ locale }) {
 	const router = useRouter();
 	return (
 		<main>
-			<Section>
+			<Section style={{ minHeight: '100vh', padding: 0 }}>
 				<Hero />
 			</Section>
 			<div id="showcase">
 				<Section className={styles.showcaseSection}>
 					<Title>What we make.</Title>
-					<Caption>
-						Our project has many components. Here are some of them.
-					</Caption>
+					<Caption>Our project has many components. Here are some of them.</Caption>
 				</Section>
-				{locale.showcase.map((element, i) => {
+				{locale.showcase.map((el, i) => {
 					return (
 						<ShowcaseSection
-							title={element.title}
-							caption={element.caption}
-							image={showcaseImages[element.image]}
+							title={el.title}
+							caption={el.caption}
+							image={showcaseImages[el.image]}
 							isOdd={i % 2 !== 0}
 							key={i}
 						/>
@@ -71,25 +70,37 @@ export default function Home({ locale }) {
 					/>
 					<div className={styles.text}>
 						<Title>And much more!</Title>
-						<p className={styles.caption}>
+						<Caption center>
 							Check out our progress page for an extensive list of our current progress and goals!
-						</p>
+						</Caption>
 						<Button
-							isPrimary={true}
+							isPrimary
 							onClick={(e) => {
 								e.preventDefault();
 								router.push('/progress');
 							}}
+							style={{ margin: '2.5rem auto 0' }}
 						>
 							Check progress
 						</Button>
 					</div>
 				</Section>
 			</div>
-			<Section>
+			<Section style={{ paddingBottom: '72px' }}>
 				<Title id="faq">{locale.faq.title}</Title>
-				<p className={styles.caption}>{locale.faq.text}</p>
+				<Caption>{locale.faq.text}</Caption>
 				<Faq questionObject={locale.faq.QAs} />
+			</Section>
+			<Section>
+				<Title center id="credits">{locale.credits.title}</Title>
+				<Caption center>{locale.credits.text}</Caption>
+				<div className={styles.teamWrapper}>
+					{locale.credits.people.map((el, i) => {
+						return (
+							<TeamCard name={el.name} caption={el.caption} pic={el.picture} link={el.github} key={i} />
+						);
+					})}
+				</div>
 			</Section>
 		</main>
 	);

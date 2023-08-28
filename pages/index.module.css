@@ -11,7 +11,7 @@
 }
 
 .showcaseSection::after {
-	content: "";
+	content: '';
 	width: 400vw;
 	height: calc(100% + 256px);
 	margin-left: -50vw;
@@ -48,6 +48,14 @@
 
 .showcaseTail .caption {
 	margin: 1rem auto 2rem;
+}
+
+.teamWrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: -10px;
+	margin-top: 80px;
 }
 
 @media screen and (max-width: 840px) {
