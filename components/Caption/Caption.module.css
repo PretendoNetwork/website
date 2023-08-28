@@ -3,3 +3,8 @@
 	margin: .5rem 0;
 	line-height: 1.75;
 }
+
+.center {
+	text-align: center;
+	margin: .5rem auto;
+}
