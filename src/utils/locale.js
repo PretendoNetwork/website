@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import merge from 'lodash.merge';
 import logger from './logger.js';
 
-import baseLocale from '../locales/en_US.json' assert {type: 'json'};
+import baseLocale from '../../locales/en_US.json' assert {type: 'json'};
 
 function getLocale(code) {
 	const localeCode = code.replace('-', '_');

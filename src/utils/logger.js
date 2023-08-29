@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import chalk from 'chalk';
 
-const base = './logs';
+const base = '../../logs';
 fs.ensureDirSync(base);
 
 const writeStreams = {

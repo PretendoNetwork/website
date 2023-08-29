@@ -17,10 +17,10 @@ import styles from './index.module.css';
 
 import { useRouter } from 'next/router';
 
-import juxtImage from '../public/assets/images/showcase/juxt.png';
-import networkImage from '../public/assets/images/showcase/network.png';
-import pcmouseImage from '../public/assets/images/showcase/pcmouse.png';
-import wiiuchatImage from '../public/assets/images/showcase/wiiuchat.png';
+import juxtImage from '../../public/assets/images/showcase/juxt.png';
+import networkImage from '../../public/assets/images/showcase/network.png';
+import pcmouseImage from '../../public/assets/images/showcase/pcmouse.png';
+import wiiuchatImage from '../../public/assets/images/showcase/wiiuchat.png';
 
 const showcaseImages = {
 	juxt: juxtImage,
@@ -44,7 +44,7 @@ export default function Home({ locale }) {
 	return (
 		<main>
 			<Section>
-				<Hero />
+				{/*<Hero />*/}
 			</Section>
 
 			<div id="showcase">
@@ -186,10 +186,6 @@ export default function Home({ locale }) {
 					{locale.discordJoin.widget.text}
 				</ButtonWidget>
 			</Section>
-
-			<Footer>
-
-			</Footer>
 		</main>
 	);
 }

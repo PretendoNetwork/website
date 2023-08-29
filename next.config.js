@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import { getLocaleList } from './utils/locale.js';
+import { getLocaleList } from './src/utils/locale.js';
 
 const nextConfig = {
 	reactStrictMode: true,
