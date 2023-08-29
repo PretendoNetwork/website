@@ -2,7 +2,7 @@ import styles from './TeamCard.module.css';
 import ImageFix from '../ImageFix/ImageFix';
 import Link from 'next/link';
 
-import { Star } from 'phosphor-react';
+import { Star } from 'phosphor-react-sc';
 
 import classNames from 'classnames';
 

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import styles from './CoolHover.module.css';
 import classNames from 'classnames';
@@ -21,20 +23,22 @@ import classNames from 'classnames';
 export default function CoolHover(ctx) {
 	const { hoverColor, bgColor, children, className, radius, style } = ctx;
 
-	const [ pos, setPos ] = useState({ x: 0, y: 0 });
-	const [ active, setActive ] = useState( false );
+	const [pos, setPos] = useState({ x: 0, y: 0 });
+	const [active, setActive] = useState(false);
 
 	return (
 		<div
 			style={{
-				width : '100%',
+				width: '100%',
 				height: '100%',
 				cursor: 'pointer',
 				backgroundColor: bgColor,
-				backgroundImage: active ? `radial-gradient(circle ${radius || '256px'} at ${pos.x}px ${pos.y}px, ${hoverColor}, ${bgColor})` :  bgColor,
+				backgroundImage: active
+					? `radial-gradient(circle ${radius || '256px'} at ${pos.x}px ${pos.y}px, ${hoverColor}, ${bgColor})`
+					: bgColor,
 				//transform: active ? 'scale(1.03)' : 'scale(1)',
 				//transition: 'transform 200ms'
-				...style
+				...style,
 			}}
 			className={classNames(className, styles.coolHover)}
 			onMouseMove={(e) => {
@@ -43,7 +47,7 @@ export default function CoolHover(ctx) {
 			}}
 			onMouseLeave={() => setActive(false)}
 		>
-			{ children }
+			{children}
 		</div>
 	);
 }

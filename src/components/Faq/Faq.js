@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
 import classNames from 'classnames';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight } from 'phosphor-react-sc';
 
 import styles from './Faq.module.css';
 

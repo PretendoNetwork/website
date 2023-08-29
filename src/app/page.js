@@ -1,4 +1,4 @@
-import { getLocale } from '../utils/locale';
+import { getLocale } from '../utils/locale.js';
 
 import Button from '../components/Button/Button';
 import ButtonWidget from '../components/ButtonWidget/ButtonWidget';
@@ -13,9 +13,7 @@ import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
 
 import ImageFix from '../components/ImageFix/ImageFix';
 
-import styles from './index.module.css';
-
-import { useRouter } from 'next/router';
+import styles from './page.module.css';
 
 import juxtImage from '../../public/assets/images/showcase/juxt.png';
 import networkImage from '../../public/assets/images/showcase/network.png';
@@ -29,22 +27,13 @@ const showcaseImages = {
 	wiiuchat: wiiuchatImage,
 };
 
-export async function getServerSideProps(ctx) {
-	const locale = getLocale(ctx.locale);
+export default function Home(ctx) {
+	const locale = getLocale('TODO');
 
-	return {
-		props: {
-			locale,
-		},
-	};
-}
-
-export default function Home({ locale }) {
-	const router = useRouter();
 	return (
 		<main>
 			<Section>
-				{/*<Hero />*/}
+				<Hero />
 			</Section>
 
 			<div id="showcase">
@@ -79,14 +68,8 @@ export default function Home({ locale }) {
 						<Caption center>
 							Check out our progress page for an extensive list of our current progress and goals!
 						</Caption>
-						<Button
-							primary
-							onClick={(e) => {
-								e.preventDefault();
-								router.push('/progress');
-							}}
-							style={{ margin: '2.5rem auto 0' }}
-						>
+
+						<Button primary href="/progress" style={{ margin: '2.5rem auto 0' }}>
 							Check progress
 						</Button>
 					</div>
@@ -177,10 +160,8 @@ export default function Home({ locale }) {
 				<ButtonWidget
 					primary
 					buttonText={locale.discordJoin.widget.button}
-					onButtonClick={(e) => {
-						e.preventDefault();
-						window.open('https://discord.gg/pretendo', '_blank');
-					}}
+					buttonHref="https://discord.gg/pretendo"
+					buttonTarget="_blank"
 					style={{ margin: '0 auto 4rem' }}
 				>
 					{locale.discordJoin.widget.text}

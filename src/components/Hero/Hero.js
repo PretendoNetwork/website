@@ -5,11 +5,9 @@ import Title from '../Title/Title';
 import Caption from '../Caption/Caption';
 import Button from '../Button/Button';
 
-import Link from 'next/link';
-
 import styles from './Hero.module.css';
 
-import { DiscordLogo, GithubLogo, Heart } from 'phosphor-react';
+import { DiscordLogo, GithubLogo, Heart } from 'phosphor-react-sc';
 
 export default function Hero() {
 	return (
@@ -22,24 +20,26 @@ export default function Hero() {
 					allowing online connectivity for all, even after the original servers are discontinued
 				</Caption>
 				<div className={styles.buttons}>
-					<Link href="#showcase">
-						<Button primary>Read more</Button>
-					</Link>
-					<Link href="https://discord.gg/pretendo" aria-label="Discord server">
-						<Button icon>
-							<DiscordLogo size={32} weight="fill" />
-						</Button>
-					</Link>
-					<Link href="https://github.com/pretendonetwork" aria-label="GitHub organization">
-						<Button icon>
-							<GithubLogo size={32} weight="fill" />
-						</Button>
-					</Link>
-					<a href="/account/upgrade" aria-label="Upgrade page">
-						<Button icon>
-							<Heart size={32} weight="fill" />
-						</Button>
-					</a>
+					<Button primary href="#showcase">
+						Read more
+					</Button>
+
+					<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
+						<DiscordLogo size={32} weight="fill" />
+					</Button>
+
+					<Button
+						icon
+						href="https://github.com/pretendonetwork"
+						target="_blank"
+						aria-label="GitHub organization"
+					>
+						<GithubLogo size={32} weight="fill" />
+					</Button>
+
+					<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
+						<Heart size={32} weight="fill" />
+					</Button>
 				</div>
 			</div>
 			<div className={styles.images}>

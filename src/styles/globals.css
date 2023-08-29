@@ -44,6 +44,7 @@ body {
 	margin: 0;
 	color: var(--text-shade-1);
 	justify-content: center;
+	font-family: var(--font-poppins);
 }
 
 a {
