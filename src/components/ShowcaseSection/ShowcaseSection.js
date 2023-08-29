@@ -1,7 +1,7 @@
 import styles from './ShowcaseSection.module.css';
 
 import classNames from 'classnames';
-import Image from 'next/image';
+import ImageFix from '../ImageFix/ImageFix';
 
 import Section from '../Section/Section';
 import Title from '../Title/Title';
@@ -17,7 +17,7 @@ export default function ShowcaseSection(ctx) {
 				<Title>{title}</Title>
 				<p className={styles.caption}>{caption}</p>
 			</div>
-			<Image src={image} alt="" className={styles.image} quality={100} sizes="(max-width: 840px) 100vw, 700px" />
+			<ImageFix src={image} alt="" className={styles.image} quality={100} sizes="(max-width: 840px) 100vw, 700px" />
 		</Section>
 	);
 }

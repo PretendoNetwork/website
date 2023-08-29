@@ -11,7 +11,7 @@ import Title from '../components/Title/Title';
 import Section from '../components/Section/Section';
 import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
 
-import Image from 'next/image';
+import ImageFix from '../components/ImageFix/ImageFix';
 
 import styles from './index.module.css';
 
@@ -66,7 +66,7 @@ export default function Home({ locale }) {
 				})}
 
 				<Section className={styles.showcaseTail} contentClassName={styles.content}>
-					<Image
+					<ImageFix
 						src={wiiuchatImage}
 						className={styles.image}
 						alt=""

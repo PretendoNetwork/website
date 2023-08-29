@@ -1,5 +1,5 @@
 import styles from './TeamCard.module.css';
-import Image from 'next/image';
+import ImageFix from '../ImageFix/ImageFix';
 import Link from 'next/link';
 
 import { Star } from 'phosphor-react';
@@ -34,7 +34,7 @@ export default function TeamCard(ctx) {
 			)}
 		>
 			<div className={styles.imageWrapper}>
-				<Image src={pic} width={110} height={110} alt="" className={styles.image} />
+				<ImageFix src={pic} width={110} height={110} alt="" className={styles.image} />
 			</div>
 			<div className={styles.text}>
 				<h3>{name}</h3>

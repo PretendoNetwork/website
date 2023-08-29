@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ImageFix from '../ImageFix/ImageFix';
 import n2ds from '/public/assets/images/n2ds.png';
 
 import Title from '../Title/Title';
@@ -150,7 +150,7 @@ export default function Hero() {
 						</g>
 					</svg>
 
-					<Image className={styles.n2ds} src={n2ds} alt="" />
+					<ImageFix className={styles.n2ds} src={n2ds} alt="" />
 				</div>
 			</div>
 		</div>
