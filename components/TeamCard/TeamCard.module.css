@@ -132,4 +132,8 @@
 		width: 64px;
 		height: 64px;
 	}
+
+	.compact.card {
+		padding: 0.75rem
+	}
 }

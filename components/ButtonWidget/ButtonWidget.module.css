@@ -16,5 +16,5 @@
 .widget p {
 	color: var(--text-shade-1);
 	margin: 0;
-	margin-right: 5rem;
+	margin-right: min(5rem, 5vw);
 }

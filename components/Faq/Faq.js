@@ -16,8 +16,13 @@ export default function Faq(ctx) {
 	// reusable question component
 	const QnA = ({ question, i, selected }) => (
 		<div className={styles.question}>
-			<h3 className={classNames({ [styles.selected]: selected })} onClick={() => setSelectedIndex(i)}>
-				<CaretRight size={24} weight="bold" className={styles.chevron} />
+			<h3
+				className={classNames({ [styles.selected]: selected })}
+				onClick={() => setSelectedIndex(i)}
+				onKeyDown={(e) => e.key === 'Enter' && setSelectedIndex(i)}
+				tabIndex="0"
+			>
+				<CaretRight size={24} weight="bold" className={styles.chevron} alt="" />
 				{question.question}
 			</h3>
 			<p style={{ display: selected ? 'block' : 'none' }} dangerouslySetInnerHTML={{ __html: question.answer }} />

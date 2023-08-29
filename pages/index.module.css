@@ -68,11 +68,6 @@
 	overflow: hidden;
 }
 
-.thanksAniWrap::before {
-	content: '';
-	position: absolute;
-}
-
 .thanksAniWrap::after {
 	content: '';
 	position: absolute;
@@ -145,5 +140,17 @@
 		margin: auto;
 		width: 100%;
 		max-width: 600px;
+	}
+
+	.thanksAniWrap {
+		transform: none;
+	}
+
+	.thanksAniWrap .inner {
+		overflow: visible;
+	}
+
+	.thanksAniWrap::after {
+		display: none;
 	}
 }

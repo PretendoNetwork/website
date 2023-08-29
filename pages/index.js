@@ -176,12 +176,20 @@ export default function Home({ locale }) {
 
 				<ButtonWidget
 					primary
-					buttonText={locale.discordJoin.widget.button + " TODO: ADD LINK"}
+					buttonText={locale.discordJoin.widget.button}
+					onButtonClick={(e) => {
+						e.preventDefault();
+						window.open('https://discord.gg/pretendo', '_blank');
+					}}
 					style={{ margin: '0 auto 4rem' }}
 				>
 					{locale.discordJoin.widget.text}
 				</ButtonWidget>
 			</Section>
+
+			<Footer>
+
+			</Footer>
 		</main>
 	);
 }
