@@ -39,6 +39,10 @@
 	width: fit-content;
 }
 
+.footer p:last-child {
+	margin-bottom: 0;
+}
+
 .footer .link {
 	color: unset;
 	font-weight: unset;
@@ -73,8 +77,21 @@
 
 .footer .discordWidget .link .arrow {
 	position: relative;
-	top: 0.25rem;
+	top: 0.27rem;
 	margin-right: 0.5ch;
+}
+
+.discordWidgetWrapper {
+	position: relative;
+	z-index: 2;
+	align-self: end;
+}
+
+.discordWidgetWrapper .bandwidth {
+	position: absolute;
+	right: 0;
+	top: -136px;
+	z-index: -1;
 }
 
 @media screen and (max-width: 1080px) {
@@ -104,6 +121,7 @@
 
 	.footer .discordWidgetWrapper {
 		margin-top: 1rem;
+		width: 100%;
 	}
 }
 
@@ -133,5 +151,11 @@
 	.footer .discordWidget .sub,
 	.footer .discordWidget .link {
 		font-size: 1.1rem;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.discordWidgetWrapper .bandwidth {
+		display: none;
 	}
 }

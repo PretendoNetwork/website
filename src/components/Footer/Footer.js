@@ -1,3 +1,4 @@
+import Bandwidth from '@/components/Bandwidth/Bandwidth';
 import Logo from '@/components/Logo/Logo';
 import Section from '@/components/Section/Section';
 import Title from '@/components/Title/Title';
@@ -11,7 +12,7 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer(ctx) {
-	const { locale } = getLocale('todo');
+	const { locale } = getLocale('TODO');
 
 	const year = new Date().getFullYear(); /* Can't have an outdated year this way :3 */
 
@@ -23,7 +24,7 @@ export default function Footer(ctx) {
 					<div>
 						<p>
 							Copyright ©{' '}
-							<Link href={`https://wikipedia.org/wiki/${year}`} className={styles.link}>
+							<Link href={`https://wikipedia.org/wiki/${year}`} target="_blank" className={styles.link}>
 								{year}
 							</Link>
 						</p>
@@ -117,6 +118,12 @@ export default function Footer(ctx) {
 					</div>
 				</div>
 				<div className={styles.discordWidgetWrapper}>
+					<Bandwidth
+						alignBubble="right"
+						size={210}
+						lines={locale.footer.bandwidthRaccoonQuotes}
+						className={styles.bandwidth}
+					/>
 					<div className={styles.discordWidget}>
 						<Title element="h3">{locale.footer.widget.captions[0]}</Title>
 						<Title element="h3" className={styles.sub}>
