@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import CoolHover from '../CoolHover/CoolHover';
+import CoolHover from '@/components/CoolHover/CoolHover';
 import styles from './Button.module.css';
 
 import Link from 'next/link';

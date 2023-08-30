@@ -122,7 +122,7 @@
 	transform: translate(calc(50% - 0.05rem), calc(-50% + 0.05rem));
 }
 
-@media screen and (max-width: 36rem) {
+@media screen and (max-width: 840px) {
 	.card {
 		padding: 0.9rem;
 		border-radius: 0.7rem;

@@ -1,10 +1,10 @@
 import styles from './ShowcaseSection.module.css';
 
 import classNames from 'classnames';
-import ImageFix from '../ImageFix/ImageFix';
+import ImageFix from '@/components/ImageFix/ImageFix';
 
-import Section from '../Section/Section';
-import Title from '../Title/Title';
+import Section from '@/components/Section/Section';
+import Title from '@/components/Title/Title';
 
 export default function ShowcaseSection(ctx) {
 	const { title, caption, image, isOdd } = ctx;

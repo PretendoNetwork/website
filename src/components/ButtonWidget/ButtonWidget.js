@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from './ButtonWidget.module.css';
 
-import Button from '../Button/Button';
+import Button from '@/components/Button/Button';
 
 /**
  * A reusable component for label/button combo widgets (see https://pretendo.network#discord-join).

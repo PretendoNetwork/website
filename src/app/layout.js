@@ -1,8 +1,30 @@
+import '../styles/globals.css';
+
+import { Poppins } from 'next/font/google';
+const poppins = Poppins({
+	weight: ['400', '700'],
+	variable: '--font-poppins',
+	fallback: ['Arial', 'Helvetica', 'system-ui', 'sans-serif'],
+	subsets: ['latin'], // this is the preloaded subset, all subsets will be available
+});
+
+export default function RootLayout({ children }) {
+	return (
+		<html className={`${poppins.variable}`}>
+			<body>
+				{children}
+			</body>
+		</html>
+	);
+}
+
 export const metadata = {
 	title: {
 		template: '%s | Pretendo Network',
 		default: 'Pretendo Network', // a default is required when creating a template
 	},
+	description:
+		'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles',
 	manifest: '/site.webmanifest',
 	applicationName: 'Pretendo Network',
 	themeColor: '#1b1f3b',
@@ -10,7 +32,8 @@ export const metadata = {
 		title: 'Pretendo Network',
 	},
 	openGraph: {
-		description: 'The React Framework for the Web',
+		description:
+			'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles',
 		url: 'https://pretendo.network',
 		siteName: 'Pretendo Network',
 		images: [
@@ -39,25 +62,3 @@ export const metadata = {
 		'msapplication-config': '/assets/browserconfig.xml',
 	},
 };
-
-import '../styles/globals.css';
-
-import { Poppins } from 'next/font/google';
-const poppins = Poppins({
-	weight: ['400', '700'],
-	variable: '--font-poppins',
-	fallback: ['Arial', 'Helvetica', 'system-ui', 'sans-serif'],
-	subsets: ['latin'], // this is the preloaded subset, all subsets will be available
-});
-
-export default function RootLayout({
-	// Layouts must accept a children prop.
-	// This will be populated with nested layouts or pages
-	children,
-}) {
-	return (
-		<html className={`${poppins.variable}`}>
-			<body>{children}</body>
-		</html>
-	);
-}

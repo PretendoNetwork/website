@@ -1,5 +1,5 @@
 import styles from './TeamCard.module.css';
-import ImageFix from '../ImageFix/ImageFix';
+import ImageFix from '@/components/ImageFix/ImageFix';
 import Link from 'next/link';
 
 import { Star } from 'phosphor-react-sc';

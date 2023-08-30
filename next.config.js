@@ -1,12 +1,7 @@
 /** @type {import('next').NextConfig} */
-import { getLocaleList } from './src/utils/locale.js';
 
 const nextConfig = {
 	reactStrictMode: true,
-	i18n: {
-		locales: getLocaleList(),
-		defaultLocale: 'en-US',
-	},
 	images: {
 		remotePatterns: [
 			{

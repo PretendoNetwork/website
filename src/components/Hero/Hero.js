@@ -1,9 +1,9 @@
-import ImageFix from '../ImageFix/ImageFix';
+import ImageFix from '@/components/ImageFix/ImageFix';
 import n2ds from '/public/assets/images/n2ds.png';
 
-import Title from '../Title/Title';
-import Caption from '../Caption/Caption';
-import Button from '../Button/Button';
+import Title from '@/components/Title/Title';
+import Caption from '@/components/Caption/Caption';
+import Button from '@/components/Button/Button';
 
 import styles from './Hero.module.css';
 
@@ -24,22 +24,24 @@ export default function Hero() {
 						Read more
 					</Button>
 
-					<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
-						<DiscordLogo size={32} weight="fill" />
-					</Button>
+					<div>
+						<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
+							<DiscordLogo size={32} weight="fill" />
+						</Button>
 
-					<Button
-						icon
-						href="https://github.com/pretendonetwork"
-						target="_blank"
-						aria-label="GitHub organization"
-					>
-						<GithubLogo size={32} weight="fill" />
-					</Button>
+						<Button
+							icon
+							href="https://github.com/pretendonetwork"
+							target="_blank"
+							aria-label="GitHub organization"
+						>
+							<GithubLogo size={32} weight="fill" />
+						</Button>
 
-					<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
-						<Heart size={32} weight="fill" />
-					</Button>
+						<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
+							<Heart size={32} weight="fill" />
+						</Button>
+					</div>
 				</div>
 			</div>
 			<div className={styles.images}>

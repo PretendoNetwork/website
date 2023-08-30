@@ -29,6 +29,10 @@
 	--yellow-shade-1: #abbf3b;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background: var(--bg-shade-1);
 	padding-bottom: env(safe-area-inset-bottom);

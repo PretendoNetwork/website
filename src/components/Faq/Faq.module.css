@@ -42,4 +42,24 @@
 		grid-template-columns: 1fr;
 		gap: 0;
 	}
+
+	.question h3 {
+		font-size: 1.2rem;
+	}
+
+	.chevron {
+		scale: 0.8;
+		top: 4px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.question h3 {
+		font-size: 1rem;
+	}
+
+	.chevron {
+		scale: 0.7;
+		top: 6px;
+	}
 }

@@ -24,7 +24,7 @@ export default function Logo(ctx) {
 			className={className}
 			style={{
 				display: 'block',
-				margin: center ? '0 auto' : 'unset',
+				margin: center ? '0 auto' : '',
 				...style,
 			}}
 		>
@@ -35,14 +35,14 @@ export default function Logo(ctx) {
 			{text && (
 				<text
 					fill="#fff"
-					font-family="Poppins-Bold, Poppins"
-					font-size="17"
-					font-weight="700"
+					fontFamily="Poppins-Bold, Poppins"
+					fontSize="17"
+					fontWeight="700"
 					x="100%"
 					y="50%"
-					text-anchor="end"
-					alignment-baseline="central"
-					dominant-baseline="central"
+					textAnchor="end"
+					alignmentBaseline="central"
+					dominantBaseline="central"
 				>
 					Pretendo
 				</text>

@@ -13,13 +13,17 @@
 }
 
 .buttons {
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: max-content;
+	display: flex;
+	flex-wrap: wrap;
 	gap: 1rem;
 	margin-top: 2.5rem;
 }
-
+.buttons div {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+	gap: 1rem;
+}
 
 .images .lightCircle {
 	position: relative;

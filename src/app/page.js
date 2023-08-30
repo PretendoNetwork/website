@@ -1,24 +1,24 @@
-import { getLocale } from '../utils/locale.js';
+import Button from '@/components/Button/Button';
+import ButtonWidget from '@/components/ButtonWidget/ButtonWidget';
+import Caption from '@/components/Caption/Caption';
+import Faq from '@/components/Faq/Faq';
+import Hero from '@/components/Hero/Hero';
+import Logo from '@/components/Logo/Logo';
+import TeamCard from '@/components/TeamCard/TeamCard';
+import Title from '@/components/Title/Title';
+import Section from '@/components/Section/Section';
+import ShowcaseSection from '@/components/ShowcaseSection/ShowcaseSection';
 
-import Button from '../components/Button/Button';
-import ButtonWidget from '../components/ButtonWidget/ButtonWidget';
-import Caption from '../components/Caption/Caption';
-import Faq from '../components/Faq/Faq';
-import Hero from '../components/Hero/Hero';
-import Logo from '../components/Logo/Logo';
-import TeamCard from '../components/TeamCard/TeamCard';
-import Title from '../components/Title/Title';
-import Section from '../components/Section/Section';
-import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection';
+import { getLocale } from '@/utils/locale';
 
-import ImageFix from '../components/ImageFix/ImageFix';
+import ImageFix from '@/components/ImageFix/ImageFix';
 
 import styles from './page.module.css';
 
-import juxtImage from '../../public/assets/images/showcase/juxt.png';
-import networkImage from '../../public/assets/images/showcase/network.png';
-import pcmouseImage from '../../public/assets/images/showcase/pcmouse.png';
-import wiiuchatImage from '../../public/assets/images/showcase/wiiuchat.png';
+import juxtImage from '@/public/assets/images/showcase/juxt.png';
+import networkImage from '@/public/assets/images/showcase/network.png';
+import pcmouseImage from '@/public/assets/images/showcase/pcmouse.png';
+import wiiuchatImage from '@/public/assets/images/showcase/wiiuchat.png';
 
 const showcaseImages = {
 	juxt: juxtImage,
@@ -28,7 +28,7 @@ const showcaseImages = {
 };
 
 export default function Home(ctx) {
-	const locale = getLocale('TODO');
+	const { locale } = getLocale('TODO');
 
 	return (
 		<main>
@@ -148,9 +148,9 @@ export default function Home(ctx) {
 				</div>
 			</Section>
 
-			<Section className={styles.discordJoin} style={{ marginTop: '4rem' }}>
+			<Section className={styles.discordJoin}>
 				<Section compact>
-					<Logo center size={96} style={{ marginBottom: '4rem' }} />
+					<Logo center size={96} className={styles.logo} style={{ marginBottom: '4rem' }} />
 					<Title center id="discord-join">
 						{locale.discordJoin.title}
 					</Title>
