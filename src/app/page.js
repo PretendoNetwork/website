@@ -33,7 +33,7 @@ export default function Home(ctx) {
 	return (
 		<main>
 			<Section>
-				<Hero />
+				<Hero locale={locale} />
 			</Section>
 
 			<div id="showcase">

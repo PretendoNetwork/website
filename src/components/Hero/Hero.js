@@ -9,19 +9,16 @@ import styles from './Hero.module.css';
 
 import { DiscordLogo, GithubLogo, Heart } from 'phosphor-react-sc';
 
-export default function Hero() {
+export default function Hero({ locale }) {
 	return (
 		<div className={styles.hero}>
 			<div className={styles.info}>
-				<h3 className={styles.subtitle}>Game servers</h3>
-				<Title element={'h1'}>Recreated.</Title>
-				<Caption>
-					Pretendo is a free and open source replacement for Nintendos servers for both the 3DS and Wii U,
-					allowing online connectivity for all, even after the original servers are discontinued
-				</Caption>
+				<h3 className={styles.subtitle}>{locale.hero.subtitle}</h3>
+				<Title element={'h1'}>{locale.hero.title}</Title>
+				<Caption>{locale.hero.text}</Caption>
 				<div className={styles.buttons}>
 					<Button primary href="#showcase">
-						Read more
+						{locale.hero.buttons.readMore}
 					</Button>
 
 					<div>
