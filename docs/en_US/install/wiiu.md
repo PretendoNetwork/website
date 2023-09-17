@@ -12,9 +12,11 @@ You can get a Wii U onto Pretendo in just 3 steps:
 3. [PNID Setup](#pnid-setup)
 
 # RCE Patches
-Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
+~~Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
 games on the 3DS, thus far they have neglected the Wii U. Pretendo has a patcher which attempts to fix these problems -
-this is **essential** to play online safely, whether on Pretendo Network or Nintendo Network.
+this is **essential** to play online safely, whether on Pretendo Network or Nintendo Network.~~
+
+This is no longer true, as Nintendo has issued updates to all affected games fixing all known issues. These docs will remain up, however, in the event that any future bugs/exploits are found and require patches
 
 <div class="tip">
 ⚠️ <b>Don't skip this step!</b>
