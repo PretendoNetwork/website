@@ -22,7 +22,7 @@ import classNames from 'classnames';
  */
 
 export default function TeamCard(ctx) {
-	const { name, caption, pic, link, compact, special, className } = ctx;
+	const { name, caption, pic, link, compact, special, className, tabIndex } = ctx;
 
 	return (
 		<Link
@@ -32,6 +32,7 @@ export default function TeamCard(ctx) {
 				{ [styles.compact]: compact, [styles.special]: Boolean(special) },
 				className
 			)}
+			tabIndex={tabIndex}
 		>
 			<div className={styles.imageWrapper}>
 				<ImageFix src={pic} width={110} height={110} alt="" className={styles.image} />

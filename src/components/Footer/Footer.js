@@ -24,7 +24,12 @@ export default function Footer(ctx) {
 					<div>
 						<p>
 							Copyright ©{' '}
-							<Link href={`https://wikipedia.org/wiki/${year}`} target="_blank" className={styles.link}>
+							<Link
+								href={`https://wikipedia.org/wiki/${year}`}
+								target="_blank"
+								className={styles.link}
+								tabIndex="-1"
+							>
 								{year}
 							</Link>
 						</p>

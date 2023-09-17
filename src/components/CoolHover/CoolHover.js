@@ -12,11 +12,11 @@ import classNames from 'classnames';
  * @param {string} radius - The radius of the hover effect.
  *
  * @example
- * <a href="/pizza">
+ * <Link href="/pizza">
  * 	<CoolHover hoverColor="var(--accent-shade-3)" bgColor="var(--accent-shade-2)">
  * 	  Click for Pizza
  * 	</CoolHover>
- * </a>
+ * </Link>
  *
  */
 

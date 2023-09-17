@@ -50,7 +50,7 @@ export default function Button(ctx) {
 	};
 
 	return href ? (
-		<Link href={href} target={target}>
+		<Link href={href} target={target} tabIndex="-1">
 			<BtnEl />
 		</Link>
 	) : (

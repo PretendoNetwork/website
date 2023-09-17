@@ -118,6 +118,7 @@ export default function Home(ctx) {
 											pic={el.picture}
 											link={el.github}
 											key={i}
+											tabIndex={(Math.round(ar.length / 4) >= i) - 1}
 										/>
 									);
 								});
@@ -139,6 +140,7 @@ export default function Home(ctx) {
 											pic={el.picture}
 											link={el.github}
 											key={i}
+											tabIndex={(Math.round(ar.length / 4) >= i) - 1}
 										/>
 									);
 								});

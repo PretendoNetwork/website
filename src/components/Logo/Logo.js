@@ -35,7 +35,7 @@ export default function Logo(ctx) {
 			{text && (
 				<text
 					fill="#fff"
-					fontFamily="Poppins-Bold, Poppins"
+					fontFamily="var(--font-poppins), Poppins-Bold, Poppins, Inter, Arial, sans-serif"
 					fontSize="17"
 					fontWeight="700"
 					x="100%"

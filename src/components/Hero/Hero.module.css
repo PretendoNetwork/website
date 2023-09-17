@@ -50,6 +50,8 @@
 
 .images .lightCircle .n2ds {
 	transform: translateX(-7.5%);
+	width: 540px;
+	height: auto;
 }
 
 .images svg {

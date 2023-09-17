@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Footer from '@/components/Footer/Footer';
+import Script from 'next/script';
 
 import { Poppins } from 'next/font/google';
 const poppins = Poppins({
@@ -15,6 +16,11 @@ export default function RootLayout({ children }) {
 			<body>
 				{children}
 				<Footer />
+				<Script
+					strategy='lazyOnLoad'
+					src="https://static.cloudflareinsights.com/beacon.min.js"
+					data-cf-beacon='{"token": "ea6695987d664a7f90874c9c0dee9385"}'
+				/>
 			</body>
 		</html>
 	);

@@ -1,29 +1,33 @@
 {
-  "name": "pretendo",
-  "version": "2.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "chalk": "^5.3.0",
-    "classnames": "^2.3.2",
-    "eslint": "^8.46.0",
-    "fs-extra": "^11.1.1",
-    "lodash.merge": "^4.6.2",
-    "next": "^13.4.19",
-    "phosphor-react": "^1.4.1",
-    "phosphor-react-sc": "^1.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "server-only": "^0.0.1",
-    "sharp": "^0.32.4"
-  },
-  "devDependencies": {
-    "eslint-config-next": "^13.4.19"
-  }
+	"name": "pretendo",
+	"version": "2.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"classnames": "^2.3.2",
+		"eslint": "^8.46.0",
+		"fs-extra": "^11.1.1",
+		"lodash.merge": "^4.6.2",
+		"next": "^13.4.19",
+		"phosphor-react": "^1.4.1",
+		"phosphor-react-sc": "^1.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"server-only": "^0.0.1",
+		"sharp": "^0.32.5"
+	},
+	"devDependencies": {
+		"eslint-config-next": "^13.4.19"
+	},
+	"browserslist": [
+		"defaults",
+		"dead"
+	]
 }

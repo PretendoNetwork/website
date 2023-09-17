@@ -26,7 +26,7 @@ export default function Hero() {
 
 					<div>
 						<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
-							<DiscordLogo size={32} weight="fill" />
+							<DiscordLogo size={32} weight="fill" alt="" />
 						</Button>
 
 						<Button
@@ -35,11 +35,11 @@ export default function Hero() {
 							target="_blank"
 							aria-label="GitHub organization"
 						>
-							<GithubLogo size={32} weight="fill" />
+							<GithubLogo size={32} weight="fill" alt="" />
 						</Button>
 
 						<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
-							<Heart size={32} weight="fill" />
+							<Heart size={32} weight="fill" alt="" />
 						</Button>
 					</div>
 				</div>

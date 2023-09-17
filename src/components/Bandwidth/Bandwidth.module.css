@@ -47,8 +47,11 @@
 
 .bandwidth {
 	cursor: pointer;
-	transform: rotate(0);
-	transition: transform 250ms ease-in-out;
+	transition: transform 150ms ease-in-out;
+}
+
+.bandwidth:hover {
+	transform: translateY(-4px) rotate(15deg);
 }
 
 .active .bandwidth {
@@ -56,7 +59,7 @@
 }
 
 .active .bandwidth.jump {
-	animation: jump 250ms ease-in-out;
+	animation: jump 200ms ease-in-out;
 }
 @keyframes jump {
 	0% {
