@@ -1,0 +1,178 @@
+.headerWrapper {
+	padding: 1rem 0 !important;
+	background: rgba(19, 23, 51, 0.9);
+	position: fixed !important;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+	backdrop-filter: blur(2rem);
+	border-bottom: 1px solid var(--bg-shade-2);
+}
+
+.header {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 2rem;
+}
+
+.logo {
+	margin-left: -8px;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	gap: 2rem;
+}
+
+.nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	gap: 2rem;
+}
+
+.nav .dropdownTriggers {
+	position: relative;
+	gap: 0;
+}
+
+.nav .dropdownTriggers li:first-of-type button {
+	padding-right: 1rem;
+}
+
+.nav .dropdownTriggers li:last-of-type button {
+	padding-left: 1rem;
+}
+
+.nav li button {
+	appearance: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
+	color: var(--text-shade-1);
+	font-size: inherit;
+	font-family: inherit;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5ch;
+}
+
+.nav ul button:hover {
+	color: var(--text-shade-3);
+}
+
+.nav li.upgrade button {
+	background: var(--bg-shade-3);
+	color: var(--accent-shade-3);
+	border-radius: 2rem;
+	font-weight: bold;
+	padding: 2px 12px;
+}
+
+.nav li.upgrade button:hover {
+	background: var(--accent-shade-1);
+	color: var(--text-shade-3);
+}
+
+.dropdown {
+	position: absolute;
+
+	background: var(--bg-shade-2);
+
+	top: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 0.5rem;
+	border: 1px solid var(--bg-shade-3);
+	width: fit-content;
+	height: fit-content;
+	transition: width 150ms ease-out, height 150ms ease-out;
+}
+
+.dropdown::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 1.6rem;
+	top: -1.6rem;
+	left: 0;
+	width: 100%;
+}
+
+.dropdown > div {
+	width: max-content;
+	height: max-content;
+	padding: 1.25rem;
+}
+
+.dropdown > div,
+.dropdown .link {
+	animation: appear 0.75s;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dropdown .link {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.25rem;
+	padding-right: 5rem;
+	border-radius: 6px;
+	max-width: 90vw;
+	min-width: 24rem;
+}
+
+.dropdown .link .iconWrapper {
+	background: var(--bg-shade-0);
+	color: var(--accent-shade-2);
+	display: flex;
+	padding: 12px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+}
+
+.dropdown .link p {
+	margin: 0;
+	margin-top: 4px;
+	font-weight: 300;
+	color: var(--text-shade-3);
+}
+
+.dropdown .link .arrow {
+	display: none;
+	position: absolute;
+	right: 1.5rem;
+	color: var(--accent-shade-1);
+}
+
+.dropdown .link:hover {
+	background: var(--bg-shade-3);
+}
+
+.dropdown .link:hover .iconWrapper {
+	color: var(--accent-shade-1);
+}
+
+.dropdown .link:hover .arrow {
+	display: block;
+}

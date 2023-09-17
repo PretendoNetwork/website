@@ -4,7 +4,6 @@
 - Remove jank to get the image component to work
 - Add rss meta tag once it's implemented
 - Update images in showcase
-- Remove phosphor-react-sc once official package supports server components.
 
 This repository contains the source code for [our website](https://pretendo.network). All contributions should go in the [dev branch](https://github.com/PretendoNetwork/website/tree/dev).
 

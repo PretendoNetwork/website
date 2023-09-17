@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import Script from 'next/script';
 
@@ -13,11 +14,12 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
 	return (
 		<html className={`${poppins.variable}`}>
-			<body>
+			<body style={{ paddingTop: '36px' }}>
+				<Header />
 				{children}
 				<Footer />
 				<Script
-					strategy='lazyOnLoad'
+					strategy="lazyOnLoad"
 					src="https://static.cloudflareinsights.com/beacon.min.js"
 					data-cf-beacon='{"token": "ea6695987d664a7f90874c9c0dee9385"}'
 				/>

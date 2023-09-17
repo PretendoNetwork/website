@@ -7,7 +7,7 @@ import Button from '@/components/Button/Button';
 
 import styles from './Hero.module.css';
 
-import { DiscordLogo, GithubLogo, Heart } from 'phosphor-react-sc';
+import { DiscordLogo, GithubLogo, Heart } from '@phosphor-icons/react/dist/ssr';
 
 export default function Hero({ locale }) {
 	return (
@@ -22,7 +22,13 @@ export default function Hero({ locale }) {
 					</Button>
 
 					<div>
-						<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
+						<Button
+							icon
+							href="https://discord.gg/pretendo"
+							target="_blank"
+							aria-label="Discord server"
+							title="Discord server"
+						>
 							<DiscordLogo size={32} weight="fill" alt="" />
 						</Button>
 
@@ -35,7 +41,7 @@ export default function Hero({ locale }) {
 							<GithubLogo size={32} weight="fill" alt="" />
 						</Button>
 
-						<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
+						<Button icon href="/account/upgrade" target="_blank" title="Upgrade page">
 							<Heart size={32} weight="fill" alt="" />
 						</Button>
 					</div>

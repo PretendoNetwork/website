@@ -3,7 +3,7 @@ import Logo from '@/components/Logo/Logo';
 import Section from '@/components/Section/Section';
 import Title from '@/components/Title/Title';
 
-import { ArrowRight } from 'phosphor-react-sc';
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 
 import { getLocale } from '@/utils/locale';
 

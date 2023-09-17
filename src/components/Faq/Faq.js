@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import classNames from 'classnames';
-import { CaretRight } from 'phosphor-react-sc';
+import { CaretRight } from '@phosphor-icons/react/dist/ssr';
 
 import styles from './Faq.module.css';
 

@@ -19,6 +19,7 @@ export default function Logo(ctx) {
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox={text ? '0 0 120 39.88' : '0 0 39.88 39.88'}
 			aria-label="Pretendo"
+			title="Pretendo"
 			height={size}
 			width={text ? size * 3 : size}
 			className={className}

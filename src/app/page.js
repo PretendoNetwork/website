@@ -36,7 +36,7 @@ export default function Home(ctx) {
 				<Hero locale={locale} />
 			</Section>
 
-			<div id="showcase">
+			<div id="about">
 				<Section className={styles.showcaseSection}>
 					<Title>What we make.</Title>
 					<Caption>Our project has many components. Here are some of them.</Caption>
