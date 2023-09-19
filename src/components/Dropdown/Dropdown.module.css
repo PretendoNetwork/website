@@ -27,12 +27,12 @@
 
 .dropdownArrow.arrowAppear {
 	transform: scale(1) translateX(-50%) rotate(45deg);
-	transition: transform 250ms ease-out 200ms;
+	transition: transform 250ms ease-out 200ms, left ease-out 200ms;
 }
 
 .dropdownArrow.arrowDisappear {
 	transform: scale(0) translateX(-50%) rotate(45deg);
-	transition: transform 50ms ease-in;
+	transition: transform 50ms ease-in, left ease-out 200ms;
 }
 
 .dropdown::before {
@@ -48,7 +48,7 @@
 .dropdown .dropdownContent {
 	width: max-content;
 	height: max-content;
-	padding: 1.25rem;
+	padding: 1rem;
 }
 
 .dropdownContent .link {
@@ -57,7 +57,7 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	gap: 1rem;
-	padding: 1.25rem;
+	padding: 1rem;
 	padding-right: 5rem;
 	border-radius: 6px;
 	max-width: 90vw;
@@ -112,4 +112,28 @@
 
 .dropdownContent .link:hover .arrow {
 	display: block;
+}
+
+@media screen and (max-width: 840px) {
+	.dropdown {
+		position: fixed;
+		bottom: 0 !important;
+		left: 5% !important;
+		width: 90% !important;
+		z-index: -1;
+	}
+
+	.dropdownArrow {
+		display: none;
+	}
+
+	.dropdown .dropdownContent {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.dropdown .dropdownContent {
+		padding: 0;
+	}
 }

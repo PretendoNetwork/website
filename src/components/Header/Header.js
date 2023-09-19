@@ -22,7 +22,7 @@ import HeaderDropdown3 from './HeaderDropdowns/HeaderDropdown3';
 import HeaderDropdown4 from './HeaderDropdowns/HeaderDropdown4';
 
 export default function Header({ locale }) {
-	const [open, setOpen] = useState(0);
+	const [open, setOpen] = useState({ e: 0, c: false });
 
 	const headerInnerSection = useRef(null);
 
@@ -35,12 +35,14 @@ export default function Header({ locale }) {
 		return (
 			<button
 				ref={refForEl}
-				onMouseEnter={() => setOpen(n)}
-				onPointerEnter={() => setOpen(n)}
-				onMouseLeave={() => setOpen(0)}
-				onPointerLeave={() => setOpen(0)}
+				onMouseEnter={() => setOpen({ e: n, c: open.c })}
+				onPointerEnter={() => setOpen({ e: n, c: open.c })}
+				onMouseLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
+				onPointerLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
+				onMouseDown={() => setOpen({ e: n, c: true })}
+				onPointerDown={() => setOpen({ e: n, c: true })}
 				style={{
-					color: open === n && 'var(--text-shade-3)',
+					color: open.e === n && 'var(--text-shade-3)',
 				}}
 			>
 				{children}
@@ -74,7 +76,7 @@ export default function Header({ locale }) {
 						</li>
 					</ul>
 					<ul>
-						<li>
+						<li className={styles.progress}>
 							<Link href="/progress">
 								<button>{locale.nav.progress}</button>
 							</Link>

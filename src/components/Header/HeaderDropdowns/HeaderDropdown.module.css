@@ -4,7 +4,7 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	gap: 1rem;
-	padding: 1.25rem;
+	padding: 1rem;
 	padding-right: 5rem;
 	border-radius: 6px;
 	max-width: 90vw;
@@ -25,7 +25,7 @@
 	margin: 0;
 	margin-top: 4px;
 	font-weight: 300;
-	color: var(--text-shade-3);
+	color: var(--text-shade-1);
 }
 
 .dropdownContent .link .arrow {
@@ -38,6 +38,10 @@
 .dropdownContent,
 .dropdownContent .link {
 	animation: appear 0.75s;
+}
+
+.link.progress {
+	display: none;
 }
 
 @keyframes appear {
@@ -54,9 +58,27 @@
 }
 
 .dropdownContent .link:hover .iconWrapper {
-	color: var(--accent-shade-1);
+	color: var(--accent-shade-3);
 }
 
 .dropdownContent .link:hover .arrow {
 	display: block;
+}
+
+@media screen and (max-width: 840px) {
+	.link.progress {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.dropdownContent .link:hover .arrow {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.dropdownContent .link .iconWrapper {
+		padding: 6px;
+	}
 }

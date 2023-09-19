@@ -10,8 +10,9 @@ import styles from './Dropdown.module.css';
  *	A reusable object that renders a dropdown.
  *
  * 	@param {React.useState} openState: a state object [state, setState],
- * 	where state is an int which refers to the index of the dropdownContent to render + 1
- * 	(having it be +1 lets us use 0 as a "do not render" magic number)
+ * 	where state.e is an int which refers to the index of the dropdownContent to render + 1
+ * 	(having it be +1 lets us use 0 as a "do not render" magic number), and c notes if the
+ * 	element was clicked (true) or hovered (falase)
  *
  * 	@param {Array} dropdownContents: an array of objects, structured as
  * 	follows:
@@ -20,12 +21,12 @@ import styles from './Dropdown.module.css';
  *	the corresponding state, and tr1 is the reference to the element that triggered
  *	the dropdown in the first place
  *
- * @param {React.useRef} boundaryRef: a ref to the object to use as a boundary (the
- * dropdown will always be rendered to be [horizontally] inside of the element)
+ * 	@param {React.useRef} boundaryRef: a ref to the object to use as a boundary (the
+ * 	dropdown will always be rendered to be [horizontally] inside of the element)
  *
- * @param {Number} boundaryTolerance: the amount of pixels by which the dropdown can poke out of the boundary.
+ * 	@param {Number} boundaryTolerance: the amount of pixels by which the dropdown can poke out of the boundary.
  *
- * 	@example
+ *	@example
  * 	<Dropdown
  *  	dropdownContents={[
  *	  		{ el: <El1 />, tr: tr1 },
@@ -65,7 +66,7 @@ export default function Dropdown(ctx) {
 		const pxToInt = (px) => parseInt(px.replace('px', ''));
 		const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-		if (dropdownContentRect && open) {
+		if (dropdownContentRect && open.e) {
 			const sectionWidth = pxToInt(getComputedStyle(boundaryRef.current).width);
 			const dropdownWidth = dropdownRect.width;
 
@@ -92,8 +93,8 @@ export default function Dropdown(ctx) {
 				return getTriggerOffset(trRef) + getRealCenter(trRef);
 			}
 
-			const arrowOffset = getLeftOffset(dropdownTriggers[open]);
-			const leftOffset = getLeftOffset(dropdownTriggers[open]) - dropdownWidth / 2;
+			const arrowOffset = getLeftOffset(dropdownTriggers[open.e]);
+			const leftOffset = getLeftOffset(dropdownTriggers[open.e]) - dropdownWidth / 2;
 
 			const leftBoundary = 0 - boundaryTolerance;
 			const rightBoundary = sectionWidth - dropdownWidth + boundaryTolerance;
@@ -111,29 +112,44 @@ export default function Dropdown(ctx) {
 			//dropdown.current.style.width = 0;
 			dropdown.current.style.height = 0;
 		}
-	}, [open, dropdownTriggers, boundaryTolerance, boundaryRef]);
+
+		const closeOnClickOutside = (e) => {
+			if (dropdown.current && !dropdown.current.contains(e.target)) {
+				setOpen({ e: 0, c: false });
+			}
+		};
+
+		document.addEventListener('mousedown', closeOnClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', closeOnClickOutside);
+		};
+	}, [open, setOpen, dropdownTriggers, boundaryTolerance, boundaryRef]);
 
 	return (
 		<>
 			<div
 				className={styles.dropdown}
-				onMouseEnter={() => setOpen(open)}
-				onPointerEnter={() => setOpen(open)}
-				onMouseLeave={() => setOpen(0)}
-				onPointerLeave={() => setOpen(0)}
+				onMouseEnter={() => setOpen({ e: open.e, c: open.c })}
+				onPointerEnter={() => setOpen({ e: open.e, c: open.c })}
+				onMouseLeave={() => {
+					open.c ? null : setOpen({ e: 0, c: false });
+				}}
+				onPointerLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
+				onMouseDown={() => setTimeout(() => setOpen({ e: 0, c: false }), 200)}
+				onPointerDown={() => setTimeout(() => setOpen({ e: 0, c: false }), 200)}
 				ref={dropdown}
 				style={{
-					border: open ? '' : 'none',
+					border: open.e ? '' : 'none',
 				}}
 			>
 				<div ref={dropdownContent} className={styles.dropdownContent}>
-					{dropdownElements[open]}
+					{dropdownElements[open.e]}
 				</div>
 			</div>
 			<div
 				className={classNames(styles.dropdownArrow, {
-					[styles.arrowAppear]: Boolean(open),
-					[styles.arrowDisappear]: !Boolean(open),
+					[styles.arrowAppear]: Boolean(open.e),
+					[styles.arrowDisappear]: !Boolean(open.e),
 				})}
 				ref={dropdownArrow}
 			/>

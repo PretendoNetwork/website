@@ -1,4 +1,4 @@
-import { ArrowRight, Users, Info, SealQuestion, NewspaperClipping } from '@phosphor-icons/react';
+import { ArrowRight, Users, Info, SealQuestion, NewspaperClipping, EggCrack } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 import Title from '@/components/Title/Title';
@@ -48,6 +48,17 @@ export default function HeaderDropdown1({ locale }) {
 				<div>
 					<Title element="h4">{locale.nav.blog}</Title>
 					<p>{locale.nav.dropdown.captions.blog}</p>
+				</div>
+				<ArrowRight size={28} className={styles.arrow} />
+			</Link>
+
+			<Link className={`${styles.link} ${styles.progress}`} href="/progress">
+				<div className={styles.iconWrapper}>
+					<EggCrack weight="fill" size={32} />
+				</div>
+				<div>
+					<Title element="h4">{locale.nav.progress}</Title>
+					<p>{locale.nav.dropdown.captions.progress}</p>
 				</div>
 				<ArrowRight size={28} className={styles.arrow} />
 			</Link>
