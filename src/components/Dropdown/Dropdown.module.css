@@ -1,0 +1,115 @@
+.dropdown {
+	position: absolute;
+	background: var(--bg-shade-2);
+	bottom: -0.75rem;
+	left: 0;
+	transform: translate(0, 100%);
+	border-radius: 0.5rem;
+	border: 1px solid var(--bg-shade-3);
+	width: 0;
+	height: 0;
+	transition: width 200ms ease-out, height 100ms ease-out, opacity 500ms ease-out 100ms, left 150ms ease-out;
+}
+
+.dropdownArrow {
+	position: absolute;
+	bottom: calc(-0.75rem - 6px);
+	left: 0;
+	width: 12px;
+	height: 12px;
+	background: var(--bg-shade-2);
+	border: 1px solid var(--bg-shade-3);
+	border-bottom: 0;
+	border-right: 0;
+	transform: translateX(-50%) rotate(45deg);
+	pointer-events: none;
+}
+
+.dropdownArrow.arrowAppear {
+	transform: scale(1) translateX(-50%) rotate(45deg);
+	transition: transform 250ms ease-out 200ms;
+}
+
+.dropdownArrow.arrowDisappear {
+	transform: scale(0) translateX(-50%) rotate(45deg);
+	transition: transform 50ms ease-in;
+}
+
+.dropdown::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 1.4rem;
+	top: -1.4rem;
+	left: 0;
+	width: 100%;
+}
+
+.dropdown .dropdownContent {
+	width: max-content;
+	height: max-content;
+	padding: 1.25rem;
+}
+
+.dropdownContent .link {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.25rem;
+	padding-right: 5rem;
+	border-radius: 6px;
+	max-width: 90vw;
+	min-width: 24rem;
+}
+
+.dropdownContent .link .iconWrapper {
+	background: var(--bg-shade-0);
+	color: var(--accent-shade-2);
+	display: flex;
+	padding: 12px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+}
+
+.dropdownContent .link p {
+	margin: 0;
+	margin-top: 4px;
+	font-weight: 300;
+	color: var(--text-shade-3);
+}
+
+.dropdownContent .link .arrow {
+	display: none;
+	position: absolute;
+	right: 1.5rem;
+	color: var(--accent-shade-1);
+}
+
+.dropdownContent,
+.dropdownContent .link {
+	animation: appear 0.75s;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dropdownContent .link:hover {
+	background: var(--bg-shade-3);
+}
+
+.dropdownContent .link:hover .iconWrapper {
+	color: var(--accent-shade-1);
+}
+
+.dropdownContent .link:hover .arrow {
+	display: block;
+}

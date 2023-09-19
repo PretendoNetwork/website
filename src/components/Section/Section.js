@@ -19,7 +19,7 @@ import styles from './Section.module.css';
  */
 
 export default function Section(ctx) {
-	const { id, style, children, className, compact, contentClassName } = ctx;
+	const { id, style, children, className, compact, contentClassName, contentRef } = ctx;
 
 	return (
 		<section
@@ -27,7 +27,9 @@ export default function Section(ctx) {
 			id={id}
 			style={style}
 		>
-			<div className={classNames(styles.content, contentClassName)}>{children}</div>
+			<div className={classNames(styles.content, contentClassName)} ref={contentRef}>
+				{children}
+			</div>
 		</section>
 	);
 }

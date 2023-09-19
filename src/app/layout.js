@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import Header from '@/components/Header/Header';
+import Header from '@/components/Header/HeaderWrapper';
 import Footer from '@/components/Footer/Footer';
 import Script from 'next/script';
 
@@ -14,7 +14,7 @@ const poppins = Poppins({
 export default function RootLayout({ children }) {
 	return (
 		<html className={`${poppins.variable}`}>
-			<body style={{ paddingTop: '36px' }}>
+			<body style={{ paddingTop: '48px' }}>
 				<Header />
 				{children}
 				<Footer />
