@@ -9,10 +9,13 @@ import styles from './Dropdown.module.css';
  *
  *	A reusable object that renders a dropdown.
  *
- * 	@param {React.useState} openState: a state object [state, setState],
- * 	where state.e is an int which refers to the index of the dropdownContent to render + 1
- * 	(having it be +1 lets us use 0 as a "do not render" magic number), and c notes if the
- * 	element was clicked (true) or hovered (falase)
+ * 	@param {React.useState} openState: a state object [state, setState] storing an
+ *  int, which refers to the index of the dropdownContent to render + 1
+ * 	(having it be +1 lets us use 0 as a "do not render" magic number)
+ *
+ *
+ *  @param {React.useState} clickedState: a state object [state, setState] storing a
+ *  boolean indicating whether the element was clicked on (true) or hovered on (false)
  *
  * 	@param {Array} dropdownContents: an array of objects, structured as
  * 	follows:
@@ -33,6 +36,7 @@ import styles from './Dropdown.module.css';
  *			{ el: <El2 />, tr: tr2 },
  *		]}
  *		openState={[open, setOpen]}
+ *      clickedState={[clicked, setClicked]}
  *		boundaryRef={navbarRef}
  *		boundaryTolerance={20}
  *	/>
@@ -40,6 +44,7 @@ import styles from './Dropdown.module.css';
 
 export default function Dropdown(ctx) {
 	const [open, setOpen] = ctx.openState;
+	const [clicked, setClicked] = ctx.clickedState;
 	const { boundaryRef, boundaryTolerance } = ctx;
 
 	const dropdownElements = useMemo(() => {
@@ -66,7 +71,7 @@ export default function Dropdown(ctx) {
 		const pxToInt = (px) => parseInt(px.replace('px', ''));
 		const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-		if (dropdownContentRect && open.e) {
+		if (dropdownContentRect && open) {
 			const sectionWidth = pxToInt(getComputedStyle(boundaryRef.current).width);
 			const dropdownWidth = dropdownRect.width;
 
@@ -93,8 +98,8 @@ export default function Dropdown(ctx) {
 				return getTriggerOffset(trRef) + getRealCenter(trRef);
 			}
 
-			const arrowOffset = getLeftOffset(dropdownTriggers[open.e]);
-			const leftOffset = getLeftOffset(dropdownTriggers[open.e]) - dropdownWidth / 2;
+			const arrowOffset = getLeftOffset(dropdownTriggers[open]);
+			const leftOffset = getLeftOffset(dropdownTriggers[open]) - dropdownWidth / 2;
 
 			const leftBoundary = 0 - boundaryTolerance;
 			const rightBoundary = sectionWidth - dropdownWidth + boundaryTolerance;
@@ -115,7 +120,8 @@ export default function Dropdown(ctx) {
 
 		const closeOnClickOutside = (e) => {
 			if (dropdown.current && !dropdown.current.contains(e.target)) {
-				setOpen({ e: 0, c: false });
+				setOpen(0);
+				setClicked(false);
 			}
 		};
 
@@ -123,33 +129,37 @@ export default function Dropdown(ctx) {
 		return () => {
 			document.removeEventListener('mousedown', closeOnClickOutside);
 		};
-	}, [open, setOpen, dropdownTriggers, boundaryTolerance, boundaryRef]);
+	}, [open, setOpen, clicked, setClicked, dropdownTriggers, boundaryTolerance, boundaryRef]);
 
 	return (
 		<>
 			<div
 				className={styles.dropdown}
-				onMouseEnter={() => setOpen({ e: open.e, c: open.c })}
-				onPointerEnter={() => setOpen({ e: open.e, c: open.c })}
-				onMouseLeave={() => {
-					open.c ? null : setOpen({ e: 0, c: false });
+				onPointerEnter={() => {
+					setOpen(open);
 				}}
-				onPointerLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
-				onMouseDown={() => setTimeout(() => setOpen({ e: 0, c: false }), 200)}
-				onPointerDown={() => setTimeout(() => setOpen({ e: 0, c: false }), 200)}
+				onPointerLeave={() => {
+					!clicked && setOpen(0);
+				}}
+				onPointerDown={() => {
+					setTimeout(() => {
+						setOpen(0);
+						setClicked(false);
+					}, 200);
+				}}
 				ref={dropdown}
 				style={{
-					border: open.e ? '' : 'none',
+					border: open ? '' : 'none',
 				}}
 			>
 				<div ref={dropdownContent} className={styles.dropdownContent}>
-					{dropdownElements[open.e]}
+					{dropdownElements[open]}
 				</div>
 			</div>
 			<div
 				className={classNames(styles.dropdownArrow, {
-					[styles.arrowAppear]: Boolean(open.e),
-					[styles.arrowDisappear]: !Boolean(open.e),
+					[styles.arrowAppear]: Boolean(open),
+					[styles.arrowDisappear]: !Boolean(open),
 				})}
 				ref={dropdownArrow}
 			/>

@@ -22,7 +22,8 @@ import HeaderDropdown3 from './HeaderDropdowns/HeaderDropdown3';
 import HeaderDropdown4 from './HeaderDropdowns/HeaderDropdown4';
 
 export default function Header({ locale }) {
-	const [open, setOpen] = useState({ e: 0, c: false });
+	const [open, setOpen] = useState(0);
+	const [clicked, setClicked] = useState(false);
 
 	const headerInnerSection = useRef(null);
 
@@ -35,14 +36,18 @@ export default function Header({ locale }) {
 		return (
 			<button
 				ref={refForEl}
-				onMouseEnter={() => setOpen({ e: n, c: open.c })}
-				onPointerEnter={() => setOpen({ e: n, c: open.c })}
-				onMouseLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
-				onPointerLeave={() => (open.c ? null : setOpen({ e: 0, c: false }))}
-				onMouseDown={() => setOpen({ e: n, c: true })}
-				onPointerDown={() => setOpen({ e: n, c: true })}
+				onPointerEnter={() => {
+					setOpen(n);
+				}}
+				onPointerLeave={() => {
+					!clicked && setOpen(0);
+				}}
+				onPointerDown={() => {
+					setOpen(n);
+					setClicked(true);
+				}}
 				style={{
-					color: open.e === n && 'var(--text-shade-3)',
+					color: open === n && 'var(--text-shade-3)',
 				}}
 			>
 				{children}
@@ -109,6 +114,7 @@ export default function Header({ locale }) {
 						{ el: <HeaderDropdown4 key={4} locale={locale} />, tr: trigger4 },
 					]}
 					openState={[open, setOpen]}
+					clickedState={[clicked, setClicked]}
 					boundaryRef={headerInnerSection}
 					boundaryTolerance={24}
 				/>
