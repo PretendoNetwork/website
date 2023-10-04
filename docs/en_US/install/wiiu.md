@@ -22,7 +22,7 @@ This is no longer true, as Nintendo has issued updates to all affected games fix
 ⚠️ <b>Don't skip this step!</b>
 </div>
 
-To install the fix, naviagate to the
+To install the fix, navigate to the
 [latest release of the RCE patcher](https://github.com/PretendoNetwork/rce_patches/releases/latest) on GitHub and
 download the `rce_patches.wps` file.
 
@@ -97,4 +97,4 @@ Right before registering a PNID, please make sure to save your password on some 
 
 <img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
-Finally, set up your pnid, email and password. Once all of this is done you will be able to use Pretendo Server
+Finally, set up your PNID, email and password. Once all of this is done you will be able to use Pretendo Servers.
