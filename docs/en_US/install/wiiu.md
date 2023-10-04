@@ -101,4 +101,4 @@ Right before registering a PNID, please make sure to save your password on some 
 
 <img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
-Finally, set up your PNID, email and password. Once all of this is done, you will be able to use Pretendo Servers.
+Finally, set up your PNID, email and password. Once all of this is done, you will be able to use Pretendo servers.
