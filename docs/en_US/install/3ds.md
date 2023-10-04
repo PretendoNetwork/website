@@ -17,11 +17,11 @@ Before you start, make sure your 3DS is turned off, and insert the SD card that 
 
 Once you've done that, navigate to the [releases](https://github.com/PretendoNetwork/Nimbus) page on the Nimbus GitHub repository.
 
-<img src="https://github.com/PretendoNetwork/website/assets/56035537/4509c4a6-5b30-42d2-a5e6-182178bde980" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/releases-highlight.png" width=100% height=auto/>
 
 There's a few different ways to use Nimbus, but for the best experience, download the `combined.[version].zip` file onto your computer. This file allows you to launch Nimbus both from your HOME Menu and the Homebrew Launcher. The other two files only do one or the other.
 
-<img src="https://github.com/PretendoNetwork/website/assets/56035537/b92c7e77-6394-431d-b0b7-4ee6e4c58c65" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/zip-highlight.png" width=100% height=auto/>
 
 Extract the contents of the zip file you just downloaded and copy all of the contents of the zip file to the root of your SD card. If your computer asks you, merge files.
 
