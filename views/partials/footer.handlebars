@@ -85,9 +85,14 @@
 			`${unescapeHTML("{{this}}")}`,
 		{{/each}}
 		]
-
-		bandwidthRaccoon.addEventListener("click", () =>
+		
+		document.body.addEventListener("click", () =>
 		{
+			bandwidthRaccoonWrapper.classList.remove("speak");
+		})
+		bandwidthRaccoon.addEventListener("click", (event) =>
+		{
+			event.stopPropagation();
 			bandwidthRaccoonWrapper.classList.add("speak");
 			if (!randomSentences[i]) {
 				i = 0
