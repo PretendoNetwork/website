@@ -22,7 +22,7 @@ This is no longer true, as Nintendo has issued updates to all affected games fix
 ⚠️ <b>Don't skip this step!</b>
 </div>
 
-To install the fix, naviagate to the
+To install the fix, navigate to the
 [latest release of the RCE patcher](https://github.com/PretendoNetwork/rce_patches/releases/latest) on GitHub and
 download the `rce_patches.wps` file.
 
@@ -90,11 +90,15 @@ You will want to register an account from [here](/account) and click `Don't have
 
 <img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" width="100%">
 
-Right before registering a PNID, please make sure to save your password on some sort of note, as you will not be able to reset your password. After registering just simply change your birth date, gender, timezone, country/region, etc to what you see fit. Once you have it set up we can switch back to the Wii U. Within your Wii U you will want to reconnect to Pretendo _**Note:** how you reconnect to Pretendo depends on how you installed it on your Wii U!_ Once you are reconnected, you will want to press the top left profile icon and press `Switch Account`, then press `Add New User`. Go through the user set up normally, but when it asks if you have an account, press `Yes` and put in your username and password. If it asks you to confirm your email afterwards, simply skip it. You will now be able to use Pretendo Servers
+Right before registering a PNID, please make sure to save your password on some sort of note. This isn't necessary, but it prevents having to reset your password if you forget it. After registering just simply change your birth date, gender, timezone, country/region, etc to what you see fit. Once you have it set up we can switch back to the Wii U. Within your Wii U you will want to reconnect to Pretendo. 
+
+_**Note:** How you reconnect to Pretendo depends on how you installed it on your Wii U!_
+
+Once you are reconnected, you will want to press the top left profile icon and press `Switch Account`, then press `Add New User`. Go through the user set up normally, but when it asks if you have an account, press `Yes` and put in your username and password. If it asks you to confirm your email afterwards, simply skip it. You will now be able to use Pretendo servers.
 
 ### PNID Setup - Wii U
-Right before registering a PNID, please make sure to save your password on some sort of note, as you will not be able to reset your password. You will want to go on you Wii U while Pretendo is still active and press the top left profile icon. After pressing the icon, press `Switch Account`, and then `Add New User`. Set up this account as normal, but once it asks if you have an account, press `No` and go through the account process normally. When it asks you again to you want to link after adding a mii, press `Link`. Choose your language and then accept the Pretendo Network Service Agreement.
+Right before registering a PNID, please make sure to save your password on some sort of note. This isn't necessary, but it prevents having to reset your password if you forget it. You will want to go on you Wii U while Pretendo is still active and press the top left profile icon. After pressing the icon, press `Switch Account`, and then `Add New User`. Set up this account as normal, but once it asks if you have an account, press `No` and go through the account process normally. When it asks you again to link after adding a Mii, press `Link`. Choose your language and then accept the Pretendo Network Service Agreement.
 
 <img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
-Finally, set up your pnid, email and password. Once all of this is done you will be able to use Pretendo Server
+Finally, set up your PNID, email and password. Once all of this is done, you will be able to use Pretendo servers.
