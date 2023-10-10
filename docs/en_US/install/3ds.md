@@ -7,9 +7,16 @@
 The following steps are required for you to connect to the Pretendo Network:
 1. [Downloading Nimbus](#downloading-nimbus)
 2. [Enabling Luma patches](#luma-patches)
-3. [Using Nimbus](#using-nimbus)
+3. [Nimbus](#using-nimbus)
 
 ## Downloading Nimbus
+
+<div class="tip">
+	ℹ️ Nimbus is also available on <a href="https://db.universal-team.net/3ds/nimbus" target="_blank">Universal-Updater</a>. If you do not have Universal-Updater, you may follow this <a href="https://universal-team.net/projects/universal-updater.html" target="_blank">guide</a>. You may download the required files from there, rather than GitHub, or install/update the app directly from your console.
+	<br>
+	<br>
+	ℹ️ If installed directly from your console for the first time, you will still be required to install the associated IPS patches from GitHub. Once installed, updates may be managed purely from Universal-Updater
+</div>
 
 Before you start, power off your console and insert its SD card into your computer.
 
