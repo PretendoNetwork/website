@@ -28,12 +28,22 @@ Nimbus is available as both a 3DSX app and an installable CIA. The releases page
 
 Extract the contents of the zip archive to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
 
-You should now have the `0004013000002F02`, `0004013000003202`, and `0004013000003802` Luma patches along with the `nimbus.3dsx` and `nimbus.cia` homebrew.
+Ensure your SD card has all the following files
 
-<img src="/assets/images/docs/install/3ds/sd-card-luma.png" width=100% height=auto/>
-<img src="/assets/images/docs/install/3ds/sd-card-3ds.png" width=100% height=auto/>
+- `SD:/luma/titles/000400300000BC02/code.ips` (Miiverse, JPN)
+- `SD:/luma/titles/000400300000BD02/code.ips` (Miiverse, USA)
+- `SD:/luma/titles/000400300000BE02/code.ips` (Miiverse, EUR)
+- `SD:/luma/sysmodules/0004013000002F02.ips` (SSL)
+- `SD:/luma/sysmodules/0004013000003202.ips` (Friends List)
+- `SD:/luma/sysmodules/0004013000003802.ips` (ACT)
+- `SD:/3ds/juxt-prod.pem` (Juxtaposition certificate)
 
-Place your SD card back into your console.
+If not installed through Universal-Updater, ensure at least one of the following also exists
+
+- `SD:/cias/nimbus.cia`
+- `SD:/3ds/nimbus.3dsx`
+
+Insert your SD card back into your console.
 
 ## Luma patches
 
@@ -45,8 +55,8 @@ In order to make use of the Pretendo Network service, you will need to enable Lu
 
 On the screen that is displayed, make sure that these following options are enabled:
 
-* `Enable loading external FIRMS and modules`
-* `Enable game patching`
+- `Enable loading external FIRMS and modules`
+- `Enable game patching`
 
 Press `START` to save and continue with these changes.
 
@@ -70,11 +80,9 @@ Your selection persists between reboots.
 
 ## Signing into your PNID
 
-To fully enjoy Pretendo Network, you'll need to sign into your PNID. It's not required for most things, but it's worth doing in case you need it in the future. If you haven't already, please [create a Pretendo account](/account) on your computer or phone before following the rest of the guide.
+The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](https://github.com/PretendoNetwork/Nimbus/releases/latest)</a></sup>.
 
-On your 3DS, open up System Settings and tap on Nintendo Network ID Settings. It'll take a while to load, but once you do, follow along until the part where you get asked whether you want to link your account. Select `Yes` and use the credentials you used to create your Pretendo account. Once you've done that, continue normally and you should be all set up.
-
-Congratulations! You can now use Pretendo Network and enjoy 3DS games online even after April 2024.
+Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
 
 ## Other information
 
@@ -83,3 +91,7 @@ Nimbus will create a 2nd local account set to the `test` NASC environment. The I
 
 ### 2nd local account?
 You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS only _normally_ supports one account, and you may only have one account active at a time. However Nintendo implemented support for multiple local accounts on the 3DS/2DS which remains unused on all retail units. On a normal retail unit only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create sandboxed local accounts with different environments
+
+<ul id="footnotes">
+	<li id="footnote-1"><sup>[1]</sup> Some games may require a PNID for certain actions, such as eShop purchases. The only known game which requires a PNID for general use is Nintendo Badge Arcade, which is not yet supported</li>
+</ul>
