@@ -53,7 +53,7 @@ Press `START` to save and continue with these changes.
 ## Installing Nimbus to HOME Menu
 
 <div class="tip">
-ℹ️ <b>Skip this step if you downloaded the 3dsx only zip file.</b>
+ℹ️ <b>Skip this step if you downloaded the 3DSX only zip file.</b>
 </div>
 
 If you downloaded the combined or cia archives, you can install Nimbus to the HOME Menu for quick and easy access.
