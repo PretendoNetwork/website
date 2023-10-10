@@ -80,7 +80,7 @@ Your selection persists between reboots.
 
 ## Signing into your PNID
 
-The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](https://github.com/PretendoNetwork/Nimbus/releases/latest)</a></sup>.
+The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
 
 Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
 
