@@ -84,6 +84,8 @@ The 3DS does not rely on NNIDs for the vast majority of it's game servers. Becau
 
 Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
 
+It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
+
 ## Other information
 
 ### How does Nimbus work?
