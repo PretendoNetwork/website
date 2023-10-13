@@ -1,7 +1,7 @@
 # 3DS/2DS Family
 
 <div class="tip">
-	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
+	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (13+)</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
 </div>
 
 The following steps are required for you to connect to the Pretendo Network:
