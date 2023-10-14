@@ -4,11 +4,12 @@
 	"description": "",
 	"main": "src/server.js",
 	"scripts": {
-		"start": "npm run build && node src/server.js",
-		"build": "npm run build-miieditor && npm run build-forgot-password && npm run build-reset-password",
-		"build-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
-		"build-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
-		"build-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
+		"start": "node src/server.js",
+		"build": "npm run browserify",
+		"browserify": "npm run browserify-miieditor && npm run browserify-forgot-password && npm run browserify-reset-password",
+		"browserify-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
+		"browserify-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
+		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
 	"repository": {
 		"type": "git",
@@ -22,7 +23,6 @@
 	"homepage": "https://github.com/PretendoNetwork/website#readme",
 	"dependencies": {
 		"@discordjs/rest": "^0.5.0",
-		"adm-zip": "^0.5.9",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",
@@ -41,8 +41,7 @@
 		"mongoose": "^6.4.0",
 		"morgan": "^1.10.0",
 		"nodemailer": "^6.7.5",
-		"stripe": "^9.9.0",
-		"uuid": "^8.3.2"
+		"stripe": "^9.9.0"
 	},
 	"devDependencies": {
 		"eslint": "^7.32.0"

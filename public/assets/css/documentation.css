@@ -166,6 +166,9 @@ button#openSidebar {
 	background: var(--accent-shade-2);
 	opacity: 1;
 }
+.docs-wrapper .content-inner div.tip.yellow::after {
+	background: var(--yellow-shade-1);
+}
 .docs-wrapper .content-inner div.tip.red::after {
 	background: var(--red-shade-1);
 }

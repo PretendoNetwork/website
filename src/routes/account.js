@@ -1,8 +1,6 @@
 const express = require('express');
 const crypto = require('crypto');
 const DiscordOauth2 = require('discord-oauth2');
-const { v4: uuidv4 } = require('uuid');
-const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
@@ -45,8 +43,9 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 	const { pnid } = request;
 
-	renderData.tierName = pnid.get('connections.stripe.tier_name');
-	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
+	renderData.environment = pnid.server_access_level;
+	renderData.tierName = pnid.connections.stripe.tier_name;
+	renderData.tierLevel = pnid.connections.stripe.tier_level;
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
 
@@ -240,47 +239,6 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
-});
-
-router.post('/online-files', requireLoginMiddleware, async (request, response) => {
-	const { account } = request;
-	const { password } = request.body;
-
-	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
-
-	const miiNameBuffer = Buffer.alloc(0x16);
-	const miiName = Buffer.from(account.mii.name, 'utf16le').swap16();
-	miiName.copy(miiNameBuffer);
-
-	let accountDat = 'AccountInstance_00000000\n';
-	accountDat += 'PersistentId=80000001\n';
-	accountDat += 'TransferableIdBase=0\n';
-	accountDat += `Uuid=${uuidv4().replace(/-/g, '')}\n`;
-	accountDat += `MiiData=${Buffer.from(account.mii.data, 'base64').toString('hex')}\n`;
-	accountDat += `MiiName=${miiNameBuffer.toString('hex')}\n`;
-	accountDat += `AccountId=${account.username}\n`;
-	accountDat += 'BirthYear=0\n';
-	accountDat += 'BirthMonth=0\n';
-	accountDat += 'BirthDay=0\n';
-	accountDat += 'Gender=0\n';
-	accountDat += `EmailAddress=${account.email.address}\n`;
-	accountDat += 'Country=0\n';
-	accountDat += 'SimpleAddressId=0\n';
-	accountDat += `PrincipalId=${account.pid.toString(16)}\n`;
-	accountDat += 'IsPasswordCacheEnabled=1\n';
-	accountDat += `AccountPasswordCache=${hashedPassword}`;
-
-	const onlineFiles = new AdmZip();
-
-	onlineFiles.addFile('mlc01/usr/save/system/act/80000001/account.dat', Buffer.from(accountDat)); // Minimal account.dat
-	onlineFiles.addFile('otp.bin', Buffer.alloc(0x400)); // nulled OTP
-	onlineFiles.addFile('seeprom.bin', Buffer.alloc(0x200)); // nulled SEEPROM
-
-	response.status(200);
-	response.set('Content-Disposition', 'attachment; filename="Cemu Pretendo Online Files.zip');
-	response.set('Content-Type', 'application/zip');
-
-	response.end(onlineFiles.toBuffer());
 });
 
 router.get('/miieditor', requireLoginMiddleware, async (request, response) => {
