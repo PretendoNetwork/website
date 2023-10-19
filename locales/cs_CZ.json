@@ -267,7 +267,7 @@
 			"forgotPassword": "Zapomněli jste heslo?",
 			"username": "Uživatelské jméno",
 			"loginPrompt": "Již máte účet?",
-			"registerPrompt": "Nemáte ještě účet?",
+			"registerPrompt": "Nemáte účet?",
 			"miiName": "Jméno Miička"
 		},
 		"resetPassword": {
