@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Vooruitgang",
-		"paragraphs": [
-			null,
-			"We werken ook aan Mario Kart 7 voor de 3DS, met een wens om aan andere games te werken wanneer we die kans krijgen."
-		],
 		"githubRepo": "GitHub repository"
 	},
 	"faq": {

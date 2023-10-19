@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "進行状況",
-		"paragraphs": [
-			null,
-			"3DSに関しては、マリオカート7に主に取り組んでいて、可能な場合は他のゲームにも取り組んでいます。"
-		],
 		"githubRepo": "GitHubレポジトリ"
 	},
 	"faq": {

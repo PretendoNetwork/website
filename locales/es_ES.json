@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progreso",
-		"paragraphs": [
-			null,
-			"En 3DS también trabajamos en el soporte de Mario Kart 7, con el deseo de continuar trabajando en otros juegos en cuanto sea posible."
-		],
 		"githubRepo": "Repositorio de Github"
 	},
 	"faq": {
