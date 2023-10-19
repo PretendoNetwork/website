@@ -17,7 +17,7 @@
 				"progress": "Podívejte se na progres a cíle projektu",
 				"faq": "Často kladené dotazy",
 				"about": "O projektu",
-				"blog": "Naše nejnovější aktualizace, v kostce",
+				"blog": "Souhrn nejnovějších aktualizací",
 				"credits": "Seznamte se s týmem"
 			}
 		}
@@ -266,7 +266,9 @@
 			"confirmPassword": "Potvrzení hesla",
 			"forgotPassword": "Zapomněli jste heslo?",
 			"username": "Uživatelské jméno",
-			"loginPrompt": "Již máte účet?"
+			"loginPrompt": "Již máte účet?",
+			"registerPrompt": "Nemáte ještě účet?",
+			"miiName": "Jméno Miička"
 		},
 		"resetPassword": {
 			"confirmPassword": "Potvrzení hesla",
