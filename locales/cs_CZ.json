@@ -17,7 +17,8 @@
 				"progress": "Podívejte se na progres a cíle projektu",
 				"faq": "Často kladené dotazy",
 				"about": "O projektu",
-				"blog": "Souhrn nejnovějších aktualizací"
+				"blog": "Naše nejnovější aktualizace, v kostce",
+				"credits": "Seznamte se s týmem"
 			}
 		}
 	},
@@ -26,12 +27,13 @@
 		"buttons": {
 			"readMore": "Číst dál"
 		},
-		"text": "Pretendo je svobodná a open-source náhrada za Nintendo servery pro jak 3DS, tak Wii U, umožňující online konektivitu všem, i po deaktivaci původních serverů"
+		"text": "Pretendo je svobodná a open-source náhrada za Nintendo servery pro jak 3DS, tak Wii U, umožňující online konektivitu všem, i po deaktivaci původních serverů",
+		"title": "Znovuzrozeny"
 	},
 	"aboutUs": {
 		"title": "O nás",
 		"paragraphs": [
-			null,
+			"Pretendo je open-sourcový projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí pouze legálního reverse engineeringu.",
 			"Protože by naše služby byly jak svobodné, tak open source, můžou existovat dlouho po nevyhnutelném uzavření Nintendo Network."
 		]
 	},
@@ -58,7 +60,8 @@
 			{
 				"github": "https://github.com/ashquarky",
 				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky"
+				"name": "quarky",
+				"caption": "BOSS výzkum a vývoj záplat"
 			},
 			{
 				"caption": "Výzkum konzolí a jiných systémů",
@@ -109,7 +112,35 @@
 				"caption": "Ochranář"
 			},
 			{
-				"name": "Shutterbug2000"
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Výzkum Mario Kart 7 a 3DS"
+			},
+			{
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Sdílení informací o Miiverse",
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Výzkum data struktur Nintenda",
+				"github": "https://github.com/Kinnay",
+				"special": "Zvláštní poděkování",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"caption": "Ikony pro Mii Editor a Juxt reakce",
+				"picture": "https://github.com/ninstar.png",
+				"name": "NinStar",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"caption": "Lokalizace a jiné příspěvky",
+				"name": "GitHub příspěvky",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		],
 		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
@@ -160,7 +191,7 @@
 				"title": "Herní servery"
 			},
 			{
-				"caption": "Nové pojetí Miiverse, jako by by bylo vytvořeno v moderní éře.",
+				"caption": "Nové pojetí Miiverse, jako by bylo vytvořeno v moderní éře.",
 				"title": "Juxtaposition"
 			},
 			{
@@ -191,11 +222,28 @@
 				"newsletterPrompt": "Posílat aktualizace projektu emailem (Kdykoliv můžete posílání zrušit)",
 				"nickname": "Přezdívka",
 				"signInHistory": "Historie přihlášení",
-				"beta": "Beta"
+				"beta": "Beta",
+				"serverEnv": "Prostředí serveru",
+				"noDiscordLinked": "Není připojen žádný Discord účet.",
+				"fullSignInHistory": "Zobrazit celou historii přihlašování",
+				"production": "Produkční",
+				"linkDiscord": "Připojit Discord účet",
+				"country": "Země/region",
+				"no_newsletter_notice": "Newsletter v současnosti není dostupný. Podívejte se sem později",
+				"passwordPrompt": "Vložte Vaše PNID heslo ke stažení Cemu souborů",
+				"no_signins_notice": "Historie přihlášení není aktuálně sledována. Podívejte se sem později!",
+				"upgradePrompt": "Beta servery jsou dostupné pouze beta testerům. <br> Abyste se stal(a) beta testerem, upgradujte Váš účet na vyšší tier.",
+				"connectedToDiscord": "Připojeno k Discordu jako",
+				"newsletter": "Newsletter",
+				"hasAccessPrompt": "Váš aktuální tier Vám dává přístup k beta serverům. Super!",
+				"passwordResetNotice": "Po změně hesla budete odhlášeni ze všech zařízení.",
+				"otherSettings": "Ostatní nastavení",
+				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupné. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
 			"unavailable": "Nedostupné",
 			"downloadFiles": "Stáhnout soubory účtu",
-			"downloadFilesDescription": "(Nebude fungovat na Nintendo Networku)"
+			"downloadFilesDescription": "(Nebude fungovat na Nintendo Networku)",
+			"upgrade": "Upgradovat účet"
 		},
 		"accountLevel": [
 			"Standardní",
@@ -206,7 +254,8 @@
 		"forgotPassword": {
 			"submit": "Odeslat",
 			"header": "Zapomenuté heslo",
-			"input": "Email nebo PNID"
+			"input": "Email nebo PNID",
+			"sub": "Zadejte níže Váš email/PNID"
 		},
 		"loginForm": {
 			"password": "Heslo",
@@ -214,13 +263,17 @@
 			"detailsPrompt": "Zadejte údaje vašeho účtu níže.",
 			"login": "Přihlásit se",
 			"register": "Registrace",
-			"confirmPassword": "Potvrzení hesla"
+			"confirmPassword": "Potvrzení hesla",
+			"forgotPassword": "Zapomněli jste heslo?",
+			"username": "Uživatelské jméno",
+			"loginPrompt": "Již máte účet?"
 		},
 		"resetPassword": {
 			"confirmPassword": "Potvrzení hesla",
 			"header": "Obnovení hesla",
 			"password": "Heslo",
-			"submit": "Odeslat"
+			"submit": "Odeslat",
+			"sub": "Zadejte nové heslo níže"
 		},
 		"account": "Účet",
 		"banned": "Zabanován"
@@ -232,7 +285,11 @@
 		"month": "měsíc",
 		"changeTierConfirm": "Změnit tier",
 		"unsubConfirm": "Zrušit předplatné",
-		"tierSelectPrompt": "Vyberte si tier"
+		"tierSelectPrompt": "Vyberte si tier",
+		"changeTierPrompt": "Jste si jisti, že chcete zrušit předplatné <span class=\"oldtier\">oldtiername</span> a předplácet <span class=\"newtier\">newtiername</span>?",
+		"unsubPrompt": "Jste si jisti, že chcete zrušit předplatné <span>tiername</span>? Přijdete o všechny výhody spojené s tímto tierem.",
+		"title": "Upgradovat",
+		"description": "Dosažení měsíčního cíle udělá z Pretenda plnohodnotné zaměstnání a umožní nám poskytovat kvalitnější aktualizace v rychlejším tempu."
 	},
 	"docs": {
 		"quickLinks": {
@@ -252,17 +309,25 @@
 			"getting_started": "Začínáme",
 			"install_extended": "Nainstalovat Pretendo",
 			"install": "Nainstalovat",
-			"welcome": "Vítejte"
+			"welcome": "Vítejte",
+			"search": "Hledat",
+			"juxt_err": "Chybové kódy - Juxt"
 		},
 		"search": {
-			"no_match": "Nenalezeny žádné shody"
-		}
+			"no_match": "Nenalezeny žádné shody",
+			"title": "Máte chybový kód?",
+			"caption": "Napište ho do políčka níže pro zobrazení informací k Vašemu problému!",
+			"label": "Chybový kód"
+		},
+		"missingInLocale": "Tato stránka je nedostupná ve Vaší lokalizaci. Podívejte se prosím na Anglickou verzi níže."
 	},
 	"localizationPage": {
 		"filePlaceholder": "https://a.link.to/the_file.json",
 		"fileInput": "Soubor k otestování",
 		"title": "Pojďme lokalizovat",
-		"button": "Otestovat soubor"
+		"button": "Otestovat soubor",
+		"instructions": "Zobrazit instrukce k lokalizaci",
+		"description": "Vložte link k veřejně dostupné JSON lokalizaci pro otestování na stránce"
 	},
 	"modals": {
 		"cancel": "Zrušit",
@@ -270,23 +335,47 @@
 		"close": "Zavřít"
 	},
 	"progressPage": {
-		"title": "Progres projektu"
+		"title": "Progres projektu",
+		"description": "Podívejte se na pokrok a cíle projektu! (Aktualizováno přibližně každou hodinu, nezobrazuje VŠECHNY cíle a pokroky projektu)"
 	},
 	"blogPage": {
 		"publishedOn": "dne",
-		"title": "Blog"
+		"title": "Blog",
+		"description": "Nejnovější aktualizace v krátkých souhrnech. Jestli chcete vidět častější aktualizace, můžete nás <a href=\"/account/upgrade\" target=\"_blank\">podpořit</a>.",
+		"published": "Publikoval(a)"
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
-			null,
+			"Jsem mýval Bandwidth a rád hryžu kabely zapojené do serverů Pretenda. Mňamka!",
+			"Hodně lidí se nás ptá, jestli se kvůli tomuhle dostaneme do legálních potíží; s radostí můžu říct, že moje teta pracuje u Nintenda a řekla, že to bude v pořádku.",
+			"Webkit v537 je nejlepší verze Webkitu pro Wii U. Ne, nebudeme na Wii U portovat Chrome.",
+			"Už se nemůžu dočkat, až na hodinách bude 19. ledna 2038 03:14:08 UTC!",
+			"Wii U je tak nedoceněné zařízení: reklamy byly, jako, fakt špatný, ale ta konzole je skvělá. Huh, počkej chvilku, nevím proč se mi Gamepad nepřipojuje k Wiičku.",
+			"Úvodní hudba Super Mario World 2 - Yoshi's Island je slast pro moje uši a nikdo mě nepřesvědčí o opaku.",
+			"Moje oblíbená vydání Switche byly Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Ten Virtual Console titul pro Wii U se ti fakt líbil, tak ho přinášíme zpátky\" Pack. Je fakt zřejmý, že nás má Nintendo rádo.",
+			"Když moravák řekne \"Znáš přéce Ash, taký zlatíčko, je tak moc UwU\", snaží se neurážlivě říct \"Ash pořád UwUuje a je to fakt divný a hloupý, kéž by to nedělala\"",
 			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\""
-		]
+		],
+		"usefulLinks": "Užitečné odkazy",
+		"widget": {
+			"captions": [
+				"Chcete být v obraze?",
+				"Připojte se do našeho Discord serveru!"
+			],
+			"button": "Připojit se nyní!"
+		},
+		"socials": "Sociální sítě"
+	},
+	"discordJoin": {
+		"title": "Zůstaňte v obraze",
+		"text": "Připojte se na náš Discord server a získejte nejnovější informace o projektu.",
+		"widget": {
+			"text": "Dostávejte aktualizace o našem progresu",
+			"button": "Připojit se"
+		}
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> z měsíčního cíle <span>$${goald} </span> vybráno (<span>${perc}%</span> měsíčního cíle)",
+		"upgradePush": "Abyste se stal(a) předplatitelem a získal(a) přístup k zajímavým výhodám navštivte <a href=\"/account/upgrade\">upgrade stránku</a>."
 	}
 }
