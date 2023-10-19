@@ -5,18 +5,172 @@
 			"settings": "Nastavení",
 			"logout": "Odhlásit se"
 		},
-		"faq": "Často kladené dotazy",
-		"about": "O stránkách",
-		"docs": "Dokumenty",
-		"credits": "Kredity",
+		"faq": "FAQ",
+		"about": "O nás",
+		"docs": "Dokumentace",
+		"credits": "Poděkování",
 		"progress": "Progres",
 		"blog": "Blog",
-		"donate": "Přispět"
+		"donate": "Přispět",
+		"dropdown": {
+			"captions": {
+				"progress": "Podívejte se na progres a cíle projektu",
+				"faq": "Často kladené dotazy",
+				"about": "O projektu"
+			}
+		}
 	},
 	"hero": {
-		"subtitle": "Herní servery"
+		"subtitle": "Herní servery",
+		"buttons": {
+			"readMore": "Číst dál"
+		},
+		"text": "Pretendo je svobodná a open-source náhrada za Nintendo servery pro jak 3DS, tak Wii U, umožňující online konektivitu všem, i po deaktivaci původních serverů"
 	},
 	"aboutUs": {
-		"title": "O nás"
+		"title": "O nás",
+		"paragraphs": [
+			null,
+			"Protože by naše služby byly jak svobodné, tak open source, můžou existovat dlouho po nevyhnutelném uzavření Nintendo Network."
+		]
+	},
+	"credits": {
+		"people": [
+			{
+				"github": "https://github.com/jonbarrow",
+				"picture": "https://github.com/jonbarrow.png",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Project owner a hlavní vývojář"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"caption": "Výzkum a vývoj Miiverse",
+				"name": "Jemma (CaramelKat)",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"name": "Rambo6Glaz",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Výzkum konzolí a síťového instalátoru"
+			},
+			{
+				"github": "https://github.com/ashquarky",
+				"picture": "https://github.com/ashquarky.png"
+			},
+			{
+				"caption": "Výzkum konzolí a jiných systémů",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Vedoucí webového vývoje",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "pinklimes",
+				"github": "https://github.com/gitlimes",
+				"caption": "Webový vývoj",
+				"picture": "https://github.com/gitlimes.png"
+			},
+			{
+				"caption": "Designér",
+				"picture": "https://github.com/mrjvs.png",
+				"name": "mrjvs",
+				"github": "https://github.com/mrjvs"
+			}
+		],
+		"title": "Náš tým",
+		"text": "Seznamte se s týmem, co za projektem stojí"
+	},
+	"specialThanks": {
+		"people": [
+			{
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "vývoj knihovny crunch",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"github": "https://github.com/Stary2001",
+				"caption": "3DS vývojář a dissektor NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"name": "Stary"
+			},
+			{
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss",
+				"caption": "Ochranář"
+			},
+			{
+				"name": "Shutterbug2000"
+			}
+		],
+		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
+		"title": "Zvláštní poděkování"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Co je Pretendo?",
+				"answer": "Pretendo je open-sourcová náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto konzolí a umožnit tak hráčům dál hrát své oblíbené Wii U a 3DS tituly naplno."
+			},
+			{
+				"answer": "Bohužel ne. Již existující NNID na Pretendu nebudou fungovat, protože Vaše uživatelská data vlastní pouze Nintendo. Přestože by migrace účtů byla teoreticky možná, byla by riskantní a vyžadovala citlivé osobní údaje, které si nepřejeme držet.",
+				"question": "Bude na Pretendu fungovat moje současné NNID?"
+			},
+			{
+				"question": "Jak začít s Pretendem?",
+				"answer": "Pretendo v současné době není ve stavu, který by byl připraven pro veřejné použití. Nicméně, až nastane čas, Pretendo budete moct použít spuštěním našeho homebrew nástroje na Vašem zařízení."
+			},
+			{
+				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
+				"question": "Kdy bude [nějaká služba/funkce] hotová?"
+			},
+			{
+				"question": "Funguje Pretendo na Cemu/emulátorech?",
+				"answer": "Pretendo podporuje jakýkoli klient který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se toto v budoucnu změnilo. Mikage, emulátor 3DS pro mobilní zařízení, může podporu poskytnout v budoucnu, ale toto není jisté."
+			},
+			{
+				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
+				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+			},
+			{
+				"question": "Bude Pretendo podporovat Wii/Switch?",
+				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme cílit na Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
+			},
+			{
+				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
+				"answer": "Ano, Vaše zařízení musí být modifikováno; na Wii U budete potřebovat pouze přístup k Homebrew Launcher (t.j. Haxchi, Coldboot Haxchi nebo exploit s webovým prohlížečem), informace pro připojení z 3DS jsou v přípravě."
+			}
+		],
+		"text": "Zde jsou otázky, které jsou nám často kladeny, pro snadné informování.",
+		"title": "Často kladené dotazy"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "Přinášíme zpět Vaše oblíbené hry a obsah pomocí vlastních serverů.",
+				"title": "Herní servery"
+			},
+			{
+				"caption": "Nové pojetí Miiverse, jako by by bylo vytvořeno v moderní éře.",
+				"title": "Juxtaposition"
+			},
+			{
+				"caption": "Hrajte své oblíbené Wii U tituly i bez konzole!",
+				"title": "Podpora Cemu"
+			}
+		],
+		"text": "Náš projekt má mnohé komponenty. Zde jsou některé z nich.",
+		"title": "Co vytváříme"
+	},
+	"progress": {
+		"githubRepo": "Github repozitář",
+		"title": "Progres"
 	}
 }
