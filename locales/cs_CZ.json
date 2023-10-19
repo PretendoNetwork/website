@@ -16,7 +16,8 @@
 			"captions": {
 				"progress": "Podívejte se na progres a cíle projektu",
 				"faq": "Často kladené dotazy",
-				"about": "O projektu"
+				"about": "O projektu",
+				"blog": "Souhrn nejnovějších aktualizací"
 			}
 		}
 	},
@@ -56,7 +57,8 @@
 			},
 			{
 				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png"
+				"picture": "https://github.com/ashquarky.png",
+				"name": "quarky"
 			},
 			{
 				"caption": "Výzkum konzolí a jiných systémů",
@@ -172,5 +174,119 @@
 	"progress": {
 		"githubRepo": "Github repozitář",
 		"title": "Progres"
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"email": "Email",
+				"signInSecurity": "Přihlášení a zabezpečení",
+				"userSettings": "Uživatelské nastavení",
+				"birthDate": "Datum narození",
+				"removeDiscord": "Odpojit Discord účet",
+				"profile": "Profil",
+				"timezone": "Časová zóna",
+				"password": "Heslo",
+				"gender": "Pohlaví",
+				"discord": "Discord",
+				"newsletterPrompt": "Posílat aktualizace projektu emailem (Kdykoliv můžete posílání zrušit)",
+				"nickname": "Přezdívka",
+				"signInHistory": "Historie přihlášení",
+				"beta": "Beta"
+			},
+			"unavailable": "Nedostupné",
+			"downloadFiles": "Stáhnout soubory účtu",
+			"downloadFilesDescription": "(Nebude fungovat na Nintendo Networku)"
+		},
+		"accountLevel": [
+			"Standardní",
+			"Tester",
+			"Moderátor",
+			"Vývojář"
+		],
+		"forgotPassword": {
+			"submit": "Odeslat",
+			"header": "Zapomenuté heslo",
+			"input": "Email nebo PNID"
+		},
+		"loginForm": {
+			"password": "Heslo",
+			"email": "Email",
+			"detailsPrompt": "Zadejte údaje vašeho účtu níže.",
+			"login": "Přihlásit se",
+			"register": "Registrace",
+			"confirmPassword": "Potvrzení hesla"
+		},
+		"resetPassword": {
+			"confirmPassword": "Potvrzení hesla",
+			"header": "Obnovení hesla",
+			"password": "Heslo",
+			"submit": "Odeslat"
+		},
+		"account": "Účet",
+		"banned": "Zabanován"
+	},
+	"upgrade": {
+		"back": "Zpět",
+		"unsub": "Zrušit předplatné",
+		"changeTier": "Změnit tier",
+		"month": "měsíc",
+		"changeTierConfirm": "Změnit tier",
+		"unsubConfirm": "Zrušit předplatné",
+		"tierSelectPrompt": "Vyberte si tier"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Rychlé odkazy",
+			"links": [
+				{
+					"caption": "Zobrazit instalační instrukce",
+					"header": "Nainstalovat Pretendo"
+				},
+				{
+					"caption": "Hledejte řešení zde",
+					"header": "Máte problém?"
+				}
+			]
+		},
+		"sidebar": {
+			"getting_started": "Začínáme",
+			"install_extended": "Nainstalovat Pretendo",
+			"install": "Nainstalovat",
+			"welcome": "Vítejte"
+		},
+		"search": {
+			"no_match": "Nenalezeny žádné shody"
+		}
+	},
+	"localizationPage": {
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"fileInput": "Soubor k otestování",
+		"title": "Pojďme lokalizovat",
+		"button": "Otestovat soubor"
+	},
+	"modals": {
+		"cancel": "Zrušit",
+		"confirm": "Potvrdit",
+		"close": "Zavřít"
+	},
+	"progressPage": {
+		"title": "Progres projektu"
+	},
+	"blogPage": {
+		"publishedOn": "dne",
+		"title": "Blog"
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			null,
+			null,
+			null,
+			null,
+			null,
+			null,
+			null,
+			null,
+			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\""
+		]
 	}
 }
