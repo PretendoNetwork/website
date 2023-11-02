@@ -90,3 +90,27 @@ Right before registering a PNID, please make sure to save your password on some 
 <img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
 Finally, set up your PNID, email and password. Once all of this is done, you will be able to use Pretendo servers.
+
+# Switch between connecting to Pretendo Network servers to Nintendo Network servers
+
+Occasionally, you may want to switch between your Pretendo Network profile on your Wii U, and your Nintendo Network profile on your Wii U. Luckily, it is super simple to switch between the two.
+
+Whilst connected to Pretendo, in the HOME Menu, switch to your Nintendo Network profile. If prompted for a password, do not provide it (if you don't have auto sign-in enabled, you may not have the option to not provide it). You are now inside your Nintendo Network profile.
+
+On your Wii U GamePad, press the buttons `L + Down + Select`. This opens up the Aroma plugin menu, which should look something like this.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+
+You may have different options that appear up here, but we only want to look for the 'Inkay' plugin. This is the plugin that patches requests to Nintendo Network to go to Pretendo Network instead. Once you've located the entry for Inkay, press A.
+
+You should now be greeted to a menu with two buttons. Click the one that says `Patching`.
+
+To use Nintendo's services, set `Connect to the Pretendo Network` to **false**. It should look something like this.
+
+<img src="/assets/images/docs/install/wiiu/pnid/inkay-patching.jpg" width="100%">
+
+Once you've done that, press the B button 2 times and then press the HOME Menu button. Your console will reboot with Pretendo Network patches disabled. You can check this by seeing whether a message saying `Using Nintendo Network` is displayed on boot.
+
+<img src="/assets/images/docs/install/wiiu/pnid/nintendo-connection.jpg" width="100%">
+
+After that, you should be able to access whatever you want on Nintendo Network servers. To go back to Pretendo, you can follow these steps again, but this time sign into your Pretendo profile instead of your Nintendo profile and make sure `Connect to the Pretendo Network` is set to **true**.
