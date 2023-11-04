@@ -103,7 +103,7 @@ On your Wii U GamePad, press the buttons `L + Down + SELECT`. This action opens 
 
 <img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
 
-Your menu might display additional plugins that aren't shown in this image; however, our focus is specifically on the 'Inkay' plugin, which patches requests intended for Nintendo Network and reroutes them to Pretendo Network instead. Once you've found the entry for Inkay, press `A`.
+You may have additional plugins in your menu. Navigate to the `Inkay` plugin and press `A` to enter it's settings.
 
 You should now be greeted with a menu displaying two buttons. Click the one that says 'Patching'.
 
