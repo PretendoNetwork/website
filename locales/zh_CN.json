@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "进度",
-		"paragraphs": [
-			null,
-			"对于 3DS，我们也在创建《马里奥赛车 7》的服务器，并希望在可能的情况下继续为他游戏做服务器。"
-		],
 		"githubRepo": "Github 信息库"
 	},
 	"faq": {

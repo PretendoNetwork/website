@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger einsehen möchtest, kannst du uns gerne <a href=\"/account/upgrade\" target=\"_blank\">unterstützen</a>.",
 		"published": "Veröffentlicht von",
 		"publishedOn": "am"
 	},
