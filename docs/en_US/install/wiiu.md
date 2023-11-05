@@ -11,6 +11,8 @@ You can get a Wii U onto Pretendo in just 3 steps:
 2. [Connecting to Pretendo](#connecting-to-pretendo)
 3. [PNID Setup](#pnid-setup)
 
+Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network.
+
 # RCE Patches
 ~~Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
 games on the 3DS, thus far they have neglected the Wii U. Pretendo has a patcher which attempts to fix these problems -
@@ -90,3 +92,21 @@ Right before registering a PNID, please make sure to save your password on some 
 <img src="/assets/images/docs/install/wiiu/pnid/pretendo-eula.jpg" width="100%">
 
 Finally, set up your PNID, email and password. Once all of this is done, you will be able to use Pretendo servers.
+
+# Switching between Pretendo Network and Nintendo Network
+
+To switch between your Pretendo Network and Nintendo Network profiles on your Wii U:
+
+Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+
+Locate and select 'Inkay', then choose 'Patching'. Now, set 'Connect to the Pretendo Network' to **false**.
+
+<img src="/assets/images/docs/install/wiiu/pnid/inkay-patching.jpg" width="100%">
+
+Press `B` twice, followed by the `HOME` button. The console will reboot with Pretendo Network patches disabled, as confirmed by the 'Using Nintendo Network' message.
+
+Now, switch to your desired Network ID via the Account selection screen.
+
+To return to Pretendo Network, repeat the process ensuring 'Connect to the Pretendo Network' is set to **true**.
