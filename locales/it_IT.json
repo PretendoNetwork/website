@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progresso",
-		"paragraphs": [
-			null,
-			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
-		],
 		"githubRepo": "Repository GitHub"
 	},
 	"faq": {
