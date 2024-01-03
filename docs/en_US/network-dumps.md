@@ -13,6 +13,7 @@ In order to make this easier, we have developed a suite of internal tools to cap
 	- [Fiddler](#fiddler-windows-free)
 	- [Charles](#charles-cross-platform-50)
 	- [Mitmproxy](#mitmproxy-cross-platform-free)
+4. [High Priority Games](#high-priority-games)
 
 <div class="tip red">
 	<h2>Security Warning</h2>
@@ -69,3 +70,42 @@ TODO - Charles docs
 
 ### Mitmproxy (Cross platform, free)
 TODO - Mitmproxy docs
+
+# High Priority Games
+While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
+
+## 3DS
+- `Animal Crossing - Happy Home Designer`
+- `Daigassou! Band Brothers P (Japan)`
+- `Kid Icarus: Uprising`
+- `Miitopia`
+- `Monster Hunter Generations`
+- `Nintendo Badge Arcade`
+- `Pokemon Omega Ruby / Alpha Sapphire`
+- `Pokemon Rumble World`
+- `Pokemon Sun / Moon`
+- `Pokemon Ultra Sun / Ultra Moon`
+- `Pokemon X / Y`
+- `Real Dasshutsu Game x Nintendo 3DS - Chou Hakai Keikaku kara no Dasshutsu (Japan)`
+- `Super Mario Maker for Nintendo 3DS`
+- `Super Smash Bros for Nintendo 3DS`
+- `Yakuman Houou Mahjong (Japan)`
+
+## Wii U
+- `MARIO KART 8`
+- `MONSTER HUNTER 3 ULTIMATE Packet Relay...for Nintendo 3DS`
+- `MONSTER HUNTER 3(tri-)G HD Ver.`
+- `SUPER MARIO 3D WORLD`
+- `Splatoon` (All Splatoon games likely have the same patches)
+- `Splatoon (Demo)`
+- `Splatoon Global Testfire`
+- `Splatoon Pre-Launch Review`
+- `Splatoon Testfire`
+- `Super Mario Maker`
+- `Super Smash Bros. for Wii U`
+- `Wii KARAOKE U by JOYSOUND`
+- `Wii Sports Club`
+- `Wii Sports Club Lite`
+- `Nintendo×JOYSOUND Wii カラオケ U`
+- `Xenoblade Chronicles X`
+- `役満 鳳凰`
