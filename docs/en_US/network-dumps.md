@@ -40,7 +40,7 @@ The PCAP files are written to the `HokakuCafe` folder on the SD card, named as t
 ### 3DS (HokakuCTR)
 The easiest way to dump game server packets from a 3DS is to use [HokakuCTR](https://github.com/PretendoNetwork/HokakuCTR). Like HokakuCafe this homebrew attempts to dump game traffic directly from the console. However unlike HokakuCafe, it does not dump all system traffic and may not work in all games. If HokakuCTR does not work in your game, see the last solution.
 
-To use HokakuCTR, ensure you are updated to the latest Luma release. The latest Luma release now supports 3GX plugins. Download the [latest release](https://github.com/PretendoNetwork/HokakuCTR/releases/latest). Place this file on the SD card at `luma/plugins` and rename it `default.3dx`.
+To use HokakuCTR, ensure you are updated to the latest Luma release. The latest Luma release now supports 3GX plugins. Download the [latest release](https://github.com/PretendoNetwork/HokakuCTR/releases/latest). Place this file on the SD card at `luma/plugins` and rename it `default.3dsx`.
 
 When launching a game you will see 1 of 2 notifications on screen. You will either see `Not Ready` or `Ready`. If you see `Not Ready`, your game is not compatible. If you see `Ready`, your game is compatible. If you see nothing, either your game is not compatible or the plugin is not installed. If your game is compatible, it will start dumping game traffic to a PCAP file once the game has connected to the server. You will know the game has connected to the server when you see either `Detected NEX buffer type: V0` or `Detected NEX buffer type: V1` on screen. Until one of these notifications is shown, the PCAP will have no data.
 
