@@ -4,19 +4,20 @@ One of the best ways to support the project is to help in gathering network dump
 In order to make this easier, we have developed a suite of internal tools to capture and read network traffic, as well as make use of several "off the shelf" tools. This document will go into detail about how to capture these packets yourself, and how you can submit them to us for use in research and development. This document will be fairly long, please read it completely before submitting any dumps.
 
 ## Table of Contents
-1. [Security Warning](#security-warning)
-2. [Submissions](#submissions)
-3. [Game Packets](#game-packets)
+1. [Submissions](#submissions)
+2. [Game Packets](#game-packets)
 	- [Wii U (HokakuCafe)](#wii-u-hokakucafe)
 	- [3DS (HokakuCTR)](#3ds-hokakuctr)
 	- [All (WireShark)](#all-wireshark)
-4. [HTTP Packets](#http-packets)
+3. [HTTP Packets](#http-packets)
 	- [Fiddler](#fiddler-windows-free)
 	- [Charles](#charles-cross-platform-50)
 	- [Mitmproxy](#mitmproxy-cross-platform-free)
 
-# Security Warning
-## Network dumps will oftentimes have sensitive information, including emails, passwords, usernames, IP addresses, etc. Because of this, ensure you only provide network dumps to trusted individuals. When submitting network dumps to Pretendo Network developers your dumps are uploaded and stored in a private channel. This channel can only be accessed by a small number of people, not even all developers have access.
+<div class="tip red">
+	<h2>Security Warning</h2>
+	<strong>Network dumps will oftentimes have sensitive information, including emails, passwords, usernames, IP addresses, etc. Because of this, ensure you only provide network dumps to trusted individuals. When submitting network dumps to Pretendo Network developers your dumps are uploaded and stored in a private channel. This channel can only be accessed by a small number of people, not even all developers have access.</strong>
+</div>
 
 # Submissions
 There are multiple ways to submit network dumps. You may either contact a developer directly, or upload your network dumps to any channel in the Discord server. If uploaded to Discord, the Bandwidth bot will automatically detect the dumps and reupload them to our private channel, deleting the original message for security purposes.
