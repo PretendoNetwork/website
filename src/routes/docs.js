@@ -66,7 +66,7 @@ router.get('/:subpath/:page', async (request, response, next) => {
 	} else {
 		return next();
 	}
-	
+
 	renderData.missingInLocale = locale !== MDLocale;
 
 	response.render('docs/docs', renderData);
