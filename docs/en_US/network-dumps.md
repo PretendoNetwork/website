@@ -10,9 +10,6 @@ In order to make this easier, we have developed a suite of internal tools to cap
 	- [3DS (HokakuCTR)](#3ds-hokakuctr)
 	- [All (WireShark)](#all-wireshark)
 3. [HTTP Packets](#http-packets)
-	- [Fiddler](#fiddler-windows-free)
-	- [Charles](#charles-cross-platform-50)
-	- [Mitmproxy](#mitmproxy-cross-platform-free)
 4. [High Priority Games](#high-priority-games)
 
 <div class="tip red">
@@ -58,18 +55,47 @@ Just like with HokakuCafe, traffic dumped with WireShark will be encrypted. In o
 - Wii U - To dump your NEX username and password from a Wii U connect to your Wii U with an FTP client. Navigate to `/storage_mlc/usr/save/system/act` and download all the folders inside this folder. Check the `account.dat` file in each folder and look for your NNID username in the `AccountId` field. Once found, in the same `account.dat` file locate both the `PrincipalId` and `NfsPassword` fields. Copy their values and paste them into the message of your submission.
 
 # HTTP Packets
-Some games use HTTP requests for some features. Additionally, non-game titles will often use HTTP requests for their services. The above methods will not always capture HTTP requests in a way that is usable, if at all. SpotPass data is also downloaded via HTTP requests. For this, an HTTP proxy server is required. There are several options for HTTP proxy servers, which all depend on your operating system, skill level, and, for one, your budget
+Some games use HTTP requests for some features. Additionally, non-game titles will often use HTTP requests for their services. The above methods will not always capture HTTP requests in a way that is usable, if at all. SpotPass data is also downloaded via HTTP requests. For this, an HTTP proxy server is required. There are several options for HTTP proxy servers, however the simplest way is using our [mitmproxy Docker container](https://github.com/PretendoNetwork/mitmproxy-nintendo).
 
-TODO - We have a NoSSL patch for the Wii U, but no builds are uploaded anywhere. Where should we upload this? Discord won't work anymore because of the expiring download link update. 3DS NoSSL patch by Billy https://github.com/SciresM/3DS-SSL-Patch/pull/2
+Full credit to the upkeep of the repository, and creation of the original Docker container, goes to GitHub user [MatthewL246](https://github.com/MatthewL246).
 
-### Fiddler (Windows, free)
-TODO - Fiddler docs
+Install Docker for your operating system using the official [setup guide](https://docs.docker.com/get-docker/). Then follow the steps for your console type.
 
-### Charles (Cross platform, $50)
-TODO - Charles docs
+## 3DS
+1. Download [this IPS patch](https://github.com/PretendoNetwork/mitmproxy-nintendo/raw/master/ssl-patches/0004013000002F02.ips). This IPS patch patches the SSL sysmodule to disable SSL verification, allowing the console to connect to the proxy server with TLS connections.
+2. Place the patch on your SD card at `SD:/luma/sysmodules/0004013000002F02.ips`.
+3. Place the SD card back into your 3DS.
+4. Launch into the Luma settings by holding `SELECT` while powering on.
+5. Ensure both `Enable loading external FIRMS and modules` and `Enable game patching` are enabled before booting.
+6. Launch Nimbus and connect to Nintendo Network.
+7. On your computer, create a `3ds-dumps` directory and run the following command in a command prompt: `docker run -it --rm -p 8083:8083 -v ./3ds-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:3ds mitmdump`
+8. This command starts the proxy server using Docker, exposing the servers port 8083 on your computers port also on 8083, and links the `/home/mitmproxy/dumps` directory in the container to the `3ds-dumps` directory you just created.
+9. On your 3DS, launch into Internet Settings and select your connection.
+10. Select `Change Settings > Proxy Settings`.
+11. Select `Yes` and then `Detailed Setup`.
+12. Enter your computers local IP address into `Proxy Server` and 8083 into `Port`.
+13. Select `Ok` then `Save` and run the connection test. Your 3DS should connect to the internet and you should see connections being made in the proxy server
+14. See the end of this section for final steps.
 
-### Mitmproxy (Cross platform, free)
-TODO - Mitmproxy docs
+## Wii U
+1. Download [this Aroma setup module](https://github.com/PretendoNetwork/mitmproxy-nintendo/raw/master/ssl-patches/30_nossl.rpx). This patches the SSL sysmodule to disable SSL verification, allowing the console to connect to the proxy server with TLS connections.
+2. Place the patch on your SD card at `SD:/wiiu/environments/aroma/modules/setup/30_nossl.rpx`. If there are other patches with the same ID `30`, this is fine.
+3. Place the SD card back into your Wii U and turn on the console.
+4. Launch into the Aroma settings by pressing `L + DPAD-DOWN + SELECT`.
+5. Enter `Inkay > Patching` and toggle `Connect to the Pretendo Network` to ***FALSE***.
+6. On your computer, create a `wiiu-dumps` directory and run the following command in a command prompt: `docker run -it --rm -p 8082:8082 -v ./wiiu-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:wiiu mitmdump`
+7. This command starts the proxy server using Docker, exposing the servers port 8082 on your computers port also on 8082, and links the `/home/mitmproxy/dumps` directory in the container to the `wiiu-dumps` directory you just created.
+8. On your Wii U, launch into `System Settings > Internet > Connect to the Internet > Connections` and select your connection.
+9. Select `Change Settings > Proxy Settings`.
+10. Select `Set` and `OK`.
+11. Enter your computers local IP address into `Proxy Server` and 8082 into `Port`.
+12. Select `Confirm`, `Don't Use`, then `Save` and run the connection test. Your Wii U should connect to the internet and you should see connections being made in the proxy server
+13. See the end of this section for final steps.
+
+## Final Steps
+Once you have the proxy server running and your console connected to it, use the console as normal. When you are finished capturing a session, press `CTRL` and `C` in the command prompt running the proxy server to end the session. Ending a session will create a `wiiu-dumps/wiiu-latest.har` file or `3ds-dumps/3ds-latest.har` file depending on which console was used for the session. These files will be overwritten at the start of each new session, so they must be backed up or renamed to avoid losing their data.
+
+For advanced usage of the proxy server, see https://github.com/PretendoNetwork/mitmproxy-nintendo
 
 # High Priority Games
 While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
