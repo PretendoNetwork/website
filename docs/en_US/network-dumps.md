@@ -59,7 +59,7 @@ Some games use HTTP requests for some features. Additionally, non-game titles wi
 
 Full credit to the upkeep of the repository, and creation of the original Docker container, goes to GitHub user [MatthewL246](https://github.com/MatthewL246).
 
-Install Docker for your operating system using the official [setup guide](https://docs.docker.com/get-docker/). Then follow the steps for your console type.
+Install Docker for your operating system using the official [setup guide](https://docs.docker.com/get-docker/). If installing on Windows, you ***MUST*** use the WSL backend option. Then follow the steps for your console type.
 
 ## 3DS
 1. Download [this IPS patch](https://github.com/PretendoNetwork/mitmproxy-nintendo/raw/master/ssl-patches/0004013000002F02.ips). This IPS patch patches the SSL sysmodule to disable SSL verification, allowing the console to connect to the proxy server with TLS connections.
@@ -68,14 +68,17 @@ Install Docker for your operating system using the official [setup guide](https:
 4. Launch into the Luma settings by holding `SELECT` while powering on.
 5. Ensure both `Enable loading external FIRMS and modules` and `Enable game patching` are enabled before booting.
 6. Launch Nimbus and connect to Nintendo Network.
-7. On your computer, create a `3ds-dumps` directory and run the following command in a command prompt: `docker run -it --rm -p 8083:8083 -v ./3ds-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:3ds mitmdump`
-8. This command starts the proxy server using Docker, exposing the servers port 8083 on your computers port also on 8083, and links the `/home/mitmproxy/dumps` directory in the container to the `3ds-dumps` directory you just created.
-9. On your 3DS, launch into Internet Settings and select your connection.
-10. Select `Change Settings > Proxy Settings`.
-11. Select `Yes` and then `Detailed Setup`.
-12. Enter your computers local IP address into `Proxy Server` and 8083 into `Port`.
-13. Select `Ok` then `Save` and run the connection test. Your 3DS should connect to the internet and you should see connections being made in the proxy server
-14. See the end of this section for final steps.
+7. On your computer, open a command prompt and run the following commands:
+8. `mkdir 3ds-dumps`
+9. `docker run -it --rm -p 8083:8083 -v ./3ds-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:3ds mitmdump`
+	- If using Windows, run `wsl docker run -it --rm -p 8083:8083 -v ./3ds-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:3ds mitmdump`
+10. These commands create a directory to store the sessions dumps, and starts the proxy server using Docker, exposing the servers port 8083 on your computers port also on 8083, and links the `/home/mitmproxy/dumps` directory in the container to the `3ds-dumps` directory you just created.
+11. On your 3DS, launch into Internet Settings and select your connection.
+12. Select `Change Settings > Proxy Settings`.
+13. Select `Yes` and then `Detailed Setup`.
+14. Enter your computers local IP address into `Proxy Server` and 8083 into `Port`.
+15. Select `Ok` then `Save` and run the connection test. Your 3DS should connect to the internet and you should see connections being made in the proxy server
+16. See the end of this section for final steps.
 
 ## Wii U
 1. Download [this Aroma setup module](https://github.com/PretendoNetwork/mitmproxy-nintendo/raw/master/ssl-patches/30_nossl.rpx). This patches the SSL sysmodule to disable SSL verification, allowing the console to connect to the proxy server with TLS connections.
@@ -83,14 +86,17 @@ Install Docker for your operating system using the official [setup guide](https:
 3. Place the SD card back into your Wii U and turn on the console.
 4. Launch into the Aroma settings by pressing `L + DPAD-DOWN + SELECT`.
 5. Enter `Inkay > Patching` and toggle `Connect to the Pretendo Network` to ***FALSE***.
-6. On your computer, create a `wiiu-dumps` directory and run the following command in a command prompt: `docker run -it --rm -p 8082:8082 -v ./wiiu-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:wiiu mitmdump`
-7. This command starts the proxy server using Docker, exposing the servers port 8082 on your computers port also on 8082, and links the `/home/mitmproxy/dumps` directory in the container to the `wiiu-dumps` directory you just created.
-8. On your Wii U, launch into `System Settings > Internet > Connect to the Internet > Connections` and select your connection.
-9. Select `Change Settings > Proxy Settings`.
-10. Select `Set` and `OK`.
-11. Enter your computers local IP address into `Proxy Server` and 8082 into `Port`.
-12. Select `Confirm`, `Don't Use`, then `Save` and run the connection test. Your Wii U should connect to the internet and you should see connections being made in the proxy server
-13. See the end of this section for final steps.
+6. On your computer, open a command prompt and run the following commands:
+7. `mkdir wiiu-dumps`
+8. `docker run -it --rm -p 8082:8082 -v ./wiiu-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:wiiu mitmdump`
+	- If using Windows, run `wsl docker run -it --rm -p 8082:8082 -v ./wiiu-dumps:/home/mitmproxy/dumps ghcr.io/pretendonetwork/mitmproxy-nintendo:wiiu mitmdump`
+9. These commands create a directory to store the sessions dumps, and starts the proxy server using Docker, exposing the servers port 8082 on your computers port also on 8082, and links the `/home/mitmproxy/dumps` directory in the container to the `wiiu-dumps` directory you just created.
+10. On your Wii U, launch into `System Settings > Internet > Connect to the Internet > Connections` and select your connection.
+11. Select `Change Settings > Proxy Settings`.
+12. Select `Set` and `OK`.
+13. Enter your computers local IP address into `Proxy Server` and 8082 into `Port`.
+14. Select `Confirm`, `Don't Use`, then `Save` and run the connection test. Your Wii U should connect to the internet and you should see connections being made in the proxy server
+15. See the end of this section for final steps.
 
 ## Final Steps
 Once you have the proxy server running and your console connected to it, use the console as normal. When you are finished capturing a session, press `CTRL` and `C` in the command prompt running the proxy server to end the session. Ending a session will create a `wiiu-dumps/wiiu-latest.har` file or `3ds-dumps/3ds-latest.har` file depending on which console was used for the session. These files will be overwritten at the start of each new session, so they must be backed up or renamed to avoid losing their data.
