@@ -58,6 +58,11 @@ Some games use HTTP requests for some features. Additionally, non-game titles wi
 
 Full credit to the upkeep of the repository, and creation of the original Docker container, goes to GitHub user [MatthewL246](https://github.com/MatthewL246).
 
+<div class="tip">
+	<h2>Using a Raspberry Pi?</h2>
+	<strong>Only 64 bit operating systems are supported. If using a Raspberry Pi, ensure you are using a 64 bit variant of your OS.</strong>
+</div>
+
 Install Docker for your operating system using the official [setup guide](https://docs.docker.com/get-docker/). If installing on Windows, you ***MUST*** use the WSL backend option. Then follow the steps for your console type.
 
 ## 3DS
