@@ -10,7 +10,8 @@ In order to make this easier, we have developed a suite of internal tools to cap
 	- [3DS (HokakuCTR)](#3ds-hokakuctr)
 	- [All (WireShark)](#all-wireshark)
 3. [HTTP Packets](#http-packets)
-4. [High Priority Games](#high-priority-games)
+4. [SpotPass](#spotpass)
+5. [High Priority Games](#high-priority-games)
 
 <div class="tip red">
 	<h2>Security Warning</h2>
@@ -106,6 +107,9 @@ Install Docker for your operating system using the official [setup guide](https:
 Once you have the proxy server running and your console connected to it, use the console as normal. When you are finished capturing a session, press `CTRL` and `C` in the command prompt running the proxy server to end the session. Ending a session will create a `wiiu-dumps/wiiu-latest.har` file or `3ds-dumps/3ds-latest.har` file depending on which console was used for the session. These files will be overwritten at the start of each new session, so they must be backed up or renamed to avoid losing their data.
 
 For advanced usage of the proxy server, see https://github.com/PretendoNetwork/mitmproxy-nintendo
+
+# SpotPass
+SpotPass data, also called BOSS content, is sent using HTTP. In order to archive SpotPass content, see the above [HTTP Packets](#http-packets) section. For a list of games which use SpotPass content and still need to be archived, see [this spreadhseet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing). Currently the spreadhseet only tracks Wii U titles. We are working on creating a list of 3DS titles as well. If you are uploading SpotPass captures, please include the name of the title in your description.
 
 # High Priority Games
 While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
