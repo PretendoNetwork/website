@@ -109,7 +109,7 @@ Once you have the proxy server running and your console connected to it, use the
 For advanced usage of the proxy server, see https://github.com/PretendoNetwork/mitmproxy-nintendo
 
 # SpotPass
-SpotPass data, also called BOSS content, is sent using HTTP. In order to archive SpotPass content, see the above [HTTP Packets](#http-packets) section. For a list of games which use SpotPass content and still need to be archived, see [this spreadhseet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing). Currently the spreadhseet only tracks Wii U titles. We are working on creating a list of 3DS titles as well.
+SpotPass data, also called BOSS content, is sent using HTTP. In order to archive SpotPass content, see the above [HTTP Packets](#http-packets) section. For a list of games which use SpotPass content and still need to be archived, see [this spreadhseet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing).
 
 <div class="tip">
 	<strong>This spreadsheet was generated automatically. It may be incomplete and missing games or regions. Even if your game is not on this list we encourage you to upload HTTP dumps of it.</strong>
