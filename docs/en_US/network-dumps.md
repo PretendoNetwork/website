@@ -109,7 +109,9 @@ Once you have the proxy server running and your console connected to it, use the
 For advanced usage of the proxy server, see https://github.com/PretendoNetwork/mitmproxy-nintendo
 
 # SpotPass
-SpotPass data, also called BOSS content, is sent using HTTP. In order to archive SpotPass content, see the above [HTTP Packets](#http-packets) section. For a list of games which use SpotPass content and still need to be archived, see [this spreadsheet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing).
+SpotPass data, also called BOSS content, is sent using HTTP. The easiest way to submit SpotPass information to us is by dumping your consoles BOSS database. This will give us the data needed to archive SpotPass content ourselves. Alternatively, you may submit [HTTP network dumps](#http-packets). Submitting HTTP network dumps gives us the SpotPass content as well, but requires more work on users.
+
+For a list of games which use SpotPass content and still need to be archived, see [this spreadsheet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing).
 
 <div class="tip">
 	<strong>This spreadsheet was generated automatically. It may be incomplete and missing games or regions. Even if your game is not on this list we encourage you to upload HTTP dumps of it.</strong>
@@ -117,7 +119,31 @@ SpotPass data, also called BOSS content, is sent using HTTP. In order to archive
 
 SpotPass content is region specific, so dumps of one games region may not work for a games other regions. All of a games regions must be checked and archived.
 
-If you are uploading SpotPass captures, please include the name of the game and it's region in your description.
+If you are uploading HTTP network dumps, please include the name of the game and it's region in your description.
+
+If you are uploading your BOSS database, the way you dump the BOSS database depends on your console:
+
+## Wii U
+The Wii U stores a separate database of BOSS tasks per user. Each one must be dumped and submitted individually.
+
+- Connect to the Wii U using [FTP](https://wiki.hacks.guide/wiki/Wii_U:FTP#Aroma-0)
+- Navigate to `/storage_mlc/usr/save/system/boss`
+- Copy all the folders in this directory to your PC
+- Submit the `task.db` file in each folder using Bandwidth
+
+## 3DS
+The 3DS stores BOSS tasks in a single save file in the BOSS sysmodule.
+
+- Launch [GodMode9](https://github.com/d0k3/GodMode9)
+- Navigate to `SYSNAND CTRNAND > data > longstring > sysdata > 00010034`
+- Select `00000000`. If your file is not named `00000000` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
+- Select `Mount as DISA image`
+- Press `A` to mount and enter the image
+- Select `PartitionA.bin`. If your file is not named `PartitionA.bin` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
+- Select `Copy to 0:/gm9/out`
+- Turn off your console and eject the SD card
+- Open your SD card on your computer
+- submit the partition BIN file using Bandwidth
 
 # High Priority Games
 While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
