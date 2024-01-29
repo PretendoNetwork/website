@@ -128,24 +128,24 @@ We encourage everyone to upload their task databases, even if you have not been 
 ## Wii U
 The Wii U stores a separate database of BOSS tasks per user. Each one must be dumped and submitted individually.
 
-- Connect to the Wii U using [FTP](https://wiki.hacks.guide/wiki/Wii_U:FTP#Aroma-0)
-- Navigate to `/storage_mlc/usr/save/system/boss`
-- Copy all the folders in this directory to your PC
-- Submit the `task.db` file in each folder using Bandwidth
+1. Connect to the Wii U using [FTP](https://wiki.hacks.guide/wiki/Wii_U:FTP#Aroma-0)
+2. Navigate to `/storage_mlc/usr/save/system/boss`
+3. Copy all the folders in this directory to your PC
+4. Submit the `task.db` file in each folder using Bandwidth
 
 ## 3DS
 The 3DS stores BOSS tasks in a single save file in the BOSS sysmodule.
 
-- Launch [GodMode9](https://github.com/d0k3/GodMode9)
-- Navigate to `SYSNAND CTRNAND > data > longstring > sysdata > 00010034`
-- Select `00000000`. If your file is not named `00000000` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
-- Select `Mount as DISA image`
-- Press `A` to mount and enter the image
-- Select `partitionA.bin`. If your file is not named `partitionA.bin` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
-- Select `Copy to 0:/gm9/out`
-- Turn off your console and eject the SD card
-- Open your SD card on your computer
-- Submit the partition BIN file using Bandwidth
+1. Launch [GodMode9](https://github.com/d0k3/GodMode9)
+2. Navigate to `SYSNAND CTRNAND > data > longstring > sysdata > 00010034`
+3. Select `00000000`. If your file is not named `00000000` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
+4. Select `Mount as DISA image`
+5. Press `A` to mount and enter the image
+6. Select `partitionA.bin`. If your file is not named `partitionA.bin` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
+7. Select `Copy to 0:/gm9/out`
+8. Turn off your console and eject the SD card
+9. Open your SD card on your computer
+10. Submit the partition BIN file using Bandwidth
 
 # High Priority Games
 While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
