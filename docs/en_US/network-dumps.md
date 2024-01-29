@@ -134,7 +134,7 @@ The Wii U stores a separate database of BOSS tasks per user. Each one must be du
 4. Submit the `task.db` file in each folder using Bandwidth.
 
 ## 3DS
-The 3DS stores BOSS tasks in a single save file in the BOSS sysmodule.
+The 3DS stores BOSS tasks in a single partition in the BOSS sysmodule.
 
 1. Launch [GodMode9](https://github.com/d0k3/GodMode9).
 2. Navigate to `SYSNAND CTRNAND > data > longstring > sysdata > 00010034`.
