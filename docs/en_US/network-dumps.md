@@ -109,7 +109,7 @@ Once you have the proxy server running and your console connected to it, use the
 For advanced usage of the proxy server, see https://github.com/PretendoNetwork/mitmproxy-nintendo
 
 # SpotPass
-SpotPass data, also called BOSS content, is sent using HTTP. The easiest way to submit SpotPass information to us is by dumping your consoles BOSS database. This will give us the data needed to archive SpotPass content ourselves. Alternatively, you may submit [HTTP network dumps](#http-packets). Submitting HTTP network dumps gives us the SpotPass content as well, but requires more work on users.
+SpotPass data, also called BOSS content, is sent using HTTP. The easiest way to submit SpotPass information to us is by dumping your consoles BOSS database. These databases contain SpotPass information for all games which you have enabled SpotPass for. This will give us the data needed to archive SpotPass content ourselves. Alternatively, you may submit [HTTP network dumps](#http-packets). Submitting HTTP network dumps gives us the SpotPass content as well, but requires more work on users.
 
 For a list of games which use SpotPass content and still need to be archived, see [this spreadsheet](https://docs.google.com/spreadsheets/d/1qU0o7zxILAZcI83nOidr1QSrM0maVp6OGdBqg0xwul0/edit?usp=sharing).
 
@@ -121,7 +121,9 @@ SpotPass content is region specific, so dumps of one games region may not work f
 
 If you are uploading HTTP network dumps, please include the name of the game and it's region in your description.
 
-If you are uploading your BOSS database, the way you dump the BOSS database depends on your console:
+If you are uploading your BOSS database, ensure your game has registered your BOSS tasks. Typically a game will register all of it's tasks once SpotPass is enabled for the game. A game may require you to be online before asking to enable SpotPass, but this depends on the game.
+
+We encourage everyone to upload their task databases, even if you have not been online in a long time. These databases may contain SpotPass information from games you have played in the past.
 
 ## Wii U
 The Wii U stores a separate database of BOSS tasks per user. Each one must be dumped and submitted individually.
