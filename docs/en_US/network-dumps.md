@@ -141,11 +141,11 @@ The 3DS stores BOSS tasks in a single save file in the BOSS sysmodule.
 - Select `00000000`. If your file is not named `00000000` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
 - Select `Mount as DISA image`
 - Press `A` to mount and enter the image
-- Select `PartitionA.bin`. If your file is not named `PartitionA.bin` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
+- Select `partitionA.bin`. If your file is not named `partitionA.bin` you may still continue, though we cannot guarantee this is the correct file. If you have more than one file, repeat the following steps for each
 - Select `Copy to 0:/gm9/out`
 - Turn off your console and eject the SD card
 - Open your SD card on your computer
-- submit the partition BIN file using Bandwidth
+- Submit the partition BIN file using Bandwidth
 
 # High Priority Games
 While all games are important to capture dumps for, this is a list of games we have identified as being high priority. All games on Nintendo Network share a common set of protocols used to implement the games online features, making it easy to use work from one game on many others. However these games have game-specific patches to their protocols, or even entirely custom ones, making this much harder to work with, especially after the official servers go down. Dumps for these games are considered high priority, but they should not be the only games dumped for. All games are important.
