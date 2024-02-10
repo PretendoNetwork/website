@@ -99,6 +99,7 @@
 	},
 	"credits": {
 		"title": "Takımımız",
+		"text": "Projenin arkasındaki ekip ile tanışın",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -113,15 +114,9 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "Ağ kurulumu ve konsol araştırması",
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
+				"name": "quarky",
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky",
-				"name": "quarky",
 				"caption": "BOSS araştırma ve yama geliştirme"
 			},
 			{
@@ -131,25 +126,24 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"caption": "Web geliştirme lideri",
-				"picture": "https://github.com/jipfr.png",
-				"name": "Jip Fr",
-				"github": "https://github.com/jipfr"
-			},
-			{
+				"name": "pinklimes",
 				"github": "https://github.com/gitlimes",
 				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes",
 				"caption": "Web geliştirme"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Tasarımcı",
-				"github": "https://github.com/mrjvs",
-				"picture": "https://github.com/mrjvs.png"
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Mario Kart 7 ve 3DS araştırma",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
+			},
+			{
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Korumacı"
 			}
-		],
-		"text": "Projenin arkasındaki ekip ile tanışın"
+		]
 	},
 	"account": {
 		"settings": {
@@ -297,8 +291,14 @@
 		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
 		"people": [
 			{
-				"caption": "crunch kütüphane geliştirme",
+				"name": "GitHub katılımcıları",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Yerelleştirmeler ve diğer katkılar"
+			},
+			{
 				"name": "superwhiskers",
+				"caption": "crunch kütüphane geliştirme",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
@@ -307,18 +307,6 @@
 				"caption": "3DS geliştirici ve NEX disektörü",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"caption": "Korumacı"
-			},
-			{
-				"github": "https://github.com/shutterbug2000",
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 ve 3DS araştırma",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
 			},
 			{
 				"name": "rverse",
@@ -340,10 +328,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub katılımcıları",
-				"caption": "Yerelleştirmeler ve diğer katkılar"
+				"name": "Rambo6Glaz",
+				"caption": "Ağ kurulumu ve konsol araştırması",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		],
 		"title": "Ayrıca teşekkürler"

@@ -96,12 +96,6 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Установщик сервисов и исследование консолей",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
 				"name": "quarky",
 				"caption": "Изучение BOSS и разработка патчей",
 				"picture": "https://github.com/ashquarky.png",
@@ -114,22 +108,22 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Руководитель веб-разработки",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
 				"name": "pinklimes",
 				"caption": "Web-разработка",
 				"picture": "https://github.com/gitlimes.png",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Дизайнер",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "Исследование Mario Kart 7 и 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Охранник",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
@@ -137,6 +131,12 @@
 		"title": "Особая благодарность",
 		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
 		"people": [
+			{
+				"name": "GitHub участники",
+				"caption": "Локализации и другие вклады",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "superwhiskers",
 				"caption": "Разработка библиотек «crunch»",
@@ -148,18 +148,6 @@
 				"caption": "3DS разработчик и диссектор NEX",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Охранник",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Исследование Mario Kart 7 и 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -181,10 +169,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub участники",
-				"caption": "Локализации и другие вклады",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "Установщик сервисов и исследование консолей",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		]
 	},

@@ -96,12 +96,6 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Netwerkinstallatie tools en console research",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
 				"name": "quarky",
 				"caption": "Onderzoek naar BOSS en patch ontwikkeling",
 				"picture": "https://github.com/ashquarky.png",
@@ -114,22 +108,22 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Hoofd website ontwikkeling",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
 				"name": "pinklimes",
 				"caption": "Website ontwikkelaar",
 				"picture": "https://github.com/gitlimes.png",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Ontwerper",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "Onderzoek naar Mario Kart 7 en 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Archivist",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
@@ -137,6 +131,12 @@
 		"title": "Speciale dank",
 		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is.",
 		"people": [
+			{
+				"name": "GitHub medewerkers",
+				"caption": "Vertalingen en andere contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "superwhiskers",
 				"caption": "crunch ontwikkeling",
@@ -148,18 +148,6 @@
 				"caption": "3DS ontwikkelaar and NEX dissector",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Archivist",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Onderzoek naar Mario Kart 7 en 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -181,10 +169,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub medewerkers",
-				"caption": "Vertalingen en andere contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "Netwerkinstallatie tools en console research",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		]
 	},

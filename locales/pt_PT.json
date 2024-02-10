@@ -23,6 +23,8 @@
 		}
 	},
 	"credits": {
+		"title": "Equipa",
+		"text": "Conheça a equipa por trás do projeto",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
@@ -37,44 +39,36 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Instalador de rede e pesquisa de console",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
 				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
 				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
 				"github": "https://github.com/ashquarky"
 			},
 			{
+				"name": "SuperMarioDaBom",
 				"caption": "Pesquisa de console e outros sistemas",
 				"picture": "https://github.com/supermariodabom.png",
-				"name": "SuperMarioDaBom",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"github": "https://github.com/jipfr",
-				"caption": "Líder de desenvolvimento web",
-				"name": "Jip Fr",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
 				"name": "pinklimes",
+				"picture": "https://github.com/gitlimes.png",
 				"caption": "Desenvolvimento web",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Designer",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "Pesquisa do Nintendo 3DS e Mario Kart 7",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Fornecedor de dumps",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
-		],
-		"title": "Equipa",
-		"text": "Conheça a equipa por trás do projeto"
+		]
 	},
 	"account": {
 		"accountLevel": [
@@ -253,6 +247,12 @@
 	"specialThanks": {
 		"people": [
 			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"name": "Contribuidores do GitHub",
+				"caption": "Traduções e outras contribuições",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
 				"github": "https://github.com/superwhiskers",
 				"name": "superwhiskers",
 				"caption": "Desenvolvimento da crunch library",
@@ -263,18 +263,6 @@
 				"github": "https://github.com/Stary2001",
 				"caption": "Desenvolvimento do 3DS e dissector NEX",
 				"picture": "https://github.com/Stary2001.png"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fornecedor de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Pesquisa do Nintendo 3DS e Mario Kart 7",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"caption": "Compartilhamento de informações do Miiverse",
@@ -290,16 +278,16 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
 				"picture": "https://github.com/ninstar.png",
 				"caption": "Ícones para o criador Mii e Juxt",
-				"name": "NinStar",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "Contribuidores do GitHub",
-				"caption": "Traduções e outras contribuições",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Instalador de rede e pesquisa de console",
+				"picture": "https://github.com/EpicUsername12.png"
 			}
 		],
 		"title": "Agradecimentos especiais",

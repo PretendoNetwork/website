@@ -31,11 +31,13 @@
 		"title": "重製"
 	},
 	"credits": {
+		"text": "見見在專案背後努力的團隊",
+		"title": "開發團隊",
 		"people": [
 			{
+				"name": "Jonathan Barrow (jonbarrow)",
 				"github": "https://github.com/jonbarrow",
 				"caption": "專案所有人和首席開發人員",
-				"name": "Jonathan Barrow (jonbarrow)",
 				"picture": "https://github.com/jonbarrow.png"
 			},
 			{
@@ -45,44 +47,36 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "網路安裝程式與主機系統研究",
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
+				"name": "quarky",
 				"github": "https://github.com/ashquarky",
 				"picture": "https://github.com/ashquarky.png",
-				"caption": "BOSS研究與補丁開發",
-				"name": "quarky"
+				"caption": "BOSS研究與補丁開發"
 			},
 			{
+				"name": "SuperMarioDaBom",
 				"picture": "https://github.com/supermariodabom.png",
 				"caption": "主機以及其他系統研究",
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom"
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"caption": "Web 開發首席",
-				"name": "Jip Fr",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
 				"name": "pinklimes",
+				"picture": "https://github.com/gitlimes.png",
 				"caption": "Web 開發",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Designer",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"caption": "馬力歐賽車 7 和 3DS 研究"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Preservationist",
+				"github": "https://github.com/InternalLoss"
 			}
-		],
-		"text": "見見在專案背後努力的團隊",
-		"title": "開發團隊"
+		]
 	},
 	"showcase": {
 		"cards": [
@@ -142,9 +136,15 @@
 	"specialThanks": {
 		"people": [
 			{
+				"name": "GitHub 貢獻者",
+				"caption": "翻譯和其他貢獻",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+			{
+				"name": "superwhiskers",
 				"picture": "https://github.com/superwhiskers.png",
 				"caption": "crunch library 開發",
-				"name": "superwhiskers",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
@@ -153,26 +153,14 @@
 				"picture": "https://github.com/Stary2001.png"
 			},
 			{
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"caption": "Preservationist",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"github": "https://github.com/shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"caption": "馬力歐賽車 7 和 3DS 研究"
-			},
-			{
 				"name": "rverse",
 				"picture": "https://github.com/rverseTeam.png",
 				"caption": "Miiverse 資訊分享",
 				"github": "https://twitter.com/rverseClub"
 			},
 			{
-				"caption": "任天堂資料結構研究",
 				"name": "Kinnay",
+				"caption": "任天堂資料結構研究",
 				"special": "特別感謝",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay"
@@ -184,10 +172,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"caption": "翻譯和其他貢獻",
-				"name": "GitHub 貢獻者",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "網路安裝程式與主機系統研究",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		],
 		"title": "特別感謝",

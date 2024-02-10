@@ -63,24 +63,20 @@
 		"text": "Наш проект має багато компонентів. Ось деякі з них."
 	},
 	"credits": {
+		"title": "Команда",
+		"text": "Познайомтеся з командою проекту",
 		"people": [
 			{
-				"caption": "Власник проекту та головний розробник",
 				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Власник проекту та головний розробник",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
+				"name": "Jemma (CaramelKat)",
 				"github": "https://github.com/CaramelKat",
 				"caption": "Дослідження та розробки Miiverse",
-				"name": "Jemma (CaramelKat)",
 				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Інсталятор мережі та дослідження консолі",
-				"github": "https://github.com/EpicUsername12",
-				"picture": "https://github.com/EpicUsername12.png"
 			},
 			{
 				"name": "quarky",
@@ -95,26 +91,24 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"github": "https://github.com/jipfr",
-				"name": "Jip Fr",
-				"caption": "Керівник веб-розробки",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"github": "https://github.com/gitlimes",
 				"name": "pinklimes",
+				"github": "https://github.com/gitlimes",
 				"picture": "https://github.com/gitlimes.png",
 				"caption": "Веб-розробка"
 			},
 			{
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs",
-				"name": "mrjvs",
-				"caption": "Дизайнер"
+				"name": "Billy",
+				"caption": "Охоронець",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Дослідження Mario Kart 7 і 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
 			}
-		],
-		"title": "Команда",
-		"text": "Познайомтеся з командою проекту"
+		]
 	},
 	"nav": {
 		"credits": "Титри",
@@ -153,7 +147,14 @@
 	},
 	"specialThanks": {
 		"title": "Особлива подяка",
+		"text": "Без них Pretendo не було б таким, яким воно є сьогодні.",
 		"people": [
+			{
+				"name": "Учасники GitHub",
+				"caption": "Локалізації та інші внески",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
 			{
 				"name": "superwhiskers",
 				"caption": "розробка бібліотеки crunch",
@@ -167,21 +168,9 @@
 				"github": "https://github.com/Stary2001"
 			},
 			{
-				"name": "Billy",
-				"caption": "Охоронець",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Дослідження Mario Kart 7 і 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
+				"name": "rverse",
 				"caption": "Надали інформацію про Miiverse",
 				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
 				"picture": "https://github.com/rverseTeam.png"
 			},
 			{
@@ -192,19 +181,18 @@
 				"github": "https://github.com/Kinnay"
 			},
 			{
+				"name": "NinStar",
 				"caption": "Іконка для Mii Editor і реакцій Juxt",
 				"picture": "https://github.com/ninstar.png",
-				"name": "NinStar",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "Учасники GitHub",
-				"caption": "Локалізації та інші внески",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "Інсталятор мережі та дослідження консолі",
+				"github": "https://github.com/EpicUsername12",
+				"picture": "https://github.com/EpicUsername12.png"
 			}
-		],
-		"text": "Без них Pretendo не було б таким, яким воно є сьогодні."
+		]
 	},
 	"discordJoin": {
 		"title": "Будьте в курсі подій",

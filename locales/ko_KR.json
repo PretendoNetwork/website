@@ -114,12 +114,6 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "네트워크 설치 관리자 및 콘솔 연구",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
 				"name": "quarky",
 				"caption": "BOSS 연구 및 패치 개발",
 				"picture": "https://github.com/ashquarky.png",
@@ -132,22 +126,22 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "웹 개발 주도",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
 				"name": "pinklimes",
 				"caption": "웹 개발",
 				"picture": "https://github.com/gitlimes.png",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "디자이너",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "마리오 카트 7 및 3DS 연구",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "프로젝트 보존",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
@@ -155,6 +149,12 @@
 		"title": "Special Thanks",
 		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
 		"people": [
+			{
+				"name": "GitHub 기여자들",
+				"caption": "로컬라이징 및 다른 기여",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "superwhiskers",
 				"caption": "crunch 라이브러리 개발",
@@ -166,18 +166,6 @@
 				"caption": "3DS 개발 및 NEX 해부",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "프로젝트 보존",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "마리오 카트 7 및 3DS 연구",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -199,10 +187,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub 기여자들",
-				"caption": "로컬라이징 및 다른 기여",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "네트워크 설치 관리자 및 콘솔 연구",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		]
 	},

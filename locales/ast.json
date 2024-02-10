@@ -108,16 +108,10 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
+				"name": "Jemma (CaramelKat)",
 				"caption": "Investigación ya desendolcu de Miiverse",
 				"picture": "https://github.com/caramelkat.png",
-				"name": "Jemma (CaramelKat)",
 				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Instalador per rede ya investigación en consoles",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -132,50 +126,46 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Líder del desendolcu web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
+				"name": "pinklimes",
 				"caption": "Desendolcu web",
 				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes",
-				"name": "pinklimes"
+				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Diseñador",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
-	},
-	"specialThanks": {
-		"people": [
-			{
-				"caption": "Desendolcu de la biblioteca crunch",
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png"
-			},
-			{
-				"caption": "Desendolcador de 3DS ya analista de NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"name": "Stary",
-				"github": "https://github.com/Stary2001"
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Investigación de Mario Kart 7 ya 3DS"
 			},
 			{
 				"name": "Billy",
 				"caption": "Caltenedor",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Agradecimientu especial",
+		"text": "Ensin estes persones, Pretendo nun taría onde ta güei.",
+		"people": [
+			{
+				"name": "Collaboradores de GitHub",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Traducciones ya otres collaboraciones"
 			},
 			{
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"name": "Shutterbug2000",
-				"caption": "Investigación de Mario Kart 7 ya 3DS"
+				"name": "superwhiskers",
+				"caption": "Desendolcu de la biblioteca crunch",
+				"github": "https://github.com/superwhiskers",
+				"picture": "https://github.com/superwhiskers.png"
+			},
+			{
+				"name": "Stary",
+				"caption": "Desendolcador de 3DS ya analista de NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
 			},
 			{
 				"name": "rverse",
@@ -197,14 +187,12 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "Collaboradores de GitHub",
-				"caption": "Traducciones ya otres collaboraciones"
+				"name": "Rambo6Glaz",
+				"caption": "Instalador per rede ya investigación en consoles",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
-		],
-		"title": "Agradecimientu especial",
-		"text": "Ensin estes persones, Pretendo nun taría onde ta güei."
+		]
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [

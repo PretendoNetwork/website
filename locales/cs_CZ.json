@@ -38,42 +38,32 @@
 		]
 	},
 	"credits": {
+		"title": "Náš tým",
+		"text": "Seznamte se s týmem, co za projektem stojí",
 		"people": [
 			{
+				"name": "Jonathan Barrow (jonbarrow)",
 				"github": "https://github.com/jonbarrow",
 				"picture": "https://github.com/jonbarrow.png",
-				"name": "Jonathan Barrow (jonbarrow)",
 				"caption": "Project owner a hlavní vývojář"
 			},
 			{
+				"name": "Jemma (CaramelKat)",
 				"picture": "https://github.com/caramelkat.png",
 				"caption": "Výzkum a vývoj Miiverse",
-				"name": "Jemma (CaramelKat)",
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"name": "Rambo6Glaz",
-				"github": "https://github.com/EpicUsername12",
-				"caption": "Výzkum konzolí a síťového instalátoru"
-			},
-			{
+				"name": "quarky",
 				"github": "https://github.com/ashquarky",
 				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky",
 				"caption": "BOSS výzkum a vývoj záplat"
 			},
 			{
+				"name": "SuperMarioDaBom",
 				"caption": "Výzkum konzolí a jiných systémů",
 				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
 				"picture": "https://github.com/supermariodabom.png"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Vedoucí webového vývoje",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
 			},
 			{
 				"name": "pinklimes",
@@ -82,45 +72,45 @@
 				"picture": "https://github.com/gitlimes.png"
 			},
 			{
-				"caption": "Designér",
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"github": "https://github.com/mrjvs"
-			}
-		],
-		"title": "Náš tým",
-		"text": "Seznamte se s týmem, co za projektem stojí"
-	},
-	"specialThanks": {
-		"people": [
-			{
-				"picture": "https://github.com/superwhiskers.png",
-				"caption": "vývoj knihovny crunch",
-				"name": "superwhiskers",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"github": "https://github.com/Stary2001",
-				"caption": "3DS vývojář a dissektor NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"name": "Stary"
-			},
-			{
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"github": "https://github.com/InternalLoss",
-				"caption": "Ochranář"
-			},
-			{
 				"name": "Shutterbug2000",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000",
 				"caption": "Výzkum Mario Kart 7 a 3DS"
 			},
 			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "Ochranář"
+			}
+		]
+	},
+	"specialThanks": {
+		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
+		"title": "Zvláštní poděkování",
+		"people": [
+			{
+				"name": "GitHub příspěvky",
+				"caption": "Lokalizace a jiné příspěvky",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "vývoj knihovny crunch",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"github": "https://github.com/Stary2001",
+				"caption": "3DS vývojář a dissektor NEX",
+				"picture": "https://github.com/Stary2001.png",
+			},
+			{
+				"name": "rverse",
 				"github": "https://twitter.com/rverseClub",
 				"caption": "Sdílení informací o Miiverse",
-				"name": "rverse",
 				"picture": "https://github.com/rverseTeam.png"
 			},
 			{
@@ -131,20 +121,18 @@
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
 			},
 			{
+				"name": "NinStar",
 				"caption": "Ikony pro Mii Editor a Juxt reakce",
 				"picture": "https://github.com/ninstar.png",
-				"name": "NinStar",
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"caption": "Lokalizace a jiné příspěvky",
-				"name": "GitHub příspěvky",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Výzkum konzolí a síťového instalátoru"
 			}
-		],
-		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
-		"title": "Zvláštní poděkování"
+		]
 	},
 	"faq": {
 		"QAs": [

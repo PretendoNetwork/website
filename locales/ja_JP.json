@@ -114,12 +114,6 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "ネットワークインストーラー、コンソール研究",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
 				"name": "quarky",
 				"caption": "BOSS研究、パッチ開発",
 				"picture": "https://github.com/ashquarky.png",
@@ -132,22 +126,22 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "ウェブ開発主導",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
 				"name": "pinklimes",
 				"caption": "ウェブ開発",
 				"picture": "https://github.com/gitlimes.png",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "デザイナー",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "マリオカート7及び3DS研究",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "プロジェクト保存",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
@@ -155,6 +149,12 @@
 		"title": "スペシャルサンクス",
 		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。",
 		"people": [
+			{
+				"name": "GitHub貢献者たち",
+				"caption": "ローカライズ及び他の貢献",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "superwhiskers",
 				"caption": "crunchライブラリー開発",
@@ -166,18 +166,6 @@
 				"caption": "3DS開発過程及びHEX解剖",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "プロジェクト保存",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "マリオカート7及び3DS研究",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -199,10 +187,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub貢献者たち",
-				"caption": "ローカライズ及び他の貢献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "ネットワークインストーラー、コンソール研究",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		]
 	},

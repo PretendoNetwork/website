@@ -114,12 +114,6 @@
 				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "网络安装程序和系统研究",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
 				"name": "quarky",
 				"caption": "BOSS研究和补丁开发",
 				"picture": "https://github.com/ashquarky.png",
@@ -132,22 +126,22 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "网络开发主管",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
 				"name": "pinklimes",
 				"caption": "网络开发",
 				"picture": "https://github.com/gitlimes.png",
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "设计师",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"caption": "马里奥赛车 7 和 3DS 研究",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "保护主义者",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
@@ -155,6 +149,12 @@
 		"title": "特别感谢",
 		"text": "没有他们，Pretendo 就不会是今天的样子。",
 		"people": [
+			{
+				"name": "GitHub 贡献者",
+				"caption": "本地化和其他贡献",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "superwhiskers",
 				"caption": "Crunch 开发",
@@ -166,18 +166,6 @@
 				"caption": "3DS 开发和 NEX 解剖器",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "保护主义者",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "马里奥赛车 7 和 3DS 研究",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -199,10 +187,10 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "Rambo6Glaz",
+				"caption": "网络安装程序和系统研究",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
 		]
 	},

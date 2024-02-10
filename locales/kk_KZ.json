@@ -80,7 +80,15 @@
 		"title": "Прогресс"
 	},
 	"specialThanks": {
+		"text": "Оларсыз Pretendo қазіргідей болмас еді.",
+		"title": "Ерекше рақмет",
 		"people": [
+			{
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHub салымшылары",
+				"caption": "Локализация және басқа салымшылары",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			},
 			{
 				"caption": "crunch library әзірлеу",
 				"picture": "https://github.com/superwhiskers.png",
@@ -92,18 +100,6 @@
 				"caption": "3DS әзірлеуші және NEX диссектор",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Билли",
-				"picture": "https://github.com/InternalLoss.png",
-				"caption": "Қорғаушы",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 және 3DS зерттеу",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "rverse",
@@ -125,21 +121,21 @@
 				"github": "https://github.com/ninstar"
 			},
 			{
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub салымшылары",
-				"caption": "Локализация және басқа салымшылары",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"name": "Rambo6Glaz",
+				"caption": "Желіні орнатушы және консольді зерттеу",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			}
-		],
-		"text": "Оларсыз Pretendo қазіргідей болмас еді.",
-		"title": "Ерекше рақмет"
+		]
 	},
 	"credits": {
+		"title": "Команда",
+		"text": "Жобаның артында тұрған командамен танысыңыз",
 		"people": [
 			{
+				"name": "Джонатан Барроу (jonbarrow)",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow",
-				"name": "Джонатан Барроу (jonbarrow)",
 				"caption": "Жобаның иесі және бас әзірлеуші"
 			},
 			{
@@ -147,12 +143,6 @@
 				"caption": "Miiverse зерттеу және әзірлеу",
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Желіні орнатушы және консольді зерттеу",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarky",
@@ -167,26 +157,24 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "Jip Fr",
-				"caption": "Веб әзірлеу басы",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr.png"
-			},
-			{
+				"name": "pinklimes",
 				"caption": "Веб әзірлеу",
 				"github": "https://github.com/gitlimes",
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes"
+				"picture": "https://github.com/gitlimes.png"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Дизайн",
-				"github": "https://github.com/mrjvs",
-				"picture": "https://github.com/mrjvs.png"
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 және 3DS зерттеу",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Билли",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Қорғаушы",
+				"github": "https://github.com/InternalLoss"
 			}
-		],
-		"title": "Команда",
-		"text": "Жобаның артында тұрған командамен танысыңыз"
+		]
 	},
 	"blogPage": {
 		"description": "",

@@ -108,16 +108,10 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"picture": "https://github.com/caramelkat.png",
 				"name": "jemmeow (caramelkitteh)",
+				"picture": "https://github.com/caramelkat.png",
 				"caption": "kittehverse reserch an dev",
 				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"name": "rambo6meow",
-				"caption": "onlien instalr an konsole reserch",
-				"github": "https://github.com/EpicUsername12"
 			},
 			{
 				"name": "quarkat",
@@ -126,16 +120,10 @@
 				"picture": "https://github.com/ashquarky.png"
 			},
 			{
+				"name": "supermariodakitteh",
 				"caption": "konsole reserch",
 				"github": "https://github.com/SuperMarioDaBom",
-				"name": "supermariodakitteh",
 				"picture": "https://github.com/supermariodabom.png"
-			},
-			{
-				"name": "catjip fr",
-				"caption": "interwebz dev",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
 			},
 			{
 				"name": "pinkkittehs",
@@ -144,16 +132,29 @@
 				"github": "https://github.com/gitlimes"
 			},
 			{
-				"name": "mrkat",
-				"caption": "paintr",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "shutterkat2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "kitteh kart 7 an thre d s reserch"
+			},
+			{
+				"name": "billehkitteh",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "findr of teh stuffs"
 			}
 		]
 	},
 	"specialThanks": {
+		"title": "speshul thx",
 		"text": "theze kittehs helpd!!",
 		"people": [
+			{
+				"name": "octokat kittehs",
+				"caption": "meows an stuffs",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
 			{
 				"name": "katwhiskers",
 				"caption": "crunchy bookz dev",
@@ -165,18 +166,6 @@
 				"picture": "https://github.com/Stary2001.png",
 				"caption": "thre d s dev an nex inspektor",
 				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "billehkitteh",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"caption": "findr of teh stuffs"
-			},
-			{
-				"name": "shutterkat2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "kitteh kart 7 an thre d s reserch"
 			},
 			{
 				"name": "revers",
@@ -198,13 +187,12 @@
 				"picture": "https://github.com/ninstar.png"
 			},
 			{
-				"name": "octokat kittehs",
-				"caption": "meows an stuffs",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"name": "rambo6meow",
+				"picture": "https://github.com/EpicUsername12.png",
+				"caption": "onlien instalr an konsole reserch",
+				"github": "https://github.com/EpicUsername12"
 			}
-		],
-		"title": "speshul thx"
+		]
 	},
 	"discordJoin": {
 		"text": "entr de discord for new infoz from kittehs 4 pretender!!",

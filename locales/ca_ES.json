@@ -102,22 +102,16 @@
 		"text": "Coneix l'equip que hi ha darrere del projecte",
 		"people": [
 			{
-				"picture": "https://github.com/jonbarrow.png",
 				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
 				"caption": "Propietari del projecte i desenvolupador principal",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
+				"name": "Jemma (CaramelKat)",
 				"caption": "Recerca i desenvolupament per al Miiverse",
 				"github": "https://github.com/CaramelKat",
-				"name": "Jemma (CaramelKat)",
 				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Instal·lador de la xarxa i recerca sobre la consola"
 			},
 			{
 				"name": "quarky",
@@ -126,16 +120,10 @@
 				"github": "https://github.com/ashquarky"
 			},
 			{
+				"name": "SuperMarioDaBom",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
 				"caption": "Consola i altres sistemes de recerca"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Líder del desenvolupament de la web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
 			},
 			{
 				"name": "pinklimes",
@@ -144,67 +132,67 @@
 				"picture": "https://github.com/gitlimes.png"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Dissenyador",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Recerca de Mario Kart 7 i 3DS"
+			},
+			{
+				"name": "Billy",
+				"caption": "Conservacionista",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
 	"specialThanks": {
+		"title": "Gràcies especials",
+		"text": "Sense ells, Pretendo no sería al lloc que n'hi és avui.",
 		"people": [
-			{
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"caption": "desenvolupament de la llibreria crunch",
-				"picture": "https://github.com/superwhiskers.png"
-			},
-			{
-				"caption": "Desenvolupador de 3DS i dissector de NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"name": "Stary",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"caption": "Conservacionista",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"name": "Billy"
-			},
-			{
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"name": "Shutterbug2000",
-				"caption": "Recerca de Mario Kart 7 i 3DS"
-			},
-			{
-				"github": "https://twitter.com/rverseClub",
-				"caption": "Compartició de dades de Miiverse",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png"
-			},
-			{
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay",
-				"name": "Kinnay",
-				"special": "Gràcies especials",
-				"caption": "Recerca de les estructures de dades de Nintendo"
-			},
-			{
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar",
-				"caption": "Icones de l'editor Mii i reaccions de Juxt",
-				"name": "NinStar"
-			},
 			{
 				"name": "Contribuïdors de GitHub",
 				"caption": "Localitzacions i altres contribucions",
 				"github": "https://github.com/PretendoNetwork",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			},
+			{
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers",
+				"caption": "desenvolupament de la llibreria crunch",
+				"picture": "https://github.com/superwhiskers.png"
+			},
+			{
+				"name": "Stary",
+				"caption": "Desenvolupador de 3DS i dissector de NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Compartició de dades de Miiverse",
+				"picture": "https://github.com/rverseTeam.png"
+			},
+			{
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay",
+				"special": "Gràcies especials",
+				"caption": "Recerca de les estructures de dades de Nintendo"
+			},
+			{
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar",
+				"caption": "Icones de l'editor Mii i reaccions de Juxt"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Instal·lador de la xarxa i recerca sobre la consola"
 			}
-		],
-		"title": "Gràcies especials",
-		"text": "Sense ells, Pretendo no sería al lloc que n'hi és avui."
+		]
 	},
 	"discordJoin": {
 		"widget": {
