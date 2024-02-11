@@ -39,100 +39,11 @@
 	},
 	"credits": {
 		"title": "Teamet",
-		"text": "Träffa teamet bakom projektet",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"caption": "Projektägare och ledande utvecklare"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Forskning och utveckling inom Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS forskning och patch utveckling",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Forsking inom konsol och andra system"
-			},
-			{
-				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes",
-				"caption": "Webbutveckling"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Forskning inom Mario Kart 7 och 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "Bevarare",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			}
-		]
+		"text": "Träffa teamet bakom projektet"
 	},
 	"specialThanks": {
 		"title": "Särskilda tack",
-		"text": "Utan dem skulle Pretendo inte vara där det är idag.",
-		"people": [
-			{
-				"name": "GitHub bidragare",
-				"github": "https://github.com/PretendoNetwork",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"caption": "Lokaliseringar och andra bidrag"
-			},
-			{
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"caption": "crunch bibliotek utveckling",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3Ds utvecklare och NEX dissektor",
-				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png"
-			},
-			{
-				"name": "rverse",
-				"caption": "Delning av Miiverse information",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Särskilda tack",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay",
-				"caption": "Forsking om Nintendo datastrukturer"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikoner för Mii-redigeraren och Juxt reaktioner",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12",
-				"caption": "Nätverks installerare och konsol forskning"
-			}
-		]
+		"text": "Utan dem skulle Pretendo inte vara där det är idag."
 	},
 	"progressPage": {
 		"description": "Kolla in projektets framsteg och mål! (Updateras varje timme eller så, reflekterar inte ALLA projekt mål eller framsteg)",

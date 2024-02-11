@@ -99,100 +99,11 @@
 	},
 	"credits": {
 		"title": "開発チーム",
-		"text": "プロジェクトの裏のチームをご覧ください",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "プロジェクトのオーナー、主導開発者",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse研究、開発",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS研究、パッチ開発",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "コンソール・他システム研究",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "ウェブ開発",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "マリオカート7及び3DS研究",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "プロジェクト保存",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			}
-		]
+		"text": "プロジェクトの裏のチームをご覧ください"
 	},
 	"specialThanks": {
 		"title": "スペシャルサンクス",
-		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。",
-		"people": [
-			{
-				"name": "GitHub貢献者たち",
-				"caption": "ローカライズ及び他の貢献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "crunchライブラリー開発",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS開発過程及びHEX解剖",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse情報共有",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Special Thanks",
-				"caption": "任天堂データ構造研究",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "MiiエディターとJuxtリアクションのアイコン",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "ネットワークインストーラー、コンソール研究",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			}
-		]
+		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。"
 	},
 	"discordJoin": {
 		"title": "情報を見逃さないで",

@@ -81,100 +81,11 @@
 	},
 	"credits": {
 		"title": "الفريق",
-		"text": "قابل الفريق وراء المشروع",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "مالك المشروع والمطور الرئيسي",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "باحث و مطور الميفيرز",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "مباحث البوس و مبرمج التصحيحات",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "باحث الأجهزة",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "مطور الويب",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "باحث ماريو كارت 7 و ال3 دي اس",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "المحافظ",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			}
-		]
+		"text": "قابل الفريق وراء المشروع"
 	},
 	"specialThanks": {
 		"title": "شكرا خاصة",
-		"text": "من غيرهم، بريتندو لن نكن بشكلها.",
-		"people": [
-			{
-				"name": "المساهمين على جيتهاب",
-				"caption": "الترجمة والمساهمات الأخرى",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "مطور مكتبة كرانش",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "مبرمج و مففك ال3 دي اس و نكس",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "تبادل المعلومات الميفيرز",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "شكر خاص",
-				"caption": "باحث في هياكل بيانات نينتندو",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "أيقونات لمحرر المي وردود فعل زنكس",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "مثبت الشبكة و باحث الأجهزة",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			}
-		]
+		"text": "من غيرهم، بريتندو لن نكن بشكلها."
 	},
 	"progressPage": {
 		"title": "تقدمنا",

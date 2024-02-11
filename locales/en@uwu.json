@@ -99,100 +99,11 @@
 	},
 	"credits": {
 		"title": "dev kittehs",
-		"text": "see kittehz who maek pretender!!",
-		"people": [
-			{
-				"name": "swagtastic kitteh",
-				"picture": "https://i.imgur.com/Yd7XfHp.png",
-				"caption": "projekt owner an dev kitteh",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "jemmeow (caramelkitteh)",
-				"picture": "https://github.com/caramelkat.png",
-				"caption": "kittehverse reserch an dev",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarkat",
-				"caption": "BOSS reserch an patchy dev",
-				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png"
-			},
-			{
-				"name": "supermariodakitteh",
-				"caption": "konsole reserch",
-				"github": "https://github.com/SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png"
-			},
-			{
-				"name": "pinkkittehs",
-				"caption": "interwebs dev",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "shutterkat2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "kitteh kart 7 an thre d s reserch"
-			},
-			{
-				"name": "billehkitteh",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"caption": "findr of teh stuffs"
-			}
-		]
+		"text": "see kittehz who maek pretender!!"
 	},
 	"specialThanks": {
 		"title": "speshul thx",
-		"text": "theze kittehs helpd!!",
-		"people": [
-			{
-				"name": "octokat kittehs",
-				"caption": "meows an stuffs",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "katwhiskers",
-				"caption": "crunchy bookz dev",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "starykitteh",
-				"picture": "https://github.com/Stary2001.png",
-				"caption": "thre d s dev an nex inspektor",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "revers",
-				"caption": "mewverse infos sharer",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "kittay",
-				"special": "speshul thx",
-				"caption": "reserch on de meanie netwrks datas",
-				"github": "https://github.com/Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
-			},
-			{
-				"name": "katstar",
-				"github": "https://github.com/ninstar",
-				"caption": "arts 4 de mew editr an kittehverse reaktions",
-				"picture": "https://github.com/ninstar.png"
-			},
-			{
-				"name": "rambo6meow",
-				"picture": "https://github.com/EpicUsername12.png",
-				"caption": "onlien instalr an konsole reserch",
-				"github": "https://github.com/EpicUsername12"
-			}
-		]
+		"text": "theze kittehs helpd!!"
 	},
 	"discordJoin": {
 		"text": "entr de discord for new infoz from kittehs 4 pretender!!",

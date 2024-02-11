@@ -115,13 +115,13 @@
 			},
 			{
 				"name": "quarky",
-				"caption": "BOSS research and patch development",
+				"caption": "Wii U research and patch development",
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky"
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "Console and other system research",
+				"caption": "Systems research and server architecture",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
@@ -133,13 +133,13 @@
 			},
 			{
 				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 and 3DS research",
+				"caption": "Systems research and server development",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"name": "Billy",
-				"caption": "Preservationist",
+				"caption": "Preservationist and server architecture",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},

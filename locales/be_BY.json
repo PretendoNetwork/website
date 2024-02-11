@@ -104,99 +104,10 @@
 	},
 	"credits": {
 		"title": "Каманда",
-		"text": "Пазнаёмцеся з камандай, якая стаіць за праектам",
-		"people": [
-			{
-				"name": "Джонатан Бэрроу (jonbarrow)",
-				"caption": "Уладальнік праекта і вядучы распрацоўшчык",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Джэма (CaramelKat)",
-				"caption": "Даследаванні і распрацоўкі Miiverse",
-				"github": "https://github.com/CaramelKat",
-				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"name": "кваркісты",
-				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png",
-				"caption": "Даследаванні BOSS і распрацоўка выпраўленняў"
-			},
-			{
-				"name": "СуперМарыёДаБом",
-				"caption": "Кансоль і іншыя даследаванні сістэмы",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png",
-				"caption": "Вэб-распрацоўка",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Даследаванне Mario Kart 7 і 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Білі",
-				"caption": "Захавальнік",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			}
-		]
+		"text": "Пазнаёмцеся з камандай, якая стаіць за праектам"
 	},
 	"specialThanks": {
 		"title": "Асобнае дзякуй",
-		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння.",
-		"people": [
-			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "супервусы",
-				"caption": "храбусценне распрацоўкі бібліятэк",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Стары",
-				"caption": "Дысэктар 3DS dev і NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse information sharing",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Special thanks",
-				"caption": "Research on Nintendo datastructures",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Рэмба6Глаз",
-				"caption": "Праграма ўстаноўкі сеткі і даследаванне кансолі",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			}
-		]
+		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння."
 	}
 }

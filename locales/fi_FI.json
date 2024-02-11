@@ -99,100 +99,11 @@
 	},
 	"credits": {
 		"title": "Tiimi",
-		"text": "Tutustu tiimiin projektin takana",
-		"people": [
-			{
-				"caption": "Projektin omistaja ja johtava kehittäjä",
-				"github": "https://github.com/jonbarrow",
-				"picture": "https://github.com/jonbarrow.png",
-				"name": "Jonathan Barrow (jonbarrow)"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"github": "https://github.com/CaramelKat",
-				"caption": "Miiversen tutkiminen ja kehitys",
-				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS tutkimus ja paikkausten kehittäminen",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Konsoli- ja muu järjestelmätutkimus",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Web-kehittäjä",
-				"github": "https://github.com/gitlimes",
-				"picture": "https://github.com/gitlimes.png"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 ja 3DS tutkimus",
-				"github": "https://github.com/shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
-			},
-			{
-				"name": "Billy",
-				"caption": "Säilytystyö",
-				"github": "https://github.com/InternalLoss",
-				"picture": "https://github.com/InternalLoss.png"
-			}
-		]
+		"text": "Tutustu tiimiin projektin takana"
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
-		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
-		"people": [
-			{
-				"name": "GitHub -osallistujat",
-				"caption": "Lokalisaatiot ja muu osallistuminen",
-				"github": "https://github.com/PretendoNetwork",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "crunch-kirjaston kehitys",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001",
-				"caption": "3DS kehittäjä ja NEX:in purku"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse tiedonjako",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Erityiskiitokset",
-				"caption": "Nintendon tietorakenteiden tutkimus",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"github": "https://github.com/ninstar",
-				"caption": "Mii-editorin ja Juxt-reaktioiden kuvakkeet",
-				"picture": "https://github.com/ninstar.png"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Asentajan kehitys ja konsolitutkimus",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			}
-		]
+		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt."
 	},
 	"discordJoin": {
 		"title": "Pysy ajan tasalla",
