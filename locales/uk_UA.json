@@ -240,7 +240,7 @@
 		"title": "Блог",
 		"publishedOn": "у",
 		"published": "Опубліковано",
-		"description": ""
+		"description": "Останні оновлення у стислому вигляді. Якщо ви хочете бачити частіші оновлення, <a href=\"/account/upgrade\" target=\"_blank\">підтримайте нас</a>."
 	},
 	"account": {
 		"loginForm": {
