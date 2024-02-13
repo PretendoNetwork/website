@@ -310,7 +310,7 @@
 				"serverEnv": "Environment du Serveur",
 				"production": "Production",
 				"beta": "Beta",
-				"upgradePrompt": "Les Serveurs Beta sont exclusifs au Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
+				"upgradePrompt": "Les serveurs Beta sont exclusifs aux Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
 				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super !",
 				"newsletterPrompt": "Recevoir les mises à jour via email (vous pourrez toujours changer ça plus tard)",
 				"signInSecurity": "Inscription et sécurité",
