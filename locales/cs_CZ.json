@@ -34,7 +34,7 @@
 		"title": "O nás",
 		"paragraphs": [
 			"Pretendo je open-source projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí legálního reverse engineeringu.",
-			"Protože by naše služby byly jak svobodné, tak open source, můžou existovat dlouho po nevyhnutelném uzavření Nintendo Network."
+			"Protože jsou naše služby svobodný a open-source software, bude možné je nadále provozovat i po ukončení provozu Nintendo Network."
 		]
 	},
 	"credits": {
@@ -166,7 +166,7 @@
 			},
 			{
 				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Pretendo podporuje jakýkoli klient, který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se to mělo v budoucnu změnit. Mikage, emulátor 3DS pro mobilní zařízení, může podporu poskytnout v budoucnu, což ale není jisté."
+				"answer": "Pretendo podporuje jakýkoli klient, který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se to mělo v budoucnu změnit. Mikage, emulátor 3DS pro mobilní zařízení, by mohl podporu poskytnout v budoucnu, tohle ale není jisté."
 			},
 			{
 				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban na Pretendo?",
@@ -225,7 +225,7 @@
 				"beta": "Beta",
 				"serverEnv": "Prostředí serveru",
 				"noDiscordLinked": "Není připojen žádný Discord účet.",
-				"fullSignInHistory": "Zobrazit celou historii přihlašování",
+				"fullSignInHistory": "Zobrazit celou historii přihlášení",
 				"production": "Produkční",
 				"linkDiscord": "Připojit Discord účet",
 				"country": "Země/region",
