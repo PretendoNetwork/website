@@ -23,56 +23,6 @@
 		}
 	},
 	"credits": {
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Criador do projeto e líder de desenvolvimento",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Pesquisa e desenvolvimento do Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Instalador de rede e pesquisa de console",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky",
-				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "Pesquisa de console e outros sistemas",
-				"picture": "https://github.com/supermariodabom.png",
-				"name": "SuperMarioDaBom",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"github": "https://github.com/jipfr",
-				"caption": "Líder de desenvolvimento web",
-				"name": "Jip Fr",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes",
-				"caption": "Desenvolvimento web",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Designer",
-				"github": "https://github.com/mrjvs"
-			}
-		],
 		"title": "Equipa",
 		"text": "Conheça a equipa por trás do projeto"
 	},
@@ -251,57 +201,6 @@
 		"text": "Para a fácil obtenção de informações, aqui estão algumas das perguntas mais comuns."
 	},
 	"specialThanks": {
-		"people": [
-			{
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"caption": "Desenvolvimento da crunch library",
-				"picture": "https://github.com/superwhiskers.png"
-			},
-			{
-				"name": "Stary",
-				"github": "https://github.com/Stary2001",
-				"caption": "Desenvolvimento do 3DS e dissector NEX",
-				"picture": "https://github.com/Stary2001.png"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fornecedor de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Pesquisa do Nintendo 3DS e Mario Kart 7",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "Compartilhamento de informações do Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Agradecimentos especiais",
-				"caption": "Pesquisa da estruturas de dados da Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"picture": "https://github.com/ninstar.png",
-				"caption": "Ícones para o criador Mii e Juxt",
-				"name": "NinStar",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "Contribuidores do GitHub",
-				"caption": "Traduções e outras contribuições",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"title": "Agradecimentos especiais",
 		"text": "Sem eles, Pretendo não estaria onde está hoje."
 	},

@@ -99,56 +99,6 @@
 	},
 	"credits": {
 		"title": "Takımımız",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Proje sahibi ve baş geliştirici",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse araştırma ve geliştirme",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Ağ kurulumu ve konsol araştırması",
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky",
-				"caption": "BOSS araştırma ve yama geliştirme"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"caption": "Konsol ve diğer sistem araştırmaları",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"caption": "Web geliştirme lideri",
-				"picture": "https://github.com/jipfr.png",
-				"name": "Jip Fr",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"github": "https://github.com/gitlimes",
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes",
-				"caption": "Web geliştirme"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Tasarımcı",
-				"github": "https://github.com/mrjvs",
-				"picture": "https://github.com/mrjvs.png"
-			}
-		],
 		"text": "Projenin arkasındaki ekip ile tanışın"
 	},
 	"account": {
@@ -295,57 +245,6 @@
 	},
 	"specialThanks": {
 		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
-		"people": [
-			{
-				"caption": "crunch kütüphane geliştirme",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS geliştirici ve NEX disektörü",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"caption": "Korumacı"
-			},
-			{
-				"github": "https://github.com/shutterbug2000",
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 ve 3DS araştırma",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse bilgi paylaşımı",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Ayrıca teşekkürler",
-				"caption": "Nintendo veri yapıları üzerine araştırma",
-				"github": "https://github.com/Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Mii Editörü için ikonlar ve Juxt tepkileri",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub katılımcıları",
-				"caption": "Yerelleştirmeler ve diğer katkılar"
-			}
-		],
 		"title": "Ayrıca teşekkürler"
 	},
 	"donation": {

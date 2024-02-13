@@ -63,56 +63,6 @@
 		"text": "Наш проект має багато компонентів. Ось деякі з них."
 	},
 	"credits": {
-		"people": [
-			{
-				"caption": "Власник проекту та головний розробник",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"github": "https://github.com/CaramelKat",
-				"caption": "Дослідження та розробки Miiverse",
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Інсталятор мережі та дослідження консолі",
-				"github": "https://github.com/EpicUsername12",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"name": "quarky",
-				"caption": "Дослідження та розробка виправлень BOSS",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Консоль та інші системні дослідження",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"github": "https://github.com/jipfr",
-				"name": "Jip Fr",
-				"caption": "Керівник веб-розробки",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"github": "https://github.com/gitlimes",
-				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png",
-				"caption": "Веб-розробка"
-			},
-			{
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs",
-				"name": "mrjvs",
-				"caption": "Дизайнер"
-			}
-		],
 		"title": "Команда",
 		"text": "Познайомтеся з командою проекту"
 	},
@@ -153,57 +103,6 @@
 	},
 	"specialThanks": {
 		"title": "Особлива подяка",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "розробка бібліотеки crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS розробник і диссектор NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Охоронець",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Дослідження Mario Kart 7 і 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "Надали інформацію про Miiverse",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png"
-			},
-			{
-				"name": "Kinnay",
-				"caption": "Дослідження структур даних Nintendo",
-				"special": "Особлива подяка",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"caption": "Іконка для Mii Editor і реакцій Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"name": "NinStar",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Учасники GitHub",
-				"caption": "Локалізації та інші внески",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"text": "Без них Pretendo не було б таким, яким воно є сьогодні."
 	},
 	"discordJoin": {
