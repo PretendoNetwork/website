@@ -283,8 +283,35 @@
 			"detailsPrompt": "아래에 계정 정보를 입력하세요.",
 			"login": "로그인",
 			"register": "등록하기",
-			"username": "사용자 이름"
+			"username": "사용자 이름",
+			"forgotPassword": "비밀번호를 잊으셨나요?",
+			"registerPrompt": "계정이 없으신가요?",
+			"loginPrompt": "이미 계정을 가지고 계신가요?"
 		},
-		"account": "계정"
+		"account": "계정",
+		"settings": {
+			"downloadFiles": "계정 파일 다운로드",
+			"settingCards": {
+				"profile": "프로필",
+				"nickname": "닉네임",
+				"gender": "성별",
+				"country": "국가/지역",
+				"timezone": "시간대",
+				"serverEnv": "서버 환경"
+			},
+			"upgrade": "계정 업그레이드"
+		},
+		"forgotPassword": {
+			"header": "비밀번호 찾기",
+			"input": "이메일 주소 또는 PNID",
+			"submit": "제출"
+		},
+		"resetPassword": {
+			"header": "비밀번호 재설정",
+			"sub": "아래에 새 비밀번호를 입력하세요",
+			"password": "비밀번호",
+			"confirmPassword": "비밀번호 확인",
+			"submit": "제출"
+		}
 	}
 }
