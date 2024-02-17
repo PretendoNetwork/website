@@ -11,3 +11,37 @@ MOVE PROGRESS CSS HERE
 	color: var(--text-shade-3);
 	text-decoration: underline;
 }
+
+.progress-filter {
+	padding: 8px 72px;
+    border-radius: 10px;
+    background: var(--bg-shade-0);
+    grid-column: span 2;
+}
+
+.progress-filter .container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 20px;
+}
+
+.progress-filter .container button {
+	padding: 0px;
+}
+
+.off {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+	.progress-filter {
+		grid-column: span 1;
+		padding: 10px;
+	}
+
+	.progress-filter .container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+}

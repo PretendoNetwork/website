@@ -391,5 +391,13 @@
 		"cancel": "Cancel",
 		"confirm": "Confirm",
 		"close": "Close"
+	},
+	"filter": {
+		"none": "All",
+		"wiiu": "Wii U",
+		"3ds": "3DS",
+		"web": "Web",
+		"game": "Game",
+		"service": "Service"
 	}
 }
