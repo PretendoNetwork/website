@@ -1,20 +1,38 @@
 const nodemailer = require('nodemailer');
+const aws = require('@aws-sdk/client-ses');
 const config = require('../config.json');
 
-const transporter = nodemailer.createTransport({
-	host: 'smtp.gmail.com',
-	port: 587,
-	secure: false,
-	auth: {
-		user: config.gmail.user,
-		pass: config.gmail.pass
-	}
-});
+let disableEmail = false;
+let transporter;
+
+if (!config.email?.from?.trim() || !config.email?.ses?.region?.trim() || !config.email?.ses?.key?.trim() || !config.email?.ses?.secret?.trim()) {
+	disableEmail = true;
+}
+
+if (!disableEmail) {
+	const ses = new aws.SES({
+		apiVersion: '2010-12-01',
+		region: config.email.ses.region,
+		credentials: {
+			accessKeyId: config.email.ses.key,
+			secretAccessKey: config.email.ses.secret
+		}
+	});
+
+	transporter = transporter = nodemailer.createTransport({
+		SES: {
+			ses,
+			aws
+		}
+	});
+}
 
 async function sendMail(options) {
-	options.from = config.gmail.from;
+	if (transporter) {
+		options.from = config.email.from;
 
-	return await transporter.sendMail(options);
+		await transporter.sendMail(options);
+	}
 }
 
 module.exports = {
