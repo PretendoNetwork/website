@@ -33,9 +33,12 @@
 			}
 		}
 	},
-	"gmail": {
-		"user": "username",
-		"pass": "password",
+	"email": {
+		"ses": {
+			"region": "AWS SES us-east-1",
+			"key": "AWS SES access key",
+			"secret": "AWS SES secret key"
+		},
 		"from": "Firstname Lastname <user@domain.com>"
 	},
 	"trello": {
