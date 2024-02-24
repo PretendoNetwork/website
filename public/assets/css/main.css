@@ -766,6 +766,7 @@ section.update-signup div.circle {
 }
 
 .feature-progress-chart {
+	width: 100px;
 	position: relative;
 }
 .feature-progress-chart p {

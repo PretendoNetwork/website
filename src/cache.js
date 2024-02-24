@@ -69,6 +69,25 @@ query getProjectsV2Fields($id: ID!, $cursor: String!) {
 	}
 }
 `;
+const GetRepositoryDescription = gql`
+query GetRepositoryDescription($orgName: String!, $repoName: String!){
+    repository(owner: $orgName, name: $repoName) {
+		description
+        main: object(expression: "main:README.md") {
+            ... on Blob {
+                text
+            }
+        }
+        master: object(expression: "master:README.md") {
+            ... on Blob {
+                text
+            }
+        }        
+    }
+}
+`; //Loophole to get the ReadMe No Matter the branch name
+
+const serviceApps = ["account","nex","friends","wii u chat", "juxt", "website"]
 
 let githubProjectsCache = {
 	update_time: 0,
@@ -133,6 +152,69 @@ async function getGitHubProjectsV2Fields(id, after='') {
 	return fields;
 }
 
+async function getRepoType(name, title){
+	const data = await github.request(GetRepositoryDescription, {
+		orgName: 'PretendoNetwork',
+		repoName: name
+	 })
+	 let readMe = ""
+	 if (data.repository.main != null)
+	 	readMe = data.repository.main.text
+	 else
+	 	readMe = data.repository.master.text 
+
+	 readMe = readMe.split('\n')[0].toLowerCase()
+	 let description = data.repository.description
+	 if (description != null)
+	 	description = description.toLowerCase()
+	 else
+	 	description = ""
+	return await setRepoType(title.toLowerCase(),description,readMe)
+}
+
+
+async function setRepoType(title, description, readMe){
+	let types = []
+	let isGame = true
+	for (let app of serviceApps)
+		if (title.includes(app)){
+			types.push("Service")
+			isGame = false
+			break
+		}
+
+	if (isGame) {
+		types.push("Game")
+	}
+	
+	if (title.includes('(') && isGame){
+		if (title.includes('3ds'))
+			types.push("3DS")
+		else
+			types.push("Wii U")
+		return types
+	}
+
+	
+	if (title === 'nex' || title.includes('juxt') || title.includes('account')){
+		types.push('3DS')
+		types.push('Wii U')
+		if (title.includes('juxt'))
+			types.push("Website")
+	}
+	else if (title.includes('web')){
+		types.push("Website")
+	}
+	else if (description.includes('3ds') || readMe.includes('3ds') || title.includes('3ds')){
+		types.push('3DS')
+	}
+	else{
+		types.push('Wii U')
+	}
+	
+	return types
+}
+
 async function getGithubProjectsCache() {
 	if (githubCacheBeingFetched) {
 		return githubProjectsCache;
@@ -172,7 +254,8 @@ async function updateGithubProjectsCache() {
 				done: [],
 				in_progress: [],
 				todo: []
-			}
+			},
+			type: []
 		};
 
 		const fields = await getGitHubProjectsV2Fields(project.id);
@@ -180,6 +263,9 @@ async function updateGithubProjectsCache() {
 		for (const field of fields) {
 			extractedData.cards[field.column.toLowerCase().replace(' ', '_')]?.push(field.title);
 		}
+
+		const types = await getRepoType(project.url.split("/")[4], project.title)
+		extractedData.type = types
 
 		projectsCacheData.sections.push(extractedData);
 	}

@@ -24,24 +24,24 @@
 			<p class="localeReplace">{{{ locale.donation.progress }}} {{{ locale.donation.upgradePush }}}</p>
 		</div>
 
-		<div id="quick-nav">
-			<h1 class="title dot">Quick Nav</h1>
-			<ul>
-				{{#each progressLists.sections}}
-				<li>
-					<a href="#{{slug this.title}}">{{this.title}}</a>
-				</li>
-				{{/each}}
-			</ul>
+		<div class="progress-filter">
+			<div class="container" id="filter-container">
+				<button class="filter primary" id="none"> {{locale.filter.none}} </button>
+				<button class="filter" id="wii u"> {{locale.filter.wiiu}} </button>
+				<button class="filter" id="3ds"> {{locale.filter.3ds}} </button>
+				<button class="filter" id="web"> {{locale.filter.web}} </button>
+				<button class="filter" id="game"> {{locale.filter.game}} </button>
+				<button class="filter" id="service"> {{locale.filter.service}} </button>
+			</div>
 		</div>
-		<br>
+
 		{{#each progressLists.sections}}
-		<div class="purple-card" id="{{slug this.title}}">
+		<div class="purple-card" id="{{slug this.title}}" type="{{this.type}}">
 			{{> progress-list data=this }}
 		</div>
 		{{/each}}
 	</div>
-
+	<script src="/assets/js/filter-progress.js"></script>
 	{{> footer }}
 
 </div>
