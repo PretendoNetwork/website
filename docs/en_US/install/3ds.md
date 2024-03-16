@@ -68,7 +68,7 @@ Press `START` to save and continue with these changes.
 
 If you downloaded the combined or cia archives, you can install Nimbus to the HOME Menu for quick and easy access.
 
-Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/Steveice10/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
+Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
 
 Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Click OK and you'll now have Nimbus on your HOME Menu.
 
