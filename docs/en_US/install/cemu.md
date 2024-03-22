@@ -2,21 +2,15 @@
 
 # Cemu
 
-<div class="tip red">
-	<strong>Note:</strong>
-	Currently, the usage of a real modded Wii U Console is required to dump the online files from your Pretendo user.
-</div>
-
 ## Download
 <div class="tip red">
 	<strong>Note:</strong>
 	Only experimental builds of Cemu 2.0 are supported. At this time Cemu does not have a stable release of Cemu 2.0 which supports Pretendo
 </div>
 
-
 Cemu 2.0 has official built-in support for Pretendo as of October 10, 2022. Head to the Cemu GitHub [releases](https://github.com/cemu-project/Cemu/releases) page and download the latest Cemu experimental release (tagged as `Pre-release`). Only `Cemu 2.0-5 (Experimental)` and above is supported at the moment. Additionally you may build Cemu from source using the provided [build instructions](https://github.com/cemu-project/Cemu/blob/main/BUILD.md)
 
-After you can follow [Cemu's online guide](https://cemu.cfw.guide/online-play.html) to dump the online files from your Pretendo user account on your Wii U.
+After you can follow [Cemu's online guide](https://cemu.cfw.guide/online-play.html) to dump the online files from your Wii U after you logged in to your Pretendo Account on it.
 
 ## Connecting to Pretendo
 Once you have Cemu setup for online play navigate to `Options > General settings > Account`. You should now see a section titled `Network Service`. Select your PNID from the `Active account` menu and select the `Pretendo` Network Service option. Cemu should now be connected to Pretendo's servers
