@@ -1,0 +1,24 @@
+.title404{
+    text-align: center;
+    font-size: 8rem;
+    padding-top: 60px;
+	color: var(--text-shade-1);
+}
+.dis404{
+    text-align: center;
+    font-size: 1.7rem;
+    margin-top: -10px;
+	color: var(--text-shade-1);
+}
+.shockedbandwidth{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: -120px;
+}
+@media screen and (max-width: 900px) {
+    .shockedbandwidth{
+        margin-bottom: -100px;
+    }
+}
