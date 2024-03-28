@@ -69,25 +69,20 @@ query getProjectsV2Fields($id: ID!, $cursor: String!) {
 	}
 }
 `;
-const GetRepositoryDescription = gql`
-query GetRepositoryDescription($orgName: String!, $repoName: String!){
+const getRepositoryDescription = gql`
+query getRepositoryDescription($orgName: String!, $repoName: String!){
     repository(owner: $orgName, name: $repoName) {
 		description
-        main: object(expression: "main:README.md") {
+		readme: object(expression: "HEAD:README.md") {
             ... on Blob {
                 text
             }
-        }
-        master: object(expression: "master:README.md") {
-            ... on Blob {
-                text
-            }
-        }        
+        } 
     }
 }
-`; //Loophole to get the ReadMe No Matter the branch name
+`;
 
-const serviceApps = ["account","nex","friends","wii u chat", "juxt", "website"]
+const serviceApps = ["account", "nex", "friends", "wii u chat", "juxt", "website"];
 
 let githubProjectsCache = {
 	update_time: 0,
@@ -152,67 +147,50 @@ async function getGitHubProjectsV2Fields(id, after='') {
 	return fields;
 }
 
-async function getRepoType(name, title){
-	const data = await github.request(GetRepositoryDescription, {
+async function getRepoType(name, title) {
+	const data = await github.request(getRepositoryDescription, {
 		orgName: 'PretendoNetwork',
 		repoName: name
-	 })
-	 let readMe = ""
-	 if (data.repository.main != null)
-	 	readMe = data.repository.main.text
-	 else
-	 	readMe = data.repository.master.text 
-
-	 readMe = readMe.split('\n')[0].toLowerCase()
-	 let description = data.repository.description
-	 if (description != null)
-	 	description = description.toLowerCase()
-	 else
-	 	description = ""
-	return await setRepoType(title.toLowerCase(),description,readMe)
+	});
+	const readme = data.repository.readme.text.split('\n')[0].toLowerCase();
+	const description = data.repository.description?.toLowerCase() || '';
+	return setRepoType(title.toLowerCase(), description, readme);
 }
-
-
-async function setRepoType(title, description, readMe){
-	let types = []
-	let isGame = true
-	for (let app of serviceApps)
-		if (title.includes(app)){
-			types.push("Service")
-			isGame = false
-			break
+function setRepoType(title, description, readMe) {
+	const types = [];
+	let isGame = true;
+	for (const app of serviceApps) {
+		if (title.includes(app)) {
+			types.push('Service');
+			isGame = false;
+			break;
 		}
-
+	}
 	if (isGame) {
-		types.push("Game")
+		types.push('Game');
 	}
-	
-	if (title.includes('(') && isGame){
-		if (title.includes('3ds'))
-			types.push("3DS")
-		else
-			types.push("Wii U")
-		return types
+	if (title.includes('(') && isGame) {
+		if (title.includes('3ds')) {
+			types.push('3DS');
+		} else {
+			types.push('Wii U');
+		}
+		return types;
 	}
-
-	
-	if (title === 'nex' || title.includes('juxt') || title.includes('account')){
-		types.push('3DS')
-		types.push('Wii U')
-		if (title.includes('juxt'))
-			types.push("Website")
+	if (title === 'nex' || title.includes('juxt') || title.includes('account')) {
+		types.push('3DS');
+		types.push('Wii U');
+		if (title.includes('juxt')) {
+			types.push('Website');
+		}
+	} else if (title.includes('web')) {
+		types.push('Website');
+	} else if (description.includes('3ds') || readMe.includes('3ds') || title.includes('3ds')) {
+		types.push('3DS');
+	} else {
+		types.push('Wii U');
 	}
-	else if (title.includes('web')){
-		types.push("Website")
-	}
-	else if (description.includes('3ds') || readMe.includes('3ds') || title.includes('3ds')){
-		types.push('3DS')
-	}
-	else{
-		types.push('Wii U')
-	}
-	
-	return types
+	return types;
 }
 
 async function getGithubProjectsCache() {
@@ -255,7 +233,7 @@ async function updateGithubProjectsCache() {
 				in_progress: [],
 				todo: []
 			},
-			type: []
+			types: []
 		};
 
 		const fields = await getGitHubProjectsV2Fields(project.id);
@@ -264,8 +242,7 @@ async function updateGithubProjectsCache() {
 			extractedData.cards[field.column.toLowerCase().replace(' ', '_')]?.push(field.title);
 		}
 
-		const types = await getRepoType(project.url.split("/")[4], project.title)
-		extractedData.type = types
+		extractedData.types  = await getRepoType(project.url.split("/")[4], project.title)
 
 		projectsCacheData.sections.push(extractedData);
 	}
