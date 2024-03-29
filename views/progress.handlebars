@@ -26,12 +26,18 @@
 
 		<div class="progress-filter">
 			<div class="container" id="filter-container">
-				<button class="filter primary" id="none"> {{locale.filter.none}} </button>
-				<button class="filter" id="wii u"> {{locale.filter.wiiu}} </button>
-				<button class="filter" id="3ds"> {{locale.filter.3ds}} </button>
-				<button class="filter" id="web"> {{locale.filter.web}} </button>
-				<button class="filter" id="game"> {{locale.filter.game}} </button>
-				<button class="filter" id="service"> {{locale.filter.service}} </button>
+				<div class="sub-container" id="no-filter">
+					<button class="filter primary breaker" id="none"> {{locale.filter.none}} </button>
+				</div>
+				<div class="sub-container" id="device">
+					<button class="filter" id="wii u"> {{locale.filter.wiiu}} </button>
+					<button class="filter" id="3ds"> {{locale.filter.3ds}} </button>
+					<button class="filter" id="web"> {{locale.filter.web}} </button>
+				</div>
+				<div class="sub-container" id="type">
+					<button class="filter" id="game"> {{locale.filter.game}} </button>
+					<button class="filter" id="service"> {{locale.filter.service}} </button>
+				</div>
 			</div>
 		</div>
 

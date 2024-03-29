@@ -13,20 +13,38 @@ MOVE PROGRESS CSS HERE
 }
 
 .progress-filter {
-	padding: 8px 72px;
+	padding: 8px;
     border-radius: 10px;
     background: var(--bg-shade-0);
     grid-column: span 2;
 }
 
 .progress-filter .container {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-gap: 20px;
+	display: flex;
+	justify-content: flex-start;
 }
 
-.progress-filter .container button {
-	padding: 0px;
+.progress-filter .container .sub-container {
+	display: flex;
+	margin-inline: 5px;
+	position: relative;
+}
+
+.progress-filter .container .sub-container:not(:last-child):after {
+	content: '';
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	right: -10px;
+	width: 3px;
+	background-color: var(--bg-shade-3);
+}
+
+
+
+.progress-filter .container .sub-container button {
+	padding: 0px 8px;
+	margin-inline-start: 5px;
 }
 
 .off {
@@ -39,9 +57,20 @@ MOVE PROGRESS CSS HERE
 		grid-column: span 1;
 		padding: 10px;
 	}
+}
+@media screen and (max-width: 576px) {
 
 	.progress-filter .container {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
 	}
+
+	.progress-filter .container .sub-container {
+		margin: 0px;
+	}
+
+	.progress-filter .container .sub-container:not(:last-child):after {
+		content: '';
+		display: none;
+	}
+
 }
