@@ -117,15 +117,17 @@ As this guide has made clear, you have separate profiles for Nintendo Network an
 
 To do this, we need to use a tool called SaveMii WUT Port. You can download it from the Homebrew App Store in Aroma or you can download the latest release on [GitHub](https://github.com/Xpl0itU/savemii/releases).
 
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" width="100%">
+
 Once installed, open the application from the HOME Menu, it should look something like this when you first load the application up.
 
-[insert image here]
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" width="100%">
 
 Go into Wii U Save Management and select what game you would like to dump. As an example, I am going to use the game "Captain Toad: Treasure Tracker", but you can use any game you like. Once you're hovering over the game that you want to transfer save data from, press the `A button`.
 
 On the screen that appears, select the `A button` again to backup our savedata. You'll be greeted with a menu that looks like this.
 
-[insert image here]
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" width="100%">
 
 Use the D-Pad to select which slot you want to save your data to, each game will need to backup to a different save data slot. For example, since this is the first game I want to transfer my data to my Pretendo account, I'm going to use slot 000.
 
@@ -135,16 +137,14 @@ Press the `A button` when ready to backup your save data.
 
 Once that has completed, go back and go to the `restore savedata` section for the game.
 
-[insert image here]
-
 At this section, you will need to be careful that you select the right settings here. Use the D-Pad to select which slot you backed up to (in my case, 000) and select the right user profile to copy from. If it says empty for that profile (or the no common save data found), it may not necessarily be true but be careful (such as my case). Then, select your Pretendo user profile to copy to.
 
-[insert image here]
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.jpg" width="100%">
 
 When ready, press the `A button` to transfer your data. Press `A button` again to confirm your actions. If you get another message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
 
 Once that's done, exit SaveMii and make sure the game you transferred works properly on your Pretendo profile.
 
-[insert image here]
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" width="100%">
 
 If the game works fine, that means you've successfully transferred a games data over! Repeat this process for any other save data you'd like to transfer to your Pretendo profile.
