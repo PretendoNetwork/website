@@ -11,7 +11,7 @@ You can get a Wii U onto Pretendo in just 3 steps:
 2. [Connecting to Pretendo](#connecting-to-pretendo)
 3. [PNID Setup](#pnid-setup)
 
-Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network.
+Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network. It also might be worth checking out [this](#transferring-save-data-to-your-pretendo-network-account) if you want to transfer save data between your profiles.
 
 # RCE Patches
 ~~Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
@@ -110,3 +110,41 @@ Press `B` twice, followed by the `HOME` button. The console will reboot with Pre
 Now, switch to your desired Network ID via the Account selection screen.
 
 To return to Pretendo Network, repeat the process ensuring 'Connect to the Pretendo Network' is set to **true**.
+
+# Transfering save data to your Pretendo Network account
+
+As this guide has made clear, you have separate profiles for Nintendo Network and Pretendo Network. You may want to use the save data on your Nintendo Network profile on the Pretendo Network profile, particularly for online games such as Splatoon.
+
+To do this, we need to use a tool called SaveMii WUT Port. You can download it from the Homebrew App Store in Aroma or you can download the latest release on [GitHub](https://github.com/Xpl0itU/savemii/releases).
+
+Once installed, open the application from the HOME Menu, it should look something like this when you first load the application up.
+
+[insert image here]
+
+Go into Wii U Save Management and select what game you would like to dump. As an example, I am going to use the game "Captain Toad: Treasure Tracker", but you can use any game you like. Once you're hovering over the game that you want to transfer save data from, press the `A button`.
+
+On the screen that appears, select the `A button` again to backup our savedata. You'll be greeted with a menu that looks like this.
+
+[insert image here]
+
+Use the D-Pad to select which slot you want to save your data to, each game will need to backup to a different save data slot. For example, since this is the first game I want to transfer my data to my Pretendo account, I'm going to use slot 000.
+
+Make sure to select the right user profile too depending on the game (if you're not sure which user profile you want to backup, look at System Settings to see whether save data for a game is for a specific profile or all users). If you get an error about "no 'common' save data found", you may not have any save data on that profile (in my case, I did and the transfer process worked fine).
+
+Press the `A button` when ready to backup your save data.
+
+Once that has completed, go back and go to the `restore savedata` section for the game.
+
+[insert image here]
+
+At this section, you will need to be careful that you select the right settings here. Use the D-Pad to select which slot you backed up to (in my case, 000) and select the right user profile to copy from. If it says empty for that profile (or the no common save data found), it may not necessarily be true but be careful (such as my case). Then, select your Pretendo user profile to copy to.
+
+[insert image here]
+
+When ready, press the `A button` to transfer your data. Press `A button` again to confirm your actions. If you get another message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
+
+Once that's done, exit SaveMii and make sure the game you transferred works properly on your Pretendo profile.
+
+[insert image here]
+
+If the game works fine, that means you've successfully transferred a games data over! Repeat this process for any other save data you'd like to transfer to your Pretendo profile.
