@@ -132,7 +132,7 @@ Once installed, open the application from the HOME Menu. You should see a menu f
 
 Select `Wii U Save Management`. You should now see a list of installed games. Find and select the game you would like to transfer the save data of.
 
-On the screen that appears, select the `A button` again to backup our savedata. You'll be greeted with a menu that looks like this.
+Select `Backup savedata`.
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" width="100%">
 
