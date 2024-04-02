@@ -163,4 +163,4 @@ Once completed, exit SaveMii and ensure the game you transferred works properly 
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" width="100%">
 
-If the game works fine, that means you've successfully transferred a games data over! Repeat this process for any other save data you'd like to transfer to your Pretendo profile.
+Repeat this process for any other save data you'd like to transfer to your Pretendo profile.
