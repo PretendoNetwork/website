@@ -136,7 +136,7 @@ Select `Backup savedata`.
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" width="100%">
 
-Use the D-Pad to select which slot you want to save your data to, each game will need to backup to a different save data slot. For example, since this is the first game I want to transfer my data to my Pretendo account, I'm going to use slot 000.
+Select a new slot to backup the save data to. If you select a non-empty slot, the backup data in that slot will be overwritten. 
 
 Make sure to select the right user profile too depending on the game (if you're not sure which user profile you want to backup, look at System Settings to see whether save data for a game is for a specific profile or all users). If you get an error about "no 'common' save data found", you may not have any save data on that profile (in my case, I did and the transfer process worked fine).
 
