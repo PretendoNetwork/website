@@ -138,7 +138,9 @@ Select `Backup savedata`.
 
 Select a new slot to backup the save data to. If you select a non-empty slot, the backup data in that slot will be overwritten. 
 
-Make sure to select the right user profile too depending on the game (if you're not sure which user profile you want to backup, look at System Settings to see whether save data for a game is for a specific profile or all users). If you get an error about "no 'common' save data found", you may not have any save data on that profile (in my case, I did and the transfer process worked fine).
+Select the profile to backup the save data from. This should be your ***Nintendo*** Network ID.
+
+Optionally you may select to backup "common" save data. This save data should be shared by all users, and is not required to be backed up. Though you may still do so if you choose.
 
 Press the `A` button when ready to backup your save data.
 
