@@ -126,7 +126,7 @@ To move your save data, you will need a save data backup homebrew application. T
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" width="100%">
 
-Once installed, open the application from the HOME Menu, it should look something like this when you first load the application up.
+Once installed, open the application from the HOME Menu. You should see a menu for Wii U and vWii saves.
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" width="100%">
 
