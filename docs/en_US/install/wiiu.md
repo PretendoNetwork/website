@@ -144,7 +144,7 @@ Optionally you may select to backup "common" save data. This save data should be
 
 Press the `A` button when ready to backup your save data.
 
-Once that has completed, go back and go to the `restore savedata` section for the game.
+Once the backup has completed, press the `B` button to return to the games menu. Select `Restore savedata`.
 
 At this section, you will need to be careful that you select the right settings here. Use the D-Pad to select which slot you backed up to (in my case, 000) and select the right user profile to copy from. If it says empty for that profile (or the no common save data found), it may not necessarily be true but be careful (such as my case). Then, select your Pretendo user profile to copy to.
 
