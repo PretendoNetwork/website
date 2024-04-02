@@ -122,7 +122,7 @@ Pretendo Network is not compatible with existing Nintendo Network IDs. This mean
 	This only works with local save data. Any user data stored on Nintendo's servers cannot be transferred to any other accounts.
 </div>
 
-To do this, we need to use a tool called SaveMii WUT Port. You can download it from the Homebrew App Store in Aroma or you can download the latest release on [GitHub](https://github.com/Xpl0itU/savemii/releases).
+To move your save data, you will need a save data backup homebrew application. This guide will use the WUT port of SaveMii for Aroma.  To begin, download the latest [GitHub release](https://github.com/Xpl0itU/savemii/releases) of SaveMii or download it from the [Homebrew App Store](https://hb-app.store).
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" width="100%">
 
