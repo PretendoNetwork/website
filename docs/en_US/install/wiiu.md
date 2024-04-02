@@ -11,7 +11,9 @@ You can get a Wii U onto Pretendo in just 3 steps:
 2. [Connecting to Pretendo](#connecting-to-pretendo)
 3. [PNID Setup](#pnid-setup)
 
-Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network. It also might be worth checking out [this](#transferring-save-data-to-your-pretendo-network-account) if you want to transfer save data between your profiles.
+Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network.
+
+If you have save data from a Nintendo Network ID you would like to move to your Pretendo Network ID, follow [this](#transferring-save-data-to-your-pretendo-network-account) section.
 
 # RCE Patches
 ~~Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
