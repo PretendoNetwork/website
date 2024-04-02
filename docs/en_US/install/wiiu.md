@@ -115,7 +115,12 @@ To return to Pretendo Network, repeat the process ensuring 'Connect to the Prete
 
 # Transfering save data to your Pretendo Network account
 
-As this guide has made clear, you have separate profiles for Nintendo Network and Pretendo Network. You may want to use the save data on your Nintendo Network profile on the Pretendo Network profile, particularly for online games such as Splatoon.
+Pretendo Network is not compatible with existing Nintendo Network IDs. This means you must create a new account. Because of this, you may want to move existing game save data to your new account.
+
+<div class="tip red">
+	<strong>Note:</strong>
+	This only works with local save data. Any user data stored on Nintendo's servers cannot be transferred to any other accounts.
+</div>
 
 To do this, we need to use a tool called SaveMii WUT Port. You can download it from the Homebrew App Store in Aroma or you can download the latest release on [GitHub](https://github.com/Xpl0itU/savemii/releases).
 
