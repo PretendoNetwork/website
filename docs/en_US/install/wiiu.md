@@ -140,7 +140,7 @@ Use the D-Pad to select which slot you want to save your data to, each game will
 
 Make sure to select the right user profile too depending on the game (if you're not sure which user profile you want to backup, look at System Settings to see whether save data for a game is for a specific profile or all users). If you get an error about "no 'common' save data found", you may not have any save data on that profile (in my case, I did and the transfer process worked fine).
 
-Press the `A button` when ready to backup your save data.
+Press the `A` button when ready to backup your save data.
 
 Once that has completed, go back and go to the `restore savedata` section for the game.
 
