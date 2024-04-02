@@ -13,6 +13,8 @@ You can get a Wii U onto Pretendo in just 3 steps:
 
 Make sure to also check out [this](#switching-between-pretendo-network-and-nintendo-network) section to learn how to switch between Pretendo Network and Nintendo Network.
 
+If you have save data from a Nintendo Network ID you would like to move to your Pretendo Network ID, follow [this](#transferring-save-data-to-your-pretendo-network-account) section.
+
 # RCE Patches
 ~~Unfortunately, some of Pretendo's supported games have major security and safety problems. While Nintendo fixed these
 games on the 3DS, thus far they have neglected the Wii U. Pretendo has a patcher which attempts to fix these problems -
@@ -110,3 +112,55 @@ Press `B` twice, followed by the `HOME` button. The console will reboot with Pre
 Now, switch to your desired Network ID via the Account selection screen.
 
 To return to Pretendo Network, repeat the process ensuring 'Connect to the Pretendo Network' is set to **true**.
+
+# Transfering save data to your Pretendo Network account
+
+Pretendo Network is not compatible with existing Nintendo Network IDs. This means you must create a new account. Because of this, you may want to move existing game save data to your new account.
+
+<div class="tip red">
+	<strong>Note:</strong>
+	This only works with local save data. Any user data stored on Nintendo's servers cannot be transferred to any other accounts.
+</div>
+
+To move your save data, you will need a save data backup homebrew application. This guide will use the WUT port of SaveMii for Aroma.  To begin, download the latest [GitHub release](https://github.com/Xpl0itU/savemii/releases) of SaveMii or download it from the [Homebrew App Store](https://hb-app.store).
+
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" width="100%">
+
+Once installed, open the application from the HOME Menu. You should see a menu for Wii U and vWii saves.
+
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" width="100%">
+
+Select `Wii U Save Management`. You should now see a list of installed games. Find and select the game you would like to transfer the save data of.
+
+Select `Backup savedata`.
+
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" width="100%">
+
+Select a new slot to backup the save data to. If you select a non-empty slot, the backup data in that slot will be overwritten. 
+
+Select the profile to backup the save data from. This should be your ***Nintendo*** Network ID.
+
+Optionally you may select to backup "common" save data. This save data should be shared by all users, and is not required to be backed up. Though you may still do so if you choose.
+
+Press the `A` button when ready to backup your save data.
+
+Once the backup has completed, press the `B` button to return to the games menu. Select `Restore savedata`.
+
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	Restoring a save backup will overwrite the existing save data for the game for the selected user(s). Proceed with caution.
+</div>
+
+Select the backup slot you just backed the save data up to.
+
+Select the profile to restore the save data to. This should be your ***Pretendo*** Network ID.
+
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.jpg" width="100%">
+
+When ready, press the `A` button to transfer your data. Press `A` again to confirm your actions. If you get a message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
+
+Once completed, exit SaveMii and ensure the game you transferred works properly on your Pretendo profile.
+
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" width="100%">
+
+Repeat this process for any other save data you'd like to transfer to your Pretendo profile.
