@@ -159,7 +159,7 @@ Select the profile to restore the save data to. This should be your ***Pretendo*
 
 When ready, press the `A` button to transfer your data. Press `A` again to confirm your actions. If you get a message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
 
-Once that's done, exit SaveMii and make sure the game you transferred works properly on your Pretendo profile.
+Once completed, exit SaveMii and ensure the game you transferred works properly on your Pretendo profile.
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" width="100%">
 
