@@ -130,7 +130,7 @@ Once installed, open the application from the HOME Menu. You should see a menu f
 
 <img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" width="100%">
 
-Go into Wii U Save Management and select what game you would like to dump. As an example, I am going to use the game "Captain Toad: Treasure Tracker", but you can use any game you like. Once you're hovering over the game that you want to transfer save data from, press the `A button`.
+Select `Wii U Save Management`. You should now see a list of installed games. Find and select the game you would like to transfer the save data of.
 
 On the screen that appears, select the `A button` again to backup our savedata. You'll be greeted with a menu that looks like this.
 
