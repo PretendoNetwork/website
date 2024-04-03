@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "블로그",
-		"description": "",
+		"description": "최신 소식을 게시합니다. 만약 소식을 더 자주 보고 싶으시다면, <a href=\"/account/upgrade\" target=\"_blank\">저희를 후원해 주세요.</a>.",
 		"published": "게시자",
 		"publishedOn": "켜기"
 	},
@@ -297,14 +297,19 @@
 				"gender": "성별",
 				"country": "국가/지역",
 				"timezone": "시간대",
-				"serverEnv": "서버 환경"
+				"serverEnv": "서버 환경",
+				"userSettings": "사용자 설정",
+				"birthDate": "생년월일"
 			},
-			"upgrade": "계정 업그레이드"
+			"upgrade": "계정 업그레이드",
+			"unavailable": "이용 불가",
+			"downloadFilesDescription": "(닌텐도 네트워크에서는 작동하지 않습니다)"
 		},
 		"forgotPassword": {
 			"header": "비밀번호 찾기",
 			"input": "이메일 주소 또는 PNID",
-			"submit": "제출"
+			"submit": "제출",
+			"sub": "아래에 이메일 주소/PNID를 입력해 주세요."
 		},
 		"resetPassword": {
 			"header": "비밀번호 재설정",
