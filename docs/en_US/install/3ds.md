@@ -18,7 +18,7 @@ The following steps are required for you to connect to the Pretendo Network:
 	ℹ️ If installed directly from your console for the first time, you will still be required to install the associated IPS patches from GitHub. Once installed, updates may be managed purely from Universal-Updater
 </div>
 
-Before you start, power off your console and insert its SD card into your computer.
+Before starting, power off your console and insert its SD card into your computer.
 
 Once inserted, download the latest [Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest).
 
