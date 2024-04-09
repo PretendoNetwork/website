@@ -11,7 +11,7 @@
 		"browserify-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
 		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
-	"repository": {
+	"repository":{
 		"type": "git",
 		"url": "git+https://github.com/PretendoNetwork/website.git"
 	},
