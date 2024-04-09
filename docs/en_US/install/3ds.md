@@ -1,5 +1,10 @@
 # 3DS/2DS Family
 
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	SYSTEM TRANSFERS ARE NOT CURRENTLY SUPPORTED BY OUR SERVERS. ATTEMPTING TO PERFORM A SYSTEM TRANSFER MAY PREVENT YOU FROM BEING ABLE TO GO ONLINE IN THE FUTURE. SUPPORT FOR SYSTEM TRANSFERS IS IN DEVELOPMENT.
+</div>
+
 <div class="tip">
 	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (13+)</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
 </div>
@@ -18,7 +23,7 @@ The following steps are required for you to connect to the Pretendo Network:
 	ℹ️ If installed directly from your console for the first time, you will still be required to install the associated IPS patches from GitHub. Once installed, updates may be managed purely from Universal-Updater
 </div>
 
-Before you start, power off your console and insert its SD card into your computer.
+Before starting, power off your console and insert its SD card into your computer.
 
 Once inserted, download the latest [Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest).
 

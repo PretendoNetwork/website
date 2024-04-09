@@ -43,6 +43,15 @@ body, .main-body {
 	font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
+code {
+  background-color: var(--bg-shade-0);
+  padding: 4px;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 0.9em;
+  color: var(--text-shade-2);
+}
+
 .main-body {
 	overflow-y: hidden; /* Fixes the dowuble scrollbars caused by the last background circle */
 }
