@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "ブログ（英語）",
-		"description": "",
+		"description": "最新情報の一部。より詳しい最新情報を入手するには、<a href=\"\\&quot;/account/upgrade\\&quot;\" target=\"\\&quot;_blank\\&quot;\">サポート</a>してください。",
 		"publishedOn": "の上",
 		"published": "発行者"
 	},
@@ -312,7 +312,7 @@
 				"production": "製造",
 				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへのアクセスが提供されます。涼しい！",
 				"newsletter": "ニュースレター",
-				"discord": "不和",
+				"discord": "Discord",
 				"noDiscordLinked": "Discord アカウントがリンクされていません。",
 				"birthDate": "生年月日",
 				"serverEnv": "サーバー環境",
