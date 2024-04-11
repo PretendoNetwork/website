@@ -73,6 +73,22 @@ Place your SD card back into your console and boot like normal. You should see a
 
 You are now connected to Pretendo Network.
 
+## After you set up your PNID on your Wii U.
+Shut off your console, and put the SD Card into your PC.
+
+Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. It's normal for other Aroma modules to be in this folder too.
+
+<img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
+
+Turn on your console
+
+Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+
+Select 'Inkay', then choose BOSS settings, then click 'Unregister Wara Wara Plaza BOSS tasks'
+
+Restart your console.
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
