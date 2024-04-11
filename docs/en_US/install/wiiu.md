@@ -55,8 +55,8 @@ Bleeding edge builds have not been widely tested, and do not guarantee any stabi
 
 <img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
 
-## Nimbus
-Nimbus is a Aroma plugin that allows your console to recive Spotpass data again. Download the latest version from [Nimbus's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the latest release.
+## Nimble
+Nimble is a Aroma plugin that allows your console to recive Spotpass data again. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the latest release.
 
 <img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" width="100%">
 
