@@ -110,7 +110,7 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 	<li id="footnote-1"><sup>[1]</sup> Some games may require a PNID for certain actions, such as eShop purchases. The only known game which requires a PNID for general use is Nintendo Badge Arcade, which is not yet supported</li>
 </ul>
 
-### What do I do if my console says that my badges get erased?
+### What do I do if the Home Menu says I have no badges after switching?
 Follow these steps.
 
 1. Insert your SD Card into your PC
