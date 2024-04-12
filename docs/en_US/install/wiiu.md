@@ -65,11 +65,23 @@ Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/envi
 
 <img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width="100%">
 
+Place the file `30_nimble.rpx` on your SD card inside the folder `sd:/wiiu/environments/aroma/modules/setup`. 
+
+<img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
+
+Turn on your console.
+
 Place your SD card back into your console and boot like normal. You should see a notification of your connection:
 
 <img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
 
 You are now connected to Pretendo Network.
+
+Press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+
+Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully.
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
@@ -91,21 +103,6 @@ After installing Pretendo, you must register a Pretendo Network ID (PNID). There
 	<strong>CAUTION:</strong>
 	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! If you have any existing Nintendo Network IDs on your Wii U which share the username you wish to use, those accounts MUST be removed from your console first.
 </div>
-
-## After you set up your Pretendo Network ID on your Wii U.
-Shut off your console, and put the SD Card into your machine.
-
-Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. 
-
-<img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
-
-Turn on your console.
-
-After your console has booted up, press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
-
-<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
-
-Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully.
 
 ### Website
 You will want to register an account from [here](/account) and click `Don't have an account?` to register.
