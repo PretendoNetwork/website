@@ -117,7 +117,7 @@ Follow these steps.
 
 2. Back up your badges at the folder on your SD Card "sd:Nintendo 3DS[ID0][ID1]\extdata\00000000\000014d1" and copying them to a safe place on your device.
 
-[ID0] and [ID1] are place holders, the actual folder names will be 32 characters, such as, ahsy7shdye7hdyeu47jd723jks89i32a. This will not be your actual ID 1 or 2. just in case this doesn't work.
+[ID0] and [ID1] are place holders, the actual folder names will be 32 characters.
 
 3. Install [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)) on your 3DS console
 
@@ -136,3 +136,5 @@ Follow these steps.
 10. Save the file. It might be a good idea to choose "Save As" and then save them into a different folder so you can separate them into Pretendo and Nintendo versions.
 
 11. Put your SD card back into your 3DS and go back into SBI, then inject your modified badge data files. They should now show up with zero issues! (Hopefully, hence the backup)
+
+This will remove badges from your Nintendo Network accouint, but all badges will be intact on Pretendo Network.
