@@ -55,11 +55,11 @@
 			},
 			{
 				"question": "Pretendoの使い方は?",
-				"answer": "Pretendoは現在、一般公開できる状態ではありません。準備が整い次第、私たちのHomebrew Pacherを機種で実行するだけでPretendoを使うことができるようになります。"
+				"answer": "Pretendoは現在、一般公開ができる状態ではありません。準備が整い次第、パッチャーのHomebrewを実行するだけでPretendoを使うことができるようになります。"
 			},
 			{
-				"question": "機能やサービスの準備が整うのはいつになりますか?",
-				"answer": "いいえ。Pretendoの多くの機能やサービスは独立して開発されています (例えばMiiverseはある開発者によって開発、アカウントとフレンド機能は他の開発者によって開発されています) 全体的な開発期間を示すことはできません。"
+				"question": "機能やサービスがいつ完成するかわかりますか?",
+				"answer": "いいえ。Pretendoの多くの機能やサービスは独立して開発されています (例えばMiiverseはある開発者によって開発、アカウントとフレンド機能は他の開発者によって開発されています) 全体的な開発期間をお伝えすることはできません。"
 			},
 			{
 				"question": "Cemuやエミュレーターで使えますか?",
@@ -80,7 +80,7 @@
 		]
 	},
 	"showcase": {
-		"title": "私たちが作るもの",
+		"title": "私たちが制作する物",
 		"text": "私たちのプロジェクトは多くのコンポーネントがあります。ここではその一部を紹介します。",
 		"cards": [
 			{
@@ -121,7 +121,7 @@
 			},
 			{
 				"name": "SuperMarioDaBom",
-				"caption": "システムの研究とサーバーアーキテクチャ",
+				"caption": "システムの研究とサーバー構成",
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom"
 			},
@@ -139,7 +139,7 @@
 			},
 			{
 				"name": "Billy",
-				"caption": "プリザベーションサーバーアーキテクチャ",
+				"caption": "プリザベーションサーバー構成",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss"
 			},
@@ -245,7 +245,7 @@
 			"スーパーマリオ ヨッシーアイランドのメインテーマは絶対的な名曲。",
 			"私が好きなNintendo Switchのソフトは「Nintendo Switch Online + 拡張パック」「Nintendo Switch Online + 振動パック」「Nintendo Switch Online + オフラインプレイパック」「Nintendo Switch Online + さらに別の移植パック」「Nintendo Switch Online + 川島教授の脳トレ/脳年齢」です。「Wii Uバーチャルコンソールのタイトルがお気に召したようなので復活させますパック」...Nintendoの気遣いが伝わってくる。",
 			"「アッシュを知っているでしょう?彼女の心を祝福してください、彼女は一日中 UwU です」というのは南部の素敵な言い方で「アッシュはいつも UwU してるけど、本当に奇妙で愚かなことだからやめて欲しかった」と言うことと同じです。",
-			"僕のチャンネルで初めての動画だ!ずっと前から動画を作りたかったんだけど、ノートパソコンの動作が悪くてFrapsやSkype、Minecraftを一度に動かすことができなかったんだ。でもそれはもう終わった!ITの先生の助けもあって、僕のノートパソコンの動作はかなり良くなって録画もできるようになったんだ。みんな楽しんでくれたら幸いです。もしよろしければ「いいね」と「チャンネル登録」をお願いします!!!"
+			"僕のチャンネルで初めての動画だ!ずっと前から動画を作りたかったんだけど、ノートパソコンの動作が悪くてFrapsやSkype、Minecraftを一度に動かすことができなかったんだ。でもそれはもう終わった!ITの先生の助けもあって、僕のノートパソコンの動作はかなり良くなって録画もできるようになったんだ。みんな楽しんでくれたら幸いです。もしよろしければ「高評価」と「チャンネル登録」をお願いします!!!"
 		]
 	},
 	"progressPage": {
@@ -351,7 +351,7 @@
 	},
 	"localizationPage": {
 		"title": "ローカライズをしましょう",
-		"description": "公開されているJSONロケールへのリンクを貼り付けて、Webサイトでテストします。",
+		"description": "公開されているJSONロケールへのリンクを貼り付けて、Webサイトでテストをします。",
 		"instructions": "ローカライズの手順を表示する",
 		"fileInput": "テストをするファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
