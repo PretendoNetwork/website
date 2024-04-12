@@ -137,4 +137,4 @@ Follow these steps.
 
 11. Put your SD card back into your 3DS and go back into SBI, then inject your modified badge data files. They should now show up with zero issues! (Hopefully, hence the backup)
 
-This will remove badges from your Nintendo Network accouint, but all badges will be intact on Pretendo Network.
+This will remove badges from your Nintendo Network account, but all badges will be intact on Pretendo Network.
