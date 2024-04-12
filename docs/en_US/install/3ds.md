@@ -113,18 +113,26 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 ### What do I do if my console says that my badges get erased?
 Follow these steps.
 
-1. Back up your badges at "sdmc:/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/000014d1" just in case this doesn't work.
+1. Insert your SD Card into your PC
 
-2. Use Nimbus to switch to Pretendo.
+2. Back up your badges at the folder on your SD Card "sd:Nintendo 3DS[ID0][ID1]\extdata\00000000\000014d1" and copying them to a safe place on your device.
 
-3. Install and open [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)) on your 3DS console and make a note of the "Nintendo Network ID" value.
+[ID0] and [ID1] are place holders, the actual folder names will be 32 characters, such as, ahsy7shdye7hdyeu47jd723jks89i32a. This will not be your actual ID 1 or 2. just in case this doesn't work.
 
-4. Still inside SBI, choose the option to dump your badge data files.
+3. Install [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)) on your 3DS console
 
-5. Turn off your 3DS and remove the SD card. On your PC, insert your SD card and download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest). Go to File -> Open Data, then choose the folder where BadgeData.dat and BadgeMngFile.dat are.
+4. Insert your SD Card into your console.
 
-6. Replace the NNID value with the one you made a note of in SBI earlier.
+5. Use Nimbus to switch to Pretendo.
 
-7. Save the file. It might be a good idea to choose "Save As" and then save them into a different folder so you can separate them into Pretendo and Nintendo versions.
+6. Open Simple Badge Injector on your console and make a note of the "Nintendo Network ID" value.
 
-8. Put your SD card back into your 3DS and go back into SBI, then inject your modified badge data files. They should now show up with zero issues! (Hopefully, hence the backup)
+7. Still inside SBI, choose the option to dump your badge data files.
+
+8. Turn off your 3DS and remove the SD card. On your PC, insert your SD card and download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest). Go to File -> Open Data, then choose the folder where BadgeData.dat and BadgeMngFile.dat are.
+
+9. Replace the NNID value with the one you made a note of in SBI earlier.
+
+10. Save the file. It might be a good idea to choose "Save As" and then save them into a different folder so you can separate them into Pretendo and Nintendo versions.
+
+11. Put your SD card back into your 3DS and go back into SBI, then inject your modified badge data files. They should now show up with zero issues! (Hopefully, hence the backup)
