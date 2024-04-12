@@ -89,7 +89,13 @@ The 3DS does not rely on NNIDs for the vast majority of it's game servers. Becau
 
 Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
 
+To create or link an account, you must go to the settings application and select 'Nintendo Network ID Settings'. Proceed until you get the option to select the option to login to an existing account, or create a new one, choose the one that applies to you and continue on.
+
 It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
+
+<div class="tip">
+ℹ️ <b>When creating an account via your console you may receive a prompt saying that the domain name for your email address is invalid, this is safe to ignore.</b>
+</div>
 
 ## Other information
 
