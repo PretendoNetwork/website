@@ -249,11 +249,11 @@
 		]
 	},
 	"progressPage": {
-		"title": "進捗",
+		"title": "進捗 (英語)",
 		"description": "プロジェクトの進捗状況と目標を確認しましょう! (約1時間おきに更新されるため、プロジェクトのすべての目標や進捗状況を反映しているわけではありません)"
 	},
 	"blogPage": {
-		"title": "ブログ",
+		"title": "ブログ (英語)",
 		"description": "凝縮した最新情報をお届けします。より頻繁なアップデートをご覧になりたい方は、<a href=\"/account/upgrade\" target=\"_blank\">ご支援</a>をご検討ください。",
 		"published": "Published by",
 		"publishedOn": "on"
