@@ -56,7 +56,7 @@ Bleeding edge builds have not been widely tested, and do not guarantee any stabi
 <img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
 
 ## Nimble
-Nimble is a Aroma plugin that allows your console to recive SpotPass data again. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the latest release.
+Nimble is a Aroma plugin that redirects the PolicyList servers to Pretendo's servers. This makes certain games (such as Splatoon) work with online play. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the GitHub page.
 
 <img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" width="100%">
 
@@ -65,8 +65,6 @@ Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/envi
 
 <img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width="100%">
 
-Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. It's normal for other Aroma modules to be in this folder too.
-
 Place your SD card back into your console and boot like normal. You should see a notification of your connection:
 
 <img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
@@ -74,21 +72,19 @@ Place your SD card back into your console and boot like normal. You should see a
 You are now connected to Pretendo Network.
 
 ## After you set up your PNID on your Wii U.
-Shut off your console, and put the SD Card into your PC.
+Shut off your console, and put the SD Card into your machine.
 
-Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. It's normal for other Aroma modules to be in this folder too.
+Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. 
 
 <img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
 
-Turn on your console
+Turn on your console.
 
-Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+After your console has booted up, press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
 
 <img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
 
-Select 'Inkay', then choose BOSS settings, then click 'Unregister Wara Wara Plaza BOSS tasks'
-
-Restart your console.
+Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully.
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
@@ -125,16 +121,6 @@ Once your account is registered, link it to your console as you would a Nintendo
 
 ### Wii U
 Create the Pretendo Network ID as you would a Nintendo Network ID.
-
-## After you set up your PNID on your Wii U.
-
-Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
-
-<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
-
-Select 'Inkay', then choose BOSS settings, then click 'Unregister Wara Wara Plaza BOSS tasks'
-
-Restart your console.
 
 # Transferring save data to your Pretendo Network account
 
