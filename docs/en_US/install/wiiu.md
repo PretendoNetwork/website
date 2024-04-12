@@ -56,7 +56,7 @@ Bleeding edge builds have not been widely tested, and do not guarantee any stabi
 <img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
 
 ## Nimble
-Nimble is a Aroma plugin that redirects the PolicyList servers to Pretendo's servers. This makes certain games (such as Splatoon) work with online play. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the GitHub page.
+Nimble is a Aroma plugin that redirects the PolicyList to Pretendo. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the GitHub page.
 
 <img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" width="100%">
 
