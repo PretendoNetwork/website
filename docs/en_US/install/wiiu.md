@@ -65,7 +65,7 @@ Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/envi
 
 <img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width="100%">
 
-Place the file `30_nimble.rpx` on your SD card inside the folder `sd:/wiiu/environments/aroma/modules/setup`. 
+Place the file `30_nimble.rpx` on your SD card inside the folder called `sd:/wiiu/environments/aroma/modules/setup`. 
 
 <img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
 
