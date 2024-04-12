@@ -91,7 +91,11 @@ Setting up a PNID on the 3DS is the same as setting up a NNID. You may either cr
 
 It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
 
-CAUTION: A Pretendo Network ID may not be the same as the one currently linked to your 3ds, ensure that your PNID and NNID do not match before you make it.
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	A Pretendo Network ID may not use the same username as the account already linked to your 3ds! Ensure that you have a choose a different name for your PNID than the name on your NNID
+</div>
+
 
 ## Other information
 
