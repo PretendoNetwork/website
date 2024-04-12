@@ -92,7 +92,7 @@ After installing Pretendo, you must register a Pretendo Network ID (PNID). There
 	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! If you have any existing Nintendo Network IDs on your Wii U which share the username you wish to use, those accounts MUST be removed from your console first.
 </div>
 
-## After you set up your PNID on your Wii U.
+## After you set up your Pretendo Network ID on your Wii U.
 Shut off your console, and put the SD Card into your machine.
 
 Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. 
