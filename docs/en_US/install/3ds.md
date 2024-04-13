@@ -111,7 +111,7 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 ### Restoring Nintendo Badge Arcade Badges
 1. Insert your SD Card into your PC.
 2. Back up your badges at the folder on your SD Card `SD:Nintendo 3DS/ID0/ID1/extdata/00000000/000014d1`.
-3. Download [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)).
+3. Download [Simple Badge Injector](https://github.com/AntiMach/simple-badge-injector/releases/latest).
 4. Insert your SD Card into your console.
 5. Use Nimbus to switch to Pretendo.
 6. Open Simple Badge Injector and make a note of the "Nintendo Network ID" value.
