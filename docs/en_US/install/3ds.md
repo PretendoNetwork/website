@@ -125,6 +125,6 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 14. Put your SD card back into your 3DS and go back into SBI
 15. Inject your modified badge data files.
 
-All badges on the home menu will be deleted, and you have to re-add them in the order you have had them before.
+All badges *placed* on the home menu will be deleted, and you have to re-add them in the order you have had them before.
     
 If you encounter any errors, restore your backed up badge data through SBI. Injecting badges while using Pretendo Network will make them disappear when swapping back to Nintendo Network, and vice versa.
