@@ -81,7 +81,7 @@ Press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Arom
 
 <img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
 
-Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' OR if you are on the Bleeding Edge build, it will be called 'Other settings' and 'Reset Wara Wara Plaza' after that restart your console fully. 
+Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully. 
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
