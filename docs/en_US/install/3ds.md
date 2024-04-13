@@ -118,11 +118,12 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 7. Still inside SBI, choose the option to dump your badge data files.
 8. Turn off your 3DS and remove the SD card. Insert your SD card into your PC.
 9. Download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest).
-10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are.
+10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are. (Located at `sd:/3ds/SimpleBadgeInjector/Dumped`)
 11. Replace the NNID value with the one you made a note of in SBI earlier.
 12. Select `Save As` to save the modified file separately from the backup.
-13. Put your SD card back into your 3DS and go back into SBI
-14. Inject your modified badge data files.
+13. Put your modified badge data filed into `sd:/3ds/SimpleBadgeInjector`
+14. Put your SD card back into your 3DS and go back into SBI
+15. Inject your modified badge data files.
 
 All badges on the home menu will be deleted, and you have to re-add them in the order you have had them before.
     
