@@ -7,9 +7,7 @@
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	If you try and boot up the 3DS Badge Arcade while on Pretendo server, your badges will be wiped! If you have badges you do not want to be wiped, please do not load Badge Arcade until further notice or make a backup of your badges by going to the folder "sd:Nintendo 3DS\[ID0][ID1]\extdata\00000000\000014d1" and copying them to a safe place.
-
-[ID0] and [ID1] are place holders, the actual folder names will be 32 characters, such as, ahsy7shdye7hdyeu47jd723jks89i32a. This will not be your actual ID 0 or 1.
+	Launching Nintendo Badge Arcade while connected to one network with badges obtained while connected to the other will cause your local save data to not match your server save data. This will cause your badges to disappear.
 </div>
 
 <div class="tip">
@@ -110,31 +108,19 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 	<li id="footnote-1"><sup>[1]</sup> Some games may require a PNID for certain actions, such as eShop purchases. The only known game which requires a PNID for general use is Nintendo Badge Arcade, which is not yet supported</li>
 </ul>
 
-### What do I do if the Home Menu says I have no badges after switching?
-Follow these steps.
-
-1. Insert your SD Card into your PC
-
-2. Back up your badges at the folder on your SD Card "sd:Nintendo 3DS[ID0][ID1]\extdata\00000000\000014d1" and copying them to a safe place on your device.
-
-[ID0] and [ID1] are place holders, the actual folder names will be 32 characters.
-
-3. Install [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)) on your 3DS console
-
+### Restoring Nintendo Badge Arcade Badges
+1. Insert your SD Card into your PC.
+2. Back up your badges at the folder on your SD Card `SD:Nintendo 3DS/ID0/ID1/extdata/00000000/000014d1`.
+3. Download [Simple Badge Injector]((https://github.com/AntiMach/simple-badge-injector/releases/latest)).
 4. Insert your SD Card into your console.
-
 5. Use Nimbus to switch to Pretendo.
-
-6. Open Simple Badge Injector on your console and make a note of the "Nintendo Network ID" value.
-
+6. Open Simple Badge Injector and make a note of the "Nintendo Network ID" value.
 7. Still inside SBI, choose the option to dump your badge data files.
-
-8. Turn off your 3DS and remove the SD card. On your PC, insert your SD card and download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest). Go to File -> Open Data, then choose the folder where BadgeData.dat and BadgeMngFile.dat are.
-
-9. Replace the NNID value with the one you made a note of in SBI earlier.
-
-10. Save the file. It might be a good idea to choose "Save As" and then save them into a different folder so you can separate them into Pretendo and Nintendo versions.
-
-11. Put your SD card back into your 3DS and go back into SBI, then inject your modified badge data files. They should now show up with zero issues! (Hopefully, hence the backup)
-
-This will remove badges from your Nintendo Network account, but all badges will still be intact on Pretendo Network.
+8. Turn off your 3DS and remove the SD card. Insert your SD card into your PC.
+9. Download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest).
+10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are.
+11. Replace the NNID value with the one you made a note of in SBI earlier.
+12. Select `Save As` to save the modified file separately from the backup.
+13. Put your SD card back into your 3DS and go back into SBI
+14. Inject your modified badge data files.
+If you encounter any errors, restore your backed up badge data through SBI. Injecting badges while using Pretendo Network will make them disappear when swapping back to Nintendo Network, and vice versa.
