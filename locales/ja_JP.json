@@ -31,7 +31,7 @@
 		}
 	},
 	"aboutUs": {
-		"title": "私たちについて",
+		"title": "Pretendo について",
 		"paragraphs": [
 			"Pretendo（プリーテンドー）は、3DSとWii Uのニンテンドーネットワーク「クリーンルーム・リバースエンジニアリング」で復活ねらうことのオープンソースプロジェクトである。",
 			"私達のサービスは無料であり、コードが公開されているので、ニンテンドーネットワークが終了してからも末永く運営されることが出来ます。"
@@ -207,7 +207,7 @@
 		]
 	},
 	"discordJoin": {
-		"title": "情報を見逃さないで",
+		"title": "最新情報を入手する",
 		"text": "プロジェクトの最新情報を入手するには、Pretendo の Discord サーバーに参加してください。",
 		"widget": {
 			"text": "進捗状況の最新情報を入手しましょう",
@@ -271,10 +271,10 @@
 		},
 		"sidebar": {
 			"install": "インストール",
-			"search": "探す",
+			"search": "検索",
 			"juxt_err": "エラーコード - Juxt",
 			"getting_started": "入門",
-			"welcome": "いらっしゃいませ",
+			"welcome": "ようこそ",
 			"install_extended": "Pretendo をインストールする"
 		},
 		"search": {
@@ -289,20 +289,20 @@
 			"downloadFiles": "アカウントファイルをダウンロード",
 			"downloadFilesDescription": "（ニンテンドーネットワークでは動作しません）",
 			"upgrade": "アカウントのアップグレード",
-			"unavailable": "利用不可",
+			"unavailable": "利用できません",
 			"settingCards": {
 				"userSettings": "ユーザー設定",
 				"profile": "プロフィール",
 				"nickname": "ニックネーム",
 				"timezone": "タイムゾーン",
 				"beta": "ベータ",
-				"upgradePrompt": "ベータ サーバーはベータ テスター専用です。<br>ベータ テスターになるには、より高いアカウント ティアにアップグレードしてください。",
-				"signInSecurity": "サインインとセキュリティ",
-				"email": "Eメール",
+				"upgradePrompt": "ベータ サーバーはベータ テスター専用です。<br>ベータ テスターになるには、より高いレベルのアカウントにアップグレードしてください。",
+				"signInSecurity": "ログインとセキュリティ",
+				"email": "メールアドレス",
 				"password": "パスワード",
-				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからサインアウトされます。",
-				"signInHistory": "サインイン履歴",
-				"fullSignInHistory": "サインイン履歴をすべて表示する",
+				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからログアウトされます。",
+				"signInHistory": "ログイン履歴",
+				"fullSignInHistory": "ログイン履歴をすべて表示する",
 				"connectedToDiscord": "Discord に接続済み",
 				"newsletterPrompt": "プロジェクトの最新情報をメールで受け取る (いつでもオプトアウトできます)",
 				"passwordPrompt": "Cemu ファイルをダウンロードするには、PNID パスワードを入力してください",
@@ -310,7 +310,7 @@
 				"gender": "性別",
 				"country": "国/地域",
 				"production": "製造",
-				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへのアクセスが提供されます。涼しい！",
+				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへアクセスできます。",
 				"newsletter": "ニュースレター",
 				"discord": "Discord",
 				"noDiscordLinked": "Discord アカウントがリンクされていません。",
@@ -319,8 +319,8 @@
 				"otherSettings": "その他の設定",
 				"removeDiscord": "Discord アカウントを削除する",
 				"linkDiscord": "Discordアカウントをリンクする",
-				"no_signins_notice": "サインイン履歴は現在追跡されていません。後でもう一度確認してください。!",
-				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度確認してください"
+				"no_signins_notice": "ログイン履歴は現在追跡されていません。後でもう一度ご確認ください。",
+				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度ご確認ください。"
 			}
 		},
 		"accountLevel": [
@@ -329,30 +329,30 @@
 			"モデレータ",
 			"デベロッパー"
 		],
-		"banned": "禁止された",
+		"banned": "BAN されました",
 		"loginForm": {
-			"register": "登録",
+			"register": "アカウントを作成",
 			"detailsPrompt": "以下にアカウントの詳細を入力してください",
 			"username": "ユーザー名",
 			"password": "パスワード",
-			"email": "Eメール",
-			"miiName": "みいの名前",
-			"loginPrompt": "すでにアカウントをお持ちですか？",
+			"email": "メールアドレス",
+			"miiName": "Mii の名前",
+			"loginPrompt": "すでにアカウントをお持ちの場合",
 			"login": "ログイン",
 			"confirmPassword": "パスワードを認証する",
-			"forgotPassword": "パスワードをお忘れですか？",
-			"registerPrompt": "アカウントをお持ちでない場合?"
+			"forgotPassword": "パスワードを忘れた場合",
+			"registerPrompt": "アカウントをお持ちでない場合"
 		},
 		"account": "アカウント",
 		"forgotPassword": {
-			"header": "パスワードをお忘れの方",
-			"sub": "以下にメールアドレス/PNIDを入力してください。",
-			"input": "電子メールアドレスまたはPNID",
+			"header": "パスワードを忘れた場合",
+			"sub": "以下にメールアドレスまたは PNID を入力してください。",
+			"input": "メールアドレスまたは PNID",
 			"submit": "送信"
 		},
 		"resetPassword": {
 			"header": "パスワードリセット",
-			"sub": "新しいパスワードを以下に入力",
+			"sub": "以下に新しいパスワードを入力してください",
 			"password": "パスワード",
 			"confirmPassword": "パスワードの確認",
 			"submit": "送信"
@@ -362,13 +362,13 @@
 		"title": "アップグレード",
 		"description": "毎月の目標を達成すると、Pretendo はフルタイムの仕事になり、より良い品質の更新をより速い速度で提供します。",
 		"month": "月",
-		"changeTier": "ティアを変更",
-		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> の登録を解除し、<span class=\"newtier\">newtiername</span> を登録してもよろしいですか?",
+		"changeTier": "レベルを変更",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> の登録を解除し、<span class=\"newtier\">newtiername</span> を登録しますか？",
 		"back": "戻る",
-		"changeTierConfirm": "ティアを変更",
-		"unsub": "登録解除",
-		"unsubConfirm": "登録解除",
-		"tierSelectPrompt": "ティアを選択",
+		"changeTierConfirm": "レベルを変更",
+		"unsub": "登録を解除",
+		"unsubConfirm": "登録を解除",
+		"tierSelectPrompt": "レベルを選択",
 		"unsubPrompt": "<span>tiername</span> から退会してもよろしいですか?そのティアに関連付けられた特典にアクセスできなくなります。"
 	},
 	"donation": {
