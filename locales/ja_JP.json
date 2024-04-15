@@ -223,7 +223,7 @@
 		"text": "Discordサーバーに参加してプロジェクトの最新情報を入手しましょう。",
 		"widget": {
 			"text": "進捗状況をリアルタイムで確認",
-			"button": "サーバーに参加"
+			"button": "Discordサーバーに参加する"
 		}
 	},
 	"footer": {
@@ -232,9 +232,9 @@
 		"widget": {
 			"captions": [
 				"最新情報を知りたいですか?",
-				"Discordサーバーの参加!"
+				"Discordサーバーに参加しよう!"
 			],
-			"button": "今すぐ参加!"
+			"button": "今すぐ参加する!"
 		},
 		"bandwidthRaccoonQuotes": [
 			"私はアライグマのBandwidthです。Pretendo Networkのサーバーに接続されているケーブルを噛むのが大好きなんです。うまい!",
