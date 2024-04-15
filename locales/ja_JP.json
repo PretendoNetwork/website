@@ -326,7 +326,7 @@
 		"accountLevel": [
 			"スタンダード",
 			"テスター",
-			"モデレータ",
+			"モデレーター",
 			"デベロッパー"
 		],
 		"banned": "BAN されました",
@@ -372,7 +372,7 @@
 		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルの特典にアクセスできなくなります。"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span>/月 <span>$${goald}</span>、月間目標の <span>${perc}%</span>。",
+		"progress": "<span>$${totd}</span>/<span>$${goald}</span>(寄付額/目標) ー 月間目標の <span>${perc}%</span>の寄付を頂いています。",
 		"upgradePush": "サブスクライバーになってクールな特典にアクセスするには、<a href=\"/account/upgrade\">アップグレード ページ</a>にアクセスしてください。"
 	},
 	"modals": {
