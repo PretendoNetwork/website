@@ -249,9 +249,9 @@
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Tester*innen",
-			"Moderator*innen",
-			"Entwickler"
+			"Tester*in",
+			"Moderator*in",
+			"Entwickler*in"
 		],
 		"loginForm": {
 			"login": "Anmelden",
