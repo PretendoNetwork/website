@@ -9,7 +9,7 @@
 		"account": "Account",
 		"accountWidget": {
 			"settings": "Impostazioni",
-			"logout": "Logout"
+			"logout": "Disconnetti"
 		},
 		"donate": "Dona",
 		"dropdown": {
@@ -33,8 +33,8 @@
 	"aboutUs": {
 		"title": "Informazioni",
 		"paragraphs": [
-			"Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
-			"Visto che i nostri server saranno gratuiti e open source, essi potranno esistere anche dopo l'inevitabile chiusura di Nintendo Network."
+			"Pretendo è un progetto open source con l'obiettivo di ricreare il Nintendo Network per 3DS e Wii U utilizzando l'ingegneria inversa clean-room.",
+			"Visto che i nostri server saranno gratuiti e open source, essi potranno esistere anche dopo l'inevitabile chiusura del Nintendo Network."
 		]
 	},
 	"progress": {
@@ -47,7 +47,7 @@
 		"QAs": [
 			{
 				"question": "Cos'è Pretendo?",
-				"answer": "Pretendo è un'alternativa open source a Nintendo Network con l'obiettivo di creare dei server custom per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, in modo che i giocatori possano continuare a giocare ai loro giochi Wii U e 3DS preferiti al massimo delle loro potenzialità."
+				"answer": "Pretendo è un'alternativa open source al Nintendo Network con l'obiettivo di creare dei server personalizzati per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, in modo che i giocatori possano continuare a giocare ai loro giochi Wii U e 3DS preferiti al massimo delle loro potenzialità."
 			},
 			{
 				"question": "I miei NNID esistenti funzioneranno su Pretendo?",
@@ -63,15 +63,15 @@
 			},
 			{
 				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
+				"answer": "Pretendo supporta qualsiasi client in grado di connettersi al Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
 			},
 			{
-				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
-				"answer": "Noi non avremo accesso alla lista degli utenti bannati da Nintendo Network, quindi quegli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio, e il mancato rispetto di queste regole potrebbe portare a un ban."
+				"question": "Se sono bannato sul Nintendo Network, rimarrò bannato quando userò Pretendo?",
+				"answer": "Noi non avremo accesso alla lista degli utenti bannati dal Nintendo Network, quindi gli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio e il mancato rispetto di queste regole potrebbe portare ad un ban."
 			},
 			{
 				"question": "Pretendo supporterà la Wii/Switch?",
-				"answer": "La Wii dispone già di server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento e completamente diverso da Nintendo Network."
+				"answer": "La Wii dispone già di server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento e completamente diverso dal Nintendo Network."
 			},
 			{
 				"question": "Dovrò modificare la mia console per connettermi?",
@@ -85,7 +85,7 @@
 		"cards": [
 			{
 				"title": "Server di gioco",
-				"caption": "Riportiamo in vita i tuoi giochi e contenuti preferiti usando server custom."
+				"caption": "Riportiamo in vita i tuoi giochi e contenuti preferiti usando server personalizzati."
 			},
 			{
 				"title": "Juxtaposition",
@@ -103,11 +103,11 @@
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
-		"text": "Senza di loro, Pretendo non sarebbe dove è oggi."
+		"text": "Senza di loro, Pretendo non sarebbe dov'è oggi."
 	},
 	"discordJoin": {
 		"title": "Tieniti aggiornato",
-		"text": "Unisciti al nostro server su Discord per ottenere gli ultimi aggiornamenti sul progetto.",
+		"text": "Unisciti al nostro server su Discord per ricevere gli ultimi aggiornamenti sul progetto.",
 		"widget": {
 			"text": "Ricevi aggiornamenti in tempo reale sul nostro progresso",
 			"button": "Unisciti al server"
@@ -128,11 +128,11 @@
 			"Molte persone ci chiedono se avremo problemi legali con Nintendo per questo; sono felice di poter dire che mia zia lavora alla Nintendo e dice che a loro va bene.",
 			"Webkit v537 è la migliore versione di Webkit per Wii U. No, non porteremo Chrome per la Wii U.",
 			"Non vedo l'ora che l'orologio raggiunga le 03:14:08 UTC del 19 gennaio 2038!",
-			"In realtà la Wii U è un sistema sottovalutato: le pubblicità erano terribili, ma la console è fantastica. Hmm, aspetta un secondo, non so perché ma il mio Gamepad non si connette alla mia Wii.",
+			"In realtà la Wii U è un sistema sottovalutato: le pubblicità erano terribili, ma la console è fantastica. Hmm, aspetta un secondo, non so perché ma il mio Gamepad non si connette alla mia Wii U.",
 			"Il tema principale di Super Mario World 2 - Yoshi's Island è un bop assurdo e non riuscirai mai a convincermi del contrario.",
 			"I miei titoli preferiti per Nintendo Switch sono Nintendo Switch Online + Pacchetto aggiuntivo, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Pacchetto gioco offline, Nintendo Switch Online + Pacchetto l'ennesima port e Nintendo Switch Online + Pacchetto Brain Training del Dr. Kawashima: Quanti anni ha il tuo cervello? \"Il titolo Virtual Console per Wii U vi è piaciuto così tanto che abbiamo deciso di rimetterlo in vendita.",
 			"Tipo \"Conosci Ash, Dio benedica la sua anima, dice UwU tutto il giorno\" è il modo del sud degli Stati Uniti per dire \"Ash dice uwu costantemente ed è molto strano e stupido e vorrei tanto che non lo facesse\"",
-			"Il mio primo video sul mio canale!! voglio fare video da un sacco di tempo ma il mio laptop era lento e non riuscivo a far andare fraps, skype e minecraft insieme. ma ora non più! il mio maestro di informatica mi ha aiutato e il mio laptop va molto più veloce e ora riesco a registrare! spero che vi piaccia e se si per favore mettete like e iscrivetevi!!!"
+			"Il mio primo video sul mio canale!! Voglio fare video da un sacco di tempo ma il mio laptop era lento e non riuscivo a far andare fraps, skype e minecraft insieme. Ma ora non più! Il mio maestro di informatica mi ha aiutato e il mio laptop va molto più veloce e ora riesco a registrare! Spero che vi piaccia e se si per favore mettete like e iscrivetevi!!!"
 		]
 	},
 	"progressPage": {
@@ -179,14 +179,14 @@
 				"serverEnv": "Ambiente del server",
 				"production": "Produzione",
 				"beta": "Beta",
-				"upgradePrompt": "I server beta sono esclusivi per i beta tester.<br>Per diventare un beta tester, fai l'upgrade del tuo account a un livello più alto.",
+				"upgradePrompt": "I server beta sono esclusivi per i beta tester.<br>Per diventare un beta tester, fai l'upgrade del tuo account ad un livello più alto.",
 				"hasAccessPrompt": "Il tuo livello ti dà accesso ai server beta. Forte!",
 				"signInSecurity": "Accesso e sicurezza",
 				"email": "Email",
 				"password": "Password",
 				"passwordResetNotice": "Dopo aver cambiato la tua password, verrai disconnesso da tutti i tuoi dispositivi.",
-				"signInHistory": "Cronologia di accesso",
-				"fullSignInHistory": "Mostra cronologia di accesso completa",
+				"signInHistory": "Cronologia d'accesso",
+				"fullSignInHistory": "Mostra cronologia d'accesso completa",
 				"otherSettings": "Altre impostazioni",
 				"discord": "Discord",
 				"connectedToDiscord": "Connesso a Discord come",
@@ -259,7 +259,7 @@
 	},
 	"upgrade": {
 		"unsubPrompt": "Sei sicuro di voler annullare l'iscrizione a <span>tiername</span>? Perderai tutte le ricompense associate a quel livello.",
-		"description": "Raggiungere il goal mensile renderà Pretendo un lavoro a tempo pieno, permettendo di fornire aggiornamenti di maggiore qualità in meno tempo.",
+		"description": "Raggiungere l'obiettivo mensile renderà Pretendo un lavoro a tempo pieno, permettendo di fornire aggiornamenti di maggiore qualità in meno tempo.",
 		"month": "mese",
 		"tierSelectPrompt": "Seleziona un livello",
 		"unsub": "Annulla l'iscrizione",
