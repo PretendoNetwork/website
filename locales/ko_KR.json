@@ -299,7 +299,9 @@
 				"timezone": "시간대",
 				"serverEnv": "서버 환경",
 				"userSettings": "사용자 설정",
-				"birthDate": "생년월일"
+				"birthDate": "생년월일",
+				"beta": "베타",
+				"production": "프로덕션"
 			},
 			"upgrade": "계정 업그레이드",
 			"unavailable": "이용 불가",
