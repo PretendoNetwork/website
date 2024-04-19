@@ -87,13 +87,13 @@ Your selection persists between reboots.
 
 The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
 
-Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
+Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console once you're ready.
 
-It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
+It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data.
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have a choose a different name for your PNID than the name on your NNID
+	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have a choose a different name for your PNID than the name on your NNID.
 </div>
 
 
