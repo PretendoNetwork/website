@@ -226,18 +226,55 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Soc Bandwith el zorro, m'agrada mossegar els cables que passen pels servidors de Pretendo Network. Nyam!",
-			"Moltes persones ens pregunten si ens podriem posar en problemes legals amb Nintendo pel projecte; estic feliç d'anunciar que la meva tieta treballa a Nintendo i ella em va dir que no hi havia cap problema."
+			"Moltes persones ens pregunten si ens podriem posar en problemes legals amb Nintendo pel projecte; estic feliç d'anunciar que la meva tieta treballa a Nintendo i ella em va dir que no hi havia cap problema.",
+			null,
+			"No puc esperar per que el rellotge arribi a 03:14:08 UTC el 19 de Gener a 2038!"
 		]
 	},
 	"account": {
 		"loginForm": {
 			"username": "Usuari",
 			"login": "Iniciar sessió",
-			"detailsPrompt": "Posa l'informació de la teva compte abaix"
+			"detailsPrompt": "Posa l'informació de la teva compte abaix",
+			"password": "Contrasenya",
+			"confirmPassword": "Confirmar contrasenya",
+			"email": "Correu electrònic",
+			"miiName": "Nom de mii",
+			"forgotPassword": "T'has olvidat la teva contrasenya?",
+			"register": "Crear compte"
 		},
-		"account": "Compte"
+		"account": "Compte",
+		"settings": {
+			"downloadFiles": "Descarrega arxius de compte",
+			"upgrade": "Millora compte",
+			"unavailable": "No disponible",
+			"settingCards": {
+				"userSettings": "Configuració d'usuari",
+				"profile": "Perfil",
+				"beta": "Beta",
+				"email": "Correu electrònic",
+				"password": "Contrasenya",
+				"nickname": "Sobrenom",
+				"country": "País/regió",
+				"production": "Producció"
+			},
+			"downloadFilesDescription": "No funcionarà a la xarxa de Nintendo"
+		},
+		"forgotPassword": {
+			"sub": "Posa el teu correu electrònic/PNID abaix",
+			"input": "Correu electrònic o PNID",
+			"submit": "Sotmetre"
+		},
+		"resetPassword": {
+			"password": "Contrasenya",
+			"confirmPassword": "Confirma contrasenya",
+			"submit": "Sotmetre",
+			"header": "Restaurar contrasenya",
+			"sub": "Introdueix nova contrasenya abaix"
+		}
 	},
 	"blogPage": {
-		"published": "Publicat per"
+		"published": "Publicat per",
+		"publishedOn": "al"
 	}
 }
