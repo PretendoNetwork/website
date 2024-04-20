@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Funciona el Pretendo al Cemu o als emuladors?",
-				"answer": "Pretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
+				"answer": "Pretendo suporta qualsevol client que pugui interactuar amb Nintendo Network. Actualment, l'únic emulador amb aquesta funció és Cemu. Cemu 2.0 suporta oficialment Pretendo sota la teva configuració del compte de Nintendo Network. Per a més informació sobre com iniciar-se amb Cemu, mira't <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra no suporta el joc en línia de veritat i, per tant, no funciona amb Pretendo i no mostra cap signe de que realment funcioni, el joc en línia. Mikage, un emulador de 3DS per a mòbils podria rebre suport en el futur, tot i que és lluny de ser cert.\n\nPretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
 			},
 			{
 				"question": "Si se'm va prohibir l'accés a la Nintendo Network, continuarà prohibit al Pretendo?",
@@ -227,8 +227,13 @@
 		"bandwidthRaccoonQuotes": [
 			"Soc Bandwith el zorro, m'agrada mossegar els cables que passen pels servidors de Pretendo Network. Nyam!",
 			"Moltes persones ens pregunten si ens podriem posar en problemes legals amb Nintendo pel projecte; estic feliç d'anunciar que la meva tieta treballa a Nintendo i ella em va dir que no hi havia cap problema.",
+			"Webkit v537 és la millor versió de Webkit per a Wii U. No, no anem a portar Chrome a la Wii U.",
+			"No puc esperar per que el rellotge arribi a 03:14:08 UTC el 19 de Gener a 2038!",
+			"Realment, la Wii U és un sistema infravalorat: els anuncis van ser dolents, però la consola és genial. Ah, un moment, no estic segur perquè, però el meu Gamepad no s'està connectant a la meva Wii.",
+			"El tema principal de Super Mario World 2 - Yoshi's Island és boníssim i no hi ha manera de fer-me canviar d'opinió.",
 			null,
-			"No puc esperar per que el rellotge arribi a 03:14:08 UTC el 19 de Gener a 2038!"
+			null,
+			"El meu primer vídeo al canal! He volgut fer vídeos des de fa molt, però el meu portàtil no funcionava bé i no podia fer funcionar fraps, skype o minecraft tot a la vegada. Però això s'ha acabat! Amb l'ajuda del meu professor de TI el meu portàtil funciona molt millor i ara puc grabar! Desitjo que tots gaudiu i si ho feu deixeu m'agrada i subscriviu-vos!!!"
 		]
 	},
 	"account": {
@@ -256,7 +261,25 @@
 				"password": "Contrasenya",
 				"nickname": "Sobrenom",
 				"country": "País/regió",
-				"production": "Producció"
+				"production": "Producció",
+				"hasAccessPrompt": "El teu nivell et dona accés als servidors beta. Genial!",
+				"timezone": "Zona horària",
+				"upgradePrompt": "Servidors beta exclusius dels beta testers.<br>Per a convertir-te en un, actualitza el teu compte.",
+				"linkDiscord": "Connecta el compte de Discord",
+				"no_signins_notice": "Historial d'inici de sessió sense registres. Comprova'l més tard!",
+				"passwordResetNotice": "Després de canviar la teva contrasenya, se't tancarà la sessió a tots els dispositius.",
+				"otherSettings": "Més configuració",
+				"discord": "Discord",
+				"removeDiscord": "Elimina el compte de Discord",
+				"newsletterPrompt": "Rep actualitzacions del projecte via correu (pots desfer en qualsevol moment)",
+				"passwordPrompt": "Entra la contrasenya del teu PNID per a descarregar els arxius de Cemu",
+				"no_newsletter_notice": "Butlletí no disponible. Comprova'l més tard",
+				"no_edit_from_dashboard": "Actualment no es pot editar la configuració del PNID des del panell de control. Si us plau, actualitza la configuració des de la consola vinculada",
+				"newsletter": "Notícies",
+				"signInHistory": "Historial d'inicis de sessió",
+				"noDiscordLinked": "Cap compte de Discord connectat.",
+				"fullSignInHistory": "Mira l'historial complet",
+				"connectedToDiscord": "Connectat a Discord com"
 			},
 			"downloadFilesDescription": "No funcionarà a la xarxa de Nintendo"
 		},
@@ -271,10 +294,37 @@
 			"submit": "Sotmetre",
 			"header": "Restaurar contrasenya",
 			"sub": "Introdueix nova contrasenya abaix"
-		}
+		},
+		"accountLevel": [
+			"Estàndard",
+			"Tester",
+			"Moderador",
+			"Desenvolupador"
+		],
+		"banned": "Expulsat"
 	},
 	"blogPage": {
 		"published": "Publicat per",
-		"publishedOn": "al"
+		"publishedOn": "al",
+		"title": "Blog"
+	},
+	"upgrade": {
+		"tierSelectPrompt": "Selecciona un nivell",
+		"unsub": "Donar-se de baixa",
+		"unsubPrompt": "Estàs segur que vols donar-te de baixa de <span>tiername</span>? Perdràs l'accés a les avantatges associades a ell.",
+		"back": "Endarrere",
+		"month": "Mes",
+		"unsubConfirm": "Donar-se de baixa",
+		"changeTier": "Canvia el nivell",
+		"changeTierPrompt": "Estàs segur que vols donar-te de baixa de <span class=\"oldtier\">oldtiername</span> i donar-te d'alta a <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Canvia de nivell",
+		"title": "Actualitza"
+	},
+	"progressPage": {
+		"title": "El nostre progrés",
+		"description": "Comprova el progrés i els objectius del projecte! (S'actualitza cada hora, més o menys, no mostra TOTS els canvis i objectius)"
+	},
+	"localizationPage": {
+		"title": "Localitzem-nos"
 	}
 }
