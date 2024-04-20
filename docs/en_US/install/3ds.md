@@ -7,7 +7,7 @@
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	Launching Nintendo Badge Arcade while connected to one network with badges obtained while connected to the other will cause your local save data to not match your server save data. This will cause your badges to disappear.
+	Collecting badges in Nintendo Badge Arcade while connected to one network and then launching the game on a different network will result in your badges disappearing. This occurs because the locally saved data does not match the data stored on the server.
 </div>
 
 <div class="tip">
