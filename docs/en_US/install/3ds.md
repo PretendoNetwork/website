@@ -83,18 +83,24 @@ Depending on how you installed Nimbus, launch it either through the Homebrew Lau
 
 Your selection persists between reboots.
 
-## Signing into your PNID
+## Signing in into Pretendo Network
 
-The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
-
-Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console once you're ready.
-
-It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data.
+On your system, go to **System Settings** and click on **Nintendo Network ID Settings**. From there, follow the instructions on screen to create a new Pretendo Network ID or link an existing one created [on our website](/account/register).
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have a choose a different name for your PNID than the name on your NNID.
+	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have chosen a different name for your PNID than the name on your NNID.
 </div>
+
+<div class="tip">
+	<strong>There is a <a href="https://github.com/PretendoNetwork/nimbus/issues/32">known issue</a> where System Settings may still show your old NNID</strong>
+	<br>
+	A temporary workaround to fix this is to re-toggle between Nintendo Network and Pretendo Network via Nimbus.
+</div>
+
+It is recommended to create your PNID on your device at this time, as registering on the website does not currently allow you to change your user data.
+
+The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
 
 
 ## Other information
