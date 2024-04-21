@@ -25,11 +25,11 @@
 			</div>
 			<div>
 				<label for="password">{{ locale.account.loginForm.password }}</label>
-				<input name="password" id="password" type="password" autocomplete="new-password" required>
+				<input name="password" id="password" type="password" autocomplete="new-password" minlength="6" maxlength="16" required>
 			</div>
 			<div>
 				<label for="password_confirm">{{ locale.account.loginForm.confirmPassword }}</label>
-				<input name="password_confirm" id="password_confirm" type="password" autocomplete="new-password" required>
+				<input name="password_confirm" id="password_confirm" type="password" autocomplete="new-password" minlength="6" maxlength="16" required>
 			</div>
 			<div class="h-captcha" data-sitekey="cf3fd74e-93ca-47e6-9fa0-5fc439de06d4"></div>
 			<input name="redirect" id="redirect" type="hidden" value="{{redirect}}">
