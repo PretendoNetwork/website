@@ -56,7 +56,9 @@ Bleeding edge builds have not been widely tested, and do not guarantee any stabi
 <img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
 
 ## Nimble
-Nimble is a Aroma plugin that redirects the PolicyList to Pretendo. Download the latest version from [Nimble's latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the `30_nimble.rpx` file from the GitHub page.
+Nimble is an Aroma setup module that patches the request for the system `PolicyList`. This is used to enable background tasks for features such as Wara Wara Plaza. This is separate from the main Inkay patches as the `PolicyList` is downloaded earlier in the system boot process than Inkay has control over.
+
+Navigate to [the latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the  `30_nimble.rpx` file.
 
 <img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" width="100%">
 
