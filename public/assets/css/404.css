@@ -1,16 +1,16 @@
-.title404{
+.status {
     text-align: center;
     font-size: 8rem;
     padding-top: 60px;
 	color: var(--text-shade-1);
 }
-.dis404{
+.description {
     text-align: center;
     font-size: 1.7rem;
     margin-top: -10px;
 	color: var(--text-shade-1);
 }
-.shockedbandwidth{
+.shocked-bandwidth {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +18,7 @@
     margin-bottom: -120px;
 }
 @media screen and (max-width: 900px) {
-    .shockedbandwidth{
+    .shocked-bandwidth {
         margin-bottom: -100px;
     }
 }

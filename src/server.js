@@ -102,7 +102,6 @@ logger.info('Creating 404 status handler');
 app.use((request, response) => {
 	const fullUrl = util.fullUrl(request);
 	response.render('404');
-	logger.warn(`HTTP 404 at ${fullUrl}`);
 });
 
 logger.info('Setting up handlebars engine');

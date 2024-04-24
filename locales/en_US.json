@@ -367,7 +367,7 @@
 		"confirm": "Confirm",
 		"close": "Close"
 	},
-	"notfound":{
+	"notfound": {
 		"description": "Oops! We could not find this page."
 	}
 }
