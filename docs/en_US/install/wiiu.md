@@ -55,16 +55,32 @@ Bleeding edge builds have not been widely tested, and do not guarantee any stabi
 
 <img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
 
+## Nimble
+Nimble is an Aroma setup module that patches the request for the system `PolicyList`. This is used to enable background tasks for features such as Wara Wara Plaza. This is separate from the main Inkay patches as the `PolicyList` is downloaded earlier in the system boot process than Inkay has control over.
+
+Navigate to [the latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the  `30_nimble.rpx` file.
+
+<img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" width="100%">
+
 ## Installation
 Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/environments/aroma/plugins`. It's normal for other Aroma plugins to be in this folder too.
 
 <img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width="100%">
 
+Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. It's normal for other Aroma setup modules to be in this folder too.
+
+<img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" width="100%">
 Place your SD card back into your console and boot like normal. You should see a notification of your connection:
 
 <img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
 
 You are now connected to Pretendo Network.
+
+Press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+
+Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully. 
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
