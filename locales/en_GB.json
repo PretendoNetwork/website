@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "How do I use Pretendo?",
-				"answer": "Pretendo is currently not in a state that is ready for public use. However, once it is, you will be able to use Pretendo simply by running our homebrew patcher on your console."
+				"answer": "To get started with Pretendo Network on 3DS, Wii U or emulators, please see our <a href='/docs/install'>setup instructions</a>!"
 			},
 			{
 				"question": "Do you know when feature/service will be ready?",
@@ -75,7 +75,7 @@
 			},
 			{
 				"question": "Will I need hacks to connect?",
-				"answer": "Yes, you will need to hack your device to connect; however, on the Wii U, you will only need access to the Homebrew Launcher (i.e. Tiramisu, Aroma, or even the web browser exploit), with info on how the 3DS will connect coming at a later date."
+				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
 			}
 		]
 	},
