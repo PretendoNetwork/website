@@ -391,5 +391,8 @@
 		"cancel": "Cancel",
 		"confirm": "Confirm",
 		"close": "Close"
+	},
+	"notfound": {
+		"description": "Oops! We could not find this page."
 	}
 }

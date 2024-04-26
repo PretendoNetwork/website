@@ -113,10 +113,9 @@ app.use('/nso-legacy-pack', routes.aprilfools);
 logger.info('Creating 404 status handler');
 // This works because it is the last router created
 // Meaning the request could not find a valid router
-app.use((request, response, next) => {
+app.use((request, response) => {
 	const fullUrl = util.fullUrl(request);
-	logger.warn(`HTTP 404 at ${fullUrl}`);
-	next();
+	response.render('404');
 });
 
 logger.info('Setting up handlebars engine');
