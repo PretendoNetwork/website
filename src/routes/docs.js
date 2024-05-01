@@ -33,7 +33,7 @@ router.get([
 ], async (_request, response) => {
 	const renderData = {
 		errorList: JSON.stringify(errorList),
-		currentPage: 'search',
+		currentPage: 'errors',
 	};
 
 	response.render('docs/search', renderData);
@@ -91,11 +91,10 @@ router.get([
 	template = template.replace('{description}', errorInfo.long_description);
 	template = template.replace('{solution}', errorInfo.long_solution);
 
-	const renderData = {
-		content: util.parseDocs(template)
-	};
-
-	response.render('docs/docs', renderData);
+	response.render('docs/docs', {
+		content: util.parseDocs(template),
+		currentPage: 'errors'
+	});
 });
 
 router.get('/:subpath/:page', async (request, response, next) => {
