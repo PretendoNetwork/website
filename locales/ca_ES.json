@@ -326,5 +326,8 @@
 	},
 	"localizationPage": {
 		"title": "Localitzem-nos"
+	},
+	"modals": {
+		"close": "Tancar"
 	}
 }
