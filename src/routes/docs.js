@@ -62,7 +62,7 @@ router.get('/:page', async (request, response, next) => {
 });
 
 router.get([
-	'/errors/:errorCode', // TODO - Deprecate search errors route
+	'/errors/:errorCode', // TODO - Deprecate "errors" route
 	'/error/:errorCode',
 ], async (request, response, next) => {
 	const locale = response.locals.localeString;
