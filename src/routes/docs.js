@@ -1,8 +1,11 @@
+const path = require('node:path');
+const fs = require('node:fs');
 const { Router } = require('express');
-const router = new Router();
+const errors = require('@pretendonetwork/error-codes');
 const util = require('../util');
 
-const errorList = require('../../docs/common/errorList.json');
+const errorList = errors.getAllErrors();
+const router = new Router();
 
 router.get('/', async (request, response) => {
 	response.redirect('/docs/welcome');
@@ -24,12 +27,20 @@ router.get('/install', async (request, response) => {
 	response.render('docs/install', renderData);
 });
 
-router.get('/search', async (request, response) => {
+router.get([
+	'/search', // TODO - Deprecate search page
+	'/errors',
+], async (_request, response) => {
 	const renderData = {
 		errorList: JSON.stringify(errorList),
 		currentPage: 'search',
 	};
+
 	response.render('docs/search', renderData);
+});
+
+router.get('/error', async (_request, response) => {
+	response.redirect(301, '/docs/errors');
 });
 
 router.get('/:page', async (request, response, next) => {
@@ -46,6 +57,43 @@ router.get('/:page', async (request, response, next) => {
 		return next();
 	}
 	renderData.missingInLocale = locale !== MDLocale;
+
+	response.render('docs/docs', renderData);
+});
+
+router.get([
+	'/errors/:errorCode', // TODO - Deprecate search errors route
+	'/error/:errorCode',
+], async (request, response, next) => {
+	const locale = response.locals.localeString;
+	const error = request.params.errorCode;
+
+	const [ sysmodule, errorCode ] = error.split('-');
+
+	if (!errorCode) {
+		return next();
+	}
+
+	let template = fs.readFileSync(path.join(__dirname, '../../docs/common/error-page-template.md'), {
+		encoding: 'utf8'
+	});
+
+	const errorInfo = errors.getErrorInfo(sysmodule, errorCode, locale);
+
+	if (!errorInfo) {
+		return next();
+	}
+
+	template = template.replace('{module}', sysmodule);
+	template = template.replace('{code}', errorCode);
+	template = template.replace('{system}', errorInfo.module.system);
+	template = template.replace('{message}', errorInfo.message.replace(/\s\s+/g, ' '));
+	template = template.replace('{description}', errorInfo.long_description);
+	template = template.replace('{solution}', errorInfo.long_solution);
+
+	const renderData = {
+		content: util.parseDocs(template)
+	};
 
 	response.render('docs/docs', renderData);
 });
