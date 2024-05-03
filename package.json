@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.515.0",
 		"@discordjs/rest": "^0.5.0",
-		"@pretendonetwork/error-codes": "^1.0.1",
+		"@pretendonetwork/error-codes": "^1.0.2",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",
