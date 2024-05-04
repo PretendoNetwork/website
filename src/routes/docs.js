@@ -40,7 +40,7 @@ router.get([
 });
 
 router.get('/error', async (_request, response) => {
-	response.redirect(301, '/docs/errors');
+	response.redirect(307, '/docs/errors');
 });
 
 router.get('/:page', async (request, response, next) => {
