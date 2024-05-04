@@ -11,7 +11,7 @@
 
 {description}
 
-### Solution
+## Solution
 
 {solution}
 
