@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "博客",
-		"description": "",
+		"description": "最新的更新都浓缩在这里。如果你需要更频繁的更新，请查看 <a href=\"/account/upgrade\" target=\"_blank\">捐赠</a>.",
 		"published": "作者",
 		"publishedOn": "在"
 	},
