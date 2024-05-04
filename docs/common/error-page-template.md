@@ -1,5 +1,8 @@
 # Error Code: {module}-{code}
+
 **Applies to:** {system}
+
+**Module:** {module_name} - {module_description}
 
 ---
 

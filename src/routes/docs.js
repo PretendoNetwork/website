@@ -87,6 +87,8 @@ router.get([
 	template = template.replace('{module}', sysmodule);
 	template = template.replace('{code}', errorCode);
 	template = template.replace('{system}', errorInfo.module.system);
+	template = template.replace('{module_name}', errorInfo.module.name);
+	template = template.replace('{module_description}', errorInfo.module.description);
 	template = template.replace('{message}', errorInfo.message.replace(/\s\s+/g, ' '));
 	template = template.replace('{description}', errorInfo.long_description);
 	template = template.replace('{solution}', errorInfo.long_solution);
