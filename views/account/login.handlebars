@@ -5,9 +5,8 @@
 {{> header}}
 
 <div class="wrapper">
-
 	<div class="account-form-wrapper">
-		<form action="/account/login" method="post" class="account">
+		<form action="{{ loginPath }}" method="post" class="account">
 			<h2>{{ locale.account.loginForm.login }}</h2>
 			<p>{{ locale.account.loginForm.detailsPrompt }}</p>
 			<div>
@@ -23,8 +22,10 @@
 			<input name="redirect" id="redirect" type="hidden" value="{{redirect}}">
 			<div class="buttons">
 				<button type="submit">{{ locale.account.loginForm.login }}</button>
-			<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">{{ locale.account.loginForm.registerPrompt }}</a>
+				<a href="/account/register{{#if redirect}}?redirect={{redirect}}{{/if}}" class="register">{{ locale.account.loginForm.registerPrompt }}</a>
 			</div>
+			<input type="hidden" id="discourse-sso-payload" name="discourse-sso-payload" value="{{ discourse.payload }}" />
+			<input type="hidden" id="discourse-sso-signature" name="discourse-sso-signature" value="{{ discourse.signature }}" />
 		</form>
 	</div>
 </div>
