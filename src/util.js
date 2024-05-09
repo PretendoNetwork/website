@@ -247,6 +247,10 @@ async function removeDiscordMemberTesterRole(memberId) {
 	}
 }
 
+function signDiscoursePayload(payload) {
+	return crypto.createHmac('sha256', config.discourse.sso.secret).update(payload).digest('hex');
+}
+
 module.exports = {
 	fullUrl,
 	getLocale,
@@ -265,5 +269,6 @@ module.exports = {
 	assignDiscordMemberSupporterRole,
 	assignDiscordMemberTesterRole,
 	removeDiscordMemberSupporterRole,
-	removeDiscordMemberTesterRole
+	removeDiscordMemberTesterRole,
+	signDiscoursePayload
 };

@@ -71,7 +71,8 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 
 router.get('/login', async (request, response) => {
 	const renderData = {
-		error: request.cookies.error_message
+		error: request.cookies.error_message,
+		loginPath: '/account/login'
 	};
 
 	response.render('account/login', renderData);
@@ -88,7 +89,6 @@ router.post('/login', async (request, response) => {
 		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
 
 		response.redirect(request.redirect || '/account');
-
 	} catch (error) {
 		console.log(error);
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
@@ -407,5 +407,138 @@ router.post('/stripe/webhook', async (request, response) => {
 	response.json({ received: true });
 });
 
+router.get('/sso/discourse', async (request, response, next) => {
+	if (!request.query.sso || !request.query.sig) {
+		return next(); // * 404
+	}
+
+	const signature = util.signDiscoursePayload(request.query.sso);
+
+	if (signature !== request.query.sig) {
+		return next(); // * 404
+	}
+
+	const decodedPayload = new URLSearchParams(Buffer.from(request.query.sso, 'base64').toString());
+
+	if (!decodedPayload.has('nonce') || !decodedPayload.has('return_sso_url')) {
+		return next(); // * 404
+	}
+
+	// * User already logged in, don't show the login prompt
+	if (request.cookies.access_token && request.cookies.refresh_token) {
+		try {
+			const accountData = await util.getUserAccountData(request, response);
+
+			// * Discourse REQUIRES unique emails, however we do not due to NN also
+			// * not requiring unique email addresses. Email addresses, for now,
+			// * are faked using the users PID. This will essentially disable email
+			// * for the forum, but it's a bullet we have to bite for right now.
+			// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+			const payload = Buffer.from(new URLSearchParams({
+				nonce: decodedPayload.get('nonce'),
+				external_id: accountData.pid,
+				email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+				username: accountData.username,
+				name: accountData.username,
+				avatar_url: accountData.mii.image_url,
+				avatar_force_update: true
+			}).toString()).toString('base64');
+
+			const query = new URLSearchParams({
+				sso: payload,
+				sig: util.signDiscoursePayload(payload)
+			}).toString();
+
+			return response.redirect(`${decodedPayload.get('return_sso_url')}?${query}`);
+		} catch (error) {
+			console.log(error);
+			response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+			return response.redirect('/account/logout');
+		}
+	}
+
+	// * User not logged in already, show the login page
+	const renderData = {
+		discourse: {
+			// * Fast and dirty sanitization. If the strings contain
+			// * characters not allow in their encodings, they are removed
+			// * when doing this decode-encode. Since neither base64/hex
+			// * allow characters such as < and >, this prevents injection.
+			payload: Buffer.from(request.query.sso, 'base64').toString('base64'),
+			signature: Buffer.from(request.query.sig, 'hex').toString('hex')
+		},
+		loginPath: '/account/sso/discourse'
+	};
+
+	response.render('account/login', renderData); // * Just reuse the /account/login page, no need to duplicate the pages
+});
+
+router.post('/sso/discourse', async (request, response, next) => {
+	if (!request.body['discourse-sso-payload'] || !request.body['discourse-sso-signature']) {
+		return next(); // * 404
+	}
+
+	const { username, password } = request.body;
+
+	// * Fast and dirty sanitization. If the strings contain
+	// * characters not allow in their encodings, they are removed
+	// * when doing this decode-encode. Since neither base64/hex
+	// * allow characters such as < and >, this prevents injection.
+	const discoursePayload = Buffer.from(request.body['discourse-sso-payload'], 'base64').toString('base64');
+	const discourseSignature = Buffer.from(request.body['discourse-sso-signature'], 'hex').toString('hex');
+
+	const signature = util.signDiscoursePayload(discoursePayload);
+
+	if (signature !== discourseSignature) {
+		return next(); // * 404
+	}
+
+	const decodedPayload = new URLSearchParams(Buffer.from(discoursePayload, 'base64').toString());
+
+	if (!decodedPayload.has('nonce') || !decodedPayload.has('return_sso_url')) {
+		return next(); // * 404
+	}
+
+	try {
+		const tokens = await util.login(username, password);
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		// * Need to set these here so that getUserAccountData can see them
+		request.cookies.refresh_token = tokens.refresh_token;
+		request.cookies.access_token = tokens.access_token;
+		request.cookies.token_type = tokens.token_type;
+
+		const accountData = await util.getUserAccountData(request, response);
+
+		// * Discourse REQUIRES unique emails, however we do not due to NN also
+		// * not requiring unique email addresses. Email addresses, for now,
+		// * are faked using the users PID. This will essentially disable email
+		// * for the forum, but it's a bullet we have to bite for right now.
+		// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+		const payload = Buffer.from(new URLSearchParams({
+			nonce: decodedPayload.get('nonce'),
+			external_id: accountData.pid,
+			email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+			username: accountData.username,
+			name: accountData.username,
+			avatar_url: accountData.mii.image_url,
+			avatar_force_update: true
+		}).toString()).toString('base64');
+
+		const query = new URLSearchParams({
+			sso: payload,
+			sig: util.signDiscoursePayload(payload)
+		}).toString();
+
+		return response.redirect(`${decodedPayload.get('return_sso_url')}?${query}`);
+	} catch (error) {
+		console.log(error);
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account/login');
+	}
+});
 
 module.exports = router;

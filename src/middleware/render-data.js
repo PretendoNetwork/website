@@ -92,6 +92,11 @@ async function renderDataMiddleware(request, response, next) {
 			request.pnid = await database.PNID.findOne({ pid: response.locals.account.pid });
 			request.account = response.locals.account;
 
+			if (request.pnid.deleted) {
+				// TODO - We just need to overhaul our API tbh
+				throw new Error('User not found');
+			}
+
 			return next();
 		} catch (error) {
 			response.cookie('error_message', error.message, { domain: '.pretendo.network' });
