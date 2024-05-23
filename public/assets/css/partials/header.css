@@ -371,6 +371,7 @@ header .user-widget .button {
 	width: 100%;
 	padding: 8px 60px;
 	cursor: pointer;
+	word-break: keep-all;
 }
 header .user-widget .button.logout {
 	background: var(--bg-shade-3);
