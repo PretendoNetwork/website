@@ -95,10 +95,10 @@
 
 			<div class="tab" id="hairTypeTab" style="--assetrow: 3">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="hairTypeSubButton" style="--assetcol: 9"></button>
+					<button class="subtabbtn" id="hairTypeSubButton" style="--assetcol: 9"></button>
 					<button class="subtabbtn" id="hairColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="hairType" class="subtab has-subpages active">
+				<fieldset id="hairType" class="subtab has-subpages">
 					{{#each editorJSON.hairs}}
 					<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
@@ -148,11 +148,11 @@
 
 			<div class="tab" id="eyebrowTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="eyebrowTypeSubButton" style="--assetcol: 3"></button>
+					<button class="subtabbtn" id="eyebrowTypeSubButton" style="--assetcol: 3"></button>
 					<button class="subtabbtn" id="eyebrowPositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="eyebrowColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="eyebrowType" class="subtab has-subpages active" style="--assetrow: 4">
+				<fieldset id="eyebrowType" class="subtab has-subpages" style="--assetrow: 4">
 					{{#each editorJSON.eyebrows}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
@@ -211,11 +211,11 @@
 
 			<div class="tab" id="eyeTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="eyeTypeSubButton" style="--assetcol: 4"></button>
+					<button class="subtabbtn" id="eyeTypeSubButton" style="--assetcol: 4"></button>
 					<button class="subtabbtn" id="eyePositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="eyeColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="eyeType" class="subtab has-subpages active" style="--assetrow: 5">
+				<fieldset id="eyeType" class="subtab has-subpages" style="--assetrow: 5">
 					{{#each editorJSON.eyes}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
@@ -270,10 +270,10 @@
 
 			<div class="tab" id="noseTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="noseTypeSubButton" style="--assetcol: 5"></button>
+					<button class="subtabbtn" id="noseTypeSubButton" style="--assetcol: 5"></button>
 					<button class="subtabbtn" id="nosePositionSubButton" style="--assetcol: 13"></button>
 				</div>
-				<fieldset id="noseType" class="subtab has-subpages active" style="--assetrow: 6">
+				<fieldset id="noseType" class="subtab has-subpages" style="--assetrow: 6">
 					{{#each editorJSON.nose}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
@@ -308,11 +308,11 @@
 
 			<div class="tab" id="mouthTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="mouthTypeSubButton" style="--assetcol: 6"></button>
+					<button class="subtabbtn" id="mouthTypeSubButton" style="--assetcol: 6"></button>
 					<button class="subtabbtn" id="mouthPositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="mouthColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="mouthType" class="subtab has-subpages active" style="--assetrow: 7">
+				<fieldset id="mouthType" class="subtab has-subpages" style="--assetrow: 7">
 					{{#each editorJSON.mouth}}
 						<div class="subpage" style="--subpage: {{@key}}">
 						{{#each this}}
@@ -361,11 +361,11 @@
 
 			<div class="tab" id="glassesTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="glassesTypeSubButton" style="--assetcol: 7"></button>
+					<button class="subtabbtn" id="glassesTypeSubButton" style="--assetcol: 7"></button>
 					<button class="subtabbtn" id="glassesPositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="glassesColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="glassesType" class="subtab active" style="--assetrow: 8">
+				<fieldset id="glassesType" class="subtab" style="--assetrow: 8">
 					{{#each editorJSON.arrayOf9}}
 						<input type="radio" name="glassesType" id="glassesType{{this}}" value="{{this}}" />
 						<label for="glassesType{{this}}" style="--assetcol: {{@key}}"></label>
@@ -398,12 +398,12 @@
 
 			<div class="tab" id="beardTypeTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="beardTypeSubButton" style="--assetcol: 8"></button>
+					<button class="subtabbtn" id="beardTypeSubButton" style="--assetcol: 8"></button>
 					<button class="subtabbtn" id="mustacheTypeSubButton" style="--assetcol: 9"></button>
 					<button class="subtabbtn" id="facialHairPositionSubButton" style="--assetcol: 13"></button>
 					<button class="subtabbtn" id="facialHairColorSubButton" style="--assetcol: 12"></button>
 				</div>
-				<fieldset id="beardType" class="subtab active" style="--assetrow: 9">
+				<fieldset id="beardType" class="subtab" style="--assetrow: 9">
 					{{#each editorJSON.arrayOf6}}
 						<input type="radio" name="beardType" id="beardType{{this}}" value="{{this}}" />
 						<label for="beardType{{this}}" style="--assetcol: {{@key}}"></label>
@@ -429,7 +429,7 @@
 					<label for="facialHairColor7" style="background: #FEB454 !important;" ></label>
 				</fieldset>
 
-				<fieldset id="mustacheType" class="subtab active" style="--assetrow: 10">
+				<fieldset id="mustacheType" class="subtab" style="--assetrow: 10">
 					{{#each editorJSON.arrayOf6}}
 						<input type="radio" name="mustacheType" id="mustacheType{{this}}" value="{{this}}" />
 						<label for="mustacheType{{this}}" style="--assetcol: {{@key}}"></label>
@@ -446,10 +446,10 @@
 
 			<div class="tab" id="moleEnabledTab">
 				<div class="subtabs">
-					<button class="subtabbtn active" id="moleEnabledSubButton" style="--assetcol: 10"></button>
+					<button class="subtabbtn" id="moleEnabledSubButton" style="--assetcol: 10"></button>
 					<button class="subtabbtn" id="molePositionSubButton" style="--assetcol: 13"></button>
 				</div>
-				<fieldset id="moleEnabled" class="subtab active" style="--assetrow: 11">
+				<fieldset id="moleEnabled" class="subtab" style="--assetrow: 11">
 					<input type="radio" name="moleEnabled" id="moleEnabledfalse" value="false" />
 					<label for="moleEnabledfalse" style="--assetcol: 0"></label>
 					<input type="radio" name="moleEnabled" id="moleEnabledtrue" value="true" />
@@ -468,13 +468,13 @@
 
 			<div class="tab" id="miiscTab"><!--Get it it's funny 'cause 'mii' and 'misc'-->
 				<div class="subtabs">
-					<button class="subtabbtn active" id="sizeSubButton" style="--assetcol: 14"></button>
+					<button class="subtabbtn" id="sizeSubButton" style="--assetcol: 14"></button>
 					<button class="subtabbtn" id="genderSubButton" style="--assetcol: 11"></button>
 					<button class="subtabbtn" id="favoriteColorSubButton" style="--assetcol: 12"></button>
 					<button class="subtabbtn" id="infoSubButton" style="--assetcol: 15"></button>
 				</div>
 
-				<fieldset id="size" class="subtab active has-sliders">
+				<fieldset id="size" class="subtab has-sliders no-render">
 					<label for="height" style="--assetcol: 0"></label>
 					<input type="range" list="tickmarks" name="height" id="height" min="0" max="127" />
 					<label for="build" style="--assetcol: 1"></label>
@@ -488,7 +488,7 @@
 					<label for="gender1" style="--assetcol: 1"></label>
 				</fieldset>
 
-				<fieldset id="info" class="subtab active has-textinput">
+				<fieldset id="info" class="subtab has-textinput no-render">
 					<div>
 						<label for="miiName">Nickname</label>
 						<input type="text" name="miiName" id="miiName" minLength="1" maxLength="10" />
@@ -545,7 +545,7 @@
 				</fieldset>
 			</div>
 
-			<div class="tab" id="saveTab">
+			<div class="tab no-render" id="saveTab">
 				<p class="save-prompt">Save Mii? This will permanently overwrite your current Mii.</p>
 				<div class="mii-comparison-animation-wrapper">
 					<div class="mii-comparison unconfirmed">

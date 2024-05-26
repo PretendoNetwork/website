@@ -91,42 +91,114 @@ if (!validMiiData) {
 	initializeMiiData(newMiiData);
 }
 
-// we keeep the images here so we can cache them when we need to change the build/height
-const miiFaceImg = new Image();
-const baldMiiFaceImg = new Image();
-const miiBodyImg = new Image();
+let cache = [];
 
-// Initial mii render
-renderMii();
+// this will cache all needed images when a tab is selected, so we don't have to load them everytime
+// also deletes old cached images for performance
+function cacheImages() {
+    // clean cache old images and js garbage collection will do it's job
+    cache = [];
+
+    // get the tab/subtab/subpage that's in screen so we dont need to pass an argument to the function everytime
+    const tab = document.querySelector('.subpage.active') || document.querySelector('.subtab.active') || document.querySelector('.tab.active');
+
+    // make sure we don't cache unecessary tabs (like height) as they could take a lot of resources and make the website slow
+    if (tab.classList.contains('no-render')) return;
+
+    document.querySelectorAll(`.${Array.from(tab.classList).join('.')} > input`).forEach((el) => {
+        // get input prop
+        const prop = el.name;
+
+        // calculate all the possible values for this input
+        let possibleValues = []
+
+        if (el.type === 'radio') {
+            possibleValues = [el.value || el.defaultValue];
+        } else if (el.type === 'range') {
+            possibleValues = Array.from({ length: el.max - el.min + 1 }, (value, index) => +el.min + index);
+
+            console.log(possibleValues)
+        }
+        
+        possibleValues.forEach((value) => {
+            // we create a copy of the mii just to get the necessary images
+            const cloneMii = Object.create(
+                Object.getPrototypeOf(mii),
+                Object.getOwnPropertyDescriptors(mii)
+            );
+
+            // change cloneMii data based on input possible values
+            if (value === "true" || value === "false") {
+                cloneMii[prop] = value === "true";
+            } else if (value === "on" || value === "off") {
+                cloneMii[prop] = value === "on";
+            } else if (isNaN(parseInt(value))) {
+                cloneMii[prop] = value;
+            } else {
+                cloneMii[prop] = parseInt(value);
+            }
+
+            // fetch necessary images
+            const baldMiiFaceImg = new Image();
+            const miiFaceImg = new Image();
+            const miiBodyImg = new Image();
+            
+            miiFaceImg.src = cloneMii.studioUrl({
+                width: 512,
+                bgColor: "13173300",
+                type: "face_only",
+            });
+
+            miiBodyImg.src = cloneMii.studioAssetUrlBody();
+
+            // save mii data before changing hair
+            const miiData = cloneMii.encode().toString('base64');
+            
+            cloneMii.hairType = 30;
+
+            baldMiiFaceImg.src = cloneMii.studioUrl({
+                width: 512,
+                bgColor: "13173300",
+                type: "face_only",
+            });
+
+            // push images to cache with cloneMii data for later comparison
+            cache.push({ miiData, images: { baldMiiFaceImg, miiFaceImg, miiBodyImg } })
+        })
+    })
+    
+    console.log(`${cache.length} images cached!`);
+}
+
+// Initial cache for the first tab
+cacheImages();
+
+let baldMiiFaceImg = new Image();
+let miiFaceImg = new Image();
+let miiBodyImg = new Image();
+
 // This function renders the Mii on the canvas
 function renderMii(heightOverride, buildOverride) {
+    // find the cache item (if exists) to get the images from, comparing mii data
+    const miiData = mii.encode().toString('base64');
+    const cacheItem = cache.find(cacheItem => cacheItem.miiData === miiData);
+
+    // change the images to the new ones if cache is found, if not found then there are no changes to the images!
+    if (cacheItem) {
+        baldMiiFaceImg = cacheItem.images.baldMiiFaceImg;
+        miiFaceImg = cacheItem.images.miiFaceImg;
+        miiBodyImg = cacheItem.images.miiBodyImg;
+    }
+
 	const canvas = document.querySelector('canvas#miiCanvas');
 	const ctx = canvas.getContext('2d');
 	const height = heightOverride || mii.height;
 	const build = buildOverride || mii.build;
 
-	// if there isn't an override or the images haven't been cached, we load the images
-	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !baldMiiFaceImg.src || !miiBodyImg.src) {
+	// add the filter in case the images aren't loaded
+	if (!baldMiiFaceImg.complete || !miiFaceImg.complete || !miiBodyImg.complete) {
 		canvas.style.filter = 'blur(4px) brightness(70%)';
-
-		// we create a copy of the mii and make it bald
-		const baldMii = Object.create(
-			Object.getPrototypeOf(mii),
-			Object.getOwnPropertyDescriptors(mii)
-		);
-		baldMii.hairType = 30;
-		baldMiiFaceImg.src = baldMii.studioUrl({
-			width: 512,
-			bgColor: '13173300',
-			type: 'face_only',
-		});
-		miiFaceImg.src = mii.studioUrl({
-			width: 512,
-			bgColor: '13173300',
-			type: 'face_only',
-		});
-		miiBodyImg.src = mii.studioAssetUrlBody();
-	}
+    }
 
 	// misc calculations
 	const bodyWidth = (build * 1.7 + 220) * (0.003 * height + 0.6);
@@ -189,6 +261,9 @@ function renderMii(heightOverride, buildOverride) {
 	}
 }
 
+// Initial mii render
+renderMii();
+
 // This function updates a prop of the Mii and rerenders it
 function updateMii(e) {
 	const prop = e.target.name;
@@ -246,6 +321,9 @@ document.querySelectorAll('fieldset').forEach((fieldset) => {
 });
 document.querySelectorAll('input[type=\'range\']').forEach((input) => {
 	input.addEventListener('input', updateMii);
+});
+document.querySelectorAll('input[type=\'range\']').forEach((input) => {
+	input.addEventListener('change', cacheImages);
 });
 document
 	.querySelectorAll('input[type=\'text\'], input[type=\'number\']')
@@ -343,7 +421,7 @@ console.log('[info] preselected value for birthMonth && birthDay');
 // TABS, SUBTABS, AND ALL THE INHERENT JANK
 
 function openTab(e, tabType) {
-	e.preventDefault();
+    e.preventDefault();
 
 	// Deselect all subpages
 	document
@@ -385,7 +463,12 @@ function openTab(e, tabType) {
 	});
 
 	// Selects the first subpage if there is one
-	document.querySelector(`#${selectedID} .subpage`)?.classList?.add('active');
+    document.querySelector(`#${selectedID} .subpage`)?.classList?.add('active');
+    
+    // check if this doesn't contains a subtab to avoid duplicates when caching
+    if (!document.querySelector(`#${selectedID} .subtab`)) {
+        cacheImages();
+    }
 }
 
 // Here we bind all of the functions to the corresponding buttons
@@ -399,7 +482,7 @@ document.querySelectorAll('.subtabs button.subtabbtn').forEach((el) => {
 // SUBPAGES
 
 function paginationHandler(e) {
-	e.preventDefault();
+    e.preventDefault();
 
 	// We hide all subpages
 	document.querySelectorAll('.subpage').forEach((el) => {
@@ -422,7 +505,10 @@ function paginationHandler(e) {
 	// We find the new subpage and activate it
 	e.target.parentNode.parentNode.parentNode.children[
 		newPageIndex
-	].classList.add('active');
+    ].classList.add('active');
+    
+    // cache everything needed for this page
+    cacheImages();
 }
 
 // This adds 1 to the rendered page indexes to make them start from 1 instead of 0
