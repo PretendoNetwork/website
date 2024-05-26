@@ -116,8 +116,6 @@ function cacheImages() {
             possibleValues = [el.value || el.defaultValue];
         } else if (el.type === 'range') {
             possibleValues = Array.from({ length: el.max - el.min + 1 }, (value, index) => +el.min + index);
-
-            console.log(possibleValues)
         }
         
         possibleValues.forEach((value) => {
@@ -167,7 +165,7 @@ function cacheImages() {
         })
     })
     
-    console.log(`${cache.length} images cached!`);
+    console.log(`[info] ${cache.length} images cached!`);
 }
 
 // Initial cache for the first tab
