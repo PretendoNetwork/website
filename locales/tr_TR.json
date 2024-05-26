@@ -254,7 +254,7 @@
 	"blogPage": {
 		"published": "Tarafından yayınlandı",
 		"title": "Blog",
-		"description": "",
+		"description": "Açıklama",
 		"publishedOn": "şu tarihte"
 	},
 	"upgrade": {
