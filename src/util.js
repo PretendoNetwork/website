@@ -130,6 +130,16 @@ async function login(username, password) {
 	return apiResponse.body;
 }
 
+async function forgotPassword(forgotPasswordData) {
+    const apiResponse = await apiPostRequest('/v1/forgot-password', {}, forgotPasswordData);
+
+    if (apiResponse.statusCode !== 200) {
+        throw new Error(apiResponse.body.error);
+    }
+
+    return apiResponse.body;
+}
+
 async function refreshLogin(request, response) {
 	const apiResponse = await apiPostRequest('/v1/login', {}, {
 		refresh_token: request.cookies.refresh_token,
@@ -260,7 +270,8 @@ module.exports = {
 	apiPostRequest,
 	apiDeleteRequest,
 	register,
-	login,
+    login,
+    forgotPassword,
 	refreshLogin,
 	getUserAccountData,
 	updateDiscordConnection,
