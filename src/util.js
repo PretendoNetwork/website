@@ -131,13 +131,13 @@ async function login(username, password) {
 }
 
 async function forgotPassword(forgotPasswordData) {
-    const apiResponse = await apiPostRequest('/v1/forgot-password', {}, forgotPasswordData);
-
-    if (apiResponse.statusCode !== 200) {
-        throw new Error(apiResponse.body.error);
-    }
-
-    return apiResponse.body;
+	const apiResponse = await apiPostRequest('/v1/forgot-password', {}, forgotPasswordData);
+	
+	if (apiResponse.statusCode !== 200) {
+	    throw new Error(apiResponse.body.error);
+	}
+	
+	return apiResponse.body;
 }
 
 async function refreshLogin(request, response) {
@@ -262,24 +262,24 @@ function signDiscoursePayload(payload) {
 }
 
 module.exports = {
-    fullUrl,
-    getLocale,
-    getRawDocs,
-    parseDocs,
-    apiGetRequest,
-    apiPostRequest,
-    apiDeleteRequest,
-    register,
-    login,
-    forgotPassword,
-    refreshLogin,
-    getUserAccountData,
-    updateDiscordConnection,
-    removeDiscordConnection,
-    nintendoPasswordHash,
-    assignDiscordMemberSupporterRole,
-    assignDiscordMemberTesterRole,
-    removeDiscordMemberSupporterRole,
-    removeDiscordMemberTesterRole,
-    signDiscoursePayload
+	fullUrl,
+	getLocale,
+	getRawDocs,
+	parseDocs,
+	apiGetRequest,
+	apiPostRequest,
+	apiDeleteRequest,
+	register,
+	login,
+	forgotPassword,
+	refreshLogin,
+	getUserAccountData,
+	updateDiscordConnection,
+	removeDiscordConnection,
+	nintendoPasswordHash,
+	assignDiscordMemberSupporterRole,
+	assignDiscordMemberTesterRole,
+	removeDiscordMemberSupporterRole,
+	removeDiscordMemberTesterRole,
+	signDiscoursePayload
 };
