@@ -165,7 +165,7 @@ router.get('/forgot-password', async (request, response) => {
 
 router.post('/forgot-password', async (request, response) => {
     const { input, 'h-captcha-response': hCaptchaResponse } = request.body;
-    
+
     response.cookie('input', input, { domain: '.pretendo.network' });
 
     try {
