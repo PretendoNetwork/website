@@ -132,11 +132,11 @@ async function login(username, password) {
 
 async function forgotPassword(forgotPasswordData) {
 	const apiResponse = await apiPostRequest('/v1/forgot-password', {}, forgotPasswordData);
-	
+
 	if (apiResponse.statusCode !== 200) {
-	    throw new Error(apiResponse.body.error);
+		throw new Error(apiResponse.body.error);
 	}
-	
+
 	return apiResponse.body;
 }
 

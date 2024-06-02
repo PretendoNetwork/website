@@ -153,11 +153,11 @@ router.get('/logout', async (_request, response) => {
 
 router.get('/forgot-password', async (request, response) => {
 	const renderData = {
-	    input: request.cookies.input,
-	    success_message: request.cookies.success_message,
-	    error_message: request.cookies.error_message,
+		input: request.cookies.input,
+		success_message: request.cookies.success_message,
+		error_message: request.cookies.error_message,
 	}
-	
+
 	response.clearCookie('input', { domain: '.pretendo.network' });
 
 	response.render('account/forgot-password', renderData);
@@ -169,19 +169,19 @@ router.post('/forgot-password', async (request, response) => {
 	response.cookie('input', input, { domain: '.pretendo.network' });
 
 	try {
-	    await util.forgotPassword({
-	        input,
-	        hCaptchaResponse
-	    })
+		await util.forgotPassword({
+			input,
+			hCaptchaResponse
+		})
 
-	    response.clearCookie('input', { domain: '.pretendo.network' });
-	
-	    response.cookie('success_message', 'An email has been sent.', { domain: '.pretendo.network' });
-	
-	    response.redirect(request.redirect || '/account/forgot-password');
+		response.clearCookie('input', { domain: '.pretendo.network' });
+
+		response.cookie('success_message', 'An email has been sent.', { domain: '.pretendo.network' });
+
+		response.redirect(request.redirect || '/account/forgot-password');
 	} catch (error) {
-	    response.cookie('error_message', error.message, { domain: '.pretendo.network' });
-	    return response.redirect('/account/forgot-password');
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account/forgot-password');
 	}
 });
 
