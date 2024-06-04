@@ -1,23 +1,24 @@
 # 3DS/2DS Family
 
-<div class="tip red">
-	<strong>CAUTION:</strong>
-	SYSTEM TRANSFERS ARE NOT CURRENTLY SUPPORTED BY OUR SERVERS. ATTEMPTING TO PERFORM A SYSTEM TRANSFER MAY PREVENT YOU FROM BEING ABLE TO GO ONLINE IN THE FUTURE. SUPPORT FOR SYSTEM TRANSFERS IS IN DEVELOPMENT.
-</div>
+## Things to know before you start
 
-<div class="tip red">
-	<strong>CAUTION:</strong>
-	Collecting badges in Nintendo Badge Arcade while connected to one network and then launching the game on a different network will result in your badges disappearing. This occurs because the locally saved data does not match the data stored on the server.
-</div>
+This guide assumes that you have a **Homebrewed System** running the latest version of Luma3DS (13+). If you are unsure or do not have a homebrewed system, please follow the [3DS Hacks Guide](https://3ds.hacks.guide/) to check, install and update it. 
 
-<div class="tip">
-	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (13+)</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
-</div>
+**Support for system transfer is currently in development**. Attempting to perform one while being connected to Pretendo will prevent you from being able to go online in the future. If you need to do a system transfer, please do it before continuing with this guide.
 
-The following steps are required for you to connect to the Pretendo Network:
+Badges in **Nintendo Badge Arcade** might disappear and become de-synchronized when switching between Pretendo and Nintendo Network. This is due to your local data not matching the data stored on the respective server.
+
+## Getting Started
+
+To connect to the Pretendo Network, you will need to install a homebrew application and enable Luma patches on your console.
+
+Nimbus is our homebrew application that allows you to connect and switch from Nintendo Network to the Pretendo Network.
+
+This guide is divided into the following steps:
 1. [Downloading Nimbus](#downloading-nimbus)
 2. [Enabling Luma patches](#luma-patches)
-3. [Nimbus](#using-nimbus)
+3. [Using Nimbus](#using-nimbus)
+4. [Signing into your PNID](#signing-into-your-pnid)
 
 ## Downloading Nimbus
 
