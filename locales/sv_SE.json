@@ -39,111 +39,10 @@
 	},
 	"credits": {
 		"title": "Teamet",
-		"people": [
-			{
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"caption": "Projektägare och ledande utvecklare",
-				"name": "Jonathan Barrow (jonbarrow)"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Forskning och utveckling inom Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"name": "Rambo6Glaz",
-				"github": "https://github.com/EpicUsername12",
-				"caption": "Nätverks installerare och konsol forskning"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS forskning och patch utveckling",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
-				"caption": "Forsking inom konsol och andra system"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Ledare för webbutveckling",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes",
-				"name": "pinklimes",
-				"caption": "Webbutveckling"
-			},
-			{
-				"name": "mrjvs",
-				"github": "https://github.com/mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png"
-			}
-		],
 		"text": "Träffa teamet bakom projektet"
 	},
 	"specialThanks": {
 		"title": "Särskilda tack",
-		"people": [
-			{
-				"picture": "https://github.com/superwhiskers.png",
-				"caption": "crunch bibliotek utveckling",
-				"name": "superwhiskers",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"caption": "3Ds utvecklare och NEX dissektor",
-				"name": "Stary",
-				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png"
-			},
-			{
-				"name": "Billy",
-				"caption": "Bevarare",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Forskning inom Mario Kart 7 och 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Delning av Miiverse information",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"special": "Särskilda tack",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay",
-				"name": "Kinnay",
-				"caption": "Forsking om Nintendo datastrukturer"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikoner för Mii-redigeraren och Juxt reaktioner",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub bidragare",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"caption": "Lokaliseringar och andra bidrag"
-			}
-		],
 		"text": "Utan dem skulle Pretendo inte vara där det är idag."
 	},
 	"progressPage": {
@@ -154,7 +53,7 @@
 		"title": "Blogg",
 		"published": "Publicerad av",
 		"publishedOn": "på",
-		"description": ""
+		"description": "De senaste uppdateringarna i förtätade bitar. Om du vill se mer frekventa uppdateringar kan du överväga att <a href=\"/account/upgrade\" target=\"_blank\">stödja oss</a>."
 	},
 	"account": {
 		"loginForm": {

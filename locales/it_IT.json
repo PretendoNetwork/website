@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "Progresso",
-		"paragraphs": [
-			null,
-			"Per la 3DS stiamo anche lavorando su Mario Kart 7, e vorremmo continuare a lavorare su altri giochi quando possibile."
-		],
 		"githubRepo": "Repository GitHub"
 	},
 	"faq": {
@@ -103,112 +99,11 @@
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Proprietario del progetto e sviluppatore principale",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Ricerca e sviluppo Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Installer della rete e ricerca su console",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "Ricerca BOSS e sviluppo patch",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Ricerca su console e altri sistemi",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Leader dello sviluppo web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Sviluppo web",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Disegnatore",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "Incontra il team dietro al progetto"
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
-		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Sviluppo della libreria crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "Sviluppo 3DS e dissettore NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Conservazionista",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Ricerca su Mario Kart 7 e 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Condivisione di informazioni su Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Ringraziamenti speciali",
-				"caption": "Ricerca su strutture dati Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icone per l'editor Mii e le reazioni su Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Contributori su GitHub",
-				"caption": "Localizzazioni e altre contribuzioni",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi."
 	},
 	"discordJoin": {
 		"title": "Tieniti aggiornato",

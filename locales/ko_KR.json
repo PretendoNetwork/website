@@ -39,10 +39,6 @@
 	},
 	"progress": {
 		"title": "진행 상황",
-		"paragraphs": [
-			null,
-			"3DS에서는, 가능하면 다른 프로젝트도 시도하려 하고 있으나 현재는 마리오 카트 7에 집중하고 있습니다."
-		],
 		"githubRepo": "Github 저장소"
 	},
 	"faq": {
@@ -103,112 +99,11 @@
 	},
 	"credits": {
 		"title": "개발 팀",
-		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "프로젝트 소유자 및 리드 개발자",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "마이버스 연구 개발",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "네트워크 설치 관리자 및 콘솔 연구",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS 연구 및 패치 개발",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "콘솔 및 기타 시스템 연구",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "웹 개발 주도",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "웹 개발",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "디자이너",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요"
 	},
 	"specialThanks": {
 		"title": "Special Thanks",
-		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "crunch 라이브러리 개발",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS 개발 및 NEX 해부",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "프로젝트 보존",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "마리오 카트 7 및 3DS 연구",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "마이버스 정보 공유",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Special Thanks",
-				"caption": "닌텐도 데이터 구조에 대한 연구",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Mii 에디터 및 병치 반응 아이콘",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "GitHub 기여자들",
-				"caption": "로컬라이징 및 다른 기여",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다."
 	},
 	"discordJoin": {
 		"title": "최신 정보",
