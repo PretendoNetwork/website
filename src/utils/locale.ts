@@ -1,10 +1,10 @@
 import fs from 'fs-extra';
 import merge from 'lodash.merge';
-import logger from './logger.js';
+import logger from './logger.ts';
 
 import baseLocale from '@/locales/en_US.json' assert { type: 'json' };
 
-function getLocale(code) {
+function getLocale(code: string) {
 	const localeCode = code.replace('-', '_');
 	const path = `@/locales/${localeCode}.json`;
 
@@ -26,7 +26,9 @@ function getLocale(code) {
 }
 
 function getLocaleList() {
-	const filenames = fs.readdirSync('@/locales').map((filename) => filename.replace('.json', '').replace('_', '-'));
+	const filenames = fs
+		.readdirSync('@/locales')
+		.map((filename: string) => filename.replace('.json', '').replace('_', '-'));
 	return filenames;
 }
 

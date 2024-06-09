@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import styles from './ButtonWidget.module.css';
 
+import { ReactNode, MouseEventHandler, CSSProperties } from 'react';
+
 import Button from '@/components/Button/Button';
 
 /**
@@ -19,8 +21,19 @@ import Button from '@/components/Button/Button';
  *
  */
 
-export default function ButtonWidget(ctx) {
-	const { children, className, primary, buttonText, onButtonClick, buttonHref, buttonTarget, style } = ctx;
+interface ButtonWidgetProps {
+	children: ReactNode | string;
+	className?: string;
+	primary?: boolean;
+	buttonText: string;
+	onButtonClick?: MouseEventHandler<HTMLButtonElement>;
+	buttonHref?: string;
+	buttonTarget?: string;
+	style?: CSSProperties;
+}
+
+export default function ButtonWidget(ctx: ButtonWidgetProps) {
+	const { children, className, primary, buttonText, onButtonClick, buttonHref, buttonTarget, style = {} } = ctx;
 	return (
 		<div
 			className={classNames(styles.widget, className)}

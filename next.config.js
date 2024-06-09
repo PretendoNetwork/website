@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
 
 const nextConfig = {
 	reactStrictMode: true,
@@ -8,28 +12,28 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'github.com',
 				port: '',
-				pathname: '/**'
+				pathname: '/**',
 			},
 			{
 				protocol: 'https',
 				hostname: 'avatars.githubusercontent.com',
 				port: '',
-				pathname: '/u/**'
+				pathname: '/u/**',
 			},
 			{
 				protocol: 'https',
 				hostname: 'github.githubassets.com',
 				port: '',
-				pathname: '/images/**'
+				pathname: '/images/**',
 			},
 			{
 				protocol: 'https',
 				hostname: 'cdn.discordapp.com',
 				port: '',
-				pathname: '/avatars/**'
-			}
-		]
-	}
+				pathname: '/avatars/**',
+			},
+		],
+	},
 };
 
 export default nextConfig;

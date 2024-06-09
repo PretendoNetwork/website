@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import CoolHover from '@/components/CoolHover/CoolHover';
 import styles from './Button.module.css';
 
+import { ReactNode, MouseEventHandler, CSSProperties } from 'react';
+
 import Link from 'next/link';
 
 /**
@@ -20,7 +22,19 @@ import Link from 'next/link';
  *
  */
 
-export default function Button(ctx) {
+interface ButtonProps {
+	children: ReactNode | string;
+	className?: string;
+	primary?: boolean;
+	icon?: boolean;
+	compact?: boolean;
+	onClick?: MouseEventHandler<HTMLButtonElement>;
+	href?: string;
+	target?: string;
+	style?: CSSProperties;
+}
+
+export default function Button(ctx: ButtonProps) {
 	const { children, className, primary, icon, compact, onClick, href, target, style } = ctx;
 
 	const BtnEl = () => {
@@ -50,7 +64,7 @@ export default function Button(ctx) {
 	};
 
 	return href ? (
-		<Link href={href} target={target} tabIndex="-1">
+		<Link href={href} target={target} tabIndex={-1}>
 			<BtnEl />
 		</Link>
 	) : (

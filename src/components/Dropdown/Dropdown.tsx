@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef, useMemo, ReactNode, RefObject, Dispatch, SetStateAction } from 'react';
 import classNames from 'classnames';
 
 import styles from './Dropdown.module.css';
@@ -42,7 +42,20 @@ import styles from './Dropdown.module.css';
  *	/>
  */
 
-export default function Dropdown(ctx) {
+interface DropdownContentObject {
+	el: ReactNode;
+	tr: RefObject<ReactNode>;
+}
+
+interface DropdownProps {
+	dropdownContents: Array<DropdownContentObject>;
+	openState: [number, Dispatch<SetStateAction<number>>];
+	clickedState: [boolean, Dispatch<SetStateAction<boolean>>];
+	boundaryRef: RefObject<HTMLDivElement>;
+	boundaryTolerance: number;
+}
+
+export default function Dropdown(ctx: DropdownProps) {
 	const [open, setOpen] = ctx.openState;
 	const [clicked, setClicked] = ctx.clickedState;
 	const { boundaryRef, boundaryTolerance } = ctx;
@@ -68,35 +81,33 @@ export default function Dropdown(ctx) {
 		const dropdownContentRect = dropdownContent?.current?.getBoundingClientRect();
 		const dropdownRect = dropdownContent?.current?.getBoundingClientRect();
 
-		const pxToInt = (px) => parseInt(px.replace('px', ''));
-		const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+		const pxToInt = (px: string) => parseInt(px.replace('px', ''));
+		const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
+
+		function getRealCenter(trRef: RefObject<HTMLDivElement>) {
+			const style = getComputedStyle(trRef.current);
+			const rightPad = pxToInt(style.paddingRight);
+			const leftPad = pxToInt(style.paddingLeft);
+
+			const elWidth = pxToInt(style.width);
+			return (elWidth - rightPad - leftPad) / 2;
+		}
+
+		function getTriggerOffset(trRef: RefObject<HTMLDivElement>) {
+			const style = getComputedStyle(trRef.current);
+			const leftPad = pxToInt(style.paddingLeft);
+			return (
+				trRef.current.getBoundingClientRect().left - boundaryRef.current.getBoundingClientRect().left + leftPad
+			);
+		}
+
+		function getLeftOffset(trRef: RefObject<HTMLDivElement>) {
+			return getTriggerOffset(trRef) + getRealCenter(trRef);
+		}
 
 		if (dropdownContentRect && open) {
 			const sectionWidth = pxToInt(getComputedStyle(boundaryRef.current).width);
 			const dropdownWidth = dropdownRect.width;
-
-			function getRealCenter(trRef) {
-				const style = getComputedStyle(trRef.current);
-				const rightPad = pxToInt(style.paddingRight);
-				const leftPad = pxToInt(style.paddingLeft);
-
-				const elWidth = pxToInt(style.width);
-				return (elWidth - rightPad - leftPad) / 2;
-			}
-
-			function getTriggerOffset(trRef) {
-				const style = getComputedStyle(trRef.current);
-				const leftPad = pxToInt(style.paddingLeft);
-				return (
-					trRef.current.getBoundingClientRect().left -
-					boundaryRef.current.getBoundingClientRect().left +
-					leftPad
-				);
-			}
-
-			function getLeftOffset(trRef) {
-				return getTriggerOffset(trRef) + getRealCenter(trRef);
-			}
 
 			const arrowOffset = getLeftOffset(dropdownTriggers[open]);
 			const leftOffset = getLeftOffset(dropdownTriggers[open]) - dropdownWidth / 2;
@@ -118,8 +129,8 @@ export default function Dropdown(ctx) {
 			dropdown.current.style.height = 0;
 		}
 
-		const closeOnClickOutside = (e) => {
-			if (dropdown.current && !dropdown.current.contains(e.target)) {
+		const closeOnClickOutside = (e: MouseEvent) => {
+			if (dropdown.current && !dropdown.current.contains(e.target as Node)) {
 				setOpen(0);
 				setClicked(false);
 			}

@@ -1,6 +1,7 @@
 import styles from './Caption.module.css';
 import classNames from 'classnames';
 
+import { ReactNode, CSSProperties } from 'react';
 
 /**
  * A reusable component for captions.
@@ -12,7 +13,14 @@ import classNames from 'classnames';
  *
  */
 
-export default function Caption(ctx) {
+interface CaptionProps {
+	children: string;
+	center?: boolean;
+	style?: CSSProperties;
+	id?: string;
+}
+
+export default function Caption(ctx: CaptionProps) {
 	const { children: caption, center, style, id } = ctx;
 
 	return (

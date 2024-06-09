@@ -6,7 +6,16 @@ import { CaretRight } from '@phosphor-icons/react/dist/ssr';
 
 import styles from './Faq.module.css';
 
-export default function Faq(ctx) {
+interface QAObject {
+	question: string;
+	answer: string;
+}
+
+interface FaqProps {
+	questionObject: Array<QAObject>;
+}
+
+export default function Faq(ctx: FaqProps) {
 	const { questionObject } = ctx;
 	const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -22,7 +31,7 @@ export default function Faq(ctx) {
 				className={classNames({ [styles.selected]: selected })}
 				onClick={() => setSelectedIndex(i)}
 				onKeyDown={(e) => e.key === 'Enter' && setSelectedIndex(i)}
-				tabIndex="0"
+				tabIndex={0}
 			>
 				<CaretRight size={24} weight="bold" className={styles.chevron} alt="" />
 				{question.question}

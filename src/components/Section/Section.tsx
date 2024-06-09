@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 
+import { CSSProperties, ReactNode, RefObject } from 'react';
+
 import styles from './Section.module.css';
 
 /**
@@ -18,7 +20,17 @@ import styles from './Section.module.css';
  *
  */
 
-export default function Section(ctx) {
+interface SectionProps {
+	id?: string;
+	style?: CSSProperties;
+	children?: ReactNode;
+	className?: string;
+	compact?: boolean;
+	contentClassName?: string;
+	contentRef?: RefObject<HTMLDivElement>;
+}
+
+export default function Section(ctx: SectionProps) {
 	const { id, style, children, className, compact, contentClassName, contentRef } = ctx;
 
 	return (

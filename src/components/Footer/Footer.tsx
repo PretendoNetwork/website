@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 import styles from './Footer.module.css';
 
-export default function Footer(ctx) {
+export default function Footer() {
 	const { locale } = getLocale('TODO');
 
 	const year = new Date().getFullYear(); /* Can't have an outdated year this way :3 */
@@ -28,7 +28,7 @@ export default function Footer(ctx) {
 								href={`https://wikipedia.org/wiki/${year}`}
 								target="_blank"
 								className={styles.link}
-								tabIndex="-1"
+								tabIndex={-1}
 							>
 								{year}
 							</Link>

@@ -11,7 +11,7 @@ const poppins = Poppins({
 	subsets: ['latin'], // this is the preloaded subset, all subsets will be available
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html className={`${poppins.variable}`}>
 			<body style={{ paddingTop: '48px' }}>
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<Footer />
 				<Script
-					strategy="lazyOnLoad"
+					strategy="lazyOnload"
 					src="https://static.cloudflareinsights.com/beacon.min.js"
 					data-cf-beacon='{"token": "ea6695987d664a7f90874c9c0dee9385"}'
 				/>
@@ -60,7 +60,6 @@ export const metadata = {
 		card: 'summary_large_image',
 		site: '@PretendoNetwork',
 		creator: '@PretendoNetwork',
-		url: 'https://pretendo.network/',
 		images: ['https://pretendo.network/assets/images/opengraph/opengraph-image.png'],
 	},
 	robots: {

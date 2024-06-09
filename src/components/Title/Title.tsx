@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import { createElement, ReactNode, CSSProperties } from 'react';
 import classNames from 'classnames';
 import styles from './Title.module.css';
 
@@ -13,7 +13,16 @@ import styles from './Title.module.css';
  *
  */
 
-export default function Title(ctx) {
+interface TitleProps {
+	children: string;
+	className?: string;
+	element?: string;
+	style?: CSSProperties;
+	id?: string;
+	center?: boolean;
+}
+
+export default function Title(ctx: TitleProps) {
 	const { children: title = '', className, element, style, id, center } = ctx;
 
 	// regex to match all start/end punctuation except for parentheses and brackets. Please never make me do this again.

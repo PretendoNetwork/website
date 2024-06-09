@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 
+import { CSSProperties, MouseEventHandler, AnimationEventHandler } from 'react';
+
 import styles from './Bandwidth.module.css';
 
 /**
@@ -20,10 +22,24 @@ import styles from './Bandwidth.module.css';
  *
  */
 
-export default function Bandwidth(ctx) {
+interface VanillaBandwidthProps {
+	size?: number;
+	className?: string;
+	style?: CSSProperties;
+	onClick?: MouseEventHandler<SVGSVGElement>;
+	onAnimationEnd?: AnimationEventHandler<SVGSVGElement>;
+}
+
+interface BandwidthProps extends VanillaBandwidthProps {
+	lines?: Array<string>;
+	alwaysShowBubble?: boolean;
+	alignBubble?: 'left' | 'center' | 'right';
+}
+
+export default function Bandwidth(ctx: BandwidthProps) {
 	const { lines = [], size = 192, alwaysShowBubble = false, alignBubble = 'center', className, style } = ctx;
 
-	const [lineIndex, setLineIndex] = useState(-1 + alwaysShowBubble);
+	const [lineIndex, setLineIndex] = useState(-1 + +alwaysShowBubble);
 	const [jump, setJump] = useState(false || alwaysShowBubble);
 
 	const active = lineIndex > -1;
@@ -49,7 +65,7 @@ export default function Bandwidth(ctx) {
 				)}
 				<VanillaBandwidth
 					size={size}
-					onClick={updateLine}
+					onClick={() => updateLine()}
 					className={classNames(styles.bandwidth, { [styles.jump]: jump })}
 					onAnimationEnd={() => setJump(false)}
 				/>
@@ -70,12 +86,11 @@ export default function Bandwidth(ctx) {
  *
  */
 
-export const VanillaBandwidth = (ctx) => {
+export const VanillaBandwidth = (ctx: VanillaBandwidthProps) => {
 	const { size = 192, className, style, onClick, onAnimationEnd } = ctx;
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			alt=""
 			version="1.1"
 			viewBox="0 0 813 813"
 			width={size}
@@ -85,6 +100,8 @@ export const VanillaBandwidth = (ctx) => {
 			onClick={onClick}
 			onAnimationEnd={onAnimationEnd}
 		>
+			<title>Bandwidth</title>
+			<desc>A drawing of Bandwidth, a purple raccoon with a brick in one paw and a Gamepad in the other.</desc>
 			<defs>
 				<style>
 					{

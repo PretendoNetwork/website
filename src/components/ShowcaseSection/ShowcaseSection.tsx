@@ -1,12 +1,19 @@
 import styles from './ShowcaseSection.module.css';
 
 import classNames from 'classnames';
-import ImageFix from '@/components/ImageFix/ImageFix';
+import Image, { StaticImageData } from 'next/image';
 
 import Section from '@/components/Section/Section';
 import Title from '@/components/Title/Title';
 
-export default function ShowcaseSection(ctx) {
+interface ShowcaseSectionProps {
+	title?: string;
+	caption?: string;
+	image?: StaticImageData;
+	isOdd?: boolean
+}
+
+export default function ShowcaseSection(ctx: ShowcaseSectionProps) {
 	const { title, caption, image, isOdd } = ctx;
 	return (
 		<Section
@@ -17,7 +24,7 @@ export default function ShowcaseSection(ctx) {
 				<Title>{title}</Title>
 				<p className={styles.caption}>{caption}</p>
 			</div>
-			<ImageFix src={image} alt="" className={styles.image} quality={100} sizes="(max-width: 840px) 100vw, 700px" />
+			<Image src={image} alt="" className={styles.image} quality={100} sizes="(max-width: 840px) 100vw, 700px" />
 		</Section>
 	);
 }

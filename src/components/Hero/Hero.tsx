@@ -1,4 +1,4 @@
-import ImageFix from '@/components/ImageFix/ImageFix';
+import Image from 'next/image';
 import n2ds from '/public/assets/images/n2ds.png';
 
 import Title from '@/components/Title/Title';
@@ -22,13 +22,7 @@ export default function Hero({ locale }) {
 					</Button>
 
 					<div>
-						<Button
-							icon
-							href="https://discord.gg/pretendo"
-							target="_blank"
-							aria-label="Discord server"
-							title="Discord server"
-						>
+						<Button icon href="https://discord.gg/pretendo" target="_blank" aria-label="Discord server">
 							<DiscordLogo size={32} weight="fill" alt="" />
 						</Button>
 
@@ -41,7 +35,7 @@ export default function Hero({ locale }) {
 							<GithubLogo size={32} weight="fill" alt="" />
 						</Button>
 
-						<Button icon href="/account/upgrade" target="_blank" title="Upgrade page">
+						<Button icon href="/account/upgrade" target="_blank" aria-label="Upgrade page">
 							<Heart size={32} weight="fill" alt="" />
 						</Button>
 					</div>
@@ -50,7 +44,7 @@ export default function Hero({ locale }) {
 			<div className={styles.images}>
 				<div className={styles.lightCircle}>
 					<svg
-						alt=""
+						aria-hidden={true}
 						xmlns="http://www.w3.org/2000/svg"
 						width="839.371"
 						height="893.406"
@@ -155,7 +149,7 @@ export default function Hero({ locale }) {
 						</g>
 					</svg>
 
-					<ImageFix className={styles.n2ds} src={n2ds} alt="" />
+					<Image className={styles.n2ds} src={n2ds} alt="" />
 				</div>
 			</div>
 		</div>

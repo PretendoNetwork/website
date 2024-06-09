@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, ReactNode, CSSProperties } from 'react';
 import styles from './CoolHover.module.css';
 import classNames from 'classnames';
 
@@ -20,7 +20,16 @@ import classNames from 'classnames';
  *
  */
 
-export default function CoolHover(ctx) {
+interface CoolHoverProps {
+	hoverColor?: string;
+	bgColor?: string;
+	children: ReactNode;
+	className?: string;
+	radius?: number;
+	style?: CSSProperties;
+}
+
+export default function CoolHover(ctx: CoolHoverProps) {
 	const { hoverColor, bgColor, children, className, radius, style } = ctx;
 
 	const [pos, setPos] = useState({ x: 0, y: 0 });

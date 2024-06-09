@@ -13,31 +13,37 @@ const writeStreams = {
 
 const time = () => {
 	const date = new Date();
-	return date.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 });
+	return date.toLocaleTimeString([], {
+		hour12: false,
+		hour: '2-digit',
+		minute: '2-digit',
+		second: '2-digit',
+		fractionalSecondDigits: 3,
+	});
 };
 
-function success(message) {
+function success(message: string) {
 	const logLine = `[${time()}] [SUCCESS]: ${message}`;
 	writeStreams.success.write(`${logLine}\n`);
 
 	console.log(chalk.green.bold(logLine));
 }
 
-function error(message) {
+function error(message: string) {
 	const logLine = `[${time()}] [ERROR]: ${message}`;
 	writeStreams.error.write(`${logLine}\n`);
 
 	console.log(chalk.red.bold(logLine));
 }
 
-function warn(message) {
+function warn(message: string) {
 	const logLine = `[${time()}] [WARN]: ${message}`;
 	writeStreams.warn.write(`${logLine}\n`);
 
 	console.log(chalk.yellow.bold(logLine));
 }
 
-function info(message) {
+function info(message: string) {
 	const logLine = `[${time()}] [INFO]: ${message}`;
 	writeStreams.info.write(`${logLine}\n`);
 

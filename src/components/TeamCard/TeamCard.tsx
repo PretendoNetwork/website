@@ -1,5 +1,5 @@
 import styles from './TeamCard.module.css';
-import ImageFix from '@/components/ImageFix/ImageFix';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 import { Star } from '@phosphor-icons/react/dist/ssr';
@@ -21,7 +21,18 @@ import classNames from 'classnames';
  *
  */
 
-export default function TeamCard(ctx) {
+interface TeamCardProps {
+	name: string;
+	caption: string;
+	pic: StaticImageData | string;
+	link?: string;
+	compact?: boolean;
+	special?: boolean;
+	className?: string;
+	tabIndex?: number;
+}
+
+export default function TeamCard(ctx: TeamCardProps) {
 	const { name, caption, pic, link, compact, special, className, tabIndex } = ctx;
 
 	return (
@@ -35,7 +46,7 @@ export default function TeamCard(ctx) {
 			tabIndex={tabIndex}
 		>
 			<div className={styles.imageWrapper}>
-				<ImageFix src={pic} width={110} height={110} alt="" className={styles.image} />
+				<Image src={pic} width={110} height={110} alt="" className={styles.image} />
 			</div>
 			<div className={styles.text}>
 				<h3>{name}</h3>

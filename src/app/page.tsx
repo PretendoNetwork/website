@@ -11,7 +11,7 @@ import ShowcaseSection from '@/components/ShowcaseSection/ShowcaseSection';
 
 import { getLocale } from '@/utils/locale';
 
-import ImageFix from '@/components/ImageFix/ImageFix';
+import Image, { StaticImageData } from 'next/image';
 
 import styles from './page.module.css';
 
@@ -20,14 +20,26 @@ import networkImage from '@/public/assets/images/showcase/network.png';
 import pcmouseImage from '@/public/assets/images/showcase/pcmouse.png';
 import wiiuchatImage from '@/public/assets/images/showcase/wiiuchat.png';
 
-const showcaseImages = {
+interface ShowcaseImages {
+	[key: string]: StaticImageData;
+}
+
+const showcaseImages: ShowcaseImages = {
 	juxt: juxtImage,
 	network: networkImage,
 	pcmouse: pcmouseImage,
 	wiiuchat: wiiuchatImage,
 };
 
-export default function Home(ctx) {
+interface TeamMemberObject {
+	special: boolean;
+	name: string;
+	caption: string;
+	picture: string;
+	github: string;
+}
+
+export default function Home() {
 	const { locale } = getLocale('TODO');
 
 	return (
@@ -42,7 +54,7 @@ export default function Home(ctx) {
 					<Caption>Our project has many components. Here are some of them.</Caption>
 				</Section>
 
-				{locale.showcase.map((el, i) => {
+				{locale.showcase.map((el: { title: string; caption: string; image: string }, i: number) => {
 					return (
 						<ShowcaseSection
 							title={el.title}
@@ -55,7 +67,7 @@ export default function Home(ctx) {
 				})}
 
 				<Section className={styles.showcaseTail} contentClassName={styles.content}>
-					<ImageFix
+					<Image
 						src={wiiuchatImage}
 						className={styles.image}
 						alt=""
@@ -89,7 +101,7 @@ export default function Home(ctx) {
 				<Caption center>{locale.credits.text}</Caption>
 
 				<div className={styles.teamWrapper}>
-					{locale.credits.people.map((el, i) => {
+					{locale.credits.people.map((el: TeamMemberObject, i: number) => {
 						return (
 							<TeamCard name={el.name} caption={el.caption} pic={el.picture} link={el.github} key={i} />
 						);
@@ -108,7 +120,7 @@ export default function Home(ctx) {
 								let ar = locale.specialThanks.people;
 								ar = ar.slice(0, Math.round(ar.length / 2));
 								ar = ar.concat(ar).concat(ar);
-								return ar.map((el, i) => {
+								return ar.map((el: TeamMemberObject, i: number) => {
 									return (
 										<TeamCard
 											compact
@@ -118,7 +130,7 @@ export default function Home(ctx) {
 											pic={el.picture}
 											link={el.github}
 											key={i}
-											tabIndex={(Math.round(ar.length / 4) >= i) - 1}
+											tabIndex={Math.round(ar.length / 4) >= i ? 0 : 1}
 										/>
 									);
 								});
@@ -130,7 +142,7 @@ export default function Home(ctx) {
 								let ar = locale.specialThanks.people;
 								ar = ar.slice(Math.round(ar.length / 2));
 								ar = ar.concat(ar).concat(ar);
-								return ar.map((el, i) => {
+								return ar.map((el: TeamMemberObject, i: number) => {
 									return (
 										<TeamCard
 											compact
@@ -140,7 +152,7 @@ export default function Home(ctx) {
 											pic={el.picture}
 											link={el.github}
 											key={i}
-											tabIndex={(Math.round(ar.length / 4) >= i) - 1}
+											tabIndex={Math.round(ar.length / 4) >= i ? 0 : 1}
 										/>
 									);
 								});
