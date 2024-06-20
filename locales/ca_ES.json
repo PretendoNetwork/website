@@ -284,7 +284,8 @@
 				"connectedToDiscord": "Connectat a Discord com",
 				"gender": "Gènere",
 				"birthDate": "Dia de naixement",
-				"serverEnv": "Entorn del servidor"
+				"serverEnv": "Entorn del servidor",
+				"signInSecurity": "Inici de sessió i seguretat"
 			},
 			"downloadFilesDescription": "No funcionarà a la xarxa de Nintendo"
 		},
@@ -347,23 +348,30 @@
 		"quickLinks": {
 			"header": "Enllaços d'accés ràpid",
 			"links": [
-				{},
 				{
-					"header": "Has tingut un error?"
+					"header": "Instal·lar Pretendo"
+				},
+				{
+					"header": "Has tingut un error?",
+					"caption": "Cerca-ho aquí"
 				}
 			]
 		},
 		"search": {
 			"caption": "Escriu-lo al cuadre de baix per a obtindre informació del teu problema!",
 			"label": "Codi d'error",
-			"title": "Tens un codi d'error?"
+			"title": "Tens un codi d'error?",
+			"no_match": "No s’han trobat coincidències"
 		},
 		"sidebar": {
 			"getting_started": "Per a començar",
 			"welcome": "Benvingut",
 			"search": "Cercar",
-			"juxt_err": "Codis d'error - Juxt"
-		}
+			"juxt_err": "Codis d'error - Juxt",
+			"install_extended": "Instal·lar Pretendo",
+			"install": "Instal·lar"
+		},
+		"missingInLocale": "Aquesta pàgina no està disponible al teu idioma. Si us plau, consulta la versió en anglès a sota."
 	},
 	"donation": {
 		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>."
