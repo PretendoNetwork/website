@@ -374,6 +374,7 @@
 		"missingInLocale": "Aquesta pàgina no està disponible al teu idioma. Si us plau, consulta la versió en anglès a sota."
 	},
 	"donation": {
-		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>."
+		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>.",
+		"progress": "Objectiu mensual: <span>$${totd}</span> de <span>$${goald}</span>/al mes, <span>${perc}%</span>."
 	}
 }
