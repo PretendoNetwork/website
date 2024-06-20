@@ -231,7 +231,7 @@
 			"No puc esperar per que el rellotge arribi a 03:14:08 UTC el 19 de Gener a 2038!",
 			"Realment, la Wii U és un sistema infravalorat: els anuncis van ser dolents, però la consola és genial. Ah, un moment, no estic segur perquè, però el meu Gamepad no s'està connectant a la meva Wii.",
 			"El tema principal de Super Mario World 2 - Yoshi's Island és boníssim i no hi ha manera de fer-me canviar d'opinió.",
-			null,
+			"Els meus llançaments de Nintendo Switch han sigut Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack , Nintendo Switch Online + Yet Another Port Pack i Nintendo Switch Online + Dr. Kawashima's Brain Training/Brain Age \"Et va gustar molt el títol de la consola virtual de Nintendo Wii U, així que la portem de volta\" Pack. Realment pots dir que a Nintendo li importa.",
 			null,
 			"El meu primer vídeo al canal! He volgut fer vídeos des de fa molt, però el meu portàtil no funcionava bé i no podia fer funcionar fraps, skype o minecraft tot a la vegada. Però això s'ha acabat! Amb l'ajuda del meu professor de TI el meu portàtil funciona molt millor i ara puc grabar! Desitjo que tots gaudiu i si ho feu deixeu m'agrada i subscriviu-vos!!!"
 		]
@@ -246,7 +246,9 @@
 			"email": "Correu electrònic",
 			"miiName": "Nom de mii",
 			"forgotPassword": "T'has olvidat la teva contrasenya?",
-			"register": "Crear compte"
+			"register": "Crear compte",
+			"registerPrompt": "No tens un compte?",
+			"loginPrompt": "Ja tens un compte?"
 		},
 		"account": "Compte",
 		"settings": {
@@ -279,7 +281,10 @@
 				"signInHistory": "Historial d'inicis de sessió",
 				"noDiscordLinked": "Cap compte de Discord connectat.",
 				"fullSignInHistory": "Mira l'historial complet",
-				"connectedToDiscord": "Connectat a Discord com"
+				"connectedToDiscord": "Connectat a Discord com",
+				"gender": "Gènere",
+				"birthDate": "Dia de naixement",
+				"serverEnv": "Entorn del servidor"
 			},
 			"downloadFilesDescription": "No funcionarà a la xarxa de Nintendo"
 		},
@@ -306,7 +311,8 @@
 	"blogPage": {
 		"published": "Publicat per",
 		"publishedOn": "al",
-		"title": "Blog"
+		"title": "Blog",
+		"description": "Les últimes actualitzacions en petites quantitats. Si vols veure actualitzacions més freqüents, considera <a href=\"/account/upgrade\" target=\"_blank\">donar-nos suport</a>."
 	},
 	"upgrade": {
 		"tierSelectPrompt": "Selecciona un nivell",
@@ -325,9 +331,41 @@
 		"description": "Comprova el progrés i els objectius del projecte! (S'actualitza cada hora, més o menys, no mostra TOTS els canvis i objectius)"
 	},
 	"localizationPage": {
-		"title": "Localitzem-nos"
+		"title": "Localitzem-nos",
+		"instructions": "Mira les instruccions de localització",
+		"description": "Enganxa un enllaç a una localització JSON accesible públicament per a probar-la al lloc",
+		"button": "Arxiu de prova",
+		"fileInput": "Arxiu de prova",
+		"filePlaceholder": "https://a.link.to/l_arxiu.json"
 	},
 	"modals": {
-		"close": "Tancar"
+		"close": "Tancar",
+		"cancel": "Cancel·lar",
+		"confirm": "Confirmar"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Enllaços d'accés ràpid",
+			"links": [
+				{},
+				{
+					"header": "Has tingut un error?"
+				}
+			]
+		},
+		"search": {
+			"caption": "Escriu-lo al cuadre de baix per a obtindre informació del teu problema!",
+			"label": "Codi d'error",
+			"title": "Tens un codi d'error?"
+		},
+		"sidebar": {
+			"getting_started": "Per a començar",
+			"welcome": "Benvingut",
+			"search": "Cercar",
+			"juxt_err": "Codis d'error - Juxt"
+		}
+	},
+	"donation": {
+		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>."
 	}
 }
