@@ -9,16 +9,16 @@
 		"account": "Cuenta",
 		"accountWidget": {
 			"settings": "Ajustes",
-			"logout": "Cerrar Sesión"
+			"logout": "Cerrar sesión"
 		},
 		"donate": "Donar",
 		"dropdown": {
 			"captions": {
 				"credits": "Conoce al equipo",
-				"about": "Sobre el projecto",
-				"blog": "Nuestras últimas actualizaciones, resumidas",
+				"about": "Sobre el proyecto",
+				"blog": "Un resumen de nuestras últimas actualizaciones",
 				"progress": "Mira el progreso del proyecto y sus metas",
-				"faq": "Preguntas más frecuentes"
+				"faq": "Preguntas frecuentes"
 			}
 		}
 	},
