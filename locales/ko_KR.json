@@ -294,7 +294,7 @@
 			"password": "비밀번호",
 			"confirmPassword": "비밀번호 확인",
 			"email": "이메일",
-			"miiName": "미이 이름",
+			"miiName": "Mii 이름",
 			"detailsPrompt": "아래에 계정 정보를 입력하세요.",
 			"login": "로그인",
 			"register": "등록하기",
