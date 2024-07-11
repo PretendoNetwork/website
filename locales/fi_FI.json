@@ -7,7 +7,7 @@
 			},
 			{
 				"question": "Toimiiko olemassaoleva NNID:ni Pretendossa?",
-				"answer": "Ei, valitettavasti. Olemassa olevat NNID:t eivät tule toimimaan Pretendossa, sillä vain Nintendolla on tiedossaan käyttäjätietosi. Vaikka NNID-PNID tietojensiirto on teoriassa mahdollista, se on riskialtista ja vaatii arkaluonteisia käyttäjätietoja, joita emme halua haltuumme."
+				"answer": "Valitettavasti ei. Olemassa olevat NNID:t eivät tule toimimaan Pretendossa, sillä vain Nintendolla on tiedossaan käyttäjätietosi. Vaikka NNID-PNID tietojensiirto on teoriassa mahdollista, se on riskialtista ja vaatii arkaluonteisia käyttäjätietoja, joita emme halua haltuumme."
 			},
 			{
 				"question": "Kuinka käytän Pretendoa?",
@@ -58,7 +58,7 @@
 		},
 		"donate": "Lahjoita",
 		"blog": "Blogi",
-		"credits": "Krediitit"
+		"credits": "Tekijät"
 	},
 	"hero": {
 		"subtitle": "Pelipalvelimet",
