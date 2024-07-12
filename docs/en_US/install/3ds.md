@@ -83,13 +83,13 @@ Depending on how you installed Nimbus, launch it either through the Homebrew Lau
 
 Your selection persists between reboots.
 
-## Signing into your PNID
+## Signing into your PNID (Optional)
 
-The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
+The 3DS does not rely on NNIDs for the vast majority of its game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
 
-Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
+Setting up a PNID on the 3DS is the same as setting up a NNID, which you can do by going to the Settings app. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date.
 
-It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
+It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change some user data.
 
 ## Other information
 
