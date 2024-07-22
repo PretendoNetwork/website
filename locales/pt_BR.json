@@ -242,7 +242,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "As últimas atualizações em partes condensadas. Se você quiser ver atualizações mais frequentes, considere <a href=\"/account/upgrade\" target=\"_blank\">nos apoiar</a>.",
 		"published": "Publicado por",
 		"publishedOn": "em"
 	},
