@@ -1,4 +1,7 @@
 process.title = 'Pretendo - Website';
+process.on('SIGTERM', () => {
+	process.exit(0);
+});
 
 const express = require('express');
 const handlebars = require('express-handlebars');

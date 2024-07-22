@@ -1,0 +1,5 @@
+.git
+.env
+node_modules
+dist
+logs
