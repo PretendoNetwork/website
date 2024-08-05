@@ -1,1 +1,383 @@
-{}
+{
+	"nav": {
+		"credits": "Créditos",
+		"donate": "Doa",
+		"accountWidget": {
+			"settings": "Configuración",
+			"logout": "Acceder"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "coñecer o equipo",
+				"blog": "As nosas últimas actualizacións, resumidas",
+				"progress": "Comproba o progreso e os obxectivos do proxecto",
+				"about": "Sobre o proxecto",
+				"faq": "Preguntas Frecuentes"
+			}
+		},
+		"docs": "Documentos",
+		"faq": "Preguntas e respostas",
+		"about": "Sobre",
+		"progress": "Progreso",
+		"blog": "Blog",
+		"account": "Conta"
+	},
+	"hero": {
+		"subtitle": "Servidores de xogos",
+		"title": "Recreado",
+		"text": "Pretendo é un substituto gratuíto e de código aberto para os servidores de Nintendo tanto para 3DS como para Wii U, que permite a conectividade en liña para todos incluso despois de que os servidores orixinais estean descontinuados",
+		"buttons": {
+			"readMore": "Le máis"
+		}
+	},
+	"faq": {
+		"text": "Abaixo amósanse algunhas preguntas comúns que nos fan.",
+		"QAs": [
+			{
+				"question": "Que é Pretendo?",
+				"answer": "Pretendo é un substituto de Nintendo Network de código aberto que ten como obxectivo crear servidores personalizados para a familia de consolas Wii U e 3DS. O noso obxectivo é preservar a funcionalidade en liña destas consolas, para permitir aos xogadores seguir xogando aos seus xogos favoritos de Wii U e 3DS ao máximo."
+			},
+			{
+				"question": "O meu Nintendo Network ID existente funcionará é pretendo?",
+				"answer": "Por desgraza non. Os ID de Nintendo Network existentes non funcionarán é Pretendo, xa que só Nintendo conserva os datos dos usuarios. Aínda que unha migración de NNID a PNID é teoricamente posible, sería arriscado e requiriría datos confidenciais do usuario que non queremos conservar."
+			},
+			{
+				"answer": "Para usar Pretendo siga as instrucións da sección Documentos na parte superior.",
+				"question": "Como empregar Pretendo?"
+			},
+			{
+				"question": "Podo saber cando unha función/servizo que pretendo estará lista?",
+				"answer": "Non. Moitas das funcións e servizos de Pretendo desenvólvense de forma independente (por exemplo, un programador pode traballar en Miiverse mentres que outro pode traballar en Contas e Amigos) e, polo tanto, non podemos dar un prazo de entrega estimado."
+			},
+			{
+				"question": "Pretendo funciona en emuladores como Cemu/Citra?",
+				"answer": "Pretendo é compatible con calquera cliente que poida interactuar coa Nintendo Network. Actualmente, o único emulador con este tipo de funcionalidades é Cemu. Cemu 2.0 é oficialmente compatible con Pretendo nas opcións de conta de rede do emulador. Para obter información sobre como comezar con Cemu, consulta a <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra non admite o xogo real en liña e, polo tanto, non funciona con Pretendo e non mostra ningún signo de ser compatible co xogo real en liña. Mikage, un emulador de 3DS para dispositivos móbiles, pode ofrecer soporte no futuro, aínda que non é certo."
+			},
+			{
+				"question": "Se me ban de Nintendo Network, tamén se me prohibirá de Pretendo?",
+				"answer": "Non temos acceso ás prohibicións de Nintendo Network, polo que tampouco se che prohibirá de Pretendo. Non obstante, teremos regras a seguir ao usar o servizo e o incumprimento destas regras pode resultar na prohibición."
+			},
+			{
+				"question": "Terei a Pretendo de ter soporte é Wii/Switch?",
+				"answer": "A Wii xa ten servidores personalizados proporcionados por <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualmente non queremos apuntar ao Switch, xa que é de pago e completamente diferente da Nintendo Network."
+			},
+			{
+				"answer": "Si, terás que cortar o teu dispositivo para conectarte; Non obstante, en Wii U só necesitarás acceso ao Homebrew Launcher (é dicir, Haxchi, Coldboot Haxchi ou mesmo o exploit do navegador web), e en 3DS necesitarás a última versión de Luma, máis información en Documentos.",
+				"question": "Necesito modificar para conectarme?"
+			}
+		],
+		"title": "Preguntas máis frecuentes"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "Traemos os teus xogos e contido favoritos a través de servidores personalizados",
+				"title": "Servidores de xogos"
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Unha nova versión de Miiverse, coma se fora creada na era moderna."
+			},
+			{
+				"title": "Apoio con cemu",
+				"caption": "Xoga aos teus xogos favoritos de Wii U mesmo sen consola!"
+			}
+		],
+		"title": "O que facemos",
+		"text": "O noso proxecto ten moitos compoñentes. Abaixo amósanse algúns deles."
+	},
+	"credits": {
+		"title": "O equipo",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Propietario e desenvolvedor principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Investigación e desenvolvemento de Miiverse (Juxtaposition)"
+			},
+			{
+				"github": "https://github.com/EpicUsername12",
+				"name": "Rambo6Glaz",
+				"caption": "Instalador de rede e investigación da consola",
+				"picture": "https://github.com/EpicUsername12.png"
+			},
+			{
+				"caption": "Investigación e desenvolvemento de parches BOSS",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png"
+			},
+			{
+				"caption": "Investigación sobre consolas e outros sistemas",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom"
+			},
+			{
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr",
+				"name": "Jip Fr",
+				"caption": "Líder de desenvolvemento web"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Programador web",
+				"github": "https://github.com/gitlimes",
+				"picture": "https://github.com/gitlimes.png"
+			},
+			{
+				"picture": "https://github.com/mrjvs.png",
+				"name": "mrjvs",
+				"caption": "Deseñador",
+				"github": "https://github.com/mrjvs"
+			}
+		],
+		"text": "Coñece o equipo detrás do proxecto"
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"production": "Produción",
+				"beta": "Proba",
+				"hasAccessPrompt": "O teu rango actual dáche acceso ao servidor beta. ¡Brillante!",
+				"signInHistory": "Historial de inicio de sesión",
+				"no_edit_from_dashboard": "A edición da configuración PNID desde o panel de usuario non está dispoñible actualmente. Actualiza a configuración do usuario desde a consola de xogos vinculada",
+				"nickname": "Alcume",
+				"passwordResetNotice": "Despois de cambiar o contrasinal, pecharase sesión en todos os dispositivos.",
+				"gender": "Xénero",
+				"country": "País/Rexión",
+				"password": "Contrasinal",
+				"otherSettings": "Outras configuracións",
+				"discord": "Discord",
+				"removeDiscord": "Desvincular a conta de Discord",
+				"noDiscordLinked": "Non tes unha conta de Discord vinculada",
+				"linkDiscord": "Vincular conta de Discord",
+				"passwordPrompt": "Introduza o seu contrasinal PNID para descargar ficheiros Cemu",
+				"no_newsletter_notice": "Newsletter non dispoñible actualmente. Volve consultar máis tarde",
+				"timezone": "Franxa horaria",
+				"serverEnv": "Escolle un servidor",
+				"upgradePrompt": "Os servidores de proba son exclusivos dos probadores.<br>Para converterse en probador, compra un rango de conta superior.",
+				"userSettings": "Configuración de usuario",
+				"profile": "Perfil",
+				"birthDate": "Aniversario",
+				"signInSecurity": "cantar e unha seguridade",
+				"email": "Correo electrónico",
+				"fullSignInHistory": "Ver historial de inicio de sesión completo",
+				"connectedToDiscord": "Conectado a Discord como",
+				"newsletter": "Boletín informativo",
+				"newsletterPrompt": "Recibe actualizacións do proxecto por correo electrónico (podes cancelar a subscrición en calquera momento)",
+				"no_signins_notice": "O historial de inicio de sesión non se segue actualmente. Volve comprobar máis tarde!"
+			},
+			"downloadFiles": "Descargar ficheiros da conta",
+			"downloadFilesDescription": "(Só Pretendo Network, non funciona con Nintendo Network)",
+			"upgrade": "Comprar Rank",
+			"unavailable": "Non dispoñible"
+		},
+		"loginForm": {
+			"forgotPassword": "Esqueciches o teu contrasinal?",
+			"detailsPrompt": "Introduza a continuación os detalles da súa conta",
+			"confirmPassword": "confirma o contrasinal",
+			"login": "Acceder",
+			"username": "Nome de usuario",
+			"password": "Contrasinal",
+			"email": "Correo electrónico",
+			"registerPrompt": "Non tes unha conta?",
+			"loginPrompt": "Xa tes unha conta?",
+			"register": "Incribirse",
+			"miiName": "Nome Mii"
+		},
+		"forgotPassword": {
+			"sub": "Introduce o teu enderezo de correo electrónico/PNID a continuación",
+			"submit": "Enviar",
+			"header": "Esqueceches o contrasinal",
+			"input": "Enderezo de correo electrónico ou PNID"
+		},
+		"resetPassword": {
+			"submit": "Enviar",
+			"confirmPassword": "Confirme o contrasinal",
+			"header": "Cambie o contrasinal",
+			"sub": "Introduce o novo contrasinal a continuación",
+			"password": "contrasinal"
+		},
+		"account": "Conta",
+		"accountLevel": [
+			"Estándar",
+			"Provador",
+			"Moderador",
+			"Desenvolvedor"
+		],
+		"banned": "Prohibido"
+	},
+	"specialThanks": {
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "desenvolvemento da biblioteca crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "Desenvolvemento 3DS e NEX Disector",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"caption": "Conservacionista",
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png"
+			},
+			{
+				"caption": "Investigador en Mario Kart 7 e 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"name": "Shutterbug2000"
+			},
+			{
+				"caption": "Intercambio de información Miiverse",
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Investigador de estruturas de datos de Nintendo",
+				"github": "https://github.com/Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"special": "Grazas especiais"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Iconas do editor Mii e reaccións Juxt (Miiverse)",
+				"github": "https://github.com/ninstar",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"name": "Colaboradores de GitHub",
+				"caption": "Localizacións e outras achegas",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		],
+		"title": "Grazas especiais",
+		"text": "Sen eles, Pretendo non estaría onde está agora."
+	},
+	"aboutUs": {
+		"title": "Sobre nós",
+		"paragraphs": [
+			"Pretendo é un proxecto de código aberto que ten como obxectivo recrear a Nintendo Network para 3DS e Wii U mediante enxeñería inversa en sala limpa.",
+			"Dado que os nosos servizos serían gratuítos e de código aberto, poderían existir mesmo despois do inevitable peche de Nintendo Network."
+		]
+	},
+	"progress": {
+		"githubRepo": "Repositorio de GitHub",
+		"title": "Progreso"
+	},
+	"discordJoin": {
+		"title": "Mantéñase ao día",
+		"text": "Únete ao noso servidor Discord para obter as últimas actualizacións do proxecto.",
+		"widget": {
+			"button": "Únete ao servidor",
+			"text": "Recibe actualizacións en tempo real sobre o noso progreso."
+		}
+	},
+	"donation": {
+		"upgradePush": "Para facerte un subscritor e acceder a grandes vantaxes, visita a <a href=\"/account/upgrade\">páxina de actualización</a>.",
+		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> do obxectivo mensual."
+	},
+	"localizationPage": {
+		"description": "Pega unha ligazón a unha configuración rexional JSON de acceso público para probala no teu sitio web",
+		"title": "Localicemos",
+		"instructions": "Consulta as instrucións de localización",
+		"fileInput": "Arquivo para probar",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Ficheiro de proba"
+	},
+	"footer": {
+		"socials": "Sociais",
+		"usefulLinks": "Ligazóns útiles",
+		"widget": {
+			"captions": [
+				"Queres estar ao día?",
+				"Únete ao noso servidor Discord!"
+			],
+			"button": "Unirse agora"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Son Bandwidth o mapache e encántame mastigar os cables do servidor de Pretendo Network. Yum Yum Yum Isto é xenial! (Mellor que o bocadillo de queixo manchego)",
+			"Moita xente pregúntanos se por isto imos ter problemas legais con Nintendo; Alégrome de dicir que a miña tía traballa en Nintendo e di que non os teremos.",
+			"Webkit v537 é a mellor versión de Webkit para Wii U. Non, non estamos portando Chrome a Wii U.",
+			"Non podo esperar a que o reloxo chegue ás 03:14:08 UTC o 19 de xaneiro de 2038!",
+			"A Wii U é en realidade unha consola infravalorada: os anuncios eran moi malos, pero a consola é xenial. Agarda, non sei por que, pero o meu controlador non se conectará á miña Wii.",
+			"O tema principal de Super Mario World 2 - Yoshi's Island é un bop absoluto e non hai forma de que me convenza do contrario.",
+			"Os meus lanzamentos favoritos de Nintendo Switch foron Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Gustouche moito o título da consola virtual de Nintendo Wii U, así que o traeremos de volta\". Realmente demostra que a Nintendo lle importa.",
+			"Como \"Xa sabes a Ash, bendí o seu corazón, ela está todo o día\" é a forma agradable do sur de dicir \"Ash uwus todo o tempo e é moi raro e estúpido e gustaríame que non o fixesen\".",
+			"O meu primeiro video na miña canle!!! Levo un tempo querendo facer vídeos, pero o meu portátil estaba actuando bastante mal e non podía executar Fraps, Skype e Minecraft ao mesmo tempo. Pero iso xa acabouse! Cun pouco de axuda do meu profesor de informática, o meu portátil funciona moito mellor e agora podo gravar! Espero que o disfrutedes e se o fas, dálle me gusta e subscríbete!"
+		]
+	},
+	"progressPage": {
+		"title": "O noso progreso",
+		"description": "Consulta o progreso e os obxectivos do proxecto! (Actualizado aproximadamente cada hora, non reflicte TODOS os obxectivos nin o progreso do proxecto)"
+	},
+	"docs": {
+		"sidebar": {
+			"welcome": "Benvido",
+			"install_extended": "Instalalo pretendo",
+			"search": "Buscar",
+			"getting_started": "Comezando",
+			"install": "Instalar",
+			"juxt_err": "Código de erro - Juxt (Miiverse)"
+		},
+		"search": {
+			"no_match": "Non se atoparon coincidencias",
+			"title": "Tes un código de erro?",
+			"caption": "Escríbeo no cadro de abaixo para obter información sobre o teu problema.",
+			"label": "Código de erro"
+		},
+		"quickLinks": {
+			"header": "ligazóns rápidas",
+			"links": [
+				{
+					"header": "Instalalo pretendo",
+					"caption": "Consulte as instrucións de configuración"
+				},
+				{
+					"caption": "Buscalo aquí",
+					"header": "Tes algún erro?"
+				}
+			]
+		},
+		"missingInLocale": "Esta páxina non está dispoñible no teu idioma. Vexa a versión en inglés a continuación."
+	},
+	"modals": {
+		"confirm": "Confirmar",
+		"cancel": "Cancelar",
+		"close": "Pechar"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "As últimas actualizacións en fragmentos condensados. Se queres ver actualizacións máis frecuentes, considera <a href=\"/account/upgrade\" target=\"_blank\">Doar connosco</a>.",
+		"published": "Publicado por",
+		"publishedOn": "é"
+	},
+	"upgrade": {
+		"month": "Mes",
+		"back": "De volta",
+		"title": "Subscríbete",
+		"unsub": "Cancelar a subscrición",
+		"unsubPrompt": "Estás seguro de que queres cancelar a subscrición de <span>tiername</span>? Perderás o acceso aos beneficios asociados a ese rango.",
+		"unsubConfirm": "Cancelar a subscrición",
+		"description": "Alcanzar o obxectivo mensual fará de Pretendo un traballo a tempo completo, proporcionando actualizacións de mellor calidade a un ritmo máis rápido",
+		"tierSelectPrompt": "Seleccione un intervalo",
+		"changeTier": "Cambiar rango",
+		"changeTierPrompt": "Estás seguro de que queres cancelar a subscrición de <span class=\"oldtier\">oldtiername</span> e subscribirte a <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Cambiar rango"
+	}
+}
