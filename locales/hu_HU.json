@@ -1,1 +1,58 @@
-{}
+{
+	"nav": {
+		"docs": "Dokumentáció",
+		"credits": "Készítők",
+		"progress": "Előrehaladás",
+		"blog": "Blog",
+		"account": "Fiók",
+		"donate": "Adományozás",
+		"accountWidget": {
+			"settings": "Beállítások"
+		},
+		"dropdown": {
+			"captions": {
+				"about": "A projektről",
+				"faq": "Gyakran ismételt kérdések",
+				"blog": "A legutolsó frissítéseink, tömören",
+				"progress": "Tekintsd meg a projekt előrehaladását és célokat"
+			}
+		}
+	},
+	"hero": {
+		"subtitle": "Játék szerverek",
+		"buttons": {
+			"readMore": "Olvass tovább"
+		}
+	},
+	"aboutUs": {
+		"title": "Rólunk",
+		"paragraphs": [
+			"A Pretendo egy nyílt forráskódú projekt, aminek célja újra előállítani a Nintendo Network-öt a 3DS és a Wii U számára tiszta visszafejtés technikát alkalmazva.",
+			"A szolgáltatásaink egyaránt ingyenesek és nyílt forráskódúak, sokáig létezhetnek a Nintendo Network elkerülhetetlen bezárását követően."
+		]
+	},
+	"progress": {
+		"title": "Előrehaladás"
+	},
+	"faq": {
+		"title": "Gyakran Ismételt Kérdések",
+		"text": "Itt van néhány gyakori kérdés, amit tőlünk kérdeztek, a könnyű információhoz jutás érdekében.",
+		"QAs": [
+			{
+				"question": "Mi a Pretendo?"
+			},
+			{},
+			{
+				"question": "Hogyan használhatom a Pretendo-t?",
+				"answer": "A Pretendo jelenleg még nem olyan állapotú, hogy alkalmas lenne a publikus használatra. Azonban ha egyszer kész lesz, akkor majd futtatni tudod a Pretendo-t egyszerűen a homebrew patcherünk futtatásával a konzolon."
+			},
+			{
+				"question": "Tudjuk mikor lesz a funkció/szolgáltatás kész?",
+				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo-nak függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
+			},
+			{
+				"question": "Működik a Pretendo Cemu-n/emulátorokon?"
+			}
+		]
+	}
+}
