@@ -4,10 +4,10 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
+		"build": "NEXT_TELEMETRY_DISABLED=1 next build",
+		"start": "NEXT_TELEMETRY_DISABLED=1 next start",
+		"lint": "NEXT_TELEMETRY_DISABLED=1 next lint"
 	},
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.515.0",
