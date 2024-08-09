@@ -39,6 +39,10 @@ interface TeamMemberObject {
 	github: string;
 }
 
+const metadata = {
+	themeColor: '#1b1f3b',
+};
+
 export default function Home() {
 	const { locale } = getLocale('TODO');
 
@@ -113,6 +117,7 @@ export default function Home() {
 				<Title id="special-thanks">{locale.specialThanks.title}</Title>
 				<Caption>{locale.specialThanks.text}</Caption>
 
+				{/* TODO: make this a single function, don't repeat the same code twice */}
 				<div className={styles.thanksAniWrap}>
 					<div className={styles.inner}>
 						<div className={styles.rowOne}>
@@ -130,7 +135,8 @@ export default function Home() {
 											pic={el.picture}
 											link={el.github}
 											key={i}
-											tabIndex={Math.round(ar.length / 4) >= i ? 0 : 1}
+											/* a single copy of the card should be focusable for each team member */
+											tabIndex={i < Math.round((ar.length / 3)) ? 0 : -1}
 										/>
 									);
 								});
@@ -152,7 +158,8 @@ export default function Home() {
 											pic={el.picture}
 											link={el.github}
 											key={i}
-											tabIndex={Math.round(ar.length / 4) >= i ? 0 : 1}
+											/* a single copy of the card should be focusable for each team member */
+											tabIndex={i < Math.round((ar.length / 3)) ? 0 : -1}
 										/>
 									);
 								});

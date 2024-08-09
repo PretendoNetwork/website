@@ -37,7 +37,6 @@ export const metadata = {
 		'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles',
 	manifest: '/site.webmanifest',
 	applicationName: 'Pretendo Network',
-	themeColor: '#1b1f3b',
 	appleWebApp: {
 		title: 'Pretendo Network',
 	},
