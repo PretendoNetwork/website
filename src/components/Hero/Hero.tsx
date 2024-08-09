@@ -14,10 +14,10 @@ export default function Hero({ locale }) {
 		<div className={styles.hero}>
 			<div className={styles.info}>
 				<h3 className={styles.subtitle}>{locale.hero.subtitle}</h3>
-				<Title element={'h1'}>{locale.hero.title}</Title>
+				<Title element={'h1'} className={styles.title}>{locale.hero.title}</Title>
 				<Caption>{locale.hero.text}</Caption>
 				<div className={styles.buttons}>
-					<Button primary href="#showcase">
+					<Button primary href="#about">
 						{locale.hero.buttons.readMore}
 					</Button>
 
@@ -149,7 +149,7 @@ export default function Hero({ locale }) {
 						</g>
 					</svg>
 
-					<Image className={styles.n2ds} src={n2ds} alt="" />
+					<Image className={styles.n2ds} src={n2ds} alt="" priority={true} />
 				</div>
 			</div>
 		</div>

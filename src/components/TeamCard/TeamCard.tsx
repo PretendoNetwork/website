@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Star } from '@phosphor-icons/react/dist/ssr';
 
 import classNames from 'classnames';
+import { CSSProperties } from 'react';
 
 /**
  * A reusable component to credit someone.
@@ -29,11 +30,12 @@ interface TeamCardProps {
 	compact?: boolean;
 	special?: boolean;
 	className?: string;
-	tabIndex?: number;
+	tabIndex?: 0 | -1;
+	style?: CSSProperties;
 }
 
 export default function TeamCard(ctx: TeamCardProps) {
-	const { name, caption, pic, link, compact, special, className, tabIndex } = ctx;
+	const { name, caption, pic, link, compact, special, className, tabIndex, style } = ctx;
 
 	return (
 		<Link
@@ -44,6 +46,7 @@ export default function TeamCard(ctx: TeamCardProps) {
 				className
 			)}
 			tabIndex={tabIndex}
+			style={style}
 		>
 			<div className={styles.imageWrapper}>
 				<Image src={pic} width={110} height={110} alt="" className={styles.image} />

@@ -62,12 +62,12 @@
 	position: relative;
 	transform: rotate(-5deg);
 	margin-top: 4rem;
-}
+	overflow-x: hidden;
+	overflow-y: visible;
 
-.thanksAniWrap .inner {
-	overflow: hidden;
+	/* without this, the star gets clipped. It really shouldn't, but you can't trust a browser to render stuff properly in 2024, apparently. */
+	padding-top: 16px;
 }
-
 .thanksAniWrap::after {
 	content: '';
 	position: absolute;
