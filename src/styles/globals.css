@@ -2,7 +2,7 @@
 	--width: 1500px;
 	--maxwidth: min(var(--width), 90%);
 
-	/* 1 is the base color, <1 are darker variations and >1 are lighter */
+	/* 1 is the base color, <1 are darker variations and >1 are lighter. TODO: reduce amount of shades. */
 	--bg-shade-0: #131733;
 	--bg-shade-1: #1b1f3b;
 	--bg-shade-2: #23274a;

@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 import merge from 'lodash.merge';
 import logger from './logger.ts';
 
@@ -26,10 +26,54 @@ function getLocale(code: string) {
 }
 
 function getLocaleList() {
-	const filenames = fs
-		.readdirSync('@/locales')
+	let filenames: string[] = fs
+		.readdirSync('locales')
 		.map((filename: string) => filename.replace('.json', '').replace('_', '-'));
-	return filenames;
+
+	// move en@uwu to end of list
+	filenames = [...filenames.filter((a) => a !== 'en@uwu'), 'en@uwu'];
+
+	const localeList = [];
+
+	filenames.forEach((l) => {
+		const el: {
+			code: string;
+			name: string;
+		} = {
+			code: l,
+			name: _localeCodeToName(l),
+		};
+
+		localeList.push(el);
+	});
+
+	return localeList;
 }
 
-export { getLocale, getLocaleList };
+async function localeSetter(localeCode: string) {
+	'use server';
+
+	// TODO: add locale setting logic
+	console.log(localeCode);
+}
+
+function _localeCodeToName(localeCode: string) {
+	let name: string = '';
+	try {
+		const l = new Intl.DisplayNames([localeCode], {
+			type: 'language',
+		});
+
+		name = l.of(localeCode);
+	} catch {
+		const fallbackNames = {
+			'en@uwu': 'English (lolcat)',
+		};
+
+		name = fallbackNames[localeCode] || 'report to dev';
+	}
+
+	return name;
+}
+
+export { getLocale, getLocaleList, localeSetter };

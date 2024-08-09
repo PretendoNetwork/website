@@ -1,0 +1,39 @@
+.accountDropdown {
+	display: grid;
+	grid-auto-flow: row;
+
+	gap: 0.5rem;
+}
+
+.accountDropdown {
+	animation: appear 0.75s;
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.accountDropdown.mobile {
+	grid-auto-flow: column;
+	width: 100%;
+}
+
+.accountDropdown.mobile div {
+	width: 100% !important;
+}
+
+.accountDropdown .button {
+	min-width: 10rem;
+	width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+	.accountDropdown.mobile {
+		grid-auto-flow: row;
+	}
+}

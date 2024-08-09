@@ -8,6 +8,7 @@
 	font-size: 1rem;
 	font-family: var(--font-family);
 	cursor: pointer;
+	width: 100%;
 }
 
 .button.icon {

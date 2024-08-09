@@ -8,7 +8,7 @@
 	border: 1px solid var(--bg-shade-3);
 	width: 0;
 	height: 0;
-	transition: width 200ms ease-out, height 100ms ease-out, opacity 500ms ease-out 100ms, left 150ms ease-out;
+	transition: width 200ms ease-out, height 100ms ease-out, opacity 200ms ease-out 100ms, left 150ms ease-out;
 }
 
 .dropdownArrow {
@@ -49,6 +49,9 @@
 	width: max-content;
 	height: max-content;
 	padding: 1rem;
+	max-height: 420px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .dropdownContent .link {
@@ -112,24 +115,6 @@
 
 .dropdownContent .link:hover .arrow {
 	display: block;
-}
-
-@media screen and (max-width: 840px) {
-	.dropdown {
-		position: fixed;
-		bottom: 0 !important;
-		left: 5% !important;
-		width: 90% !important;
-		z-index: -1;
-	}
-
-	.dropdownArrow {
-		display: none;
-	}
-
-	.dropdown .dropdownContent {
-		width: 100%;
-	}
 }
 
 @media screen and (max-width: 630px) {

@@ -1,13 +1,15 @@
 import { ArrowRight, Users, Info, SealQuestion, NewspaperClipping, EggCrack } from '@phosphor-icons/react';
 import Link from 'next/link';
 
+import classNames from 'classnames';
+
 import Title from '@/components/Title/Title';
 
 import styles from './HeaderDropdown.module.css';
 
-export default function HeaderDropdown1({ locale }) {
+export default function HeaderDropdown1({ locale, mobile }: { locale: any; mobile?: boolean }) {
 	return (
-		<div className={styles.dropdownContent}>
+		<div className={classNames(styles.dropdownContent, { [styles.mobile]: mobile })}>
 			<Link className={styles.link} href="/#credits">
 				<div className={styles.iconWrapper}>
 					<Users weight="fill" size={32} />

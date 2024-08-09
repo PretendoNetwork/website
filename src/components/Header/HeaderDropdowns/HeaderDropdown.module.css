@@ -1,4 +1,9 @@
-.dropdownContent .link {
+.dropdownContent .link,
+.dropdownContent .localeSelector {
+	appearance: none;
+	background: none;
+	border: none;
+	cursor: pointer;
 	position: relative;
 	display: flex;
 	flex-flow: row nowrap;
@@ -7,8 +12,13 @@
 	padding: 1rem;
 	padding-right: 5rem;
 	border-radius: 6px;
+	font-size: 1rem;
 	max-width: 90vw;
 	min-width: 24rem;
+}
+
+.dropdownContent .localeSelector {
+	padding: 0.5rem 1rem;
 }
 
 .dropdownContent .link .iconWrapper {
@@ -21,11 +31,16 @@
 	border-radius: 6px;
 }
 
-.dropdownContent .link p {
+.dropdownContent .link p,
+.dropdownContent .localeSelector p {
 	margin: 0;
 	margin-top: 4px;
 	font-weight: 300;
 	color: var(--text-shade-1);
+}
+
+.dropdownContent .localeSelector p {
+	font-weight: 400;
 }
 
 .dropdownContent .link .arrow {
@@ -36,7 +51,8 @@
 }
 
 .dropdownContent,
-.dropdownContent .link {
+.dropdownContent .link,
+.dropdownContent .localeSelector {
 	animation: appear 0.75s;
 }
 
@@ -53,7 +69,8 @@
 	}
 }
 
-.dropdownContent .link:hover {
+.dropdownContent .link:hover,
+.dropdownContent .localeSelector:hover {
 	background: var(--bg-shade-3);
 }
 
@@ -81,4 +98,38 @@
 	.dropdownContent .link .iconWrapper {
 		padding: 6px;
 	}
+}
+
+.dropdownContent.mobile {
+	width: 100%;
+}
+
+.dropdownContent.mobile .localeSelector {
+	width: 100%;
+}
+
+.dropdownContent.mobile .link,
+.dropdownContent.mobile .localeSelector {
+	gap: 0.75rem;
+	padding: 0.5rem;
+	margin-left: -0.5rem;
+	width: calc(100% + 1rem);
+	min-width: unset;
+	max-width: unset;
+}
+
+.dropdownContent.mobile .link p,
+.dropdownContent.mobile .localeSelector p {
+	margin-top: 0;
+}
+
+.dropdownContent.mobile .link h4,
+.dropdownContent.mobile .localeSelector h4 {
+	font-weight: 400;
+	width: fit-content;
+}
+
+.dropdownContent.mobile .link .iconWrapper {
+	padding: 10px;
+	border-radius: 6px;
 }
