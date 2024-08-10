@@ -6,7 +6,7 @@ import AccountWidget from '../AccountDropdowns/AccountWidget';
 
 export default function MobileDropdown({ locale, setMobileOpen, mobileLocaleOpen, localeSetter, localeList }) {
 	return (
-		<div className={styles.mobileDropdown}>
+		<div className={styles.mobileDropdown} onClick={() => setMobileOpen(false)}>
 			{mobileLocaleOpen && <LocaleDropdown mobile={true} localeSetter={localeSetter} localeList={localeList} />}
 			{!mobileLocaleOpen && (
 				<>

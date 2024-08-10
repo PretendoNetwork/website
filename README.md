@@ -1,7 +1,6 @@
 # Website
 
 ## TODO
-- Remove jank to get the image component to work
 - Add rss meta tag once it's implemented
 - Update images in showcase
 

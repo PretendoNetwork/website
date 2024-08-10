@@ -36,7 +36,7 @@ export default function HeaderDropdown2({ locale, mobile }: { locale: any; mobil
 				</div>
 				<div>
 					<Title element="h4">{locale.nav.donate}</Title>
-					<p>💜</p> {/* TODO: add better caption to locale */}
+					<p>{locale.nav.dropdown.captions.donate}</p>
 				</div>
 				<ArrowRight size={28} className={styles.arrow} />
 			</Link>
