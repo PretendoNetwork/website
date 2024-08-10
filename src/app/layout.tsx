@@ -3,6 +3,8 @@ import Header from '@/components/Header/HeaderWrapper';
 import Footer from '@/components/Footer/Footer';
 import Script from 'next/script';
 
+import type { Metadata } from 'next';
+
 import { Poppins } from 'next/font/google';
 const poppins = Poppins({
 	weight: ['400', '700'],
@@ -28,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	);
 }
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: {
 		template: '%s | Pretendo Network',
 		default: 'Pretendo Network', // a default is required when creating a template

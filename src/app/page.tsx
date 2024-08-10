@@ -44,7 +44,7 @@ const metadata = {
 };
 
 export default function Home() {
-	const { locale } = getLocale('TODO');
+	const { locale } = getLocale('TODO'); /* TODO */
 
 	return (
 		<main>

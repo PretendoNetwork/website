@@ -28,6 +28,15 @@
 	grid-row: 1;
 }
 
+.bigText h2 {
+	font-size: 8rem;
+	margin-bottom: -2rem;
+}
+
+.bigText p {
+	font-size: 1.5rem;
+}
+
 @media screen and (max-width: 840px) {
 	.content {
 		grid-template-columns: 1fr;
@@ -52,4 +61,12 @@
 		grid-row: 2;
 	}
 
+	.bigText h2 {
+		font-size: 8rem;
+		margin-bottom: -2rem;
+	}
+
+	.bigText p {
+		font-size: 1.25rem;
+	}
 }

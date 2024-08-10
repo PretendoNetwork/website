@@ -3,7 +3,7 @@ import Header from './Header';
 import { getLocale, getLocaleList, localeSetter } from '@/utils/locale';
 
 export default function HeaderWrapper() {
-	const { locale } = getLocale('TODO');
+	const { locale } = getLocale('TODO'); /* TODO */
 
 	const localeList = getLocaleList();
 

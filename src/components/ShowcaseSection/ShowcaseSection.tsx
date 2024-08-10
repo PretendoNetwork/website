@@ -10,14 +10,15 @@ interface ShowcaseSectionProps {
 	title?: string;
 	caption?: string;
 	image?: StaticImageData;
-	isOdd?: boolean
+	isOdd?: boolean;
+	bigText?: boolean;
 }
 
 export default function ShowcaseSection(ctx: ShowcaseSectionProps) {
-	const { title, caption, image, isOdd } = ctx;
+	const { title, caption, image, isOdd, bigText } = ctx;
 	return (
 		<Section
-			className={classNames(styles.sectionWrapper, { [styles.odd]: isOdd })}
+			className={classNames(styles.sectionWrapper, { [styles.odd]: isOdd, [styles.bigText]: bigText })}
 			contentClassName={styles.content}
 		>
 			<div className={styles.text}>
