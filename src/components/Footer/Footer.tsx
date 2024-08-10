@@ -12,7 +12,7 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-	const { locale } = getLocale('TODO');
+	const { locale } = getLocale('TODO'); /* TODO */
 
 	const year = new Date().getFullYear(); /* Can't have an outdated year this way :3 */
 
@@ -38,13 +38,15 @@ export default function Footer() {
 							<Link href="https://limes.pink" target="_blank" className={styles.link}>
 								pinklimes
 							</Link>
-							,{' '}
+						</p>
+						<p>
+							Designs by{' '}
 							<Link href="https://mrjvs.com/" target="_blank" className={styles.link}>
 								mrjvs
 							</Link>{' '}
 							&{' '}
-							<Link href="https://jipfr.nl/" target="_blank" className={styles.link}>
-								jipfr
+							<Link href="https://limes.pink" target="_blank" className={styles.link}>
+								pinklimes
 							</Link>
 						</p>
 						<p>
