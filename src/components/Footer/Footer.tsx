@@ -12,7 +12,7 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-	const { locale } = getLocale('TODO'); /* TODO */
+	const { locale } = getLocale();
 
 	const year = new Date().getFullYear(); /* Can't have an outdated year this way :3 */
 

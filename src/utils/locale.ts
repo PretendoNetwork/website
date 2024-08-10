@@ -1,12 +1,21 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import merge from 'lodash.merge';
 import logger from './logger.ts';
 
 import baseLocale from '@/locales/en_US.json' assert { type: 'json' };
 
-function getLocale(code: string) {
+import { cookies } from 'next/headers';
+
+function getLocale() {
+	const cookieStore = cookies();
+
+	const autoLocale = cookieStore.get('autoLocale')?.value;
+	const preferredLocale = cookieStore.get('preferredLocale')?.value;
+
+	const code = preferredLocale || autoLocale || 'us-EN';
+
 	const localeCode = code.replace('-', '_');
-	const path = `@/locales/${localeCode}.json`;
+	const path = `./locales/${localeCode}.json`;
 
 	if (fs.pathExistsSync(path)) {
 		const selectedLocale = JSON.parse(fs.readFileSync(path, 'utf8'));
@@ -53,8 +62,8 @@ function getLocaleList() {
 async function localeSetter(localeCode: string) {
 	'use server';
 
-	// TODO: add locale setting logic
-	console.log(localeCode);
+	const cookieStore = cookies();
+	cookieStore.set('preferredLocale', localeCode);
 }
 
 function _localeCodeToName(localeCode: string) {

@@ -1,0 +1,130 @@
+[
+	{
+		"code": "ar-AR",
+		"name": "العربية (الأرجنتين)"
+	},
+	{
+		"code": "ast",
+		"name": "asturianu"
+	},
+	{
+		"code": "be-BY",
+		"name": "беларуская (Беларусь)"
+	},
+	{
+		"code": "ca-ES",
+		"name": "català (Espanya)"
+	},
+	{
+		"code": "cs-CZ",
+		"name": "čeština (Česko)"
+	},
+	{
+		"code": "de-DE",
+		"name": "Deutsch (Deutschland)"
+	},
+	{
+		"code": "el-GR",
+		"name": "Ελληνικά (Ελλάδα)"
+	},
+	{
+		"code": "en-GB",
+		"name": "British English"
+	},
+	{
+		"code": "en-US",
+		"name": "American English"
+	},
+	{
+		"code": "es-ES",
+		"name": "español de España"
+	},
+	{
+		"code": "fi-FI",
+		"name": "suomi (Suomi)"
+	},
+	{
+		"code": "fr-FR",
+		"name": "français (France)"
+	},
+	{
+		"code": "gd-GB",
+		"name": "Gàidhlig (An Rìoghachd Aonaichte)"
+	},
+	{
+		"code": "it-IT",
+		"name": "italiano (Italia)"
+	},
+	{
+		"code": "ja-JP",
+		"name": "日本語 (日本)"
+	},
+	{
+		"code": "kk-KZ",
+		"name": "қазақ тілі (Қазақстан)"
+	},
+	{
+		"code": "ko-KR",
+		"name": "한국어(대한민국)"
+	},
+	{
+		"code": "lt-LT",
+		"name": "lietuvių (Lietuva)"
+	},
+	{
+		"code": "nb-NO",
+		"name": "norsk bokmål (Norge)"
+	},
+	{
+		"code": "nl-NL",
+		"name": "Nederlands (Nederland)"
+	},
+	{
+		"code": "pl-PL",
+		"name": "polski (Polska)"
+	},
+	{
+		"code": "pt-BR",
+		"name": "português (Brasil)"
+	},
+	{
+		"code": "pt-PT",
+		"name": "português europeu"
+	},
+	{
+		"code": "ro-RO",
+		"name": "română (România)"
+	},
+	{
+		"code": "ru-RU",
+		"name": "русский (Россия)"
+	},
+	{
+		"code": "sr-RS",
+		"name": "српски (Србија)"
+	},
+	{
+		"code": "sv-SE",
+		"name": "svenska (Sverige)"
+	},
+	{
+		"code": "tr-TR",
+		"name": "Türkçe (Türkiye)"
+	},
+	{
+		"code": "uk-UA",
+		"name": "українська (Україна)"
+	},
+	{
+		"code": "zh-CN",
+		"name": "中文（中国）"
+	},
+	{
+		"code": "zh-Hant",
+		"name": "繁體中文"
+	},
+	{
+		"code": "en@uwu",
+		"name": "English (lolcat)"
+	}
+]

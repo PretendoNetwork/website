@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function NotFound() {
-	const { locale } = getLocale('TODO'); /* TODO */
+	const { locale } = getLocale();
 
 	return (
 		<ShowcaseSection
