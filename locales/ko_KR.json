@@ -372,7 +372,8 @@
 		"unsubConfirm": "구독 취소",
 		"changeTier": "티어 변경",
 		"title": "업그레이드",
-		"changeTierPrompt": "정말로 <span class=\"oldtier\">oldtiername</span>를 취소하고 <span class=\"newtier\">newtiername</span>를 구독하시겠습니까?"
+		"changeTierPrompt": "정말로 <span class=\"oldtier\">oldtiername</span>를 취소하고 <span class=\"newtier\">newtiername</span>를 구독하시겠습니까?",
+		"month": "개월"
 	},
 	"donation": {
 		"progress": "<span>$${goald}</span>/월 중에서 <span>$${totd}</span> , 매달 목표의 <span>${perc}%</span>.",
