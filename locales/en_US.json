@@ -62,12 +62,12 @@
 				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
-				"question": "Does Pretendo work on Cemu/emulators?",
-				"answer": "Pretendo supports any client that can interact with Nintendo Network. Currently the only emulator with this kind of functionality is Cemu. Cemu 2.0 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Citra does not support true online play and thus does not work with Pretendo, and does not show signs of supporting true online play at all. Mikage, a 3DS emulator for mobile devices, may provide support in the future though this is far from certain."
+				"question": "When will you add more games?",
+				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilising and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
 			},
 			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+				"question": "Does Pretendo work on Cemu/emulators?",
+				"answer": "Cemu 2.1 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Some 3DS emulators or forks might support us, but we do not have any official recommendation or setup instructions at this time. The final builds of Citra do not support Pretendo."
 			},
 			{
 				"question": "Will Pretendo support the Wii/Switch?",
@@ -76,6 +76,14 @@
 			{
 				"question": "Will I need hacks to connect?",
 				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
+			},
+			{
+				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
+				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+			},
+			{
+				"question": "Can I use cheats or mods online with Pretendo?",
+				"answer": "Only in private matches - gaining an unfair advantage or distrupting the online experience with people who didn't consent (as in public matches) is a bannable offense. We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
 			}
 		]
 	},
@@ -154,6 +162,24 @@
 				"caption": "Web and server development",
 				"picture": "https://github.com/hauntii.png",
 				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps and community work",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Server development and optimization",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "3DS patch development and research",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -175,7 +201,7 @@
 			},
 			{
 				"name": "Stary",
-				"caption": "3DS dev and NEX dissector",
+				"caption": "3DS development and NEX dissector",
 				"picture": "https://github.com/Stary2001.png",
 				"github": "https://github.com/Stary2001"
 			},
@@ -200,7 +226,7 @@
 			},
 			{
 				"name": "Rambo6Glaz",
-				"caption": "Network installer and console research",
+				"caption": "Console research and game servers",
 				"picture": "https://github.com/EpicUsername12.png",
 				"github": "https://github.com/EpicUsername12"
 			},
@@ -215,6 +241,36 @@
 				"caption": "3DS patch creator",
 				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
 				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Server architecture",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Server architecture",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Splatoon rotations and research",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon rotations and research",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub contributors",
+				"caption": "Localizations and other contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -245,7 +301,8 @@
 			"Super Mario World 2 - Yoshi's Island's main theme is an absolute bop and there's no way you're gonna convince me otherwise.",
 			"My favorite Nintendo Switch releases have been Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back\" Pack. You can really tell Nintendo cares.",
 			"Like \"You know Ash, bless her heart, she UwU’s all day\" is the southern nice way of saying \"Ash uwus all the time and it’s really weird and stupid and I wish they didn't\"",
-			"My first video on my channel!! iv been wanting to make videos for a long time now but my laptop ran pretty bad and i couldn't run fraps, skype and minecraft all at once. but now thats over! with some help from my IT teacher my laptop runs alot better and i can record now! i hope y'all enjoy and if you do please like and subscribe!!!"
+			"My first video on my channel!! iv been wanting to make videos for a long time now but my laptop ran pretty bad and i couldn't run fraps, skype and minecraft all at once. but now thats over! with some help from my IT teacher my laptop runs alot better and i can record now! i hope y'all enjoy and if you do please like and subscribe!!!",
+			"Looks Good To Me"
 		]
 	},
 	"progressPage": {

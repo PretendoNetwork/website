@@ -20,9 +20,10 @@ router.get('/', async (request, response) => {
 	}
 	shuffleArray(specialThanksPeople);
 
+	const pivot = specialThanksPeople.length / 2;
 	// Slices the array in half
-	const specialThanksFirstRow = specialThanksPeople.slice(0, 4);
-	const specialThanksSecondRow = specialThanksPeople.slice(4);
+	const specialThanksFirstRow = specialThanksPeople.slice(0, pivot);
+	const specialThanksSecondRow = specialThanksPeople.slice(pivot);
 
 	// Builds the final array to be sent to the view, and triples each row.
 	renderData.specialThanksPeople = {
