@@ -7,14 +7,16 @@
 		"account": "Fiók",
 		"donate": "Adományozás",
 		"accountWidget": {
-			"settings": "Beállítások"
+			"settings": "Beállítások",
+			"logout": "Kijelentkezés"
 		},
 		"dropdown": {
 			"captions": {
 				"about": "A projektről",
 				"faq": "Gyakran ismételt kérdések",
 				"blog": "A legutolsó frissítéseink, tömören",
-				"progress": "Tekintsd meg a projekt előrehaladását és célokat"
+				"progress": "Tekintsd meg a projekt előrehaladását és célokat",
+				"credits": "Ismerd meg a csapatot"
 			}
 		}
 	},
