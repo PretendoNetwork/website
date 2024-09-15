@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "关于",
 		"faq": "FAQ",
-		"docs": "文件",
+		"docs": "帮助文档",
 		"credits": "贡献者",
 		"progress": "进度",
 		"blog": "博客",
@@ -58,7 +58,7 @@
 				"answer": "Pretendo 目前尚未处于可供公众使用的状态。但是，一旦完成，您只需在系统上运行我们的自制补丁程序即可使用 Pretendo。"
 			},
 			{
-				"question": "你知道 功能/服务 什么时候准备好吗？",
+				"question": "什么时候某某功能/服务能完成？",
 				"answer": "不可以。许多 Pretendo 的功能/服务是独立开发的（例如，Miiverse 可能由一位开发人员构建，而 Accounts 和 Friends 正在由另一位开发人员构建），因此我们无法给出这需要多长时间的总体预计到达时间。"
 			},
 			{
@@ -71,7 +71,7 @@
 			},
 			{
 				"question": "Pretendo 会支持 Wii/Switch 吗？",
-				"answer": "Wii 已经有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自定义服务器。我们目前不希望以 Switch 为目标，因为它既是付费的，又与 Nintendo Network 完全不同。"
+				"answer": "Wii 已经有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自定义服务器。我们目前不以 Switch 为目标，因为它不仅付费而且与 Nintendo Network 的构造完全不同。"
 			},
 			{
 				"question": "我需要一台破解过的机器才能连接吗？",
