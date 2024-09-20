@@ -25,7 +25,7 @@
 			</div>
 			<div>
 				<label for="password">{{ locale.account.loginForm.password }}</label>
-				<input name="password" id="password" type="password" autocomplete="new-password" required>
+				<input name="password" id="password" type="password" autocomplete="new-password" passwordrules="minlength: 6; maxlength: 16; required: lower; required: upper; required: digit; allowed: [!&quot;$%&'()*+,./:;<=>?@[\^_`{|}~]]; max-consecutive: 3;" required>
 			</div>
 			<div>
 				<label for="password_confirm">{{ locale.account.loginForm.confirmPassword }}</label>
