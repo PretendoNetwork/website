@@ -69,8 +69,8 @@ function initializeMiiData(encodedUserMiiData) {
 		bgColor: '13173300',
 		expression: 'sorrow',
 	});
-	document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
-	document.querySelector('.mii-comparison.confirmed img.old-mii').src = miiStudioSorrowUrl;
+	document.querySelector('.mii-comparison img.old-mii').setAttribute('data-src', miiStudioNeutralUrl);
+	document.querySelector('.mii-comparison.confirmed img.old-mii').setAttribute('data-src', miiStudioSorrowUrl);
 	console.log('initialization complete');
 	console.groupEnd();
 	return true;
@@ -184,8 +184,8 @@ function renderMii(heightOverride, buildOverride) {
 		});
 
 		// sets the new mii in the save tab to the new mii
-		document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
-		document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
+		document.querySelector('.mii-comparison img.new-mii').setAttribute('data-src', faceMiiStudioUrl);
+		document.querySelector('.mii-comparison.confirmed img.new-mii').setAttribute('data-src', faceMiiStudioSmileUrl);
 	}
 }
 
@@ -371,6 +371,18 @@ function openTab(e, tabType) {
 		.replace('SubButton', '')
 		.replace('Button', buttonReplacement);
 	document.querySelector(`#${selectedID}`).classList.add('active');
+
+	// if you selected the save tab...
+	if (selectedID === 'saveTab') {
+		// set data-src on images that have it to src
+		// effectively loading them right now (lazy load)
+		document
+			.querySelectorAll('#saveTab img[data-src]')
+			.forEach(e => {
+				if (e.getAttribute('data-src') !== e.src)
+					e.setAttribute('src', e.getAttribute('data-src'));
+			});
+	}
 
 	if (tabType === 'tab') {
 		// Click the first subtab button, if there is one
