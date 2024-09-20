@@ -5,7 +5,7 @@
  *
  * browserify is needed for the use of require() in the browser
  */
-const Mii = require('mii-js');
+const Mii = require('@pretendonetwork/mii-js').default;
 const newMiiData = 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 
 // Prevent the user from reloading or leaving the page
@@ -93,7 +93,6 @@ if (!validMiiData) {
 
 // we keeep the images here so we can cache them when we need to change the build/height
 const miiFaceImg = new Image();
-const baldMiiFaceImg = new Image();
 const miiBodyImg = new Image();
 
 // Initial mii render
@@ -106,24 +105,15 @@ function renderMii(heightOverride, buildOverride) {
 	const build = buildOverride || mii.build;
 
 	// if there isn't an override or the images haven't been cached, we load the images
-	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !baldMiiFaceImg.src || !miiBodyImg.src) {
+	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !miiBodyImg.src) {
 		canvas.style.filter = 'blur(4px) brightness(70%)';
 
-		// we create a copy of the mii and make it bald
-		const baldMii = Object.create(
-			Object.getPrototypeOf(mii),
-			Object.getOwnPropertyDescriptors(mii)
-		);
-		baldMii.hairType = 30;
-		baldMiiFaceImg.src = baldMii.studioUrl({
-			width: 512,
-			bgColor: '13173300',
-			type: 'face_only',
-		});
+		// request a face only render with split depth
 		miiFaceImg.src = mii.studioUrl({
 			width: 512,
 			bgColor: '13173300',
 			type: 'face_only',
+			splitMode: 'both', // this will be twice the height
 		});
 		miiBodyImg.src = mii.studioAssetUrlBody();
 	}
@@ -153,21 +143,33 @@ function renderMii(heightOverride, buildOverride) {
 		}
 	}
 	function onBodyImgLoad() {
-		if (baldMiiFaceImg.complete) {
-			onBaldMiiFaceImgLoad();
+		if (miiFaceImg.complete) {
+			onMiiFaceImgLoad();
 		} else {
-			baldMiiFaceImg.onload = () => {
-				onBaldMiiFaceImgLoad();
+			miiFaceImg.onload = () => {
+				onMiiFaceImgLoad();
 			};
 		}
 	}
-	function onBaldMiiFaceImgLoad() {
+	function onMiiFaceImgLoad() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		ctx.drawImage(miiFaceImg, 0, headYPos);
+
+		// in mii studio split depth mode, the back half is on the top
+		// and the front half is on the bottom
+		// the back half needs to be drawn, then the body, then the front
+		const halfHeight = miiFaceImg.height / 2;
+		// top half of the image / back half of the head
+		ctx.drawImage(miiFaceImg, 0, 0, miiFaceImg.width, halfHeight, 0, headYPos, miiFaceImg.width, halfHeight);
+
+		// draw body on top
 		ctx.drawImage(miiBodyImg, bodyXPos, bodyYPos, bodyWidth, bodyHeight);
 
 		// we draw a portion of the bald mii on top of the normal mii to hide the mii's neck (see https://i.imgur.com/U0fpkwi.png)
-		ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
+		//ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
+
+		// draw bottom half of the image / front half of the head
+		ctx.drawImage(miiFaceImg, 0, halfHeight, miiFaceImg.width, halfHeight, 0, headYPos, miiFaceImg.width, halfHeight);
+
 		canvas.style.filter = '';
 	}
 
