@@ -15,16 +15,20 @@
 				"about": "A projektről",
 				"faq": "Gyakran ismételt kérdések",
 				"blog": "A legutolsó frissítéseink, tömören",
-				"progress": "Tekintsd meg a projekt előrehaladását és célokat",
-				"credits": "Ismerd meg a csapatot"
+				"progress": "Ellenőrizd a projekt előrehaladást és célokat",
+				"credits": "Találkozz a team-mel"
 			}
-		}
+		},
+		"about": "Névjegy",
+		"faq": "GYIK"
 	},
 	"hero": {
 		"subtitle": "Játék szerverek",
 		"buttons": {
 			"readMore": "Olvass tovább"
-		}
+		},
+		"title": "Újra létrehozva",
+		"text": "A Pretendo egy ingyenes nyílt forrású helyettesítője a Nintendo szervereinek mind a 3DS, mind a Wii U számára lehetővé téve az online kapcsolatot mindenki számára, még az eredeti szerverek leállítása után is"
 	},
 	"aboutUs": {
 		"title": "Rólunk",
@@ -34,16 +38,21 @@
 		]
 	},
 	"progress": {
-		"title": "Előrehaladás"
+		"title": "Előrehaladás",
+		"githubRepo": "Github repó"
 	},
 	"faq": {
 		"title": "Gyakran Ismételt Kérdések",
 		"text": "Itt van néhány gyakori kérdés, amit tőlünk kérdeztek, a könnyű információhoz jutás érdekében.",
 		"QAs": [
 			{
-				"question": "Mi a Pretendo?"
+				"question": "Mi a Pretendo?",
+				"answer": "A Pretendo egy nyílt forrású helyettesítője a Nintendo Network-nek aminek célja, hogy egyedi szervereket készítsen a Wii U és a 3DS család konzoljai számára. Célunk, hogy megőrizzük a funkcionalitását ezen konzoloknak, és lehetővé tegyük a játékosok számára, hogy folytathassák a játékot kedvenc Wii U és 3DS játékaikkal, azok teljes kapacitásával."
 			},
-			{},
+			{
+				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo-n, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
+				"question": "Fog a meglévő NNID-m működni a Pretendo-n?"
+			},
 			{
 				"question": "Hogyan használhatom a Pretendo-t?",
 				"answer": "A Pretendo jelenleg még nem olyan állapotú, hogy alkalmas lenne a publikus használatra. Azonban ha egyszer kész lesz, akkor majd futtatni tudod a Pretendo-t egyszerűen a homebrew patcherünk futtatásával a konzolon."
@@ -53,8 +62,322 @@
 				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo-nak függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
 			},
 			{
-				"question": "Működik a Pretendo Cemu-n/emulátorokon?"
+				"question": "Működik a Pretendo Cemu-n/emulátorokon?",
+				"answer": "A Pretendo támogat minden klienst ami képes kommunikálni a Nintendo Network-kel. Jelenleg egy emulátor van ezzel a funkcionalitással a Cemu. A Cemu 2.0 hivatalosan támogatja a Pretendo-t a hálózati fiók opciói között az emulátornak. Információkért arról, hogy hogyan is kezdj hozzá a Cemu használatához, tekints meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>. A Citra nem támogatja a valódi hálózati játékot, így nem működik együtt a Pretendo-val, és egyáltalán nem mutatja jeleit a valódi online támogatásnak. A Mikage, egy 3DS emulátor mobil eszközökre talán biztosít majd támogatást a jövőben, de ez távolról sem biztos."
+			},
+			{
+				"question": "Ha bannolt vagyok a Nintendo Network-ön, továbbra is bannolt maradok a Pretendo-n?",
+				"answer": "Nincs hozzáférésünk a Nintendo Network banjaihoz és a felhasználók nem kerülnek bannolásra a szolgáltatásunkból. Azonban vannak szabályaink amit követni kell a szolgáltatás használatakor, és az ezeknek nem megfelelés eredményezhet ban-t."
+			},
+			{
+				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
+				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
+			},
+			{
+				"answer": "Igen, hack-elned kell az eszközödet a csatlakozáshoz; azonban a Wii U-n csak a Homebrew Launcher hozzáférésre van szükséged(pl. Haxchi, Coldboot Haxchi, és a web böngésző exploit). A 3DS csatlakozásáról az információ később érkezik.",
+				"question": "Szükségem van hack-re a csatlakozáshoz?"
 			}
 		]
+	},
+	"showcase": {
+		"title": "Mit csinálunk mi",
+		"text": "A projektünk sok komponensből áll. Itt van néhány közülük.",
+		"cards": [
+			{
+				"title": "Játék szerverek",
+				"caption": "A kedvenc játékaid és tartalmad visszahozása egyedi szerverek használatával."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A Miiverse újragondolása, milyen lett volna, ha a modern érában készül."
+			},
+			{
+				"title": "Cemu támogatás",
+				"caption": "Játssz a kedvenc Wii U játékaiddal akár konzol nélkül!"
+			}
+		]
+	},
+	"credits": {
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Projekt gazda és vezető fejlesztő",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse kutatás és fejlesztés"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Hálózati telepítő és konzol kutatás",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "quarky",
+				"caption": "BOSS kutatás és patch fejlesztés",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Konzol és egyéb rendszer kutatás",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "Jip Fr",
+				"caption": "Web fejlesztés vezető",
+				"picture": "https://github.com/jipfr.png",
+				"github": "https://github.com/jipfr"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Webfejlesztés",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Designer",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			}
+		],
+		"title": "A csapat",
+		"text": "Ismerd meg a csapatot a projekt mögött"
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Én vagyok a Bandwidth mosómedve, szeretem rágcsálni a Pretendo Network szerverek kábeleit. Nyam-nyam!",
+			"Sokan kérdezik, hogy nem fogunk-e jogi problémába keveredni a Nintendo-val e miatt; Boldogan mondhatom, hogy a nénikém a Nintendo-nál dolgozik, és azt mondja, hogy szerinte ez rendben van.",
+			"A Webkit v537 a legjobb verziója a Webkit a Wii U-ra. Nem, nem fogjuk portolni a Chrome-ot a Wii U-ra.",
+			"Alig győzök várni arra, hogy az óra elérje a 2038 január 19-én a 03:14:08 UTC időpontot!",
+			"A Wii U tulajdonképpen egy alulértékelt rendszer: a reklámok nagyon rosszak voltak, de a konzol nem. Hú, várj egy percet, nem tudom miért nem csatlakozik a Gamepad-om a Wii-omhoz.",
+			"Super Mario World 2 - Yoshi's Island's főcím zenéje abszolút bop, és semmiképpen sem fogsz meggyőzni az ellenkezőjéről.",
+			"A kedvenc Nintendo Switch kiadásaim: a Nintendo Switch Online + Expansion Pack, a Nintendo Switch Online + Rumble Pak, a Nintendo Switch Online + Offline Play Pack, a Nintendo Switch Online + Yet Another Port Pack és a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Nagyon szeretted a Nintendo Wii U Virtual Console-t szóval visszahozzuk\" Pack. Tényleg elmondhatod, hogy a Nintendo figyel rád.",
+			"Az \"Ismered Ash-t, áldd meg a szívét, egész nap UwUzik.\" a déli kedves módja annak, hogy \"Ash uwuzik minden alkalommal, és ez nagyon furcsa és hülye, és azt kívánom, bárcsak ne”",
+			"Első videóm a csatornámon!! Már régóta szertem volna videókat készíteni, de a laptopom elég rosszul ment, és nem tudtam egyszerre futtatni a fraps-t, a skype-ot és a minecraftot. de most vége! informatika tanárom segítségével a laptopom sokkal jobban működik, és már tudok rögzíteni! remélem tetszeni fog és ha igen nyomj egy like-ot és iratkozz fel!!!"
+		],
+		"socials": "Szociális",
+		"usefulLinks": "Hasznos linkek",
+		"widget": {
+			"captions": [
+				"Szeretnél naprakész lenni?",
+				"Csatlakozz a Discord szerverünkhöz."
+			],
+			"button": "Csatlakozz most!"
+		}
+	},
+	"account": {
+		"loginForm": {
+			"loginPrompt": "Rendelkezel már fiókkal?",
+			"username": "Felhasználónév",
+			"registerPrompt": "Nem rendelkezel fiókkal?",
+			"password": "Jelszó",
+			"forgotPassword": "Elfelejtetted a jelszavad?",
+			"login": "Belépés",
+			"register": "Regisztráció",
+			"detailsPrompt": "Add meg a fiók adataid alább",
+			"confirmPassword": "Jelszó megerősítése",
+			"email": "Email",
+			"miiName": "Mii név"
+		},
+		"forgotPassword": {
+			"submit": "Elküld",
+			"input": "Email cím vagy PNID",
+			"header": "Elfelejtett jelszó",
+			"sub": "Add meg az email címed/PNID azonosítód alább"
+		},
+		"resetPassword": {
+			"header": "Jelszó alaphelyzetbe állítása",
+			"sub": "Add meg az új jelszót alább",
+			"password": "Jelszó",
+			"confirmPassword": "Jelszó megerősítése",
+			"submit": "Elküld"
+		},
+		"settings": {
+			"downloadFiles": "Fiók fájlok letöltése",
+			"settingCards": {
+				"profile": "Profil",
+				"beta": "Béta",
+				"nickname": "Becenév",
+				"otherSettings": "Egyéb beállítások",
+				"upgradePrompt": "A béta szerverek exkluzívak a béta tesztelők számára.<br>Ahhoz, hogy béta tesztelővé válj, bővíts egy magasabb csomagra.",
+				"signInHistory": "Bejelentkezési előzmények",
+				"discord": "Discord",
+				"fullSignInHistory": "Teljes bejelentkezési előzmény megtekintése",
+				"newsletterPrompt": "A projekt frissítéseiről értesítés emailben (bármikor kikapcsolható)",
+				"userSettings": "Felhasználói beállítások",
+				"birthDate": "Születési dátum",
+				"gender": "Nem",
+				"country": "Ország/régió",
+				"timezone": "Időzóna",
+				"serverEnv": "Szerver környezet",
+				"production": "Éles",
+				"hasAccessPrompt": "A jelenlegi csomag hozzáférést at a béta szerverekhez. Király!",
+				"signInSecurity": "Bejelentkezés és biztonság",
+				"email": "Email",
+				"password": "Jelszó",
+				"passwordResetNotice": "A jelszavad módosítása után ki leszel jelentkezve minden eszközöddel.",
+				"connectedToDiscord": "Csatlakozva a Discordhoz, mint",
+				"removeDiscord": "Discord fiók eltávolítása",
+				"noDiscordLinked": "Nincs Discord fiók kapcsolva.",
+				"linkDiscord": "Discord fiók hozzákapcsolása",
+				"newsletter": "Hírlevél",
+				"passwordPrompt": "Add meg a PNID jelszavad, hogy letölthesd a Cemu fájlokat",
+				"no_signins_notice": "A bejelentkezési előzmények jelenleg nem követettek. Nézz vissza később!",
+				"no_newsletter_notice": "A hírlevél jelenleg nem elérhető. Nézz vissza később!",
+				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
+			},
+			"downloadFilesDescription": "(nem fog működni a Nintendo Network-ön)",
+			"upgrade": "Fiók bővítése",
+			"unavailable": "Nem elérhető"
+		},
+		"accountLevel": [
+			"Normál",
+			"Tesztelő",
+			"Moderátor",
+			"Fejlesztő"
+		],
+		"banned": "Kitiltott",
+		"account": "Fiók"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "A legutolsó frissítések tömören. Ha szeretnél sűrűbb frissítéseket látnit, gondolkozz el a <a href=\"/account/upgrade\" target=\"_blank\">támogatásunkon</a>.",
+		"published": "Kiadta:",
+		"publishedOn": "ekkor:"
+	},
+	"upgrade": {
+		"title": "Bővítés",
+		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? El fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
+		"changeTier": "Csomag módosítása",
+		"description": "Ha havi cél elérése a Pretendo-t teljes munkaidős munkává teszi, ez jobb minőségű frissítéseket és nagyobb fejlesztési sebességet biztosít.",
+		"month": "hónap",
+		"tierSelectPrompt": "Válassz egy csomagot",
+		"unsub": "Leiratkozás",
+		"unsubConfirm": "Leiratkozás",
+		"changeTierPrompt": "Biztos, hogy le szeretnél iratkozni a(z) <span class=\"oldtier\">oldtiername</span> csomagról és feliratkozni a(z) <span class=\"newtier\">newtiername</span>csomagra?",
+		"changeTierConfirm": "Csomag módosítása",
+		"back": "Vissza"
+	},
+	"specialThanks": {
+		"title": "Külön köszönet",
+		"people": [
+			{
+				"name": "superwhiskers",
+				"caption": "crunch library fejlesztés",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"picture": "https://github.com/Stary2001.png",
+				"name": "Stary",
+				"caption": "3DS fejlesztő és NEX boncoló",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "Billy",
+				"caption": "Megőrző",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Mario Kart 7 és 3DS kutatás",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse információ megosztás",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Külön köszönet",
+				"caption": "Kutatás a Nintendo adatstrukturákról",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikonok a Mii Editor-hoz és Juxt reakciók",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "GitHub hozzájárulók",
+				"caption": "Lokalizációs és egyéb hozzájárulók",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		],
+		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van."
+	},
+	"discordJoin": {
+		"title": "Maradj napra kész",
+		"text": "Csatlakozz a Discord szerverünkhöz, hogy megszerezd a legutolsó frissítéseket a projektről.",
+		"widget": {
+			"text": "Kapj valós időben frissítéseket az előrehaladásunkról",
+			"button": "Csatlakozz a szerverhez"
+		}
+	},
+	"progressPage": {
+		"title": "Előrehaladásunk",
+		"description": "Tekintsd meg a projekt előrehaladását és céljait! (Minden órában frissítve, így nem tükröz minden projekt célt vagy az előrehaladást."
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> a <span>$${goald}</span>/hó, <span>${perc}%</span> a havi célból.",
+		"upgradePush": "Hogy előfizetővé válhass, és hozzáférj király cuccokhoz, látogasd meg a <a href=\"/account/upgrade\">bővítés oldalt</a>."
+	},
+	"localizationPage": {
+		"title": "Fordíts",
+		"description": "Illessz be egy linket egy publikusan elérhető JSON fordításra, hogy tesztelhesd a weboldalon",
+		"instructions": "Tekintsd meg a fordítási útmutatókat",
+		"fileInput": "Tesztelendő fájl",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Teszt fájl"
+	},
+	"docs": {
+		"missingInLocale": "Ez az oldal nem érhető el a nyelveden. Kérjük nézd meg az angol verziót alább.",
+		"quickLinks": {
+			"header": "Gyors linkek",
+			"links": [
+				{
+					"header": "Pretendo telepítés",
+					"caption": "A telepítési lépések megtekintése"
+				},
+				{
+					"header": "Hibát kaptál?",
+					"caption": "Keress rá itt"
+				}
+			]
+		},
+		"search": {
+			"title": "Hibakódot kaptál?",
+			"caption": "Írd be az a keretbe alább, hogy információt kapj a problémáról!",
+			"label": "Hiba kód",
+			"no_match": "Nem található egyezés"
+		},
+		"sidebar": {
+			"getting_started": "Kezdeti lépések",
+			"welcome": "Köszöntjük",
+			"install_extended": "Pretendo telepítése",
+			"install": "Telepítés",
+			"search": "Keresés",
+			"juxt_err": "Hibakódok - Juxt"
+		}
+	},
+	"modals": {
+		"cancel": "Mégsem",
+		"confirm": "Megerősít",
+		"close": "Bezár"
 	}
 }
