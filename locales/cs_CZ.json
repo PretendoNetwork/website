@@ -33,8 +33,8 @@
 	"aboutUs": {
 		"title": "O nás",
 		"paragraphs": [
-			"Pretendo je open-sourcový projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí pouze legálního reverse engineeringu.",
-			"Protože by naše služby byly jak svobodné, tak open source, můžou existovat dlouho po nevyhnutelném uzavření Nintendo Network."
+			"Pretendo je open-source projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí legálního reverse engineeringu.",
+			"Protože jsou naše služby svobodný a open-source software, bude možné je nadále provozovat i po ukončení provozu Nintendo Network."
 		]
 	},
 	"credits": {
@@ -49,38 +49,38 @@
 		"QAs": [
 			{
 				"question": "Co je Pretendo?",
-				"answer": "Pretendo je open-sourcová náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto konzolí a umožnit tak hráčům dál hrát své oblíbené Wii U a 3DS tituly naplno."
+				"answer": "Pretendo je open-source náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto zařízení a umožnit tak hráčům nadále hrát své oblíbené Wii U a 3DS tituly."
 			},
 			{
 				"answer": "Bohužel ne. Již existující NNID na Pretendu nebudou fungovat, protože Vaše uživatelská data vlastní pouze Nintendo. Přestože by migrace účtů byla teoreticky možná, byla by riskantní a vyžadovala citlivé osobní údaje, které si nepřejeme držet.",
 				"question": "Bude na Pretendu fungovat moje současné NNID?"
 			},
 			{
-				"question": "Jak začít s Pretendem?",
+				"question": "Jak začnu s používáním Pretenda?",
 				"answer": "Pretendo v současné době není ve stavu, který by byl připraven pro veřejné použití. Nicméně, až nastane čas, Pretendo budete moct použít spuštěním našeho homebrew nástroje na Vašem zařízení."
 			},
 			{
-				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
+				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář, zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
 				"question": "Kdy bude [nějaká služba/funkce] hotová?"
 			},
 			{
 				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Pretendo podporuje jakýkoli klient který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se toto v budoucnu změnilo. Mikage, emulátor 3DS pro mobilní zařízení, může podporu poskytnout v budoucnu, ale toto není jisté."
+				"answer": "Pretendo podporuje jakýkoli klient, který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se to mělo v budoucnu změnit. Mikage, emulátor 3DS pro mobilní zařízení, by mohl podporu poskytnout v budoucnu, tohle ale není jisté."
 			},
 			{
-				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
+				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban na Pretendo?",
 				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
 			},
 			{
 				"question": "Bude Pretendo podporovat Wii/Switch?",
-				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme cílit na Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
+				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme vyvíjet pro Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
 			},
 			{
 				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
 				"answer": "Ano, Vaše zařízení musí být modifikováno; na Wii U budete potřebovat pouze přístup k Homebrew Launcher (t.j. Haxchi, Coldboot Haxchi nebo exploit s webovým prohlížečem), informace pro připojení z 3DS jsou v přípravě."
 			}
 		],
-		"text": "Zde jsou otázky, které jsou nám často kladeny, pro snadné informování.",
+		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
 		"title": "Často kladené dotazy"
 	},
 	"showcase": {
@@ -118,13 +118,13 @@
 				"password": "Heslo",
 				"gender": "Pohlaví",
 				"discord": "Discord",
-				"newsletterPrompt": "Posílat aktualizace projektu emailem (Kdykoliv můžete posílání zrušit)",
+				"newsletterPrompt": "Posílat aktualizace projektu emailem (lze kdykoli zrušit)",
 				"nickname": "Přezdívka",
 				"signInHistory": "Historie přihlášení",
 				"beta": "Beta",
 				"serverEnv": "Prostředí serveru",
 				"noDiscordLinked": "Není připojen žádný Discord účet.",
-				"fullSignInHistory": "Zobrazit celou historii přihlašování",
+				"fullSignInHistory": "Zobrazit celou historii přihlášení",
 				"production": "Produkční",
 				"linkDiscord": "Připojit Discord účet",
 				"country": "Země/region",
@@ -135,7 +135,7 @@
 				"connectedToDiscord": "Připojeno k Discordu jako",
 				"newsletter": "Newsletter",
 				"hasAccessPrompt": "Váš aktuální tier Vám dává přístup k beta serverům. Super!",
-				"passwordResetNotice": "Po změně hesla budete odhlášeni ze všech zařízení.",
+				"passwordResetNotice": "Po změně hesla budete odhlášen(a) ze všech zařízení.",
 				"otherSettings": "Ostatní nastavení",
 				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupné. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
@@ -209,7 +209,7 @@
 		"sidebar": {
 			"getting_started": "Začínáme",
 			"install_extended": "Nainstalovat Pretendo",
-			"install": "Nainstalovat",
+			"install": "Instalace",
 			"welcome": "Vítejte",
 			"search": "Hledat",
 			"juxt_err": "Chybové kódy - Juxt"
@@ -217,7 +217,7 @@
 		"search": {
 			"no_match": "Nenalezeny žádné shody",
 			"title": "Máte chybový kód?",
-			"caption": "Napište ho do políčka níže pro zobrazení informací k Vašemu problému!",
+			"caption": "Napište jej do políčka níže pro zobrazení informací k Vašemu problému!",
 			"label": "Chybový kód"
 		},
 		"missingInLocale": "Tato stránka je nedostupná ve Vaší lokalizaci. Podívejte se prosím na Anglickou verzi níže."
@@ -261,9 +261,9 @@
 		"widget": {
 			"captions": [
 				"Chcete být v obraze?",
-				"Připojte se do našeho Discord serveru!"
+				"Přidejte se k našemu Discord serveru!"
 			],
-			"button": "Připojit se nyní!"
+			"button": "Připojte se nyní!"
 		},
 		"socials": "Sociální sítě"
 	},

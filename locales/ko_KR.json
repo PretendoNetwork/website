@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "···에 대하여",
+		"about": "소개",
 		"faq": "FAQ",
 		"docs": "문서",
 		"credits": "크레딧",
@@ -141,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "블로그",
-		"description": "",
+		"description": "최신 소식을 게시합니다. 만약 소식을 더 자주 보고 싶으시다면, <a href=\"/account/upgrade\" target=\"_blank\">저희를 후원해 주세요.</a>.",
 		"published": "게시자",
 		"publishedOn": "켜기"
 	},
@@ -167,23 +167,115 @@
 					"caption": "여기서 검색하기"
 				}
 			]
+		},
+		"search": {
+			"caption": "에러 코드를 아래 칸에 입력하여 문제에 대한 정보를 얻으세요!",
+			"label": "에러 코드",
+			"no_match": "일치하는 결과 없음",
+			"title": "에러 코드를 마주했나요?"
+		},
+		"sidebar": {
+			"getting_started": "시작하기",
+			"install_extended": "Pretendo 설치",
+			"juxt_err": "에러 코드 - Juxt",
+			"search": "검색",
+			"welcome": "환영합니다",
+			"install": "설치"
 		}
 	},
 	"modals": {
 		"close": "닫기",
-		"cancel": "취소"
+		"cancel": "취소",
+		"confirm": "승인"
 	},
 	"account": {
 		"loginForm": {
 			"password": "비밀번호",
 			"confirmPassword": "비밀번호 확인",
 			"email": "이메일",
-			"miiName": "미이 이름",
+			"miiName": "Mii 이름",
 			"detailsPrompt": "아래에 계정 정보를 입력하세요.",
 			"login": "로그인",
 			"register": "등록하기",
-			"username": "사용자 이름"
+			"username": "사용자 이름",
+			"forgotPassword": "비밀번호를 잊으셨나요?",
+			"registerPrompt": "계정이 없으신가요?",
+			"loginPrompt": "이미 계정을 가지고 계신가요?"
 		},
-		"account": "계정"
+		"account": "계정",
+		"settings": {
+			"downloadFiles": "계정 파일 다운로드",
+			"settingCards": {
+				"profile": "프로필",
+				"nickname": "닉네임",
+				"gender": "성별",
+				"country": "국가/지역",
+				"timezone": "시간대",
+				"serverEnv": "서버 환경",
+				"userSettings": "사용자 설정",
+				"birthDate": "생년월일",
+				"beta": "베타",
+				"production": "프로덕션",
+				"passwordPrompt": "Cemu 파일을 다운받으려면 PNID 비밀번호를 입력하세요",
+				"upgradePrompt": "베타 서버는 베타 테스터에게만 제공됩니다.<br>베타 테스터가 되시려면, 계정을 더 높은 티어로 업그레이드하세요.",
+				"fullSignInHistory": "전체 로그인 기록 보기",
+				"otherSettings": "기타 설정",
+				"discord": "디스코드",
+				"connectedToDiscord": "디스코드에 연결된 계정:",
+				"removeDiscord": "디스코드 계정 삭제",
+				"noDiscordLinked": "연결된 디스코드 계정이 없습니다.",
+				"linkDiscord": "디스코드 계정 연결",
+				"newsletter": "뉴스레터",
+				"hasAccessPrompt": "당신의 현재 티어로 베타 서버에 접근할 수 있습니다. 멋지네요!",
+				"signInSecurity": "로그인 및 보안",
+				"email": "이메일",
+				"password": "비밀번호",
+				"passwordResetNotice": "비밀번호를 변경하고 나면, 모든 기기에서 로그아웃됩니다.",
+				"no_newsletter_notice": "현재 뉴스레터가 제공되지 않습니다. 나중에 다시 확인하세요",
+				"signInHistory": "로그인 기록",
+				"newsletterPrompt": "프로젝트 소식 업데이트를 이메일로 받기(언제든 취소할 수 있습니다)",
+				"no_edit_from_dashboard": "유저 대시보드에서 PNID 설정 변경은 현재 제공되지 않습니다. 계정을 연결한 게임 콘솔에서 변경하세요.",
+				"no_signins_notice": "현재 로그인 기록이 아직 기록되지 않았습니다. 나중에 다시 확인하세요!"
+			},
+			"upgrade": "계정 업그레이드",
+			"unavailable": "이용 불가",
+			"downloadFilesDescription": "(닌텐도 네트워크에서는 작동하지 않습니다)"
+		},
+		"forgotPassword": {
+			"header": "비밀번호 찾기",
+			"input": "이메일 주소 또는 PNID",
+			"submit": "제출",
+			"sub": "아래에 이메일 주소/PNID를 입력해 주세요."
+		},
+		"resetPassword": {
+			"header": "비밀번호 재설정",
+			"sub": "아래에 새 비밀번호를 입력하세요",
+			"password": "비밀번호",
+			"confirmPassword": "비밀번호 확인",
+			"submit": "제출"
+		},
+		"accountLevel": [
+			"일반",
+			"테스터",
+			"모더레이터",
+			"개발자"
+		],
+		"banned": "이용 정지됨"
+	},
+	"upgrade": {
+		"changeTierConfirm": "티어 변경",
+		"back": "뒤로",
+		"tierSelectPrompt": "티어 선택",
+		"unsub": "구독 취소",
+		"unsubPrompt": "정말로 <span>tiername</span>?을 구독 취소하시겠습니까? 해당 티어가 제공하는 혜택을 더 이상 받을 수 없을 것입니다.",
+		"unsubConfirm": "구독 취소",
+		"changeTier": "티어 변경",
+		"title": "업그레이드",
+		"changeTierPrompt": "정말로 <span class=\"oldtier\">oldtiername</span>를 취소하고 <span class=\"newtier\">newtiername</span>를 구독하시겠습니까?",
+		"month": "개월"
+	},
+	"donation": {
+		"progress": "<span>$${goald}</span>/월 중에서 <span>$${totd}</span> , 매달 목표의 <span>${perc}%</span>.",
+		"upgradePush": "구독자가 되고 멋진 혜택을 받으시려면, <a href=\"/account/upgrade\">업그레이드 페이지</a>를 방문하세요."
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"nav": {
-		"about": "Acerca de",
-		"faq": "FAQ",
+		"about": "Acerca de nosotros",
+		"faq": "Preguntas frecuentes",
 		"docs": "Documentación",
 		"credits": "Créditos",
 		"progress": "Progreso",
@@ -9,23 +9,23 @@
 		"account": "Cuenta",
 		"accountWidget": {
 			"settings": "Ajustes",
-			"logout": "Cerrar Sesión"
+			"logout": "Cerrar sesión"
 		},
 		"donate": "Donar",
 		"dropdown": {
 			"captions": {
 				"credits": "Conoce al equipo",
-				"about": "Sobre el projecto",
-				"blog": "Nuestras últimas actualizaciones, resumidas",
+				"about": "Sobre el proyecto",
+				"blog": "Un resumen de nuestras últimas actualizaciones",
 				"progress": "Mira el progreso del proyecto y sus metas",
-				"faq": "Preguntas más preguntadas"
+				"faq": "Preguntas frecuentes"
 			}
 		}
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
 		"title": "Recreados",
-		"text": "Pretendo es un reemplazamiento gratuito y de código abierto de los servidores de Nintendo para 3DS y Wii U que permite la comunicación en línea incluso después del cierre de los servidores oficiales",
+		"text": "Pretendo es un reemplazo gratuito y de código abierto de los servidores de Nintendo para 3DS y Wii U que permite la comunicación en línea incluso después del cierre de los servidores oficiales",
 		"buttons": {
 			"readMore": "Leer más"
 		}
@@ -63,15 +63,15 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Pretendo soporta cualquier cliente que puede interactuar con el Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 oficialmente soporta a Pretendo, en las opciones de cuenta en línea en el emulador . Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no soporta verdadero juego en línea, por eso no funciona con Pretendo, y no demuestra señales de que soportará verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría proporcionar soporte en el futuro aunque esto esta lejos de ser cierto."
+				"answer": "Pretendo es compatible con cualquier cliente que pueda interactuar con Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 es compatible de manera oficial con Pretendo en las opciones de cuenta en línea del emulador. Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no es compatible con el verdadero juego en línea por lo que no funciona con Pretendo, tampoco parece que vaya a ser compatible con el verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría hacerse compatible en el futuro, aunque esto aún no es seguro."
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-				"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
+				"answer": "No tenemos acceso a los baneos de Nintendo Network, por lo que nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y su incumplimiento resultará en un ban."
 			},
 			{
-				"question": "¿Pretendo soportará Wii/Switch?",
-				"answer": "La Wii ya tiene servidores en línea personalizados de parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con Switch ya que sus servidores son de pago y completamente diferentes a los de Nintendo Network."
+				"question": "¿Pretendo será compatible con la Wii/Switch?",
+				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
 				"question": "¿Necesitaré modificar mi consola para conectarme?",
@@ -81,7 +81,7 @@
 	},
 	"showcase": {
 		"title": "Qué hacemos",
-		"text": "Nuestro proyecto se compone de muchas cosas. Estas son algunas de ellas.",
+		"text": "Nuestro proyecto tiene muchos componentes. Estos son algunos de ellos.",
 		"cards": [
 			{
 				"title": "Servidores de juegos",
@@ -89,10 +89,10 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Un version re-imaginada de Miiverse, como si hubiera sido creada en la era moderna."
+				"caption": "Un versión reimaginada de Miiverse, como si hubiera sido creado hoy en día."
 			},
 			{
-				"title": "Soporte para Cemu",
+				"title": "Compatibilidad con Cemu",
 				"caption": "¡Juega a tus títulos de Wii U favoritos incluso sin una consola!"
 			}
 		]
@@ -125,7 +125,7 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Soy Bandwidth el Mapache y me encanta morder los cables que van a los servidores de Pretendo Network. ¡mmm!",
-			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto; pues me alegro de anunciar que mi tía trabaja en Nintendo y me dijo que no pasa nada.",
+			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto. Me alegra anunciar que mi tía trabaja en Nintendo y me dijo que no pasaba nada.",
 			"Webkit v537 es la mejor versión de Webkit para la Wii U. No, no vamos a portear Chrome a la Wii U",
 			"¡No puedo esperar a que el reloj llegue a la 03:14:08 UTC el 19 de enero de 2038!",
 			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi GamePad no se conecta a mi Wii.",
@@ -136,7 +136,7 @@
 		]
 	},
 	"progressPage": {
-		"title": "Progreso",
+		"title": "Nuestro Progreso",
 		"description": "¡Comprueba el progreso y las metas pendientes! (Se actualiza cada hora aproximadamente, así que no refleja TODAS nuestras metas o el progreso total)"
 	},
 	"blogPage": {
@@ -146,7 +146,7 @@
 		"publishedOn": "en"
 	},
 	"localizationPage": {
-		"title": "Vamos a localizar",
+		"title": "Vamos a traducir",
 		"description": "Pega un enlace a una localización JSON accesible pulicamente para probarla en el sitio",
 		"instructions": "Ver instrucciones de localización",
 		"fileInput": "Archivo a probar",
@@ -171,11 +171,11 @@
 		"search": {
 			"title": "¿Tienes un código de error?",
 			"caption": "¡Escribe el código de error del cuadro para obtener información de tu problema!",
-			"label": "Codigo de error",
+			"label": "Código de error",
 			"no_match": "No se encontraron coincidencias"
 		},
 		"sidebar": {
-			"getting_started": "Empezando",
+			"getting_started": "Para empezar",
 			"install_extended": "Instalar Pretendo",
 			"search": "Buscar",
 			"juxt_err": "Codigos de error - Juxt",
@@ -226,8 +226,8 @@
 				"nickname": "Apodo",
 				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior.",
 				"userSettings": "Ajustes de usuario",
-				"no_signins_notice": "El historial de inicios de sesión no es vigilado. Vuelve más tarde!",
-				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelva a consultar más tarde",
+				"no_signins_notice": "El historial de inicios de sesión no es vigilado. ¡Vuelve más tarde!",
+				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelve a intentarlo más tarde",
 				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
 			"downloadFiles": "Descargar datos de cuenta",

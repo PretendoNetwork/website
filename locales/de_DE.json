@@ -23,7 +23,7 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Spiel-Server",
+		"subtitle": "Spielserver",
 		"title": "Rekonstruiert",
 		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS und die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
 		"buttons": {
@@ -85,7 +85,7 @@
 		"cards": [
 			{
 				"title": "Spiel-Server",
-				"caption": "Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
+				"caption": "Bringt dir deine Lieblingsspiele und Inhalte zurück, mithilfe eigener Server."
 			},
 			{
 				"title": "Juxtaposition",
@@ -148,9 +148,9 @@
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Tester*innen",
-			"Moderator*innen",
-			"Entwickler"
+			"Tester*in",
+			"Moderator*in",
+			"Entwickler*in"
 		],
 		"loginForm": {
 			"login": "Anmelden",

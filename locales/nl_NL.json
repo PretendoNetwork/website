@@ -1,9 +1,9 @@
 {
 	"nav": {
-		"about": "Over",
+		"about": "Over ons",
 		"faq": "FAQ",
 		"docs": "Docs",
-		"credits": "Krediet",
+		"credits": "Bijdragers",
 		"progress": "Vooruitgang",
 		"blog": "Blog",
 		"account": "Account",
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spelservers",
 		"title": "Nagemaakt",
-		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers permanent gestopt worden",
+		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo-servers permanent gestopt worden",
 		"buttons": {
 			"readMore": "Lees meer"
 		}
@@ -33,13 +33,13 @@
 	"aboutUs": {
 		"title": "Over ons",
 		"paragraphs": [
-			"Pretendo is een open source project met het doel om het Nintendo Network voor 3DS en Wii U na te maken met clean-room reverse engineering.",
+			"Pretendo is een open source project met het doel om het Nintendo Network voor de 3DS en Wii U na te maken met clean-room reverse engineering.",
 			"Omdat onze diensten gratis en open source zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
 		]
 	},
 	"progress": {
 		"title": "Vooruitgang",
-		"githubRepo": "GitHub repository"
+		"githubRepo": "GitHub-repository"
 	},
 	"faq": {
 		"title": "Veelgestelde vragen",
@@ -107,7 +107,7 @@
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade page</a>."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgradepagina</a>."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",

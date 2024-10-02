@@ -141,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "Najnowsze aktualizacje w skondensowanych fragmentach. Jeśli chcesz otrzymywać częstsze aktualizacje, rozważ <a href=\"/account/upgrade\" target=\"_blank\">wsparcie nas</a>.",
 		"published": "Opublikowany przez",
 		"publishedOn": "dnia"
 	},
