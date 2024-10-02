@@ -88,56 +88,6 @@
 	},
 	"credits": {
 		"title": "O equipo",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Propietario e desenvolvedor principal",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"name": "Jemma (CaramelKat)",
-				"caption": "Investigación e desenvolvemento de Miiverse (Juxtaposition)"
-			},
-			{
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Instalador de rede e investigación da consola",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"caption": "Investigación e desenvolvemento de parches BOSS",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png"
-			},
-			{
-				"caption": "Investigación sobre consolas e outros sistemas",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom"
-			},
-			{
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr",
-				"name": "Jip Fr",
-				"caption": "Líder de desenvolvemento web"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Programador web",
-				"github": "https://github.com/gitlimes",
-				"picture": "https://github.com/gitlimes.png"
-			},
-			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Deseñador",
-				"github": "https://github.com/mrjvs"
-			}
-		],
 		"text": "Coñece o equipo detrás do proxecto"
 	},
 	"account": {
@@ -215,57 +165,6 @@
 		"banned": "Prohibido"
 	},
 	"specialThanks": {
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "desenvolvemento da biblioteca crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"caption": "Desenvolvemento 3DS e NEX Disector",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"caption": "Conservacionista",
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png"
-			},
-			{
-				"caption": "Investigador en Mario Kart 7 e 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"name": "Shutterbug2000"
-			},
-			{
-				"caption": "Intercambio de información Miiverse",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"caption": "Investigador de estruturas de datos de Nintendo",
-				"github": "https://github.com/Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"special": "Grazas especiais"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Iconas do editor Mii e reaccións Juxt (Miiverse)",
-				"github": "https://github.com/ninstar",
-				"picture": "https://github.com/ninstar.png"
-			},
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "Colaboradores de GitHub",
-				"caption": "Localizacións e outras achegas",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"title": "Grazas especiais",
 		"text": "Sen eles, Pretendo non estaría onde está agora."
 	},

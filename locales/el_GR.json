@@ -80,57 +80,6 @@
 		"title": "Συχνές ερωτήσεις"
 	},
 	"specialThanks": {
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "ανάπτυξη crunch library",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS dev και NEX dissector",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"caption": "Συντηρητής"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "Έρευνα του Mario Kart 7 και 3DS"
-			},
-			{
-				"name": "rverse",
-				"github": "https://twitter.com/rverseClub",
-				"picture": "https://github.com/rverseTeam.png",
-				"caption": "Καταμερισμός πληροφοριών Miiverse"
-			},
-			{
-				"name": "Kinnay",
-				"caption": "Έρευνα για τις δομές δεδομένων της Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay",
-				"special": "Ιδιαίτερα ευχαριστώ"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Εικονίδια για τα Mii Editor και Juxt reactions",
-				"github": "https://github.com/ninstar",
-				"picture": "https://github.com/ninstar.png"
-			},
-			{
-				"caption": "Μεταφράσεις και άλλες συνεισφορές",
-				"name": "Συντελεστές του GitHub",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"title": "Ιδιαίτερα ευχαριστώ",
 		"text": "Χωρίς αυτά τα άτομα, το Pretendo δεν θα ήταν εδώ που είναι τώρα."
 	},
@@ -209,56 +158,6 @@
 		"banned": "Αποκλεισμένος"
 	},
 	"credits": {
-		"people": [
-			{
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"caption": "Ιδιοκτήτης του project και κύριος προγραμματιστής",
-				"name": "Jonathan Barrow (jonbarrow)"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"caption": "Έρευνα και ανάπτυξη του Miiverse"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Έρευνα εγκατάστασης δικτύου και κονσολών",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"caption": "Έρευνα BOSS και ανάπτυξη patch",
-				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Έρευνα κονσολών και άλλων συστημάτων"
-			},
-			{
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr",
-				"caption": "Επικεφαλής ανάπτυξης ιστοχώρου",
-				"name": "Jip Fr"
-			},
-			{
-				"name": "pinklimes",
-				"github": "https://github.com/gitlimes",
-				"caption": "Ανάπτυξη ιστοχώρου",
-				"picture": "https://github.com/gitlimes.png"
-			},
-			{
-				"name": "mrjvs",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs",
-				"caption": "Σχεδιαστής"
-			}
-		],
 		"text": "Γνώρισε την ομάδα που αναπτύσσει το project",
 		"title": "Η ομάδα"
 	},

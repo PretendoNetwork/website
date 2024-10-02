@@ -98,56 +98,6 @@
 		]
 	},
 	"credits": {
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Projekt gazda és vezető fejlesztő",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse kutatás és fejlesztés"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Hálózati telepítő és konzol kutatás",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS kutatás és patch fejlesztés",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Konzol és egyéb rendszer kutatás",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Web fejlesztés vezető",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Webfejlesztés",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		],
 		"title": "A csapat",
 		"text": "Ismerd meg a csapatot a projekt mögött"
 	},
@@ -268,57 +218,6 @@
 	},
 	"specialThanks": {
 		"title": "Külön köszönet",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "crunch library fejlesztés",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"picture": "https://github.com/Stary2001.png",
-				"name": "Stary",
-				"caption": "3DS fejlesztő és NEX boncoló",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Megőrző",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 és 3DS kutatás",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse információ megosztás",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Külön köszönet",
-				"caption": "Kutatás a Nintendo adatstrukturákról",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikonok a Mii Editor-hoz és Juxt reakciók",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "GitHub hozzájárulók",
-				"caption": "Lokalizációs és egyéb hozzájárulók",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van."
 	},
 	"discordJoin": {
