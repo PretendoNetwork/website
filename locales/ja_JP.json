@@ -277,7 +277,6 @@
 	"modals": {
 		"cancel": "キャンセル",
 		"confirm": "確認",
-		"close": "閉じる",
-		"cancel": "キャンセル"
+		"close": "閉じる"
 	}
 }
