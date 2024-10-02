@@ -34,7 +34,7 @@
 		"title": "About us",
 		"paragraphs": [
 			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
-			"As our services would be both free and open source, they can exist long after the inevitable closure of Nintendo Network."
+			"Since our services are free and open source, they will exist long into the future."
 		]
 	},
 	"progress": {
@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "When will you add more games?",
-				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilising and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
+				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilizing and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
 			},
 			{
 				"question": "Does Pretendo work on Cemu/emulators?",
@@ -79,11 +79,11 @@
 			},
 			{
 				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "We will not have access to Nintendo Network's bans, and all users will not be banned on our service. However, we will have rules to follow when using the service and failing to follow these rules could result in a ban."
+				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban."
 			},
 			{
 				"question": "Can I use cheats or mods online with Pretendo?",
-				"answer": "Only in private matches - gaining an unfair advantage or distrupting the online experience with people who didn't consent (as in public matches) is a bannable offense. We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
+				"answer": "Only in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense. We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
 			}
 		]
 	},
@@ -344,8 +344,6 @@
 			"submit": "Submit"
 		},
 		"settings": {
-			"downloadFiles": "Download account files",
-			"downloadFilesDescription": "(will not work on Nintendo Network)",
 			"upgrade": "Upgrade account",
 			"unavailable": "Unavailable",
 			"settingCards": {
