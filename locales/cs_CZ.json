@@ -39,11 +39,95 @@
 	},
 	"credits": {
 		"title": "Náš tým",
-		"text": "Seznamte se s týmem, co za projektem stojí"
+		"text": "Seznamte se s týmem, co za projektem stojí",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"caption": "Výzkum a vývoj služby Miiverse",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Systémový výzkum a serverová architektura",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Webový vývoj",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"github": "https://github.com/DaniElectra",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png"
+			},
+			{
+				"name": "niko",
+				"caption": "Vývoj webu a serverů",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"caption": "DevOps a práce s komunitou",
+				"github": "https://github.com/MatthewL246",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Vývoj serverového softwaru a optimalizace",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"specialThanks": {
 		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
-		"title": "Zvláštní poděkování"
+		"title": "Zvláštní poděkování",
+		"people": [
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "Přispívající na GitHubu",
+				"caption": "Lokalizace a jiné příspěvky"
+			},
+			{
+				"github": "https://github.com/superwhiskers",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png"
+			},
+			{
+				"name": "Stary"
+			}
+		]
 	},
 	"faq": {
 		"QAs": [
@@ -64,11 +148,11 @@
 				"question": "Kdy bude [nějaká služba/funkce] hotová?"
 			},
 			{
-				"question": "Funguje Pretendo na Cemu/emulátorech?",
+				"question": "Kdy přidáte podporu pro více her?",
 				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
 			},
 			{
-				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban na Pretendo?",
+				"question": "Funguje Pretendo na Cemu/emulátorech?",
 				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
 			},
 			{
