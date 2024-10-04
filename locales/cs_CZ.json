@@ -44,7 +44,8 @@
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
 				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
+				"github": "https://github.com/jonbarrow",
+				"caption": "Vlastník projektu a vedoucí vývojář"
 			},
 			{
 				"caption": "Výzkum a vývoj služby Miiverse",
@@ -55,7 +56,8 @@
 			{
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky",
-				"name": "quarky"
+				"name": "quarky",
+				"caption": "Výzkum konzole Wii U a vývoj záplat"
 			},
 			{
 				"name": "SuperMarioDaBom",
@@ -72,17 +74,20 @@
 			{
 				"name": "Shutterbug2000",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Systémový výzkum a vývoj serverů"
 			},
 			{
 				"name": "Billy",
 				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
+				"github": "https://github.com/InternalLoss",
+				"caption": "Archivace dat a serverová architektura"
 			},
 			{
 				"github": "https://github.com/DaniElectra",
 				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png"
+				"picture": "https://github.com/danielectra.png",
+				"caption": "Systémový výzkum a vývoj serverů"
 			},
 			{
 				"name": "niko",
@@ -105,7 +110,8 @@
 			{
 				"name": "TraceEntertains",
 				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
+				"github": "https://github.com/TraceEntertains",
+				"caption": "Vývoj 3DS záplat a výzkum"
 			}
 		]
 	},
@@ -122,10 +128,81 @@
 			{
 				"github": "https://github.com/superwhiskers",
 				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png"
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "vývoj knihovny crunch"
 			},
 			{
-				"name": "Stary"
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001",
+				"caption": "3DS vývoj a disektor NEX"
+			},
+			{
+				"name": "rverse",
+				"caption": "Sdílení informací o Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Zvláštní poděkování",
+				"caption": "Výzkum datových struktur Nintenda",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"github": "https://github.com/ninstar",
+				"name": "NinStar",
+				"caption": "Ikony pro Mii Editor a Juxt reakce",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Konzolový výzkum a herní servery",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"picture": "https://github.com/GaryOderNichts.png",
+				"caption": "Vývoj Wii U záplat",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast",
+				"caption": "Tvůrce 3DS záplat"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Serverová architektura",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Serverová architektura",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Splatoon rotace a výzkum",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22",
+				"name": "Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon rotace a výzkum",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub přispěvovatelé",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Lokalizace a další příspěvky"
 			}
 		]
 	},
@@ -148,12 +225,12 @@
 				"question": "Kdy bude [nějaká služba/funkce] hotová?"
 			},
 			{
-				"question": "Kdy přidáte podporu pro více her?",
+				"question": "Kdy přidáte další hry?",
 				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
 			},
 			{
 				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+				"answer": "Cemu 2.1 oficiálně podporuje Pretendo v nastavení účtu. Pro informace jak začít s Cemu navštivte <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaci</a>.<br>Některé 3DS emulátory můžou nabízet podporu, ale v současnosti nemáme oficiální doporučení ani návod k nastavení. Citra ve své poslední vydané verzi Pretendo nepodporuje."
 			},
 			{
 				"question": "Bude Pretendo podporovat Wii/Switch?",
@@ -165,10 +242,11 @@
 			},
 			{
 				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
-				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Máme však vlastní pravidla pro používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
 			},
 			{
-				"question": "Můžu na Pretendu používat mody a cheaty?"
+				"question": "Můžu na Pretendu používat mody a cheaty?",
+				"answer": "Pouze v soukromých zápasech - narušování online her lidem, kteří s tím nesouhlasili (tedy veřejné zápasy) je proti zásadám. Bany konzolím a účtům udělujeme pravidelně. Pretendo dále používá dodatečná bezpečnostní opatření, která brání v obcházení banů např. změnou sériového čísla."
 			}
 		],
 		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
@@ -344,7 +422,8 @@
 			"Úvodní hudba Super Mario World 2 - Yoshi's Island je slast pro moje uši a nikdo mě nepřesvědčí o opaku.",
 			"Moje oblíbená vydání Switche byly Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Ten Virtual Console titul pro Wii U se ti fakt líbil, tak ho přinášíme zpátky\" Pack. Je fakt zřejmý, že nás má Nintendo rádo.",
 			"Když moravák řekne \"Znáš přéce Ash, taký zlatíčko, je tak moc UwU\", snaží se neurážlivě říct \"Ash pořád UwUuje a je to fakt divný a hloupý, kéž by to nedělala\"",
-			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\""
+			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\"",
+			"to vypadá mega vyfeleně"
 		],
 		"usefulLinks": "Užitečné odkazy",
 		"widget": {
@@ -367,5 +446,8 @@
 	"donation": {
 		"progress": "<span>$${totd}</span> z měsíčního cíle <span>$${goald} </span> vybráno (<span>${perc}%</span> měsíčního cíle)",
 		"upgradePush": "Abyste se stal(a) předplatitelem a získal(a) přístup k zajímavým výhodám navštivte <a href=\"/account/upgrade\">upgrade stránku</a>."
+	},
+	"notfound": {
+		"description": "Jejda! Tuto stránku jsme nenalezli."
 	}
 }
