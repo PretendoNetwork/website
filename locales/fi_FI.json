@@ -160,8 +160,6 @@
 			"registerPrompt": "Ei vielä tiliä?"
 		},
 		"settings": {
-			"downloadFiles": "Lataa tilin tiedostot",
-			"downloadFilesDescription": "(ei toimi Nintendo Network:issa)",
 			"upgrade": "Nosta tililuokkaa",
 			"unavailable": "Ei saatavissa",
 			"settingCards": {

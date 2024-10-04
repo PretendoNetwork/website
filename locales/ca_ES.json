@@ -151,7 +151,6 @@
 		},
 		"account": "Compte",
 		"settings": {
-			"downloadFiles": "Descarrega arxius de compte",
 			"upgrade": "Millora compte",
 			"unavailable": "No disponible",
 			"settingCards": {
@@ -185,8 +184,7 @@
 				"birthDate": "Dia de naixement",
 				"serverEnv": "Entorn del servidor",
 				"signInSecurity": "Inici de sessió i seguretat"
-			},
-			"downloadFilesDescription": "No funcionarà a la xarxa de Nintendo"
+			}
 		},
 		"forgotPassword": {
 			"sub": "Posa el teu correu electrònic/PNID abaix",

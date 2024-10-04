@@ -148,8 +148,6 @@
 			"loginPrompt": "¿Xá tienes una cuenta?"
 		},
 		"settings": {
-			"downloadFiles": "Baxar los ficheros de la cuenta",
-			"downloadFilesDescription": "(nun funciona na Nintendo Network)",
 			"upgrade": "Anovar la cuenta",
 			"unavailable": "Nun ta disponible",
 			"settingCards": {

@@ -140,8 +140,6 @@
 				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupné. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
 			"unavailable": "Nedostupné",
-			"downloadFiles": "Stáhnout soubory účtu",
-			"downloadFilesDescription": "(Nebude fungovat na Nintendo Networku)",
 			"upgrade": "Upgradovat účet"
 		},
 		"accountLevel": [

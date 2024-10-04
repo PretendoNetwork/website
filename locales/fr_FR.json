@@ -198,7 +198,6 @@
 			"registerPrompt": "Pas encore inscrit ?"
 		},
 		"settings": {
-			"downloadFiles": "Télécharger les fichiers du compte",
 			"settingCards": {
 				"gender": "Sexe",
 				"profile": "Profil",
@@ -231,7 +230,6 @@
 				"no_signins_notice": "L'historique de connexion n'est pas encore établi. Réessayez ultérieurement.",
 				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
 			},
-			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
 			"upgrade": "Mettre à Niveau le compte",
 			"unavailable": "Indisponible"
 		},

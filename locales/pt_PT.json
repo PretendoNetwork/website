@@ -48,7 +48,6 @@
 		},
 		"settings": {
 			"upgrade": "Aprimorar conta",
-			"downloadFiles": "Descarregarr ficheiros de conta",
 			"settingCards": {
 				"gender": "Gênero",
 				"newsletterPrompt": "Receba atualizações do projeto via e-mail (pode desinscrever-se a qualquer momento)",
@@ -81,7 +80,6 @@
 				"no_newsletter_notice": "Notícias não estão disponíveis no momento. Volte novamente depois",
 				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do utilizador não está disponível no momento. Atualize as configurações do utilizador do seu console de jogos vinculado"
 			},
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível"
 		},
 		"banned": "Banido",

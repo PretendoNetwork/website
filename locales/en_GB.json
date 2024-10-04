@@ -344,8 +344,6 @@
 			"password": "Password"
 		},
 		"settings": {
-			"downloadFiles": "Download account files",
-			"downloadFilesDescription": "(will not work on Nintendo Network)",
 			"upgrade": "Upgrade account",
 			"unavailable": "Unavailable",
 			"settingCards": {

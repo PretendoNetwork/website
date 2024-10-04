@@ -161,8 +161,6 @@
 			"email": "Пошта"
 		},
 		"settings": {
-			"downloadFiles": "Аккаунтының ақпаратты жүктеу",
-			"downloadFilesDescription": "(Nintendo Network-пен жұмыс істемейді)",
 			"upgrade": "Аккаунтты жақсарту",
 			"unavailable": "Қолжетімсіз",
 			"settingCards": {

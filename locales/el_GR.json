@@ -117,9 +117,7 @@
 				"noDiscordLinked": "Δεν υπάρχει συνδεδεμένος λογαριασμός Discord",
 				"linkDiscord": "Σύνδεση λογαριασμού Discord"
 			},
-			"downloadFiles": "Κατέβασε τα στοιχεία του λογαριασμού σου",
 			"unavailable": "Μη διαθέσιμο",
-			"downloadFilesDescription": "(δεν θα δουλέψει στο Nintendo Network)",
 			"upgrade": "Αναβάθμιση λογαριασμού"
 		},
 		"loginForm": {

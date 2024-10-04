@@ -167,8 +167,6 @@
 			"registerPrompt": "Non hai un account?"
 		},
 		"settings": {
-			"downloadFilesDescription": "(non funzioneranno su Nintendo Network)",
-			"downloadFiles": "Scarica file dell'account",
 			"settingCards": {
 				"profile": "Profilo",
 				"nickname": "Nickname",
