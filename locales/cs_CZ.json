@@ -34,7 +34,7 @@
 		"title": "O nás",
 		"paragraphs": [
 			"Pretendo je open-source projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí legálního reverse engineeringu.",
-			"Protože jsou naše služby svobodný a open-source software, bude možné je nadále provozovat i po ukončení provozu Nintendo Network."
+			"Jelikož jsou naše služby svobodný a open-source software, nehrozí, že budou náhle ukončeny."
 		]
 	},
 	"credits": {
@@ -57,7 +57,7 @@
 			},
 			{
 				"question": "Jak začnu s používáním Pretenda?",
-				"answer": "Pretendo v současné době není ve stavu, který by byl připraven pro veřejné použití. Nicméně, až nastane čas, Pretendo budete moct použít spuštěním našeho homebrew nástroje na Vašem zařízení."
+				"answer": "Pokud chcete začít používat Pretendo Network má 3DS, Wii U nebo jejich emulátorech, navštivte náš <a href=\"/docs/install\">návod k nastavení</a>!"
 			},
 			{
 				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář, zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Pretendo podporuje jakýkoli klient, který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se to mělo v budoucnu změnit. Mikage, emulátor 3DS pro mobilní zařízení, by mohl podporu poskytnout v budoucnu, tohle ale není jisté."
+				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
 			},
 			{
 				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban na Pretendo?",
@@ -77,7 +77,14 @@
 			},
 			{
 				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
-				"answer": "Ano, Vaše zařízení musí být modifikováno; na Wii U budete potřebovat pouze přístup k Homebrew Launcher (t.j. Haxchi, Coldboot Haxchi nebo exploit s webovým prohlížečem), informace pro připojení z 3DS jsou v přípravě."
+				"answer": "Pro nejlepší výsledek budete svou konzoli muset modifikovat; s Aroma na Wii U a Luma3DS na 3DS. Nicméně, na Wii U je dostupná metoda SSSL, která, byť s omezenou funkcionalitou, nabízí připojení bez modifikací. Pro podrobnosti navštivte <a href=\"/docs/install\">návod k nastavení</a>."
+			},
+			{
+				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
+				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+			},
+			{
+				"question": "Můžu na Pretendu používat mody a cheaty?"
 			}
 		],
 		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
