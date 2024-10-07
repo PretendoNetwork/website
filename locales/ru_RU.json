@@ -149,7 +149,6 @@
 			"forgotPassword": "Забыли пароль?"
 		},
 		"settings": {
-			"downloadFilesDescription": "(не будут работать в Nintendo Network)",
 			"settingCards": {
 				"profile": "Профиль",
 				"timezone": "Часовой пояс",
@@ -182,7 +181,6 @@
 				"no_edit_from_dashboard": "Изменение настроек PNID на данный момент невозможна. Пожалуйста, обновите данные о пользователе с привязанной игровой консоли",
 				"newsletter": "Газета"
 			},
-			"downloadFiles": "Скачать данные учётной записи",
 			"unavailable": "Недоступно",
 			"upgrade": "Улучшить учётную запись"
 		},

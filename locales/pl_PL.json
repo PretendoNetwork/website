@@ -232,8 +232,6 @@
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
 			},
-			"downloadFiles": "Pobierz pliki konta",
-			"downloadFilesDescription": "(nie będzie działać z Nintendo Network)",
 			"upgrade": "Ulepsz konto"
 		},
 		"accountLevel": [

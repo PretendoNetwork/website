@@ -6,7 +6,7 @@
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Account",
+		"account": "Profilo",
 		"accountWidget": {
 			"settings": "Impostazioni",
 			"logout": "Logout"
@@ -16,7 +16,7 @@
 			"captions": {
 				"credits": "Incontra il team",
 				"about": "Riguardo al progetto",
-				"faq": "Domande chieste frequentemente",
+				"faq": "Domande frequenti",
 				"blog": "I nostri ultimi aggiornamenti, sintetizzati",
 				"progress": "Controlla lo stato di avanzamento del progetto e gli obiettivi"
 			}
@@ -167,8 +167,6 @@
 			"registerPrompt": "Non hai un account?"
 		},
 		"settings": {
-			"downloadFilesDescription": "(non funzioneranno su Nintendo Network)",
-			"downloadFiles": "Scarica file dell'account",
 			"settingCards": {
 				"profile": "Profilo",
 				"nickname": "Nickname",

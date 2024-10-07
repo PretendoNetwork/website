@@ -185,8 +185,6 @@
 	},
 	"account": {
 		"settings": {
-			"downloadFiles": "アカウントファイルをダウンロード",
-			"downloadFilesDescription": "（ニンテンドーネットワークでは動作しません）",
 			"upgrade": "アカウントのアップグレード",
 			"unavailable": "利用できません",
 			"settingCards": {

@@ -137,8 +137,6 @@
 	},
 	"account": {
 		"settings": {
-			"downloadFilesDescription": "(لن يعمل على شبكة نينتندو)",
-			"downloadFiles": "تحميل ملفات الحساب",
 			"settingCards": {
 				"profile": "الملف الشخصي",
 				"nickname": "لقب",

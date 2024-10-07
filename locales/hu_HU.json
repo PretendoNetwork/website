@@ -151,7 +151,6 @@
 			"submit": "Elküld"
 		},
 		"settings": {
-			"downloadFiles": "Fiók fájlok letöltése",
 			"settingCards": {
 				"profile": "Profil",
 				"beta": "Béta",
@@ -184,7 +183,6 @@
 				"no_newsletter_notice": "A hírlevél jelenleg nem elérhető. Nézz vissza később!",
 				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
 			},
-			"downloadFilesDescription": "(nem fog működni a Nintendo Network-ön)",
 			"upgrade": "Fiók bővítése",
 			"unavailable": "Nem elérhető"
 		},

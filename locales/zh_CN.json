@@ -230,8 +230,6 @@
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
 				"no_edit_from_dashboard": "目前无法编辑在此页面修改 PNID 设置。请通过你的游戏设备修改"
 			},
-			"downloadFiles": "下载账号文件",
-			"downloadFilesDescription": "（无法在任天堂网络上使用）",
 			"upgrade": "升级账号",
 			"unavailable": "无法获得"
 		},

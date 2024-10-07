@@ -135,10 +135,8 @@
 				"connectedToDiscord": "Discord'a bu hesap ile bağlanıldı",
 				"discord": "Discord"
 			},
-			"downloadFiles": "Hesap dosyalarını indir",
 			"upgrade": "Hesabı yükselt",
-			"unavailable": "Mevcut değil",
-			"downloadFilesDescription": "(Nintendo Network'te çalışmayacak)"
+			"unavailable": "Mevcut değil"
 		},
 		"loginForm": {
 			"forgotPassword": "Şifreni mi unuttun?",

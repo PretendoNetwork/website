@@ -230,8 +230,6 @@
 				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelve a intentarlo más tarde",
 				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
-			"downloadFiles": "Descargar datos de cuenta",
-			"downloadFilesDescription": "(no funcionara en Nintendo Network)",
 			"upgrade": "Subir de rango",
 			"unavailable": "No disponible"
 		},

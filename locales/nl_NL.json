@@ -185,7 +185,6 @@
 			"loginPrompt": "Heb je al een account?"
 		},
 		"settings": {
-			"downloadFiles": "Download account bestanden",
 			"upgrade": "Account upgraden",
 			"settingCards": {
 				"nickname": "Bijnaam",
@@ -219,7 +218,6 @@
 				"no_newsletter_notice": "Nieuwsbrief is momenteel niet beschikbaar. Kom later weer terug",
 				"no_edit_from_dashboard": "Het aanpassen van PNID instellingen via het gebruikers dashboard is momenteel niet mogelijk. Pas de gebruikers instellingen aan via je gelinkte game console"
 			},
-			"downloadFilesDescription": "(werkt niet op Nintendo Network)",
 			"unavailable": "Niet beschikbaar"
 		},
 		"accountLevel": [
