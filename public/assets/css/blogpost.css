@@ -196,6 +196,17 @@ header {
 	margin-bottom: 30px;
 }
 
+@media screen and (min-width: 901px) {
+	.blog-card h1,
+	.blog-card h2,
+	.blog-card h3,
+	.blog-card h4,
+	.blog-card h5,
+	.blog-card h6 {
+		scroll-margin-top: 110px;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.blog-card {
 		padding: 40px;
