@@ -62,11 +62,11 @@
 				"answer": "Nein. Viele der Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet), deshalb können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
-				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
+				"question": "Wann werdet ihr neue Spiele hinzufügen?",
 				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
 			},
 			{
-				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
+				"question": "Funktioniert Pretendo auch auf Cemu oder anderen Emulatoren?",
 				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalb kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und die Nichteinhaltung dieser kann zu einem Bann führen."
 			},
 			{
