@@ -131,7 +131,9 @@
 			{
 				"caption": "Développement serveur et web"
 			},
-			{},
+			{
+				"caption": "DevOps et travail de la communauté"
+			},
 			{
 				"caption": "Développement serveur et optimisations"
 			},
