@@ -150,12 +150,13 @@
 				"caption": "Rotations Splatoon et recherches"
 			},
 			{
-				"name": "Contributeurs GitHub"
+				"name": "Contributeurs GitHub",
+				"caption": "Localisation et autres contributions"
 			}
 		]
 	},
 	"discordJoin": {
-		"title": "Tiens-toi à jour",
+		"title": "Rejoignez-nous !",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
 			"text": "Recevez des mises à jour en temps réel",
