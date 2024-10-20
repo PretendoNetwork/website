@@ -34,7 +34,7 @@
 		"title": "À propos de nous",
 		"paragraphs": [
 			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
-			"Puisque nos services seront à la fois gratuits et open source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
+			"Puisque nos services sont à la fois gratuits et open source, ils existeront longtemps."
 		]
 	},
 	"progress": {
@@ -55,19 +55,19 @@
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
-				"answer": "L'état actuel de Pretendo Network ne permet pas un accès au public. Mais dès lors que sa stabilité sera établie, vous n'aurez qu'à exécuter notre patch sur votre console pour vous y connecter."
+				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez vous référer à la <a href=\"/docs/install\">documentation</a>!"
 			},
 			{
 				"question": "Savez-vous quand tel service/fonctionnalité sera prêt ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
-				"question": "Pretendo fonctionne-t-il sur Cemu/émulateurs ?",
+				"question": "Quand d'autres jeux seront-ils ajoutés ?",
 				"answer": "Pretendo supporte n'importe quel client qui peut interagir avec le Nintendo Network. Actuellement, le seul émulateur avec cette fonctionnalité est Cemu. Cemu 2.0 supporte officiellement Pretendo dans les paramètres de votre compte dans l'émulateur. Pour plus d'informations sur l'utilisation de Cemu, visitez <a href=\"https://pretendo.network/docs/install/cemu\">la documentation</a>.<br> Citra ne supporte pas véritablement le jeu en ligne et ne fonctionne donc pas Pretendo, et l'émulateur ne semble pas présenter de signes d'un support prochain. Mikage, un émulateur 3DS pour appareils mobiles, sera peut-être compatible dans le futur, néanmoins cela reste incertain."
 			},
 			{
-				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
-				"answer": "Nous n'aurons pas accès aux bannissements du Nintendo Network, donc personne ne sera banni de nos serveurs dans un premier temps. En revanche, il y aura des règles à suivre lors de l'utilisation de nos services et le non-respect de ces règles pourrait entraîner des bannissements."
+				"question": "Pretendo fonctionne-t-il sur Cemu / émulateur ?",
+				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'information sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielle ou de procédures d'installation pour l'instant. Le build le plus récent de Citra ne prend pas en charge Pretendo."
 			},
 			{
 				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
@@ -75,7 +75,11 @@
 			},
 			{
 				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
-				"answer": "Oui, la modification de votre console est fondamentale. Mais rassurez-vous, ce n'est pas si complexe que ça ! Sur Wii U, par exemple, un simple accès au Homebrew Launcher suffit ! (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
+				"answer": "Pour la meilleure expérience possible sur console, Vous aurez besoin de modifier le système de celle-ci — par exemple, grâce à Aroma pour la Wii U ou Luma3DS pour la 3DS. Cependant, avec la Wii U, il est possible d'accéder à Pretendo sans modification, mais avec des fonctionnalités limitées. Voir <a href=\"/docs/install\">la documentation</a> pour plus de détails."
+			},
+			{
+				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban.",
+				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?"
 			}
 		]
 	},
