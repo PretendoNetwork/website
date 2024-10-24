@@ -110,7 +110,10 @@
 		"text": "Rencontrez l'équipe derrière le projet",
 		"people": [
 			{
-				"caption": "Maître du projet, développeur en chef"
+				"caption": "Maître du projet, développeur en chef",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"caption": "Recherche et développement (Miiverse)"
@@ -120,7 +123,8 @@
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
+				"github": "https://github.com/SuperMarioDaBom",
+				"caption": "Recherche sur les systèmes et architecture du serveur"
 			},
 			{
 				"name": "pinklimes",
@@ -132,7 +136,9 @@
 			{
 				"caption": "Développement serveur et web"
 			},
-			{},
+			{
+				"caption": "DevOps et travail de la communauté"
+			},
 			{
 				"caption": "Développement serveur et optimisations"
 			},
@@ -149,7 +155,9 @@
 				"name": "Contributeurs GitHub",
 				"caption": "Localisations et autres contributions"
 			},
-			{},
+			{
+				"caption": "Développement de la bibliothèque crunch"
+			},
 			{},
 			{},
 			{},
