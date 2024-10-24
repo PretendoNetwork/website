@@ -99,11 +99,163 @@
 	},
 	"credits": {
 		"title": "Equipo",
-		"text": "Conoce al equipo tras el proyecto"
+		"text": "Conoce al equipo tras el proyecto",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Dueño del proyecto y desarrollador principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Investigación y desarrollo de Miiverse",
+				"picture": "https://github.com/caramelkat.png"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"caption": "Investigación de Wii U y desarrollo de parches"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"name": "SuperMarioDaBom",
+				"caption": "Investigación de sistemas y arquitectura del servidor",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Desarrollo web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Investigación de sistemas y desarrollo del servidor",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"caption": "Conservacionista y arquitectura del servidor",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Investigación de sistemas y desarrollo del servidor",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Desarrollo de web y servidor",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps y trabajo comunitario",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "Desarrollo y optimización de servidor",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale",
+				"name": "wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Desarrollo e investigación de parches en 3DS",
+				"github": "https://github.com/TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Agradecimientos especiales",
-		"text": "Sin ellos, Pretendo no sería lo que es hoy."
+		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
+		"people": [
+			{
+				"name": "Contribuidores en GitHub",
+				"caption": "Traducciones y otras contribuciones",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"picture": "https://github.com/superwhiskers.png",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"github": "https://github.com/Stary2001",
+				"caption": "Desarrollo en 3DS y disección en NEX",
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png"
+			},
+			{
+				"caption": "Intercambio de información de Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub",
+				"name": "rverse"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Investigación de estructuras de datos de Nintendo",
+				"special": "Agradecimientos especiales",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Iconos del Editor Mii y reacciones de Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Investigación de consolas y servidores de juegos",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Desarrollo de parches en Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22",
+				"name": "Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Mantente al día",
