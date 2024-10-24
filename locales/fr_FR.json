@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Serveurs de jeux",
 		"title": "Recréés",
-		"text": "Pretendo est une alternative gratuite et open source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels",
+		"text": "Pretendo est une alternative gratuite et open source aux serveurs Nintendo pour la 3DS et la Wii U qui permet à tout utilisateur d'accéder aux services en ligne, y compris après l'arrêt des serveurs officiels",
 		"buttons": {
 			"readMore": "En savoir plus"
 		}
@@ -82,7 +82,8 @@
 				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?"
 			},
 			{
-				"question": "Puis-je utiliser des cheats ou des mods en ligne avec Pretendo ?"
+				"question": "Puis-je utiliser des cheats ou des mods en ligne avec Pretendo ?",
+				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu des autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles)."
 			}
 		]
 	},
@@ -108,11 +109,23 @@
 		"title": "L'équipe",
 		"text": "Rencontrez l'équipe derrière le projet",
 		"people": [
-			{},
-			{},
-			{},
-			{},
-			{},
+			{
+				"caption": "Maître du projet, développeur en chef"
+			},
+			{
+				"caption": "Recherche et développement (Miiverse)"
+			},
+			{
+				"caption": "Recherche et développement de patchs (Wii U)"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Développement web"
+			},
 			{},
 			{},
 			{},
@@ -122,6 +135,9 @@
 			{},
 			{
 				"caption": "Développement serveur et optimisations"
+			},
+			{
+				"caption": "Recherche et développement de patchs (3DS)"
 			}
 		]
 	},
