@@ -212,7 +212,7 @@
 				"timezone": "시간대",
 				"serverEnv": "서버 환경",
 				"userSettings": "사용자 설정",
-				"birthDate": "생년월일",
+				"birthDate": "생일",
 				"beta": "베타",
 				"production": "프로덕션",
 				"passwordPrompt": "Cemu 파일을 다운받으려면 PNID 비밀번호를 입력하세요",
