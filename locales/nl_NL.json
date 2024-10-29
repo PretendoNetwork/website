@@ -66,8 +66,8 @@
 				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu. Momenteel ondersteunt Pretendo Cemu niet."
 			},
 			{
-				"question": "Als ik van Nintendo Network gebanned ben, blijf ik dan gebanned op Pretendo?",
-				"answer": "Nee. We hebben geen toegang tot de bans van Nintendo Network, dus je zal niet direct gebanned zijn op onze dienst. Echter zullen wij wel regels hebben bij het gebruik van onze diensten. Als je deze breekt, zal je gebanned worden."
+				"question": "Werkt Pretendo op Cemu/emulators?",
+				"answer": "Cemu 2.1 ondersteunt Pretendo officieel onder uw netwerkaccountopties in de emulator. Voor informatie over hoe u aan de slag kunt met Cemu, bekijkt u de <a href=\"https://pretendo.network/docs/install/cemu\">documentatie</a>.<br>Sommige 3DS-emulators of forks ondersteunen ons mogelijk, maar we hebben op dit moment geen officiële aanbevelingen of installatie-instructies. De laatste builds van Citra ondersteunen Pretendo niet."
 			},
 			{
 				"question": "Gaat Pretendo ook de Wii of Switch ondersteunen?",
@@ -75,7 +75,11 @@
 			},
 			{
 				"question": "Heb ik hacks nodig om te verbinden met Pretendo?",
-				"answer": "ja, je zal inderdaad je apparaat moeten hacken. Op de Wii U heb je enkel de Homebrew launcher (d.m.v bijvoorbeeld Haxchi, Coldboot Haxchi, of zelfs de web browser exploit) nodig. Over de 3DS plaatsen we in de toekomst meer informatie."
+				"answer": "Voor de beste ervaring op consoles moet je je systeem hacken - specifiek Aroma voor Wii U en Luma3DS voor 3DS. Op Wii U is de hackless SSSL-methode echter ook beschikbaar met beperkte functionaliteit. Zie onze <a href=\"/docs/install\">installatie-instructies</a> voor meer informatie."
+			},
+			{
+				"answer": "We hebben geen toegang tot de bans van Nintendo Network, dus niet alle Nintendo Network-gebruikers worden verbannen. We hebben echter regels die we moeten volgen bij het gebruik van de service en het niet naleven van deze regels kan resulteren in een ban.",
+				"question": "Als ik verbannen word op Nintendo Network, blijf ik dan verbannen als ik Pretendo gebruik?"
 			}
 		]
 	},
