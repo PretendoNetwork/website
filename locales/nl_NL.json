@@ -85,7 +85,12 @@
 	},
 	"credits": {
 		"title": "Het team",
-		"text": "Ontmoet het team achter het project"
+		"text": "Ontmoet het team achter het project",
+		"people": [
+			{
+				"caption": "Eigenaar en hoofdontwikkelaar"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
