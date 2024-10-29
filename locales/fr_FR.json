@@ -80,6 +80,9 @@
 			{
 				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban.",
 				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?"
+			},
+			{
+				"question": "Puis-je utiliser des cheats ou des mods en ligne avec Pretendo ?"
 			}
 		]
 	},
@@ -103,11 +106,7 @@
 	},
 	"credits": {
 		"title": "L'équipe",
-		"text": "Rencontrez l'équipe derrière le projet"
-	},
-	"specialThanks": {
-		"title": "Remerciements spéciaux",
-		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
+		"text": "Rencontrez l'équipe derrière le projet",
 		"people": [
 			{},
 			{},
@@ -117,9 +116,35 @@
 			{},
 			{},
 			{},
+			{
+				"caption": "Développement serveur et web"
+			},
+			{},
+			{
+				"caption": "Développement serveur et optimisations"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Remerciements spéciaux",
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
+		"people": [
+			{
+				"name": "Contributeurs GitHub",
+				"caption": "Localisations et autres contributions"
+			},
 			{},
 			{},
 			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{
+				"caption": "Architecture du serveur"
+			},
 			{},
 			{
 				"caption": "Rotations Splatoon et recherches"
