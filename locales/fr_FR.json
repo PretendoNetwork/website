@@ -16,7 +16,7 @@
 			"captions": {
 				"about": "À propos du projet",
 				"blog": "Nos dernières mises à jour, en condensé",
-				"progress": "Vérifier l'avancement et les objectifs du projet",
+				"progress": "Vérifiez l'avancement et les objectifs du projet",
 				"credits": "Rencontrez l'équipe",
 				"faq": "Questions fréquemment posées"
 			}
@@ -58,7 +58,7 @@
 				"answer": "L'état actuel de Pretendo Network ne permet pas un accès au public. Mais dès lors que sa stabilité sera établie, vous n'aurez qu'à exécuter notre patch sur votre console pour vous y connecter."
 			},
 			{
-				"question": "Savez-vous quand le service et toutes ses fonctionnalités seront prêts ?",
+				"question": "Savez-vous quand tel service/fonctionnalité sera prêt ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
