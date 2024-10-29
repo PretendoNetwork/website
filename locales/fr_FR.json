@@ -103,7 +103,27 @@
 	},
 	"specialThanks": {
 		"title": "Remerciements spéciaux",
-		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui."
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
+		"people": [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{
+				"caption": "Rotations Splatoon et recherches"
+			},
+			{
+				"name": "Contributeurs GitHub"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Tiens-toi à jour",
@@ -276,5 +296,8 @@
 		"cancel": "Annuler",
 		"confirm": "Confirmer",
 		"close": "Fermer"
+	},
+	"notfound": {
+		"description": "Oups! Nous n'arrivons pas à trouver cette page."
 	}
 }
