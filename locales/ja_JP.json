@@ -14,10 +14,10 @@
 		},
 		"dropdown": {
 			"captions": {
-				"credits": "チームの紹介",
-				"about": "プロジェクトについて",
+				"credits": "チームをご紹介します",
+				"about": "このプロジェクトについて",
 				"blog": "最新のアップデート（簡易版）",
-				"progress": "プロジェクトの進行状況と目標をチェック",
+				"progress": "プロジェクトの進行状況と目的を確認",
 				"faq": "よくある質問"
 			}
 		}
@@ -33,7 +33,7 @@
 	"aboutUs": {
 		"title": "Pretendo について",
 		"paragraphs": [
-			"クリーンルーム設計を用いた開発体制で、3DSとWii Uのニンテンドーネットワークをつくりなおすことを目的としたオープンソースのプロジェクト、それがPretendoです。",
+			"Pretendoは、公式のものに代わって3DSとWii Uのニンテンドーネットワークをつくることを目的としたオープンソースのプロジェクトです。",
 			"Pretendo のサービスは無料のオープンソースであり、ニンテンドーネットワークが終了してからも継続して利用することができます。"
 		]
 	},
@@ -99,11 +99,44 @@
 	},
 	"credits": {
 		"title": "開発チーム",
-		"text": "プロジェクトを支えるチームの紹介"
+		"text": "プロジェクトを支えるチームの紹介",
+		"people": [
+			{
+				"caption": "プロジェクトオーナーおよび主な開発者"
+			},
+			{},
+			{
+				"caption": "Wii Uの研究、パッチの開発"
+			},
+			{},
+			{
+				"caption": "Webの開発"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "スペシャルサンクス",
-		"text": "Pretendoのいまの姿を作り上げた方たちです。"
+		"text": "Pretendoのいまの姿を作り上げた方たちです。",
+		"people": [
+			{},
+			{},
+			{},
+			{},
+			{
+				"special": "スペシャルサンクス"
+			},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{
+				"caption": "翻訳とその他の貢献"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "最新情報を入手する",
@@ -200,7 +233,7 @@
 				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからログアウトされます。",
 				"signInHistory": "ログイン履歴",
 				"fullSignInHistory": "ログイン履歴をすべて表示する",
-				"connectedToDiscord": "Discord に接続済み",
+				"connectedToDiscord": "Discord に連携済み:",
 				"newsletterPrompt": "プロジェクトの最新情報をメールで受け取る (いつでも配信停止できます)",
 				"passwordPrompt": "Cemu ファイルをダウンロードするには、PNID パスワードを入力してください",
 				"no_edit_from_dashboard": "現在、WebサイトからのPNID設定の編集には対応していません。ログインしているゲーム機から設定を編集してください。",
@@ -210,12 +243,12 @@
 				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへアクセスできます。",
 				"newsletter": "ニュースレター",
 				"discord": "Discord",
-				"noDiscordLinked": "Discord アカウントがリンクされていません。",
+				"noDiscordLinked": "Discord アカウントが連携されていません。",
 				"birthDate": "生年月日",
 				"serverEnv": "サーバー環境",
 				"otherSettings": "その他の設定",
-				"removeDiscord": "Discord アカウントを削除する",
-				"linkDiscord": "Discordアカウントをリンクする",
+				"removeDiscord": "Discord アカウントの連携を解除",
+				"linkDiscord": "Discordアカウントを連携する",
 				"no_signins_notice": "ログイン履歴は現在追跡されていません。後でもう一度ご確認ください。",
 				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度ご確認ください。"
 			}
@@ -276,5 +309,8 @@
 		"cancel": "キャンセル",
 		"confirm": "確認",
 		"close": "閉じる"
+	},
+	"notfound": {
+		"description": "おっと！このページは見つかりません。"
 	}
 }

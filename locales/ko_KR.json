@@ -24,7 +24,7 @@
 	},
 	"hero": {
 		"subtitle": "게임 서버",
-		"title": "재창조",
+		"title": "게임 서버",
 		"text": "Pretendo는 무료이며 3DS와 Wii U를 위한 Nintendo의 서버의 오픈 소스 대체제이고, 원래 서버가 닫힌 된 후에도 모두를 위해 온라인 연결을 제공합니다",
 		"buttons": {
 			"readMore": "더 읽어보기"
@@ -212,7 +212,7 @@
 				"timezone": "시간대",
 				"serverEnv": "서버 환경",
 				"userSettings": "사용자 설정",
-				"birthDate": "생년월일",
+				"birthDate": "생일",
 				"beta": "베타",
 				"production": "프로덕션",
 				"passwordPrompt": "Cemu 파일을 다운받으려면 PNID 비밀번호를 입력하세요",
