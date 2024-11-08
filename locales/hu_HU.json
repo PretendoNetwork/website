@@ -51,7 +51,7 @@
 			},
 			{
 				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo-n, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
-				"question": "Müködik a mostani NNID-m a Pretendón?"
+				"question": "Működik a mostani NNID-m a Pretendón?"
 			},
 			{
 				"question": "Hogyan használhatom a Pretendo-t?",
@@ -63,18 +63,18 @@
 			},
 			{
 				"question": "Mikor adtok hozzá további játékokat?",
-				"answer": "A Pretendo támogat minden klienst ami képes kommunikálni a Nintendo Network-kel. Jelenleg egy emulátor van ezzel a funkcionalitással a Cemu. A Cemu 2.0 hivatalosan támogatja a Pretendo-t a hálózati fiók opciói között az emulátornak. Információkért arról, hogy hogyan is kezdj hozzá a Cemu használatához, tekints meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>. A Citra nem támogatja a valódi hálózati játékot, így nem működik együtt a Pretendo-val, és egyáltalán nem mutatja jeleit a valódi online támogatásnak. A Mikage, egy 3DS emulátor mobil eszközökre talán biztosít majd támogatást a jövőben, de ez távolról sem biztos."
+				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Megakarjuk adni a legjobb élményt mielőtt egy új játékra megyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
 				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
-				"answer": "Nincs hozzáférésünk a Nintendo Network banjaihoz és a felhasználók nem kerülnek bannolásra a szolgáltatásunkból. Azonban vannak szabályaink amit követni kell a szolgáltatás használatakor, és az ezeknek nem megfelelés eredményezhet ban-t."
+				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért hogyan kezdj bele a Cemu-val, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy forkja is lehet hogy támogat minket, de nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk még. A Citra teljes verziója nem támogatja a Pretendo-t."
 			},
 			{
 				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
 				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
 			},
 			{
-				"answer": "Igen, hack-elned kell az eszközödet a csatlakozáshoz; azonban a Wii U-n csak a Homebrew Launcher hozzáférésre van szükséged(pl. Haxchi, Coldboot Haxchi, és a web böngésző exploit). A 3DS csatlakozásáról az információ később érkezik.",
+				"answer": "A legjobb élményért a konzolokon, kell hackelned kell a konzolt - pontosan Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
 				"question": "Szükségem van hack-re a csatlakozáshoz?"
 			},
 			{
