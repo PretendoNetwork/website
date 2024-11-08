@@ -51,7 +51,7 @@
 			},
 			{
 				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo-n, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
-				"question": "Fog a meglévő NNID-m működni a Pretendo-n?"
+				"question": "Müködik a mostani NNID-m a Pretendón?"
 			},
 			{
 				"question": "Hogyan használhatom a Pretendo-t?",
@@ -99,7 +99,20 @@
 	},
 	"credits": {
 		"title": "A csapat",
-		"text": "Ismerd meg a csapatot a projekt mögött"
+		"text": "Ismerd meg a csapatot a projekt mögött",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"github": "https://github.com/jonbarrow",
+				"picture": "https://github.com/jonbarrow.png"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse kutató és fejlesztő"
+			}
+		]
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
