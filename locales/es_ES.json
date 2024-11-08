@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "¿Cómo uso Pretendo?",
-				"answer": "Pretendo no está actualmente en un estado adecuado para el uso público. Sin embargo, en cuanto esté listo podrás usar Pretendo simplemente cargando nuestro parcheador homebrew en tu consola."
+				"answer": "Para comenzar a utilizar Pretendo Network en 3DS, Wii U o emuladores, consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a>."
 			},
 			{
 				"question": "¿Sabéis cuándo determinada función/servicio estará listo/a?",
@@ -63,11 +63,11 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Pretendo es compatible con cualquier cliente que pueda interactuar con Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 es compatible de manera oficial con Pretendo en las opciones de cuenta en línea del emulador. Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no es compatible con el verdadero juego en línea por lo que no funciona con Pretendo, tampoco parece que vaya a ser compatible con el verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría hacerse compatible en el futuro, aunque esto aún no es seguro."
+				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-				"answer": "No tenemos acceso a los baneos de Nintendo Network, por lo que nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y su incumplimiento resultará en un ban."
+				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
 			},
 			{
 				"question": "¿Pretendo será compatible con la Wii/Switch?",
