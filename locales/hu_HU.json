@@ -78,11 +78,12 @@
 				"question": "Szükségem van hack-re a csatlakozáshoz?"
 			},
 			{
-				"answer": "Nincs hozzáférésünk a Nintendo hálózat bann listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
 				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?"
 			},
 			{
-				"question": "Lehet-e csalásokat vagy modokat online használni a Pretendóval?"
+				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?",
+				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása."
 			}
 		]
 	},
@@ -127,7 +128,7 @@
 				"github": "https://github.com/ashquarky"
 			},
 			{
-				"caption": "Rendszer kutató és szerver architektúra",
+				"caption": "Rendszer kutatás és szerver architektúra",
 				"github": "https://github.com/SuperMarioDaBom",
 				"name": "SuperMarioDaBom",
 				"picture": "https://github.com/supermariodabom.png"
@@ -153,7 +154,8 @@
 			{
 				"name": "DaniElectra",
 				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
+				"github": "https://github.com/DaniElectra",
+				"caption": "Rendszer kutatás és szerver fejlesztés"
 			},
 			{
 				"github": "https://github.com/hauntii",
@@ -380,7 +382,7 @@
 			},
 			{
 				"name": "GitHub hozzájárulók",
-				"caption": "Fordtások és egyéb hozzájárulások",
+				"caption": "Fordítások és egyéb hozzájárulások",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
 			}
