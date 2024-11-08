@@ -34,7 +34,7 @@
 		"title": "Rólunk",
 		"paragraphs": [
 			"A Pretendo egy nyílt forráskódú projekt, aminek célja újra előállítani a Nintendo Network-öt a 3DS és a Wii U számára tiszta visszafejtés technikát alkalmazva.",
-			"A szolgáltatásaink egyaránt ingyenesek és nyílt forráskódúak, sokáig létezhetnek a Nintendo Network elkerülhetetlen bezárását követően."
+			"Mivel a szolgáltatásaink egyaránt ingyenesek és nyílt forráskódúak, sokáig léteznek a jövőben."
 		]
 	},
 	"progress": {
@@ -55,18 +55,18 @@
 			},
 			{
 				"question": "Hogyan használhatom a Pretendo-t?",
-				"answer": "A Pretendo jelenleg még nem olyan állapotú, hogy alkalmas lenne a publikus használatra. Azonban ha egyszer kész lesz, akkor majd futtatni tudod a Pretendo-t egyszerűen a homebrew patcherünk futtatásával a konzolon."
+				"answer": "A Pretendo használatának elkezdéséhez 3DS-en, Wii U-n vagy emulátoron, kérjük tekintsd meg a <a href=\"/docs/install\">telepítési útmutatónkat</a>!"
 			},
 			{
 				"question": "Tudjuk mikor lesz a funkció/szolgáltatás kész?",
 				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo-nak függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
 			},
 			{
-				"question": "Működik a Pretendo Cemu-n/emulátorokon?",
+				"question": "Mikor adtok hozzá további játékokat?",
 				"answer": "A Pretendo támogat minden klienst ami képes kommunikálni a Nintendo Network-kel. Jelenleg egy emulátor van ezzel a funkcionalitással a Cemu. A Cemu 2.0 hivatalosan támogatja a Pretendo-t a hálózati fiók opciói között az emulátornak. Információkért arról, hogy hogyan is kezdj hozzá a Cemu használatához, tekints meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>. A Citra nem támogatja a valódi hálózati játékot, így nem működik együtt a Pretendo-val, és egyáltalán nem mutatja jeleit a valódi online támogatásnak. A Mikage, egy 3DS emulátor mobil eszközökre talán biztosít majd támogatást a jövőben, de ez távolról sem biztos."
 			},
 			{
-				"question": "Ha bannolt vagyok a Nintendo Network-ön, továbbra is bannolt maradok a Pretendo-n?",
+				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
 				"answer": "Nincs hozzáférésünk a Nintendo Network banjaihoz és a felhasználók nem kerülnek bannolásra a szolgáltatásunkból. Azonban vannak szabályaink amit követni kell a szolgáltatás használatakor, és az ezeknek nem megfelelés eredményezhet ban-t."
 			},
 			{
@@ -76,6 +76,13 @@
 			{
 				"answer": "Igen, hack-elned kell az eszközödet a csatlakozáshoz; azonban a Wii U-n csak a Homebrew Launcher hozzáférésre van szükséged(pl. Haxchi, Coldboot Haxchi, és a web böngésző exploit). A 3DS csatlakozásáról az információ később érkezik.",
 				"question": "Szükségem van hack-re a csatlakozáshoz?"
+			},
+			{
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat bann listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
+				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?"
+			},
+			{
+				"question": "Lehet-e csalásokat vagy modokat online használni a Pretendóval?"
 			}
 		]
 	},
@@ -104,13 +111,20 @@
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
 				"github": "https://github.com/jonbarrow",
-				"picture": "https://github.com/jonbarrow.png"
+				"picture": "https://github.com/jonbarrow.png",
+				"caption": "Project tulajdonos és fő fejlesztő"
 			},
 			{
 				"picture": "https://github.com/caramelkat.png",
 				"github": "https://github.com/CaramelKat",
 				"name": "Jemma (CaramelKat)",
 				"caption": "Miiverse kutató és fejlesztő"
+			},
+			{
+				"name": "quarky"
+			},
+			{
+				"caption": "Rendszer kutató és szerver architektúra"
 			}
 		]
 	},
