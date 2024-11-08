@@ -121,10 +121,36 @@
 				"caption": "Miiverse kutató és fejlesztő"
 			},
 			{
-				"name": "quarky"
+				"name": "quarky",
+				"caption": "Wii U kutató és patch fejlesztő",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
-				"caption": "Rendszer kutató és szerver architektúra"
+				"caption": "Rendszer kutató és szerver architektúra",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"name": "Pinklimes",
+				"caption": "Web fejlesztő",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Rendszer kutató és szerver fejlesztő",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy"
+			},
+			{
+				"name": "DaniElectra"
 			}
 		]
 	},
