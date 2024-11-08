@@ -62,11 +62,11 @@
 				"answer": "No. Muchos/as funciones/servicios de Pretendo son desarrolladas independientemente (por ejemplo, un desarrollador puede estar trabajando en Miiverse mientras otro se encarga de las Cuentas y los Amigos) y, por lo tanto, no podemos dar una ETA exacta de cuánto puede tardar en estar listo."
 			},
 			{
-				"question": "¿Pretendo funciona en Cemu/emuladores?",
+				"question": "¿Cuándo añadirán más juegos?",
 				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
 			},
 			{
-				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
+				"question": "¿Pretendo funciona en Cemu/emuladores?",
 				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
 			},
 			{
@@ -75,7 +75,10 @@
 			},
 			{
 				"question": "¿Necesitaré modificar mi consola para conectarme?",
-				"answer": "Sí, necesitas modificar tu consola para conectarte. Sin embargo, en Wii U solo necesitas acceso al Homebrew Launcher (p.e. Haxchi, Coldboot Haxchi, o el exploit web). La información sobre como conectarse con una 3DS llegará posteriormente."
+				"answer": "Para obtener la mejor experiencia en consolas necesitarás modificar tu sistema, especificamente Aroma en Wii U y Luma3DS en 3DS. No obstante, en Wii U, el metodo sin modificación SSSL también está disponible con funcionalidad limitada. Consulte nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
+			},
+			{
+				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?"
 			}
 		]
 	},
