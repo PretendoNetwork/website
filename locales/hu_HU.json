@@ -34,7 +34,7 @@
 		"title": "Rólunk",
 		"paragraphs": [
 			"A Pretendo egy nyílt forráskódú projekt, aminek célja újra előállítani a Nintendo Network-öt a 3DS és a Wii U számára tiszta visszafejtés technikát alkalmazva.",
-			"A szolgáltatásaink egyaránt ingyenesek és nyílt forráskódúak, sokáig létezhetnek a Nintendo Network elkerülhetetlen bezárását követően."
+			"Mivel a szolgáltatásaink egyaránt ingyenesek és nyílt forráskódúak, sokáig léteznek a jövőben."
 		]
 	},
 	"progress": {
@@ -51,31 +51,39 @@
 			},
 			{
 				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo-n, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
-				"question": "Fog a meglévő NNID-m működni a Pretendo-n?"
+				"question": "Működik a mostani NNID-m a Pretendón?"
 			},
 			{
 				"question": "Hogyan használhatom a Pretendo-t?",
-				"answer": "A Pretendo jelenleg még nem olyan állapotú, hogy alkalmas lenne a publikus használatra. Azonban ha egyszer kész lesz, akkor majd futtatni tudod a Pretendo-t egyszerűen a homebrew patcherünk futtatásával a konzolon."
+				"answer": "A Pretendo használatának elkezdéséhez 3DS-en, Wii U-n vagy emulátoron, kérjük tekintsd meg a <a href=\"/docs/install\">telepítési útmutatónkat</a>!"
 			},
 			{
 				"question": "Tudjuk mikor lesz a funkció/szolgáltatás kész?",
 				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo-nak függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
 			},
 			{
-				"question": "Működik a Pretendo Cemu-n/emulátorokon?",
-				"answer": "A Pretendo támogat minden klienst ami képes kommunikálni a Nintendo Network-kel. Jelenleg egy emulátor van ezzel a funkcionalitással a Cemu. A Cemu 2.0 hivatalosan támogatja a Pretendo-t a hálózati fiók opciói között az emulátornak. Információkért arról, hogy hogyan is kezdj hozzá a Cemu használatához, tekints meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>. A Citra nem támogatja a valódi hálózati játékot, így nem működik együtt a Pretendo-val, és egyáltalán nem mutatja jeleit a valódi online támogatásnak. A Mikage, egy 3DS emulátor mobil eszközökre talán biztosít majd támogatást a jövőben, de ez távolról sem biztos."
+				"question": "Mikor adtok hozzá további játékokat?",
+				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Megakarjuk adni a legjobb élményt mielőtt egy új játékra megyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
-				"question": "Ha bannolt vagyok a Nintendo Network-ön, továbbra is bannolt maradok a Pretendo-n?",
-				"answer": "Nincs hozzáférésünk a Nintendo Network banjaihoz és a felhasználók nem kerülnek bannolásra a szolgáltatásunkból. Azonban vannak szabályaink amit követni kell a szolgáltatás használatakor, és az ezeknek nem megfelelés eredményezhet ban-t."
+				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
+				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért hogyan kezdj bele a Cemu-val, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy forkja is lehet hogy támogat minket, de nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk még. A Citra teljes verziója nem támogatja a Pretendo-t."
 			},
 			{
 				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
 				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
 			},
 			{
-				"answer": "Igen, hack-elned kell az eszközödet a csatlakozáshoz; azonban a Wii U-n csak a Homebrew Launcher hozzáférésre van szükséged(pl. Haxchi, Coldboot Haxchi, és a web böngésző exploit). A 3DS csatlakozásáról az információ később érkezik.",
+				"answer": "A legjobb élményért a konzolokon, kell hackelned kell a konzolt - pontosan Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
 				"question": "Szükségem van hack-re a csatlakozáshoz?"
+			},
+			{
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
+				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?"
+			},
+			{
+				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?",
+				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása."
 			}
 		]
 	},
@@ -99,7 +107,81 @@
 	},
 	"credits": {
 		"title": "A csapat",
-		"text": "Ismerd meg a csapatot a projekt mögött"
+		"text": "Ismerd meg a csapatot a projekt mögött",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"github": "https://github.com/jonbarrow",
+				"picture": "https://github.com/jonbarrow.png",
+				"caption": "Project tulajdonos és fő fejlesztő"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse kutató és fejlesztő"
+			},
+			{
+				"name": "quarky",
+				"caption": "Wii U kutató és patch fejlesztő",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"caption": "Rendszer kutatás és szerver architektúra",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"name": "Pinklimes",
+				"caption": "Web fejlesztő",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Rendszer kutató és szerver fejlesztő",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy",
+				"caption": "Prezervácionista és szerver architektúra"
+			},
+			{
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra",
+				"caption": "Rendszer kutatás és szerver fejlesztés"
+			},
+			{
+				"github": "https://github.com/hauntii",
+				"name": "niko",
+				"caption": "Web és szerver fejlesztés",
+				"picture": "https://github.com/hauntii.png"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps és közösségi munka",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Szerver fejlesztés és optimalizáció",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "3DS patch fejlesztés és kutatás",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -111,7 +193,8 @@
 			"Super Mario World 2 - Yoshi's Island's főcím zenéje abszolút bop, és semmiképpen sem fogsz meggyőzni az ellenkezőjéről.",
 			"A kedvenc Nintendo Switch kiadásaim: a Nintendo Switch Online + Expansion Pack, a Nintendo Switch Online + Rumble Pak, a Nintendo Switch Online + Offline Play Pack, a Nintendo Switch Online + Yet Another Port Pack és a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Nagyon szeretted a Nintendo Wii U Virtual Console-t szóval visszahozzuk\" Pack. Tényleg elmondhatod, hogy a Nintendo figyel rád.",
 			"Az \"Ismered Ash-t, áldd meg a szívét, egész nap UwUzik.\" a déli kedves módja annak, hogy \"Ash uwuzik minden alkalommal, és ez nagyon furcsa és hülye, és azt kívánom, bárcsak ne”",
-			"Első videóm a csatornámon!! Már régóta szertem volna videókat készíteni, de a laptopom elég rosszul ment, és nem tudtam egyszerre futtatni a fraps-t, a skype-ot és a minecraftot. de most vége! informatika tanárom segítségével a laptopom sokkal jobban működik, és már tudok rögzíteni! remélem tetszeni fog és ha igen nyomj egy like-ot és iratkozz fel!!!"
+			"Első videóm a csatornámon!! Már régóta szertem volna videókat készíteni, de a laptopom elég rosszul ment, és nem tudtam egyszerre futtatni a fraps-t, a skype-ot és a minecraftot. de most vége! informatika tanárom segítségével a laptopom sokkal jobban működik, és már tudok rögzíteni! remélem tetszeni fog és ha igen nyomj egy like-ot és iratkozz fel!!!",
+			"Jónak tűnik nekem"
 		],
 		"socials": "Szociális",
 		"usefulLinks": "Hasznos linkek",
@@ -216,7 +299,94 @@
 	},
 	"specialThanks": {
 		"title": "Külön köszönet",
-		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van."
+		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van.",
+		"people": [
+			{
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHub hozzájárulók",
+				"caption": "Fordtások és egyéb hozzájárulások",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			},
+			{
+				"caption": "crunch library fejlesztés",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS fejlesztés és NEX darabokra szedés",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"caption": "Miiverse információ megosztás",
+				"picture": "https://github.com/rverseTeam.png",
+				"name": "rverse",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Különleges köszönet",
+				"caption": "Kutatás a Nintendo adatstruktúrákról",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikonok a Mii Editor-hoz és a Juxt reakciókhoz",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12",
+				"name": "Rambo6Glaz",
+				"caption": "Konzol kutatás és játék szerverek"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Wii U patch fejlesztés",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS patch készítő",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Szerver architektúra",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload",
+				"name": "binaryoverload",
+				"caption": "Szerver architektúra"
+			},
+			{
+				"caption": "Splatoon forgatások és kutatás",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22",
+				"name": "Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon forgatások és kutatás",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub hozzájárulók",
+				"caption": "Fordítások és egyéb hozzájárulások",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Maradj napra kész",
@@ -276,5 +446,8 @@
 		"cancel": "Mégsem",
 		"confirm": "Megerősít",
 		"close": "Bezár"
+	},
+	"notfound": {
+		"description": "Hoppá! Nem találjuk ezt az oldalt."
 	}
 }
