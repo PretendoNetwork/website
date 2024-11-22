@@ -195,7 +195,8 @@
 			},
 			{
 				"name": "Contributeurs GitHub",
-				"caption": "Localisations et autres contributions"
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 			}
 		]
 	},
