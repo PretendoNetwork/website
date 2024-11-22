@@ -76,6 +76,11 @@
 			{
 				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
 				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
+			},
+			{},
+			{
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
+				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
 			}
 		]
 	},
@@ -99,12 +104,13 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Triff das Team hinter dem Projekt",
+		"text": "Lerne das Team hinter dem Projekt kennen",
 		"people": [
 			{
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow",
-				"name": "Jonathan Barrow (jonbarrow)"
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Projektleiter und leitender Entwickler"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
@@ -120,12 +126,14 @@
 			{
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom"
+				"name": "SuperMarioDaBom",
+				"caption": "Systemforschung und Serverarchitektur"
 			},
 			{
 				"picture": "https://github.com/gitlimes.png",
 				"name": "pinklimes",
-				"github": "https://github.com/gitlimes"
+				"github": "https://github.com/gitlimes",
+				"caption": "Webentwicklung"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -145,27 +153,45 @@
 			{
 				"name": "niko",
 				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
+				"github": "https://github.com/hauntii",
+				"caption": "Web- und Serverentwicklung"
 			},
 			{
 				"name": "MatthewL246",
 				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
+				"github": "https://github.com/MatthewL246",
+				"caption": "DevOps und Community-Arbeit"
 			},
 			{
 				"name": "wolfendale",
 				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
+				"github": "https://github.com/wolfendale",
+				"caption": "Server-Entwicklung und Optimierungen"
 			},
 			{
 				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png"
+				"picture": "https://github.com/TraceEntertains.png",
+				"caption": "3DS Patch-Entwicklung und Forschung"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist."
+		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist.",
+		"people": [
+			{
+				"name": "GitHub-Mitwirkende"
+			},
+			{},
+			{},
+			{
+				"caption": "Miiverse-Informationsaustausch"
+			},
+			{
+				"special": "Besonderer Dank",
+				"caption": "Forschung zu Nintendo-Datenstrukturen"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
