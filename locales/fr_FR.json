@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "À Propos",
+		"about": "À propos",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -119,20 +119,26 @@
 				"caption": "Recherche et développement (Miiverse)"
 			},
 			{
-				"caption": "Recherche et développement de patchs (Wii U)"
+				"caption": "Recherche et développement de patchs Wii U"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Recherche sur les systèmes et architecture du serveur"
+				"caption": "Recherche sur les systèmes, architecture serveur"
 			},
 			{
 				"name": "pinklimes",
 				"caption": "Développement web"
 			},
-			{},
-			{},
-			{},
+			{
+				"caption": "Recherche sur les systèmes, développement serveur"
+			},
+			{
+				"caption": "Conservation, architecture serveur"
+			},
+			{
+				"caption": "Recherche sur les systèmes, développement serveur"
+			},
 			{
 				"caption": "Développement serveur et web"
 			},
@@ -158,18 +164,30 @@
 			{
 				"caption": "Développement de la bibliothèque crunch"
 			},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
+			{
+				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)"
+			},
 			{},
 			{},
 			{
-				"caption": "Architecture du serveur"
+				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt"
 			},
 			{},
+			{
+				"caption": "Développement de patch Wii U"
+			},
+			{
+				"caption": "Créateur de patch 3DS"
+			},
+			{
+				"caption": "Architecture serveur"
+			},
+			{
+				"caption": "Architecture du serveur"
+			},
+			{
+				"caption": "Recherches sur Splatoon et rotations de stages"
+			},
 			{
 				"caption": "Rotations Splatoon et recherches"
 			},
