@@ -116,42 +116,66 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Recherche et développement (Miiverse)"
+				"caption": "Recherche et développement (Miiverse)",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png"
 			},
 			{
-				"caption": "Recherche et développement de patchs Wii U"
+				"caption": "Recherche et développement de patchs Wii U",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Recherche sur les systèmes, architecture serveur"
+				"caption": "Recherche sur les systèmes, architecture serveur",
+				"name": "SuperMarioDaBom"
 			},
 			{
 				"name": "pinklimes",
-				"caption": "Développement web"
+				"caption": "Développement web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes.png"
 			},
 			{
-				"caption": "Recherche sur les systèmes, développement serveur"
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"name": "Shutterbug2000"
 			},
 			{
 				"caption": "Conservation, architecture serveur",
-				"name": "Billy"
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
-				"caption": "Recherche sur les systèmes, développement serveur"
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
 			},
 			{
 				"caption": "Développement serveur et web",
 				"name": "niko"
 			},
 			{
-				"caption": "DevOps et travail de la communauté"
+				"caption": "DevOps et travail de la communauté",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
 			},
 			{
-				"caption": "Développement serveur et optimisations"
+				"caption": "Développement serveur et optimisations",
+				"picture": "https://github.com/wolfendale.png",
+				"name": "wolfendale",
+				"github": "https://github.com/wolfendale"
 			},
 			{
-				"caption": "Recherche et développement de patchs (3DS)"
+				"caption": "Recherche et développement de patchs (3DS)",
+				"picture": "https://github.com/TraceEntertains.png",
+				"name": "TraceEntertains",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -161,42 +185,83 @@
 		"people": [
 			{
 				"name": "Contributeurs GitHub",
-				"caption": "Localisations et autres contributions"
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
 			{
-				"caption": "Développement de la bibliothèque crunch"
+				"caption": "Développement de la bibliothèque crunch",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
 			{
-				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)"
-			},
-			{},
-			{},
-			{
-				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt"
-			},
-			{},
-			{
-				"caption": "Développement de patch Wii U"
+				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png"
 			},
 			{
-				"caption": "Créateur de patch 3DS"
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
 			},
 			{
-				"caption": "Architecture serveur"
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay",
+				"name": "Kinnay"
 			},
 			{
-				"caption": "Architecture du serveur"
+				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
 			},
 			{
-				"caption": "Recherches sur Splatoon et rotations de stages"
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
-				"caption": "Rotations Splatoon et recherches"
+				"caption": "Développement de patch Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts"
+			},
+			{
+				"caption": "Créateur de patch 3DS",
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "Architecture serveur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs",
+				"name": "mrjvs"
+			},
+			{
+				"caption": "Architecture du serveur",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Recherches sur Splatoon et rotations de stages",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"caption": "Rotations Splatoon et recherches",
+				"name": "OatmealDome",
+				"github": "https://github.com/OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
 			},
 			{
 				"name": "Contributeurs GitHub",
 				"caption": "Localisations et autres contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
