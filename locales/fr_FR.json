@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
-				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez vous référer à la <a href=\"/docs/install\">documentation</a>!"
+				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
 				"question": "Savez-vous quand tel service/fonctionnalité sera prêt ?",
@@ -240,7 +240,7 @@
 				"name": "mrjvs"
 			},
 			{
-				"caption": "Architecture du serveur",
+				"caption": "Architecture serveur",
 				"name": "binaryoverload",
 				"picture": "https://github.com/binaryoverload.png",
 				"github": "https://github.com/binaryoverload"
