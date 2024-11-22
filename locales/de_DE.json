@@ -99,7 +99,69 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Triff das Team hinter dem Projekt"
+		"text": "Triff das Team hinter dem Projekt",
+		"people": [
+			{
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"caption": "Miiverse Analyse/Forschung und Entwicklung",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"name": "pinklimes",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
