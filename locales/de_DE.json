@@ -34,7 +34,7 @@
 		"title": "Über uns",
 		"paragraphs": [
 			"Pretendo ist ein Open-Source-Projekt, welches das Nintendo Network für den 3DS und die Wii U durch Clean-Room-Reverse-Engineering rekonstruiert.",
-			"Da unsere Dienste kostenlos und Open-Source sind, können diese auch nach der offiziellen Schließung des Nintendo Networks weiter existieren."
+			"Da unsere Dienste kostenlos und Open-Source sind, werden diese auch zukünftig weiterhin existieren."
 		]
 	},
 	"progress": {
@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Wie benutze ich Pretendo?",
-				"answer": "Pretendo ist aktuell nicht für die öffentliche Nutzung verfügbar. Sobald das Pretendo Network bereit ist, kannst du es einfach durch unseren Homebrew-Patcher auf deiner Konsole nutzen."
+				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>"
 			},
 			{
 				"question": "Weißt du, wann Funktion/Dienst bereit ist?",
@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Funktioniert Pretendo auch auf Cemu oder anderen Emulatoren?",
-				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalb kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und die Nichteinhaltung dieser kann zu einem Bann führen."
+				"answer": "Cemu 2.1 ist von Pretendo unterstützt. Dies kann man unter den Netztwerk/Account Einstellungen in Cemu 2.1 einstellen. Für mehr Informationen, wie man Cemu mit Pretendo Network nutzt, schauen sie sich den <a href=\"https://pretendo.network/docs/install/cemu\">Guide</a>an.<br> Manche 3DS Emulatoren oder \"Forks\" unterstützen vielleicht Pretendo, es gibt aber momentan keine offiziellen Empfehlungen oder Setup Guides. Die finalen Builds von Citra werden nicht unterstützt."
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
@@ -77,7 +77,9 @@
 				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
 				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
 			},
-			{},
+			{
+				"question": "Wenn ich auf dem Nintendo Network gebannt bin, heißt das auch das ich auf Pretendo gebannt bin?"
+			},
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
 				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
@@ -121,7 +123,8 @@
 			{
 				"name": "quarky",
 				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
+				"github": "https://github.com/ashquarky",
+				"caption": "Wii U Forschung und Patch-Entwicklung"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
@@ -138,17 +141,20 @@
 			{
 				"name": "Shutterbug2000",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Systemforschung und Server Entwicklung"
 			},
 			{
 				"name": "Billy",
 				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
+				"github": "https://github.com/InternalLoss",
+				"caption": "Erhaltung und Server-Architektur"
 			},
 			{
 				"name": "DaniElectra",
 				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
+				"github": "https://github.com/DaniElectra",
+				"caption": "Systemforschung und Server-Entwicklung"
 			},
 			{
 				"name": "niko",
@@ -171,7 +177,8 @@
 			{
 				"name": "TraceEntertains",
 				"picture": "https://github.com/TraceEntertains.png",
-				"caption": "3DS Patch-Entwicklung und Forschung"
+				"caption": "3DS Patch-Entwicklung und Forschung",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -180,16 +187,88 @@
 		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist.",
 		"people": [
 			{
-				"name": "GitHub-Mitwirkende"
+				"name": "GitHub-Mitwirkende",
+				"caption": "Übersetzungen und andere Beiträge",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
-			{},
-			{},
 			{
-				"caption": "Miiverse-Informationsaustausch"
+				"caption": "Crunch Library Entwicklung",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers",
+				"name": "superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png"
+			},
+			{
+				"caption": "Miiverse-Informationsaustausch",
+				"github": "https://twitter.com/rverseClub",
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png"
 			},
 			{
 				"special": "Besonderer Dank",
-				"caption": "Forschung zu Nintendo-Datenstrukturen"
+				"caption": "Forschung zu Nintendo-Datenstrukturen",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Symbole für dem Mii-Editor und Juxt-Reaktionen",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Konsolenforschung und Spiele-Server",
+				"github": "https://github.com/EpicUsername12",
+				"picture": "https://github.com/EpicUsername12.png"
+			},
+			{
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts",
+				"caption": "Wii U Patch-Entwicklung",
+				"picture": "https://github.com/GaryOderNichts.png"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS Patch-Ersteller",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Server-Architektur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Server-Architektur",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Spatoon-Rotations und Forschung",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon-Rotations und Forschung",
+				"github": "https://github.com/OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
+			},
+			{
+				"caption": "Lokalisierung und andere Beiträge",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"name": "GitHub-Beiträger",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -220,7 +299,8 @@
 			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
 			"So etwas wie \"Du kennst Ash, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
-			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!"
+			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!",
+			"Sieht gut für mich aus"
 		]
 	},
 	"progressPage": {
@@ -364,5 +444,8 @@
 		"cancel": "Abbrechen",
 		"confirm": "Bestätigen",
 		"close": "Schließen"
+	},
+	"notfound": {
+		"description": "Woops! Diese Seite konnte nicht gefunden werden."
 	}
 }
