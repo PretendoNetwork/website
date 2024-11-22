@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Wann werdet ihr neue Spiele hinzufügen?",
-				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
+				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der Dokumentation.Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
 			},
 			{
 				"question": "Funktioniert Pretendo auch auf Cemu oder anderen Emulatoren?",
