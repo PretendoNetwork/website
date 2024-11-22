@@ -134,13 +134,15 @@
 				"caption": "Recherche sur les systèmes, développement serveur"
 			},
 			{
-				"caption": "Conservation, architecture serveur"
+				"caption": "Conservation, architecture serveur",
+				"name": "Billy"
 			},
 			{
 				"caption": "Recherche sur les systèmes, développement serveur"
 			},
 			{
-				"caption": "Développement serveur et web"
+				"caption": "Développement serveur et web",
+				"name": "niko"
 			},
 			{
 				"caption": "DevOps et travail de la communauté"
