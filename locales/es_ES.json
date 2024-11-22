@@ -79,6 +79,9 @@
 			},
 			{
 				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?"
+			},
+			{
+				"question": "¿Puedo usar trucos o mods en línea con Pretendo?"
 			}
 		]
 	},
@@ -233,7 +236,8 @@
 			{
 				"name": "zaksabeast",
 				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
+				"github": "https://github.com/zaksabeast",
+				"caption": "Creador de parches 3DS"
 			},
 			{
 				"name": "mrjvs",
