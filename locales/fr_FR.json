@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "À Propos",
+		"about": "À propos",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Comment puis-je utiliser Pretendo ?",
-				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez vous référer à la <a href=\"/docs/install\">documentation</a>!"
+				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
 				"question": "Savez-vous quand tel service/fonctionnalité sera prêt ?",
@@ -116,34 +116,66 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Recherche et développement (Miiverse)"
+				"caption": "Recherche et développement (Miiverse)",
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png"
 			},
 			{
-				"caption": "Recherche et développement de patchs (Wii U)"
+				"caption": "Recherche et développement de patchs Wii U",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Recherche sur les systèmes et architecture du serveur"
+				"caption": "Recherche sur les systèmes, architecture serveur",
+				"name": "SuperMarioDaBom"
 			},
 			{
 				"name": "pinklimes",
-				"caption": "Développement web"
-			},
-			{},
-			{},
-			{},
-			{
-				"caption": "Développement serveur et web"
+				"caption": "Développement web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes.png"
 			},
 			{
-				"caption": "DevOps et travail de la communauté"
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"name": "Shutterbug2000"
 			},
 			{
-				"caption": "Développement serveur et optimisations"
+				"caption": "Conservation, architecture serveur",
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
-				"caption": "Recherche et développement de patchs (3DS)"
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"caption": "Développement serveur et web",
+				"name": "niko"
+			},
+			{
+				"caption": "DevOps et travail de la communauté",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "Développement serveur et optimisations",
+				"picture": "https://github.com/wolfendale.png",
+				"name": "wolfendale",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"caption": "Recherche et développement de patchs (3DS)",
+				"picture": "https://github.com/TraceEntertains.png",
+				"name": "TraceEntertains",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -153,29 +185,83 @@
 		"people": [
 			{
 				"name": "Contributeurs GitHub",
-				"caption": "Localisations et autres contributions"
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
 			{
-				"caption": "Développement de la bibliothèque crunch"
+				"caption": "Développement de la bibliothèque crunch",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
-			{},
 			{
-				"caption": "Architecture du serveur"
+				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png"
 			},
-			{},
 			{
-				"caption": "Rotations Splatoon et recherches"
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay",
+				"name": "Kinnay"
+			},
+			{
+				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"caption": "Développement de patch Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts"
+			},
+			{
+				"caption": "Créateur de patch 3DS",
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "Architecture serveur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs",
+				"name": "mrjvs"
+			},
+			{
+				"caption": "Architecture serveur",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Recherches sur Splatoon et rotations de stages",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"caption": "Rotations Splatoon et recherches",
+				"name": "OatmealDome",
+				"github": "https://github.com/OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
 			},
 			{
 				"name": "Contributeurs GitHub",
-				"caption": "Localisations et autres contributions"
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -206,7 +292,8 @@
 			"La musique principale de Super Mario World 2 - Yoshi's Island est la meilleure musique du monde et tu ne peux pas changer mon avis.",
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
 			"\"Tu vois qui c'est Sasha ? C'est fou elle dit souvent UwU, tu trouves pas ?\" : c'est vraiment la plus douce des façons de dire \"Sasha dit H24 UwU, c'est trop chiant et chelou : à l'aide\". À tous ceux qui connaissent une Sasha... explicitez vos appels au secours, nan ?",
-			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !"
+			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !",
+			"Cela me semble bon"
 		]
 	},
 	"progressPage": {
