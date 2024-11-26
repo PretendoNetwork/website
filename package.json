@@ -6,9 +6,8 @@
 	"scripts": {
 		"start": "node src/server.js",
 		"build": "npm run browserify",
-		"browserify": "npm run browserify-miieditor && npm run browserify-forgot-password && npm run browserify-reset-password",
+		"browserify": "npm run browserify-miieditor && npm run browserify-reset-password",
 		"browserify-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
-		"browserify-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
 		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
 	"repository": {
@@ -24,6 +23,8 @@
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.515.0",
 		"@discordjs/rest": "^0.5.0",
+		"@node-saml/node-saml": "^5.0.0",
+		"@pretendonetwork/error-codes": "^1.0.3",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",

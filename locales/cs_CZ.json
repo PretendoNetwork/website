@@ -33,54 +33,223 @@
 	"aboutUs": {
 		"title": "O nás",
 		"paragraphs": [
-			"Pretendo je open-sourcový projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí pouze legálního reverse engineeringu.",
-			"Protože by naše služby byly jak svobodné, tak open source, můžou existovat dlouho po nevyhnutelném uzavření Nintendo Network."
+			"Pretendo je open-source projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí legálního reverse engineeringu.",
+			"Jelikož jsou naše služby svobodný a open-source software, nehrozí, že budou náhle ukončeny."
 		]
 	},
 	"credits": {
 		"title": "Náš tým",
-		"text": "Seznamte se s týmem, co za projektem stojí"
+		"text": "Seznamte se s týmem, co za projektem stojí",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"caption": "Vlastník projektu a vedoucí vývojář"
+			},
+			{
+				"caption": "Výzkum a vývoj služby Miiverse",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"caption": "Výzkum konzole Wii U a vývoj záplat"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Systémový výzkum a serverová architektura",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Webový vývoj",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Systémový výzkum a vývoj serverů"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "Archivace dat a serverová architektura"
+			},
+			{
+				"github": "https://github.com/DaniElectra",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"caption": "Systémový výzkum a vývoj serverů"
+			},
+			{
+				"name": "niko",
+				"caption": "Vývoj webu a serverů",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"caption": "DevOps a práce s komunitou",
+				"github": "https://github.com/MatthewL246",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Vývoj serverového softwaru a optimalizace",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains",
+				"caption": "Vývoj 3DS záplat a výzkum"
+			}
+		]
 	},
 	"specialThanks": {
 		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
-		"title": "Zvláštní poděkování"
+		"title": "Zvláštní poděkování",
+		"people": [
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "Přispívající na GitHubu",
+				"caption": "Lokalizace a jiné příspěvky"
+			},
+			{
+				"github": "https://github.com/superwhiskers",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"caption": "vývoj knihovny crunch"
+			},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001",
+				"caption": "3DS vývoj a disektor NEX"
+			},
+			{
+				"name": "rverse",
+				"caption": "Sdílení informací o Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Zvláštní poděkování",
+				"caption": "Výzkum datových struktur Nintenda",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"github": "https://github.com/ninstar",
+				"name": "NinStar",
+				"caption": "Ikony pro Mii Editor a Juxt reakce",
+				"picture": "https://github.com/ninstar.png"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Konzolový výzkum a herní servery",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"picture": "https://github.com/GaryOderNichts.png",
+				"caption": "Vývoj Wii U záplat",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast",
+				"caption": "Tvůrce 3DS záplat"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Serverová architektura",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Serverová architektura",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Splatoon rotace a výzkum",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22",
+				"name": "Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon rotace a výzkum",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub přispěvovatelé",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Lokalizace a další příspěvky"
+			}
+		]
 	},
 	"faq": {
 		"QAs": [
 			{
 				"question": "Co je Pretendo?",
-				"answer": "Pretendo je open-sourcová náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto konzolí a umožnit tak hráčům dál hrát své oblíbené Wii U a 3DS tituly naplno."
+				"answer": "Pretendo je open-source náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto zařízení a umožnit tak hráčům nadále hrát své oblíbené Wii U a 3DS tituly."
 			},
 			{
 				"answer": "Bohužel ne. Již existující NNID na Pretendu nebudou fungovat, protože Vaše uživatelská data vlastní pouze Nintendo. Přestože by migrace účtů byla teoreticky možná, byla by riskantní a vyžadovala citlivé osobní údaje, které si nepřejeme držet.",
 				"question": "Bude na Pretendu fungovat moje současné NNID?"
 			},
 			{
-				"question": "Jak začít s Pretendem?",
-				"answer": "Pretendo v současné době není ve stavu, který by byl připraven pro veřejné použití. Nicméně, až nastane čas, Pretendo budete moct použít spuštěním našeho homebrew nástroje na Vašem zařízení."
+				"question": "Jak začnu s používáním Pretenda?",
+				"answer": "Pokud chcete začít používat Pretendo Network má 3DS, Wii U nebo jejich emulátorech, navštivte náš <a href=\"/docs/install\">návod k nastavení</a>!"
 			},
 			{
-				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
+				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář, zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
 				"question": "Kdy bude [nějaká služba/funkce] hotová?"
 			},
 			{
-				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Pretendo podporuje jakýkoli klient který může interagovat s Nintendo Network. V současnosti je Cemu jediným emulátorem, který je tohoto schopen. Cemu 2.0 oficiálně podporuje Pretendo v nastavení Vašeho účtu. Pro bližší informace k Cemu můžete nahlédnout do <a href=\"https://pretendo.network/docs/install/cemu\">dokumentace</a>.<br>Citra nepodporuje skutečné online hraní a tudíž s Pretendem nefunguje a nezdá se, že by se toto v budoucnu změnilo. Mikage, emulátor 3DS pro mobilní zařízení, může podporu poskytnout v budoucnu, ale toto není jisté."
+				"question": "Kdy přidáte další hry?",
+				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
 			},
 			{
-				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
-				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Budeme mít ovšem pravidla k používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+				"question": "Funguje Pretendo na Cemu/emulátorech?",
+				"answer": "Cemu 2.1 oficiálně podporuje Pretendo v nastavení účtu. Pro informace jak začít s Cemu navštivte <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaci</a>.<br>Některé 3DS emulátory můžou nabízet podporu, ale v současnosti nemáme oficiální doporučení ani návod k nastavení. Citra ve své poslední vydané verzi Pretendo nepodporuje."
 			},
 			{
 				"question": "Bude Pretendo podporovat Wii/Switch?",
-				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme cílit na Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
+				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme vyvíjet pro Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
 			},
 			{
 				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
-				"answer": "Ano, Vaše zařízení musí být modifikováno; na Wii U budete potřebovat pouze přístup k Homebrew Launcher (t.j. Haxchi, Coldboot Haxchi nebo exploit s webovým prohlížečem), informace pro připojení z 3DS jsou v přípravě."
+				"answer": "Pro nejlepší výsledek budete svou konzoli muset modifikovat; s Aroma na Wii U a Luma3DS na 3DS. Nicméně, na Wii U je dostupná metoda SSSL, která, byť s omezenou funkcionalitou, nabízí připojení bez modifikací. Pro podrobnosti navštivte <a href=\"/docs/install\">návod k nastavení</a>."
+			},
+			{
+				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
+				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Máme však vlastní pravidla pro používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+			},
+			{
+				"question": "Můžu na Pretendu používat mody a cheaty?",
+				"answer": "Pouze v soukromých zápasech - narušování online her lidem, kteří s tím nesouhlasili (tedy veřejné zápasy) je proti zásadám. Bany konzolím a účtům udělujeme pravidelně. Pretendo dále používá dodatečná bezpečnostní opatření, která brání v obcházení banů např. změnou sériového čísla."
 			}
 		],
-		"text": "Zde jsou otázky, které jsou nám často kladeny, pro snadné informování.",
+		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
 		"title": "Často kladené dotazy"
 	},
 	"showcase": {
@@ -118,13 +287,13 @@
 				"password": "Heslo",
 				"gender": "Pohlaví",
 				"discord": "Discord",
-				"newsletterPrompt": "Posílat aktualizace projektu emailem (Kdykoliv můžete posílání zrušit)",
+				"newsletterPrompt": "Posílat aktualizace projektu emailem (lze kdykoli zrušit)",
 				"nickname": "Přezdívka",
 				"signInHistory": "Historie přihlášení",
 				"beta": "Beta",
 				"serverEnv": "Prostředí serveru",
 				"noDiscordLinked": "Není připojen žádný Discord účet.",
-				"fullSignInHistory": "Zobrazit celou historii přihlašování",
+				"fullSignInHistory": "Zobrazit celou historii přihlášení",
 				"production": "Produkční",
 				"linkDiscord": "Připojit Discord účet",
 				"country": "Země/region",
@@ -135,13 +304,11 @@
 				"connectedToDiscord": "Připojeno k Discordu jako",
 				"newsletter": "Newsletter",
 				"hasAccessPrompt": "Váš aktuální tier Vám dává přístup k beta serverům. Super!",
-				"passwordResetNotice": "Po změně hesla budete odhlášeni ze všech zařízení.",
+				"passwordResetNotice": "Po změně hesla budete odhlášen(a) ze všech zařízení.",
 				"otherSettings": "Ostatní nastavení",
 				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupné. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
 			"unavailable": "Nedostupné",
-			"downloadFiles": "Stáhnout soubory účtu",
-			"downloadFilesDescription": "(Nebude fungovat na Nintendo Networku)",
 			"upgrade": "Upgradovat účet"
 		},
 		"accountLevel": [
@@ -209,7 +376,7 @@
 		"sidebar": {
 			"getting_started": "Začínáme",
 			"install_extended": "Nainstalovat Pretendo",
-			"install": "Nainstalovat",
+			"install": "Instalace",
 			"welcome": "Vítejte",
 			"search": "Hledat",
 			"juxt_err": "Chybové kódy - Juxt"
@@ -217,7 +384,7 @@
 		"search": {
 			"no_match": "Nenalezeny žádné shody",
 			"title": "Máte chybový kód?",
-			"caption": "Napište ho do políčka níže pro zobrazení informací k Vašemu problému!",
+			"caption": "Napište jej do políčka níže pro zobrazení informací k Vašemu problému!",
 			"label": "Chybový kód"
 		},
 		"missingInLocale": "Tato stránka je nedostupná ve Vaší lokalizaci. Podívejte se prosím na Anglickou verzi níže."
@@ -255,15 +422,16 @@
 			"Úvodní hudba Super Mario World 2 - Yoshi's Island je slast pro moje uši a nikdo mě nepřesvědčí o opaku.",
 			"Moje oblíbená vydání Switche byly Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Ten Virtual Console titul pro Wii U se ti fakt líbil, tak ho přinášíme zpátky\" Pack. Je fakt zřejmý, že nás má Nintendo rádo.",
 			"Když moravák řekne \"Znáš přéce Ash, taký zlatíčko, je tak moc UwU\", snaží se neurážlivě říct \"Ash pořád UwUuje a je to fakt divný a hloupý, kéž by to nedělala\"",
-			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\""
+			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\"",
+			"to vypadá mega vyfeleně"
 		],
 		"usefulLinks": "Užitečné odkazy",
 		"widget": {
 			"captions": [
 				"Chcete být v obraze?",
-				"Připojte se do našeho Discord serveru!"
+				"Přidejte se k našemu Discord serveru!"
 			],
-			"button": "Připojit se nyní!"
+			"button": "Připojte se nyní!"
 		},
 		"socials": "Sociální sítě"
 	},
@@ -278,5 +446,8 @@
 	"donation": {
 		"progress": "<span>$${totd}</span> z měsíčního cíle <span>$${goald} </span> vybráno (<span>${perc}%</span> měsíčního cíle)",
 		"upgradePush": "Abyste se stal(a) předplatitelem a získal(a) přístup k zajímavým výhodám navštivte <a href=\"/account/upgrade\">upgrade stránku</a>."
+	},
+	"notfound": {
+		"description": "Jejda! Tuto stránku jsme nenalezli."
 	}
 }

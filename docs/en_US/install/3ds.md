@@ -5,6 +5,11 @@
 	SYSTEM TRANSFERS ARE NOT CURRENTLY SUPPORTED BY OUR SERVERS. ATTEMPTING TO PERFORM A SYSTEM TRANSFER MAY PREVENT YOU FROM BEING ABLE TO GO ONLINE IN THE FUTURE. SUPPORT FOR SYSTEM TRANSFERS IS IN DEVELOPMENT.
 </div>
 
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	Collecting badges in Nintendo Badge Arcade while connected to one network and then launching the game on a different network will result in your badges disappearing. This occurs because the locally saved data does not match the data stored on the server.
+</div>
+
 <div class="tip">
 	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (13+)</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
 </div>
@@ -87,9 +92,15 @@ Your selection persists between reboots.
 
 The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
 
-Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console at a later date
+Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console once you're ready.
 
-It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data
+It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data.
+
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have a choose a different name for your PNID than the name on your NNID.
+</div>
+
 
 ## Other information
 
@@ -102,3 +113,24 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 <ul id="footnotes">
 	<li id="footnote-1"><sup>[1]</sup> Some games may require a PNID for certain actions, such as eShop purchases. The only known game which requires a PNID for general use is Nintendo Badge Arcade, which is not yet supported</li>
 </ul>
+
+### Restoring Nintendo Badge Arcade Badges
+1. Insert your SD Card into your PC.
+2. Back up your badges at the folder on your SD Card `SD:Nintendo 3DS/ID0/ID1/extdata/00000000/000014d1`.
+3. Download [Simple Badge Injector](https://github.com/AntiMach/simple-badge-injector/releases/latest).
+4. Insert your SD Card into your console.
+5. Use Nimbus to switch to Pretendo.
+6. Open Simple Badge Injector and make a note of the "Nintendo Network ID" value.
+7. Still inside SBI, choose the option to dump your badge data files.
+8. Turn off your 3DS and remove the SD card. Insert your SD card into your PC.
+9. Download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest).
+10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are. (Located at `sd:/3ds/SimpleBadgeInjector/Dumped`)
+11. Replace the NNID value with the one you made a note of in SBI earlier.
+12. Select `Save As` to save the modified file separately from the backup.
+13. Put your modified badge data filed into `sd:/3ds/SimpleBadgeInjector`
+14. Put your SD card back into your 3DS and go back into SBI
+15. Inject your modified badge data files.
+
+All badges *placed* on the home menu will be deleted, and you have to re-add them in the order you have had them before.
+    
+If you encounter any errors, restore your backed up badge data through SBI. Injecting badges while using Pretendo Network will make them disappear when swapping back to Nintendo Network, and vice versa.

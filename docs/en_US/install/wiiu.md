@@ -48,32 +48,48 @@ The stable build is recommended for most users, however beta testers and others 
 ## Stable
 The stable builds have been widely tested to ensure everything works as intended. Navigate to [Inkay's latest release](https://github.com/PretendoNetwork/Inkay/releases/latest) on GitHub and download the `Inkay-pretendo.wps` file from the latest release.
 
-<img src="/assets/images/docs/install/wiiu/aroma/wps-highlight.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/wps-highlight.png" alt="Screenshot showing a GitHub release page, with the release asset file Inkay-pretendo.wps highlighted" width="100%">
 
 ## Bleeding Edge
 Bleeding edge builds have not been widely tested, and do not guarantee any stability. Download the latest build from <a href="https://nightly.link/PretendoNetwork/Inkay/workflows/ci/main/inkay"  target="_blank">nightly</a>. Extract `inkay.zip`.
 
-<img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/inkay-nightly-link.png" alt="Screenshot of build file list with the inkay.zip file highlighted" width="100%">
+
+## Nimble
+Nimble is an Aroma setup module that patches the request for the system `PolicyList`. This is used to enable background tasks for features such as Wara Wara Plaza. This is separate from the main Inkay patches as the `PolicyList` is downloaded earlier in the system boot process than Inkay has control over.
+
+Navigate to [the latest release](https://github.com/PretendoNetwork/Nimble/releases/latest) on GitHub and download the  `30_nimble.rpx` file.
+
+<img src="/assets/images/docs/install/wiiu/aroma/nimbus-install.png" alt="Screenshot of a GitHub release page with the file 30_nible.rpx highlighted" width="100%">
 
 ## Installation
 Place the downloaded `Inkay-pretendo.wps` file on your SD card at `sd:/wiiu/environments/aroma/plugins`. It's normal for other Aroma plugins to be in this folder too.
 
-<img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/sd-card.png" alt="Screenshot of the plugins folder contents, with the Inkay-pretendo.wps highlighted" width="100%">
 
+Place the downloaded `30_nimble.rpx` file on your SD card at `sd:/wiiu/environments/aroma/modules/setup`. It's normal for other Aroma setup modules to be in this folder too.
+
+<img src="/assets/images/docs/install/wiiu/pnid/nimbus-sd.png" alt="Screenshot of a files list, with the file 30_nible.rpx highlighted" width="100%">
 Place your SD card back into your console and boot like normal. You should see a notification of your connection:
 
-<img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/working-notification.jpg" alt="Screenshot with a Connected to Pretendo Network notification in the top left of the screen" width="100%">
 
 You are now connected to Pretendo Network.
+
+Press the button combo `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
+
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" alt="Screenshot of Aroma plugin menu with Inkay entry highlighted" width="100%">
+
+Choose the plugin 'Inkay', then click A on 'BOSS settings' inside of Inkay, then click A on 'Unregister Wara Wara Plaza BOSS tasks' after that restart your console fully.
 
 ## Disconnecting
 Press `L + Down + SELECT` on the Wii U GamePad to open the Aroma plugin menu.
 
-<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/pnid/aroma-plugins-list.jpg" alt="Screenshot of Aroma plugin menu with Inkay entry highlighted" width="100%">
 
 Locate and select 'Inkay', then choose 'Patching'. Now, set 'Connect to the Pretendo Network' to **false**.
 
-<img src="/assets/images/docs/install/wiiu/pnid/inkay-patching.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/pnid/inkay-patching.jpg" alt="Screenshot of Inkay Patching menu with the Connect to the Pretendo network entry highlighted" width="100%">
 
 Press `B` twice, followed by the `HOME` button. The console will reboot with Pretendo Network patches disabled, as confirmed by the 'Using Nintendo Network' message.
 
@@ -95,7 +111,7 @@ You will want to register an account from [here](/account) and click `Don't have
 	Account settings cannot be modified at this time. Feature updates to the website have been paused as we migrate the codebase, and the account settings app on the Wii U requires additional patches.
 </div>
 
-<img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" alt="Screenshot of a web form to register an account" width="100%">
 
 Once your account is registered, link it to your console as you would a Nintendo Network ID.
 
@@ -113,17 +129,17 @@ Pretendo Network is not compatible with existing Nintendo Network IDs. This mean
 
 To move your save data, you will need a save data backup homebrew application. This guide will use the WUT port of SaveMii for Aroma.  To begin, download the latest [GitHub release](https://github.com/Xpl0itU/savemii/releases) of SaveMii or download it from the [Homebrew App Store](https://hb-app.store).
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" alt="Screenshot of Homebrew App Store page of SaveMii Mod" width="100%">
 
 Once installed, open the application from the HOME Menu. You should see a menu for Wii U and vWii saves.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" alt="SaveMii menu" width="100%">
 
 Select `Wii U Save Management`. You should now see a list of installed games. Find and select the game you would like to transfer the save data of.
 
 Select `Backup savedata`.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" alt="SaveMii backup save data menu" width="100%">
 
 Select a new slot to backup the save data to. If you select a non-empty slot, the backup data in that slot will be overwritten.
 
@@ -144,12 +160,12 @@ Select the backup slot you just backed the save data up to.
 
 Select the profile to restore the save data to. This should be your ***Pretendo*** Network ID.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.jpg" alt="SaveMii restore save data menu" width="100%">
 
 When ready, press the `A` button to transfer your data. Press `A` again to confirm your actions. If you get a message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
 
 Once completed, exit SaveMii and ensure the game you transferred works properly on your Pretendo profile.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" alt="Screenshot of a game that loaded successfully" width="100%">
 
 Repeat this process for any other save data you'd like to transfer to your Pretendo profile.

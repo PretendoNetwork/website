@@ -1,12 +1,12 @@
 {
 	"nav": {
-		"about": "Info",
+		"about": "Informazioni",
 		"faq": "FAQ",
 		"docs": "Documentazione",
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Account",
+		"account": "Profilo",
 		"accountWidget": {
 			"settings": "Impostazioni",
 			"logout": "Logout"
@@ -16,7 +16,7 @@
 			"captions": {
 				"credits": "Incontra il team",
 				"about": "Riguardo al progetto",
-				"faq": "Domande chieste frequentemente",
+				"faq": "Domande frequenti",
 				"blog": "I nostri ultimi aggiornamenti, sintetizzati",
 				"progress": "Controlla lo stato di avanzamento del progetto e gli obiettivi"
 			}
@@ -76,6 +76,13 @@
 			{
 				"question": "Dovrò modificare la mia console per connettermi?",
 				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, sulla Wii U è sufficiente poter accedere all'Homebrew Launcher (via Haxchi, Coldboot Haxchi, o anche solo l'exploit web per browser). Informazioni su come connettersi su 3DS saranno fornite in futuro."
+			},
+			{
+				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?"
+			},
+			{
+				"answer": "Solo in partite private - ottenere vantaggi sleali o compromettere l'esperienza di gioco online senza il permesso dei partecipanti (e in partite pubbliche) è sanzionabile con un ban. Banniamo regolarmente account e console su entrambe le piattaforme Wii U e 3DS. Pretendo usa misure di sicurezza aggiuntive con lo scopo di rendere i tradizionali metodi 'unban' inefficaci, ad esempio cambiando il codice seriale della console.",
+				"question": "Posso usare trucchi o mods online con Pretendo?"
 			}
 		]
 	},
@@ -167,8 +174,6 @@
 			"registerPrompt": "Non hai un account?"
 		},
 		"settings": {
-			"downloadFilesDescription": "(non funzioneranno su Nintendo Network)",
-			"downloadFiles": "Scarica file dell'account",
 			"settingCards": {
 				"profile": "Profilo",
 				"nickname": "Nickname",
