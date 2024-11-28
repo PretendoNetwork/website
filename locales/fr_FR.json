@@ -198,7 +198,8 @@
 			{
 				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)",
 				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png"
+				"picture": "https://github.com/Stary2001.png",
+				"name": "Stary"
 			},
 			{
 				"name": "rverse",
@@ -208,7 +209,9 @@
 			{
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay",
-				"name": "Kinnay"
+				"name": "Kinnay",
+				"caption": "Recherche sur les structures de données Nintendo",
+				"special": "Remerciements spéciaux"
 			},
 			{
 				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
@@ -219,7 +222,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Recherches consoles et serveurs de jeu"
 			},
 			{
 				"caption": "Développement de patch Wii U",
