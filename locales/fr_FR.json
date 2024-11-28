@@ -275,7 +275,7 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Rejoignez-nous !",
+		"title": "Rejoignez-nous",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
 			"text": "Recevez des mises à jour en temps réel",
@@ -448,6 +448,6 @@
 		"close": "Fermer"
 	},
 	"notfound": {
-		"description": "Oups! Nous n'arrivons pas à trouver cette page."
+		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
 	}
 }
