@@ -80,51 +80,51 @@ SSSL is a (limited) hackless method of accessing most services by exploiting a b
 
 Locate the `System Settings` icon on your Wii U Menu and open it.
 
-<img src="/assets/images/docs/install/wiiu/sssl/system-settings.png" alt="The Wii U Menu, with the System Settings icon highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/system-settings.jpg" alt="The Wii U Menu, with the System Settings icon highlighted" width="100%">
 
 Open the Internet category.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings.png" alt="The System Settings app, with the Internet category highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings.jpg" alt="The System Settings app, with the Internet category highlighted" width="100%">
 
 Select `Connect to the Internet`.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-connect.png" alt="The System Settings app, with the Connect to the Internet button highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-connect.jpg" alt="The System Settings app, with the Connect to the Internet button highlighted" width="100%">
 
 Select `Connection List` in the top-right.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-scan.png" alt="The Internet Connection Setup panel. In the top-right is a Connection List button (X)" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-scan.jpg" alt="The Internet Connection Setup panel. In the top-right is a Connection List button (X)" width="100%">
 
 Locate the connection with a "Wii U" logo. This is the one your system will use by default. Press A to edit it.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-list.png" alt="A list of internet connections. 'Wired Connection' is marked with a Wii U and Wii logo, and is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-list.jpg" alt="A list of internet connections. 'Wired Connection' is marked with a Wii U and Wii logo, and is highlighted." width="100%">
 
 Select `Change Settings`.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-change.png" alt="A list of options. 'Change Settings' is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-change.jpg" alt="A list of options. 'Change Settings' is highlighted." width="100%">
 
 Navigate to the right and down to the `DNS` button, and press A to edit.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-button.png" alt="The second page of the Wii U connection editor. DNS is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-button.jpg" alt="The second page of the Wii U connection editor. DNS is highlighted." width="100%">
 
 Select `Do not auto-obtain`. We will provide our own DNS for SSSL to work.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-obtain.png" alt="Two options for 'Automatically obtain DNS?' 'Do not auto-obtain' is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-obtain.jpg" alt="Two options for 'Automatically obtain DNS?' 'Do not auto-obtain' is highlighted." width="100%">
 
 This brings up the DNS input. We will change both the Primary and Secondary DNS settings.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-editor.png" alt="Two input fields for Primary and Secondary DNS." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-editor.jpg" alt="Two input fields for Primary and Secondary DNS." width="100%">
 
 For the Primary DNS, enter `88.198.140.154`. This is the SSSL server.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-primary.png" alt="'Enter the primary DNS' field, with 88.198.140.154 - the SSSL server - input." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-primary.jpg" alt="'Enter the primary DNS' field, with 88.198.140.154 - the SSSL server - input." width="100%">
 
 For the Secondary DNS, enter `9.9.9.9` (or another public DNS of your choice). This will serve as a fallback if Pretendo's SSSL server should go offline, allowing your console to still access the Internet. If Pretendo is offline and the fallback is used, however, the console will access Nintendo Network rather than Pretendo Network. If this is undesirable to you, leave this field blank.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-secondary.png" alt="'Enter the secondary DNS' field, with 9.9.9.9 - a public DNS server - input." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-secondary.jpg" alt="'Enter the secondary DNS' field, with 9.9.9.9 - a public DNS server - input." width="100%">
 
 Review the final settings and ensure you typed them correctly. The Wii U will add leading zeroes to each number - this is okay. If they are correct, press Confirm.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-done.png" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-done.jpg" width="100%">
 
 Press B to save the connection. You may perform a connection test and set the connection as default. Then, press B until System Settings exits.
 
@@ -178,7 +178,7 @@ Press A on `Connect to Pretendo network` to toggle it to `false`.
 
 Press `B` three times to exit the Aroma plugin menu. Your console will restart. Once it does, a notification will appear showing that you are now using Nintendo Network.
 
-<img src="/assets/images/docs/install/wiiu/inkay-tips/nintendo-notification.png" alt="The Wii U user selection screen, with 'Using Nintendo Network' overlaid in the top-left" width="100%">
+<img src="/assets/images/docs/install/wiiu/inkay-tips/nintendo-notification.jpg" alt="The Wii U user selection screen, with 'Using Nintendo Network' overlaid in the top-left" width="100%">
 
 You may now use your NNID to access the eShop or other Nintendo services. To return to Pretendo Network, repeat the process and set `Connect to Pretendo network` to `true`.
 </details>
