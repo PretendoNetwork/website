@@ -142,12 +142,14 @@
 			{
 				"caption": "Recherche sur les systèmes, développement serveur",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"name": "Shutterbug2000"
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"caption": "Conservation, architecture serveur",
 				"name": "Billy",
-				"github": "https://github.com/InternalLoss"
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png"
 			},
 			{
 				"caption": "Recherche sur les systèmes, développement serveur",
@@ -157,7 +159,9 @@
 			},
 			{
 				"caption": "Développement serveur et web",
-				"name": "niko"
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
 			},
 			{
 				"caption": "DevOps et travail de la communauté",
@@ -198,17 +202,21 @@
 			{
 				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)",
 				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png"
+				"picture": "https://github.com/Stary2001.png",
+				"name": "Stary"
 			},
 			{
 				"name": "rverse",
 				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Partage d'informations concernant Miiverse"
 			},
 			{
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay",
-				"name": "Kinnay"
+				"name": "Kinnay",
+				"caption": "Recherche sur les structures de données Nintendo",
+				"special": "Remerciements spéciaux"
 			},
 			{
 				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
@@ -219,7 +227,8 @@
 			{
 				"name": "Rambo6Glaz",
 				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Recherches consoles et serveurs de jeu"
 			},
 			{
 				"caption": "Développement de patch Wii U",
@@ -266,7 +275,7 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Rejoignez-nous !",
+		"title": "Rejoignez-nous",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
 			"text": "Recevez des mises à jour en temps réel",
@@ -439,6 +448,6 @@
 		"close": "Fermer"
 	},
 	"notfound": {
-		"description": "Oups! Nous n'arrivons pas à trouver cette page."
+		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
 	}
 }

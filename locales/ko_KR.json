@@ -99,11 +99,31 @@
 	},
 	"credits": {
 		"title": "개발 팀",
-		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요"
+		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
+		"people": [
+			{},
+			{
+				"caption": "Miiverse 연구와 개발"
+			},
+			{
+				"caption": "Wii U 연구 및 패치 개발"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Special Thanks",
-		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다."
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
+		"people": [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{
+				"caption": "게임기 연구 및 게임 서버"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "최신 정보",
