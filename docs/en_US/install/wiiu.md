@@ -2,29 +2,12 @@
 
 You can connect your Wii U to Pretendo using one of 2 methods. Each method has benefits and drawbacks, which will be described in their respective sections.
 
+- [Inkay (homebrew - recommended)](#inkay)
 - [SSSL (hackless)](#sssl)
-- [Inkay (homebrew)](#inkay)
 
 Once you have selected a connection method and set up your Wii U, see ["PNID Setup"](#pnid-setup).
 
 If you have save data from a Nintendo Network ID you would like to move to your Pretendo Network ID, follow [this](#transferring-save-data-to-your-pretendo-network-account) section.
-
-# SSSL
-**Pros:**
-- Does not require homebrew
-- Very easy to setup
-
-**Cons:**
-- Only a subset of services are supported
-- Lacks additional features and patches
-- May not function under certain ISP related conditions (self-hosted DNS tool is in development)
-- Requires changing network settings to disconnect
-
-SSSL is a (limited) hackless method of accessing most services by exploiting a bug in the Wii U's SSL module. All Nintendo Network games produced by Nintendo are supported by SSSL, as are the ***in-game*** Miiverse features. The main Miiverse app, in-game ***posting*** app, and any game which uses its own SSL stack (YouTube, WATCH_DOGS, etc.), are ***NOT*** supported by this method, as they are unaffected by the SSL exploit.
-
-To connect using SSSL, open `System Settings > Internet > Connect to the Internet`. Open the settings for your network connection and open `DNS`. Select `Don't Auto-obtain`. Enter `88.198.140.154` as the `Primary DNS`. Enter another public DNS server address as the `Secondary DNS`, such as `8.8.8.8` (Google Public DNS) or `1.1.1.1` (Cloudflare-DNS). You should now be able to setup and login to your Pretendo Network ID as normal.
-
-To disconnect from Pretendo Network either remove the `Primary DNS` address or change back to `Auto-obtain`.
 
 # Inkay
 **Pros:**
@@ -94,6 +77,23 @@ Locate and select 'Inkay', then choose 'Patching'. Now, set 'Connect to the Pret
 Press `B` twice, followed by the `HOME` button. The console will reboot with Pretendo Network patches disabled, as confirmed by the 'Using Nintendo Network' message.
 
 To return to Pretendo Network, repeat the process ensuring 'Connect to the Pretendo Network' is set to **true**.
+
+# SSSL
+**Pros:**
+- Does not require homebrew
+- Very easy to setup
+
+**Cons:**
+- Only a subset of services are supported
+- Lacks additional features and patches
+- May not function under certain ISP related conditions (self-hosted DNS tool is in development)
+- Requires changing network settings to disconnect
+
+SSSL is a (limited) hackless method of accessing most services by exploiting a bug in the Wii U's SSL module. All Nintendo Network games produced by Nintendo are supported by SSSL, as are the ***in-game*** Miiverse features. The main Miiverse app, in-game ***posting*** app, and any game which uses its own SSL stack (YouTube, WATCH_DOGS, etc.), are ***NOT*** supported by this method, as they are unaffected by the SSL exploit.
+
+To connect using SSSL, open `System Settings > Internet > Connect to the Internet`. Open the settings for your network connection and open `DNS`. Select `Don't Auto-obtain`. Enter `88.198.140.154` as the `Primary DNS`. Enter another public DNS server address as the `Secondary DNS`, such as `8.8.8.8` (Google Public DNS) or `1.1.1.1` (Cloudflare-DNS). You should now be able to setup and login to your Pretendo Network ID as normal.
+
+To disconnect from Pretendo Network either remove the `Primary DNS` address or change back to `Auto-obtain`.
 
 # PNID Setup
 After installing Pretendo, you must register a Pretendo Network ID (PNID). There is currently two ways of creating a PNID: Creating an account with the website and linking it, or creating it on your Wii U.
