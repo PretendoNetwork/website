@@ -20,7 +20,7 @@ Ensure you have followed [Cemu's guide](https://cemu.cfw.guide/online-play.html)
 ## Connecting to Pretendo
 Once you have Cemu setup for online play navigate to `Options > General settings > Account`. You should now see a section titled `Network Service`. Select your PNID from the `Active account` menu and select the `Pretendo` Network Service option. Cemu should now be connected to Pretendo's servers
 
-<center><img src="/assets/images/docs/install/cemu/network-services-settings.png"/></center>
+<center><img src="/assets/images/docs/install/cemu/network-services-settings.png" alt="Screenshot of Cemu's Account Settings with different Network Service Options."/></center>
 
 ## Miiverse
 Cemu has limited to no Miiverse support as of now. Some in game features may work, but this is not guaranteed. The Miiverse applet does not work in official builds.
