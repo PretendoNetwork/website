@@ -66,6 +66,10 @@
 				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilizing and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
 			},
 			{
+				"question": "If I use an emulator, will that be enough to use Pretendo?",
+				"answer": "No. For purposes of security and moderation, if you are using an emulator, you still need a real console. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service.",
+			},
+			{
 				"question": "Does Pretendo work on Cemu/emulators?",
 				"answer": "Cemu 2.1 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Some 3DS emulators or forks might support us, but we do not have any official recommendation or setup instructions at this time. The final builds of Citra do not support Pretendo."
 			},
