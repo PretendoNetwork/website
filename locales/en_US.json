@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "If I use an emulator, will that be enough to use Pretendo?",
-				"answer": "No. For purposes of security and moderation, if you are using an emulator, you are required to dump the relevant system data from a legitimate console to go online on our servers. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service.",
+				"answer": "No. For purposes of security and moderation, if you are using an emulator, you still need a real console. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service.",
 			},
 			{
 				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
@@ -84,10 +84,6 @@
 			{
 				"question": "Will I need hacks to connect?",
 				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
-			},
-			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
-				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban."
 			},
 			{
 				"question": "Can I use cheats or mods online with Pretendo?",
