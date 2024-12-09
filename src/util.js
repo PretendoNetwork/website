@@ -257,6 +257,51 @@ async function removeDiscordMemberTesterRole(memberId) {
 	}
 }
 
+function createDiscoursePayload(nonce, accountData) {
+	const groups = config.discourse.groups;
+
+	const accessLevelGroupMapping = {
+		0: {
+			addGroups: '',
+			removeGroups: `${groups.tester},${groups.moderator},${groups.developer}`
+		},
+		1: {
+			addGroups: groups.tester,
+			removeGroups: `${groups.moderator},${groups.developer}`
+		},
+		2: {
+			addGroups: groups.moderator,
+			removeGroups: `${groups.tester},${groups.developer}`
+		},
+		3: {
+			addGroups: groups.developer,
+			removeGroups: `${groups.tester},${groups.moderator}`
+		}
+	};
+
+	const { addGroups, removeGroups } = accessLevelGroupMapping[accountData.access_level] || accessLevelGroupMapping[0];
+
+	// * Discourse SSO Payload
+	// * https://meta.discourse.org/t/official-single-sign-on-for-discourse-sso/13045
+
+	// * Discourse REQUIRES unique emails, however we do not due to NN also
+	// * not requiring unique email addresses. Email addresses, for now,
+	// * are faked using the users PID. This will essentially disable email
+	// * for the forum, but it's a bullet we have to bite for right now.
+	// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+	return Buffer.from(new URLSearchParams({
+		nonce: nonce,
+		external_id: accountData.pid,
+		email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+		username: accountData.username,
+		name: accountData.mii.name,
+		avatar_url: accountData.mii.image_url,
+		avatar_force_update: true,
+		add_groups: addGroups,
+		remove_groups: removeGroups
+	}).toString()).toString('base64');
+}
+
 function signDiscoursePayload(payload) {
 	return crypto.createHmac('sha256', config.discourse.sso.secret).update(payload).digest('hex');
 }
@@ -281,5 +326,6 @@ module.exports = {
 	assignDiscordMemberTesterRole,
 	removeDiscordMemberSupporterRole,
 	removeDiscordMemberTesterRole,
+	createDiscoursePayload,
 	signDiscoursePayload
 };
