@@ -306,6 +306,42 @@ function signDiscoursePayload(payload) {
 	return crypto.createHmac('sha256', config.discourse.sso.secret).update(payload).digest('hex');
 }
 
+async function discourseUserExists(pid) {
+	const response = await got.get(`${config.discourse.api.base_url}/users/by-external/${pid}.json`, {
+		throwHttpErrors: false,
+		responseType: 'json'
+	});
+
+	if (response.statusCode === 200) {
+		return true;
+	} else if (response.statusCode === 404) {
+		return false;
+	} else {
+		throw new Error(`Discourse API error while checking if user ${pid} exists: ${response.statusCode} - ${JSON.stringify(response.body)}`);
+	}
+}
+
+async function syncDiscourseSso(pnid) {
+	// * Documentation: https://meta.discourse.org/t/sync-discourseconnect-user-data-with-the-sync-sso-route/84398
+	const headers = {
+		'Content-Type': 'multipart/form-data',
+		'Api-Username': config.discourse.api.username,
+		'Api-Key': config.discourse.api.key
+	};
+
+	const payload = createDiscoursePayload('', pnid);
+	const post_data = {
+		'sso': payload,
+		'sig': signDiscoursePayload(payload)
+	};
+
+	return got.post(`${config.discourse.api.base_url}/admin/users/sync_sso`, {
+		headers: headers,
+		form: post_data,
+		responseType: 'json'
+	});
+}
+
 module.exports = {
 	fullUrl,
 	getLocale,
@@ -327,5 +363,7 @@ module.exports = {
 	removeDiscordMemberSupporterRole,
 	removeDiscordMemberTesterRole,
 	createDiscoursePayload,
-	signDiscoursePayload
+	signDiscoursePayload,
+	discourseUserExists,
+	syncDiscourseSso
 };
