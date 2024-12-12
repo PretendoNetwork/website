@@ -231,6 +231,12 @@ function nintendoPasswordHash(password, pid) {
 	return hashed;
 }
 
+async function discordMemberHasRole(memberId, roleId) {
+	const response = await discordRest.get(DiscordRoutes.guildMember(config.discord.guild_id, memberId));
+
+	return response.roles.includes(roleId);
+}
+
 async function assignDiscordMemberSupporterRole(memberId, roleId) {
 	if (memberId && memberId.trim() !== '') {
 		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
@@ -257,29 +263,40 @@ async function removeDiscordMemberTesterRole(memberId) {
 	}
 }
 
-function createDiscoursePayload(nonce, accountData) {
+async function createDiscoursePayload(nonce, accountData) {
 	const groups = config.discourse.groups;
+	const managedGroups = Object.values(groups).flatMap(category => Object.values(category));
+	const addGroups = [];
 
-	const accessLevelGroupMapping = {
-		0: {
-			addGroups: '',
-			removeGroups: `${groups.tester},${groups.moderator},${groups.developer}`
-		},
-		1: {
-			addGroups: groups.tester,
-			removeGroups: `${groups.moderator},${groups.developer}`
-		},
-		2: {
-			addGroups: groups.moderator,
-			removeGroups: `${groups.tester},${groups.developer}`
-		},
-		3: {
-			addGroups: groups.developer,
-			removeGroups: `${groups.tester},${groups.moderator}`
+	// * If more than one of the provided groups in add_groups are configured to
+	// * be automatically set as the primary group, Discourse unfortunately
+	// * appears to set the user's primary group arbitrarily and
+	// * non-deterministically. However, it also ignores groups that the user
+	// * was already in before this sign-in, so the primary group won't change
+	// * if none of the user's group memberships change.
+	if (accountData.connections.discord?.id) {
+		for (const role in groups.discord_role) {
+			if (await discordMemberHasRole(accountData.connections.discord.id, role)) {
+				addGroups.push(groups.discord_role[role]);
+			}
 		}
-	};
+	}
 
-	const { addGroups, removeGroups } = accessLevelGroupMapping[accountData.access_level] || accessLevelGroupMapping[0];
+	if (accountData.connections.stripe?.tier_level) {
+		for (const tier in groups.stripe_tier) {
+			if (accountData.connections.stripe.tier_level.toString() === tier) {
+				addGroups.push(groups.stripe_tier[tier]);
+			}
+		}
+	}
+
+	for (const level in groups.access_level) {
+		if (accountData.access_level.toString() === level) {
+			addGroups.push(groups.access_level[level]);
+		}
+	}
+
+	const removeGroups = managedGroups.filter(group => !addGroups.includes(group));
 
 	// * Discourse SSO Payload
 	// * https://meta.discourse.org/t/official-single-sign-on-for-discourse-sso/13045
@@ -297,8 +314,8 @@ function createDiscoursePayload(nonce, accountData) {
 		name: accountData.mii.name,
 		avatar_url: accountData.mii.image_url,
 		avatar_force_update: true,
-		add_groups: addGroups,
-		remove_groups: removeGroups
+		add_groups: addGroups.join(','),
+		remove_groups: removeGroups.join(',')
 	}).toString()).toString('base64');
 }
 
@@ -329,7 +346,7 @@ async function syncDiscourseSso(pnid) {
 		'Api-Key': config.discourse.api.key
 	};
 
-	const payload = createDiscoursePayload('', pnid);
+	const payload = await createDiscoursePayload('', pnid);
 	const post_data = {
 		'sso': payload,
 		'sig': signDiscoursePayload(payload)

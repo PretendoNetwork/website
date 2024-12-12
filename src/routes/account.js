@@ -454,7 +454,7 @@ router.get('/sso/discourse', async (request, response, next) => {
 		try {
 			const accountData = await util.getUserAccountData(request, response);
 
-			const payload = util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
+			const payload = await util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
 
 			const query = new URLSearchParams({
 				sso: payload,
@@ -525,7 +525,7 @@ router.post('/sso/discourse', async (request, response, next) => {
 
 		const accountData = await util.getUserAccountData(request, response);
 
-		const payload = util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
+		const payload = await util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
 
 		const query = new URLSearchParams({
 			sso: payload,
