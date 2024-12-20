@@ -225,7 +225,7 @@
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
 		"unsub": "Deabonnieren",
-		"unsubPrompt": "Bist du dir sicher, dass du <span>tiername</span> deabonnieren möchtest? Du wirst den Zugang zu den Vorteilen verlieren, die mit dieser Stufe verbunden sind.",
+		"unsubPrompt": "Bist du dir wirklich sicher, dass du dich von <span>Tiername</span> ablemden möchtest? Du wirst  <span>sofort</span> den Zugriff auf die Vorteile dieser Stufe verlieren.",
 		"unsubConfirm": "Deabonnieren",
 		"changeTier": "Stufe ändern",
 		"changeTierPrompt": "Bist du dir sicher, dass du <span class=\"oldtier\">oldtiername</span> deabonnieren und <span class=\"newtier\">newtiername</span> abonnieren möchtest?",
