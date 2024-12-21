@@ -432,7 +432,7 @@
 		"month": "mois",
 		"tierSelectPrompt": "Sélectionnez un niveau",
 		"unsub": "Se désabonner",
-		"unsubPrompt": "Êtes-vous sûr de vouloir vous désabonner du <span>tiername</span> ? Vous perdrez toutes les récompenses associées à ce niveau.",
+		"unsubPrompt": "Êtes-vous sûr de vouloir vous désabonner du <span>tiername</span> ? Vous perdrez toutes les récompenses associées à ce niveau <span>immédiatement</span>.",
 		"unsubConfirm": "Se désabonner",
 		"changeTier": "Changer de niveau",
 		"changeTierConfirm": "Changer de niveau",

@@ -420,7 +420,7 @@
 		"month": "mes",
 		"tierSelectPrompt": "Selecciona un rango",
 		"unsub": "Cancelar suscripción",
-		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá el acceso a las ventajas asociadas con ese nivel.",
+		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá <span>inmediatamente</span> el acceso a las ventajas asociadas con ese nivel.",
 		"unsubConfirm": "Cancelar suscripción",
 		"changeTier": "Cambiar rango",
 		"changeTierPrompt": "¿Está seguro de que desea darse de baja de <span class=\"oldtier\">oldtiername</span> y suscribirse a <span class=\"newtier\">newtiername</span>?",

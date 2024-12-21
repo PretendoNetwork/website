@@ -397,7 +397,7 @@
 		"month": "month",
 		"tierSelectPrompt": "Select a tier",
 		"unsub": "Unsubscribe",
-		"unsubPrompt": "Are you sure you want to unsubscribe from <span>tiername</span>? You will lose access to the perks associated with that tier.",
+		"unsubPrompt": "Are you sure you want to unsubscribe from <span>tiername</span>? You will <span>immediately</span> lose access to the perks associated with that tier.",
 		"unsubConfirm": "Unsubscribe",
 		"changeTier": "Change tier",
 		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class='oldtier'>oldtiername</span> and subscribe to <span class='newtier'>newtiername</span>?",
