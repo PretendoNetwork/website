@@ -70,11 +70,11 @@
 				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
 			},
 			{
-				"question": "¿Pretendo será compatible con la Wii/Switch?",
+				"question": "¿Pretendo funciona en Cemu/emuladores?",
 				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
-				"question": "¿Necesitaré modificar mi consola para conectarme?",
+				"question": "¿Pretendo será compatible con la Wii/Switch?",
 				"answer": "Para obtener la mejor experiencia en consolas necesitarás modificar tu sistema, especificamente Aroma en Wii U y Luma3DS en 3DS. No obstante, en Wii U, el metodo sin modificación SSSL también está disponible con funcionalidad limitada. Consulte nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
 			},
 			{
