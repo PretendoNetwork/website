@@ -5,7 +5,7 @@
  *
  * browserify is needed for the use of require() in the browser
  */
-const Mii = require('@pretendonetwork/mii-js').default;
+const Mii = require('mii-js');
 const newMiiData = 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 
 // Prevent the user from reloading or leaving the page
