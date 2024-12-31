@@ -43,6 +43,10 @@
 			{
 				"question": "Apa itu Pretendo?"
 			}
-		]
+		],
+		"title": "Pertanyaan Umum"
+	},
+	"modals": {
+		"close": "Tutup"
 	}
 }
