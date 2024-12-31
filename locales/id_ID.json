@@ -14,7 +14,9 @@
 				"credits": "Berkenalan dengan Tim",
 				"progress": "Lihat kemajuan dan tujuan proyek"
 			}
-		}
+		},
+		"faq": "FAQ",
+		"blog": "Blog"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
@@ -34,5 +36,13 @@
 	"progress": {
 		"title": "Perkembangan",
 		"githubRepo": "Repositori Github"
+	},
+	"faq": {
+		"text": "Berikut adalah beberapa pertanyaan umum yang sering diajukan kepada kami untuk mendapatkan informasi yang mudah.",
+		"QAs": [
+			{
+				"question": "Apa itu Pretendo?"
+			}
+		]
 	}
 }
