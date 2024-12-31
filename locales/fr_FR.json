@@ -283,14 +283,14 @@
 		}
 	},
 	"footer": {
-		"socials": "Liens Sociaux",
+		"socials": "Réseaux sociaux",
 		"usefulLinks": "Liens utiles",
 		"widget": {
 			"captions": [
 				"Vous voulez rester à jour ?",
 				"Rejoignez notre serveur Discord !"
 			],
-			"button": "Rejoignez maintenant !"
+			"button": "Rejoignez-nous maintenant !"
 		},
 		"bandwidthRaccoonQuotes": [
 			"Je suis Bandwidth le Raton Laveur, un vrai glouton. Mon péché mignon ? Les câbles des serveurs Pretendo, pardi !... Miam !",
