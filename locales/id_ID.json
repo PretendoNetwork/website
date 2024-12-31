@@ -12,9 +12,13 @@
 		"dropdown": {
 			"captions": {
 				"credits": "Berkenalan dengan Tim",
-				"progress": "Lihat kemajuan dan tujuan proyek"
+				"progress": "Lihat kemajuan dan tujuan proyek",
+				"faq": "Pertanyaan Umum"
 			}
-		}
+		},
+		"faq": "Pertanyaan Umum",
+		"blog": "Berita",
+		"donate": "Donasi"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
@@ -34,5 +38,17 @@
 	"progress": {
 		"title": "Perkembangan",
 		"githubRepo": "Repositori Github"
+	},
+	"faq": {
+		"text": "Berikut adalah beberapa pertanyaan umum yang sering diajukan kepada kami untuk mendapatkan informasi yang mudah.",
+		"QAs": [
+			{
+				"question": "Apa itu Pretendo?"
+			}
+		],
+		"title": "Pertanyaan Umum"
+	},
+	"modals": {
+		"close": "Tutup"
 	}
 }
