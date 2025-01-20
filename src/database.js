@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const PNIDSchema = require('./schema/pnid');
 const config = require('../config.json');
+const PNIDSchema = require('./schema/pnid');
 
 const accountServerConfig = config.database.account;
 const { connection_string, options } = accountServerConfig;

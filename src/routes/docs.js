@@ -13,7 +13,7 @@ router.get('/', async (request, response) => {
 
 router.get('/welcome', async (request, response) => {
 	const renderData = {
-		currentPage: 'welcome',
+		currentPage: 'welcome'
 	};
 
 	response.render('docs/welcome', renderData);
@@ -21,7 +21,7 @@ router.get('/welcome', async (request, response) => {
 
 router.get('/install', async (request, response) => {
 	const renderData = {
-		currentPage: 'install',
+		currentPage: 'install'
 	};
 
 	response.render('docs/install', renderData);
@@ -29,11 +29,11 @@ router.get('/install', async (request, response) => {
 
 router.get([
 	'/search', // TODO - Deprecate search page
-	'/errors',
+	'/errors'
 ], async (_request, response) => {
 	const renderData = {
 		errorList: JSON.stringify(errorList),
-		currentPage: 'errors',
+		currentPage: 'errors'
 	};
 
 	response.render('docs/search', renderData);
@@ -44,7 +44,7 @@ router.get('/error', async (_request, response) => {
 });
 
 router.get('/:page', async (request, response, next) => {
-	const renderData = 	{};
+	const renderData = {};
 
 	const locale = response.locals.localeString;
 	const pageName = request.params.page;
@@ -63,12 +63,12 @@ router.get('/:page', async (request, response, next) => {
 
 router.get([
 	'/errors/:errorCode', // TODO - Deprecate "errors" route
-	'/error/:errorCode',
+	'/error/:errorCode'
 ], async (request, response, next) => {
 	const locale = response.locals.localeString;
 	const error = request.params.errorCode;
 
-	const [ sysmodule, errorCode ] = error.split('-');
+	const [sysmodule, errorCode] = error.split('-');
 
 	if (!errorCode) {
 		return next();

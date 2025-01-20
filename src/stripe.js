@@ -1,9 +1,9 @@
 const Stripe = require('stripe');
+const config = require('../config.json');
 const mailer = require('./mailer');
 const util = require('./util');
 const database = require('./database');
 const logger = require('./logger');
-const config = require('../config.json');
 
 const stripe = new Stripe(config.stripe.secret_key);
 
@@ -95,12 +95,12 @@ async function handleStripeEvent(event) {
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
 			// Canceling old subscription, do nothing but update webhook date and remove Discord roles
 			if (product.metadata.beta === 'true') {
-				util.removeDiscordMemberTesterRole(discordId).catch(error => {
+				util.removeDiscordMemberTesterRole(discordId).catch((error) => {
 					logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
 				});
 			}
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
 
@@ -123,7 +123,7 @@ async function handleStripeEvent(event) {
 			'connections.stripe.price_id': subscription.status === 'active' ? subscription.plan.id : null,
 			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
 			'connections.stripe.tier_name': subscription.status === 'active' ? product.name : null,
-			'connections.stripe.latest_webhook_timestamp': event.created,
+			'connections.stripe.latest_webhook_timestamp': event.created
 		};
 
 		if (product.metadata.beta === 'true') {
@@ -133,7 +133,7 @@ async function handleStripeEvent(event) {
 					updateData.server_access_level = 'test';
 				}
 
-				util.assignDiscordMemberTesterRole(discordId).catch(error => {
+				util.assignDiscordMemberTesterRole(discordId).catch((error) => {
 					logger.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
 				});
 			} else {
@@ -144,7 +144,7 @@ async function handleStripeEvent(event) {
 					updateData.server_access_level = 'prod';
 				}
 
-				util.removeDiscordMemberTesterRole(discordId).catch(error => {
+				util.removeDiscordMemberTesterRole(discordId).catch((error) => {
 					logger.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} | - ${error.message}`);
 				});
 			}
@@ -188,7 +188,7 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 
-			util.assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+			util.assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				logger.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
 
@@ -215,7 +215,7 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
 
@@ -242,7 +242,7 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
 
@@ -269,7 +269,7 @@ async function handleStripeEvent(event) {
 				logger.error(`Error sending email | ${customer.id}, ${customer.email}, ${pid} | - ${error.message}`);
 			}
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch(error => {
+			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				logger.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} | - ${error.message}`);
 			});
 

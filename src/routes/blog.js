@@ -1,11 +1,11 @@
-const { Router } = require('express');
-const logger = require('../logger');
-const router = new Router();
-
 const fs = require('fs');
 const path = require('path');
+const { Router } = require('express');
 const { marked } = require('marked');
 const matter = require('gray-matter');
+const logger = require('../logger');
+
+const router = new Router();
 
 const postList = () => {
 	const files = fs.readdirSync('blogposts');
@@ -23,7 +23,7 @@ const postList = () => {
 			const { data: postInfo } = matter(rawPost);
 			return {
 				slug,
-				postInfo,
+				postInfo
 			};
 		});
 
@@ -35,7 +35,7 @@ const postList = () => {
 };
 
 router.get('/', async (request, response) => {
-	const renderData = 	{
+	const renderData = {
 		postList
 	};
 
@@ -44,7 +44,6 @@ router.get('/', async (request, response) => {
 
 // RSS feed
 router.get('/feed.xml', async (request, response) => {
-
 	// Adds the pubDate and the cover_extension to the post array
 	const posts = postList().map((post) => {
 		post.postInfo.pubDate = new Date(post.postInfo.date).toUTCString();
@@ -60,10 +59,9 @@ router.get('/feed.xml', async (request, response) => {
 });
 
 router.get('/:slug', async (request, response, next) => {
-
-	const renderData = 	{
+	const renderData = {
 		layout: 'blog-opengraph',
-		postList,
+		postList
 	};
 
 	// Get the name of the post from the URL
@@ -73,13 +71,13 @@ router.get('/:slug', async (request, response, next) => {
 	let rawPost;
 	try {
 		rawPost = fs.readFileSync(path.join('blogposts', `${postName}.md`), 'utf-8');
-	} catch(err) {
+	} catch (err) {
 		logger.error(err);
 		next();
 		return;
 	}
 	// Convert the post info into JSON and separate it and the content
-	// eslint-disable-next-line prefer-const
+
 	let { data: postInfo, content } = matter(rawPost);
 	renderData.postInfo = postInfo;
 

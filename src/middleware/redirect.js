@@ -2,7 +2,7 @@ async function redirectMiddleware(request, response, next) {
 	if (request.path.startsWith('/account/logout')) {
 		return next();
 	}
-	
+
 	if (request.method === 'POST') {
 		request.redirect = request.body.redirect?.startsWith('/') ? request.body.redirect : null;
 	}

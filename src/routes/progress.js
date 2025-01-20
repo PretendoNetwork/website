@@ -1,10 +1,10 @@
 const { Router } = require('express');
-const router = new Router();
-
 const { getGithubProjectsCache, getStripeDonationCache } = require('../cache');
 
+const router = new Router();
+
 router.get('/', async (request, response) => {
-	const renderData = 	{
+	const renderData = {
 		progressLists: await getGithubProjectsCache(),
 		donationCache: await getStripeDonationCache()
 	};
