@@ -1,6 +1,6 @@
 const { GraphQLClient, gql } = require('graphql-request');
 const Stripe = require('stripe');
-const config = require('../config.json');
+const config = require('./config');
 const logger = require('./logger');
 
 const github = new GraphQLClient('https://api.github.com/graphql', {

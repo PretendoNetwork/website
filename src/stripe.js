@@ -1,5 +1,5 @@
 const Stripe = require('stripe');
-const config = require('../config.json');
+const config = require('./config');
 const mailer = require('./mailer');
 const util = require('./util');
 const database = require('./database');

@@ -10,8 +10,8 @@ const cache = require('../cache');
 const util = require('../util');
 const { handleStripeEvent } = require('../stripe');
 const logger = require('../logger');
-const config = require('../../config.json');
 const editorJSON = require('../json/miieditor.json');
+const config = require('../config');
 
 const { Router } = express;
 

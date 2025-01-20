@@ -6,7 +6,7 @@ const { marked } = require('marked');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
 const merge = require('lodash.merge');
-const config = require('../config.json');
+const config = require('./config');
 const logger = require('./logger');
 const baseLocale = require(`${__dirname}/../locales/en_US.json`);
 
