@@ -6,6 +6,8 @@
 	"scripts": {
 		"start": "node src/server.js",
 		"build": "npm run browserify",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
 		"browserify": "npm run browserify-miieditor && npm run browserify-reset-password",
 		"browserify-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
 		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
@@ -46,6 +48,8 @@
 		"stripe": "^9.9.0"
 	},
 	"devDependencies": {
-		"eslint": "^7.32.0"
+		"@pretendonetwork/eslint-config": "^0.0.3",
+		"eslint": "^9.18.0",
+		"globals": "^15.14.0"
 	}
 }
