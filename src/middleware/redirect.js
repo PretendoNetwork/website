@@ -6,7 +6,7 @@ function isValidRedirect(redirect) {
 	if (redirect.startsWith('http://') || redirect.startsWith('https://')) {
 		try {
 			const url = new URL(redirect);
-			return config.http.valid_redirection_domains.some(domain => url.hostname.endsWith(domain));
+			return config.http.allowed_redirection_suffixes.some(domain => url.hostname.endsWith(domain));
 		} catch {
 			return false;
 		}
