@@ -9,7 +9,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json',
+			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify({
 			password: passwordInput.value,
@@ -18,7 +18,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
 		})
 	})
 		.then(response => response.json())
-		.then(body => {
+		.then((body) => {
 			if (body.error) {
 				alert(`Error: ${body.error}. TODO: red error message thing`);
 			} else {

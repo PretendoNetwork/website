@@ -1,13 +1,13 @@
 const path = require('path');
+const crypto = require('crypto');
 const fs = require('fs-extra');
 const got = require('got');
-const crypto = require('crypto');
 const { marked } = require('marked');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
 const merge = require('lodash.merge');
+const config = require('./config');
 const logger = require('./logger');
-const config = require('../config.json');
 const baseLocale = require(`${__dirname}/../locales/en_US.json`);
 
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
@@ -34,14 +34,13 @@ function getLocale(locale) {
 }
 
 function getRawDocs(locale, subpath, pageName) {
-
 	const localePath = path.join(__dirname, '../docs', locale.replace('-', '_'), subpath, `${pageName}.md`);
 	const defaultPath = path.join(__dirname, '../docs', 'en_US', subpath, `${pageName}.md`);
 
 	if (fs.existsSync(localePath)) {
 		return {
 			content: parseDocs(fs.readFileSync(localePath, 'utf8')),
-			MDLocale: locale,
+			MDLocale: locale
 		};
 	} else if (fs.existsSync(defaultPath)) {
 		return {
@@ -77,7 +76,7 @@ function apiGetRequest(path, headers) {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
-			rejectUnauthorized: false, // Needed for self-signed certificates on localhost testing
+			rejectUnauthorized: false // Needed for self-signed certificates on localhost testing
 		},
 		headers
 	});
@@ -88,7 +87,7 @@ function apiPostRequest(path, headers, json) {
 		responseType: 'json',
 		throwHttpErrors: false,
 		https: {
-			rejectUnauthorized: false, // Needed for self-signed certificates on localhost testing
+			rejectUnauthorized: false // Needed for self-signed certificates on localhost testing
 		},
 		headers,
 		json
@@ -99,7 +98,7 @@ function apiDeleteRequest(path, headers, json) {
 	return got.delete(`${config.api_base}${path}`, {
 		throwHttpErrors: false,
 		https: {
-			rejectUnauthorized: false, // Needed for self-signed certificates on localhost testing
+			rejectUnauthorized: false // Needed for self-signed certificates on localhost testing
 		},
 		headers,
 		json
@@ -162,9 +161,9 @@ async function refreshLogin(request, response) {
 	request.cookies.token_type = tokens.token_type;
 }
 
-async function getUserAccountData(request, response, fromRetry=false) {
+async function getUserAccountData(request, response, fromRetry = false) {
 	const apiResponse = await apiGetRequest('/v1/user', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+		Authorization: `${request.cookies.token_type} ${request.cookies.access_token}`
 	});
 
 	if (apiResponse.statusCode !== 200 && fromRetry === true) {
@@ -180,9 +179,9 @@ async function getUserAccountData(request, response, fromRetry=false) {
 	return apiResponse.body;
 }
 
-async function updateDiscordConnection(discordUser, request, response, fromRetry=false) {
+async function updateDiscordConnection(discordUser, request, response, fromRetry = false) {
 	const apiResponse = await apiPostRequest('/v1/connections/add/discord', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+		Authorization: `${request.cookies.token_type} ${request.cookies.access_token}`
 	}, {
 		data: {
 			id: discordUser.id
@@ -202,7 +201,7 @@ async function updateDiscordConnection(discordUser, request, response, fromRetry
 
 async function removeDiscordConnection(request, response, fromRetry = false) {
 	const apiResponse = await apiDeleteRequest('/v1/connections/remove/discord', {
-		'Authorization': `${request.cookies.token_type} ${request.cookies.access_token}`
+		Authorization: `${request.cookies.token_type} ${request.cookies.access_token}`
 	});
 
 	if (apiResponse.statusCode !== 200 && fromRetry === true) {

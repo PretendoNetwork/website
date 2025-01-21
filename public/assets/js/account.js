@@ -7,7 +7,7 @@ editSettingsModalButtonClose?.addEventListener('click', () => {
 	editSettingsModal.classList.add('hidden');
 });
 
-document.addEventListener('click', event => {
+document.addEventListener('click', (event) => {
 	if (event.target.classList.contains('edit')) {
 		event.preventDefault();
 
@@ -15,7 +15,7 @@ document.addEventListener('click', event => {
 	}
 });
 
-serverSelectionSaveButton.addEventListener('click', event => {
+serverSelectionSaveButton.addEventListener('click', (event) => {
 	event.preventDefault();
 	const checkedInput = updateServerEnvironmentForm.querySelector('input:checked');
 
@@ -35,7 +35,7 @@ serverSelectionSaveButton.addEventListener('click', event => {
 			})
 		})
 			.then(response => response.json())
-			.then(json => {
+			.then((json) => {
 				if (!json.error) {
 					// TODO - Make this prettier
 					alert('Saved server environment');
@@ -44,7 +44,7 @@ serverSelectionSaveButton.addEventListener('click', event => {
 					alert('Failed to server environment');
 				}
 			})
-			.catch(error => {
+			.catch((error) => {
 				console.log(error);
 				// TODO - Make this prettier
 				alert('Failed to server environment');
