@@ -203,7 +203,7 @@ router.get('/connect/discord', requireLoginMiddleware, async (request, response)
 			scope: 'identify guilds',
 			grantType: 'authorization_code'
 		});
-	} catch (ignored) {
+	} catch {
 		response.cookie('error_message', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}

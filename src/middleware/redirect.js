@@ -7,7 +7,7 @@ function isValidRedirect(redirect) {
 		try {
 			const url = new URL(redirect);
 			return config.http.valid_redirection_domains.some(domain => url.hostname.endsWith(domain));
-		} catch (ignored) {
+		} catch {
 			return false;
 		}
 	}
