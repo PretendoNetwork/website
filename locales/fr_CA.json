@@ -1,0 +1,11 @@
+{
+	"nav": {
+		"faq": "FAQ",
+		"about": "À propos",
+		"account": "Compte",
+		"blog": "Blogue",
+		"accountWidget": {
+			"settings": "Paramètres"
+		}
+	}
+}

@@ -34,7 +34,7 @@ Once inserted, download the latest [Nimbus release](https://github.com/PretendoN
 
 Nimbus is available as both a 3DSX app and an installable CIA. The releases page offers downloads for both. Select the version you would like to use, or select the `combined.[version].zip` archive to use both.
 
-<img src="/assets/images/docs/install/3ds/zip-highlight.png" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/zip-highlight.png" alt="Screenshot of a GitHub release page with the file combined.[version].zip highlighted" width=100% height=auto/>
 
 Extract the contents of the zip archive to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
 

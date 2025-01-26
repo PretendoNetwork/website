@@ -1,11 +1,11 @@
 const { GraphQLClient, gql } = require('graphql-request');
 const Stripe = require('stripe');
+const config = require('./config');
 const logger = require('./logger');
-const config = require('../config.json');
 
 const github = new GraphQLClient('https://api.github.com/graphql', {
 	headers: {
-		Authorization: `bearer ${config.github.graphql_token}`,
+		Authorization: `bearer ${config.github.graphql_token}`
 	}
 });
 
@@ -82,7 +82,7 @@ let stripeDonationCache = {
 	sections: []
 };
 
-async function getGitHubProjectsV2(after='') {
+async function getGitHubProjectsV2(after = '') {
 	let projects = [];
 
 	const data = await github.request(getProjectsV2GQL, {
@@ -94,7 +94,7 @@ async function getGitHubProjectsV2(after='') {
 		projects.push({
 			id: node.id,
 			title: node.title,
-			url: node.repositories.nodes[0]?.url,
+			url: node.repositories.nodes[0]?.url
 		});
 	}
 
@@ -108,7 +108,7 @@ async function getGitHubProjectsV2(after='') {
 	return projects;
 }
 
-async function getGitHubProjectsV2Fields(id, after='') {
+async function getGitHubProjectsV2Fields(id, after = '') {
 	let fields = [];
 
 	const data = await github.request(getProjectsV2FieldsGQL, {

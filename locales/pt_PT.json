@@ -3,7 +3,7 @@
 		"faq": "Perguntas Frequentes",
 		"accountWidget": {
 			"logout": "Sair",
-			"settings": "Configurações"
+			"settings": "Definições"
 		},
 		"donate": "Doar",
 		"about": "Sobre",
@@ -48,7 +48,6 @@
 		},
 		"settings": {
 			"upgrade": "Aprimorar conta",
-			"downloadFiles": "Descarregarr ficheiros de conta",
 			"settingCards": {
 				"gender": "Gênero",
 				"newsletterPrompt": "Receba atualizações do projeto via e-mail (pode desinscrever-se a qualquer momento)",
@@ -81,7 +80,6 @@
 				"no_newsletter_notice": "Notícias não estão disponíveis no momento. Volte novamente depois",
 				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do utilizador não está disponível no momento. Atualize as configurações do utilizador do seu console de jogos vinculado"
 			},
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível"
 		},
 		"banned": "Banido",
@@ -146,7 +144,7 @@
 	"hero": {
 		"subtitle": "Servidores de jogos",
 		"title": "Recriados",
-		"text": "O Pretendo é uma reposição gratuíta e de código aberto para os servidores do Wii U e Nintendo 3DS, permitindo a conectividade online para todos, mesmo após o encerramento dos servidores originais",
+		"text": "A Pretendo é uma substituição gratuita e de código aberto para os servidores da Nintendo 3DS e da Wii U, permitindo uma conexão online para todos, mesmo depois dos servidores originais serem descontinuados.",
 		"buttons": {
 			"readMore": "Saiba mais"
 		}
@@ -154,8 +152,8 @@
 	"aboutUs": {
 		"title": "Sobre nós",
 		"paragraphs": [
-			"Utilizando o design de sala limpa, Pretendo é um projeto de código aberto que visa recriar a Nintendo Network para o Wii U e para família de consoles Nintendo 3DS.",
-			"Como os nossos serviços serão gratuitos e de código aberto, eles podem continuar existindo por muito mais tempo após o inevitável encerramento da Nintendo Network."
+			"A Pretendo é um projeto open-source que pretende recriar a Nintendo Network para a 3DS e a Wii U, ao utilizar engenharia reversa \"clean-room\".",
+			"Sendo que os nossos serviços são grátis e de código-aberto, eles podem assim existir após o inevitável encerramento da Nintendo Network."
 		]
 	},
 	"progress": {
@@ -166,7 +164,7 @@
 		"QAs": [
 			{
 				"question": "O que é Pretendo?",
-				"answer": "Pretendo é uma reposição de código aberto para a Nintendo Network que visa fornecer servidores personalizados para o Wii U e para a família de consoles Nintendo 3DS. Nosso objetivo é preservar as funcionalidades online desses consoles para permitir que os jogadores continuem experienciando os jogos favoritos na capacidade máxima deles."
+				"answer": "A Pretendo é uma substituição de código aberto à Nintendo Network que pretende criar servidores para a Wii U e a família de consolas 3DS. O nosso objetivo é preservar as capacidades online destas consolas, permitindo que os jogadores possam continuar a jogar os seus jogos favoritos da Wii U e da 3DS da melhor maneira possível."
 			},
 			{
 				"question": "Os meus NNIDs existentes funcionarão na Pretendo?",
@@ -174,7 +172,7 @@
 			},
 			{
 				"question": "Como uso a Pretendo?",
-				"answer": "Pretendo atualmente não está disponível para uso pelo público geral. No entanto, quando estiver pronto, poderá usar a Pretendo executando nosso patcher homebrew no seu console."
+				"answer": "A Pretendo não está atualmente num estado pronto para o uso público. No entanto, quando estiver, poderás usar a Pretendo apenas ao abrir o nosso patcher na tua consola."
 			},
 			{
 				"question": "Sabe quando recurso/serviço estará pronto?",

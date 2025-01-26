@@ -1,5 +1,5 @@
-const express = require('express');
 const crypto = require('crypto');
+const express = require('express');
 const DiscordOauth2 = require('discord-oauth2');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
@@ -10,8 +10,8 @@ const cache = require('../cache');
 const util = require('../util');
 const { handleStripeEvent } = require('../stripe');
 const logger = require('../logger');
-const config = require('../../config.json');
-const editorJSON =  require('../json/miieditor.json');
+const editorJSON = require('../json/miieditor.json');
+const config = require('../config');
 
 const { Router } = express;
 
@@ -60,7 +60,7 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 		// If no Discord account linked, generate an auth URL
 		const discordAuthURL = discordOAuth.generateAuthUrl({
 			scope: ['identify', 'guilds'],
-			state: crypto.randomBytes(16).toString('hex'),
+			state: crypto.randomBytes(16).toString('hex')
 		});
 
 		renderData.discordAuthURL = discordAuthURL;
@@ -152,12 +152,37 @@ router.get('/logout', async (_request, response) => {
 });
 
 router.get('/forgot-password', async (request, response) => {
-	response.render('account/forgot-password');
+	const renderData = {
+		input: request.cookies.input,
+		success_message: request.cookies.success_message,
+		error_message: request.cookies.error_message
+	};
+
+	response.clearCookie('input', { domain: '.pretendo.network' });
+
+	response.render('account/forgot-password', renderData);
 });
 
 router.post('/forgot-password', async (request, response) => {
-	const apiResponse = await util.apiPostRequest('/v1/forgot-password', {}, request.body);
-	response.json(apiResponse.body);
+	const { input, 'h-captcha-response': hCaptchaResponse } = request.body;
+
+	response.cookie('input', input, { domain: '.pretendo.network' });
+
+	try {
+		await util.forgotPassword({
+			input,
+			hCaptchaResponse
+		});
+
+		response.clearCookie('input', { domain: '.pretendo.network' });
+
+		response.cookie('success_message', 'An email has been sent.', { domain: '.pretendo.network' });
+
+		response.redirect(request.redirect || '/account/forgot-password');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account/forgot-password');
+	}
 });
 
 router.get('/reset-password', async (request, response) => {
@@ -176,9 +201,9 @@ router.get('/connect/discord', requireLoginMiddleware, async (request, response)
 		tokens = await discordOAuth.tokenRequest({
 			code: request.query.code,
 			scope: 'identify guilds',
-			grantType: 'authorization_code',
+			grantType: 'authorization_code'
 		});
-	} catch (error) {
+	} catch {
 		response.cookie('error_message', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
@@ -266,7 +291,7 @@ router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 	renderData.tiers = products
 		.filter(product => product.active)
 		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
-		.map(product => {
+		.map((product) => {
 			const price = prices.find(price => price.id === product.default_price);
 			const perks = [];
 
@@ -284,7 +309,7 @@ router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 				name: product.name,
 				description: product.description,
 				perks,
-				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 			};
 		});
 
@@ -333,8 +358,8 @@ router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request,
 			line_items: [
 				{
 					price: priceId,
-					quantity: 1,
-				},
+					quantity: 1
+				}
 			],
 			customer: customer.id,
 			mode: 'subscription',
@@ -366,9 +391,9 @@ router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, respo
 
 			const updateData = {
 				'connections.stripe.subscription_id': null,
-				'connections.stripe.price_id':  null,
+				'connections.stripe.price_id': null,
 				'connections.stripe.tier_level': 0,
-				'connections.stripe.tier_name': null,
+				'connections.stripe.tier_name': null
 			};
 
 			if (pnid.get('access_level') < 2) {

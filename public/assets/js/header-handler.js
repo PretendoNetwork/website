@@ -1,5 +1,3 @@
-/* eslint-disable no-undef, no-unused-vars */
-
 const header = document.querySelector('header');
 const dropdownButtonWrapper = document.querySelector('.dropdown-button-wrapper');
 const dropdown = document.querySelector('header div.dropdown');
@@ -68,10 +66,9 @@ dropdownAnchors.forEach((a) => {
 	});
 });
 
-
 // make the header background transparent if near the top of the page
 function makeHeaderBackgroundTransparent() {
-	if(window.pageYOffset < 100) {
+	if (window.pageYOffset < 100) {
 		header.classList.add('transparent');
 	} else {
 		header.classList.remove('transparent');
@@ -83,7 +80,7 @@ window.addEventListener('scroll', () => {
 });
 
 desktopDropdownBtns.forEach((btn) => {
-	[ 'click', 'mouseover' ].forEach((event) => {
+	['click', 'mouseover'].forEach((event) => {
 		btn.addEventListener(event, () => {
 			const id = btn.id.replace('-button', '');
 			navbarDropdownHandler(id);
@@ -114,7 +111,7 @@ dropdown.addEventListener('mouseleave', (e) => {
 });
 
 // Account widget handler
-const userWidgetToggle = document.querySelector('.user-widget-toggle') ;
+const userWidgetToggle = document.querySelector('.user-widget-toggle');
 const userWidget = document.querySelector('.user-widget');
 
 // Open widget on click, close locale dropdown
@@ -159,7 +156,7 @@ localeOptionsList.forEach((option) => {
 
 // close all dropdowns on scroll
 document.addEventListener('scroll', () => {
-	localeDropdownOptions.forEach((el) => el.classList.remove('active'));
+	localeDropdownOptions.forEach(el => el.classList.remove('active'));
 	localeDropdownToggle.classList.remove('active');
 
 	userWidget?.classList.remove('active');
@@ -180,9 +177,9 @@ document.addEventListener('click', (e) => {
 
 	if (
 		userWidget == targetElement ||
-	userWidget?.contains(targetElement) ||
-	userWidgetToggle == targetElement ||
-	userWidgetToggle?.contains(targetElement)
+		userWidget?.contains(targetElement) ||
+		userWidgetToggle == targetElement ||
+		userWidgetToggle?.contains(targetElement)
 	) {
 		found = true;
 		localeDropdownToggle.classList.remove('active');

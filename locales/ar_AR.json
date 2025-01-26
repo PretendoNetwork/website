@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "عنا",
+		"about": "عن",
 		"faq": "أسئلة",
 		"docs": "دليل",
 		"credits": "الفريق",
@@ -137,8 +137,6 @@
 	},
 	"account": {
 		"settings": {
-			"downloadFilesDescription": "(لن يعمل على شبكة نينتندو)",
-			"downloadFiles": "تحميل ملفات الحساب",
 			"settingCards": {
 				"profile": "الملف الشخصي",
 				"nickname": "لقب",

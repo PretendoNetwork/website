@@ -3,13 +3,13 @@ const buttons = {
 	unsubModal: {
 		show: document.getElementById('unsubModalShowButton'),
 		close: document.getElementById('unsubModalCloseButton'),
-		confirm: document.getElementById('unsubModalConfirmButton'),
+		confirm: document.getElementById('unsubModalConfirmButton')
 	},
 	switchTierModal: {
 		show: document.getElementById('switchTierShowButton'),
 		close: document.getElementById('switchTierCloseButton'),
-		confirm: document.getElementById('switchTierConfirmButton'),
-	},
+		confirm: document.getElementById('switchTierConfirmButton')
+	}
 };
 
 const currentTierID = document.querySelector('form').dataset.currentTier || undefined;
@@ -52,7 +52,7 @@ if (currentTierElement) {
 }
 
 // If a tier is selected, conditionally enable the submit button.
-document.querySelector('form').addEventListener('change', function(e) {
+document.querySelector('form').addEventListener('change', function (e) {
 	e.preventDefault();
 
 	// If the selected tier is the current tier, set the button to disabled. Else we enable the button
@@ -60,7 +60,7 @@ document.querySelector('form').addEventListener('change', function(e) {
 });
 
 // handle the submit button
-buttons.submit.addEventListener('click', function(e) {
+buttons.submit.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	// If the user is already subscribed to another tier, we show the confirm modal, else if this is a new subscription we submit the form.
@@ -77,7 +77,7 @@ buttons.submit.addEventListener('click', function(e) {
 	}
 });
 
-buttons.unsubModal.show.addEventListener('click', function(e) {
+buttons.unsubModal.show.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	const tierNameSpan = document.querySelector('#unsub .modal-caption span');
@@ -87,27 +87,27 @@ buttons.unsubModal.show.addEventListener('click', function(e) {
 	document.body.classList.add('modal-open');
 	document.querySelector('.modal-wrapper#unsub').classList.remove('hidden');
 });
-buttons.unsubModal.close.addEventListener('click', function(e) {
+buttons.unsubModal.close.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	// Hide the unsubscribe modal
 	document.body.classList.remove('modal-open');
 	document.querySelector('.modal-wrapper#unsub').classList.add('hidden');
 });
-buttons.unsubModal.confirm.addEventListener('click', function(e) {
+buttons.unsubModal.confirm.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	submitForm(true);
 });
 
-buttons.switchTierModal.close.addEventListener('click', function(e) {
+buttons.switchTierModal.close.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	// Hide the switch tier modal
 	document.body.classList.remove('modal-open');
 	document.querySelector('.modal-wrapper#switchtier').classList.add('hidden');
 });
-buttons.switchTierModal.confirm.addEventListener('click', function(e) {
+buttons.switchTierModal.confirm.addEventListener('click', function (e) {
 	e.preventDefault();
 
 	submitForm(false);

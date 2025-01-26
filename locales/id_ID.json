@@ -1,0 +1,38 @@
+{
+	"nav": {
+		"about": "Tentang",
+		"docs": "Dokumentasi",
+		"credits": "Kredit",
+		"progress": "Kemajuan",
+		"account": "Akun",
+		"accountWidget": {
+			"settings": "Pengaturan",
+			"logout": "Keluar"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Berkenalan dengan Tim",
+				"progress": "Lihat kemajuan dan tujuan proyek"
+			}
+		}
+	},
+	"hero": {
+		"title": "Dibuat ulang",
+		"subtitle": "Server gim",
+		"text": "Pretendo adalah sebuah pengganti server Nintendo yang gratis dan dengan sumber terbuka untuk 3DS dan Wii U, yang memungkinkan konektivitas online untuk semua, bahkan setelah server aslinya dihentikan",
+		"buttons": {
+			"readMore": "Baca lebih lanjut"
+		}
+	},
+	"aboutUs": {
+		"title": "Tentang kami",
+		"paragraphs": [
+			"Pretendo adalah proyek sumber terbuka dengan tujuan untuk membuat ulang Nintendo Network untuk 3DS dan Wii U menggunakan rekaya terbalik ruang bersih.",
+			"Karena layanan kami bersifat gratis dan sumber terbuka, layanan tersebut akan tetap bertahan lama setelah penutupan Nintendo Network yang pasti akan terjadi."
+		]
+	},
+	"progress": {
+		"title": "Perkembangan",
+		"githubRepo": "Repositori Github"
+	}
+}

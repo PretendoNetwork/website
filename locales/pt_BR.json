@@ -141,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "As últimas atualizações em partes condensadas. Se você quiser ver atualizações mais frequentes, considere <a href=\"/account/upgrade\" target=\"_blank\">nos apoiar</a>.",
 		"published": "Publicado por",
 		"publishedOn": "em"
 	},
@@ -200,8 +200,6 @@
 				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do usuário não está disponível no momento. Atualize as configurações do usuário do seu console de jogos vinculado",
 				"signInSecurity": "Acesso e segurança"
 			},
-			"downloadFiles": "Baixar arquivos de conta",
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível",
 			"upgrade": "Aprimorar conta"
 		},

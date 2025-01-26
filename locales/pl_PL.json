@@ -141,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "Najnowsze aktualizacje w skondensowanych fragmentach. Jeśli chcesz otrzymywać częstsze aktualizacje, rozważ <a href=\"/account/upgrade\" target=\"_blank\">wsparcie nas</a>.",
 		"published": "Opublikowany przez",
 		"publishedOn": "dnia"
 	},
@@ -232,8 +232,6 @@
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
 			},
-			"downloadFiles": "Pobierz pliki konta",
-			"downloadFilesDescription": "(nie będzie działać z Nintendo Network)",
 			"upgrade": "Ulepsz konto"
 		},
 		"accountLevel": [

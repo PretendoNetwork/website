@@ -1,7 +1,7 @@
 {
 	"nav": {
-		"about": "Acerca de",
-		"faq": "FAQ",
+		"about": "Acerca de nosotros",
+		"faq": "Preguntas frecuentes",
 		"docs": "Documentación",
 		"credits": "Créditos",
 		"progress": "Progreso",
@@ -9,23 +9,23 @@
 		"account": "Cuenta",
 		"accountWidget": {
 			"settings": "Ajustes",
-			"logout": "Cerrar Sesión"
+			"logout": "Cerrar sesión"
 		},
 		"donate": "Donar",
 		"dropdown": {
 			"captions": {
 				"credits": "Conoce al equipo",
-				"about": "Sobre el projecto",
-				"blog": "Nuestras últimas actualizaciones, resumidas",
+				"about": "Sobre el proyecto",
+				"blog": "Un resumen de nuestras últimas actualizaciones",
 				"progress": "Mira el progreso del proyecto y sus metas",
-				"faq": "Preguntas más preguntadas"
+				"faq": "Preguntas frecuentes"
 			}
 		}
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
 		"title": "Recreados",
-		"text": "Pretendo es un reemplazamiento gratuito y de código abierto de los servidores de Nintendo para 3DS y Wii U que permite la comunicación en línea incluso después del cierre de los servidores oficiales",
+		"text": "Pretendo es un reemplazo gratuito y de código abierto de los servidores de Nintendo para 3DS y Wii U que permite la comunicación en línea incluso después del cierre de los servidores oficiales",
 		"buttons": {
 			"readMore": "Leer más"
 		}
@@ -55,33 +55,40 @@
 			},
 			{
 				"question": "¿Cómo uso Pretendo?",
-				"answer": "Pretendo no está actualmente en un estado adecuado para el uso público. Sin embargo, en cuanto esté listo podrás usar Pretendo simplemente cargando nuestro parcheador homebrew en tu consola."
+				"answer": "Para comenzar a utilizar Pretendo Network en 3DS, Wii U o emuladores, consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a>."
 			},
 			{
 				"question": "¿Sabéis cuándo determinada función/servicio estará listo/a?",
 				"answer": "No. Muchos/as funciones/servicios de Pretendo son desarrolladas independientemente (por ejemplo, un desarrollador puede estar trabajando en Miiverse mientras otro se encarga de las Cuentas y los Amigos) y, por lo tanto, no podemos dar una ETA exacta de cuánto puede tardar en estar listo."
 			},
 			{
+				"question": "¿Cuándo añadirán más juegos?",
+				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
+			},
+			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Pretendo soporta cualquier cliente que puede interactuar con el Nintendo Network. Hasta ahora, el único emulador con este tipo de funcionalidad es Cemu. Cemu 2.0 oficialmente soporta a Pretendo, en las opciones de cuenta en línea en el emulador . Para obtener más información de cómo empezar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra no soporta verdadero juego en línea, por eso no funciona con Pretendo, y no demuestra señales de que soportará verdadero juego en linea. Mikage, un emulador de 3DS para dispositivos móviles, podría proporcionar soporte en el futuro aunque esto esta lejos de ser cierto."
+				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
 			},
 			{
-				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?",
-				"answer": "No tenemos acceso a los baneos de Nintendo Network motivo por el nadie estará baneado en nuestros servidores al principio. Sin embargo, tendremos reglas a seguir al acceder a nuestros servicios y no hacerlo resultará en un baneo."
-			},
-			{
-				"question": "¿Pretendo soportará Wii/Switch?",
-				"answer": "La Wii ya tiene servidores en línea personalizados de parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con Switch ya que sus servidores son de pago y completamente diferentes a los de Nintendo Network."
+				"question": "¿Pretendo será compatible con la Wii/Switch?",
+				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
 				"question": "¿Necesitaré modificar mi consola para conectarme?",
-				"answer": "Sí, necesitas modificar tu consola para conectarte. Sin embargo, en Wii U solo necesitas acceso al Homebrew Launcher (p.e. Haxchi, Coldboot Haxchi, o el exploit web). La información sobre como conectarse con una 3DS llegará posteriormente."
+				"answer": "Para obtener la mejor experiencia en consolas necesitarás modificar tu sistema, especificamente Aroma en Wii U y Luma3DS en 3DS. No obstante, en Wii U, el metodo sin modificación SSSL también está disponible con funcionalidad limitada. Consulte nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
+			},
+			{
+				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?"
+			},
+			{
+				"question": "¿Puedo usar trucos o mods en línea con Pretendo?",
+				"answer": "Solo en partidas privadas. Ganar una ventaja injusta o interrumpir la experiencia online de gente que no ha dado su consentimiento (como en partidas públicas) es una ofensa baneable. Aplicamos regularmente baneos tanto de cuentas como de consolas en Wii U y 3DS. Pretendo usa medidas de seguridad extra que hacen inefectivos los metodos tradicionales de esquivar el ban como cambiar tu número de serie."
 			}
 		]
 	},
 	"showcase": {
 		"title": "Qué hacemos",
-		"text": "Nuestro proyecto se compone de muchas cosas. Estas son algunas de ellas.",
+		"text": "Nuestro proyecto tiene muchos componentes. Estos son algunos de ellos.",
 		"cards": [
 			{
 				"title": "Servidores de juegos",
@@ -89,21 +96,174 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Un version re-imaginada de Miiverse, como si hubiera sido creada en la era moderna."
+				"caption": "Un versión reimaginada de Miiverse, como si hubiera sido creado hoy en día."
 			},
 			{
-				"title": "Soporte para Cemu",
+				"title": "Compatibilidad con Cemu",
 				"caption": "¡Juega a tus títulos de Wii U favoritos incluso sin una consola!"
 			}
 		]
 	},
 	"credits": {
 		"title": "Equipo",
-		"text": "Conoce al equipo tras el proyecto"
+		"text": "Conoce al equipo tras el proyecto",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Dueño del proyecto y desarrollador principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"github": "https://github.com/CaramelKat",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Investigación y desarrollo de Miiverse",
+				"picture": "https://github.com/caramelkat.png"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky",
+				"caption": "Investigación de Wii U y desarrollo de parches"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"name": "SuperMarioDaBom",
+				"caption": "Investigación de sistemas y arquitectura del servidor",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Desarrollo web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Investigación de sistemas y desarrollo del servidor",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"caption": "Conservacionista y arquitectura del servidor",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Investigación de sistemas y desarrollo del servidor",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Desarrollo de web y servidor",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps y trabajo comunitario",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "Desarrollo y optimización de servidor",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale",
+				"name": "wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Desarrollo e investigación de parches en 3DS",
+				"github": "https://github.com/TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Agradecimientos especiales",
-		"text": "Sin ellos, Pretendo no sería lo que es hoy."
+		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
+		"people": [
+			{
+				"name": "Contribuidores en GitHub",
+				"caption": "Traducciones y otras contribuciones",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"picture": "https://github.com/superwhiskers.png",
+				"name": "superwhiskers",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"github": "https://github.com/Stary2001",
+				"caption": "Desarrollo en 3DS y disección en NEX",
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png"
+			},
+			{
+				"caption": "Intercambio de información de Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub",
+				"name": "rverse"
+			},
+			{
+				"name": "Kinnay",
+				"caption": "Investigación de estructuras de datos de Nintendo",
+				"special": "Agradecimientos especiales",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Iconos del Editor Mii y reacciones de Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Investigación de consolas y servidores de juegos",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Desarrollo de parches en Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast",
+				"caption": "Creador de parches 3DS"
+			},
+			{
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22",
+				"name": "Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Mantente al día",
@@ -125,7 +285,7 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Soy Bandwidth el Mapache y me encanta morder los cables que van a los servidores de Pretendo Network. ¡mmm!",
-			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto; pues me alegro de anunciar que mi tía trabaja en Nintendo y me dijo que no pasa nada.",
+			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto. Me alegra anunciar que mi tía trabaja en Nintendo y me dijo que no pasaba nada.",
 			"Webkit v537 es la mejor versión de Webkit para la Wii U. No, no vamos a portear Chrome a la Wii U",
 			"¡No puedo esperar a que el reloj llegue a la 03:14:08 UTC el 19 de enero de 2038!",
 			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi GamePad no se conecta a mi Wii.",
@@ -136,7 +296,7 @@
 		]
 	},
 	"progressPage": {
-		"title": "Progreso",
+		"title": "Nuestro Progreso",
 		"description": "¡Comprueba el progreso y las metas pendientes! (Se actualiza cada hora aproximadamente, así que no refleja TODAS nuestras metas o el progreso total)"
 	},
 	"blogPage": {
@@ -146,7 +306,7 @@
 		"publishedOn": "en"
 	},
 	"localizationPage": {
-		"title": "Vamos a localizar",
+		"title": "Vamos a traducir",
 		"description": "Pega un enlace a una localización JSON accesible pulicamente para probarla en el sitio",
 		"instructions": "Ver instrucciones de localización",
 		"fileInput": "Archivo a probar",
@@ -171,11 +331,11 @@
 		"search": {
 			"title": "¿Tienes un código de error?",
 			"caption": "¡Escribe el código de error del cuadro para obtener información de tu problema!",
-			"label": "Codigo de error",
+			"label": "Código de error",
 			"no_match": "No se encontraron coincidencias"
 		},
 		"sidebar": {
-			"getting_started": "Empezando",
+			"getting_started": "Para empezar",
 			"install_extended": "Instalar Pretendo",
 			"search": "Buscar",
 			"juxt_err": "Codigos de error - Juxt",
@@ -207,7 +367,7 @@
 				"timezone": "Zona horaria",
 				"serverEnv": "Entorno del servidor",
 				"beta": "Beta",
-				"hasAccessPrompt": "Tu rango actual tiene acceso a los servidores beta. Cool!",
+				"hasAccessPrompt": "Tu rango actual tiene acceso a los servidores beta. ¡Genial!",
 				"signInSecurity": "Inicio de sesión y seguridad",
 				"email": "Correo electrónico",
 				"password": "Contraseña",
@@ -226,12 +386,10 @@
 				"nickname": "Apodo",
 				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior.",
 				"userSettings": "Ajustes de usuario",
-				"no_signins_notice": "El historial de inicios de sesión no es vigilado. Vuelve más tarde!",
-				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelva a consultar más tarde",
+				"no_signins_notice": "El historial de inicios de sesión no es vigilado. ¡Vuelve más tarde!",
+				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelve a intentarlo más tarde",
 				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
-			"downloadFiles": "Descargar datos de cuenta",
-			"downloadFilesDescription": "(no funcionara en Nintendo Network)",
 			"upgrade": "Subir de rango",
 			"unavailable": "No disponible"
 		},
@@ -262,7 +420,7 @@
 		"month": "mes",
 		"tierSelectPrompt": "Selecciona un rango",
 		"unsub": "Cancelar suscripción",
-		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá el acceso a las ventajas asociadas con ese nivel.",
+		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá <span>inmediatamente</span> el acceso a las ventajas asociadas con ese nivel.",
 		"unsubConfirm": "Cancelar suscripción",
 		"changeTier": "Cambiar rango",
 		"changeTierPrompt": "¿Está seguro de que desea darse de baja de <span class=\"oldtier\">oldtiername</span> y suscribirse a <span class=\"newtier\">newtiername</span>?",
@@ -278,5 +436,8 @@
 		"cancel": "Cancelar",
 		"confirm": "Confirmar",
 		"close": "Cerrar"
+	},
+	"notfound": {
+		"description": "¡Oops! No hemos podido encontrar esta página."
 	}
 }

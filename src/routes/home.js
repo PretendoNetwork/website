@@ -1,10 +1,10 @@
 const { Router } = require('express');
-const router = new Router();
-
 const { getGithubProjectsCache } = require('../cache');
 
+const router = new Router();
+
 router.get('/', async (request, response) => {
-	const renderData = 	{};
+	const renderData = {};
 
 	const githubProjectsCache = await getGithubProjectsCache();
 
@@ -48,7 +48,7 @@ router.get('/', async (request, response) => {
 	};
 
 	// Calculates individual completion percentages and progress states
-	githubProjectsCache.sections.forEach(section => {
+	githubProjectsCache.sections.forEach((section) => {
 		const { todo, in_progress, done } = section.cards;
 
 		// Calculates the completion percentage of the project, and sums it to the total
@@ -57,7 +57,7 @@ router.get('/', async (request, response) => {
 
 		const sectionTitle = `${section.title}  [${Math.floor(sectionCompletionPercentage * 100)}%]`;
 
-		switch(sectionCompletionPercentage) {
+		switch (sectionCompletionPercentage) {
 			case 0:
 				totalProgress.cards.todo.push(sectionTitle);
 				break;
