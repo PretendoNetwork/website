@@ -6,16 +6,20 @@ You can connect your Wii U to Pretendo using one of 2 methods. Inkay is recommen
 - [SSSL (hackless)](#sssl)
 
 # Inkay
+
 **Pros:**
+
 - All services supported
 - Contains additional features and patches
 - Works regardless of ISP
 - Easy toggle on and off
 
 **Cons:**
+
 - Requires homebrew
 
 ## Installation
+
 <div class="tip">
 	ℹ️ This part of the guide assumes that you have a <b>Homebrewed System</b> using <b>Aroma</b>.
 	If you don't yet, you can follow this <a href="https://wiiu.hacks.guide/" target="_blank">guide to set up homebrew on your Wii U</a>.
@@ -23,7 +27,7 @@ You can connect your Wii U to Pretendo using one of 2 methods. Inkay is recommen
 
 Locate the `Aroma Updater` icon on your Wii U Menu and open it.
 
-<img src="/assets/images/docs/install/wiiu/aroma/aroma-updater-icon.jpg" alt="Screenshot of Wii U Menu with the Aroma Updater icon highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/aroma-updater-icon.webp" alt="Screenshot of Wii U Menu with the Aroma Updater icon highlighted" width="100%">
 
 On the welcome screen, press A to check for updates.
 
@@ -56,75 +60,79 @@ Wait for the installation to complete, then press A to restart your console.
 
 Once the console restarts, you'll see a notification in the top-left informing you that Pretendo will be used. The notification disappears after a few moments.
 
-<img src="/assets/images/docs/install/wiiu/aroma/pretendo-notification.jpg" alt="The Wii U user selection screen, with 'Using Pretendo Network' overlaid in the top-left" width="100%">
+<img src="/assets/images/docs/install/wiiu/aroma/pretendo-notification.webp" alt="The Wii U user selection screen, with 'Using Pretendo Network' overlaid in the top-left" width="100%">
 
 Inkay is now installed and working. You can proceed to [PNID Setup](#pnid-setup) to create an account.
 
 # SSSL
+
 **Pros:**
+
 - Does not require homebrew
 - Very easy to setup
 
 **Cons:**
+
 - Only a subset of services are supported
 - Lacks additional features and patches
 - Does not work on some ISPs
 - Hard to switch on or off
 
-SSSL is a (limited) hackless method of accessing most services by exploiting a bug in the Wii U's SSL module. All Nintendo Network games produced by Nintendo are supported by SSSL, as are the ***in-game*** Miiverse features. The main Miiverse app, in-game ***posting*** app, and any game which uses its own SSL stack (YouTube, WATCH_DOGS, etc.), are ***NOT*** supported by this method, as they are unaffected by the SSL exploit.
+SSSL is a (limited) hackless method of accessing most services by exploiting a bug in the Wii U's SSL module. All Nintendo Network games produced by Nintendo are supported by SSSL, as are the **_in-game_** Miiverse features. The main Miiverse app, in-game **_posting_** app, and any game which uses its own SSL stack (YouTube, WATCH*DOGS, etc.), are \*\*\_NOT*\*\* supported by this method, as they are unaffected by the SSL exploit.
 
 ## Installation
+
 <div class="tip">
 	ℹ️ System Settings, and therefore SSSL, requires a Wii U GamePad to use on unmodified systems.
 </div>
 
 Locate the `System Settings` icon on your Wii U Menu and open it.
 
-<img src="/assets/images/docs/install/wiiu/sssl/system-settings.jpg" alt="The Wii U Menu, with the System Settings icon highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/system-settings.webp" alt="The Wii U Menu, with the System Settings icon highlighted" width="100%">
 
 Open the Internet category.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings.jpg" alt="The System Settings app, with the Internet category highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings.webp" alt="The System Settings app, with the Internet category highlighted" width="100%">
 
 Select `Connect to the Internet`.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-connect.jpg" alt="The System Settings app, with the Connect to the Internet button highlighted" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-connect.webp" alt="The System Settings app, with the Connect to the Internet button highlighted" width="100%">
 
 Select `Connection List` in the top-right.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-scan.jpg" alt="The Internet Connection Setup panel. In the top-right is a Connection List button (X)" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-settings-scan.webp" alt="The Internet Connection Setup panel. In the top-right is a Connection List button (X)" width="100%">
 
 Locate the connection with a "Wii U" logo. This is the one your system will use by default. Press A to edit it.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-list.jpg" alt="A list of internet connections. 'Wired Connection' is marked with a Wii U and Wii logo, and is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-list.webp" alt="A list of internet connections. 'Wired Connection' is marked with a Wii U and Wii logo, and is highlighted." width="100%">
 
 Select `Change Settings`.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-change.jpg" alt="A list of options. 'Change Settings' is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-change.webp" alt="A list of options. 'Change Settings' is highlighted." width="100%">
 
 Navigate to the right and down to the `DNS` button, and press A to edit.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-button.jpg" alt="The second page of the Wii U connection editor. DNS is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-button.webp" alt="The second page of the Wii U connection editor. DNS is highlighted." width="100%">
 
 Select `Do not auto-obtain`. We will provide our own DNS for SSSL to work.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-obtain.jpg" alt="Two options for 'Automatically obtain DNS?' 'Do not auto-obtain' is highlighted." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-obtain.webp" alt="Two options for 'Automatically obtain DNS?' 'Do not auto-obtain' is highlighted." width="100%">
 
 This brings up the DNS input. We will change both the Primary and Secondary DNS settings.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-editor.jpg" alt="Two input fields for Primary and Secondary DNS." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-editor.webp" alt="Two input fields for Primary and Secondary DNS." width="100%">
 
 For the Primary DNS, enter `88.198.140.154`. This is the SSSL server.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-primary.jpg" alt="'Enter the primary DNS' field, with 88.198.140.154 - the SSSL server - input." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-primary.webp" alt="'Enter the primary DNS' field, with 88.198.140.154 - the SSSL server - input." width="100%">
 
 For the Secondary DNS, enter `9.9.9.9` (or another public DNS of your choice). This will serve as a fallback if Pretendo's SSSL server should go offline, allowing your console to still access the Internet. If Pretendo is offline and the fallback is used, however, the console will access Nintendo Network rather than Pretendo Network. If this is undesirable to you, leave this field blank.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-secondary.jpg" alt="'Enter the secondary DNS' field, with 9.9.9.9 - a public DNS server - input." width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-secondary.webp" alt="'Enter the secondary DNS' field, with 9.9.9.9 - a public DNS server - input." width="100%">
 
 Review the final settings and ensure you typed them correctly. The Wii U will add leading zeroes to each number - this is okay. If they are correct, press Confirm.
 
-<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-done.jpg" width="100%">
+<img src="/assets/images/docs/install/wiiu/sssl/internet-connection-dns-done.webp" width="100%">
 
 Press B to save the connection. You may perform a connection test and set the connection as default. Then, press B until System Settings exits.
 
@@ -133,6 +141,7 @@ SSSL is now installed and working. You can proceed to [PNID Setup](#pnid-setup) 
 To disconnect from Pretendo Network (e.g. to access the Nintendo eShop) repeat this process, but select `Auto-obtain` for the DNS.
 
 # PNID Setup
+
 After installing Pretendo, you must register a Pretendo Network ID (PNID). There is currently two ways of creating a PNID: Creating an account with the website and linking it, or creating it on your Wii U.
 
 <div class="tip red">
@@ -141,6 +150,7 @@ After installing Pretendo, you must register a Pretendo Network ID (PNID). There
 </div>
 
 ### Website
+
 You will want to register an account from [here](/account) and click `Don't have an account?` to register.
 
 <div class="tip yellow">
@@ -148,16 +158,18 @@ You will want to register an account from [here](/account) and click `Don't have
 	Account settings cannot be modified at this time. Feature updates to the website have been paused as we migrate the codebase, and the account settings app on the Wii U requires additional patches.
 </div>
 
-<img src="/assets/images/docs/install/wiiu/pnid/register-account-web.png" alt="Screenshot of a web form to register an account" width="100%">
+<img src="/assets/images/docs/install/wiiu/pnid/register-account-web.webp" alt="Screenshot of a web form to register an account" width="100%">
 
 Once your account is registered, link it to your console as you would a Nintendo Network ID.
 
 Your PNID is now set up and ready to use. You may continue reading to learn about optional extras, like Inkay's features and transferring save data, or you can stop here.
 
 ### Wii U
+
 Create the Pretendo Network ID as you would a Nintendo Network ID.
 
 # Using Inkay
+
 If you're using Inkay rather than SSSL, there are some additional features you may find helpful.
 
 <details>
@@ -178,9 +190,10 @@ Press A on `Connect to Pretendo network` to toggle it to `false`.
 
 Press `B` three times to exit the Aroma plugin menu. Your console will restart. Once it does, a notification will appear showing that you are now using Nintendo Network.
 
-<img src="/assets/images/docs/install/wiiu/inkay-tips/nintendo-notification.jpg" alt="The Wii U user selection screen, with 'Using Nintendo Network' overlaid in the top-left" width="100%">
+<img src="/assets/images/docs/install/wiiu/inkay-tips/nintendo-notification.webp" alt="The Wii U user selection screen, with 'Using Nintendo Network' overlaid in the top-left" width="100%">
 
 You may now use your NNID to access the eShop or other Nintendo services. To return to Pretendo Network, repeat the process and set `Connect to Pretendo network` to `true`.
+
 </details>
 
 <details>
@@ -204,6 +217,7 @@ The button will change to indicate the console must be restarted.
 <img src="/assets/images/docs/install/wiiu/inkay-tips/inkay-wwp-apply.png" alt="Screenshot of Inkay menu with Reset Wara Wara Plaza highlighted. The entry now says 'Restart to apply'" width="100%">
 
 Press `B` three times to exit the Aroma plugin menu. Your console will restart. Once it does, the process is complete.
+
 </details>
 
 # Transferring save data to your Pretendo Network account
@@ -215,23 +229,23 @@ Pretendo Network is not compatible with existing Nintendo Network IDs. This mean
 	This only works with local save data. Any user data stored on Nintendo's servers cannot be transferred to any other accounts.
 </div>
 
-To move your save data, you will need a save data backup homebrew application. This guide will use the WUT port of SaveMii for Aroma.  To begin, download the latest [GitHub release](https://github.com/Xpl0itU/savemii/releases) of SaveMii or download it from the [Homebrew App Store](https://hb-app.store).
+To move your save data, you will need a save data backup homebrew application. This guide will use the WUT port of SaveMii for Aroma. To begin, download the latest [GitHub release](https://github.com/Xpl0itU/savemii/releases) of SaveMii or download it from the [Homebrew App Store](https://hb-app.store).
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.jpg" alt="Screenshot of Homebrew App Store page of SaveMii Mod" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-appstore.webp" alt="Screenshot of Homebrew App Store page of SaveMii Mod" width="100%">
 
 Once installed, open the application from the HOME Menu. You should see a menu for Wii U and vWii saves.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.jpg" alt="SaveMii menu" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-mainmenu.webp" alt="SaveMii menu" width="100%">
 
 Select `Wii U Save Management`. You should now see a list of installed games. Find and select the game you would like to transfer the save data of.
 
 Select `Backup savedata`.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.jpg" alt="SaveMii backup save data menu" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-backup.webp" alt="SaveMii backup save data menu" width="100%">
 
 Select a new slot to backup the save data to. If you select a non-empty slot, the backup data in that slot will be overwritten.
 
-Select the profile to backup the save data from. This should be your ***Nintendo*** Network ID.
+Select the profile to backup the save data from. This should be your **_Nintendo_** Network ID.
 
 Optionally you may select to backup "common" save data. This save data should be shared by all users, and is not required to be backed up. Though you may still do so if you choose.
 
@@ -246,14 +260,14 @@ Once the backup has completed, press the `B` button to return to the games menu.
 
 Select the backup slot you just backed the save data up to.
 
-Select the profile to restore the save data to. This should be your ***Pretendo*** Network ID.
+Select the profile to restore the save data to. This should be your **_Pretendo_** Network ID.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.jpg" alt="SaveMii restore save data menu" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-transfer.webp" alt="SaveMii restore save data menu" width="100%">
 
 When ready, press the `A` button to transfer your data. Press `A` again to confirm your actions. If you get a message about backing up your data on your Pretendo profile, ignore. Your screen may briefly flash as the data is copied over.
 
 Once completed, exit SaveMii and ensure the game you transferred works properly on your Pretendo profile.
 
-<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.jpg" alt="Screenshot of a game that loaded successfully" width="100%">
+<img src="/assets/images/docs/install/wiiu/savedatabackup/savemii-saveworkingonpretendo.webp" alt="Screenshot of a game that loaded successfully" width="100%">
 
 Repeat this process for any other save data you'd like to transfer to your Pretendo profile.

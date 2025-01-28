@@ -15,6 +15,7 @@
 </div>
 
 The following steps are required for you to connect to the Pretendo Network:
+
 1. [Downloading Nimbus](#downloading-nimbus)
 2. [Enabling Luma patches](#luma-patches)
 3. [Nimbus](#using-nimbus)
@@ -34,7 +35,7 @@ Once inserted, download the latest [Nimbus release](https://github.com/PretendoN
 
 Nimbus is available as both a 3DSX app and an installable CIA. The releases page offers downloads for both. Select the version you would like to use, or select the `combined.[version].zip` archive to use both.
 
-<img src="/assets/images/docs/install/3ds/zip-highlight.png" alt="Screenshot of a GitHub release page with the file combined.[version].zip highlighted" width=100% height=auto/>
+<img src="/assets/images/docs/install/3ds/zip-highlight.webp" alt="Screenshot of a GitHub release page with the file combined.[version].zip highlighted" width=100% height=auto/>
 
 Extract the contents of the zip archive to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
 
@@ -101,13 +102,14 @@ It is recommended to register the PNID on your device at this time, as registeri
 	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have a choose a different name for your PNID than the name on your NNID.
 </div>
 
-
 ## Other information
 
 ### How does Nimbus work?
+
 Nimbus will create a 2nd local account set to the `test` NASC environment. The IPS patches will set the `test` NASC environment URLs to point to Pretendo. You may freely switch between Pretendo and Nintendo. Your selected mode will persist between reboots.
 
 ### 2nd local account?
+
 You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS only _normally_ supports one account, and you may only have one account active at a time. However Nintendo implemented support for multiple local accounts on the 3DS/2DS which remains unused on all retail units. On a normal retail unit only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create sandboxed local accounts with different environments
 
 <ul id="footnotes">
@@ -115,6 +117,7 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 </ul>
 
 ### Restoring Nintendo Badge Arcade Badges
+
 1. Insert your SD Card into your PC.
 2. Back up your badges at the folder on your SD Card `SD:Nintendo 3DS/ID0/ID1/extdata/00000000/000014d1`.
 3. Download [Simple Badge Injector](https://github.com/AntiMach/simple-badge-injector/releases/latest).
@@ -131,6 +134,6 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 14. Put your SD card back into your 3DS and go back into SBI
 15. Inject your modified badge data files.
 
-All badges *placed* on the home menu will be deleted, and you have to re-add them in the order you have had them before.
-    
+All badges _placed_ on the home menu will be deleted, and you have to re-add them in the order you have had them before.
+
 If you encounter any errors, restore your backed up badge data through SBI. Injecting badges while using Pretendo Network will make them disappear when swapping back to Nintendo Network, and vice versa.
