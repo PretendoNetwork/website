@@ -133,7 +133,7 @@ function renderMii(heightOverride, buildOverride) {
 			onMiiFaceImgLoad();
 		};
 	}
-	function onMiiFaceImgLoad() {
+	function onMiiFaceImgLoad_() {
 		if (miiBodyImg.complete) {
 			onBodyImgLoad();
 		} else {
@@ -144,10 +144,10 @@ function renderMii(heightOverride, buildOverride) {
 	}
 	function onBodyImgLoad() {
 		if (miiFaceImg.complete) {
-			onMiiFaceImgLoad();
+			onMiiFaceImgLoad_();
 		} else {
 			miiFaceImg.onload = () => {
-				onMiiFaceImgLoad();
+				onMiiFaceImgLoad_();
 			};
 		}
 	}
@@ -165,7 +165,7 @@ function renderMii(heightOverride, buildOverride) {
 		ctx.drawImage(miiBodyImg, bodyXPos, bodyYPos, bodyWidth, bodyHeight);
 
 		// we draw a portion of the bald mii on top of the normal mii to hide the mii's neck (see https://i.imgur.com/U0fpkwi.png)
-		//ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
+		// ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
 
 		// draw bottom half of the image / front half of the head
 		ctx.drawImage(miiFaceImg, 0, halfHeight, miiFaceImg.width, halfHeight, 0, headYPos, miiFaceImg.width, halfHeight);
@@ -380,7 +380,7 @@ function openTab(e, tabType) {
 		// effectively loading them right now (lazy load)
 		document
 			.querySelectorAll('#saveTab img[data-src]')
-			.forEach(e => {
+			.forEach((e) => {
 				if (e.getAttribute('data-src') !== e.src)
 					e.setAttribute('src', e.getAttribute('data-src'));
 			});
