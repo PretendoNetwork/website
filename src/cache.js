@@ -69,6 +69,20 @@ query getProjectsV2Fields($id: ID!, $cursor: String!) {
 	}
 }
 `;
+const getRepositoryDescription = gql`
+query getRepositoryDescription($orgName: String!, $repoName: String!){
+    repository(owner: $orgName, name: $repoName) {
+		description
+		readme: object(expression: "HEAD:README.md") {
+            ... on Blob {
+                text
+            }
+        } 
+    }
+}
+`;
+
+const serviceApps = ["account", "nex", "friends", "wii u chat", "juxt", "website"];
 
 let githubProjectsCache = {
 	update_time: 0,
@@ -133,6 +147,52 @@ async function getGitHubProjectsV2Fields(id, after='') {
 	return fields;
 }
 
+async function getRepoType(name, title) {
+	const data = await github.request(getRepositoryDescription, {
+		orgName: 'PretendoNetwork',
+		repoName: name
+	});
+	const readme = data.repository.readme.text.split('\n')[0].toLowerCase();
+	const description = data.repository.description?.toLowerCase() || '';
+	return setRepoType(title.toLowerCase(), description, readme);
+}
+function setRepoType(title, description, readMe) {
+	const types = [];
+	let isGame = true;
+	for (const app of serviceApps) {
+		if (title.includes(app)) {
+			types.push('Service');
+			isGame = false;
+			break;
+		}
+	}
+	if (isGame) {
+		types.push('Game');
+	}
+	if (title.includes('(') && isGame) {
+		if (title.includes('3ds')) {
+			types.push('3DS');
+		} else {
+			types.push('Wii U');
+		}
+		return types;
+	}
+	if (title === 'nex' || title.includes('juxt') || title.includes('account')) {
+		types.push('3DS');
+		types.push('Wii U');
+		if (title.includes('juxt')) {
+			types.push('Website');
+		}
+	} else if (title.includes('web')) {
+		types.push('Website');
+	} else if (description.includes('3ds') || readMe.includes('3ds') || title.includes('3ds')) {
+		types.push('3DS');
+	} else {
+		types.push('Wii U');
+	}
+	return types;
+}
+
 async function getGithubProjectsCache() {
 	if (githubCacheBeingFetched) {
 		return githubProjectsCache;
@@ -172,7 +232,8 @@ async function updateGithubProjectsCache() {
 				done: [],
 				in_progress: [],
 				todo: []
-			}
+			},
+			types: []
 		};
 
 		const fields = await getGitHubProjectsV2Fields(project.id);
@@ -180,6 +241,8 @@ async function updateGithubProjectsCache() {
 		for (const field of fields) {
 			extractedData.cards[field.column.toLowerCase().replace(' ', '_')]?.push(field.title);
 		}
+
+		extractedData.types  = await getRepoType(project.url.split("/")[4], project.title)
 
 		projectsCacheData.sections.push(extractedData);
 	}
