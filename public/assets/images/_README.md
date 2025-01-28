@@ -15,8 +15,10 @@ mogrify -format webp *.png
 mogrify -format webp *.jpg
 ```
 
-## Using cloudconvert
+## Using a web service
 
-If you don't want to install imagemagick, you can use cloudconvert to convert images to WebP.
+If you don't want to install imagemagick, you can use towebp.io to convert images to WebP.
 
-Go to https://cloudconvert.com/webp-converter and upload your images. You can convert multiple images at once.
+Go to https://towebp.io/ and upload your images. You can convert multiple images at once.
+
+To match the default quality of imagemagick, use a quality of 90 (imagemagick uses 92 by default).
