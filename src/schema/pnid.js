@@ -10,6 +10,10 @@ const PNIDSchema = new Schema({
 	server_access_level: String,
 	access_level: Number,
 	username: String,
+	mii: {
+		name: String,
+		image_url: String
+	},
 	connections: {
 		discord: {
 			id: String
