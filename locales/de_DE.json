@@ -67,14 +67,14 @@
 			},
 			{
 				"question": "Funktioniert Pretendo auch auf Cemu oder anderen Emulatoren?",
-				"answer": "Cemu 2.1 ist von Pretendo unterstützt. Dies kann man unter den Netztwerk/Account Einstellungen in Cemu 2.1 einstellen. Für mehr Informationen, wie man Cemu mit Pretendo Network nutzt, schauen sie sich den <a href=\"https://pretendo.network/docs/install/cemu\">Guide</a>an.<br> Manche 3DS Emulatoren oder \"Forks\" unterstützen vielleicht Pretendo, es gibt aber momentan keine offiziellen Empfehlungen oder Setup Guides. Die finalen Builds von Citra werden nicht unterstützt."
+				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
+			},
+			{
+				"question": "Funktioniert Pretendo auf Cemu/Emulatoren?",
+				"answer": "Cemu 2.1 unterstützt offiziell Pretendo unter den Netzwerk-Account-Optionen im Emulator. Für mehr Informationen, wie du mit Cemu loslegen kannst, beachte bitte die <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>br&gt; Einige 3DS-Emulatoren oder Forks könnten uns unterstützen, aber wir haben zu dieser Zeit keine offizielle Empfehlung oder Setup-Anleitung. Die letzten Builds von Citra unterstützen Pretendo nicht."
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Für die Wii gibt es bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Aktuell möchten wir die Switch auch nicht als Ziel festlegen, da der Online-Service der Switch kostenpflichtig ist und sich stark vom Nintendo Network unterscheidet."
-			},
-			{
-				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
 				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
 			},
 			{
@@ -83,6 +83,9 @@
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
 				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
+			},
+			{
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?"
 			}
 		]
 	},
