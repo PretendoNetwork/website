@@ -34,7 +34,7 @@
 		"title": "关于我们",
 		"paragraphs": [
 			"Pretendo 是一个开源项目，旨在使用逆向工程为 3DS 和 Wii U 重新创建 Nintendo Network。",
-			"我们的服务将是免费和开源的，它们可以在 Nintendo Network 不可避免的关闭之后还存在。"
+			"此服务免费且开源，即使任天堂官方停服后也仍然可用。"
 		]
 	},
 	"progress": {
@@ -55,14 +55,14 @@
 			},
 			{
 				"question": "如何使用 Pretendo？",
-				"answer": "Pretendo 目前尚未处于可供公众使用的状态。但是，一旦完成，您只需在系统上运行我们的自制补丁程序即可使用 Pretendo。"
+				"answer": "Pretendo 目前尚未准备好供公众使用。一旦我们准备就绪，您只需在机器上运行我们提供的自制补丁，即可开始使用。"
 			},
 			{
 				"question": "什么时候某某功能/服务能完成？",
 				"answer": "不可以。许多 Pretendo 的功能/服务是独立开发的（例如，Miiverse 可能由一位开发人员构建，而 Accounts 和 Friends 正在由另一位开发人员构建），因此我们无法给出这需要多长时间的总体预计到达时间。"
 			},
 			{
-				"question": "Pretendo 是否适用于 Cemu/模拟器?",
+				"question": "什么时候会添加更多游戏?",
 				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有此功能的模拟器是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下已正式支持了 Pretendo。有关开始使用 Cemu 的信息，请查阅<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>Citra 不支持真正意义上的在线多人联机，因此 Pretendo 在 Citra 上不可用，并且完全没有在未来支持在线多人联机的迹象。Mikage，一款用于移动设备的 3DS 模拟器，可能会在未来支持在线多人联机，尽管这尚不确定。"
 			},
 			{
