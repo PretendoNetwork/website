@@ -1,8 +1,12 @@
 const config = require('../config');
 
 function isValidRedirect(redirect) {
-	if (!redirect) return false;
-	if (redirect.startsWith('/')) return true;
+	if (!redirect) {
+		return false;
+	}
+	if (redirect.startsWith('/')) {
+		return true;
+	}
 	if (redirect.startsWith('http://') || redirect.startsWith('https://')) {
 		try {
 			const url = new URL(redirect);

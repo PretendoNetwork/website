@@ -186,7 +186,9 @@ document.addEventListener('click', (e) => {
 		localeOptionsContainer.classList.remove('active');
 	}
 
-	if (found) return;
+	if (found) {
+		return;
+	}
 
 	// click outside of dropdowns
 	userWidget?.classList.remove('active');

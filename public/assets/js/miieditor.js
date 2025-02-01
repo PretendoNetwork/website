@@ -86,8 +86,9 @@ document.querySelector('script#encodedUserMiiData').remove();
 const validMiiData = initializeMiiData(encodedUserMiiData);
 if (!validMiiData) {
 	const shouldContinue = window.confirm('Found corrupted mii data, want to continue with a new Mii?');
-	if (!shouldContinue)
+	if (!shouldContinue) {
 		window.location.assign('/account');
+	}
 	initializeMiiData(newMiiData);
 }
 
@@ -236,7 +237,9 @@ function handleCalendar(e) {
 }
 
 function preventEmpty(e) {
-	if (e.target.value !== '') return;
+	if (e.target.value !== '') {
+		return;
+	}
 
 	e.target.value = e.target.defaultValue;
 }
