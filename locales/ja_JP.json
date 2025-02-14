@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Pretendoの使い方は？",
-				"answer": "Pretendoはまだ開発中です。将来的には、ゲーム機上で専用のhomebrewアプリを用いるだけでPretendoをつかえるようにする予定です。"
+				"answer": "3DS、Wii U、エミュレーターでPretendo Networkを使うには、<a href=\"/docs/install\">セットアップの手順</a>をご覧ください!"
 			},
 			{
 				"question": "機能やサービスが完成するのはいつ？",
@@ -155,9 +155,15 @@
 			{
 				"caption": "Wii Uパッチの開発"
 			},
-			{},
-			{},
-			{},
+			{
+				"caption": "3DSパッチの作者"
+			},
+			{
+				"caption": "サーバーアーキテクチャ"
+			},
+			{
+				"caption": "サーバーアーキテクチャ"
+			},
 			{},
 			{},
 			{
