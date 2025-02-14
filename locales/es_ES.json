@@ -34,7 +34,7 @@
 		"title": "Sobre nosotros",
 		"paragraphs": [
 			"Pretendo es un proyecto de código abierto que busca recrear Nintendo Network para 3DS y Wii U aplicando ingeniería inversa con un diseño en sala limpia.",
-			"Como nuestros servicios serán gratuitos y de código abierto, podrán existir tras el inevitable cierre de Nintendo Network."
+			"Como nuestros servicios serán gratuitos y de código abierto, existirán durante mucho tiempo."
 		]
 	},
 	"progress": {
@@ -66,19 +66,19 @@
 				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
 			},
 			{
-				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
+				"question": "¿Pretendo funciona en Cemu/emuladores? ¿Si uso un emulador, será eso suficiente para usar Pretendo?",
+				"answer": "No. Para efectos de seguridad y moderación, si usas un emulador, aún necesitas una consola real. Esto permite una mejor seguridad y aplicación más efectiva de reglas, para poder brindar una experiencia segura y placentera con nuestro servicio."
 			},
 			{
-				"question": "¿Pretendo será compatible con la Wii/Switch?",
+				"question": "¿Pretendo funciona en Cemu/emuladores?",
 				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
-				"question": "¿Necesitaré modificar mi consola para conectarme?",
+				"question": "¿Pretendo será compatible con la Wii/Switch?",
 				"answer": "Para obtener la mejor experiencia en consolas necesitarás modificar tu sistema, especificamente Aroma en Wii U y Luma3DS en 3DS. No obstante, en Wii U, el metodo sin modificación SSSL también está disponible con funcionalidad limitada. Consulte nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
 			},
 			{
-				"question": "Si estoy baneado en Nintendo Network, ¿seguiré baneado al usar Pretendo?"
+				"question": "Si me expulsan en Nintendo Network, ¿seguiré expulsado cuando use Pretendo?"
 			},
 			{
 				"question": "¿Puedo usar trucos o mods en línea con Pretendo?",
@@ -195,7 +195,8 @@
 			{
 				"picture": "https://github.com/superwhiskers.png",
 				"name": "superwhiskers",
-				"github": "https://github.com/superwhiskers"
+				"github": "https://github.com/superwhiskers",
+				"caption": "desarrollo de la biblioteca de crunch"
 			},
 			{
 				"github": "https://github.com/Stary2001",
@@ -243,7 +244,8 @@
 			{
 				"name": "mrjvs",
 				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"github": "https://github.com/mrjvs",
+				"caption": "Arquitectura del servidor"
 			},
 			{
 				"picture": "https://github.com/binaryoverload.png",
@@ -252,16 +254,19 @@
 			{
 				"picture": "https://github.com/Simonx22.png",
 				"github": "https://github.com/Simonx22",
-				"name": "Simonx22"
+				"name": "Simonx22",
+				"caption": "Rotaciones de Splatoon e investigación"
 			},
 			{
 				"name": "OatmealDome",
 				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
+				"github": "https://github.com/OatmealDome",
+				"caption": "Rotaciones de Splatoon e investigación"
 			},
 			{
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Traducciones y otras contribuciones"
 			}
 		]
 	},
@@ -292,7 +297,8 @@
 			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
 			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
 			"Decir “Conoces a Ash, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Ash hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
-			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!"
+			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!",
+			"Me parece bien"
 		]
 	},
 	"progressPage": {
