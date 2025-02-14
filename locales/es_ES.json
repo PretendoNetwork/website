@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores? ¿Si uso un emulador, será eso suficiente para usar Pretendo?",
-				"answer": "Cemu 2.1 soporta oficialmente Pretendo bajo las opciones de su cuenta de red en el emulador. Para obtener información sobre cómo empezar con Cemu, consulte la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>. <br>Algunos emuladores o bifurcaciones de 3DS podrían ser compatibles con nosotros, pero no tenemos ninguna recomendación oficial ni instrucciones de configuración en este momento. Las compilaciones finales de Citra no soportan Pretendo."
+				"answer": "No. Para efectos de seguridad y moderación, si usas un emulador, aún necesitas una consola real. Esto permite una mejor seguridad y aplicación más efectiva de reglas, para poder brindar una experiencia segura y placentera con nuestro servicio."
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
