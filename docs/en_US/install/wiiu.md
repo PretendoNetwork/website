@@ -1,5 +1,10 @@
 # Wii U
 
+<div class="tip red">
+	<strong>!!! DISCLAIMER !!!
+	DON'T REMOVE THE NNID TO SET UP PRETENDO NETWORK, IT'S NOT NECESSARY AND BY DOING SO YOU WILL LOSE ALL YOUR PREVIOUSLY PURCHASED GAMES AND UNABLE TO UPDATE THEM!</strong>
+</div>
+
 You can connect your Wii U to Pretendo using one of 2 methods. Inkay is recommended unless you have some reason to avoid modding your console (e.g. you live in Japan where is is legally gray).
 
 - [Inkay (homebrew - recommended)](#inkay)
