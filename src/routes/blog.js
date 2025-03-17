@@ -69,6 +69,12 @@ router.get('/:slug', async (request, response, next) => {
 	// Get the name of the post from the URL
 	const postName = request.params.slug;
 
+	if (!/^[0-9-]+$/.test(postName)) {
+		logger.error(`Invalid blog post name name ${postName}`);
+		next();
+		return;
+	}
+
 	// Get the markdown file corresponding to the post
 	let rawPost;
 	try {

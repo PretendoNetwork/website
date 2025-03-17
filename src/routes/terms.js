@@ -14,6 +14,12 @@ router.get('/:slug', async (request, response, next) => {
 
 	const termName = request.params.slug;
 
+	if (!/^[a-z]+$/.test(termName)) {
+		logger.error(`Invalid term name ${termName}`);
+		next();
+		return;
+	}
+
 	let rawTerm;
 	try {
 		rawTerm = await fs.readFile(path.join('terms', `${termName}.md`), 'utf-8');
