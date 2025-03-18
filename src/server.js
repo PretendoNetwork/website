@@ -98,6 +98,7 @@ app.use(express.static('public'));
 logger.info('Importing routes');
 const routes = {
 	home: require('./routes/home'),
+	terms: require('./routes/terms'),
 	faq: require('./routes/faq'),
 	docs: require('./routes/docs'),
 	progress: require('./routes/progress'),
@@ -108,6 +109,7 @@ const routes = {
 };
 
 app.use('/', routes.home);
+app.use('/terms', routes.terms);
 app.use('/faq', routes.faq);
 app.use('/docs', routes.docs);
 app.use('/progress', routes.progress);

@@ -38,6 +38,7 @@
 	</div>
 	<div>
 		<h1>{{ locale.footer.usefulLinks }}</h1>
+		<a href="/terms/privacy">Privacy Policy</a> {{! TODO - Add this to weblate. Quick and dirty for now, just to get something out the door }}
 		<a href="/docs">{{ locale.nav.docs }}</a>
 		<a href="/#faq">{{ locale.nav.faq }}</a>
 		<a href="/progress">{{ locale.nav.progress }}</a>
@@ -45,6 +46,7 @@
 		<a href="/account">{{ locale.nav.account }}</a>
 		<a href="/account/upgrade">{{ locale.nav.donate }}</a>
 	</div>
+	{{! TODO - Create a "Legal" section here }}
 	<div class="discord-server-card-wrapper">
 		<div class="discord-server-card">
 			<h1>{{ locale.footer.widget.captions.[0] }}</h1>
@@ -85,7 +87,7 @@
 			`${unescapeHTML("{{this}}")}`,
 		{{/each}}
 		]
-		
+
 		document.body.addEventListener("click", () =>
 		{
 			bandwidthRaccoonWrapper.classList.remove("speak");
