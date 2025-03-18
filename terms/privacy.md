@@ -120,6 +120,7 @@ Pretendo Network uses various 3rd party services as part of Our infrastructure. 
 - [Bunny](https://bunny.net/privacy/)
 - [Discourse](https://www.discourse.org/privacy)
 - [Stripe](https://stripe.com/privacy)
+- [Mastodon](https://mastodon.pretendo.network/privacy-policy)
 
 ### 2. How Do We Process Your Information?
 
