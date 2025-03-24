@@ -4,10 +4,6 @@
 	ℹ️ This guide assumes that you have a <b>Homebrewed System</b>, and have already connected to Pretendo. If you have not yet set up your Pretendo Network ID, follow this <a href="/docs/install" target="_blank">guide</a> to get started.
 </div>
 
-<div class="tip yellow">
-	ℹ️ <b>Pretendo Network is currently in a closed beta. Not all features, including game servers and Miiverse, are open to the public</b>.
-</div>
-
 Juxtaposition is the Pretendo Network replacement for the now defunct Miiverse service
 
 ## Select your console
