@@ -27,8 +27,8 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 	npm ci
 
 COPY . .
-# TODO: re-enable after TypeScript migration
-#RUN npm run build
+
+RUN npm run build
 
 
 # * Running the final application
@@ -44,8 +44,5 @@ COPY package.json .
 
 COPY --from=dependencies ${app_dir}/node_modules ${app_dir}/node_modules
 COPY --from=build ${app_dir} ${app_dir}
-
-# TODO: change back after TypeScript migration
-#COPY --from=build ${app_dir}/dist ${app_dir}/dist
 
 CMD ["node", "."]
