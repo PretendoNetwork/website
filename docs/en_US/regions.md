@@ -11,4 +11,4 @@ Pretendo does not support access from certain countries due to technical and leg
 - **Belarus** 🇧🇾 (Cloudflare limitations, regulatory concerns)  
 - **Turkmenistan** 🇹🇲 (Strict internet censorship, Cloudflare limitations)  
 
-If you experience any errors outside of these countries check out the unofficial [Pretendo's Status Website](https://status.pretendo.zip).
+If you experience any errors outside of these countries check out the unofficial [Pretendo Status Website](https://status.pretendo.zip).
