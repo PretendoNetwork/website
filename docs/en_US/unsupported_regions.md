@@ -5,10 +5,7 @@ Pretendo Network does not support access from certain countries due to technical
 ## Countries Not Supported:
 - **China** 🇨🇳 (Great Firewall restrictions, Cloudflare limitations)  
 - **Russia** 🇷🇺 (Cloudflare limitations, regulatory concerns)  
-- **Iran** 🇮🇷 (Cloudflare limitations, sanctions)  
 - **North Korea** 🇰🇵 (Sanctions, lack of internet access)  
-- **Syria** 🇸🇾 (Cloudflare limitations, sanctions)  
-- **Belarus** 🇧🇾 (Cloudflare limitations, regulatory concerns)  
-- **Turkmenistan** 🇹🇲 (Strict internet censorship, Cloudflare limitations)  
+  
 
-If you experience any errors outside of these countries check out the unofficial [Pretendo Status Website](https://status.pretendo.zip).
+If you experience any errors outside of these countries check out the [Pretendo Network Forums](https://forum.pretendo.network/) or The [Pretendo Network Discord](https://discord.gg/pretendo)
