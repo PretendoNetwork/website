@@ -1,6 +1,6 @@
 # Unsupported Regions
 
-Pretendo does not support access from certain countries due to technical and legal limitations. These restrictions are primarily due to Cloudflare's network limitations and other compliance factors.
+Pretendo Network does not support access from certain countries due to technical and legal limitations. These restrictions are primarily due to Cloudflare's network limitations and other compliance factors.
 
 ## Countries Not Supported:
 - **China** 🇨🇳 (Great Firewall restrictions, Cloudflare limitations)  
