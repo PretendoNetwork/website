@@ -5,8 +5,9 @@
 	"license": "AGPL-3.0-only",
 	"type": "module",
 	"scripts": {
-		"start": "node --enable-source-maps .",
+		"start": "node --enable-source-maps .output/server/index.mjs",
 		"build": "nuxt build",
+		"prepare": "nuxt prepare",
 		"dev": "nuxt dev",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
