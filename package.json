@@ -1,13 +1,15 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Website for Pretendo Network",
+  "license": "AGPL-3.0-only",
   "type": "module",
   "scripts": {
+    "start": "node --enable-source-maps .",
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "^3.4.0",
