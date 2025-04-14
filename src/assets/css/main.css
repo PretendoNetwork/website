@@ -64,11 +64,21 @@ button {
   cursor: pointer;
 }
 
+.wrapper {
+	width: 95%;
+	max-width: 1590px;
+	margin: 48px auto 0;
+}
+
 .hide-on-desktop {
   display: none !important;
 }
 
 @media screen and (max-width: 900px) {
+  .wrapper {
+		width: 90%;
+	}
+  
   .hide-on-mobile {
     display: none !important;
   }
