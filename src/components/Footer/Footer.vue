@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-const { messages } = useI18n();
+const { tm, t } = useI18n();
 const year = new Date().getFullYear();
 
 const bandwidthQuoteIndex = ref<number>(-1);
+const quotes = computed(() => tm<string>('footer.bandwidthRaccoonQuotes') as string[]);
+const totalBandwidthQuotes = computed(() => quotes.value.length);
+const currentQuote = computed(() => t(`footer.bandwidthRaccoonQuotes[${Math.max(0, bandwidthQuoteIndex.value)}]`));
 
-// @ts-ignore
-const totalBandwidthQuotes = messages.value['en-US'].footer.bandwidthRaccoonQuotes.length;
+watch([totalBandwidthQuotes], () => {
+	bandwidthQuoteIndex.value = -1;
+});
 
 function bandwidthClickHandler() {
-	if (bandwidthQuoteIndex.value + 1 >= totalBandwidthQuotes) {
+	if (bandwidthQuoteIndex.value + 1 >= totalBandwidthQuotes.value) {
 		bandwidthQuoteIndex.value = 0;
 	} else {
 		bandwidthQuoteIndex.value++;
@@ -156,11 +160,9 @@ function bandwidthClickHandler() {
           {{ $t("footer.widget.button") }}
         </a>
       </div>
-      <div
-        :class="{ 'bandwidth-raccoon-wrapper': true, 'speak': bandwidthQuoteIndex !== -1 }"
-      >
+      <div :class="{ 'bandwidth-raccoon-wrapper': true, 'speak': bandwidthQuoteIndex !== -1 }">
         <div class="text-bubble">
-          <p>{{ $t(`footer.bandwidthRaccoonQuotes[${bandwidthQuoteIndex}]`) }}</p>
+          <p>{{ currentQuote }}</p>
         </div>
         <img
           src="/assets/images/bandwidth.svg"
@@ -171,41 +173,6 @@ function bandwidthClickHandler() {
     </div>
   </footer>
 </template>
-
-<script lang="ts">
-/* const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
-		const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
-		const bandwidthRaccoonBubbleText = document.querySelector("footer .bandwidth-raccoon-wrapper .text-bubble p");
-		let i = 0;
-
-		function unescapeHTML(string) {
-			const el = document.createElement("span");
-			el.innerHTML = string;
-			return el.innerText;
-		}
-
-		const randomSentences = [
-		{{#each$t("footer.bandwidthRaccoonQuotes}}
-			`${unescapeHTML("{{this}}")}`,
-		{{/each}}
-		]
-
-		document.body.addEventListener("click", () =>
-		{
-			bandwidthRaccoonWrapper.classList.remove("speak");
-		})
-		bandwidthRaccoon.addEventListener("click", (event) =>
-		{
-			event.stopPropagation();
-			bandwidthRaccoonWrapper.classList.add("speak");
-			if (!randomSentences[i]) {
-				i = 0
-			}
-			bandwidthRaccoonBubbleText.innerText = randomSentences[i];
-			i += 1;
-		}) */
-
-</script>
 
 <style scoped>
 footer {
@@ -363,78 +330,83 @@ footer .bandwidth-raccoon-wrapper .text-bubble:after {
 }
 </style>
 
-<style>
-/* So many !important??? there must be an easier way */
+<style lang="scss">
 @media screen and (max-width: 900px) {
-	footer {
-		margin-top: 100px !important;
-		grid-template-columns: repeat(3, 1fr) !important;
-		grid-template-rows: repeat(2, fit-content(100%)) !important;
-	}
+	#root {
+		footer {
+			margin-top: 100px;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, fit-content(100%));
+		}
 
-	footer div {
-		justify-self: center !important;
-	}
+		footer div {
+			justify-self: center;
+		}
 
-	footer div.discord-server-card-wrapper {
-		grid-column: 1 / span 4 !important;
-		width: 100% !important;
-		justify-self: normal;
-	}
+		footer div.discord-server-card-wrapper {
+			grid-column: 1 / span 4;
+			width: 100%;
+			justify-self: normal;
+		}
 
-	footer div.discord-server-card-wrapper::before {
-		content: "";
-		width: 100%;
-		height: 60px;
-		position: absolute;
-		bottom: -60px;
-		left: 0;
-		background: var(--bg-shade-0);
-		z-index: 2;
-	}
+		footer div.discord-server-card-wrapper::before {
+			content: "";
+			width: 100%;
+			height: 60px;
+			position: absolute;
+			bottom: -60px;
+			left: 0;
+			background: var(--bg-shade-0);
+			z-index: 2;
+		}
 
-	footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
-		bottom: -72px !important;
-		top: unset !important;
-		z-index: 0 !important;
-	}
+		footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
+			bottom: -72px;
+			top: unset;
+			z-index: 0;
+		}
 
-	footer div.discord-server-card {
-		box-sizing: border-box !important;
-		width: 100% !important;
-		overflow: hidden !important;
+		footer div.discord-server-card {
+			box-sizing: border-box;
+			width: 100%;
+			overflow: hidden;
+		}
 	}
 }
 
 @media screen and (max-width: 580px) {
-	footer {
-		grid-template-columns: 1fr !important;
-		grid-template-rows: repeat(4, fit-content(100%)) !important;
-	}
+	#root {
+		footer {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, fit-content(100%));
+		}
 
-	footer div {
-		justify-self: start !important;
-	}
+		footer div {
+			justify-self: start;
+		}
 
-	footer div.discord-server-card-wrapper {
-		grid-column: 1 / span 1 !important;
-	}
+		footer div.discord-server-card-wrapper {
+			grid-column: 1 / span 1;
+		}
 
-	footer div.discord-server-card {
-		padding: 30px !important;
-		overflow: visible !important;
-	}
+		footer div.discord-server-card {
+			padding: 30px;
+			overflow: visible;
+		}
 
-	footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
-		bottom: unset !important;
-		top: -120px !important;
-		z-index: -1 !important;
+		footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
+			bottom: unset;
+			top: -120px;
+			z-index: -1;
+		}
 	}
 }
 
 @media screen and (max-width: 320px) {
-	footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
-		display: none !important;
+	#root {
+		footer div.discord-server-card-wrapper .bandwidth-raccoon-wrapper {
+			display: none;
+		}
 	}
 }
 </style>
