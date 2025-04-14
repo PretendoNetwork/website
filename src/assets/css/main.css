@@ -65,10 +65,15 @@ button {
 }
 
 .hide-on-desktop {
-  display: none;
+  display: none !important;
 }
+
 @media screen and (max-width: 900px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
+  }
+
+  .hide-on-desktop {
+    display: unset !important;
   }
 }
