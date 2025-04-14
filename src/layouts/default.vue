@@ -1,6 +1,9 @@
 <template>
-  <div>
+  <div id="root">
     <Navbar />
-    <slot />
+    <div class="wrapper">
+      <slot />
+      <Footer />
+    </div>
   </div>
 </template>
