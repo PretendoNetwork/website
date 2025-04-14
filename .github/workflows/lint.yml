@@ -23,4 +23,4 @@ jobs:
         run: npm run prepare
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint -- --max-warnings=0

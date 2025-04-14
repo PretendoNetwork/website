@@ -1,0 +1,79 @@
+:root {
+  /* 1 is the base color, <1 are darker variations and >1 are lighter */
+  /* todo: why so many shades */
+
+  --bg-shade-0: #131733;
+  --bg-shade-1: #1b1f3b;
+  --bg-shade-2: #23274a;
+  --bg-shade-2-5: #2d3258;
+  --bg-shade-3: #373c65;
+  --bg-shade-3-5: #404673;
+  --bg-shade-4: #494f81;
+
+  --accent-shade-0: #673db6;
+  --accent-shade-1: #9d6ff3;
+  --accent-shade-2: #a185d6;
+  --accent-shade-3: #cab1fb;
+
+  --text-shade-0: #8990c1;
+  --text-shade-1: #a1a8d9;
+  --text-shade-2: #cac1f5;
+  --text-shade-3: #fff;
+
+  --green-shade-0: #37a985;
+  --green-shade-1: #59c9a5;
+
+  --red-shade-1: #a9375b;
+  --yellow-shade-1: #ffd966;
+
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--bg-shade-1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+body,
+.main-body {
+  width: 100%;
+  max-width: 100vw;
+  position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
+  overflow-x: hidden;
+  margin: 0;
+  color: var(--text-shade-3);
+  justify-content: center;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.main-body {
+  overflow-y: hidden; /* Fixes the dowuble scrollbars caused by the last background circle */
+}
+
+code {
+  background-color: var(--bg-shade-0);
+  padding: 4px;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 0.9em;
+  color: var(--text-shade-2);
+}
+
+button {
+  all: unset;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hide-on-desktop {
+  display: none !important;
+}
+
+@media screen and (max-width: 900px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .hide-on-desktop {
+    display: unset !important;
+  }
+}
