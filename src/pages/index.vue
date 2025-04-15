@@ -2,7 +2,7 @@
 /* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { te, t, tm } = useI18n();
 
-const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length;
+const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length - 1;
 const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;
 const maxContributorsIndex = computed(() => tm<string>('specialThanks.people') as string[]).value.length - 1;
 
