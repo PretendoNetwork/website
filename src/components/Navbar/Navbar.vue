@@ -974,9 +974,11 @@ header .right-section {
 header .locale-dropdown-toggle {
 	width: fit-content;
 	height: 24px;
+	width: 24px;
 	padding: 0;
 	margin: auto;
 	transition: color 150ms;
+	color: inherit;
 	cursor: pointer;
 }
 
