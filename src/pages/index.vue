@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+/* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { te, t, tm } = useI18n();
 
-const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length;
+const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length - 1;
 const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;
 const maxContributorsIndex = computed(() => tm<string>('specialThanks.people') as string[]).value.length - 1;
 
@@ -165,9 +166,10 @@ function titleSuffixHandler(path: string) {
             <summary>
               {{ $t(`faq.QAs[${i}].question`) }}
             </summary>
-            <p class="text">
-              {{ $t(`faq.QAs[${i}].answer`) }}
-            </p>
+            <p
+              class="text"
+              v-html="$t(`faq.QAs[${i}].answer`)"
+            />
           </details>
         </div>
 
@@ -180,9 +182,10 @@ function titleSuffixHandler(path: string) {
             <summary>
               {{ $t(`faq.QAs[${i}].question`) }}
             </summary>
-            <p class="text">
-              {{ $t(`faq.QAs[${i}].answer`) }}
-            </p>
+            <p
+              class="text"
+              v-html="$t(`faq.QAs[${i}].answer`)"
+            />
           </details>
         </div>
       </div>
@@ -682,13 +685,13 @@ section.faq {
 	color: var(--text-shade-0);
 }
 
-.question-and-answer .text a {
+.question-and-answer .text :deep(a) {
 	color: var(--accent-shade-1);
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.question-and-answer .text a:hover {
+.question-and-answer .text :deep(a):hover {
 	text-decoration: underline;
 }
 
