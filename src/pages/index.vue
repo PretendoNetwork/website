@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const { messages, te, t, tm } = useI18n();
-
-const fallbackLocale = messages.value['en-US'];
+const { te, t, tm } = useI18n();
 
 const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length;
 const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;

@@ -16,9 +16,9 @@ function handleDropdownButton(dropdown: boolean | string) {
 const scrollY = ref<number>(0);
 
 onMounted(() => {
-	// eslint-disable-next-line no-undef
+	// eslint-disable-next-line no-undef -- we're in on mounted so it should be fine
 	window.addEventListener('scroll', () => {
-		// eslint-disable-next-line no-undef
+		// eslint-disable-next-line no-undef -- same here
 		scrollY.value = window.scrollY;
 	});
 });
