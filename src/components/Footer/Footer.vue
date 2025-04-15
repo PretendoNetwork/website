@@ -139,24 +139,10 @@ function bandwidthClickHandler() {
         <h1>{{ $t("footer.widget.captions[0]") }}</h1>
         <h2>{{ $t("footer.widget.captions[1]") }}</h2>
         <a href="https://discord.gg/pretendo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-arrow-right"
-          >
-            <line
-              x1="5"
-              y1="12"
-              x2="19"
-              y2="12"
-            />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
+          <Icon
+            name="ph:arrow-right"
+            size="24"
+          />
           {{ $t("footer.widget.button") }}
         </a>
       </div>
