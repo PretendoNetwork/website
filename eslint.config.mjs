@@ -1,5 +1,6 @@
 import pluginVue from 'eslint-plugin-vue';
 import eslintConfig from '@pretendonetwork/eslint-config';
+import globals from 'globals';
 import { withNuxt } from './.nuxt/eslint.config.mjs';
 
 export default withNuxt([
@@ -10,6 +11,9 @@ export default withNuxt([
 		languageOptions: {
 			parserOptions: {
 				parser: '@typescript-eslint/parser'
+			},
+			globals: {
+				...globals.browser
 			}
 		},
 		rules: {
