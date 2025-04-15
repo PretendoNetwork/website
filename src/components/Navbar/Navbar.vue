@@ -12,13 +12,23 @@ function handleDropdownButton(dropdown: boolean | string) {
 		openDropdown.value = dropdown;
 	}
 }
+
+const scrollY = ref<number>(0);
+
+onMounted(() => {
+	// eslint-disable-next-line no-undef
+	window.addEventListener('scroll', () => {
+		// eslint-disable-next-line no-undef
+		scrollY.value = window.scrollY;
+	});
+});
 </script>
 
 <template>
-  <header class="transparent">
+  <header :class="{ 'transparent': scrollY === 0 }">
     <div class="left-section">
       <button
-        :class="{'dropdown-button': true, 'hide-on-desktop': true, active: openDropdown === 'mobile' }"
+        :class="{ 'dropdown-button': true, 'hide-on-desktop': true, active: openDropdown === 'mobile' }"
         @click="handleDropdownButton('mobile')"
       >
         <svg
@@ -104,7 +114,6 @@ function handleDropdownButton(dropdown: boolean | string) {
         class="dropdown"
       >
         <div
-
           class="dropdown-content"
           @click="handleDropdownButton(false)"
         >
@@ -310,13 +319,13 @@ function handleDropdownButton(dropdown: boolean | string) {
     <nav>
       <div class="dropdown-button-wrapper hide-on-mobile">
         <button
-          :class="{'dropdown-button': true, active: openDropdown === 'about' }"
+          :class="{ 'dropdown-button': true, active: openDropdown === 'about' }"
           @click="handleDropdownButton('about')"
         >
           {{ $t("nav.about") }}
         </button>
         <button
-          :class="{'dropdown-button': true, active: openDropdown === 'docs' }"
+          :class="{ 'dropdown-button': true, active: openDropdown === 'docs' }"
           @click="handleDropdownButton('docs')"
         >
           {{ $t("nav.docs") }}
@@ -359,9 +368,7 @@ function handleDropdownButton(dropdown: boolean | string) {
         </button>
       </a>
 
-      <div
-        class="dropdown"
-      >
+      <div class="dropdown">
         <div
           v-if="openDropdown === 'about'"
           class="dropdown-content"
@@ -1139,7 +1146,6 @@ header .user-widget .button.logout {
 	background: var(--bg-shade-3);
 	color: var(--text-shade-3);
 }
-
 </style>
 
 <style>
