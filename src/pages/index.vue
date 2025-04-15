@@ -59,30 +59,10 @@ function titleSuffixHandler(path: string) {
               class="button secondary discord icon-btn"
               focusable="false"
             >
-              <svg
-                alt=""
-                width="71"
-                height="55"
-                viewBox="0 0 71 55"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z"
-                    fill="#ffffff"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect
-                      width="71"
-                      height="55"
-                      fill="white"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
+              <Icon
+                name="ph:discord-logo-fill"
+                size="32"
+              />
             </button>
           </a>
           <a
@@ -95,20 +75,10 @@ function titleSuffixHandler(path: string) {
               class="button secondary github icon-btn"
               focusable="false"
             >
-              <svg
-                alt=""
-                data-prefix="fab"
-                data-icon="github"
-                class="svg-inline--fa fa-github fa-w-16"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 496 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                />
-              </svg>
+              <Icon
+                name="ph:github-logo-fill"
+                size="32"
+              />
             </button>
           </a>
           <a
@@ -120,23 +90,10 @@ function titleSuffixHandler(path: string) {
               class="button secondary github icon-btn"
               focusable="false"
             >
-              <svg
-                alt=""
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-heart"
-              >
-                <path
-                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                />
-              </svg>
+              <Icon
+                name="ph:heart-fill"
+                size="32"
+              />
             </button>
           </a>
         </div>
@@ -149,154 +106,7 @@ function titleSuffixHandler(path: string) {
             alt=""
           >
           <div class="deco">
-            <svg
-              alt=""
-              xmlns="http://www.w3.org/2000/svg"
-              width="839.371"
-              height="893.406"
-              viewBox="0 0 839.371 893.406"
-            >
-              <g
-                id="deco"
-                transform="translate(-1064.958 -142.958)"
-              >
-                <g
-                  id="Ellipse_12"
-                  data-name="Ellipse 12"
-                  transform="translate(1314 265)"
-                  fill="none"
-                  stroke="#9d6ff3"
-                  stroke-width="26"
-                >
-                  <circle
-                    cx="56"
-                    cy="56"
-                    r="56"
-                    stroke="none"
-                  />
-                  <circle
-                    cx="56"
-                    cy="56"
-                    r="69"
-                    fill="none"
-                  />
-                </g>
-                <g
-                  id="Ellipse_22"
-                  data-name="Ellipse 22"
-                  transform="translate(1361 771)"
-                  fill="none"
-                  stroke="#59c9a5"
-                  stroke-width="26"
-                >
-                  <circle
-                    cx="77"
-                    cy="77"
-                    r="77"
-                    stroke="none"
-                  />
-                  <circle
-                    cx="77"
-                    cy="77"
-                    r="90"
-                    fill="none"
-                  />
-                </g>
-                <g
-                  id="Ellipse_13"
-                  data-name="Ellipse 13"
-                  transform="translate(1801.405 273.601) rotate(1)"
-                  fill="none"
-                  stroke="#9d6ff3"
-                  stroke-width="26"
-                >
-                  <circle
-                    cx="23"
-                    cy="23"
-                    r="23"
-                    stroke="none"
-                  />
-                  <circle
-                    cx="23"
-                    cy="23"
-                    r="36"
-                    fill="none"
-                  />
-                </g>
-                <g
-                  id="Ellipse_23"
-                  data-name="Ellipse 23"
-                  transform="matrix(0.839, -0.545, 0.545, 0.839, 1651.184, 609.237)"
-                  fill="none"
-                  stroke="#25224f"
-                  stroke-width="26"
-                >
-                  <circle
-                    cx="78.5"
-                    cy="78.5"
-                    r="78.5"
-                    stroke="none"
-                  />
-                  <circle
-                    cx="78.5"
-                    cy="78.5"
-                    r="91.5"
-                    fill="none"
-                  />
-                </g>
-                <circle
-                  id="Ellipse_15"
-                  class="animateDot"
-                  data-name="Ellipse 15"
-                  cx="23"
-                  cy="23"
-                  r="23"
-                  transform="translate(1586.473 353) rotate(-45)"
-                  fill="#9d6ff3"
-                />
-                <ellipse
-                  id="Ellipse_21"
-                  class="animateDot"
-                  data-name="Ellipse 21"
-                  cx="11"
-                  cy="10.5"
-                  rx="11"
-                  ry="10.5"
-                  transform="translate(1588.958 188.514) rotate(-45)"
-                  fill="#9d6ff3"
-                />
-                <ellipse
-                  id="Ellipse_25"
-                  data-name="Ellipse 25"
-                  cx="11"
-                  cy="10.5"
-                  rx="11"
-                  ry="10.5"
-                  transform="translate(1143.958 1021.514) rotate(-45)"
-                  fill="#9d6ff3"
-                />
-                <ellipse
-                  id="Ellipse_26"
-                  data-name="Ellipse 26"
-                  cx="11"
-                  cy="10.5"
-                  rx="11"
-                  ry="10.5"
-                  transform="translate(1064.958 158.514) rotate(-45)"
-                  fill="#9d6ff3"
-                />
-                <circle
-                  id="Ellipse_16"
-                  class="animateDot"
-                  data-name="Ellipse 16"
-                  cx="23"
-                  cy="23"
-                  r="23"
-                  transform="translate(1169.473 524) rotate(-45)"
-                  fill="#59c9a5"
-                />
-              </g>
-            </svg>
+            <HeroDeco />
           </div>
         </div>
       </div>
@@ -393,59 +203,29 @@ function titleSuffixHandler(path: string) {
       </div>
       <div class="grid">
         <div class="item highlight">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="server"
-            class="svg-inline--fa fa-server fa-w-16"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              fill="currentColor"
-              d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"
-            />
-          </svg>
+          <Icon
+            name="ph:hard-drives-fill"
+            size="48"
+            mode="svg"
+          />
           <h1>{{ $t("showcase.cards.0.title") }}</h1>
           <p>{{ $t("showcase.cards.0.caption") }}</p>
         </div>
         <div class="item">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="users"
-            class="svg-inline--fa fa-users fa-w-20"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-          >
-            <path
-              fill="currentColor"
-              d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"
-            />
-          </svg>
+          <Icon
+            name="ph:users-fill"
+            size="48"
+            mode="svg"
+          />
           <h1>{{ $t("showcase.cards.1.title") }}</h1>
           <p>{{ $t("showcase.cards.1.caption") }}</p>
         </div>
         <div class="item">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="gamepad"
-            class="svg-inline--fa fa-gamepad fa-w-20"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-          >
-            <path
-              fill="currentColor"
-              d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"
-            />
-          </svg>
+          <Icon
+            name="ph:game-controller-fill"
+            size="48"
+            mode="svg"
+          />
           <h1>{{ $t("showcase.cards.2.title") }}</h1>
           <p>{{ $t("showcase.cards.2.caption") }}</p>
         </div>
@@ -491,18 +271,10 @@ function titleSuffixHandler(path: string) {
                 target="_blank"
                 aria-label="Open Github"
               >
-                <svg
-                  alt=""
-                  data-prefix="fab"
-                  data-icon="github"
-                  class="svg-inline--fa fa-github fa-w-16"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 496 512"
-                ><path
-                  fill="currentColor"
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                /></svg>
+                <Icon
+                  name="fa:github"
+                  size="24"
+                />
               </a>
             </h3>
             <p class="text">
@@ -534,7 +306,7 @@ function titleSuffixHandler(path: string) {
               :key="i"
               :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
               target="_blank"
-              :class="{'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`)}"
+              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
             >
               <div class="img-wrapper">
                 <img
@@ -555,7 +327,7 @@ function titleSuffixHandler(path: string) {
               :key="i"
               :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
               target="_blank"
-              :class="{'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`)}"
+              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
             >
               <div class="img-wrapper">
                 <img
@@ -574,6 +346,7 @@ function titleSuffixHandler(path: string) {
 
     <section class="update-signup">
       <div class="sect hero-meta reduced-margin">
+        <!-- keeping this one as is because i'd fix this using a logotype component and components are out of scope for now -->
         <svg
           alt=""
           xmlns="http://www.w3.org/2000/svg"
@@ -629,27 +402,6 @@ function titleSuffixHandler(path: string) {
 </template>
 
 <style lang="scss" scoped>
-.animateDot {
-	animation: dotAnimation 10s infinite;
-}
-
-@keyframes dotAnimation {
-	0% {
-		cx: 0;
-		cy: 0;
-	}
-
-	50% {
-		cx: 10px;
-		cy: 10px;
-	}
-
-	100% {
-		cx: 0;
-		cy: 0;
-	}
-}
-
 .wrapper {
 	width: 95%;
 	max-width: 1590px;
@@ -979,7 +731,7 @@ section.showcase .grid .item.highlight {
 }
 
 section.showcase .grid .item svg {
-	height: 36px;
+	height: 48px;
 	color: var(--accent-shade-1);
 }
 
