@@ -411,20 +411,6 @@ function titleSuffixHandler(path: string) {
 	margin: 48px auto 0;
 }
 
-h1.dot:not([data-title-suffix]):after,
-h2.dot:not([data-title-suffix]):after {
-	content: ".";
-	display: inline-block;
-	color: var(--accent-shade-1);
-}
-
-h1.dot[data-title-suffix]:after,
-h2.dot[data-title-suffix]:after {
-	content: attr(data-title-suffix);
-	display: inline-block;
-	color: var(--accent-shade-1);
-}
-
 /* Misc */
 .purple-circle {
 	position: absolute;

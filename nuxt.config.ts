@@ -26,6 +26,16 @@ export default defineNuxtConfig({
 		}
 	},
 
+	content: {
+		build: {
+			markdown: {
+				highlight: {
+					theme: 'github-dark'
+				}
+			}
+		}
+	},
+
 	i18n: {
 		compilation: {
 			strictMessage: false

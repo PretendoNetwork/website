@@ -1,13 +1,13 @@
 ---
 title: "Test"
-author: "pinklimes"
-author_image: "https://github.com/pinklimes.png"
+author: "limes.pink"
+author_image: "https://github.com/gitlimes.png"
 date: "January 20, 2038"
-caption: "A post to test the styling of the various elements we might use (rename to _test.md before deploying the blog section)"
+caption: "A post to test the styling of the various elements we might use"
 cover_image: "https://media.discordapp.net/attachments/413884110667251722/886474243662037062/image1.jpg"
 ---
 
-A post to test the styling of the various elements we might use (rename to _test.md before deploying the blog section)
+A post to test the styling of the various elements we might use
 
 **bold**
 
@@ -126,14 +126,18 @@ console.log(trueOrFalseJSON);
 
 <cite>Adapted from [blockquote: The Block Quotation element, from MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)</cite>
 
-[yt-iframe](djV11Xbc914)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/djV11Xbc914" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-```[yt-iframe](djV11Xbc914)```
+```<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/djV11Xbc914" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>```
 
-![test](https://media.discordapp.net/attachments/413884110667251722/886474243662037062/image1.jpg)
+![test](https://upload.wikimedia.org/wikipedia/commons/5/57/View_of_the_Turin_Metro_tracks_from_Fermi_terminal.jpg)
+
+<a href="https://commons.wikimedia.org/wiki/File:View_of_the_Turin_Metro_tracks_from_Fermi_terminal.jpg">Wikilimes</a> (that's me!), <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+
+***
 
 <video controls>
-	<source src="https://cdn.discordapp.com/attachments/413884110667251722/878216238940160040/video0.mov">
+	<source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5f/Steamboat_Willie_%281928%29_by_Walt_Disney.webm/Steamboat_Willie_%281928%29_by_Walt_Disney.webm.720p.vp9.webm">
 </video>
 
-Blogposts whose filename starts with a \_ will not show up on the /blogs page, but will still be accessible from the url (keep in mind that the file is still going to be publicly accessible on GitHub).
+Blogposts with filename starting with \_ will not show up on the /blogs page, but will still be accessible via the url.

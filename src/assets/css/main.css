@@ -50,12 +50,27 @@ body,
 }
 
 code {
-  background-color: var(--bg-shade-0);
+  display: inline-block;
+  background-color: #191919;
   padding: 4px;
   border-radius: 4px;
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   font-size: 0.9em;
   color: var(--text-shade-2);
+}
+
+h1.dot:not([data-title-suffix]):after,
+h2.dot:not([data-title-suffix]):after {
+	content: ".";
+	display: inline-block;
+	color: var(--accent-shade-1);
+}
+
+h1.dot[data-title-suffix]:after,
+h2.dot[data-title-suffix]:after {
+	content: attr(data-title-suffix);
+	display: inline-block;
+	color: var(--accent-shade-1);
 }
 
 /* BUTTONS */
@@ -186,7 +201,7 @@ input[type="checkbox"] {
 	cursor: pointer;
 }
 input[type="checkbox"]:checked {
-	background: no-repeat center/contain url(../images/check.svg), var(--accent-shade-0);
+	background: no-repeat center/contain url(/assets/images/check.svg), var(--accent-shade-0);
 }
 
 input {
