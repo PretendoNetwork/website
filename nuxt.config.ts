@@ -3,6 +3,12 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	srcDir: './src',
 
+	nitro: {
+		prerender: {
+			routes: ['/blog/feed.xml']
+		}
+	},
+
 	modules: [
 		'@nuxt/eslint',
 		'@nuxt/fonts',
@@ -23,6 +29,16 @@ export default defineNuxtConfig({
 		defaults: {
 			weights: [400, 700],
 			styles: ['normal', 'italic']
+		}
+	},
+
+	content: {
+		build: {
+			markdown: {
+				highlight: {
+					theme: 'github-dark'
+				}
+			}
 		}
 	},
 
