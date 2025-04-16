@@ -3,6 +3,12 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	srcDir: './src',
 
+	nitro: {
+		prerender: {
+			routes: ['/blog/feed.xml']
+		}
+	},
+
 	modules: [
 		'@nuxt/eslint',
 		'@nuxt/fonts',
