@@ -4,6 +4,10 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 	return queryCollection('blog').path(`/blog/${slug}`).first();
 });
 
+if (!post.value) {
+	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
+}
+
 useHead({
 	title: `${post.value.title} | Pretendo Network Blog`,
 	meta: [
@@ -38,7 +42,7 @@ useHead({
           <img
             class="profile-picture"
             :src="post.author_image"
-            :alt="post.author"
+            alt=""
           >
           <span>{{ post.author }}</span>
         </div>
