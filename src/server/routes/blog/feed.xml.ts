@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
 	posts.forEach((post) => {
 		feed.addItem({
 			title: post.title,
-			id: post.path, 
+			id: post.path,
 			link: `https://pretendo.network${post.path}`,
 			description: post.caption,
 			author: [

@@ -126,9 +126,13 @@ console.log(trueOrFalseJSON);
 
 <cite>Adapted from [blockquote: The Block Quotation element, from MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote)</cite>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/djV11Xbc914" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+::md-iframe{video-id="djV11Xbc914"}
+::
 
-```<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/djV11Xbc914" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>```
+```
+::md-iframe{video-id="djV11Xbc914"}
+::
+```
 
 ![test](https://upload.wikimedia.org/wikipedia/commons/5/57/View_of_the_Turin_Metro_tracks_from_Fermi_terminal.jpg)
 
