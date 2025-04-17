@@ -3,6 +3,11 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	srcDir: './src',
 
+	runtimeConfig: {
+		stripeSecretKey: '',
+		stripeWebhookSecret: ''
+	},
+
 	nitro: {
 		prerender: {
 			routes: ['/blog/feed.xml']
