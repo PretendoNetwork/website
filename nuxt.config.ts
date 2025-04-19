@@ -23,6 +23,10 @@ export default defineNuxtConfig({
 		}
 	},
 
+	runtimeConfig: {
+		apiBase: 'https://api.pretendo.cc'
+	},
+
 	css: ['~/assets/css/main.css'],
 
 	fonts: {
