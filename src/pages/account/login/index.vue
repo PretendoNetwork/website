@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { FetchError } from 'ofetch';
+
 const route = useRoute();
 const redirect = route.query.redirect;
 const registerURI = `/account/register${redirect ? `?redirect=${redirect}` : ''}`;
@@ -7,24 +9,23 @@ const loginForm = reactive({ username: null, password: null });
 const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
-	const response = await fetch('/api/account/login', {
+	await $fetch('/api/account/login', {
 		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(loginForm)
-	});
-
-	if (!response.ok) {
-		errorMessage.value = response.statusText;
+		body: loginForm
+	}).catch((error: FetchError) => {
+		errorMessage.value = error.statusText;
 		setTimeout(() => { // TODO: this is not the best way to clear this out, but this is temporary! replace all toasts with input alerts in the future
 			errorMessage.value = null;
 		}, 5000);
 
 		return;
-	}
+	});
 
-	await navigateTo('/account');
+	if (typeof redirect === 'string') {
+		await navigateTo(redirect);
+	} else {
+		await navigateTo('/account');
+	}
 }
 </script>
 
