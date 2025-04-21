@@ -5,7 +5,7 @@ const route = useRoute();
 const redirect = route.query.redirect;
 const registerURI = `/account/register${redirect ? `?redirect=${redirect}` : ''}`;
 
-const loginForm = reactive({ username: null, password: null });
+const loginForm = reactive({ username: '', password: '' });
 const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
@@ -61,12 +61,6 @@ async function loginSubmission() {
             class="pwdreset"
           >{{ $t("account.loginForm.forgotPassword") }}</a>
         </div>
-        <input
-          id="redirect"
-          name="redirect"
-          type="hidden"
-          :value="redirect"
-        >
         <div class="buttons">
           <button type="submit">
             <!-- TODO: loading state on button. ... style maybe? -->

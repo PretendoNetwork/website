@@ -11,8 +11,9 @@ export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
 
 	try {
-		const apiResponse = await $fetch<LoginCCResponse>(`${useRuntimeConfig(event).apiBase}/v1/login`, {
+		const apiResponse = await $fetch<LoginCCResponse>(`/v1/login`, {
 			method: 'POST',
+			baseURL: useRuntimeConfig(event).apiBase,
 			body: { ...body, grant_type: 'password' }
 		});
 
