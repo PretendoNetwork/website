@@ -2,8 +2,8 @@
 import { FetchError } from 'ofetch';
 
 const route = useRoute();
-const redirect = route.query.redirect;
-const registerURI = `/account/register${redirect ? `?redirect=${redirect}` : ''}`;
+const redirect = computed(() => route.query.redirect);
+const registerURI = computed(() => `/account/register${redirect.value ? `?redirect=${redirect.value}` : ''}`);
 
 const loginForm = reactive({ username: '', password: '' });
 const errorMessage = ref<string | null>();
@@ -21,8 +21,8 @@ async function loginSubmission() {
 		return;
 	});
 
-	if (typeof redirect === 'string') {
-		await navigateTo(redirect);
+	if (typeof redirect.value === 'string') {
+		await navigateTo(redirect.value);
 	} else {
 		await navigateTo('/account');
 	}
