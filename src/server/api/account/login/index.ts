@@ -1,11 +1,11 @@
 import { FetchError } from 'ofetch';
 
-type LoginCCResponse = {
+interface LoginCCResponse {
 	refresh_token: string;
 	access_token: string;
 	token_type: string;
 	expires_in: number;
-};
+}
 
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
