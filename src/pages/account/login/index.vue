@@ -9,22 +9,27 @@ const loginForm = reactive({ username: '', password: '' });
 const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
-	await $fetch('/api/account/login', {
-		method: 'POST',
-		body: loginForm
-	}).catch((error: FetchError) => {
-		errorMessage.value = error.statusText;
-		setTimeout(() => { // TODO: this is not the best way to clear this out, but this is temporary! replace all toasts with input alerts in the future
+	try {
+		await $fetch('/api/account/login', {
+			method: 'POST',
+			body: loginForm
+		});
+
+		if (typeof redirect.value === 'string') {
+			await navigateTo(redirect.value);
+		} else {
+			await navigateTo('/account');
+		}
+	} catch (error: unknown) {
+		if (error instanceof FetchError) {
+			errorMessage.value = error.statusText;
+		} else {
+			errorMessage.value = `Error during registration: ${error}`; // TODO: localize
+		}
+
+		setTimeout(() => { // TODO: replace this toast
 			errorMessage.value = null;
 		}, 5000);
-
-		return;
-	});
-
-	if (typeof redirect.value === 'string') {
-		await navigateTo(redirect.value);
-	} else {
-		await navigateTo('/account');
 	}
 }
 </script>

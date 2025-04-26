@@ -1,12 +1,11 @@
 import { FetchError } from 'ofetch';
 
-// TODO: Drop to interface from type, type is unnecessary for this
-type RegisterCCResponse = { // TODO: this is the same as the login response. figure out where we should put types and merge into AuthCCReponse!
+interface RegisterCCResponse { // TODO: this is the same as the login response. figure out where we should put types and merge into AuthCCReponse!
 	refresh_token: string;
 	access_token: string;
 	token_type: string;
 	expires_in: number;
-};
+}
 
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
