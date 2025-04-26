@@ -24,7 +24,11 @@ export default defineNuxtConfig({
 	},
 
 	runtimeConfig: {
-		apiBase: 'https://api.pretendo.cc'
+		apiBase: 'https://api.pretendo.cc',
+
+		public: {
+			hCaptchaSitekey: ''
+		}
 	},
 
 	css: ['~/assets/css/main.css'],

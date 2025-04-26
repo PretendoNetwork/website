@@ -12,35 +12,33 @@ const errorMessage = ref<string | null>();
 const invisibleHcaptcha = ref<VueHcaptcha | null>(null);
 
 async function registerSubmission() {
-	if (invisibleHcaptcha.value) {
-		try {
-			const hCaptchaResponse = (await invisibleHcaptcha.value.executeAsync()).response;
+	try {
+		const hCaptchaResponse = invisibleHcaptcha.value ? (await invisibleHcaptcha.value.executeAsync()).response : null;
 
-			await $fetch('/api/account/register', {
-				method: 'POST',
-				body: { ...registerForm, hCaptchaResponse }
-			});
+		await $fetch('/api/account/register', {
+			method: 'POST',
+			body: { ...registerForm, hCaptchaResponse }
+		});
 
-			if (typeof redirect.value === 'string') {
-				await navigateTo(redirect.value);
-			} else {
-				await navigateTo('/account');
-			}
-		} catch (error: unknown) {
-			if (error instanceof FetchError) {
-				errorMessage.value = error.statusText;
-			} else {
-				if (error === 'challenge-closed') { // Thrown if the captcha is closed, can be safely ignored
-					return;
-				}
-
-				errorMessage.value = `Error during registration: ${error}`; // TODO: localize
-			}
-
-			setTimeout(() => { // TODO: replace this toast
-				errorMessage.value = null;
-			}, 5000);
+		if (typeof redirect.value === 'string') {
+			await navigateTo(redirect.value);
+		} else {
+			await navigateTo('/account');
 		}
+	} catch (error: unknown) {
+		if (error instanceof FetchError) {
+			errorMessage.value = error.statusText;
+		} else {
+			if (error === 'challenge-closed') { // Thrown if the captcha is closed, can be safely ignored
+				return;
+			}
+
+			errorMessage.value = `Error during registration: ${error}`; // TODO: localize
+		}
+
+		setTimeout(() => { // TODO: replace this toast
+			errorMessage.value = null;
+		}, 5000);
 	}
 }
 </script>
@@ -119,8 +117,9 @@ async function registerSubmission() {
       </form>
     </div>
     <vue-hcaptcha
+      v-if="$config.public.hCaptchaSitekey"
       ref="invisibleHcaptcha"
-      sitekey="cf3fd74e-93ca-47e6-9fa0-5fc439de06d4"
+      :sitekey="$config.public.hCaptchaSitekey"
       class="h-captcha"
       size="invisible"
     />
