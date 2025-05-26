@@ -2,7 +2,6 @@
 const { locales, setLocale } = useI18n();
 
 const openDropdown = ref<boolean | string>(false);
-const loggedIn = ref(false);
 function handleDropdownButton(dropdown: boolean | string) {
 	if (!openDropdown.value) {
 		openDropdown.value = dropdown;
@@ -20,6 +19,26 @@ onMounted(() => {
 		scrollY.value = window.scrollY;
 	});
 });
+
+interface InfoCCResponse {
+	username: string;
+	mii: {
+		name: string;
+		image_url: string;
+	};
+}
+
+const route = useRoute();
+const accountInfo = await useFetch<InfoCCResponse>('/api/account/info'); // TODO: does doing this cause too many requests? can't depend on route due to hydration issues
+
+async function logoutClick() {
+	await $fetch('/api/account/logout');
+	accountInfo.clear();
+
+	if (route.path == '/account') {
+		navigateTo('/');
+	}
+}
 </script>
 
 <template>
@@ -451,28 +470,31 @@ onMounted(() => {
       </div>
 
       <div
-        v-if="loggedIn"
+        v-if="accountInfo.data.value"
         class="user-widget-wrapper logged-in"
       >
         <div class="user-widget-toggle">
           <img
-            src="url"
+            :src="accountInfo.data.value.mii?.image_url"
             alt="name"
+            @click="handleDropdownButton('user')"
           >
         </div>
-        <div class="user-widget">
+        <div
+          :class="`user-widget ${openDropdown === 'user' ? 'active' : ''}`"
+        >
           <div class="user-avatar">
             <img
-              src=""
+              :src="accountInfo.data.value.mii?.image_url"
               alt="miiname"
             >
           </div>
           <div class="user-info">
             <div class="mii-name">
-              miiname
+              {{ accountInfo.data.value.mii?.name }}
             </div>
             <div class="pnid">
-              pnid
+              {{ accountInfo.data.value.username }}
             </div>
           </div>
           <div class="buttons">
@@ -481,17 +503,18 @@ onMounted(() => {
                 {{ $t("nav.accountWidget.settings") }}
               </button>
             </a>
-            <a href="/account/logout">
-              <button class="button logout">
-                {{ $t("nav.accountWidget.logout") }}
-              </button>
-            </a>
+            <button
+              class="button logout"
+              @click="logoutClick"
+            >
+              {{ $t("nav.accountWidget.logout") }}
+            </button>
           </div>
         </div>
       </div>
 
       <div
-        v-if="!loggedIn"
+        v-else
         class="user-widget-wrapper"
       >
         <a
@@ -863,7 +886,7 @@ header .user-widget {
 	overflow: hidden;
 
 	box-sizing: border-box;
-	transition: max-height 300ms, padding 200ms, opacity 150ms;
+	transition: opacity 150ms;
 
 	position: absolute;
 	right: 0;
