@@ -29,11 +29,12 @@ interface InfoCCResponse {
 }
 
 const route = useRoute();
-const accountInfo = await useFetch<InfoCCResponse>('/api/account/info'); // TODO: does doing this cause too many requests? can't depend on route due to hydration issues
+
+const accountInfo = await useFetch<InfoCCResponse>('/api/account/info', { watch: [() => route.path] }); // TODO: does doing this cause too many requests?
 
 async function logoutClick() {
 	await $fetch('/api/account/logout');
-	accountInfo.clear();
+	accountInfo.clear(); // manually clear since redirect is only going to happen on the account page
 
 	if (route.path == '/account') {
 		navigateTo('/');
