@@ -24,8 +24,48 @@ interface InfoCCResponse {
 	};
 }
 
+interface DiscordInfoResponse {
+	username?: string;
+	authLink?: string;
+}
+
+const route = useRoute();
+const router = useRouter();
 const account = await useFetch<InfoCCResponse>('/api/account/info'); // TODO: easy way to share this between navbar and account page? is that a good idea?
+
 const showingEditingDisabledModal = ref(false);
+
+if (route.params.connection) { // my nightmares are made of this logic
+	if (import.meta.server) {
+		switch (route.params.connection) { // future proofing for more connections?
+			case 'discord': {
+				if (route.query.code) {
+					await useFetch('/api/account/connections/discord/add', {
+						method: 'POST',
+						body: {
+							code: route.query.code
+						}
+					});
+				}
+				break;
+			}
+			default:
+				break;
+		}
+	}
+	router.replace('/account');
+}
+
+const discordInfo = await useFetch<DiscordInfoResponse>('/api/account/connections/discord/info');
+
+async function handleUnlinkDiscord() {
+	try {
+		await $fetch('/api/account/connections/discord/remove', { method: 'DELETE' });
+		discordInfo.refresh();
+	} catch {
+		console.log('uhoh');
+	}
+}
 
 </script>
 
@@ -333,17 +373,23 @@ const showingEditingDisabledModal = ref(false);
           <h2 class="header">
             {{ $t("account.settings.settingCards.discord") }}
           </h2>
-        <!--{{#if discordUser}}
-        <p>{{ locale.account.settings.settingCards.connectedToDiscord }} {{ discordUser.username }}#{{ discordUser.discriminator }}</p>
-        <a href="/account/remove/discord">
-          <button
-            id="remove-discord-connection"
-            class="button secondary"
-          >{{ locale.account.settings.settingCards.removeDiscord }}</button>
-        </a>
-        {{else}}
-        <p>{{ locale.account.settings.settingCards.noDiscordLinked }} <a href="{{ discordAuthURL }}">{{ locale.account.settings.settingCards.linkDiscord }}</a></p>
-        {{/if}}-->
+          <template
+            v-if="discordInfo.data.value?.username"
+          >
+            <p>{{ $t("account.settings.settingCards.connectedToDiscord") }} {{ discordInfo.data.value.username }}</p>
+            <button
+              id="remove-discord-connection"
+              class="button secondary"
+              @click="handleUnlinkDiscord"
+            >
+              {{ $t("account.settings.settingCards.removeDiscord") }}
+            </button>
+          </template>
+          <template
+            v-else
+          >
+            <p>{{ $t("account.settings.settingCards.noDiscordLinked") }} <a :href="discordInfo.data.value?.authLink">{{ $t("account.settings.settingCards.linkDiscord") }}</a></p>
+          </template>
         </div>
 
         <div class="setting-card">
@@ -481,7 +527,7 @@ const showingEditingDisabledModal = ref(false);
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: no-repeat center/40% url("/assets/images/edit.svg"), rgba(55, 60, 101, 0.7);
+	background: no-repeat center/40% /*url("/assets/images/edit.svg"),*/ rgba(55, 60, 101, 0.7);
 	opacity: 0;
 	transition: opacity 150ms;
 }

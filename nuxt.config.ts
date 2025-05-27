@@ -26,8 +26,25 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		apiBase: 'https://api.pretendo.cc',
 
+		discord: {
+			botToken: '',
+			clientID: '',
+			clientSecret: ''
+		},
+
 		public: {
 			hCaptchaSitekey: ''
+		}
+	},
+
+	hooks: {
+		'pages:extend'(pages) {
+			// add a route
+			pages.push({
+				name: 'connect',
+				path: '/account/connect/:connection',
+				file: '~/pages/account/index.vue'
+			});
 		}
 	},
 
