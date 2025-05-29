@@ -20,10 +20,6 @@ Juxtaposition is the Pretendo Network replacement for the now defunct Miiverse s
 
 # 3DS
 
-<div class="tip yellow">
-  ⚠️ Nimbus will overwrite existing patches for services such as Rverse. As such, use with caution
-</div>
-
 <div class="tip">
   ℹ️ Nimbus already handles all the required patches for the Miiverse applet. If you do not have Nimbus installed, follow this <a href="/docs/install/3ds" target="_blank">guide</a> to get started.
 </div>
