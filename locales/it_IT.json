@@ -58,7 +58,7 @@
 				"answer": "Per iniziare con Pretendo Network su 3DS, Wii U o emulatori, vedi le nostre <a href=\"/docs/install\">istruzioni di configurazione</a>!"
 			},
 			{
-				"question": "Sapete quando una/un determinata/o funzionalità/servizio sarà pronta/o?",
+				"question": "Tra quanto tempo sarà pronta questa funzionalità/servizio?",
 				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
 			},
 			{
@@ -67,7 +67,7 @@
 			},
 			{
 				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?",
-				"answer": "Noi non avremo accesso alla lista degli utenti bannati da Nintendo Network, quindi quegli utenti non saranno bannati sul nostro servizio. Ci saranno comunque regole da seguire mentre si usa il servizio, e il mancato rispetto di queste regole potrebbe portare a un ban."
+				"answer": "No. Per scopi di sicurezza e moderazione, per usare un emulatore hai comunque bisogno di una console reale. Questo ci permette di migliorare la sicurezza e di applicare meglio le regole al fine di fornire un'esperienza sicura e piacevole con il nostro servizio."
 			},
 			{
 				"question": "Pretendo supporterà la Wii/Switch?",
