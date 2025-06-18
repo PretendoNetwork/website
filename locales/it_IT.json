@@ -83,6 +83,9 @@
 			{
 				"answer": "Solo in partite private - ottenere vantaggi sleali o compromettere l'esperienza di gioco online senza il permesso dei partecipanti (e in partite pubbliche) è sanzionabile con un ban. Banniamo regolarmente account e console su entrambe le piattaforme Wii U e 3DS. Pretendo usa misure di sicurezza aggiuntive con lo scopo di rendere i tradizionali metodi 'unban' inefficaci, ad esempio cambiando il codice seriale della console.",
 				"question": "Posso usare trucchi o mods online con Pretendo?"
+			},
+			{
+				"question": "Posso usare cheat o mod online con Pretendo?"
 			}
 		]
 	},
@@ -111,7 +114,8 @@
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
 				"github": "https://github.com/jonbarrow",
-				"picture": "https://github.com/jonbarrow.png"
+				"picture": "https://github.com/jonbarrow.png",
+				"caption": "Proprietario del progetto e sviluppatore principale"
 			},
 			{
 				"name": "Jemma (CaramelKat)",
@@ -121,12 +125,14 @@
 			{
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky",
-				"name": "quarky"
+				"name": "quarky",
+				"caption": "Ricerca e sviluppo di patch della Wii U"
 			},
 			{
 				"name": "SuperMarioDaBom",
 				"github": "https://github.com/SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png"
+				"picture": "https://github.com/supermariodabom.png",
+				"caption": "Ricerca di sistemi e architettura dei server"
 			},
 			{
 				"caption": "Sviluppo web",
@@ -142,7 +148,8 @@
 			{
 				"picture": "https://github.com/InternalLoss.png",
 				"name": "Billy",
-				"github": "https://github.com/InternalLoss"
+				"github": "https://github.com/InternalLoss",
+				"caption": "Preservazionista e architettura server"
 			},
 			{
 				"name": "DaniElectra"
