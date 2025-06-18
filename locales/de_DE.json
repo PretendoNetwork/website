@@ -42,7 +42,7 @@
 		"githubRepo": "Github-Repository"
 	},
 	"faq": {
-		"title": "Frequently Asked Questions (Häufig gestellte Fragen)",
+		"title": "Häufig gestellte Fragen",
 		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen, zur schnellen Informationsbeschaffung.",
 		"QAs": [
 			{
@@ -75,17 +75,19 @@
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
+				"answer": "Die Wii hat bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Die Switch ist derzeit nicht unser Ziel, da sie sowohl kostenpflichtig als auch völlig anders als das Nintendo Network ist.\""
 			},
 			{
-				"question": "Wenn ich auf dem Nintendo Network gebannt bin, heißt das auch das ich auf Pretendo gebannt bin?"
+				"question": "Wenn ich auf dem Nintendo Network gebannt bin, heißt das auch das ich auf Pretendo gebannt bin?",
+				"answer": "Für das beste Erlebnis auf Konsolen musst du dein System hacken – speziell Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist jedoch auch die hackfreie SSSL-Methode mit eingeschränkter Funktionalität verfügbar. Sieh dir unsere <a href=\"/docs/install\">Einrichtungsanleitung</a> für Details an."
 			},
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
 				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
 			},
 			{
-				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?"
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
+				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche 'Unban'-Methoden, wie das Ändern der Seriennummer, unwirksam machen."
 			}
 		]
 	},
