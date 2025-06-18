@@ -99,7 +99,12 @@
 	},
 	"credits": {
 		"title": "Tiimi",
-		"text": "Tutustu tiimiin projektin takana"
+		"text": "Tutustu tiimiin projektin takana",
+		"people": [
+			{
+				"caption": "Projektin omistaja ja johtava kehittäjä"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
