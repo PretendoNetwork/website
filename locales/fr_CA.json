@@ -20,6 +20,10 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Serveurs de Jeux"
+		"subtitle": "Serveurs de Jeux",
+		"title": "Recréé"
+	},
+	"aboutUs": {
+		"title": "À propos de nous"
 	}
 }
