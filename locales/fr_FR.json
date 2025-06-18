@@ -66,24 +66,27 @@
 				"answer": "Nous travaillons sur de nouveaux jeux une fois que nous estimons que nos bibliothèques internes sont prêtes à les prendre en charge et que du temps de développement est disponible pour les maintenir. Une grande partie de notre travail consiste à stabiliser et finaliser nos jeux existants – nous voulons offrir la meilleure expérience possible avant de passer à de nouveaux titres. Comme de nouvelles tâches surgissent constamment, nous ne pouvons pas estimer quand cela se produira."
 			},
 			{
-				"question": "Pretendo fonctionne-t-il sur Cemu / émulateur ?",
-				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'information sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielle ou de procédures d'installation pour l'instant. Le build le plus récent de Citra ne prend pas en charge Pretendo."
+				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo ?",
+				"answer": "Non. Pour des raisons de sécurité et de modération, si vous utilisez un émulateur, vous aurez toujours besoin d'une vraie console. Cela permet une meilleure sécurité et une modération plus efficace pour permettre de créer une expérience sûre et satisfaisante de notre service."
 			},
 			{
-				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
-				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler car ses services sont payants et complètement différents du Nintendo Network."
+				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
+				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'informations sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielles ou de procédures d'installation pour l'instant. La version la plus récente de Citra ne prend pas en charge Pretendo."
 			},
 			{
-				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
-				"answer": "Pour la meilleure expérience possible sur console, Vous aurez besoin de modifier le système de celle-ci — par exemple, grâce à Aroma pour la Wii U ou Luma3DS pour la 3DS. Cependant, avec la Wii U, il est possible d'accéder à Pretendo sans modification, mais avec des fonctionnalités limitées. Voir <a href=\"/docs/install\">la documentation</a> pour plus de détails."
+				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
+				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler, car ses services sont payants et complètement différents du Nintendo Network."
 			},
 			{
-				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban.",
-				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?"
+				"answer": "Pour la meilleure expérience possible sur console, vous aurez besoin de modifier le système de celle-ci — par exemple, grâce à Aroma pour la Wii U ou Luma3DS pour la 3DS. Cependant, avec la Wii U, il est possible d'accéder à Pretendo sans modification, mais avec des fonctionnalités limitées. Voir <a href=\"/docs/install\">la documentation</a> pour plus de détails.",
+				"question": "Aurais-je besoin de modifier ma console pour me connecter ?"
 			},
 			{
-				"question": "Puis-je utiliser des cheats ou des mods en ligne avec Pretendo ?",
-				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu des autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles)."
+				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?",
+				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban."
+			},
+			{
+				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles)."
 			}
 		]
 	},
