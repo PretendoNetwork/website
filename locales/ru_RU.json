@@ -98,25 +98,38 @@
 				"name": "Джонатан Барроу (jonbarrow)"
 			},
 			{
-				"name": "Джемма (CaramelKat)"
+				"name": "Джемма (CaramelKat)",
+				"caption": "Исследование и разработка Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "Исследование Wii U и разработка патчей"
+				"caption": "Исследование Wii U и разработка патчей",
+				"github": "https://github.com/ashquarky",
+				"picture": "https://github.com/ashquarky.png"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
 				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Серверная архитектура и исследование систем"
+				"caption": "Серверная архитектура и исследование систем",
+				"name": "SuperMarioDaBom"
 			},
 			{
-				"caption": "Веб-разработка"
+				"caption": "Веб-разработка",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes"
 			},
 			{
-				"caption": "Исследование систем и разработка серверов"
+				"caption": "Исследование систем и разработка серверов",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000"
 			},
 			{
 				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
+				"github": "https://github.com/InternalLoss",
+				"name": "Billy"
 			}
 		]
 	},
