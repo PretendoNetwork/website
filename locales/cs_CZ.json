@@ -229,8 +229,12 @@
 				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
 			},
 			{
+				"question": "Bude mi na používání služeb Pretenda stačit emulátor?",
+				"answer": "Ne. Pokud si přejete používat emulátor, budete potřebovat opravdovou konzoli. Tím můžeme zajistit zvýšenou bezpečnost a efektivnější vynucování pravidel, které jsou klíčové pro poskytování bezpečných a příjemných služeb."
+			},
+			{
 				"question": "Funguje Pretendo na Cemu/emulátorech?",
-				"answer": "Cemu 2.1 oficiálně podporuje Pretendo v nastavení účtu. Pro informace jak začít s Cemu navštivte <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaci</a>.<br>Některé 3DS emulátory můžou nabízet podporu, ale v současnosti nemáme oficiální doporučení ani návod k nastavení. Citra ve své poslední vydané verzi Pretendo nepodporuje."
+				"answer": "Cemu 2.1 oficiálně podporuje Pretendo v nastavení účtu. Pro informace jak začít s Cemu navštivte <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaci</a>.<br>Některé 3DS emulátory mohou nabízet podporu, ale v současnosti nemáme oficiální doporučení ani návod k nastavení. Citra ve své poslední vydané verzi Pretendo nepodporuje."
 			},
 			{
 				"question": "Bude Pretendo podporovat Wii/Switch?",
@@ -238,15 +242,15 @@
 			},
 			{
 				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
-				"answer": "Pro nejlepší výsledek budete svou konzoli muset modifikovat; s Aroma na Wii U a Luma3DS na 3DS. Nicméně, na Wii U je dostupná metoda SSSL, která, byť s omezenou funkcionalitou, nabízí připojení bez modifikací. Pro podrobnosti navštivte <a href=\"/docs/install\">návod k nastavení</a>."
+				"answer": "Pro nejlepší výsledek budete svou konzoli muset modifikovat - přesněji pomocí Aroma na Wii U a Luma3DS na 3DS. Nicméně, na Wii U je dostupná metoda SSSL, která, byť s omezenou funkcionalitou, nabízí připojení bez modifikací. Pro podrobnosti navštivte <a href=\"/docs/install\">návod k nastavení</a>."
 			},
 			{
 				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
-				"answer": "Nemáme přístup k banům na Nintendo Network a tito uživatelé na naší službě zabanováni nebudou. Máme však vlastní pravidla pro používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+				"answer": "Nemáme přístup k seznamu banů na Nintendo Network, takže nikdo z uživatelů Nintendo Network ban na Pretendu nemá. Máme však vlastní zásady pro používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
 			},
 			{
 				"question": "Můžu na Pretendu používat mody a cheaty?",
-				"answer": "Pouze v soukromých zápasech - narušování online her lidem, kteří s tím nesouhlasili (tedy veřejné zápasy) je proti zásadám. Bany konzolím a účtům udělujeme pravidelně. Pretendo dále používá dodatečná bezpečnostní opatření, která brání v obcházení banů např. změnou sériového čísla."
+				"answer": "Pouze v soukromých zápasech - narušování online her lidem, kteří s tím nesouhlasili (tedy ve veřejných zápasech) je proti zásadám. Bany konzolím a účtům udělujeme pravidelně. Pretendo dále používá dodatečná bezpečnostní opatření, která brání v obcházení banů např. změnou sériového čísla."
 			}
 		],
 		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
@@ -306,7 +310,7 @@
 				"hasAccessPrompt": "Váš aktuální tier Vám dává přístup k beta serverům. Super!",
 				"passwordResetNotice": "Po změně hesla budete odhlášen(a) ze všech zařízení.",
 				"otherSettings": "Ostatní nastavení",
-				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupné. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
+				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupná. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
 			"unavailable": "Nedostupné",
 			"upgrade": "Upgradovat účet"
@@ -355,7 +359,7 @@
 		"unsubConfirm": "Zrušit předplatné",
 		"tierSelectPrompt": "Vyberte si tier",
 		"changeTierPrompt": "Jste si jisti, že chcete zrušit předplatné <span class=\"oldtier\">oldtiername</span> a předplácet <span class=\"newtier\">newtiername</span>?",
-		"unsubPrompt": "Jste si jisti, že chcete zrušit předplatné <span>tiername</span>? Přijdete o všechny výhody spojené s tímto tierem.",
+		"unsubPrompt": "Jste si jisti, že chcete zrušit předplatné <span>tiername</span>? S <span>okamžitou platností</span> přijdete o všechny výhody spojené s tímto tierem.",
 		"title": "Upgradovat",
 		"description": "Dosažení měsíčního cíle udělá z Pretenda plnohodnotné zaměstnání a umožní nám poskytovat kvalitnější aktualizace v rychlejším tempu."
 	},
