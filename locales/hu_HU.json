@@ -66,7 +66,7 @@
 				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Megakarjuk adni a legjobb élményt mielőtt egy új játékra megyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
-				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
+				"question": "Ha van egy emulátorom, az elég a Pretendo használatához?",
 				"answer": "Nem. A könnyebb moderáció és biztonság érdekében, az emulátor használatához szükséged lesz egy valódi konzolra is. Ez lehetővé tesz egy biztosabb rendszert és a szabályok hatékonyabb betartattatását, egy élvezetesebb és megbízhatóbb élmény érdekében."
 			},
 			{
@@ -74,16 +74,20 @@
 				"question": "Működik a Pretendo a Cemu emulátoron/más emulátorokon?"
 			},
 			{
-				"answer": "A legjobb élményért a konzolokon, kell hackelned kell a konzolt - pontosan Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
+				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
 				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
 			},
 			{
-				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
-				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?"
+				"answer": "A legjobb élményért a konzolokon, hackelned kell a konzolod - pontosabban Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás, de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
+				"question": "Szükségem van hackelésre a csatlakozáshoz?"
 			},
 			{
-				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?",
-				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása."
+				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?",
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat."
+			},
+			{
+				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása.",
+				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?"
 			}
 		]
 	},
@@ -251,7 +255,7 @@
 				"timezone": "Időzóna",
 				"serverEnv": "Szerver környezet",
 				"production": "Éles",
-				"hasAccessPrompt": "A jelenlegi csomag hozzáférést at a béta szerverekhez. Király!",
+				"hasAccessPrompt": "A jelenlegi csomag hozzáférést ad a béta szerverekhez. Király!",
 				"signInSecurity": "Bejelentkezés és biztonság",
 				"email": "Email",
 				"password": "Jelszó",
@@ -286,7 +290,7 @@
 	},
 	"upgrade": {
 		"title": "Bővítés",
-		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? El fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
+		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? <span>Azonnal</span> el fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
 		"changeTier": "Csomag módosítása",
 		"description": "Ha havi cél elérése a Pretendo-t teljes munkaidős munkává teszi, ez jobb minőségű frissítéseket és nagyobb fejlesztési sebességet biztosít.",
 		"month": "hónap",
