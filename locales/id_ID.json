@@ -42,7 +42,35 @@
 		"QAs": [
 			{
 				"question": "Apa itu Pretendo?"
+			},
+			{
+				"answer": "Sayangnya, tidak. NNIDs yang sudah ada tidak bisa digunakan di Pretendo, karena hanya Nintendo memegang data user mu; sedangkan migrasi dari NNID-ke-PNID secara teori memungkinkan, itu bisa berisiko dan membutuhkan data user sensitif yang kami tidak ingin memiliki.",
+				"question": "Apakah NNID yang ada bekerja di Pretendo?"
+			},
+			{
+				"question": "Bagaimana saya mengunakan Pretendo?",
+				"answer": "Untuk memulai dengan Jaringan Pretendo di 3DS, Wii U atau emulator, mohon melihat <a href=\"/docs/install\">instruksi setup</a> kami!"
+			},
+			{},
+			{
+				"question": "Kapan akan kamu tambahkan lebih banyak game?"
+			},
+			{
+				"question": "Jika aku menggunakan emulator, apakah itu cukup untuk menggunakan Pretendo?"
+			},
+			{},
+			{
+				"question": "Akankah Pretendo mendukung Wii/Switch?"
+			},
+			{},
+			{
+				"question": "Jika aku di-banned di Jaringan Nintendo, Apakah aku tetap ter-banned saat menggunakan Pretendo?"
 			}
-		]
+		],
+		"title": "Pertanyaan Umum"
+	},
+	"modals": {
+		"close": "Tutup",
+		"cancel": "Batal"
 	}
 }
