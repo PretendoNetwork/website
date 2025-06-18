@@ -66,7 +66,7 @@
 				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
 			},
 			{
-				"question": "Pretendo funziona su Cemu/emulatori?",
+				"question": "Se utilizzo un emulatore, sarà sufficiente per utilizzare Pretendo?",
 				"answer": "No. Per scopi di sicurezza e moderazione, per usare un emulatore hai comunque bisogno di una console reale. Questo ci permette di migliorare la sicurezza e di applicare meglio le regole al fine di fornire un'esperienza sicura e piacevole con il nostro servizio."
 			},
 			{
@@ -75,10 +75,10 @@
 			},
 			{
 				"question": "Dovrò modificare la mia console per connettermi?",
-				"answer": "Sì, dovrai modificare il tuo dispositivo per connetterti; tuttavia, sulla Wii U è sufficiente poter accedere all'Homebrew Launcher (via Haxchi, Coldboot Haxchi, o anche solo l'exploit web per browser). Informazioni su come connettersi su 3DS saranno fornite in futuro."
+				"answer": "Esistono già server custom per la Wii, forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Per quanto riguarda la Switch, non rientra nei nostri piani attuali, poiché i suoi servizi sono a pagamento e completamente diversi da quelli del Nintendo Network."
 			},
 			{
-				"question": "Se sono bannato su Nintendo Network, rimarrò bannato quando userò Pretendo?"
+				"question": "Dovrò moddare la console per connettermi?"
 			},
 			{
 				"answer": "Solo in partite private - ottenere vantaggi sleali o compromettere l'esperienza di gioco online senza il permesso dei partecipanti (e in partite pubbliche) è sanzionabile con un ban. Banniamo regolarmente account e console su entrambe le piattaforme Wii U e 3DS. Pretendo usa misure di sicurezza aggiuntive con lo scopo di rendere i tradizionali metodi 'unban' inefficaci, ad esempio cambiando il codice seriale della console.",
