@@ -34,7 +34,7 @@
 		"title": "Hakkımızda",
 		"paragraphs": [
 			"Pretendo, tersine mühendislik kullanarak 3DS ve Wii U için Nintendo Network'ü yeniden oluşturmayı amaçlayan açık kaynaklı bir projedir.",
-			"Hizmetlerimiz hem ücretsiz hem de açık kaynak olacağından, Nintendo Network'ün kaçınılmaz olarak kapanışından çok daha sonra var olabilirler."
+			"Hizmetlerimiz ücretsiz ve açık kaynak kodlu olduğu için yıllarca varlığını sürdürecektir."
 		]
 	},
 	"progress": {
@@ -54,27 +54,39 @@
 			},
 			{
 				"question": "Pretendo'yu nasıl kullanırım?",
-				"answer": "Pretendo şuanda genel kullanım için hazır değil. Fakat hazır olduğunda Pretendo'yu konsolunuzda bir homebrew yamalayıcısı çalıştırarak kullanabileceksiniz."
+				"answer": "Pretendo Network'ü 3DS, Wii U veya emülatörlerde kullanmaya başlamak için lütfen <a href=\"/docs/install\">kurulum talimatlarımıza</a> bakın!"
 			},
 			{
 				"question": "Servis ya da bir özelliğin ne zaman hazır olacağını biliyor musunuz?",
 				"answer": "Hayır. Pretendo'nun birçok özelliği/hizmeti bağımsız olarak geliştirilmektedir (örneğin, Hesaplar ve Arkadaşlar üzerinde başka bir geliştirici çalışırken Miiverse üzerinde başka bir geliştirici çalışır.) ve bu nedenle, bunun ne kadar süreceği konusunda genel bir tahmini süre veremiyoruz."
 			},
 			{
-				"question": "Pretendo Cemu/emülatörlerde çalışır mı?",
-				"answer": "Pretendo, Nintendo Network ile etkileşebilen herhangi bir istemciyi destekler. Şu anda bu tür işlevselliğe sahip tek emülatör Cemu'dur. Cemu 2.0, emülator ağ hesabı seçenekleri altında Pretendo'yu resmi olarak destekler. Cemu ile nasıl başlayacağınızla ilgili bilgi için <a href=\"https://pretendo.network/docs/install/cemu\">dökümanlara</a> bakın.<br>Citra gerçek çevrimiçi oyun oynamayı desteklemiyor ve bu nedenle Pretendo ile çalışmaz ve destekleyeceğine dair hiçbir işarette göstermiyor. Mobil cihazlar için bir 3DS emülatörü olan Mikage, kesin olmamakla birlikte gelecekte destek sağlayabilir."
+				"question": "Daha fazla oyunu ne zaman ekleyeceksiniz?",
+				"answer": "Backend kütüphanelerimizin desteklemeye hazır olduğunu hissettiğimizde ve geliştiricilerin bunu sürdürmek için zamanı olduğunda yeni oyunlar üzerinde çalışıyoruz. Çalışmalarımızın çoğu mevcut oyunlarımızı stabilize etmeye ve tamamlamaya yöneliktir - yeni oyunlara geçmeden önce bu oyunlarda mümkün olan en iyi deneyimi elde etmek istiyoruz. Her zaman yeni işler ortaya çıktığı için bunun ne zaman olacağına dair bir tahminde bulunamıyoruz."
 			},
 			{
-				"question": "Nintendo Network'te yasaklandıysam, Pretendo kullanırken yasaklı kalacak mıyım?",
-				"answer": "Nintendo Network'ün yasaklarına erişimimiz yok ve tüm kullanıcılar hizmetimizde yasaklı olmayacak. Ancak, hizmeti kullanırken uymanız gereken kurallarımız olacaktır ve bu kurallara uyulmaması yasaklama ile sonuçlanabilir."
+				"question": "Eğer herhangi bir emülatör kullanırsam, bu Pretendo servislerini kullanmak için yeterli olacak mı?",
+				"answer": "Hayır. Güvenlik ve denetim amacıyla, bir emülatör kullanıyorsanız, yine de gerçek bir konsola ihtiyacınız vardır. Bu, hizmetimizle güvenli ve keyifli bir deneyim sağlamak için gelişmiş güvenlik ve kuralların daha etkili bir şekilde uygulanmasına olanak tanır."
 			},
 			{
-				"question": "Pretendo Wii/Switch'i destekleyecek mi?",
-				"answer": "Wii'nin zaten <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> tarafından sağlanan özel sunucuları var. Şu anda Switch'i hem ücretli hem de Nintendo Network'ten tamamen farklı olduğu için hedeflemek istemiyoruz."
+				"question": "Pretendo servisleri Cemu yada benzeri emülatörlerde çalışıyor mu?",
+				"answer": "Cemu 2.1 sürümünde, emülatördeki ağ hesabı seçenekleriniz altında Pretendo'yu resmi olarak desteklemektedir. Cemu'ya nasıl başlayacağınız hakkında bilgi için<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>, Bazı 3DS emülatörleri veya forkları bizi destekleyebilir, ancak şu anda herhangi bir resmi öneri veya kurulum talimatımız yok. Citra'nın son sürümleri Pretendo'yu desteklememektedir."
 			},
 			{
-				"question": "Bağlanmak için hacklere ihtiyacım olacak mı?",
-				"answer": "Evet, bağlanmak için cihazınızı hacklemeniz gerekecek; ancak Wii U'da yalnızca Homebrew Launcher'a (yani Haxchi, Coldboot Haxchi ve hatta web tarayıcısı açıklarından yararlanma) erişmeniz gerekir ve 3DS'nin nasıl bağlanacağı hakkında daha sonra bilgi verilecektir."
+				"question": "Pretendo Wii/Switch'i de destekleyecek mi?",
+				"answer": "Wii'de zaten <a href=\"“https://wiimmfi.de/”\" target=\"“_blank”\">Wiimmfi</a> tarafından sağlanan özel sunuculara ve lobilere sahiptir. Hem ücretli hem de Nintendo Network'ten tamamen farklı olduğu için şu anda Switch'i hedeflemek istemiyoruz."
+			},
+			{
+				"question": "Pretendo servislerine bağlanmak için hacklere ihtiyacım olacak mı?",
+				"answer": "Konsollarda en iyi deneyimi elde etmek için konsolunuzu hacklemeniz gerekecek; özellikle Wii U için Aroma ve 3DS için Luma3DS. Ancak Wii U'da hackless SSSL yöntemi de sınırlı işlevsellikle mevcuttur. Ayrıntılı bilgi için <a href=\"/docs/install\">setup instructions</a> bakınız."
+			},
+			{
+				"question": "Nintendo Network'te banlıysam, Pretendo'da banlı olucakmıyım?",
+				"answer": "Nintendo Network'ün ban listesine erişimimiz yok, bu nedenle tüm Nintendo Network kullanıcıları banlanmadı. Ancak, hizmeti kullanırken uymamız gereken kurallar vardır ve bu kurallara uyulmaması yasaklanmaya neden olabilir."
+			},
+			{
+				"question": "Pretendo ile online oyunlarda hileler veya modlar kullanabilir miyim?",
+				"answer": "Sadece private maçlarda - haksız avantaj elde etmek veya rızası olmayan kişilerle çevrimiçi deneyimi bozmak (herkese açık maçlarda olduğu gibi) banlanmanız olasıdır. Hem Wii U hem de 3DS sistemlerine düzenli olarak hesap ve konsol banı uyguluyoruz. Pretendo, seri numaranızı değiştirmek gibi geleneksel 'ban kaldırma' yöntemlerini etkisiz hale getiren ekstra güvenlik sistemimiz bile vardır."
 			}
 		],
 		"text": "Burada, bize kolay bilgi için sorulan bazı genel sorular yer almaktadır."
@@ -99,7 +111,81 @@
 	},
 	"credits": {
 		"title": "Takımımız",
-		"text": "Projenin arkasındaki ekip ile tanışın"
+		"text": "Projenin arkasındaki ekip ile tanışın",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Proje lideri ve baş geliştirici",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"picture": "https://github.com/caramelkat.png",
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse için araştırma ve geliştirme",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"caption": "Wii U için araştırma ve yama geliştirme",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png",
+				"caption": "Sistem araştırmaları ve sunucu mimarisi"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"caption": "Web geliştirme",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes"
+			},
+			{
+				"caption": "Sistem araştırması ve sunucu geliştirme",
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Koruma uzmanı ve sunucu mimarisi"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Sistem araştırmaları ve sunucu geliştirme",
+				"github": "https://github.com/DaniElectra",
+				"picture": "https://github.com/danielectra.png"
+			},
+			{
+				"name": "niko",
+				"caption": "Web ve sunucu geliştirme",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"picture": "https://github.com/MatthewL246.png",
+				"name": "MatthewL246",
+				"caption": "DevOps ve topluluk çalışması",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Sunucu geliştirme ve optimizasyon",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "3DS yaması geliştirme ve araştırma",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"account": {
 		"settings": {
@@ -183,7 +269,8 @@
 			"Super Mario World 2 - Yoshi's Island'ın ana teması tam bir klasik ve beni başka türlü ikna etmenin bir yolu yok.",
 			"En sevdiğim Nintendo Switch oyunları Nintendo Switch Online + Genişletme Paketi, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Çevrimdışı Oynama Paketi, Nintendo Switch Online + Bir Port daha Paketi ve Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Nintendo Wii U Sanal Konsol Oyunlarını Gerçekten Sevdiniz, Bu yüzden Geri Getiriyoruz\" Paketi. Nintendo'nun umursadığını gerçekten söyleyebilirsin.",
 			"\"Ash'i biliyorsun, kalbini korusun, o bütün gün UwUlar\" gibi, \"Ash her zaman uwular ve bu gerçekten garip ve aptalca ve keşke yapmasalar\" demenin güneydeki güzel yolu",
-			"Kanalımdaki ilk videom!! bn uzun zamandır video yapmak istiyordum ama dizüstü bilgisayarım oldukça kötü çalıştı ve fraps, skype ve minecraft'ı aynı anda çalıştıramadım. ama artık bitti! BT öğretmenimin biraz yardımıyla dizüstü bilgisayarım çok daha iyi çalışıyor ve şimdi kayıt yapabiliyorum! umarım eğlenirsiniz ve beğendiyseniz lütfen beğenip abone olun!!!"
+			"Kanalımdaki ilk videom!! bn uzun zamandır video yapmak istiyordum ama dizüstü bilgisayarım oldukça kötü çalıştı ve fraps, skype ve minecraft'ı aynı anda çalıştıramadım. ama artık bitti! BT öğretmenimin biraz yardımıyla dizüstü bilgisayarım çok daha iyi çalışıyor ve şimdi kayıt yapabiliyorum! umarım eğlenirsiniz ve beğendiyseniz lütfen beğenip abone olun!!!",
+			"Bana Güzel Görünüyor"
 		],
 		"widget": {
 			"button": "Şimdi katıl!",
@@ -243,7 +330,94 @@
 	},
 	"specialThanks": {
 		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
-		"title": "Ayrıca teşekkürler"
+		"title": "Ayrıca teşekkürler",
+		"people": [
+			{
+				"caption": "Yerelleştirme ve diğer katkılar",
+				"name": "GitHub katılımcıları",
+				"github": "https://github.com/PretendoNetwork",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			},
+			{
+				"caption": "crunch kütüphanesi̇ geli̇şti̇rme",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "3DS geliştirme ve NEX dissektörü",
+				"name": "Stary"
+			},
+			{
+				"caption": "Miiverse bilgi paylaşımı",
+				"github": "https://twitter.com/rverseClub",
+				"picture": "https://github.com/rverseTeam.png",
+				"name": "rverse"
+			},
+			{
+				"github": "https://github.com/Kinnay",
+				"special": "Özel teşekkürler",
+				"name": "Kinnay",
+				"caption": "Nintendo veri yapıları üzerine araştırmalar",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"picture": "https://github.com/ninstar.png",
+				"caption": "Mii Editor ve Juxt reactions için ikonlar",
+				"name": "NinStar",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"picture": "https://github.com/EpicUsername12.png",
+				"name": "Rambo6Glaz",
+				"caption": "Konsol araştırmaları ve oyun sunucuları",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Wii U yaması geliştirme",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS yama yaratıcısı",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "Sunucu mimarisi",
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload",
+				"caption": "Sunucu mimarisi"
+			},
+			{
+				"caption": "Splatoon rotasyonları ve araştırması",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"github": "https://github.com/OatmealDome",
+				"caption": "Splatoon rotasyonları ve araştırması",
+				"name": "OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
+			},
+			{
+				"name": "GitHub katılımcıları",
+				"caption": "Yerelleştirme ve diğer katkılar",
+				"github": "https://github.com/PretendoNetwork",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			}
+		]
 	},
 	"donation": {
 		"upgradePush": "Abone olmak ve harika avantajlara erişmek için <a href=\"/account/upgrade\">yükseltme sayfasını</a> ziyaret edin.",
@@ -252,7 +426,7 @@
 	"blogPage": {
 		"published": "Tarafından yayınlandı",
 		"title": "Blog",
-		"description": "",
+		"description": "Yoğunlaştırılmış parçalar halinde en son güncellemeler. Güncellemeleri daha sık görmek istiyorsanız <a href=\"/account/upgrade\" target=\"_blank\">supporting us</a>.",
 		"publishedOn": "şu tarihte"
 	},
 	"upgrade": {
@@ -261,7 +435,7 @@
 		"month": "ay",
 		"description": "Aylık hedefe ulaşmak, Pretendo'yu tam zamanlı bir iş haline getirecek ve daha hızlı bir oranda daha kaliteli güncellemeler sağlayacaktır.",
 		"title": "Yükselt",
-		"unsubPrompt": "<span>tiername</span> aboneliğinden çıkmak istediğinizden emin misiniz? Bu seviye ile ilişkili ayrıcalıklara erişiminizi kaybedeceksiniz.",
+		"unsubPrompt": "<span>tiername</span> Aboneliğinizi iptal etmek istediğinizden emin misiniz? Bu katmandaki avantajları <span>immediately</span> erişiminizi kaybedeceksiniz.",
 		"unsub": "Abonelikten çık",
 		"unsubConfirm": "Abonelikten çık",
 		"changeTier": "Seviye değiştir",
@@ -276,5 +450,8 @@
 		"close": "Kapat",
 		"confirm": "Onayla",
 		"cancel": "İptal"
+	},
+	"notfound": {
+		"description": "Woops! Bu sayfayı bulamadık."
 	}
 }
