@@ -440,7 +440,7 @@
 		"unsub": "登録を解除",
 		"unsubConfirm": "登録を解除",
 		"tierSelectPrompt": "レベルを選択",
-		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルの特典にアクセスできなくなります。"
+		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルに関連付けられた特典にアクセスできなくなります。"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span>/<span>$${goald}</span>(寄付額/目標) ー 月間目標の <span>${perc}%</span>の寄付を頂いています。",
