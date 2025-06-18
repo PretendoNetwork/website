@@ -96,9 +96,19 @@
 			},
 			{},
 			{},
-			{},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
 			{
 				"caption": "Веб-разработка"
+			},
+			{
+				"caption": "Исследование систем и разработка серверов"
+			},
+			{
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			}
 		]
 	},
