@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Informacje",
+		"about": "O Nas",
 		"faq": "Często zadawane pytania",
 		"docs": "Dokumentacja",
 		"credits": "Podziękowania",
@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Czy Pretendo działa na Cemu/emulatorach?",
-				"answer": "Pretendo wspiera wszystko co interaktuje z Nintendo Network, Jedyny emulator który wspiera taką funkcjonalnośc jest Cemu. Cemu 2.0 oficjalnie wspiera Pretendo pod twoimi ustawieniami konta w emulatorze. Dla informacji jak zacząć z Cemu, zapoznaj się z <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra nie wspiera prawdziwej gry online, więc dlatego nie działa z Pretendo, i w ogóle nie pokazuje żadnych znaków wspierania prawdziwej gry online. Mikage, emulator 3DS na telefonach może zacząć wspierać tą funkcjonalność w przyszłości, lecz jest to daleko od pewności."
+				"answer": "Pretendo wspiera wszystko co łączy się z Nintendo Network, Jedyny emulator który wspiera taką funkcjonalnośc jest Cemu. Cemu 2.0 oficjalnie wspiera Pretendo pod twoimi ustawieniami konta w emulatorze. Dla informacji jak zacząć z Cemu, zapoznaj się z dokumentacją.Citra nie wspiera prawdziwej gry online, więc dlatego nie działa z Pretendo, i w ogóle nie pokazuje żadnych znaków wspierania prawdziwej gry online. Mikage, emulator 3DS na telefonach może zacząć wspierać tą funkcjonalność w przyszłości, lecz jest to daleko od pewności."
 			},
 			{
 				"question": "Jeśli jestem zbanowany na Nintendo Network, czy będę również zbanowany na Pretendo?",
