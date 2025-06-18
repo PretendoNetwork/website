@@ -13,11 +13,14 @@
 			"captions": {
 				"credits": "Berkenalan dengan Tim",
 				"progress": "Lihat kemajuan dan tujuan proyek",
-				"faq": "Pertanyaan Umum"
+				"faq": "Pertanyaan yang sering diajukan",
+				"about": "Tentang projek",
+				"blog": "Update terbaru kami, secara singkat"
 			}
 		},
 		"faq": "Pertanyaan Umum",
-		"blog": "Berita"
+		"blog": "Berita",
+		"donate": "Donasi"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
@@ -68,7 +71,7 @@
 				"question": "Jika aku di-banned di Jaringan Nintendo, Apakah aku tetap ter-banned saat menggunakan Pretendo?"
 			}
 		],
-		"title": "Pertanyaan Umum"
+		"title": "Pertanyaan yang sering diajukan"
 	},
 	"modals": {
 		"close": "Tutup",
