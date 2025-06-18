@@ -184,7 +184,7 @@
 		]
 	},
 	"specialThanks": {
-		"title": "Remerciements spéciaux",
+		"title": "Sincères remerciements",
 		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
 		"people": [
 			{
@@ -216,7 +216,7 @@
 				"github": "https://github.com/Kinnay",
 				"name": "Kinnay",
 				"caption": "Recherche sur les structures de données Nintendo",
-				"special": "Remerciements spéciaux"
+				"special": "Sincères remerciements"
 			},
 			{
 				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
