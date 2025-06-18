@@ -62,7 +62,7 @@
 				"answer": "Não. Muitos dos recursos e serviços da Pretendo são desenvolvidos de forma independente (por exemplo, o Miiverse pode ser trabalhado por um desenvolvedor enquanto as contas e lista de amigos são trabalhados por outro) e, portanto, não podemos estimar quanto tempo isso pode levar."
 			},
 			{
-				"question": "A Pretendo funciona em emuladores?",
+				"question": "Quando vocês irão adicionar mais jogos?",
 				"answer": "Pretendo suporta qualquer cliente que possa interagir com a Nintendo Network. No momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu 2.0 oficialmente suporta a Pretendo nas configurações de conta do emulador. Para mais informações em como usar a Pretendo no Cemu, por favor visite <a href=\"https://pretendo.network/docs/install/cemu\">a documentação</a>.<br>Citra não suporta o modo online de verdade, e não funciona com a Pretendo, e também não demonstra nenhum sinal de suportar um modo online no futuro. Mikage, um outro emulador de 3DS para celulares, talvez haverá uma maneira de se conectar online no futuro."
 			},
 			{
