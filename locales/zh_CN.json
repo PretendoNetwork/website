@@ -62,11 +62,11 @@
 				"answer": "不可以。许多 Pretendo 的功能/服务是独立开发的（例如，Miiverse 可能由一位开发人员构建，而 Accounts 和 Friends 正在由另一位开发人员构建），因此我们无法给出这需要多长时间的总体预计到达时间。"
 			},
 			{
-				"question": "Pretendo 是否适用于 Cemu/模拟器?",
+				"question": "什么时候会添加更多游戏?",
 				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有此功能的模拟器是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下已正式支持了 Pretendo。有关开始使用 Cemu 的信息，请查阅<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>Citra 不支持真正意义上的在线多人联机，因此 Pretendo 在 Citra 上不可用，并且完全没有在未来支持在线多人联机的迹象。Mikage，一款用于移动设备的 3DS 模拟器，可能会在未来支持在线多人联机，尽管这尚不确定。"
 			},
 			{
-				"question": "如果我在 Nintendo Network 上被封账号，我在使用 Pretendo 时还会被禁吗？",
+				"question": "我只有模拟器，可以使用Pretendo吗？",
 				"answer": "我们无法访问 Nintendo Network 的用户黑名单，因此不会禁止任何用户使用我们的服务。但是，使用本服务时也需要遵守规则，否则可能会导致被禁。"
 			},
 			{
