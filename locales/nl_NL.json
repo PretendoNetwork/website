@@ -88,7 +88,12 @@
 		"text": "Ontmoet het team achter het project",
 		"people": [
 			{
-				"caption": "Eigenaar en hoofdontwikkelaar"
+				"caption": "Eigenaar en hoofdontwikkelaar",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{},
+			{
+				"caption": "Wii U onderzoek en patch ontwikkeling"
 			}
 		]
 	},
