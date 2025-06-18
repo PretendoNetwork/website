@@ -25,5 +25,25 @@
 	},
 	"aboutUs": {
 		"title": "À propos de nous"
+	},
+	"blogPage": {
+		"publishedOn": "le"
+	},
+	"faq": {
+		"QAs": [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{
+				"question": "Puis-je tricher ou utiliser des mods (modifications de jeu) en ligne sur Pretendo?"
+			}
+		]
 	}
 }
