@@ -63,18 +63,18 @@
 			},
 			{
 				"question": "Quando saranno aggiunti più giochi?",
-				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
+				"answer": "Lavoriamo su giochi nuovi quando sentiamo che le nostre librerie backend siano pronte per supportarli e c'è tempo di sviluppo a disposizione per mantenerli. Gran parte del nostro lavoro consiste nel rendere stabili e completi i nostri giochi esistenti - vogliamo offrire la miglior esperienza possibile in quelli prima di passare a nuovi titoli. Poiché nuovi lavori sorgono costantemente, non possiamo fare alcuna stima di quando ciò potrebbe accadere."
 			},
 			{
 				"question": "Se utilizzo un emulatore, sarà sufficiente per utilizzare Pretendo?",
 				"answer": "No. Per scopi di sicurezza e moderazione, per usare un emulatore hai comunque bisogno di una console reale. Questo ci permette di migliorare la sicurezza e di applicare meglio le regole al fine di fornire un'esperienza sicura e piacevole con il nostro servizio."
 			},
 			{
-				"question": "Pretendo supporterà la Wii/Switch?",
-				"answer": "La Wii dispone già di server custom forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Al momento non abbiamo intenzione di supportare la Switch poiché il suo servizio online è a pagamento e completamente diverso da Nintendo Network."
+				"question": "Pretendo funziona su Cemu/emulatori?",
+				"answer": "Cemu 2.1 supporta ufficialmente Pretendo nelle opzioni del tuo account di rete nell'emulatore. Per ulteriori informazioni su Cemu, dai un'occhiata alla <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>. Alcuni emulatori 3DS o loro fork potrebbero supportarci, ma non abbiamo nessuna raccomandazione ufficiale o istruzioni di configurazione in questo momento. Le ultime versioni di Citra non supportano pretendo."
 			},
 			{
-				"question": "Dovrò modificare la mia console per connettermi?",
+				"question": "Pretendo supporterà la Wii/Switch?",
 				"answer": "Esistono già server custom per la Wii, forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Per quanto riguarda la Switch, non rientra nei nostri piani attuali, poiché i suoi servizi sono a pagamento e completamente diversi da quelli del Nintendo Network."
 			},
 			{
@@ -82,12 +82,12 @@
 				"answer": "Per la migliore esperienza sulle console, dovrai installare un custom firmware (CFW) - in particolare con Aroma su Wii U e Luma3DS su 3DS. Tuttavia, su Wii U, puoi utilizzare il metodo SSSL, senza modifiche ma con funzionalità limitate. Consulta la nostra <a href=\"/docs/install\">guida all'installazione</a> per maggiori dettagli."
 			},
 			{
-				"answer": "Solo in partite private - ottenere vantaggi sleali o compromettere l'esperienza di gioco online senza il permesso dei partecipanti (e in partite pubbliche) è sanzionabile con un ban. Banniamo regolarmente account e console su entrambe le piattaforme Wii U e 3DS. Pretendo usa misure di sicurezza aggiuntive con lo scopo di rendere i tradizionali metodi 'unban' inefficaci, ad esempio cambiando il codice seriale della console.",
+				"answer": "Non abbiamo accesso alla lista dei ban di Nintendo Network, quindi non sarai bannato automaticamente. Tuttavia, abbiamo regole da seguire per l'utilizzo del servizio e non rispettarle potrebbe comportare in un ban.",
 				"question": "Se sono stato bannato sul Nintendo Network, rimarrò bannato anche da Pretendo?"
 			},
 			{
 				"question": "Posso usare cheat o mod online con Pretendo?",
-				"answer": "Soltanto nei match privati - ottenere un vantaggio ingiusto o rovinare l'esperienza online con persone che non sono d'accordo (ad esempio nei match pubblici) è un'infrazione punibile con un ban. Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi tradizionali di 'unban', come cambiare il proprio numero di serie."
+				"answer": "Soltanto nei match privati - ottenere un vantaggio ingiusto o rovinare l'esperienza online con persone che non hanno acconsentito (ad esempio nei match pubblici) è un'infrazione punibile con un ban. Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi tradizionali di evasione dei ban come cambiare il proprio numero di serie."
 			}
 		]
 	},
@@ -158,7 +158,8 @@
 			{
 				"name": "DaniElectra",
 				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
+				"github": "https://github.com/DaniElectra",
+				"caption": "Ricerca sui sistemi e sviluppo server"
 			},
 			{
 				"picture": "https://github.com/hauntii.png",
@@ -169,12 +170,14 @@
 			{
 				"picture": "https://github.com/MatthewL246.png",
 				"github": "https://github.com/MatthewL246",
-				"name": "MatthewL246"
+				"name": "MatthewL246",
+				"caption": "DevOps e lavoro nella community"
 			},
 			{
 				"name": "wolfendale",
 				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
+				"github": "https://github.com/wolfendale",
+				"caption": "Sviluppo e ottimizzazione dei server"
 			},
 			{
 				"github": "https://github.com/TraceEntertains",
@@ -203,18 +206,21 @@
 			{
 				"name": "Stary",
 				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
+				"github": "https://github.com/Stary2001",
+				"caption": "Sviluppo 3DS e del dissettore NEX"
 			},
 			{
 				"picture": "https://github.com/rverseTeam.png",
 				"github": "https://twitter.com/rverseClub",
-				"name": "rverse"
+				"name": "rverse",
+				"caption": "Condivisione di informazioni riguardo Miiverse"
 			},
 			{
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
 				"github": "https://github.com/Kinnay",
 				"special": "Ringraziamenti speciali",
-				"name": "Kinnay"
+				"name": "Kinnay",
+				"caption": "Ricerca sulle strutture dati Nintendo"
 			},
 			{
 				"name": "NinStar",
@@ -299,7 +305,8 @@
 			"Il tema principale di Super Mario World 2 - Yoshi's Island è un bop assurdo e non riuscirai mai a convincermi del contrario.",
 			"I miei titoli preferiti per Nintendo Switch sono Nintendo Switch Online + Pacchetto aggiuntivo, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Pacchetto gioco offline, Nintendo Switch Online + Pacchetto l'ennesima port e Nintendo Switch Online + Pacchetto Brain Training del Dr. Kawashima: Quanti anni ha il tuo cervello? \"Il titolo Virtual Console per Wii U vi è piaciuto così tanto che abbiamo deciso di rimetterlo in vendita.",
 			"Tipo \"Conosci Ash, Dio benedica la sua anima, dice UwU tutto il giorno\" è il modo del sud degli Stati Uniti per dire \"Ash dice uwu costantemente ed è molto strano e stupido e vorrei tanto che non lo facesse\"",
-			"Il mio primo video sul mio canale!! voglio fare video da un sacco di tempo ma il mio laptop era lento e non riuscivo a far andare fraps, skype e minecraft insieme. ma ora non più! il mio maestro di informatica mi ha aiutato e il mio laptop va molto più veloce e ora riesco a registrare! spero che vi piaccia e se si per favore mettete like e iscrivetevi!!!"
+			"Il mio primo video sul mio canale!! voglio fare video da un sacco di tempo ma il mio laptop era lento e non riuscivo a far andare fraps, skype e minecraft insieme. ma ora non più! il mio maestro di informatica mi ha aiutato e il mio laptop va molto più veloce e ora riesco a registrare! spero che vi piaccia e se si per favore mettete like e iscrivetevi!!!",
+			"Mi sembra a posto"
 		]
 	},
 	"progressPage": {
