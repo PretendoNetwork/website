@@ -34,7 +34,7 @@
 		"title": "Informazioni",
 		"paragraphs": [
 			"Pretendo è un progetto open source con l'obiettivo di ricreare Nintendo Network per 3DS e Wii U utilizzando ingegneria inversa clean-room.",
-			"Visto che i nostri server saranno gratuiti e open source, essi potranno esistere anche dopo l'inevitabile chiusura di Nintendo Network."
+			"Visto che i nostri server saranno gratuiti e open source, essi potranno esistere per molto tempo nel futuro."
 		]
 	},
 	"progress": {
@@ -55,14 +55,14 @@
 			},
 			{
 				"question": "Come si usa Pretendo?",
-				"answer": "Pretendo non è ancora in uno stato tale da poter essere usata dal pubblico. Tuttavia, quando lo sarà potrai usare Pretendo semplicemente eseguendo il nostro patcher homebrew sulla tua console."
+				"answer": "Per iniziare con Pretendo Network su 3DS, Wii U o emulatori, vedi le nostre <a href=\"/docs/install\">istruzioni di configurazione</a>!"
 			},
 			{
 				"question": "Sapete quando una determinata funzionalità/servizio sarà pronta/o?",
 				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
 			},
 			{
-				"question": "Pretendo funziona su Cemu/emulatori?",
+				"question": "Quando saranno aggiunti più giochi?",
 				"answer": "Pretendo supporta qualsiasi client in grado di connettersi a Nintendo Network. Al momento l'unico emulatore con questa capacità è Cemu. Cemu 2.0 supporta ufficialmente Pretendo nelle opzioni dell'account di rete dell'emulatore. Per informazioni su come impostare Pretendo su Cemu, visita la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>.<br>Citra non supporta le funzionalità di gioco online reali, quindi non funziona con Pretendo; inoltre, non mostra segni di poter funzionare in futuro. Mikage, un emulatore di 3DS per dispositivi mobili, potrebbe fornire supporto in futuro, ma questo è tutt'altro che certo."
 			},
 			{
@@ -106,7 +106,48 @@
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto"
+		"text": "Incontra il team dietro al progetto",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"github": "https://github.com/jonbarrow",
+				"picture": "https://github.com/jonbarrow.png"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"github": "https://github.com/SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png"
+			},
+			{
+				"caption": "Sviluppo web",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes",
+				"picture": "https://github.com/gitlimes.png"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
