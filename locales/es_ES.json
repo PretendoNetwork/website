@@ -244,7 +244,8 @@
 			{
 				"name": "mrjvs",
 				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"github": "https://github.com/mrjvs",
+				"caption": "Arquitectura de servidor"
 			},
 			{
 				"picture": "https://github.com/binaryoverload.png",
@@ -253,16 +254,19 @@
 			{
 				"picture": "https://github.com/Simonx22.png",
 				"github": "https://github.com/Simonx22",
-				"name": "Simonx22"
+				"name": "Simonx22",
+				"caption": "Rotaciones de Splatoon e investigación"
 			},
 			{
 				"name": "OatmealDome",
 				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
+				"github": "https://github.com/OatmealDome",
+				"caption": "Rotaciones de Splatoon e investigación"
 			},
 			{
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"github": "https://github.com/PretendoNetwork",
+				"caption": "Traducciones y otras contribuciones"
 			}
 		]
 	},
