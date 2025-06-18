@@ -67,15 +67,15 @@
 			},
 			{
 				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
-				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért hogyan kezdj bele a Cemu-val, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy forkja is lehet hogy támogat minket, de nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk még. A Citra teljes verziója nem támogatja a Pretendo-t."
+				"answer": "Nem. A könnyebb moderáció és biztonság érdekében, az emulátor használatához szükséged lesz egy valódi konzolra is. Ez lehetővé tesz egy biztosabb rendszert és a szabályok hatékonyabb betartattatását, egy élvezetesebb és megbízhatóbb élmény érdekében."
 			},
 			{
-				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
-				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
+				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért, hogy hogyan kezdj bele a Cemu-val való online játékba, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy annak forkjai lehet támogatnak minket, de egyenlőre nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk hozzájuk. A Citra legújabb verziója nem támogatja a Pretendo-t.",
+				"question": "Működik a Pretendo a Cemu emulátoron/más emulátorokon?"
 			},
 			{
 				"answer": "A legjobb élményért a konzolokon, kell hackelned kell a konzolt - pontosan Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
-				"question": "Szükségem van hack-re a csatlakozáshoz?"
+				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
 			},
 			{
 				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
