@@ -10,6 +10,12 @@
 		},
 		"docs": "Documentation",
 		"donate": "Faire un don",
-		"progress": "Progression"
+		"progress": "Progression",
+		"credits": "L'équipe",
+		"dropdown": {
+			"captions": {
+				"about": "À propos du projet"
+			}
+		}
 	}
 }
