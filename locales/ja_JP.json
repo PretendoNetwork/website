@@ -182,7 +182,8 @@
 			{
 				"name": "TraceEntertains",
 				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
+				"github": "https://github.com/TraceEntertains",
+				"caption": "3DSのパッチ開発と研究"
 			}
 		]
 	},
@@ -192,12 +193,15 @@
 		"people": [
 			{
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHubでの貢献者",
+				"caption": "翻訳とその他の貢献"
 			},
 			{
 				"name": "superwhiskers",
 				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
+				"github": "https://github.com/superwhiskers",
+				"caption": "Crunchのライブラリ開発"
 			},
 			{
 				"name": "Stary",
@@ -208,7 +212,8 @@
 			{
 				"name": "rverse",
 				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Miiverseの情報共有"
 			},
 			{
 				"special": "スペシャルサンクス",
