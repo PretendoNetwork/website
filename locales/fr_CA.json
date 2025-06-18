@@ -5,8 +5,10 @@
 		"account": "Compte",
 		"blog": "Blogue",
 		"accountWidget": {
-			"settings": "Paramètres"
+			"settings": "Paramètres",
+			"logout": "Déconnexion"
 		},
-		"docs": "Documentation"
+		"docs": "Documentation",
+		"donate": "Faire un don"
 	}
 }
