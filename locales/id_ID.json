@@ -12,11 +12,12 @@
 		"dropdown": {
 			"captions": {
 				"credits": "Berkenalan dengan Tim",
-				"progress": "Lihat kemajuan dan tujuan proyek"
+				"progress": "Lihat kemajuan dan tujuan proyek",
+				"faq": "Pertanyaan Umum"
 			}
 		},
-		"faq": "FAQ",
-		"blog": "Blog"
+		"faq": "Pertanyaan Umum",
+		"blog": "Berita"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
