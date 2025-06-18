@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Pretendoの使い方は？",
-				"answer": "Pretendoはまだ開発中です。将来的には、ゲーム機上で専用のhomebrewアプリを用いるだけでPretendoをつかえるようにする予定です。"
+				"answer": "3DS、Wii U、エミュレーターでPretendo Networkを使うには、<a href=\"/docs/install\">セットアップの手順</a>をご覧ください!"
 			},
 			{
 				"question": "機能やサービスが完成するのはいつ？",
@@ -71,7 +71,7 @@
 			},
 			{
 				"question": "Cemuやその他のエミュレーターでも接続できる？",
-				"answer": "Wiiには<a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>という代替サーバーがあります。Switchのネットワーク機能は有料であること、またニンテンドーネットワークとは全く異なることから、対応することはありません。"
+				"answer": "Cemu 2.1は、エミュレーターでのネットワークアカウントのオプションでPretendoを公式にサポートしています。Cemuでの使用を開始する方法については、<a href=\"https://pretendo.network/docs/install/cemu\">ドキュメント</a>をご覧ください。<br>一部の3DSエミュレーターまたは、フォークはサポートをしている可能性がありますが、現時点では公式の推奨事項やセットアップ手順はありません。なお、Citraの最終ビルドはPretendoをサポートしていません。"
 			},
 			{
 				"question": "WiiやNintendo Switchでもつかえる？",
@@ -113,29 +113,75 @@
 		"text": "プロジェクトを支えるチームの紹介",
 		"people": [
 			{
-				"caption": "プロジェクトオーナーおよび主な開発者"
+				"caption": "プロジェクトオーナーおよび主な開発者",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"name": "Jonathan Barrow (jonbarrow)"
 			},
 			{
-				"caption": "Miiverseの研究と開発"
+				"caption": "Miiverseの研究と開発",
+				"name": "Jemma (CaramelKat)",
+				"github": "https://github.com/CaramelKat",
+				"picture": "https://github.com/caramelkat.png"
 			},
 			{
-				"caption": "Wii Uの研究、パッチの開発"
-			},
-			{},
-			{
-				"caption": "Webの開発"
-			},
-			{},
-			{},
-			{
-				"caption": "システムの研究とサーバーの開発"
+				"caption": "Wii Uの研究、パッチの開発",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky"
 			},
 			{
-				"caption": "Webとサーバーの開発"
+				"name": "SuperMarioDaBom",
+				"caption": "システムの研究とサーバーアーキテクチャ",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
-			{},
 			{
-				"caption": "サーバーの開発と最適化"
+				"caption": "Webの開発",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes",
+				"picture": "https://github.com/gitlimes.png"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"caption": "システムの研究とサーバーの開発",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"caption": "プリザベーションとサーバーアーキテクチャ",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy"
+			},
+			{
+				"caption": "システムの研究とサーバーの開発",
+				"github": "https://github.com/DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"name": "DaniElectra"
+			},
+			{
+				"caption": "Webとサーバーの開発",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii",
+				"name": "niko"
+			},
+			{
+				"caption": "DevOpsとコミュニティの活動",
+				"picture": "https://github.com/MatthewL246.png",
+				"name": "MatthewL246",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "サーバーの開発と最適化",
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -143,26 +189,86 @@
 		"title": "スペシャルサンクス",
 		"text": "Pretendoのいまの姿を作り上げた方たちです。",
 		"people": [
-			{},
-			{},
-			{},
-			{},
 			{
-				"special": "スペシャルサンクス"
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
-			{},
-			{},
 			{
-				"caption": "Wii Uパッチの開発"
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
-			{},
-			{},
-			{},
-			{},
-			{},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "3DSの開発とNEXディセクター",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"special": "スペシャルサンクス",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"caption": "Nintendoのデータ構造に関する研究",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"caption": "アイコンの制作(MiiエディターとJuxtのリアクション)",
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"caption": "コンソールの研究とゲームサーバー",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"caption": "Wii Uパッチの開発",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts",
+				"picture": "https://github.com/GaryOderNichts.png"
+			},
+			{
+				"caption": "3DSパッチの作者",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"name": "zaksabeast",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "サーバーアーキテクチャ",
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"caption": "サーバーアーキテクチャ",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Splatoon のローテーションと研究",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon ローテーションと研究",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
 			{
 				"caption": "翻訳とその他の貢献",
-				"name": "GitHubの貢献者"
+				"name": "GitHubの貢献者",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -193,7 +299,8 @@
 			"スーパーマリオ ヨッシーアイランドのメイン テーマはいい曲だよね～！",
 			"ボクのお気に入りのNintendo Switchの作品は、Nintendo Switch Online + 追加パック、Nintendo Switch Online + 振動パック、Nintendo Switch Online + Offlineパック、Nintendo Switch Online + 非公式ポートパック、Nintendo Switch Online + 脳を鍛える大人のトレーニング ～Wii Uバーチャルコンソールが本当に人気なので、復活させます～ パック。任天堂はよくわかってるよね～。",
 			"「あなたはアッシュを知っている、彼女の心を祝福しなさい、彼女は一日中UwUの」というように、南部の素敵な言い方です \"Ash uwusはいつも、それは本当に奇妙で愚かで、私は彼らがそうしなかったらいいのに\"",
-			"ボクのチャンネルで最初の動画を公開したよ！！前から動画を作りたいと思っていたけど、ボクのノートパソコンの調子が悪くってね、Fraps とか Skype とか Minecraft を同時に起動できなかったんだよね～。でも、もうだいじょうぶ！IT の先生に聞いてみたら、ノートパソコンの動作が良くなって、録音もできるようになったんだ！よかったら高評価とチャンネル登録してね！"
+			"ボクのチャンネルで最初の動画を公開したよ！！前から動画を作りたいと思っていたけど、ボクのノートパソコンの調子が悪くってね、Fraps とか Skype とか Minecraft を同時に起動できなかったんだよね～。でも、もうだいじょうぶ！IT の先生に聞いてみたら、ノートパソコンの動作が良くなって、録音もできるようになったんだ！よかったら高評価とチャンネル登録してね！",
+			"僕には良い感じに見えるね"
 		]
 	},
 	"progressPage": {
