@@ -78,14 +78,16 @@
 				"answer": "Esistono già server custom per la Wii, forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Per quanto riguarda la Switch, non rientra nei nostri piani attuali, poiché i suoi servizi sono a pagamento e completamente diversi da quelli del Nintendo Network."
 			},
 			{
-				"question": "Dovrò moddare la console per connettermi?"
+				"question": "Dovrò moddare la console per connettermi?",
+				"answer": "Per la migliore esperienza sulle console, dovrai installare un custom firmaware (CFW) - in particolare con Aroma su Wii U e Luma3DS su 3DS. Tuttavia, su Wii U, puoi utilizzare il metodo SSSL, senza modifiche ma con funzionalità limitate. Consulta la nostra <a href=\"/docs/install\">guida all'installazione</a> per maggiori dettagli."
 			},
 			{
 				"answer": "Solo in partite private - ottenere vantaggi sleali o compromettere l'esperienza di gioco online senza il permesso dei partecipanti (e in partite pubbliche) è sanzionabile con un ban. Banniamo regolarmente account e console su entrambe le piattaforme Wii U e 3DS. Pretendo usa misure di sicurezza aggiuntive con lo scopo di rendere i tradizionali metodi 'unban' inefficaci, ad esempio cambiando il codice seriale della console.",
 				"question": "Posso usare trucchi o mods online con Pretendo?"
 			},
 			{
-				"question": "Posso usare cheat o mod online con Pretendo?"
+				"question": "Posso usare cheat o mod online con Pretendo?",
+				"answer": "Soltanto nei match privati - ottenere un vantaggio ingiusto o rovinare l'esperienza online con persone che non sono d'accordo (ad esempio nei match pubblici) è un'infrazione punibile con un ban. Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi tradizionali di 'unban', come cambiare il proprio numero di serie."
 			}
 		]
 	},
@@ -144,7 +146,8 @@
 			{
 				"name": "Shutterbug2000",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Ricerca dei sistemi e sviluppo del server"
 			},
 			{
 				"picture": "https://github.com/InternalLoss.png",
