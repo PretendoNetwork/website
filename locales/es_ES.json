@@ -34,7 +34,7 @@
 		"title": "Sobre nosotros",
 		"paragraphs": [
 			"Pretendo es un proyecto de código abierto que busca recrear Nintendo Network para 3DS y Wii U aplicando ingeniería inversa con un diseño en sala limpia.",
-			"Como nuestros servicios serán gratuitos y de código abierto, podrán existir tras el inevitable cierre de Nintendo Network."
+			"Como nuestros servicios serán gratuitos y de código abierto, existirán durante mucho tiempo."
 		]
 	},
 	"progress": {
@@ -245,7 +245,7 @@
 				"name": "mrjvs",
 				"picture": "https://github.com/mrjvs.png",
 				"github": "https://github.com/mrjvs",
-				"caption": "Arquitectura de servidor"
+				"caption": "Arquitectura del servidor"
 			},
 			{
 				"picture": "https://github.com/binaryoverload.png",
@@ -297,7 +297,8 @@
 			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
 			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
 			"Decir “Conoces a Ash, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Ash hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
-			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!"
+			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!",
+			"Me parece bien"
 		]
 	},
 	"progressPage": {
