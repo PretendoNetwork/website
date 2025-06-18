@@ -18,7 +18,7 @@
 				"about": "Riguardo al progetto",
 				"faq": "Domande frequenti",
 				"blog": "I nostri ultimi aggiornamenti, sintetizzati",
-				"progress": "Controlla lo stato di avanzamento del progetto e gli obiettivi"
+				"progress": "Controlla lo stato del progetto e gli obiettivi"
 			}
 		}
 	},
@@ -58,7 +58,7 @@
 				"answer": "Per iniziare con Pretendo Network su 3DS, Wii U o emulatori, vedi le nostre <a href=\"/docs/install\">istruzioni di configurazione</a>!"
 			},
 			{
-				"question": "Sapete quando una determinata funzionalità/servizio sarà pronta/o?",
+				"question": "Sapete quando una/un determinata/o funzionalità/servizio sarà pronta/o?",
 				"answer": "No. Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
 			},
 			{
