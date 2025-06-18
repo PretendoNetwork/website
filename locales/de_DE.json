@@ -66,7 +66,7 @@
 				"answer": "Wir arbeiten am Hinzufügen neuer Spiele, sobald unsere Backend-Libraries bereit dazu sind, diese zu unterstützen und sobald unsere Entwickler Zeit haben, diese instand zu halten. Eine Menge unserer Zeit fließt in die Stabilisierung und Abschließen der bereits existierenden Spiele. Wir möchten euch die besten Spielerfahrungen möglich machen, bevor wir uns neuen Spieltiteln widmen. Aufgrund von ständiger neu auftauchender Arbeit können wir keine Angaben machen, wann wir neue Spiele hinzufügen werden."
 			},
 			{
-				"question": "Funktioniert Pretendo auch auf Cemu oder anderen Emulatoren?",
+				"question": "Reicht ein Emulator aus, um Pretendo zu nutzen?",
 				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
 			},
 			{
@@ -75,7 +75,7 @@
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Die Wii hat bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Die Switch ist derzeit nicht unser Ziel, da sie sowohl kostenpflichtig als auch völlig anders als das Nintendo Network ist.\""
+				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir nicht an, da es sich um ein gebührenpflichtiges Netzwerk handelt, das sich fundamental vom Nintendo Network unterscheidet."
 			},
 			{
 				"question": "Wenn ich auf dem Nintendo Network gebannt bin, heißt das auch das ich auf Pretendo gebannt bin?",
