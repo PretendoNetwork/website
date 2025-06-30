@@ -83,6 +83,10 @@
 			{
 				"question": "wat if wamt to be meanie kitteh? haxx??",
 				"answer": "only wif ur friendzzz ^.^ kitteh in normal match nu wamt hax. u ban!!"
+			},
+			{
+				"question": "can kitteh beh meanie bye cheat in pretender gamez?",
+				"answer": "only wid friend, but cheat no fair for other kitteh, want ban?"
 			}
 		],
 		"text": "herez sum questionz yu lik 2 ask!!"
@@ -110,16 +114,19 @@
 		"text": "see kittehz who maek pretender!!",
 		"people": [
 			{
-				"caption": "da big cheez"
+				"caption": "da big cheez",
+				"name": "jon pretender (jonbarrow)"
 			},
 			{
-				"caption": "miiveres kitteh!"
+				"caption": "miiveres kitteh!",
+				"name": "jem (CaramelKat)"
 			},
 			{
 				"caption": "wii u foxish!!!!!"
 			},
 			{
-				"caption": "rezearch kitteh"
+				"caption": "rezearch kitteh",
+				"name": "supah marioh da vroom (SuperMarioDaBom)"
 			},
 			{
 				"caption": "onlien kitteh ^w^"
