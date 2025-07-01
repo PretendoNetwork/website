@@ -65,24 +65,28 @@
 				"answer": "pretender workz on gaem when librari cn hold it, w_w dey maek gaem STABEL b4 addin new gaem! nuu ETA!!!!"
 			},
 			{
+				"question": "doez faek gaemr cod3 enough for pretender?",
+				"answer": "naaaaa! 4 da safe-t n secur1-t da emelater gamerz n33d da real gamerz system ;3 dis is to smack if no u foll0w DA RULEZ!"
+			},
+			{
 				"question": "doez pretender work on me faek gaemr!?",
-				"answer": "yez! anythin that workz wif meanie netwrk workz wif pretender. <a href=\"\\&quot;https://pretendo.network/docs/install/cemu\\&quot;\">only cemu haz it tho rite now!</a>"
+				"answer": "da C-EMU workz wif da pretender in s-..\"settingz\"? dey have <a href=\"https://pretendo.network/docs/install/cemu\">da l33t guide</a>, go read dat~<br>sum 3 dee ess gamurz might w3rk, but kitteh not suer!!! citra no worky :("
 			},
 			{
 				"question": "can kitteh gaem on othr kitteh gaemin??",
-				"answer": "nonO!! kitteh can only gaem on teh wee yu an thre d s! <a href=\"https://wiimmfi.de/\" target=\"_blank\">wee has wiimmfi tho!!</a>"
+				"answer": "nonO!! kitteh can only gaem on teh wee yu an thre d s! <a href=\\\"https://wiimmfi.de/\\\" target=\\\"_blank\\\">wee has wiimmfi tho!!</a>"
 			},
 			{
 				"question": "doez kitteh need hax to gaem?!",
-				"answer": "yez!! kitteh needz hax to gaem, exept wiiu wen SSSL. mak sure kitteh press alt f4 4 epik gaemin!!"
+				"answer": "yez!! kitteh needz hax to gaem. mak sure kitteh press alt f4 4 epik gaemin!!"
 			},
 			{
 				"question": "if kitteh ban'd from teh meanie netwrk, iz still ban'd on pretender?",
 				"answer": "no!! yu is not ban'd! ther is rulez tho, so yu can stil get bananad!!"
 			},
 			{
-				"question": "wat if wamt to be meanie kitteh? haxx??",
-				"answer": "only wif ur friendzzz ^.^ kitteh in normal match nu wamt hax. u ban!!"
+				"question": "can kitteh beh meanie bye cheat in pretender gamez?",
+				"answer": "only wid friend, but cheat no fair for other kitteh, want ban?"
 			}
 		],
 		"text": "herez sum questionz yu lik 2 ask!!"
@@ -110,40 +114,76 @@
 		"text": "see kittehz who maek pretender!!",
 		"people": [
 			{
-				"caption": "da big cheez"
+				"caption": "da big cheez",
+				"name": "jon pretender",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "miiveres kitteh!"
+				"caption": "miiveres kitteh!",
+				"name": "jem :3",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "wii u foxish!!!!!"
+				"caption": "wii u foxish!!!!!",
+				"name": "lucakitteh!! ^^",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
-				"caption": "rezearch kitteh"
+				"caption": "rezearch kitteh",
+				"name": "supah marioh da vroom",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"caption": "onlien kitteh ^w^"
+				"caption": "onlien kitteh ^w^",
+				"name": "purple lemonzz :3",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
 			},
 			{
-				"caption": "servah debeloper kitteh!!!"
+				"caption": "servah debeloper kitteh!!!",
+				"name": "camera creature 2k!!!!",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
 			},
 			{
-				"caption": "gaem history saveh kiteh,,"
+				"caption": "gaem history saveh kiteh,,",
+				"name": "billeh!",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
-				"caption": "server dev kitteh o.o"
+				"caption": "server dev kitteh o.o",
+				"name": "daneh zappy...",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
 			},
 			{
-				"caption": "website servah kitteh!! ^^"
+				"caption": "website servah kitteh!! ^^",
+				"name": "og kitteh!!!!",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
 			},
 			{
-				"caption": "deb..ops..? kitteh!"
+				"caption": "deb..ops..? kitteh!",
+				"name": "matteh",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
 			},
 			{
-				"caption": "servah kitteh n speedi kitteh!"
+				"caption": "servah kitteh n speedi kitteh!",
+				"name": "wolfiiii! ^^",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
 			},
 			{
-				"caption": "duel screeh reseacha!!"
+				"caption": "duel screeh reseacha!!",
+				"name": "traceh bored &gt;:(",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -153,48 +193,88 @@
 		"people": [
 			{
 				"name": "geethub contrwibutahs!!!!! uwu",
-				"caption": "wocawizawitwions n moar!!!!"
+				"caption": "wocawizawitwions n moar!!!!",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
 			{
-				"caption": "crunchii libwrary dev!!!"
+				"caption": "crunchii libwrary dev!!!",
+				"name": "uber whiskahs!!!!! (superwhiskers)",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
 			},
 			{
-				"caption": "duel scweeen debeprobah and pachket takher-apahter!"
+				"caption": "duel scweeen debeprobah and pachket takher-apahter!",
+				"name": "staweh :3 (Stary)",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
 			},
 			{
-				"caption": "we steal their code :3"
+				"caption": "we steal their code :3",
+				"name": "green juxt!",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"special": "speshul thx",
-				"caption": "gawd of meanine weseawch!!!!"
+				"caption": "gawd of meanine weseawch!!!!",
+				"name": "kinneh!",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
 			},
 			{
-				"caption": "icwn designah!!!!"
+				"caption": "icwn designah!!!!",
+				"name": "ninstah! ^w^",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
 			},
 			{
-				"caption": "gaem reseawchhh n dev!"
+				"caption": "gaem reseawchhh n dev!",
+				"name": "rambeh &gt;:3",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
-				"caption": "wiiuu pwatchy hacky! ^w^"
+				"caption": "wiiuu pwatchy hacky! ^w^",
+				"name": "gary (cool one!)",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
 			},
 			{
-				"caption": "duaaalsccween haxorz!!!! owo"
+				"caption": "duaaalsccween haxorz!!!! owo",
+				"name": "zak is da 3ds beast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
 			},
 			{
-				"caption": "servah maker!!! ^u^"
+				"caption": "servah maker!!! ^u^",
+				"name": "jvkitteh fr",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
 			},
 			{
-				"caption": "g-gopah??? gopah??????"
+				"caption": "g-gopah??? gopah??????",
+				"name": "binareh mcbinareh ^w^",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
 			},
 			{
-				"caption": "splooner!"
+				"caption": "splooner!",
+				"name": "slimon!!!",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
 			},
 			{
-				"caption": "splooner,,,"
+				"caption": "splooner,,,",
+				"name": "porridge creature :3",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
 			},
 			{
 				"name": "gwitwub fwends!!",
-				"caption": "dey maek langwage gud u.u"
+				"caption": "dey maek langwage gud u.u",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
