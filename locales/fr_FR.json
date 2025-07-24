@@ -9,7 +9,7 @@
 		"account": "Compte",
 		"accountWidget": {
 			"logout": "Déconnexion",
-			"settings": "Réglages"
+			"settings": "Paramètres"
 		},
 		"donate": "Faire un don",
 		"dropdown": {
@@ -33,7 +33,7 @@
 	"aboutUs": {
 		"title": "À propos de nous",
 		"paragraphs": [
-			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
+			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U par le biais d'une rétro-ingénierie dite « propre ».",
 			"Puisque nos services sont à la fois gratuits et open source, ils existeront longtemps."
 		]
 	},
@@ -50,15 +50,15 @@
 				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "Préserverai-je mon identifiant Nintendo Network ?",
+				"question": "Puis-je me connecter à Pretendo avec un identifiant Nintendo Network existant ?",
 				"answer": "Malheureusement, non. Les identifiants existants ne seront pas conservés, et Nintendo restera le seul détenteur de vos données personnelles. Bien qu'une extraction des informations soit théoriquement possible, cela reviendrait à récupérer des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
 				"question": "Comment utiliser Pretendo ?",
-				"answer": "Afin de commencer le paramétrage de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
+				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand tel service/fonctionnalité sera prêt ?",
+				"question": "Savez-vous quand de nouvelles fonctionnalités ou services seront prêt(e)s ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
@@ -70,7 +70,7 @@
 				"answer": "Non. Pour des raisons de sécurité et de modération, si vous utilisez un émulateur, vous aurez toujours besoin d'une vraie console. Cela permet une meilleure sécurité et une modération plus efficace pour permettre de créer une expérience sûre et satisfaisante de notre service."
 			},
 			{
-				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
+				"question": "Pretendo fonctionne-t-il sur Cemu ou un autre émulateur ?",
 				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'informations sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielles ou de procédures d'installation pour l'instant. La version la plus récente de Citra ne prend pas en charge Pretendo."
 			},
 			{
@@ -79,7 +79,7 @@
 			},
 			{
 				"answer": "Pour la meilleure expérience possible sur console, vous aurez besoin de modifier le système de celle-ci — par exemple, grâce à Aroma pour la Wii U ou Luma3DS pour la 3DS. Cependant, avec la Wii U, il est possible d'accéder à Pretendo sans modification, mais avec des fonctionnalités limitées. Voir <a href=\"/docs/install\">la documentation</a> pour plus de détails.",
-				"question": "Aurais-je besoin de modifier ma console pour me connecter ?"
+				"question": "Dois-je modifier ma console pour me connecter ?"
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?",
