@@ -3,7 +3,7 @@
 		"about": "О нас",
 		"faq": "ЧаВо",
 		"docs": "Документы",
-		"credits": "Титры",
+		"credits": "О разработчиках",
 		"progress": "Прогресс",
 		"donate": "Пожертвование",
 		"blog": "Блог",
@@ -134,13 +134,23 @@
 			{
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss",
-				"name": "Billy"
+				"name": "Billy",
+				"caption": "Серверная архитектура и архивариус"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Особая благодарность",
-		"text": "Без них, Pretendo не был бы таким какой он есть сегодня."
+		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
+		"people": [
+			{
+				"name": "Участники на GitHub"
+			},
+			{},
+			{
+				"caption": "Разработка 3DS и NEX-диссектора"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Будьте в курсе всех новостей",
