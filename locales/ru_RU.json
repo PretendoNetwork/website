@@ -136,6 +136,36 @@
 				"github": "https://github.com/InternalLoss",
 				"name": "Billy",
 				"caption": "Серверная архитектура и архивариус"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Исследование систем и разработка серверов",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Веб и серверная разработка",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps и работа с сообществом",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Разработка и оптимизация серверов",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Исследования и разработка патчей для 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -144,11 +174,20 @@
 		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
 		"people": [
 			{
-				"name": "Участники на GitHub"
+				"name": "Участники на GitHub",
+				"caption": "Переводы и другая помощь",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
-			{},
 			{
-				"caption": "Разработка 3DS и NEX-диссектора"
+				"name": "superwhiskers",
+				"caption": "Разработка библиотеки Crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"caption": "Разработка 3DS и NEX-диссектора",
+				"name": "Stary"
 			}
 		]
 	},
