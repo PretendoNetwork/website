@@ -75,7 +75,7 @@
 			},
 			{
 				"question": "¿Pretendo será compatible con la Wii/Switch?",
-				"answer": "Para obtener la mejor experiencia en consolas necesitarás modificar tu sistema, especificamente Aroma en Wii U y Luma3DS en 3DS. No obstante, en Wii U, el metodo sin modificación SSSL también está disponible con funcionalidad limitada. Consulte nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
+				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
 				"question": "Si me expulsan en Nintendo Network, ¿seguiré expulsado cuando use Pretendo?"

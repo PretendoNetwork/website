@@ -71,10 +71,10 @@
 			},
 			{
 				"question": "Pretendo 会支持 Wii/Switch 吗？",
-				"answer": "Wii 已经有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自定义服务器。我们目前不以 Switch 为目标，因为它不仅付费而且与 Nintendo Network 的构造完全不同。"
+				"answer": "Cemu 2.1 在模拟器的网络帐户选项下正式支持 Pretendo。有关如何开始设置 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>一些 3DS 模拟器或分支可能支持我们，但目前我们没有任何官方建议或设置说明。Citra 的最终版本目前不支持 Pretendo。"
 			},
 			{
-				"question": "我需要一台破解过的机器才能连接吗？",
+				"question": "Pretendo会支持 Wii/Switch 吗？",
 				"answer": "是的，您需要破解您的设备才能连接；但是，在 Wii U 上，您只需要访问 Homebrew Launcher（即 Haxchi、Coldboot Haxchi 甚至网络浏览器漏洞利用程序），稍后会提供有关 3DS 将如何连接的信息。"
 			}
 		]

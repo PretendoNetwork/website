@@ -3,7 +3,7 @@
 		"about": "О нас",
 		"faq": "ЧаВо",
 		"docs": "Документы",
-		"credits": "Титры",
+		"credits": "О разработчиках",
 		"progress": "Прогресс",
 		"donate": "Пожертвование",
 		"blog": "Блог",
@@ -78,14 +78,16 @@
 				"answer": "У Wii уже есть неофициальные сервера, под названием <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. На данный момент мы не собираемся работать с онлайном Switch, так как сервис платный и кардинально отличается от Nintendo Network."
 			},
 			{
-				"question": "Нужно ли мне прошивать консоль?"
+				"question": "Нужно ли мне прошивать консоль?",
+				"answer": "Для наилучшего опыта на консолях вам потребуется взломать систему — а именно установить Aroma для Wii U и Luma3DS для 3DS. Однако на Wii U также доступен безвзломный метод SSSL с ограниченной функциональностью. Подробности смотрите в наших <a href=\"/docs/install\">инструкциях по установке</a>."
 			},
 			{
 				"question": "Если я забанен на Nintendo Network, буду ли я забанен и на Pretendo тоже?",
 				"answer": "Нет. Все пользователи, которые имеют бан в официальном Nintendo Network, смогут пользоваться Pretendo. Однако, у нас есть свои правила использования, и при их нарушении вы можете получить бан уже на Pretendo."
 			},
 			{
-				"question": "Можно ли использовать читы или моды в сетевых играх на Pretendo?"
+				"question": "Можно ли использовать читы или моды в сетевых играх на Pretendo?",
+				"answer": "Только в частных матчах — получение нечестного преимущества или нарушение игрового процесса с участниками, которые не давали на это согласия (как в публичных матчах), является причиной для блокировки. Мы регулярно применяем баны аккаунтов и консолей как на Wii U, так и на 3DS. В Pretendo используются дополнительные меры безопасности, из-за которых традиционные методы обхода блокировок, такие как смена серийного номера, не работают."
 			}
 		]
 	},
@@ -95,7 +97,9 @@
 		"people": [
 			{
 				"caption": "Руководитель проекта и гл. разработчик",
-				"name": "Джонатан Барроу (jonbarrow)"
+				"name": "Джонатан Барроу (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
 				"name": "Джемма (CaramelKat)",
@@ -106,7 +110,8 @@
 			{
 				"caption": "Исследование Wii U и разработка патчей",
 				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png"
+				"picture": "https://github.com/ashquarky.png",
+				"name": "quarky"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
@@ -129,13 +134,62 @@
 			{
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss",
-				"name": "Billy"
+				"name": "Billy",
+				"caption": "Серверная архитектура и архивариус"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Исследование систем и разработка серверов",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Веб и серверная разработка",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps и работа с сообществом",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Разработка и оптимизация серверов",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Исследования и разработка патчей для 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Особая благодарность",
-		"text": "Без них, Pretendo не был бы таким какой он есть сегодня."
+		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
+		"people": [
+			{
+				"name": "Участники на GitHub",
+				"caption": "Переводы и другая помощь",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Разработка библиотеки Crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"caption": "Разработка 3DS и NEX-диссектора",
+				"name": "Stary"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Будьте в курсе всех новостей",
