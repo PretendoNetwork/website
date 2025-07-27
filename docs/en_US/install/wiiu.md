@@ -151,7 +151,7 @@ After installing Pretendo, you must register a Pretendo Network ID (PNID). There
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! Ensure that you have a choose a different name for your PNID than the name on your NNID.
+	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! Ensure that you have chosen a different name for your PNID than the name on your NNID.
 </div>
 
 ### Website
