@@ -2,11 +2,11 @@
 	"nav": {
 		"about": "关于",
 		"faq": "FAQ",
-		"docs": "文件",
+		"docs": "帮助文档",
 		"credits": "贡献者",
 		"progress": "进度",
 		"blog": "博客",
-		"account": "用户",
+		"account": "账户",
 		"accountWidget": {
 			"settings": "设置",
 			"logout": "登出"
@@ -15,7 +15,7 @@
 		"dropdown": {
 			"captions": {
 				"about": "我们的项目",
-				"faq": "经常问到的问题",
+				"faq": "常见问题",
 				"blog": "我们最近的更新（简化版）",
 				"credits": "我们的团队",
 				"progress": "查看目前的进度与目标"
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "游戏服务器",
 		"title": "重新创建",
-		"text": "Pretendo 是任天堂 3DS 和 Wii U 服务器的免费和开源替代品，允许所有人在线连接，即使在原始服务器已经关闭",
+		"text": "Pretendo 是任天堂 3DS 和 Wii U 服务器的免费和开源替代品，允许所有人在线连接，即使在任天堂官方服务器不再运行",
 		"buttons": {
 			"readMore": "更多"
 		}
@@ -34,58 +34,54 @@
 		"title": "关于我们",
 		"paragraphs": [
 			"Pretendo 是一个开源项目，旨在使用逆向工程为 3DS 和 Wii U 重新创建 Nintendo Network。",
-			"我们的服务将是免费和开源的，它们可以在 Nintendo Network 不可避免的关闭之后还存在。"
+			"此服务免费且开源，即使任天堂官方停服后也仍然可用。"
 		]
 	},
 	"progress": {
 		"title": "进度",
-		"paragraphs": [
-			null,
-			"对于 3DS，我们也在创建《马里奥赛车 7》的服务器，并希望在可能的情况下继续为他游戏做服务器。"
-		],
-		"githubRepo": "Github 信息库"
+		"githubRepo": "Github 存储库"
 	},
 	"faq": {
 		"title": "常见问题",
-		"text": "以下是我们被问到的一些常见问题，以获得简单的信息。",
+		"text": "以下是针对常见问题的简要的答案。",
 		"QAs": [
 			{
 				"question": "什么是 Pretendo?",
 				"answer": "Pretendo 是一个开源的 Nintendo Network 替代品，旨在为 Wii U 和 3DS 系列游戏机构建自定义服务器。我们的目标是保留这些游戏机的在线功能，让玩家可以继续尽情畅玩他们最喜欢的 Wii U 和 3DS 游戏。"
 			},
 			{
-				"question": "我现有的 NNID 可以在 Pretendo 上工作吗？",
-				"answer": "遗憾的是，不行。现有的 NNID 将无法在 Pretendo 上运行，因为只有任天堂拥有您的用户数据；虽然 NNID 到 PNID 的迁移在理论上是可能的，但它存在风险并且需要我们不希望持有的敏感用户数据。"
+				"question": "现有的 NNID 能用于 Pretendo 吗？",
+				"answer": "遗憾的是，不行。因为只有任天堂拥有您的用户数据，现有的 NNID 不可以用于 Pretendo ；虽然 NNID 到 PNID 的迁移在理论上是可能的，但它存在风险并且需要我们不希望持有的敏感用户数据。"
 			},
 			{
 				"question": "如何使用 Pretendo？",
-				"answer": "Pretendo 目前尚未处于可供公众使用的状态。但是，一旦完成，您只需在系统上运行我们的自制补丁程序即可使用 Pretendo。"
+				"answer": "Pretendo 目前尚未准备好供公众使用。一旦我们准备就绪，您只需在机器上运行我们提供的自制补丁，即可开始使用。"
 			},
 			{
-				"question": "你知道 功能/服务 什么时候准备好吗？",
+				"question": "什么时候某某功能/服务能完成？",
 				"answer": "不可以。许多 Pretendo 的功能/服务是独立开发的（例如，Miiverse 可能由一位开发人员构建，而 Accounts 和 Friends 正在由另一位开发人员构建），因此我们无法给出这需要多长时间的总体预计到达时间。"
 			},
 			{
-				"question": "Pretendo 是否适用于 Cemu/模拟器?",
-				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有这种功能的虚拟机是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下正式官方支持 Pretendo。有关如何开始使用 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>Citra 不支持真实在线多人联接，并且因此不适用于 Pretendo，并且根本没有显示出支持真正在线游戏的迹象。 Mikage，一种用于移动设备的 3DS 模拟器，可能会在未来提供支持，尽管这还远未确定。"
+				"question": "什么时候会添加更多游戏?",
+				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有此功能的模拟器是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下已正式支持了 Pretendo。有关开始使用 Cemu 的信息，请查阅文档。Citra 不支持真正意义上的在线多人联机，因此 Pretendo 在 Citra 上不可用，并且完全没有在未来支持在线多人联机的迹象。Mikage，一款用于移动设备的 3DS 模拟器，可能会在未来支持在线多人联机，尽管这尚不确定。"
 			},
 			{
-				"question": "如果我在 Nintendo Network 上被封账号，我在使用 Pretendo 时还会被禁吗？",
-				"answer": "我们将无法访问 Nintendo Network 的禁令，并且不会禁止所有用户使用我们的服务。但是，我们在使用服务时将遵守规则，不遵守这些规则可能会导致被禁止。"
+				"question": "我只有模拟器，可以使用Pretendo吗？",
+				"answer": "我们无法访问 Nintendo Network 的用户黑名单，因此不会禁止任何用户使用我们的服务。但是，使用本服务时也需要遵守规则，否则可能会导致被禁。"
 			},
 			{
 				"question": "Pretendo 会支持 Wii/Switch 吗？",
-				"answer": "Wii 已经有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自定义服务器。我们目前不希望以 Switch 为目标，因为它既是付费的，又与 Nintendo Network 完全不同。"
+				"answer": "Cemu 2.1 在模拟器的网络帐户选项下正式支持 Pretendo。有关如何开始设置 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>一些 3DS 模拟器或分支可能支持我们，但目前我们没有任何官方建议或设置说明。Citra 的最终版本目前不支持 Pretendo。"
 			},
 			{
-				"question": "我需要黑客来连接吗？",
+				"question": "Pretendo会支持 Wii/Switch 吗？",
 				"answer": "是的，您需要破解您的设备才能连接；但是，在 Wii U 上，您只需要访问 Homebrew Launcher（即 Haxchi、Coldboot Haxchi 甚至网络浏览器漏洞利用程序），稍后会提供有关 3DS 将如何连接的信息。"
 			}
 		]
 	},
 	"showcase": {
 		"title": "我们做什么",
-		"text": "我们的项目有很多组件。这里是其中的一些。",
+		"text": "我们的项目包含很多组件。以下是其中一部分。",
 		"cards": [
 			{
 				"title": "游戏服务器",
@@ -93,122 +89,21 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "对 Miiverse 的重新想象，仿佛它是在现代时代制造的。"
+				"caption": "对Miiverse的重新构想，让它在当代焕然一新。"
 			},
 			{
-				"title": "支持 Cemu",
+				"title": "Cemu 支持",
 				"caption": "即使没有硬件也能玩你最喜欢的 Wii U 游戏！"
 			}
 		]
 	},
 	"credits": {
 		"title": "团队",
-		"text": "认识项目背后的团队",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "项目所有者和首席开发人员",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse 研发",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "网络安装程序和系统研究",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS研究和补丁开发",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "控制台等系统研究",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "网络开发主管",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "网络开发",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "设计师",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "认识项目背后的团队"
 	},
 	"specialThanks": {
 		"title": "特别感谢",
-		"text": "没有他们，Pretendo 就不会是今天的样子。",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Crunch 开发",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS 开发和 NEX 解剖器",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "保护主义者",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "马里奥赛车 7 和 3DS 研究",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse 信息共享",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "特别感谢",
-				"caption": "任天堂数据结构研究",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Mii 编辑器和 Juxt 反应的图标",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "没有他们，Pretendo 就不会是今天的样子。"
 	},
 	"discordJoin": {
 		"title": "得到我们的动态与更新",
@@ -246,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "博客",
-		"description": "",
+		"description": "最新的更新都浓缩在这里。如果你需要更频繁的更新，请查看 <a href=\"/account/upgrade\" target=\"_blank\">捐赠</a>.",
 		"published": "作者",
 		"publishedOn": "在"
 	},
@@ -335,8 +230,6 @@
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
 				"no_edit_from_dashboard": "目前无法编辑在此页面修改 PNID 设置。请通过你的游戏设备修改"
 			},
-			"downloadFiles": "下载账号文件",
-			"downloadFilesDescription": "（无法在任天堂网络上使用）",
 			"upgrade": "升级账号",
 			"unavailable": "无法获得"
 		},

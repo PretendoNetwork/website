@@ -1,6 +1,6 @@
-/* eslint-disable no-undef */
-document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement => {
+/* global Chart -- chart.js */
 
+document.querySelectorAll('.feature-list-wrapper').forEach((progressListElement) => {
 	// Find and generate all relevant data
 	const percentageOverride = progressListElement.querySelector('canvas.percentage-chart').dataset.percentageoverride;
 	const allFeatureNodes = progressListElement.querySelectorAll('.feature');
@@ -12,7 +12,7 @@ document.querySelectorAll('.feature-list-wrapper').forEach(progressListElement =
 	const remainingPercentage = 100 - progressPercentage;
 
 	// Set inner paragraph
-	progressListElement.querySelectorAll('.percentage-label').forEach(p => {
+	progressListElement.querySelectorAll('.percentage-label').forEach((p) => {
 		if (progressPercentage === 0) {
 			p.innerText = progressPercentage.toString() + '%';
 		} else {

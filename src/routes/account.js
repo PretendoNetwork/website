@@ -1,8 +1,6 @@
-const express = require('express');
 const crypto = require('crypto');
+const express = require('express');
 const DiscordOauth2 = require('discord-oauth2');
-const { v4: uuidv4 } = require('uuid');
-const AdmZip = require('adm-zip');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
@@ -12,8 +10,8 @@ const cache = require('../cache');
 const util = require('../util');
 const { handleStripeEvent } = require('../stripe');
 const logger = require('../logger');
-const config = require('../../config.json');
-const editorJSON =  require('../json/miieditor.json');
+const editorJSON = require('../json/miieditor.json');
+const config = require('../config');
 
 const { Router } = express;
 
@@ -45,8 +43,9 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 	const { pnid } = request;
 
-	renderData.tierName = pnid.get('connections.stripe.tier_name');
-	renderData.tierLevel = pnid.get('connections.stripe.tier_level');
+	renderData.environment = pnid.server_access_level;
+	renderData.tierName = pnid.connections.stripe.tier_name;
+	renderData.tierLevel = pnid.connections.stripe.tier_level;
 	renderData.account = account;
 	renderData.isTester = account.access_level > 0;
 
@@ -61,7 +60,7 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 		// If no Discord account linked, generate an auth URL
 		const discordAuthURL = discordOAuth.generateAuthUrl({
 			scope: ['identify', 'guilds'],
-			state: crypto.randomBytes(16).toString('hex'),
+			state: crypto.randomBytes(16).toString('hex')
 		});
 
 		renderData.discordAuthURL = discordAuthURL;
@@ -72,7 +71,8 @@ router.get('/', requireLoginMiddleware, async (request, response) => {
 
 router.get('/login', async (request, response) => {
 	const renderData = {
-		error: request.cookies.error_message
+		error: request.cookies.error_message,
+		loginPath: '/account/login'
 	};
 
 	response.render('account/login', renderData);
@@ -89,7 +89,6 @@ router.post('/login', async (request, response) => {
 		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
 
 		response.redirect(request.redirect || '/account');
-
 	} catch (error) {
 		console.log(error);
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
@@ -153,12 +152,37 @@ router.get('/logout', async (_request, response) => {
 });
 
 router.get('/forgot-password', async (request, response) => {
-	response.render('account/forgot-password');
+	const renderData = {
+		input: request.cookies.input,
+		success_message: request.cookies.success_message,
+		error_message: request.cookies.error_message
+	};
+
+	response.clearCookie('input', { domain: '.pretendo.network' });
+
+	response.render('account/forgot-password', renderData);
 });
 
 router.post('/forgot-password', async (request, response) => {
-	const apiResponse = await util.apiPostRequest('/v1/forgot-password', {}, request.body);
-	response.json(apiResponse.body);
+	const { input, 'h-captcha-response': hCaptchaResponse } = request.body;
+
+	response.cookie('input', input, { domain: '.pretendo.network' });
+
+	try {
+		await util.forgotPassword({
+			input,
+			hCaptchaResponse
+		});
+
+		response.clearCookie('input', { domain: '.pretendo.network' });
+
+		response.cookie('success_message', 'An email has been sent.', { domain: '.pretendo.network' });
+
+		response.redirect(request.redirect || '/account/forgot-password');
+	} catch (error) {
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account/forgot-password');
+	}
 });
 
 router.get('/reset-password', async (request, response) => {
@@ -177,9 +201,9 @@ router.get('/connect/discord', requireLoginMiddleware, async (request, response)
 		tokens = await discordOAuth.tokenRequest({
 			code: request.query.code,
 			scope: 'identify guilds',
-			grantType: 'authorization_code',
+			grantType: 'authorization_code'
 		});
-	} catch (error) {
+	} catch {
 		response.cookie('error_message', 'Invalid Discord authorization code. Please try again', { domain: '.pretendo.network' });
 		return response.redirect('/account');
 	}
@@ -242,47 +266,6 @@ router.get('/remove/discord', requireLoginMiddleware, async (request, response) 
 	}
 });
 
-router.post('/online-files', requireLoginMiddleware, async (request, response) => {
-	const { account } = request;
-	const { password } = request.body;
-
-	const hashedPassword = util.nintendoPasswordHash(password, account.pid);
-
-	const miiNameBuffer = Buffer.alloc(0x16);
-	const miiName = Buffer.from(account.mii.name, 'utf16le').swap16();
-	miiName.copy(miiNameBuffer);
-
-	let accountDat = 'AccountInstance_00000000\n';
-	accountDat += 'PersistentId=80000001\n';
-	accountDat += 'TransferableIdBase=0\n';
-	accountDat += `Uuid=${uuidv4().replace(/-/g, '')}\n`;
-	accountDat += `MiiData=${Buffer.from(account.mii.data, 'base64').toString('hex')}\n`;
-	accountDat += `MiiName=${miiNameBuffer.toString('hex')}\n`;
-	accountDat += `AccountId=${account.username}\n`;
-	accountDat += 'BirthYear=0\n';
-	accountDat += 'BirthMonth=0\n';
-	accountDat += 'BirthDay=0\n';
-	accountDat += 'Gender=0\n';
-	accountDat += `EmailAddress=${account.email.address}\n`;
-	accountDat += 'Country=0\n';
-	accountDat += 'SimpleAddressId=0\n';
-	accountDat += `PrincipalId=${account.pid.toString(16)}\n`;
-	accountDat += 'IsPasswordCacheEnabled=1\n';
-	accountDat += `AccountPasswordCache=${hashedPassword}`;
-
-	const onlineFiles = new AdmZip();
-
-	onlineFiles.addFile('mlc01/usr/save/system/act/80000001/account.dat', Buffer.from(accountDat)); // Minimal account.dat
-	onlineFiles.addFile('otp.bin', Buffer.alloc(0x400)); // nulled OTP
-	onlineFiles.addFile('seeprom.bin', Buffer.alloc(0x200)); // nulled SEEPROM
-
-	response.status(200);
-	response.set('Content-Disposition', 'attachment; filename="Cemu Pretendo Online Files.zip');
-	response.set('Content-Type', 'application/zip');
-
-	response.end(onlineFiles.toBuffer());
-});
-
 router.get('/miieditor', requireLoginMiddleware, async (request, response) => {
 	const { account } = request;
 
@@ -308,7 +291,7 @@ router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 	renderData.tiers = products
 		.filter(product => product.active)
 		.sort((a, b) => +a.metadata.tier_level - +b.metadata.tier_level)
-		.map(product => {
+		.map((product) => {
 			const price = prices.find(price => price.id === product.default_price);
 			const perks = [];
 
@@ -326,7 +309,7 @@ router.get('/upgrade', requireLoginMiddleware, async (request, response) => {
 				name: product.name,
 				description: product.description,
 				perks,
-				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+				price: (price.unit_amount / 100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 			};
 		});
 
@@ -375,8 +358,8 @@ router.post('/stripe/checkout/:priceId', requireLoginMiddleware, async (request,
 			line_items: [
 				{
 					price: priceId,
-					quantity: 1,
-				},
+					quantity: 1
+				}
 			],
 			customer: customer.id,
 			mode: 'subscription',
@@ -408,9 +391,9 @@ router.post('/stripe/unsubscribe', requireLoginMiddleware, async (request, respo
 
 			const updateData = {
 				'connections.stripe.subscription_id': null,
-				'connections.stripe.price_id':  null,
+				'connections.stripe.price_id': null,
 				'connections.stripe.tier_level': 0,
-				'connections.stripe.tier_name': null,
+				'connections.stripe.tier_name': null
 			};
 
 			if (pnid.get('access_level') < 2) {
@@ -449,5 +432,138 @@ router.post('/stripe/webhook', async (request, response) => {
 	response.json({ received: true });
 });
 
+router.get('/sso/discourse', async (request, response, next) => {
+	if (!request.query.sso || !request.query.sig) {
+		return next(); // * 404
+	}
+
+	const signature = util.signDiscoursePayload(request.query.sso);
+
+	if (signature !== request.query.sig) {
+		return next(); // * 404
+	}
+
+	const decodedPayload = new URLSearchParams(Buffer.from(request.query.sso, 'base64').toString());
+
+	if (!decodedPayload.has('nonce') || !decodedPayload.has('return_sso_url')) {
+		return next(); // * 404
+	}
+
+	// * User already logged in, don't show the login prompt
+	if (request.cookies.access_token && request.cookies.refresh_token) {
+		try {
+			const accountData = await util.getUserAccountData(request, response);
+
+			// * Discourse REQUIRES unique emails, however we do not due to NN also
+			// * not requiring unique email addresses. Email addresses, for now,
+			// * are faked using the users PID. This will essentially disable email
+			// * for the forum, but it's a bullet we have to bite for right now.
+			// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+			const payload = Buffer.from(new URLSearchParams({
+				nonce: decodedPayload.get('nonce'),
+				external_id: accountData.pid,
+				email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+				username: accountData.username,
+				name: accountData.username,
+				avatar_url: accountData.mii.image_url,
+				avatar_force_update: true
+			}).toString()).toString('base64');
+
+			const query = new URLSearchParams({
+				sso: payload,
+				sig: util.signDiscoursePayload(payload)
+			}).toString();
+
+			return response.redirect(`${decodedPayload.get('return_sso_url')}?${query}`);
+		} catch (error) {
+			console.log(error);
+			response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+			return response.redirect('/account/logout');
+		}
+	}
+
+	// * User not logged in already, show the login page
+	const renderData = {
+		discourse: {
+			// * Fast and dirty sanitization. If the strings contain
+			// * characters not allow in their encodings, they are removed
+			// * when doing this decode-encode. Since neither base64/hex
+			// * allow characters such as < and >, this prevents injection.
+			payload: Buffer.from(request.query.sso, 'base64').toString('base64'),
+			signature: Buffer.from(request.query.sig, 'hex').toString('hex')
+		},
+		loginPath: '/account/sso/discourse'
+	};
+
+	response.render('account/login', renderData); // * Just reuse the /account/login page, no need to duplicate the pages
+});
+
+router.post('/sso/discourse', async (request, response, next) => {
+	if (!request.body['discourse-sso-payload'] || !request.body['discourse-sso-signature']) {
+		return next(); // * 404
+	}
+
+	const { username, password } = request.body;
+
+	// * Fast and dirty sanitization. If the strings contain
+	// * characters not allow in their encodings, they are removed
+	// * when doing this decode-encode. Since neither base64/hex
+	// * allow characters such as < and >, this prevents injection.
+	const discoursePayload = Buffer.from(request.body['discourse-sso-payload'], 'base64').toString('base64');
+	const discourseSignature = Buffer.from(request.body['discourse-sso-signature'], 'hex').toString('hex');
+
+	const signature = util.signDiscoursePayload(discoursePayload);
+
+	if (signature !== discourseSignature) {
+		return next(); // * 404
+	}
+
+	const decodedPayload = new URLSearchParams(Buffer.from(discoursePayload, 'base64').toString());
+
+	if (!decodedPayload.has('nonce') || !decodedPayload.has('return_sso_url')) {
+		return next(); // * 404
+	}
+
+	try {
+		const tokens = await util.login(username, password);
+
+		response.cookie('refresh_token', tokens.refresh_token, { domain: '.pretendo.network' });
+		response.cookie('access_token', tokens.access_token, { domain: '.pretendo.network' });
+		response.cookie('token_type', tokens.token_type, { domain: '.pretendo.network' });
+
+		// * Need to set these here so that getUserAccountData can see them
+		request.cookies.refresh_token = tokens.refresh_token;
+		request.cookies.access_token = tokens.access_token;
+		request.cookies.token_type = tokens.token_type;
+
+		const accountData = await util.getUserAccountData(request, response);
+
+		// * Discourse REQUIRES unique emails, however we do not due to NN also
+		// * not requiring unique email addresses. Email addresses, for now,
+		// * are faked using the users PID. This will essentially disable email
+		// * for the forum, but it's a bullet we have to bite for right now.
+		// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+		const payload = Buffer.from(new URLSearchParams({
+			nonce: decodedPayload.get('nonce'),
+			external_id: accountData.pid,
+			email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+			username: accountData.username,
+			name: accountData.username,
+			avatar_url: accountData.mii.image_url,
+			avatar_force_update: true
+		}).toString()).toString('base64');
+
+		const query = new URLSearchParams({
+			sso: payload,
+			sig: util.signDiscoursePayload(payload)
+		}).toString();
+
+		return response.redirect(`${decodedPayload.get('return_sso_url')}?${query}`);
+	} catch (error) {
+		console.log(error);
+		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
+		return response.redirect('/account/login');
+	}
+});
 
 module.exports = router;

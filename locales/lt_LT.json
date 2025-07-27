@@ -1,0 +1,31 @@
+{
+	"nav": {
+		"about": "Apie",
+		"faq": "DUK",
+		"credits": "Kreditai",
+		"progress": "Progresas",
+		"blog": "Dienoraštis",
+		"account": "Paskyra",
+		"donate": "Dovanoti",
+		"accountWidget": {
+			"settings": "Nustatymai",
+			"logout": "Atsijungti"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Susipažink su komanda",
+				"blog": "Naujausi mūsų atnaujinimai, sutrumpinti",
+				"progress": "Patikrinkite projekto eigą ir tikslus",
+				"about": "Apie projektas",
+				"faq": "Klausimas"
+			}
+		}
+	},
+	"hero": {
+		"title": "Atkurta",
+		"subtitle": "Žaidimo Serveris",
+		"buttons": {
+			"readMore": "Skaityti daugiau"
+		}
+	}
+}

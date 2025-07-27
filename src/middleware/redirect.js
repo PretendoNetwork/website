@@ -1,14 +1,35 @@
+const config = require('../config');
+
+function isValidRedirect(redirect) {
+	if (!redirect) {
+		return false;
+	}
+	if (redirect.startsWith('/')) {
+		return true;
+	}
+	if (redirect.startsWith('http://') || redirect.startsWith('https://')) {
+		try {
+			const url = new URL(redirect);
+			return config.http.allowed_redirection_suffixes.some(domain => url.hostname.endsWith(domain));
+		} catch {
+			return false;
+		}
+	}
+
+	return false;
+}
+
 async function redirectMiddleware(request, response, next) {
 	if (request.path.startsWith('/account/logout')) {
 		return next();
 	}
-	
-	if (request.method === 'POST') {
-		request.redirect = request.body.redirect?.startsWith('/') ? request.body.redirect : null;
+
+	if (request.method === 'POST' && request.body) {
+		request.redirect = isValidRedirect(request.body.redirect) ? request.body.redirect : null;
 	}
 
 	if (request.query.redirect) {
-		response.locals.redirect = request.query.redirect?.startsWith('/') ? request.query.redirect : null;
+		response.locals.redirect = isValidRedirect(request.query.redirect) ? request.query.redirect : null;
 	}
 
 	return next();

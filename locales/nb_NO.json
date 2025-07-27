@@ -36,11 +36,7 @@
 		]
 	},
 	"progress": {
-		"title": "Framgang",
-		"paragraphs": [
-			null,
-			"For 3DS-en, jobber vi også med Mario Kart 7, med en lyst til å jobbe med andre spill når det er mulig."
-		]
+		"title": "Framgang"
 	},
 	"faq": {
 		"title": "Ofte stilte spørsmål",
@@ -103,109 +99,13 @@
 		"text": "Møt laget bak prosjektet",
 		"people": [
 			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Prosjekteier og hovedutvikler",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Forskning på Miiverse og utvikling",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Nettverksinstallasjonsprogram og konsollforskning",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "Forskning på BOSS og utvikling av feilfikser",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Konsoll og annen systemforskning",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Hovednettutvikling",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Nettutvikling",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"caption": "Prosjekteier og hovedutvikler"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Spesiell takk",
-		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "utvikling av crunch-biblioteket",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS-utvikler og NEX-detaljekspert",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Konserveringsperson",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Forskning på Mario Kart 7 og 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse-informasjonsdeling",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Spesiell takk",
-				"caption": "Forskning på Nintendo-datastrukturer",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikoner for Mii-redigereren og Juxt-reaksjoner",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "GitHub-bidragsytere",
-				"caption": "Oversettelser og andre bidrag",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag."
 	},
 	"discordJoin": {
 		"title": "Hold deg oppdatert",

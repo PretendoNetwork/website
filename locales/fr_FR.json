@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "À Propos",
+		"about": "À propos",
 		"faq": "FAQ",
 		"docs": "Documentation",
 		"credits": "Crédits",
@@ -9,14 +9,14 @@
 		"account": "Compte",
 		"accountWidget": {
 			"logout": "Déconnexion",
-			"settings": "Réglages"
+			"settings": "Paramètres"
 		},
 		"donate": "Faire un don",
 		"dropdown": {
 			"captions": {
 				"about": "À propos du projet",
 				"blog": "Nos dernières mises à jour, en condensé",
-				"progress": "Vérifier l'avancement et les objectifs du projet",
+				"progress": "Vérifiez l'avancement et les objectifs du projet",
 				"credits": "Rencontrez l'équipe",
 				"faq": "Questions fréquemment posées"
 			}
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Serveurs de jeux",
 		"title": "Recréés",
-		"text": "Pretendo est une alternative gratuite et open source des serveurs Nintendo pour la 3DS et la Wii U permettant la connectivité en ligne pour tous, y compris après l'arrêt des serveurs officiels",
+		"text": "Pretendo est une alternative gratuite et open source aux serveurs Nintendo pour la 3DS et la Wii U qui permet à tout utilisateur d'accéder aux services en ligne, y compris après l'arrêt des serveurs officiels",
 		"buttons": {
 			"readMore": "En savoir plus"
 		}
@@ -33,8 +33,8 @@
 	"aboutUs": {
 		"title": "À propos de nous",
 		"paragraphs": [
-			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
-			"Puisque nos services seront à la fois gratuits et open source, ils pourront exister pendant longtemps après l'inévitable fermeture du Nintendo Network."
+			"Pretendo est un projet open source qui vise à recréer le Nintendo Network pour la 3DS et la Wii U par le biais d'une rétro-ingénierie dite « propre ».",
+			"Puisque nos services sont à la fois gratuits et open source, ils existeront longtemps."
 		]
 	},
 	"progress": {
@@ -50,42 +50,54 @@
 				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "Mes Identifiants Réseau de Nintendo existants fonctionneront-ils sur Pretendo ?",
-				"answer": "Malheureusement, non. Les NNIDs existants ne fonctionneront pas sur Pretendo car seul Nintendo détient vos données utilisateur. Bien qu'une migration des NNID aux PNID soit théoriquement possible, elle serait risquée et nécessiterait des données personnelles sensibles que nous préférons ne pas stocker."
+				"question": "Puis-je me connecter à Pretendo avec un identifiant Nintendo Network existant ?",
+				"answer": "Malheureusement, non. Les identifiants existants ne seront pas conservés, et Nintendo restera le seul détenteur de vos données personnelles. Bien qu'une extraction des informations soit théoriquement possible, cela reviendrait à récupérer des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
-				"question": "Comment puis-je utiliser Pretendo ?",
-				"answer": "Pretendo n'est actuellement pas dans un état prêt à être utilisé par le public. Cependant, dès qu'il le sera, vous pourrez utiliser Pretendo en exécutant simplement notre logiciel Homebrew sur votre console."
+				"question": "Comment utiliser Pretendo ?",
+				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand fonctionnalité/service sera prêt ?",
-				"answer": "Non. De nombreuses fonctionnalités/services de Pretendo sont développés indépendamment (par exemple, un développeur peut travailler sur Miiverse tandis qu'un autre travaille sur Comptes et Amis) et nous ne pouvons donc pas donner d'estimation exacte du temps qu'il faudra pour que tout soit prêt."
+				"question": "Savez-vous quand de nouvelles fonctionnalités ou services seront prêt(e)s ?",
+				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
-				"question": "Est-ce que Pretendo fonctionne sur Cemu/émulateurs ?",
-				"answer": "Pretendo supporte n'importe quel client qui peut interagir avec le Nintendo Network. Actuellement, le seul émulateur avec cette fonctionnalité est Cemu. Cemu 2.0 supporte officiellement Pretendo dans les paramètres de votre compte dans l'émulateur. Pour plus d'informations sur l'utilisation de Cemu, visitez <a href=\"https://pretendo.network/docs/install/cemu\">la documentation</a>.<br> Citra ne supporte pas véritablement le jeu en ligne et ne fonctionne donc pas Pretendo, et l'émulateur ne semble pas présenter de signes d'un support prochain. Mikage, un émulateur 3DS pour appareils mobiles, sera peut-être compatible dans le futur, néanmoins cela reste incertain."
+				"question": "Quand d'autres jeux seront-ils ajoutés ?",
+				"answer": "Nous travaillons sur de nouveaux jeux une fois que nous estimons que nos bibliothèques internes sont prêtes à les prendre en charge et que du temps de développement est disponible pour les maintenir. Une grande partie de notre travail consiste à stabiliser et finaliser nos jeux existants – nous voulons offrir la meilleure expérience possible avant de passer à de nouveaux titres. Comme de nouvelles tâches surgissent constamment, nous ne pouvons pas estimer quand cela se produira."
 			},
 			{
-				"question": "Si je suis banni du Nintendo Network, resterai-je banni lorsque j'utiliserai Pretendo ?",
-				"answer": "Nous n'aurons pas accès aux bannissements du Nintendo Network, donc personne ne sera banni de nos serveurs dans un premier temps. En revanche, il y aura des règles à suivre lors de l'utilisation de nos services et le non-respect de ces règles pourrait entraîner des bannissements."
+				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo ?",
+				"answer": "Non. Pour des raisons de sécurité et de modération, si vous utilisez un émulateur, vous aurez toujours besoin d'une vraie console. Cela permet une meilleure sécurité et une modération plus efficace pour permettre de créer une expérience sûre et satisfaisante de notre service."
 			},
 			{
-				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
-				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler car ses services sont payants et complètement différents du Nintendo Network."
+				"question": "Pretendo fonctionne-t-il sur Cemu ou un autre émulateur ?",
+				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'informations sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielles ou de procédures d'installation pour l'instant. La version la plus récente de Citra ne prend pas en charge Pretendo."
 			},
 			{
-				"question": "Aurais-je besoin de modifier ma console pour me connecter ?",
-				"answer": "Oui, vous devrez hack votre appareil afin de vous connecter ; cependant sur Wii U, un accès au Homebrew Launcher est suffisant (avec Haxchi, Coldboot Haxchi, ou même la faille du Navigateur Web). La démarche à suivre pour la 3DS sera fournie ultérieurement."
+				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
+				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler, car ses services sont payants et complètement différents du Nintendo Network."
+			},
+			{
+				"answer": "Pour la meilleure expérience possible sur console, vous aurez besoin de modifier le système de celle-ci — par exemple, grâce à Aroma pour la Wii U ou Luma3DS pour la 3DS. Cependant, avec la Wii U, il est possible d'accéder à Pretendo sans modification, mais avec des fonctionnalités limitées. Voir <a href=\"/docs/install\">la documentation</a> pour plus de détails.",
+				"question": "Dois-je modifier ma console pour me connecter ?"
+			},
+			{
+				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?",
+				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban."
+			},
+			{
+				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles).",
+				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo ?"
 			}
 		]
 	},
 	"showcase": {
 		"title": "Ce qu'on fait",
-		"text": "Notre projet comporte de nombreuses composantes. En voici quelques uns.",
+		"text": "Notre projet comporte de nombreuses composantes. En voici quelques-unes.",
 		"cards": [
 			{
 				"title": "Serveurs de jeu",
-				"caption": "Ramener vos jeux et contenus préférés à l'aide de serveurs personnalisés."
+				"caption": "Ramenez à la vie vos jeux et contenus favoris grâce à nos serveurs personnalisés."
 			},
 			{
 				"title": "Juxtaposition",
@@ -102,101 +114,161 @@
 		"text": "Rencontrez l'équipe derrière le projet",
 		"people": [
 			{
+				"caption": "Maître du projet, développeur en chef",
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Chef de projet et développeur principal",
 				"picture": "https://github.com/jonbarrow.png",
 				"github": "https://github.com/jonbarrow"
 			},
 			{
+				"caption": "Recherche et développement (Miiverse)",
+				"github": "https://github.com/CaramelKat",
 				"name": "Jemma (CaramelKat)",
-				"caption": "Étude et développement sur Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
+				"picture": "https://github.com/caramelkat.png"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Installateur du réseau et études des consoles",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
+				"caption": "Recherche et développement de patchs Wii U",
+				"github": "https://github.com/ashquarky",
 				"name": "quarky",
-				"caption": "Recherche de BOSS et développement de correctifs",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
+				"picture": "https://github.com/ashquarky.png"
 			},
 			{
-				"name": "SuperMarioDaBom",
-				"caption": "Étude des consoles et d'autres systèmes",
 				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Chef de développement Web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
+				"github": "https://github.com/SuperMarioDaBom",
+				"caption": "Recherche sur les systèmes, architecture serveur",
+				"name": "SuperMarioDaBom"
 			},
 			{
 				"name": "pinklimes",
-				"caption": "Développement Web",
+				"caption": "Développement web",
 				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
+				"github": "https://github.com/gitlimes.png"
 			},
 			{
-				"name": "mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"name": "Shutterbug2000",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"caption": "Conservation, architecture serveur",
+				"name": "Billy",
+				"github": "https://github.com/InternalLoss",
+				"picture": "https://github.com/InternalLoss.png"
+			},
+			{
+				"caption": "Recherche sur les systèmes, développement serveur",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"caption": "Développement serveur et web",
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"caption": "DevOps et travail de la communauté",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "Développement serveur et optimisations",
+				"picture": "https://github.com/wolfendale.png",
+				"name": "wolfendale",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"caption": "Recherche et développement de patchs (3DS)",
+				"picture": "https://github.com/TraceEntertains.png",
+				"name": "TraceEntertains",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
 	"specialThanks": {
-		"title": "Remerciements spéciaux",
+		"title": "Sincères remerciements",
 		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
 		"people": [
 			{
-				"name": "superwhiskers",
+				"name": "Contributeurs GitHub",
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
 				"caption": "Développement de la bibliothèque crunch",
+				"name": "superwhiskers",
 				"picture": "https://github.com/superwhiskers.png",
 				"github": "https://github.com/superwhiskers"
 			},
 			{
-				"name": "Stary",
-				"caption": "Developpeur 3DS et dissecteur de NEX",
+				"caption": "Développement 3DS et du dissecteur NEX (nex-dissector)",
+				"github": "https://github.com/Stary2001",
 				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fournisseur de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Étude de Mario Kart 7 et de la 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
+				"name": "Stary"
 			},
 			{
 				"name": "rverse",
-				"caption": "Partage d'information Miiverse",
 				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Partage d'informations concernant Miiverse"
 			},
 			{
-				"name": "Kinnay",
-				"special": "Remerciements spéciaux",
-				"caption": "Étude des structures de données de Nintendo",
 				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
+				"github": "https://github.com/Kinnay",
+				"name": "Kinnay",
+				"caption": "Recherche sur les structures de données Nintendo",
+				"special": "Sincères remerciements"
 			},
 			{
-				"name": "NinStar",
 				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
+				"name": "NinStar",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12",
+				"caption": "Recherches consoles et serveurs de jeu"
+			},
+			{
+				"caption": "Développement de patch pour la Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts"
+			},
+			{
+				"caption": "Créateur de patch 3DS",
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "Architecture serveur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs",
+				"name": "mrjvs"
+			},
+			{
+				"caption": "Architecture serveur",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Recherches sur Splatoon et rotations de stages",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"caption": "Rotations Splatoon et recherches",
+				"name": "OatmealDome",
+				"github": "https://github.com/OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
 			},
 			{
 				"name": "Contributeurs GitHub",
@@ -207,7 +279,7 @@
 		]
 	},
 	"discordJoin": {
-		"title": "Tiens-toi à jour",
+		"title": "Rejoignez-nous",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
 			"text": "Recevez des mises à jour en temps réel",
@@ -215,30 +287,31 @@
 		}
 	},
 	"footer": {
-		"socials": "Liens Sociaux",
+		"socials": "Réseaux sociaux",
 		"usefulLinks": "Liens utiles",
 		"widget": {
 			"captions": [
 				"Vous voulez rester à jour ?",
 				"Rejoignez notre serveur Discord !"
 			],
-			"button": "Rejoignez maintenant !"
+			"button": "Rejoignez-nous maintenant !"
 		},
 		"bandwidthRaccoonQuotes": [
-			"Je suis Bandwidth le Raton Laveur, j'adore mordiller les cables de Pretendo Network ! Miam !",
-			"Beaucoup de gens nous demandent si on aura de problèmes avec Nintendo ; Moi je leur réponds que ma tante qui travaille chez Nintendo a dit qu'elle était d'accord.",
+			"Je suis Bandwidth le Raton Laveur, un vrai glouton. Mon péché mignon ? Les câbles des serveurs Pretendo, pardi !... Miam !",
+			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que c'était OK.",
 			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
 			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
-			"La Wii U n'était pas si nulle que ça, mais les pubs étaient vraiment mauvaises par contre. Ah, attends mon Gamepad n'arrive pas à se connecter à ma Wii.",
+			"La Wii U n'était pas si nulle que ça, en vrai, c'est juste que les pubs étaient vraiment désastreuses... Hum, c'est étrange, j'ai l'impression que mon Gamepad n'arrive pas à se connecter à ma Wii.",
 			"La musique principale de Super Mario World 2 - Yoshi's Island est la meilleure musique du monde et tu ne peux pas changer mon avis.",
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
-			"\"Tu vois Ash ? Ouais, bah elle fait UwU tout le temps\" est vraiment la façon la plus gentille possible de dire \"Ash fait UwU tout le temps et j'en ai marre\"",
-			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !"
+			"\"Tu vois qui c'est Sasha ? C'est fou elle dit souvent UwU, tu trouves pas ?\" : c'est vraiment la plus douce des façons de dire \"Sasha dit H24 UwU, c'est trop chiant et chelou : à l'aide\". À tous ceux qui connaissent une Sasha... explicitez vos appels au secours, nan ?",
+			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !",
+			"Cela me semble bon"
 		]
 	},
 	"progressPage": {
 		"title": "Notre progression",
-		"description": "Vérifiez l'avancement et les objectifs du projet ! (Mis à jour environ toute les heures, ne reflète pas TOUS nos objectifs et notre progression)"
+		"description": "Vérifiez l'avancement et les objectifs du projet ! (Fil mis à jour toutes les heures environ. Attention, cela ne reflète qu'un échantillon de notre travail : ce n'est que la partie émergée de l'iceberg dit-on !)"
 	},
 	"blogPage": {
 		"title": "Blog",
@@ -255,25 +328,25 @@
 		"button": "Tester un fichier"
 	},
 	"docs": {
-		"missingInLocale": "Cette page n'est pas disponible dans votre région. Veuillez essayer avec la version anglaise ci-dessous.",
+		"missingInLocale": "La page que vous consultez n'est pas encore traduite dans votre langue. Nous vous invitons à lire la version anglaise originale ci-dessous.",
 		"quickLinks": {
 			"header": "Liens rapides",
 			"links": [
 				{
 					"header": "Installer Pretendo",
-					"caption": "Afficher les instructions de configuration"
+					"caption": "Afficher les instructions d'installation"
 				},
 				{
 					"header": "Vous avez une erreur ?",
-					"caption": "Cherchez-la ici"
+					"caption": "Recherchez-la ici !"
 				}
 			]
 		},
 		"search": {
 			"title": "Avez-vous un code d'erreur ?",
 			"label": "Code d'erreur",
-			"caption": "Écrivez dans la case ci-dessous pour obtenir des informations sur votre problème !",
-			"no_match": "Aucun Résultat"
+			"caption": "Inscrivez-le ci-dessous pour de plus amples informations !",
+			"no_match": "Aucun résultat"
 		},
 		"sidebar": {
 			"search": "Recherche",
@@ -286,55 +359,53 @@
 	},
 	"account": {
 		"loginForm": {
-			"login": "Connexion",
-			"detailsPrompt": "Entrez les informations du compte ci-dessous",
+			"login": "Se connecter",
+			"detailsPrompt": "Saisissez vos informations de connexion",
 			"password": "Mot de Passe",
-			"loginPrompt": "Déjà un Compte ?",
-			"username": "Pseudo",
+			"loginPrompt": "Compte déjà existant ?",
+			"username": "Nom d'utilisateur",
 			"register": "S'inscrire",
 			"confirmPassword": "Confirmez le Mot de Passe",
 			"email": "Email",
-			"miiName": "Nom du Mii",
+			"miiName": "Surnom du Mii",
 			"forgotPassword": "Mot de Passe oublié ?",
-			"registerPrompt": "Pas de Compte ?"
+			"registerPrompt": "Pas encore inscrit ?"
 		},
 		"settings": {
-			"downloadFiles": "Télécharger fichiers du compte",
 			"settingCards": {
-				"gender": "Genre",
+				"gender": "Sexe",
 				"profile": "Profil",
 				"nickname": "Surnom",
 				"birthDate": "Date de Naissance",
 				"country": "Pays/Région",
-				"timezone": "Décalage Horaire",
+				"timezone": "Fuseau horaire",
 				"serverEnv": "Environment du Serveur",
 				"production": "Production",
 				"beta": "Beta",
-				"upgradePrompt": "Les Serveurs Beta sont exclusifs au Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
+				"upgradePrompt": "Les serveurs Beta sont exclusifs aux Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
 				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super !",
-				"newsletterPrompt": "Recevoir les mises à jour via email (vous pourrez toujours changer ça plus tard)",
+				"newsletterPrompt": "Recevoir les mises à jour par mail (vous pouvez vous désinscrire à tout moment)",
 				"signInSecurity": "Inscription et sécurité",
 				"email": "Email",
 				"password": "Mot de Passe",
 				"passwordResetNotice": "Une fois votre mot de passe changé, vous serez déconnecté de tous les appareils.",
-				"signInHistory": "Historique de Connexion",
-				"fullSignInHistory": "Voir l'historique de connexion complète",
-				"otherSettings": "Autres Paramètres",
+				"signInHistory": "Historique de connexion",
+				"fullSignInHistory": "Voir l'historique de connexion intégral",
+				"otherSettings": "Autres paramètres",
 				"discord": "Discord",
 				"connectedToDiscord": "Connecté à Discord en tant que",
 				"removeDiscord": "Délier le compte Discord",
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
-				"newsletter": "Nouveautés",
+				"newsletter": "Newsletter",
 				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu",
-				"no_edit_from_dashboard": "Le changement des préférences du IDNP dans le menu d'utilisateur n'est pas disponsible. Veuillez changer les préférences de profil sur votre console de jeu",
+				"no_edit_from_dashboard": "La configuration des paramètres PNID depuis le menu utilisateur est actuellement indisponible. Veuillez procéder aux changements depuis votre console.",
 				"userSettings": "Paramètres du Compte",
-				"no_signins_notice": "L'historique de connexion n'est actuellement pas sauvegardé. Revenez plus tard !",
+				"no_signins_notice": "L'historique de connexion n'est pas encore établi. Réessayez ultérieurement.",
 				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
 			},
-			"downloadFilesDescription": "(Ne fonctionnera pas avec le Nintendo Network)",
 			"upgrade": "Mettre à Niveau le compte",
-			"unavailable": "Non disponible"
+			"unavailable": "Indisponible"
 		},
 		"banned": "Banni",
 		"accountLevel": [
@@ -365,7 +436,7 @@
 		"month": "mois",
 		"tierSelectPrompt": "Sélectionnez un niveau",
 		"unsub": "Se désabonner",
-		"unsubPrompt": "Êtes-vous sûr de vouloir vous désabonner du <span>tiername</span> ? Vous perdrez toutes les récompenses associées à ce niveau.",
+		"unsubPrompt": "Êtes-vous sûr de vouloir vous désabonner du <span>tiername</span> ? Vous perdrez toutes les récompenses associées à ce niveau <span>immédiatement</span>.",
 		"unsubConfirm": "Se désabonner",
 		"changeTier": "Changer de niveau",
 		"changeTierConfirm": "Changer de niveau",
@@ -379,5 +450,8 @@
 		"cancel": "Annuler",
 		"confirm": "Confirmer",
 		"close": "Fermer"
+	},
+	"notfound": {
+		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
 	}
 }

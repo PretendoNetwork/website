@@ -3,7 +3,7 @@
 		"faq": "Perguntas Frequentes",
 		"accountWidget": {
 			"logout": "Sair",
-			"settings": "Configurações"
+			"settings": "Definições"
 		},
 		"donate": "Doar",
 		"about": "Sobre",
@@ -23,56 +23,6 @@
 		}
 	},
 	"credits": {
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Criador do projeto e líder de desenvolvimento",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Pesquisa e desenvolvimento do Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Instalador de rede e pesquisa de console",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky",
-				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "Pesquisa de console e outros sistemas",
-				"picture": "https://github.com/supermariodabom.png",
-				"name": "SuperMarioDaBom",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"github": "https://github.com/jipfr",
-				"caption": "Líder de desenvolvimento web",
-				"name": "Jip Fr",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes",
-				"caption": "Desenvolvimento web",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Designer",
-				"github": "https://github.com/mrjvs"
-			}
-		],
 		"title": "Equipa",
 		"text": "Conheça a equipa por trás do projeto"
 	},
@@ -98,7 +48,6 @@
 		},
 		"settings": {
 			"upgrade": "Aprimorar conta",
-			"downloadFiles": "Descarregarr ficheiros de conta",
 			"settingCards": {
 				"gender": "Gênero",
 				"newsletterPrompt": "Receba atualizações do projeto via e-mail (pode desinscrever-se a qualquer momento)",
@@ -131,7 +80,6 @@
 				"no_newsletter_notice": "Notícias não estão disponíveis no momento. Volte novamente depois",
 				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do utilizador não está disponível no momento. Atualize as configurações do utilizador do seu console de jogos vinculado"
 			},
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível"
 		},
 		"banned": "Banido",
@@ -196,7 +144,7 @@
 	"hero": {
 		"subtitle": "Servidores de jogos",
 		"title": "Recriados",
-		"text": "O Pretendo é uma reposição gratuíta e de código aberto para os servidores do Wii U e Nintendo 3DS, permitindo a conectividade online para todos, mesmo após o encerramento dos servidores originais",
+		"text": "A Pretendo é uma substituição gratuita e de código aberto para os servidores da Nintendo 3DS e da Wii U, permitindo uma conexão online para todos, mesmo depois dos servidores originais serem descontinuados.",
 		"buttons": {
 			"readMore": "Saiba mais"
 		}
@@ -204,8 +152,8 @@
 	"aboutUs": {
 		"title": "Sobre nós",
 		"paragraphs": [
-			"Utilizando o design de sala limpa, Pretendo é um projeto de código aberto que visa recriar a Nintendo Network para o Wii U e para família de consoles Nintendo 3DS.",
-			"Como os nossos serviços serão gratuitos e de código aberto, eles podem continuar existindo por muito mais tempo após o inevitável encerramento da Nintendo Network."
+			"A Pretendo é um projeto open-source que pretende recriar a Nintendo Network para a 3DS e a Wii U, ao utilizar engenharia reversa \"clean-room\".",
+			"Sendo que os nossos serviços são grátis e de código-aberto, eles podem assim existir após o inevitável encerramento da Nintendo Network."
 		]
 	},
 	"progress": {
@@ -216,7 +164,7 @@
 		"QAs": [
 			{
 				"question": "O que é Pretendo?",
-				"answer": "Pretendo é uma reposição de código aberto para a Nintendo Network que visa fornecer servidores personalizados para o Wii U e para a família de consoles Nintendo 3DS. Nosso objetivo é preservar as funcionalidades online desses consoles para permitir que os jogadores continuem experienciando os jogos favoritos na capacidade máxima deles."
+				"answer": "A Pretendo é uma substituição de código aberto à Nintendo Network que pretende criar servidores para a Wii U e a família de consolas 3DS. O nosso objetivo é preservar as capacidades online destas consolas, permitindo que os jogadores possam continuar a jogar os seus jogos favoritos da Wii U e da 3DS da melhor maneira possível."
 			},
 			{
 				"question": "Os meus NNIDs existentes funcionarão na Pretendo?",
@@ -224,7 +172,7 @@
 			},
 			{
 				"question": "Como uso a Pretendo?",
-				"answer": "Pretendo atualmente não está disponível para uso pelo público geral. No entanto, quando estiver pronto, poderá usar a Pretendo executando nosso patcher homebrew no seu console."
+				"answer": "A Pretendo não está atualmente num estado pronto para o uso público. No entanto, quando estiver, poderás usar a Pretendo apenas ao abrir o nosso patcher na tua consola."
 			},
 			{
 				"question": "Sabe quando recurso/serviço estará pronto?",
@@ -251,57 +199,6 @@
 		"text": "Para a fácil obtenção de informações, aqui estão algumas das perguntas mais comuns."
 	},
 	"specialThanks": {
-		"people": [
-			{
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"caption": "Desenvolvimento da crunch library",
-				"picture": "https://github.com/superwhiskers.png"
-			},
-			{
-				"name": "Stary",
-				"github": "https://github.com/Stary2001",
-				"caption": "Desenvolvimento do 3DS e dissector NEX",
-				"picture": "https://github.com/Stary2001.png"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fornecedor de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Pesquisa do Nintendo 3DS e Mario Kart 7",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "Compartilhamento de informações do Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Agradecimentos especiais",
-				"caption": "Pesquisa da estruturas de dados da Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"picture": "https://github.com/ninstar.png",
-				"caption": "Ícones para o criador Mii e Juxt",
-				"name": "NinStar",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "Contribuidores do GitHub",
-				"caption": "Traduções e outras contribuições",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		],
 		"title": "Agradecimentos especiais",
 		"text": "Sem eles, Pretendo não estaria onde está hoje."
 	},

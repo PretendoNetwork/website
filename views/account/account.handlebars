@@ -25,12 +25,6 @@
 				{{/if}}
 			</div>
 			<div class="buttons">
-				<a class="button secondary" id="download-cemu-files" href="/account/online-files" download>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-					<p class="caption">{{ locale.account.settings.downloadFiles }}</p>
-					<p class="cemu-warning">{{ locale.account.settings.downloadFilesDescription }}</p>
-				</a>
-
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
 					<p class="caption">{{ locale.account.settings.upgrade }}</p>
 				</a>
@@ -74,7 +68,11 @@
 				<h2 class="header">{{ locale.account.settings.settingCards.serverEnv }}</h2>
 				<fieldset {{#unless isTester}}disabled{{/unless}}>
 					<form class="server-selection" id="server">
-						<input type="radio" id="prod" name="server_selection" value="prod" checked="{{ eq account.server_access_level 'prod'}}">
+						{{#if (eq environment 'prod')}}
+							<input type="radio" id="prod" name="server_selection" value="prod" checked>
+						{{else}}
+							<input type="radio" id="prod" name="server_selection" value="prod">
+						{{/if}}
 						<label for="prod">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -87,7 +85,11 @@
 							<h2>{{ locale.account.settings.settingCards.production }}</h2>
 						</label>
 						{{#if isTester}}
-						<input type="radio" id="beta" name="server_selection" value="beta" checked="{{ neq account.server_access_level 'prod'}}">
+						{{#if (eq environment 'test')}}
+							<input type="radio" id="beta" name="server_selection" value="test" checked>
+						{{else}}
+							<input type="radio" id="beta" name="server_selection" value="test">
+						{{/if}}
 						<label for="beta">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<polygon points="2,21 22,21 14,11.5 14,5 10,3 10,11.5"></polygon>
@@ -100,6 +102,7 @@
 			{{#unless isTester}}
 				<p>{{{ locale.account.settings.settingCards.upgradePrompt }}}</p>
 			{{else}}
+				<button class="button secondary" id="save-server-selection">Save</button>
 				<p>{{ locale.account.settings.settingCards.hasAccessPrompt }}</p>
 			{{/unless}}
 			</div>
@@ -184,18 +187,6 @@
 	</div>
 </div>
 {{/if}}
-
-<div class="modal-wrapper hidden" id="onlinefiles">
-	<div class="modal">
-		<h1 class="title dot">{{ locale.account.settings.settingCards.password }}</h1>
-		<p class="modal-caption">{{ locale.account.settings.settingCards.passwordPrompt }}</p>
-		<input name="password" id="password" type="password" required />
-		<div class="modal-button-wrapper">
-			<button class="button cancel" id="onlineFilesCloseButton">{{ locale.modals.cancel }}</button>
-			<button class="button primary confirm" id="onlineFilesConfirmButton">{{ locale.modals.confirm }}</button>
-		</div>
-	</div>
-</div>
 
 <div class="modal-wrapper hidden" id="edit-settings">
 	<div class="modal">

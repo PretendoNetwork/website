@@ -1,10 +1,10 @@
 const { Router } = require('express');
-const router = new Router();
-
 const { getGithubProjectsCache } = require('../cache');
 
+const router = new Router();
+
 router.get('/', async (request, response) => {
-	const renderData = 	{};
+	const renderData = {};
 
 	const githubProjectsCache = await getGithubProjectsCache();
 
@@ -20,9 +20,10 @@ router.get('/', async (request, response) => {
 	}
 	shuffleArray(specialThanksPeople);
 
+	const pivot = specialThanksPeople.length / 2;
 	// Slices the array in half
-	const specialThanksFirstRow = specialThanksPeople.slice(0, 4);
-	const specialThanksSecondRow = specialThanksPeople.slice(4);
+	const specialThanksFirstRow = specialThanksPeople.slice(0, pivot);
+	const specialThanksSecondRow = specialThanksPeople.slice(pivot);
 
 	// Builds the final array to be sent to the view, and triples each row.
 	renderData.specialThanksPeople = {
@@ -47,7 +48,7 @@ router.get('/', async (request, response) => {
 	};
 
 	// Calculates individual completion percentages and progress states
-	githubProjectsCache.sections.forEach(section => {
+	githubProjectsCache.sections.forEach((section) => {
 		const { todo, in_progress, done } = section.cards;
 
 		// Calculates the completion percentage of the project, and sums it to the total
@@ -56,7 +57,7 @@ router.get('/', async (request, response) => {
 
 		const sectionTitle = `${section.title}  [${Math.floor(sectionCompletionPercentage * 100)}%]`;
 
-		switch(sectionCompletionPercentage) {
+		switch (sectionCompletionPercentage) {
 			case 0:
 				totalProgress.cards.todo.push(sectionTitle);
 				break;

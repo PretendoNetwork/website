@@ -2,6 +2,7 @@ const { Schema } = require('mongoose');
 
 // Only define what we will be using
 const PNIDSchema = new Schema({
+	deleted: Boolean,
 	pid: {
 		type: Number,
 		unique: true

@@ -23,6 +23,7 @@
 	--green-shade-1: #59c9a5;
 
 	--red-shade-1: #a9375b;
+	--yellow-shade-1: #ffd966;
 
 	--border: rgba(255, 255, 255, 0.1);
 }
@@ -40,6 +41,15 @@ body, .main-body {
 	color: var(--text-shade-3);
 	justify-content: center;
 	font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+code {
+  background-color: var(--bg-shade-0);
+  padding: 4px;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 0.9em;
+  color: var(--text-shade-2);
 }
 
 .main-body {
@@ -453,7 +463,7 @@ section.team-helpers .text {
 }
 section.team-helpers .team-helpers-cards {
 	display: inline-grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(21, 1fr);
 	grid-gap: 20px;
 	margin-right: 20px;
 	color: var(--text-shade-1);

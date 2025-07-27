@@ -103,85 +103,11 @@
 		"text": "Наш праект мае шмат кампанентаў. Вось некаторыя з іх."
 	},
 	"credits": {
-		"people": [
-			{
-				"name": "Джонатан Бэрроу (jonbarrow)",
-				"caption": "Уладальнік праекта і вядучы распрацоўшчык",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"caption": "Даследаванні і распрацоўкі Miiverse",
-				"github": "https://github.com/CaramelKat",
-				"name": "Джэма (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"name": "Рэмба6Глаз",
-				"caption": "Праграма ўстаноўкі сеткі і даследаванне кансолі",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png",
-				"name": "кваркісты",
-				"caption": "Даследаванні BOSS і распрацоўка выпраўленняў"
-			},
-			{
-				"name": "СуперМарыёДаБом",
-				"caption": "Кансоль і іншыя даследаванні сістэмы",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Джып кс",
-				"caption": "Кіраўнік вэб-распрацоўкі",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes",
-				"caption": "Вэб-распрацоўка",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Дызайнер",
-				"github": "https://github.com/mrjvs",
-				"picture": "https://github.com/mrjvs.png"
-			}
-		],
 		"title": "Каманда",
 		"text": "Пазнаёмцеся з камандай, якая стаіць за праектам"
 	},
 	"specialThanks": {
 		"title": "Асобнае дзякуй",
-		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння.",
-		"people": [
-			{
-				"name": "супервусы",
-				"caption": "храбусценне распрацоўкі бібліятэк",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Стары",
-				"caption": "Дысэктар 3DS dev і NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Білі",
-				"caption": "Захавальнік",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Даследаванне Mario Kart 7 і 3DS"
-			}
-		]
+		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння."
 	}
 }

@@ -2,7 +2,7 @@
 	"aboutUs": {
 		"paragraphs": [
 			"Pretendo — це проект із відкритим вихідним кодом, метою якого є відтворення мережі Nintendo для 3DS і Wii U за допомогою зворотного проектування чистих приміщень.",
-			"Оскільки наші служби будуть безкоштовними та відкритими, вони можуть існувати ще довго після неминучого закриття Nintendo Network."
+			"Оскільки наші служби є безкоштовними та відкритими, вони будуть існувати ще довгий час"
 		],
 		"title": "Про нас"
 	},
@@ -17,32 +17,44 @@
 				"question": "Чи працюватимуть мої наявні NNID на Pretendo?"
 			},
 			{
-				"question": "Як використовувати Pretendo?",
-				"answer": "Pretendo наразі не готовий для загального використання. Однак, як тільки це станеться, ви зможете використовувати Pretendo, просто запустивши наш homebrew patcher на вашій консолі."
+				"question": "Як користуватися Pretendo?",
+				"answer": "Щоб почати використовувати Pretendo Network на 3DS, Wii U чи емуляторах, відвідайте <a href=\"/docs/install\">інструкції для підключення</a>!"
 			},
 			{
 				"answer": "Ні. Багато функцій/сервісів Pretendo розроблено незалежно (наприклад, над Miiverse може працювати один розробник, а над обліковими записами та друзями — інший), тому ми не можемо вказати скільки часу це займе.",
 				"question": "Ви знаєте, коли функція/служба буде готова?"
 			},
 			{
-				"answer": "Pretendo підтримує будь-який емулятор, який може взаємодіяти з Nintendo Network. Наразі єдиним емулятором із такою функціональністю є Cemu. Cemu 2.0 офіційно підтримує Pretendo в параметрах вашого мережевого облікового запису в емуляторі. Щоб отримати інформацію про те, як розпочати роботу з Cemu, перегляньте <a href=\"https://pretendo.network/docs/install/cemu\">документацію</a>.<br>Citra не підтримує звичайну онлайн-гру та тому не працює з Pretendo і взагалі не підтримує звичайну онлайн-гру. Mikage, емулятор 3DS для мобільних пристроїв, мабуть ми зробимо підтримку в майбутньому, але це не точно.",
-				"question": "Чи працює Pretendo на Cemu/емуляторах?"
+				"answer": "Pretendo підтримує будь-який емулятор, який може взаємодіяти з Nintendo Network. Наразі єдиним емулятором із такою функціональністю є Cemu. Cemu 2.0 офіційно підтримує Pretendo в параметрах вашого мережевого облікового запису в емуляторі. Щоб отримати інформацію про те, як розпочати роботу з Cemu, перегляньте документацію.Citra не підтримує звичайну онлайн-гру та тому не працює з Pretendo і взагалі не підтримує звичайну онлайн-гру. Mikage, емулятор 3DS для мобільних пристроїв, можливо, надасть підтримку в майбутньому, хоча це ще не факт.",
+				"question": "Коли ви додасте більше ігор?"
 			},
 			{
-				"answer": "Ми не маємо доступу до блокувань Nintendo Network, і всі користувачі не будуть заблоковані в нашому сервісі. Однак у нас будуть правила, яких слід дотримуватися під час користування сервісом, і недотримання цих правил може призвести до блокування.",
-				"question": "Якщо мене забанять у Nintendo Network, чи залишиться бан під час використання Pretendo?"
+				"answer": "Ні. З метою безпеки та модерації, якщо ви використовуєте емулятор, вам все одно потрібна справжня консоль. Це дозволяє підвищити рівень безпеки та ефективніше застосовувати правила, щоб забезпечити безпечне та приємне користування нашим сервісом.",
+				"question": "Якщо я буду використовувати емулятор, чи буде цього достатньо для використання Pretendo?"
 			},
 			{
-				"question": "Чи підтримуватиме Pretendo Wii/Switch?",
-				"answer": "Wii уже має спеціальні сервери, надані <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Наразі ми не хочемо орієнтуватися на Switch, оскільки він платний і повністю відрізняється від Nintendo Network."
+				"question": "Чи працює Pretendo на Cemu/емуляторах?",
+				"answer": "Cemu 2.1 офіційно підтримує Pretendo у параметрах вашого мережевого облікового запису в емуляторі. Щоб дізнатися, як розпочати роботу з Cemu, зверніться до <a href=\"https://pretendo.network/docs/install/cemu\">документації</a>.<br>. Деякі емулятори або форки емулятора 3DS можуть підтримувати нас, але наразі ми не маємо жодних офіційних рекомендацій чи інструкцій з налаштування. Фінальні збірки Citra не підтримують Pretendo."
 			},
 			{
-				"question": "Чи знадобляться мені хаки для підключення?",
-				"answer": "Так, вам потрібно буде хакнути пристрій, щоб підключитися; однак на Wii U вам потрібен буде лише доступ до Homebrew Launcher (тобто Haxchi, Coldboot Haxchi або навіть експлойт веб-браузера), а інформація про те, як 3DS підключатиметься, буде надана пізніше."
+				"question": "Чи буде Pretendo підтримувати Wii/Switch?",
+				"answer": "Для Wii вже є власні сервери, надані <a href=«https://wiimmfi.de/» target=«_blank»>Wiimmfi</a>. Наразі ми не хочемо орієнтуватися на Switch, оскільки вона є платною і повністю відрізняється від Nintendo Network."
+			},
+			{
+				"answer": "Для найкращого досвіду на консолях вам потрібно буде хакнути вашу систему - зокрема, Aroma для Wii U та Luma3DS для 3DS. Однак на Wii U також доступний метод SSSL без злому з обмеженою функціональністю. Дивіться наші <a href=\"/docs/install\">інструкції з налаштування</a> для отримання детальної інформації.",
+				"question": "Чи потрібні хаки для підключення?"
+			},
+			{
+				"question": "Якщо мене заблоковано в Nintendo Network, чи буду я заблокований під час використання Pretendo?",
+				"answer": "Ми не маємо доступу до блокувань Nintendo Network, тому всі користувачі Nintendo Network не заблоковані.  Однак у нас є правила, яких слід дотримуватися при використанні сервісу, і їх недотримання може призвести до блокування."
+			},
+			{
+				"answer": "Тільки в приватних матчах - отримання несправедливої переваги або порушення взаємодії з людьми, які не давали на це згоди (як і в публічних матчах), є забороненим порушенням. Ми регулярно застосовуємо блокування акаунтів і консолей як для Wii U, так і для 3DS. Pretendo використовує додаткові заходи безпеки, які роблять традиційні методи зняття блокування, такі як зміна серійного номера, неефективними.",
+				"question": "Чи можу я використовувати чити або модифікації з Pretendo?"
 			}
 		],
 		"title": "Часті Запитання",
-		"text": "Ось кілька поширених запитань, які нам задають, щоб отримати легку інформацію."
+		"text": "Ось кілька поширених запитань, які нам задають, щоб отримати інформацію."
 	},
 	"showcase": {
 		"cards": [
@@ -52,7 +64,7 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Повторне уявлення про Miiverse, ніби це було зроблено в сучасну епоху."
+				"caption": "Переосмислення Miiverse, так, ніби воно було зроблено в сучасну епоху."
 			},
 			{
 				"caption": "Грайте в улюблені ігри Wii U навіть без консолі!",
@@ -63,63 +75,87 @@
 		"text": "Наш проект має багато компонентів. Ось деякі з них."
 	},
 	"credits": {
+		"title": "Команда",
+		"text": "Познайомтеся з командою проекту",
 		"people": [
 			{
-				"caption": "Власник проекту та головний розробник",
-				"name": "Jonathan Barrow (jonbarrow)",
 				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
+				"name": "Jonathan Barrow (jonbarrow)",
+				"github": "https://github.com/jonbarrow",
+				"caption": "Власник проєкту та головний розробник"
 			},
 			{
-				"github": "https://github.com/CaramelKat",
-				"caption": "Дослідження та розробки Miiverse",
 				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png"
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat",
+				"caption": "Дослідження та розробка Miiverse"
 			},
 			{
-				"name": "Rambo6Glaz",
-				"caption": "Інсталятор мережі та дослідження консолі",
-				"github": "https://github.com/EpicUsername12",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"name": "quarky",
-				"caption": "Дослідження та розробка виправлень BOSS",
+				"caption": "Дослідження та розробка патчів для Wii U",
 				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
+				"github": "https://github.com/ashquarky",
+				"name": "quarky"
 			},
 			{
-				"name": "SuperMarioDaBom",
-				"caption": "Консоль та інші системні дослідження",
 				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
+				"github": "https://github.com/SuperMarioDaBom",
+				"caption": "Системні дослідження та архітектура серверів",
+				"name": "SuperMarioDaBom"
 			},
 			{
-				"github": "https://github.com/jipfr",
-				"name": "Jip Fr",
-				"caption": "Керівник веб-розробки",
-				"picture": "https://github.com/jipfr.png"
-			},
-			{
-				"github": "https://github.com/gitlimes",
 				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png",
-				"caption": "Веб-розробка"
+				"caption": "Веб-розробка",
+				"github": "https://github.com/gitlimes.png",
+				"picture": "https://github.com/gitlimes.png"
 			},
 			{
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs",
-				"name": "mrjvs",
-				"caption": "Дизайнер"
+				"name": "Shutterbug2000",
+				"caption": "Системні дослідження та розробка серверів",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"caption": "Збереження та серверна архітектура",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra",
+				"name": "DaniElectra",
+				"caption": "Системні дослідження та розробка серверів"
+			},
+			{
+				"caption": "Веб та серверна розробка",
+				"picture": "https://github.com/hauntii.png",
+				"name": "niko",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"caption": "DevOps та робота з спільнотою",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"caption": "Розробка та оптимізація серверів",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Розробка та дослідження патчів для 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
-		],
-		"title": "Команда",
-		"text": "Познайомтеся з командою проекту"
+		]
 	},
 	"nav": {
 		"credits": "Титри",
 		"progress": "Прогрес",
-		"blog": "Блог",
+		"blog": "Блоґ",
 		"about": "Про",
 		"faq": "ЧаПи",
 		"accountWidget": {
@@ -127,23 +163,23 @@
 			"logout": "Вийти"
 		},
 		"docs": "Документи",
-		"account": "Обликовий запис",
+		"account": "Обліковий запис",
 		"donate": "Пожертвувати",
 		"dropdown": {
 			"captions": {
 				"credits": "Зустрічайте команду",
 				"blog": "Наші останні оновлення, скорочено",
-				"progress": "Проверіти прогресс проекту, та ціли",
-				"about": "Про проект",
-				"faq": "Найчастіше задаваїми питання"
+				"progress": "Проверіти прогресс проєкту та цілі",
+				"about": "Про проєкт",
+				"faq": "Часті питання"
 			}
 		}
 	},
 	"hero": {
 		"subtitle": "Ігрові сервери",
-		"title": "Відтворени",
+		"title": "Відтворені",
 		"buttons": {
-			"readMore": "Читати далі"
+			"readMore": "Читати більше"
 		},
 		"text": "Pretendo — це безкоштовна заміна серверів Nintendo з відкритим вихідним кодом як для 3DS, так і для Wii U, що дозволяє всім підключатися до Інтернету навіть після припинення роботи оригінальних серверів"
 	},
@@ -153,111 +189,148 @@
 	},
 	"specialThanks": {
 		"title": "Особлива подяка",
+		"text": "Без них Pretendo не було б таким, яким воно є сьогодні.",
 		"people": [
 			{
-				"name": "superwhiskers",
-				"caption": "розробка бібліотеки crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS розробник і диссектор NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Охоронець",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Дослідження Mario Kart 7 і 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "Надали інформацію про Miiverse",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png"
-			},
-			{
-				"name": "Kinnay",
-				"caption": "Дослідження структур даних Nintendo",
-				"special": "Особлива подяка",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"caption": "Іконка для Mii Editor і реакцій Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"name": "NinStar",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Учасники GitHub",
+				"name": "Користувачі GitHub",
 				"caption": "Локалізації та інші внески",
 				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
 				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers",
+				"caption": "Розробка кранч-бібліотек"
+			},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001",
+				"caption": "Розробка 3DS та дисектор NEX"
+			},
+			{
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Поширення інформації про Miiverse"
+			},
+			{
+				"caption": "Дослідження структур даних Nintendo",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"special": "Особлива подяка",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Іконки для Mii Editor та реакцій Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"caption": "Дослідження консолей та ігрових серверів",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12",
+				"name": "Rambo6Glaz"
+			},
+			{
+				"name": "GaryOderNichts",
+				"github": "https://github.com/GaryOderNichts",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"caption": "Розробка патчів для Wii U"
+			},
+			{
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"name": "zaksabeast",
+				"caption": "Розробник патчів для 3DS",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Архітектура сервера",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"caption": "Архітектура сервера",
+				"github": "https://github.com/binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"name": "binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Ротації та дослідження Splatoon",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"github": "https://github.com/OatmealDome",
+				"name": "OatmealDome",
+				"caption": "Ротації та дослідження Splatoon",
+				"picture": "https://github.com/OatmealDome.png"
+			},
+			{
+				"caption": "Локалізації та інші внески",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"name": "Користувачі GitHub",
+				"github": "https://github.com/PretendoNetwork"
 			}
-		],
-		"text": "Без них Pretendo не було б таким, яким воно є сьогодні."
+		]
 	},
 	"discordJoin": {
 		"title": "Будьте в курсі подій",
-		"text": "Приєднуйтесь до нашого сервера Discord, щоб отримувати останні оновлення про проект.",
+		"text": "Приєднуйтесь до нашого сервера Discord, щоб отримувати останні оновлення про проєкт.",
 		"widget": {
 			"button": "Приєднатися до серверу",
 			"text": "Отримуйте оновлення в реальному часі про наш прогрес"
 		}
 	},
 	"footer": {
-		"socials": "Соціальні сеті",
+		"socials": "Соціальні мережі",
 		"usefulLinks": "Корисні посилання",
 		"widget": {
 			"captions": [
-				"Хочете бути в курсі?",
+				"Хочете бути в курсі подій?",
 				"Приєднуйтесь до нашого сервера Discord!"
 			],
 			"button": "Приєднуйся зараз!"
 		},
 		"bandwidthRaccoonQuotes": [
-			"Я Бандвих Єнот і мені подобається перекушувати кабелі до серверів Pretendo Network. Ням!",
-			"Багато людей питає нас : Чи будемо ми мати проблеми з Nintendo иза цого? Я дуже радий сказати, що моя тітка працуе в Nintendo, та вона ясказала що все добре.",
-			"Webkit версії 537 це найкраща версія Webkit для Wii U. Ні, ми не будемо портирувати Chrome на Wii U.",
-			"Я не можу дочекатися поки часи перейдуть відмітку 03:14:08 по UTC дев'ятнадцятого січеня 2038 року!",
-			"Wii U це недо оцінена консоль : Комерчіска реклама була дуже погана, але консоль дуже гарна. Зачекайте, я не дуже впевнений, чому мій контролер не приеднуется до Wii.",
-			"Super Mario World 2 - Головна тема острова Йоші - абсолютний боп (стиль жанру джаза), та ви не зможете переконати мене у зворотному.",
-			"Мої улюблені Nintendo Switch релізи це Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Вам дуже сподобається Nintendo Wii U Virtual Console ігри, так що ми їх повертаемо обратно\" Пак. Вы можете серйозно сказати що Nintendo не байдуже.",
-			"Наприклад, \"Ти знаєш, Еш, благослови її серце, вона весь день Увукала\" - це південний приємний спосіб сказати: \"Еш увукала весь час, і це дійсно дивно і тупо, і я хотів би, щоб вони цього не зробили\"",
-			"Моє перше відео на моєму каналі!! Я вже давно хотів знімати відео, але мій ноутбук працював досить погано, і я не міг запускати Fraps, Skype і Minecraft одночасно. Але зараз на цьому все закінчиться! За допомогою мого ІТ-викладача мій ноутбук працює набагато краще, і я можу записувати зараз! Сподіваюся, вам усім сподобається, і якщо це так, будь ласка, поставте лайк і підпишіться!!!"
+			"Я єнот Бендвих, і я люблю гризти кабелі, що йдуть до серверів Pretendo Network. Ням!",
+			"Багато людей запитують нас, чи не виникнуть у нас юридичні проблеми з Nintendo через це; я радий повідомити, що моя тітка працює в Nintendo, і вона каже, що все в порядку.",
+			"Webkit v537 - найкраща версія Webkit для Wii U. Ні, ми не збираємося портувати Chrome на Wii U.",
+			"Не можу дочекатися, коли годинник досягне 03:14:08 UTC 19 січня 2038 року!",
+			"Wii U насправді недооцінена система: реклама була дуже поганою, але консоль чудова. Секундочку, не знаю чому, але мій геймпад не під'єднується до Wii.",
+			"Головна тема Super Mario World 2 - Yoshi's Island - це абсолютний боп, і ви ніяк не переконаєте мене в протилежному.",
+			"Моїми улюбленими релізами для Nintendo Switch були Nintendo Switch Online + розширення, Nintendo Switch Online + Rumble Pack, Nintendo Switch Online + офлайн-пакет, Nintendo Switch Online + ще один порт-пакет і Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Вам дуже сподобалася гра для віртуальної консолі Nintendo Wii U, тому ми повертаємо її назад\". Можна сказати, що Nintendo дійсно дбає про нас.",
+			"Наприклад, \"Ти знаєш, Еш, благослови її серце, вона весь день УвУкає\" - це південний приємний спосіб сказати: \"Еш увукає весь час, і це дійсно дивно і безглуздо, і я хотів би, щоб вона цього не робила\"",
+			"Моє перше відео на моєму каналі! Я давно хотів знімати відео, але мій ноутбук працював досить погано, і я не міг запускати fraps, skype і minecraft одночасно. але тепер це закінчилося! з деякою допомогою мого вчителя інформатики мій ноутбук працює набагато краще, і я можу записувати зараз! я сподіваюся, що вам сподобається, і якщо вам сподобається, будь ласка, ставте лайк і підписуйтесь!!!",
+			"Як на мене, виглядає непогано."
 		]
 	},
 	"blogPage": {
-		"title": "Блог",
+		"title": "Блоґ",
 		"publishedOn": "у",
 		"published": "Опубліковано",
-		"description": ""
+		"description": "Останні оновлення у стислому вигляді. Якщо ви хочете бачити частіші оновлення, <a href=\"/account/upgrade\" target=\"_blank\">підтримайте нас</a>."
 	},
 	"account": {
 		"loginForm": {
-			"login": "Логін",
+			"login": "Лоґін",
 			"register": "Зареєструватися",
 			"username": "Ім'я користувача",
 			"password": "Пароль",
 			"confirmPassword": "Підтвердьте пароль",
 			"email": "Електронна пошта",
 			"miiName": "Ім'я Mii",
-			"registerPrompt": "Немає аккаунту?",
-			"loginPrompt": "Вже є аккаунт?",
+			"registerPrompt": "Немає акаунту?",
+			"loginPrompt": "Вже є акаунт?",
 			"detailsPrompt": "Введіть дані свого облікового запису нижче",
 			"forgotPassword": "Забули пароль?"
 		},
 		"settings": {
-			"upgrade": "Прокачати аккаунт",
+			"upgrade": "Прокачати акаунт",
 			"settingCards": {
 				"profile": "Профіль",
 				"nickname": "Нікнейм",
@@ -273,26 +346,24 @@
 				"otherSettings": "Інші налаштування",
 				"discord": "Discord",
 				"connectedToDiscord": "Підключений до Discord як",
-				"removeDiscord": "Вийти з аккаунту Discord",
-				"noDiscordLinked": "Аккаунт Discord не пов’язано.",
+				"removeDiscord": "Вийти з акаунту Discord",
+				"noDiscordLinked": "Акаунт Discord не пов’язано.",
 				"passwordPrompt": "Введіть свій пароль PNID, щоб завантажити файли Cemu",
 				"serverEnv": "Серверне середовище",
 				"hasAccessPrompt": "Ваш поточний рівень надає вам доступ до бета-сервера. Круто!",
 				"gender": "Стать",
 				"beta": "Бета",
-				"upgradePrompt": "Бета-сервери призначені виключно для бета-тестерів.<br>Щоб стати бета-тестером, прокачайте аккаунт до вищого рівня.",
+				"upgradePrompt": "Бета-сервери призначені виключно для бета-тестерів.<br>Щоб стати бета-тестером, прокачайте акаунт до вищого рівня.",
 				"fullSignInHistory": "Переглянути повну історію входів",
-				"linkDiscord": "Прив'язати аккаунт Discord",
+				"linkDiscord": "Прив'язати акаунт Discord",
 				"newsletter": "Розсилка новин",
 				"newsletterPrompt": "Отримувати оновлення проекту електронною поштою (ви можете відмовитися в будь-який час)",
 				"no_newsletter_notice": "Новини зараз не доступні. Спробуйте пізніше",
-				"userSettings": "Налаштування Користувача",
+				"userSettings": "Налаштування користувача",
 				"no_signins_notice": "Вхідна історія зараз не відстежується. Спробуйте пізніше!",
 				"no_edit_from_dashboard": "Редагування налаштувань PNID з інформаційної панелі користувача зараз не доступна. Будь ласка, оновіть налаштування користувача з прив'язаної ігрової консолі"
 			},
-			"downloadFilesDescription": "(не працюватиме в Nintendo Network)",
-			"downloadFiles": "Завантажити файли облікового запису",
-			"unavailable": "Не Доступно"
+			"unavailable": "Не доступно"
 		},
 		"accountLevel": [
 			"Стандартний",
@@ -300,7 +371,7 @@
 			"Модератор",
 			"Розробник"
 		],
-		"banned": "Заблокован",
+		"banned": "Заблокований",
 		"account": "Обліковий Запис",
 		"forgotPassword": {
 			"header": "Забув пароль",
@@ -334,7 +405,7 @@
 		"upgradePush": "Щоб стати передплатником і отримати доступ до цікавих бонусів, відвідайте <a href=\"/account/upgrade\">сторінку прокачки</a>."
 	},
 	"localizationPage": {
-		"title": "Локалізуємо",
+		"title": "Давайте локалізуємо",
 		"instructions": "Переглянути інструкції з локалізації",
 		"description": "Вставте посилання на загальнодоступну мову JSON, щоб протестувати її на веб-сайті",
 		"fileInput": "Файл для тестування",
@@ -355,11 +426,11 @@
 				}
 			]
 		},
-		"missingInLocale": "Ця сторінка недоступна у вашому регіоні. Будь ласка, перевірте англійську версію нижче.",
+		"missingInLocale": "Ця сторінка недоступна вашою мовою. Будь ласка, перевірте англійську версію нижче.",
 		"sidebar": {
 			"welcome": "Ласкаво просимо",
-			"juxt_err": "Коди помилки - Juxt",
-			"getting_started": "Починаемо",
+			"juxt_err": "Коди помилок - Juxt",
+			"getting_started": "Починаємо",
 			"install_extended": "Встановити Pretendo",
 			"install": "Встановити",
 			"search": "Знайти"
@@ -379,5 +450,8 @@
 		"cancel": "Скасувати",
 		"confirm": "Підтвердити",
 		"close": "Закрити"
+	},
+	"notfound": {
+		"description": "Упс! Сторінка не знайдена."
 	}
 }

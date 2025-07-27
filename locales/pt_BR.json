@@ -62,7 +62,7 @@
 				"answer": "Não. Muitos dos recursos e serviços da Pretendo são desenvolvidos de forma independente (por exemplo, o Miiverse pode ser trabalhado por um desenvolvedor enquanto as contas e lista de amigos são trabalhados por outro) e, portanto, não podemos estimar quanto tempo isso pode levar."
 			},
 			{
-				"question": "A Pretendo funciona em emuladores?",
+				"question": "Quando vocês irão adicionar mais jogos?",
 				"answer": "Pretendo suporta qualquer cliente que possa interagir com a Nintendo Network. No momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu 2.0 oficialmente suporta a Pretendo nas configurações de conta do emulador. Para mais informações em como usar a Pretendo no Cemu, por favor visite <a href=\"https://pretendo.network/docs/install/cemu\">a documentação</a>.<br>Citra não suporta o modo online de verdade, e não funciona com a Pretendo, e também não demonstra nenhum sinal de suportar um modo online no futuro. Mikage, um outro emulador de 3DS para celulares, talvez haverá uma maneira de se conectar online no futuro."
 			},
 			{
@@ -99,112 +99,11 @@
 	},
 	"credits": {
 		"title": "Equipe",
-		"text": "Conheça a equipe por trás do projeto",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Criador do projeto e líder de desenvolvimento",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Pesquisa e desenvolvimento do Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Instalador de rede e pesquisa de console",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "Pesquisa do BOSS e desenvolvimento do patch",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Pesquisa de console e outros sistemas",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Líder de desenvolvimento web",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Desenvolvimento web",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Designer",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			}
-		]
+		"text": "Conheça a equipe por trás do projeto"
 	},
 	"specialThanks": {
 		"title": "Agradecimentos especiais",
-		"text": "Sem eles, Pretendo não estaria onde está hoje.",
-		"people": [
-			{
-				"name": "superwhiskers",
-				"caption": "Desenvolvimento da crunch library",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "Desenvolvimento do 3DS e dissector NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Billy",
-				"caption": "Fornecedor de dumps",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Pesquisa do Nintendo 3DS e Mario Kart 7",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Compartilhamento de informações do Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Agradecimentos especiais",
-				"caption": "Pesquisa da estruturas de dados da Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ícones para o criador Mii e Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Contribuidores do GitHub",
-				"caption": "Traduções e outras contribuições",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Sem eles, Pretendo não estaria onde está hoje."
 	},
 	"discordJoin": {
 		"title": "Fique atualizado",
@@ -242,7 +141,7 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
+		"description": "As últimas atualizações em partes condensadas. Se você quiser ver atualizações mais frequentes, considere <a href=\"/account/upgrade\" target=\"_blank\">nos apoiar</a>.",
 		"published": "Publicado por",
 		"publishedOn": "em"
 	},
@@ -301,8 +200,6 @@
 				"no_edit_from_dashboard": "A edição das configurações de PNID do painel do usuário não está disponível no momento. Atualize as configurações do usuário do seu console de jogos vinculado",
 				"signInSecurity": "Acesso e segurança"
 			},
-			"downloadFiles": "Baixar arquivos de conta",
-			"downloadFilesDescription": "(não funcionará na Nintendo Network)",
 			"unavailable": "Indisponível",
 			"upgrade": "Aprimorar conta"
 		},

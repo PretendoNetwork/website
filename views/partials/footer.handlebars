@@ -26,7 +26,7 @@
 				</text>
 			</g>
 		</svg>
-		<p>Copyright 2022</p>
+		<p>Copyright 2024</p>
 		<p>Site by <a href="https://mrjvs.com/" target="_blank">mrjvs</a>, <a href="https://jipfr.nl/" target="_blank">jipfr</a> & <a href="https://limes.pink/" target="_blank">pinklimes</a></p>
 	</div>
 	<div>
@@ -35,9 +35,11 @@
 		<a href="https://mastodon.pretendo.network/@pretendo" target="_blank" rel="me">Mastodon</a>
 		<a href="https://discord.gg/pretendo" target="_blank">Discord</a>
 		<a href="https://github.com/PretendoNetwork" target="_blank">GitHub</a>
+		<a href="https://bsky.app/profile/pretendo.network" target="_blank">Bluesky</a>
 	</div>
 	<div>
 		<h1>{{ locale.footer.usefulLinks }}</h1>
+		<a href="/terms/privacy">Privacy Policy</a> {{! TODO - Add this to weblate. Quick and dirty for now, just to get something out the door }}
 		<a href="/docs">{{ locale.nav.docs }}</a>
 		<a href="/#faq">{{ locale.nav.faq }}</a>
 		<a href="/progress">{{ locale.nav.progress }}</a>
@@ -45,6 +47,7 @@
 		<a href="/account">{{ locale.nav.account }}</a>
 		<a href="/account/upgrade">{{ locale.nav.donate }}</a>
 	</div>
+	{{! TODO - Create a "Legal" section here }}
 	<div class="discord-server-card-wrapper">
 		<div class="discord-server-card">
 			<h1>{{ locale.footer.widget.captions.[0] }}</h1>
@@ -86,8 +89,13 @@
 		{{/each}}
 		]
 
-		bandwidthRaccoon.addEventListener("click", () =>
+		document.body.addEventListener("click", () =>
 		{
+			bandwidthRaccoonWrapper.classList.remove("speak");
+		})
+		bandwidthRaccoon.addEventListener("click", (event) =>
+		{
+			event.stopPropagation();
 			bandwidthRaccoonWrapper.classList.add("speak");
 			if (!randomSentences[i]) {
 				i = 0

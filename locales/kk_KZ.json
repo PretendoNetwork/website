@@ -80,111 +80,10 @@
 		"title": "Прогресс"
 	},
 	"specialThanks": {
-		"people": [
-			{
-				"caption": "crunch library әзірлеу",
-				"picture": "https://github.com/superwhiskers.png",
-				"name": "superwhiskers",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS әзірлеуші және NEX диссектор",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "Билли",
-				"picture": "https://github.com/InternalLoss.png",
-				"caption": "Қорғаушы",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Mario Kart 7 және 3DS зерттеу",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse туралы ақпарат",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Ерекше рақмет",
-				"caption": "Nintendo дата-серверлер зерттеу",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Mii Editor үшін суреттер, және Juxt реакциялар",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub салымшылары",
-				"caption": "Локализация және басқа салымшылары",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			}
-		],
 		"text": "Оларсыз Pretendo қазіргідей болмас еді.",
 		"title": "Ерекше рақмет"
 	},
 	"credits": {
-		"people": [
-			{
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"name": "Джонатан Барроу (jonbarrow)",
-				"caption": "Жобаның иесі және бас әзірлеуші"
-			},
-			{
-				"name": "Джемма (CaramelKat)",
-				"caption": "Miiverse зерттеу және әзірлеу",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Желіні орнатушы және консольді зерттеу",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "quarky",
-				"caption": "BOSS зерттеулері және патчтарды әзірлеу",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Консоль және басқа жүйелік зерттеулер",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "Jip Fr",
-				"caption": "Веб әзірлеу басы",
-				"picture": "https://github.com/jipfr.png",
-				"github": "https://github.com/jipfr.png"
-			},
-			{
-				"caption": "Веб әзірлеу",
-				"github": "https://github.com/gitlimes",
-				"picture": "https://github.com/gitlimes.png",
-				"name": "pinklimes"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Дизайн",
-				"github": "https://github.com/mrjvs",
-				"picture": "https://github.com/mrjvs.png"
-			}
-		],
 		"title": "Команда",
 		"text": "Жобаның артында тұрған командамен танысыңыз"
 	},
@@ -262,8 +161,6 @@
 			"email": "Пошта"
 		},
 		"settings": {
-			"downloadFiles": "Аккаунтының ақпаратты жүктеу",
-			"downloadFilesDescription": "(Nintendo Network-пен жұмыс істемейді)",
 			"upgrade": "Аккаунтты жақсарту",
 			"unavailable": "Қолжетімсіз",
 			"settingCards": {
