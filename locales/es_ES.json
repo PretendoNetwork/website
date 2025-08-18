@@ -81,8 +81,11 @@
 				"question": "Si me expulsan en Nintendo Network, ¿seguiré expulsado cuando use Pretendo?"
 			},
 			{
-				"question": "¿Puedo usar trucos o mods en línea con Pretendo?",
+				"question": "Si se me ha suspendido el acceso a Nintendo Network, ¿se mantendrá el suspenso en Pretendo?",
 				"answer": "Solo en partidas privadas. Ganar una ventaja injusta o interrumpir la experiencia online de gente que no ha dado su consentimiento (como en partidas públicas) es una ofensa baneable. Aplicamos regularmente baneos tanto de cuentas como de consolas en Wii U y 3DS. Pretendo usa medidas de seguridad extra que hacen inefectivos los metodos tradicionales de esquivar el ban como cambiar tu número de serie."
+			},
+			{
+				"question": "¿Puedo utilizar trucos o modificaciones con Pretendo?"
 			}
 		]
 	},
@@ -250,7 +253,8 @@
 			{
 				"picture": "https://github.com/binaryoverload.png",
 				"github": "https://github.com/binaryoverload",
-				"caption": "Arquitectura del servidor"
+				"caption": "Arquitectura del servidor",
+				"name": "sobrecargabinaria"
 			},
 			{
 				"picture": "https://github.com/Simonx22.png",
