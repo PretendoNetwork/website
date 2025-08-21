@@ -1,1 +1,32 @@
-{}
+{
+	"nav": {
+		"about": "Honi buruz",
+		"faq": "Ohiko galderak",
+		"docs": "Dokumentazioa",
+		"credits": "Kredituak",
+		"progress": "Aurrerapenak",
+		"blog": "Bloga",
+		"account": "Kontua",
+		"dropdown": {
+			"captions": {
+				"blog": "Azken eguneratzeari buruz",
+				"credits": "Taldea ezagutu",
+				"progress": "Proiektuaren aurrerapenak eta helburuak ikusi"
+			}
+		},
+		"accountWidget": {
+			"settings": "Ezarpenak",
+			"logout": "Saioa amaitu"
+		},
+		"donate": "Dohaintza egin"
+	},
+	"hero": {
+		"subtitle": "Jokoaren zerbitzariak",
+		"buttons": {
+			"readMore": "Gehiago irakurri"
+		}
+	},
+	"aboutUs": {
+		"title": "Guri buruz"
+	}
+}
