@@ -220,7 +220,7 @@
 	},
 	"blogPage": {
 		"title": "Blogi",
-		"description": "",
+		"description": "Uusimmat päivitykset tiivistetyinä lohkoihin. Jos haluat nähdä useammin päivityksiä, harkitse <a href=\"/account/upgrade\" target=\"_blank\">meidän tukemista</a>.",
 		"published": "Julkaissut",
 		"publishedOn": "-"
 	},
