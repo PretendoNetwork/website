@@ -20,12 +20,12 @@ useHead({
 
 // TODO: literally all the backend stuff
 const fallbackMiiData =
-	'AwAAQAv2wynGR3Ey3nx8x0TUPW1ZpQAAqV1LAGkAcAAAAAAAAAAAAAAAAAAAAH9GCABlCTFmYxgzY0QUhhAIZg0AACkAUmVRbABpAG0AZQBzAC4AcABpAG4AawAAAI7q';
+	'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 const miiDataString: string = fallbackMiiData;
 
 // keeps track of tabs and pagination
-const activeTab = ref<string>('save');
-const activeSubTab = ref<string>('info');
+const activeTab = ref<string>('faceType');
+const activeSubTab = ref<string>('faceType');
 const activeSubPage = ref<number>(0);
 // mii rendering business
 const mii = ref<any>(null);
