@@ -34,6 +34,7 @@
 	},
 	"devDependencies": {
 		"@iconify-json/fa": "^1.2.2",
+		"@iconify-json/fa6-brands": "^1.2.6",
 		"@iconify-json/ph": "^1.2.2",
 		"@pretendonetwork/eslint-config": "^0.0.8",
 		"eslint-plugin-vue": "^10.0.0",
