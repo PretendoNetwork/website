@@ -1,3 +1,5 @@
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
+
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
@@ -7,6 +9,17 @@ export default defineNuxtConfig({
 		prerender: {
 			routes: ['/blog/feed.xml']
 		}
+	},
+
+	vite: {
+		server: {
+			allowedHosts: ['pretendo.network']
+		},
+		plugins: [
+			nodePolyfills({
+				include: ['buffer', 'crypto', 'stream'] // we need these for the mii editor
+			})
+		]
 	},
 
 	modules: [
@@ -58,6 +71,9 @@ export default defineNuxtConfig({
 		strategy: 'no_prefix',
 		defaultLocale: 'en-US',
 		vueI18n: '../i18n.config.ts',
+		bundle: {
+			optimizeTranslationDirective: false
+		},
 		locales: [
 			{ code: 'ar-AR', name: 'العربية', file: 'ar_AR.json' },
 			{ code: 'ast', name: 'Asturianu', file: 'ast.json' },
