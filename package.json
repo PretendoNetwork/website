@@ -20,7 +20,7 @@
 		"@nuxt/fonts": "^0.11.1",
 		"@nuxt/icon": "^1.11.0",
 		"@nuxtjs/i18n": "^9.5.3",
-		"@pretendonetwork/mii-js": "^1.0.5",
+		"@pretendonetwork/mii-js": "^1.0.8",
 		"base64-arraybuffer": "^1.0.2",
 		"eslint": "^9.24.0",
 		"feed": "^4.2.2",
@@ -38,7 +38,6 @@
 		"@iconify-json/ph": "^1.2.2",
 		"@pretendonetwork/eslint-config": "^0.0.8",
 		"eslint-plugin-vue": "^10.0.0",
-		"sass-embedded": "^1.86.3",
-		"vite-plugin-node-polyfills": "^0.24.0"
+		"sass-embedded": "^1.86.3"
 	}
 }

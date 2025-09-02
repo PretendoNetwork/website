@@ -1,5 +1,3 @@
-import { nodePolyfills } from 'vite-plugin-node-polyfills';
-
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
@@ -14,12 +12,7 @@ export default defineNuxtConfig({
 	vite: {
 		server: {
 			allowedHosts: ['pretendo.network']
-		},
-		plugins: [
-			nodePolyfills({
-				include: ['buffer', 'crypto', 'stream'] // we need these for the mii editor
-			})
-		]
+		}
 	},
 
 	modules: [

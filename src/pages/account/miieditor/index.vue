@@ -1,11 +1,12 @@
 <script setup lang="ts">
+// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors
 import Mii from '@pretendonetwork/mii-js';
 import { decode } from 'base64-arraybuffer';
 // we don't want the navbar or the footer
 import type { Subtab, Tab } from '@/utils/miieditor';
-// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors
-import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
 // eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors either
+import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
+// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors either either
 import { miiEditorJSON } from '@/utils/miieditor';
 
 const { t } = useI18n();
