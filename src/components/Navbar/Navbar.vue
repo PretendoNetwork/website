@@ -211,7 +211,7 @@ onMounted(() => {
             aria-label="A link to our Discord server"
           >
             <Icon
-              name="ph:discord-logo-fill"
+              name="fa6-brands:discord"
               size="32"
               mode="svg"
             />
@@ -351,7 +351,7 @@ onMounted(() => {
               aria-label="A link to our Discord server"
             >
               <Icon
-                name="ph:discord-logo-fill"
+                name="fa6-brands:discord"
                 size="32"
                 mode="svg"
               />

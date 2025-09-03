@@ -23,6 +23,7 @@
   --green-shade-0: #37a985;
   --green-shade-1: #59c9a5;
 
+  --red-shade-2: #ff4580;
   --red-shade-1: #a9375b;
   --yellow-shade-1: #ffd966;
 
@@ -38,7 +39,7 @@ body,
   width: 100%;
   max-width: 100vw;
   position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
   color: var(--text-shade-3);
   justify-content: center;
@@ -231,11 +232,11 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-runnable-track {
 	background: var(--bg-shade-3);
 	height: 1rem;
-	border-radius: 1rem;
+	border-radius: .25rem;
 }
 input[type="range"]::-moz-range-track {
 	background: var(--bg-shade-3);
-	border-radius: 1rem;
+	border-radius: .25rem;
 	height: 1rem;
 }
 input[type="range"]::-webkit-slider-thumb {
@@ -243,15 +244,15 @@ input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	width: 1.5rem;
 	height: 3rem;
-	margin-top: -1rem;
+	margin-top: -1.25rem;
 	background-color: var(--accent-shade-1);
-	border-radius: 0.5rem;
+	border-radius: .5rem;
 }
 input[type="range"]::-moz-range-thumb {
 	width: 1.5rem;
 	height: 3rem;
 	border: none;
-	border-radius: 0.5rem;
+	border-radius: .5rem;
 	background-color: var(--accent-shade-1);
 }
 input[type="range"]:focus {

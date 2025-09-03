@@ -61,8 +61,8 @@ function titleSuffixHandler(path: string) {
               focusable="false"
             >
               <Icon
-                name="ph:discord-logo-fill"
-                size="32"
+                name="fa6-brands:discord"
+                size="28"
               />
             </button>
           </a>

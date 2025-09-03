@@ -408,6 +408,21 @@
 		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/month, <span>${perc}%</span> of the monthly goal.",
 		"upgradePush": "To become a subscriber and gain access to cool perks, visit the <a href=\"/account/upgrade\">upgrade page</a>."
 	},
+	"miiEditor": {
+		"nickname":"Nickname",
+		"creator": "Creator",
+		"birthday": "Birthday",
+		"clickToSet": "Click to set",
+		"favorite": "Favorite",
+		"sharing": "Sharing",
+		"copying": "Copying",
+		"save": "Save",
+		"saveCaption": "Saving your Mii will kill the previous one.",
+		"noCanvas": "Your browser does not support the canvas element.",
+		"corruptedData": "Found corrupted Mii data. Would you like to start from scratch?",
+		"miiSaved": "Your Mii has been updated! Changes may take some time to reflect across all platforms and services.",
+		"loading": "Loading Mii editor..."
+	},
 	"localizationPage": {
 		"title": "Let's localize",
 		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
