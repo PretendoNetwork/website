@@ -59,7 +59,7 @@
 			},
 			{
 				"question": "Weißt du, wann Funktion/Dienst bereit ist?",
-				"answer": "Nein. Viele der Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet), deshalb können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
+				"answer": "Nein. Die verschiedenen Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt, z. B. arbeitet ein Entwickler am Miiverse, während ein anderer an Accounts und der Freundesliste arbeitet. Daher können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
 				"question": "Wann werdet ihr neue Spiele hinzufügen?",
@@ -70,30 +70,30 @@
 				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
 			},
 			{
-				"question": "Funktioniert Pretendo auf Cemu/Emulatoren?",
+				"question": "Ist Pretendo mit Cemu oder anderen Emulatoren kompatibel?",
 				"answer": "Cemu 2.1 unterstützt offiziell Pretendo unter den Netzwerk-Account-Optionen im Emulator. Für mehr Informationen, wie du mit Cemu loslegen kannst, beachte bitte die <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>br&gt; Einige 3DS-Emulatoren oder Forks könnten uns unterstützen, aber wir haben zu dieser Zeit keine offizielle Empfehlung oder Setup-Anleitung. Die letzten Builds von Citra unterstützen Pretendo nicht."
 			},
 			{
-				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir nicht an, da es sich um ein gebührenpflichtiges Netzwerk handelt, das sich fundamental vom Nintendo Network unterscheidet."
+				"question": "Wird Pretendo die Wii oder die Switch unterstützen?",
+				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir aktuell nicht an, da es sich bei Nintendo Switch Online um ein gebührenpflichtiges Netzwerk handelt, welches sich fundamental vom Nintendo Network unterscheidet."
 			},
 			{
 				"question": "Werde ich meine Konsole modifizieren müssen, um mich verbinden zu können?",
 				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind keine Nintendo Network Nutzer gebannt. Allerdings haben wir Regeln, die bei der Nutzung des Dienstes befolgt werden müssen, und die Nichteinhaltung dieser Regeln kann zu einem Bann führen."
 			},
 			{
-				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
-				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
+				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo gebannt sein?",
+				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind diese Nutzer nicht automatisch gebannt. Wir haben jedoch unsere eigenen Regeln, die Nichtbeachtung dieser kann zu einen Bann führen."
 			},
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
-				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche 'Unban'-Methoden, wie das Ändern der Seriennummer, unwirksam machen."
+				"answer": "In privaten Matches sind Modifikationen und Cheats erlaubt. In öffentlichen Matches ist es jedoch ein bannbarer Verstoß sich einen unfairen Vorteil zu verschaffen und/oder das Online-Erlebnis anderer zu stören. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo verfügt über zusätzliche Sicherheitsmaßnahmen, welche herkömmliche Methoden zur Umgehung dieser, wie das Ändern der Seriennummer, unwirksam machen."
 			}
 		]
 	},
 	"showcase": {
 		"title": "Was wir machen",
-		"text": "Unser Projekt hat viele Komponenten, hier sind einige davon.",
+		"text": "Unser Projekt umfasst verschiedene Bestandteile, von denen einige im Folgenden aufgeführt sind.",
 		"cards": [
 			{
 				"title": "Spiel-Server",
@@ -101,7 +101,7 @@
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Eine Neuinterpretation des Miiverse, als ob es im modernen Zeitalter entwickelt wurde."
+				"caption": "Eine moderne Neuinterpretation des Miiverse, als ob es heute entwickelt worden wäre."
 			},
 			{
 				"title": "Cemu-Unterstützung",
@@ -129,7 +129,7 @@
 				"name": "quarky",
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky",
-				"caption": "Wii U Forschung und Patch-Entwicklung"
+				"caption": "Forschung und Patch-Entwicklung für die Wii U"
 			},
 			{
 				"picture": "https://github.com/supermariodabom.png",
@@ -147,19 +147,19 @@
 				"name": "Shutterbug2000",
 				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
 				"github": "https://github.com/shutterbug2000",
-				"caption": "Systemforschung und Server Entwicklung"
+				"caption": "Systemforschung und Serverentwicklung"
 			},
 			{
 				"name": "Billy",
 				"picture": "https://github.com/InternalLoss.png",
 				"github": "https://github.com/InternalLoss",
-				"caption": "Erhaltung und Server-Architektur"
+				"caption": "Erhaltung und Serverarchitektur"
 			},
 			{
 				"name": "DaniElectra",
 				"picture": "https://github.com/danielectra.png",
 				"github": "https://github.com/DaniElectra",
-				"caption": "Systemforschung und Server-Entwicklung"
+				"caption": "Systemforschung und Serverentwicklung"
 			},
 			{
 				"name": "niko",
