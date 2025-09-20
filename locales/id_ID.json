@@ -34,7 +34,7 @@
 		"title": "Tentang kami",
 		"paragraphs": [
 			"Pretendo adalah proyek sumber terbuka dengan tujuan untuk membuat ulang Nintendo Network untuk 3DS dan Wii U menggunakan rekaya terbalik ruang bersih.",
-			"Karena layanan kami bersifat gratis dan sumber terbuka, layanan tersebut akan tetap bertahan lama setelah penutupan Nintendo Network yang pasti akan terjadi."
+			"Karena layanan kami bersifat gratis dan sumber terbuka, layanan kami akan tetap ada untuk waktu yang lama di masa depan."
 		]
 	},
 	"progress": {
@@ -45,7 +45,8 @@
 		"text": "Berikut adalah beberapa pertanyaan umum yang sering diajukan kepada kami untuk mendapatkan informasi yang mudah.",
 		"QAs": [
 			{
-				"question": "Apa itu Pretendo?"
+				"question": "Apa itu Pretendo?",
+				"answer": "Pretendo adalah pengganti Nintendo Network sumber terbuka yang bertujuan untuk membangun server khusus bagi keluarga konsol Wii U dan 3DS. Tujuan kami adalah untuk mempertahankan fungsionalitas daring konsol ini, agar pemain dapat terus memainkan gim Wii U dan 3DS favorit mereka dengan kapasitas maksimal."
 			},
 			{
 				"answer": "Sayangnya, tidak. NNIDs yang sudah ada tidak bisa digunakan di Pretendo, karena hanya Nintendo memegang data user mu; sedangkan migrasi dari NNID-ke-PNID secara teori memungkinkan, itu bisa berisiko dan membutuhkan data user sensitif yang kami tidak ingin memiliki.",
@@ -55,26 +56,402 @@
 				"question": "Bagaimana saya mengunakan Pretendo?",
 				"answer": "Untuk memulai dengan Jaringan Pretendo di 3DS, Wii U atau emulator, mohon melihat <a href=\"/docs/install\">instruksi setup</a> kami!"
 			},
-			{},
 			{
-				"question": "Kapan akan kamu tambahkan lebih banyak game?"
+				"question": "Kapan anda tahu kapan fitur/layanan akan siap?",
+				"answer": "Tidak. Banyak fitur/layanan Pretendo dikembangkan secara terpisah (misalnya, Miiverse mungkin sedang dikerjakan oleh satu pengembang sementara Akun dan Teman sedang dikerjakan oleh pengembang lain) dan oleh karena itu kami tidak dapat memberikan perkiraan waktu penyelesaian secara keseluruhan untuk berapa lama ini akan memakan waktu."
 			},
 			{
-				"question": "Jika aku menggunakan emulator, apakah itu cukup untuk menggunakan Pretendo?"
+				"question": "Kapan akan kamu tambahkan lebih banyak game?",
+				"answer": "Kami mulai mengembangkan game baru setelah kami yakin bahwa perpustakaan backend kami siap untuk mendukungnya, dan ada waktu pengembangan yang tersedia untuk memeliharanya. Sebagian besar pekerjaan kami difokuskan pada stabilisasi dan penyelesaian game-game yang sudah ada - kami ingin memastikan pengalaman terbaik di game-game tersebut sebelum beralih ke judul baru. Karena pekerjaan baru terus bermunculan, kami tidak dapat memberikan perkiraan kapan hal itu akan terjadi."
 			},
-			{},
 			{
-				"question": "Akankah Pretendo mendukung Wii/Switch?"
+				"question": "Jika aku menggunakan emulator, apakah itu cukup untuk menggunakan Pretendo?",
+				"answer": "Tidak. Untuk tujuan keamanan dan moderasi, jika Anda menggunakan emulator, Anda tetap memerlukan konsol asli. Hal ini memungkinkan peningkatan keamanan dan penegakan aturan yang lebih efektif guna menyediakan pengalaman yang aman dan menyenangkan saat menggunakan layanan kami."
 			},
-			{},
 			{
-				"question": "Jika aku di-banned di Jaringan Nintendo, Apakah aku tetap ter-banned saat menggunakan Pretendo?"
+				"question": "Apakah Pretendo berfungsi di Cemu/emulator?",
+				"answer": "Cemu 2.1 secara resmi mendukung Pretendo di bawah opsi akun jaringan Anda di emulator. Untuk informasi tentang cara memulai dengan Cemu, silakan lihat <a href=\"https://pretendo.network/docs/install/cemu\">dokumentasinya</a>.<br>Beberapa emulator 3DS atau cabang mungkin mendukung Pretendo, tetapi kami tidak memiliki rekomendasi resmi atau petunjuk pengaturan pada saat ini. Versi final Citra tidak mendukung Pretendo."
+			},
+			{
+				"question": "Akankah Pretendo mendukung Wii/Switch?",
+				"answer": "Wii sudah memiliki server khusus yang disediakan oleh <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Saat ini, kami tidak berencana untuk menargetkan Switch karena platform tersebut berbayar dan sepenuhnya berbeda dengan Nintendo Network."
+			},
+			{
+				"question": "Apakah saya perlu memakai hacks untuk terhubung?",
+				"answer": "Untuk pengalaman terbaik di konsol, Anda perlu melakukan hack pada sistem Anda - khususnya Aroma untuk Wii U dan Luma3DS untuk 3DS. Namun, pada Wii U, metode SSSL tanpa hack juga tersedia dengan fungsi terbatas. Lihat <a href=\"/docs/install\">petunjuk pengaturan</a> kami untuk detailnya."
+			},
+			{
+				"question": "Jika aku di-banned di Jaringan Nintendo, Apakah aku tetap ter-banned saat menggunakan Pretendo?",
+				"answer": "Kami tidak memiliki akses ke daftar larangan Nintendo Network, jadi semua pengguna Nintendo Network tidak dilarang. Namun, kami memiliki aturan yang harus diikuti saat menggunakan layanan ini, dan tidak mematuhi aturan tersebut dapat mengakibatkan larangan."
+			},
+			{
+				"question": "Apakah saya bisa menggunakan cheat atau mod saat bermain online dengan Pretendo?",
+				"answer": "Hanya dalam pertandingan privat - mendapatkan keuntungan yang tidak adil atau mengganggu pengalaman online dengan orang-orang yang tidak memberikan persetujuan (seperti dalam pertandingan publik) merupakan pelanggaran yang dapat mengakibatkan pemblokiran akun. Kami secara rutin menerapkan pemblokiran akun dan konsol pada sistem Wii U dan 3DS. Pretendo menggunakan langkah-langkah keamanan tambahan yang membuat metode 'pembebasan pemblokiran' tradisional seperti mengubah nomor seri menjadi tidak efektif."
 			}
 		],
 		"title": "Pertanyaan yang sering diajukan"
 	},
 	"modals": {
 		"close": "Tutup",
-		"cancel": "Batal"
+		"cancel": "Batal",
+		"confirm": "Konfirmasi"
+	},
+	"showcase": {
+		"title": "Apa kami buat",
+		"text": "Proyek kami memiliki banyak komponen. Ini adalah beberapa di antaranya.",
+		"cards": [
+			{
+				"title": "Server gim",
+				"caption": "Membawa kembali permainan dan konten favorit anda menggunakan server khusus."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Pencitraan ulang Miiverse, dibuat di era modern."
+			},
+			{
+				"title": "Kompatibilitas dengan Cemu",
+				"caption": "Mainkan judul Wii U favorit anda bahkan tanpa konsol!"
+			}
+		]
+	},
+	"credits": {
+		"title": "Tim",
+		"text": "Temui tim di balik proyek ini",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Pemilik proyek dan pengembang utama",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Penelitian dan pengembangan Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Penelitian dan pengembangan patch Wii U",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Penelitian sistem dan arsitektur server",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Pengembangan web",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Penelitian sistem dan pengembangan server",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Pengarsipan dan arsitektur server",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Penelitian sistem dan pengembangan server",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Pengembangan web dan server",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps dan kerja komunitas",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Pengembangan dan pengoptimalan server",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Pengembangan dan penelitian patch 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Lebih banyak terimah kasih",
+		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini.",
+		"people": [
+			{
+				"name": "Kontributor GitHub",
+				"caption": "Lokalisasi dan kontribusi lainnya",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "pengembangan pustaka crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "pengembangan 3DS dan disektor NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "berbagi informasi Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "lebih banyak terima kasih",
+				"caption": "Penelitian tentang struktur data Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikon untuk Editor Mii dan reaksi Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Riset konsol dan server game",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Pengembangan patch Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "Pembuat patch 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Arsitektur server",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Arsitektur server",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Rotasi Splatoon dan penelitian",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Rotasi Splatoon dan penelitian",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "Kontributor GitHub",
+				"caption": "Lokalisasi dan kontribusi lainnya",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "Menikuti update",
+		"text": "Bergabunglah dengan server Discord kami untuk memperoleh informasi terkini tentang proyek ini.",
+		"widget": {
+			"text": "Dapatkan pembaruan waktu nyata tentang kemajuan kami",
+			"button": "Bergabunglah dengan server"
+		}
+	},
+	"footer": {
+		"socials": "Sosial",
+		"usefulLinks": "Halaman yang berguna",
+		"widget": {
+			"captions": [
+				"Ingin mendapat informasi terbaru?",
+				"Bergabunglah dengan server Discord kami!"
+			],
+			"button": "Bergabung sekarang!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Aku adalah Bandwidth si Rakun, dan saya suka menggigit kabel yang masuk ke server Pretendo Network. Enak sekali!",
+			"Banyak orang bertanya kami apakah kami akan bermasalah dengan Nintendo karena hal ini; saya dengan senang hati mengatakan bahwa bibi saya bekerja di Nintendo dan ia mengatakan semuanya baik-baik saja.",
+			"Webkit v537 adalah versi terbaik Webkit untuk Wii U. Tidak, kami tidak akan menambahkan Chrome ke Wii U.",
+			"Saya tidak sabar menunggu jam mencapai 03:14:08 UTC pada tanggal 19 Januari 2038!",
+			"Wii U sebenarnya adalah sistem yang diremehkan: iklannya sangat buruk, tetapi konsolnya hebat. Huh, tunggu sebentar, saya tidak yakin mengapa GamePad saya tidak terhubung ke Wii saya.",
+			"Tema utama Super Mario World 2 - Yoshi's Island benar-benar hebat dan tidak mungkin Anda akan meyakinkan saya sebaliknya.",
+			"Rilisan Nintendo Switch favorit saya adalah Nintendo Switch Online + Paket Ekspansi, Nintendo Switch Online + Paket Rumble, Nintendo Switch Online + Paket Permainan Offline, Nintendo Switch Online + Paket Rilis Ulang Sekali Lagi, dan Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Anda Sangat Menyukai Judul Konsol Virtual Nintendo Wii U, Jadi Kami Hadirkan Kembali\" Pack. Anda benar-benar melihat Nintendo peduli.",
+			"Seperti \"Kau tahu Ash, hatinya diberkati, dia UwU sepanjang hari\" adalah cara orang Amerika Serikat selatan yang baik untuk mengatakan \"Ash uwus sepanjang waktu dan itu benar-benar aneh dan bodoh dan aku berharap mereka tidak melakukannya\"",
+			"Video pertamaku di saluranku!! Aku sudah lama ingin membuat video, tetapi laptopku berjalan sangat buruk dan aku tidak bisa menjalankan fraps, skype, dan minecraft secara bersamaan. Tapi sekarang sudah selesai! Dengan bantuan dari guru IT-ku, laptopku berjalan jauh lebih baik dan aku bisa merekam sekarang! Aku harap kalian semua menikmatinya dan jika kalian menikmatinya, silakan like dan subscribe!!!",
+			"Kelihatannya Bagus Bagi Saya"
+		]
+	},
+	"progressPage": {
+		"title": "Kemajuan kita",
+		"description": "Periksa kemajuan dan sasaran proyek! (Diperbarui setiap jam atau lebih, tidak mencerminkan SEMUA sasaran atau kemajuan proyek)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Pembaruan terbaru dalam ringkasan singkat. Jika ingin melihat pembaruan yang lebih sering, pertimbangkan untuk <a href=\"/account/upgrade\" target=\"_blank\">mendukung kami</a>.",
+		"published": "Diterbitkan oleh",
+		"publishedOn": "pada"
+	},
+	"account": {
+		"account": "Akun",
+		"loginForm": {
+			"login": "Masuk",
+			"register": "Daftar",
+			"detailsPrompt": "Masukkan detail akun di bawah ini",
+			"username": "Nama Pengguna",
+			"password": "Kata Sandi",
+			"confirmPassword": "Konfirmasi Kata Sandi",
+			"email": "Surel",
+			"miiName": "Nama Mii",
+			"forgotPassword": "Lupa kata sandi?",
+			"registerPrompt": "Tidak punya akun?",
+			"loginPrompt": "Sudah punya akun?"
+		},
+		"forgotPassword": {
+			"header": "Lupa Kata Sandi",
+			"sub": "Masukkan alamat surel/PNID Anda di bawah in",
+			"input": "Surel atau PNID",
+			"submit": "Kirim"
+		},
+		"resetPassword": {
+			"header": "Atur Ulang Kata Sandi",
+			"sub": "Masukkan kata sandi baru di bawah ini",
+			"password": "Kata Sandi",
+			"confirmPassword": "Konfirmasi Kata Sandi",
+			"submit": "Kirim"
+		},
+		"settings": {
+			"upgrade": "Upgrade akun",
+			"unavailable": "Tidak tersedia",
+			"settingCards": {
+				"userSettings": "Pengaturan pengguna",
+				"profile": "Profil",
+				"nickname": "Nama panggilan",
+				"birthDate": "Tanggal lahir",
+				"gender": "Jenis kelamin",
+				"country": "Negara/wilayah",
+				"timezone": "Zona waktu",
+				"serverEnv": "Lingkungan server",
+				"production": "Produksi",
+				"beta": "Beta",
+				"upgradePrompt": "Server beta hanya tersedia untuk penguji beta.<br>Untuk menjadi penguji beta, tingkatkan ke tingkat akun yang lebih tinggi.",
+				"hasAccessPrompt": "Tingkat anda saat ini memberikan akses ke server beta. Keren!",
+				"signInSecurity": "Masuk dan keamanan",
+				"email": "Surel",
+				"password": "Kata sandi",
+				"passwordResetNotice": "Setelah mengubah kata sandi, anda akan keluar dari semua perangkat.",
+				"signInHistory": "Sejerah masuk",
+				"fullSignInHistory": "Lihat sejerah masuk lengkap",
+				"otherSettings": "Pengaturan lain",
+				"discord": "Discord",
+				"connectedToDiscord": "Terhubung ke Discord sebagai",
+				"removeDiscord": "Pisahkan akun Discord",
+				"noDiscordLinked": "Tidak ada akun Discord yang terhubung.",
+				"linkDiscord": "Hubungkan akun Discord",
+				"newsletter": "Surat Kabar",
+				"newsletterPrompt": "Terima pembaruan proyek melalui email (Anda dapat berhenti berlangganan kapan saja)",
+				"passwordPrompt": "Masukkan kata sandi PNID untuk mengunduh berkas Cemu.",
+				"no_signins_notice": "Sejerah masuk saat ini tidak dilacak. Silakan cek kembali nanti!",
+				"no_newsletter_notice": "Surat kabar saat ini tidak dilacak. Silakan cek kembali nanti!",
+				"no_edit_from_dashboard": "Pengaturan PNID saat ini tidak dapat diubah melalui situs web. Silakan perbarui pengaturan pengguna dari konsol game yang terhubung."
+			}
+		},
+		"accountLevel": [
+			"Standar",
+			"Penguji",
+			"Moderator",
+			"Pengembang"
+		],
+		"banned": "Dilarang"
+	},
+	"upgrade": {
+		"title": "Upgrade Akun",
+		"description": "Mencapai target bulanan akan menjadikan Pretendo sebagai pekerjaan penuh waktu, sehingga dapat menyediakan pembaruan berkualitas lebih baik dengan kecepatan yang lebih tinggi.",
+		"month": "bulan",
+		"tierSelectPrompt": "Pilih tingkatan",
+		"unsub": "Berhenti Berlangganan",
+		"unsubPrompt": "Apakah Anda yakin ingin berhenti berlangganan dari <span>tiername</span>? Anda akan <span>segera</span> kehilangan akses ke manfaat yang terkait dengan tingkatan tersebut.",
+		"unsubConfirm": "Berhenti Berlangganan",
+		"changeTier": "Ubah tingkatan",
+		"changeTierPrompt": "Apakah yakin ingin berhenti berlangganan dari <span class=\"‘oldtier’\">oldtiername</span> dan berlangganan ke <span class=\"‘newtier’\">newtiername</span>?",
+		"changeTierConfirm": "Ubah tingkatan",
+		"back": "Kembali"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> dari <span>$${goald}</span> per bulan, <span>${perc}%</span> dari target bulanan.",
+		"upgradePush": "Untuk menjadi pelanggan dan mendapatkan akses ke berbagai keuntungan menarik, kunjungi <a href=\"/account/upgrade\">halaman upgrade</a>."
+	},
+	"localizationPage": {
+		"title": "Mari kita lokalkan",
+		"description": "Salin tautan ke file JSON locale yang dapat diakses publik untuk mengujinya di situs web.",
+		"instructions": "Lihat petunjuk lokalisasi",
+		"fileInput": "Berkas untuk diuji",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Berkas uji"
+	},
+	"docs": {
+		"missingInLocale": "Halaman ini tidak tersedia dalam bahasa anda. Silakan periksa versi bahasa Inggris di bawah ini.",
+		"quickLinks": {
+			"header": "Tautan cepat",
+			"links": [
+				{
+					"header": "Instal Pretendo",
+					"caption": "Lihat petunjuk pengaturan"
+				},
+				{
+					"header": "Ada kesalahan?",
+					"caption": "Cari di sini"
+				}
+			]
+		},
+		"search": {
+			"title": "Mendapatkan kode kesalahan?",
+			"caption": "Ketikkan di kotak di bawah ini untuk mendapatkan informasi tentang masalah anda!",
+			"label": "Kode kesalahan",
+			"no_match": "Tidak ditemukan hasil yang sesuai"
+		},
+		"sidebar": {
+			"getting_started": "Memulai",
+			"welcome": "Selamat datang",
+			"install_extended": "Instal Pretendo",
+			"install": "Instal",
+			"search": "Cari",
+			"juxt_err": "Kode kesalahan - Juxt"
+		}
+	},
+	"notfound": {
+		"description": "Maaf! Kami tidak dapat menemukan halaman ini."
 	}
 }
