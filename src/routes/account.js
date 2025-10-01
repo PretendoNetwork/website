@@ -112,7 +112,13 @@ router.get('/register', async (request, response) => {
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	const { email, username, mii_name, birthday, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+
+	// * IP must be forwarded to the account server so we can check for age related issues based on region.
+	// * This is NEVER recorded in our records, ever. See https://github.com/PretendoNetwork/account/pull/194
+	// * for more details. Once the IP is used to query for location, both the IP and location are disregarded
+	// * and no data is stored for blocked users
+	const ip = request.ip; // TODO - Enable `CF-IPCountry` in Cloudflare and only use this as a fallback
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -120,9 +126,11 @@ router.post('/register', async (request, response) => {
 
 	try {
 		const tokens = await util.register({
+			ip,
 			email,
 			username,
 			mii_name,
+			birthday,
 			password,
 			password_confirm,
 			hCaptchaResponse

@@ -19,6 +19,8 @@ const { http: { port } } = config;
 const app = express();
 // const stripe = new Stripe(config.stripe.secret_key);
 
+app.set('trust proxy', true); // TODO - Make this configurable
+
 logger.info('Setting up Middleware');
 app.use(morgan('dev'));
 // app.use(express.json());

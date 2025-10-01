@@ -24,6 +24,11 @@
 				<input name="mii_name" id="mii_name" value="{{ mii_name }}" maxlength=10 required>
 			</div>
 			<div>
+				<label for="birthday">Birthday</label> {{! TODO - Add this to weblate, hard-coding for now to just push it out }}
+				<input type="date" id="birthday" name="birthday">
+			</div>
+			<br>
+			<div>
 				<label for="password">{{ locale.account.loginForm.password }}</label>
 				<input name="password" id="password" type="password" autocomplete="new-password" minlength="6" maxlength="16" required>
 			</div>
