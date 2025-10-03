@@ -4,6 +4,8 @@ const DiscordOauth2 = require('discord-oauth2');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
+const { createChannel, createClient, Metadata } = require('nice-grpc');
+const { ApiServiceDefinition } = require('@pretendonetwork/grpc/api/v2/api_service');
 const requireLoginMiddleware = require('../middleware/require-login');
 const database = require('../database');
 const cache = require('../cache');
@@ -18,6 +20,9 @@ const { Router } = express;
 const stripe = new Stripe(config.stripe.secret_key);
 const router = new Router();
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
+
+const gRPCApiChannel = createChannel(`${config.grpc.account.host}:${config.grpc.account.port}`);
+const gRPCApiClient = createClient(ApiServiceDefinition, gRPCApiChannel);
 
 // Create OAuth client
 const discordOAuth = new DiscordOauth2({
@@ -571,6 +576,29 @@ router.post('/sso/discourse', async (request, response, next) => {
 		console.log(error);
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account/login');
+	}
+});
+
+router.post('/delete', requireLoginMiddleware, async (request, response) => {
+	const { pnid } = request;
+
+	try {
+		await gRPCApiClient.deleteAccount({
+			pid: pnid.pid
+		}, {
+			metadata: Metadata({
+				'X-API-Key': config.grpc.api.api_key
+			})
+		});
+
+		response.json({
+			success: true
+		});
+	} catch (error) {
+		response.json({
+			success: false,
+			error
+		});
 	}
 });
 

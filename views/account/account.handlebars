@@ -28,6 +28,9 @@
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
 					<p class="caption">{{ locale.account.settings.upgrade }}</p>
 				</a>
+				<a class="button secondary" id="account-delete">
+					<p class="caption">Delete Account</p> <!-- TODO - Add this to weblate, hard-coding for now to push through -->
+				</a>
 			</div>
 		</div>
 
@@ -194,6 +197,18 @@
 		<p class="modal-caption">{{ locale.account.settings.settingCards.no_edit_from_dashboard }}</p>
 		<div class="modal-button-wrapper">
 			<button class="button primary confirm" id="editSettingsCloseButton">{{ locale.modals.close }}</button>
+		</div>
+	</div>
+</div>
+
+<!-- TODO - Add this to weblate, hard-coding for now to push through -->
+<div class="modal-wrapper hidden" id="confirm-delete">
+	<div class="modal">
+		<h1 class="title dot">Delete PNID</h1>
+		<p class="modal-caption">Are you sure you want to delete your PNID? Your data across services such as the forums, Miiverse, etc. will all be removed. Your Stripe data and subscription will also be automatically deleted.<br>This action cannot be undone</p>
+		<div class="modal-button-wrapper">
+			<button class="button primary confirm" id="confirmDeleteConfirmButton">Yes, delete</button>
+			<button class="button primary" id="confirmDeleteCloseButton">{{ locale.modals.close }}</button>
 		</div>
 	</div>
 </div>
