@@ -595,6 +595,7 @@ router.post('/delete', requireLoginMiddleware, async (request, response) => {
 			success: true
 		});
 	} catch (error) {
+		console.error('failed to delete PNID', error);
 		response.json({
 			success: false,
 			error
