@@ -7,7 +7,7 @@
 			},
 			{
 				"question": "Toimiiko olemassaoleva NNID:ni Pretendossa?",
-				"answer": "Ei, valitettavasti. Olemassa olevat NNID:t eivät tule toimimaan Pretendossa, sillä vain Nintendolla on tiedossaan käyttäjätietosi. Vaikka NNID-PNID tietojensiirto on teoriassa mahdollista, se on riskialtista ja vaatii arkaluonteisia käyttäjätietoja, joita emme halua haltuumme."
+				"answer": "Valitettavasti ei. Olemassa olevat NNID:t eivät tule toimimaan Pretendossa, sillä vain Nintendolla on tiedossaan käyttäjätietosi. Vaikka NNID-PNID tietojensiirto on teoriassa mahdollista, se on riskialtista ja vaatii arkaluonteisia käyttäjätietoja, joita emme halua haltuumme."
 			},
 			{
 				"question": "Kuinka käytän Pretendoa?",
@@ -58,7 +58,7 @@
 		},
 		"donate": "Lahjoita",
 		"blog": "Blogi",
-		"credits": "Krediitit"
+		"credits": "Tekijät"
 	},
 	"hero": {
 		"subtitle": "Pelipalvelimet",
@@ -90,16 +90,21 @@
 				"caption": "Miiversen uudelleenluonti, kuten se olisi syntynyt tähän päivään."
 			},
 			{
-				"title": "Cemu -tuki",
+				"title": "Cemu-tuki",
 				"caption": "Pelaa Wii U suosikkipelejäsi jopa ilman konsolia!"
 			}
 		],
-		"title": "Mitä kehitämme",
+		"title": "Mitä teemme",
 		"text": "Projektissamme on useita komponentteja. Tässä on osa niistä."
 	},
 	"credits": {
 		"title": "Tiimi",
-		"text": "Tutustu tiimiin projektin takana"
+		"text": "Tutustu tiimiin projektin takana",
+		"people": [
+			{
+				"caption": "Projektin omistaja ja johtava kehittäjä"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
@@ -115,7 +120,7 @@
 	},
 	"footer": {
 		"socials": "Sosiaaliset",
-		"usefulLinks": "Tärkeitä linkkejä",
+		"usefulLinks": "Hyödyllisiä linkkejä",
 		"widget": {
 			"captions": [
 				"Haluatko pysyä ajan tasalla?",
@@ -160,14 +165,12 @@
 			"registerPrompt": "Ei vielä tiliä?"
 		},
 		"settings": {
-			"downloadFiles": "Lataa tilin tiedostot",
-			"downloadFilesDescription": "(ei toimi Nintendo Network:issa)",
 			"upgrade": "Nosta tililuokkaa",
-			"unavailable": "Ei saatavissa",
+			"unavailable": "Ei saatavilla",
 			"settingCards": {
 				"userSettings": "Käyttäjän asetukset",
 				"profile": "Profiili",
-				"nickname": "Lempinimi",
+				"nickname": "Nimimerkki",
 				"birthDate": "Syntymäpäivä",
 				"gender": "Sukupuoli",
 				"timezone": "Aikavyöhyke",
@@ -177,20 +180,20 @@
 				"signInHistory": "Kirjautumishistoria",
 				"fullSignInHistory": "Näytä koko kirjautumishistoria",
 				"connectedToDiscord": "Littetty Discord -tiliin",
-				"removeDiscord": "Poista Discord -tili",
-				"noDiscordLinked": "Ei liitettyä Discord -tiliä.",
+				"removeDiscord": "Poista Discord-tili",
+				"noDiscordLinked": "Ei liitettyä Discord-tiliä.",
 				"newsletter": "Uutiskirje",
 				"passwordPrompt": "Anna PNID salasanasi ladataksesi Cemu -tiedostot",
 				"password": "Salasana",
 				"country": "Maa/alue",
 				"upgradePrompt": "Betapalvelimet ovat van betatestaajille.<br>Jos haluat mukaan betatestiin, nosta tililuokkaa.",
 				"hasAccessPrompt": "Nykyinen tililuokituksesi antaa sinulle oikeudet betapalvelimille. Mahtavaa!",
-				"signInSecurity": "Kirjautuminen ja tietoturva",
+				"signInSecurity": "Kirjautuminen ja turvallisuus",
 				"discord": "Discord",
 				"otherSettings": "Muut asetukset",
 				"email": "Sähköposti",
-				"passwordResetNotice": "Vaihdettuasi salasanan, sinut kirjataan ulos kaikilta laitteilta.",
-				"linkDiscord": "Liitä Discord -tili",
+				"passwordResetNotice": "Salasanan vaihtamisen jälkeen sinut kirjataan ulos kaikilta laitteilta.",
+				"linkDiscord": "Liitä Discord-tili",
 				"newsletterPrompt": "Saa tietoja projektin etenemisestä sähköpostiisi (voit perua kirjeen milloin vain)",
 				"no_newsletter_notice": "Uutiskirje ei ole tällä hetkellä saatavilla. Palaa asiaan myöhemmin",
 				"no_signins_notice": "Kirjautumishistoriaa ei toistaiseksi seurata. Palaa asiaan myöhemmin!",

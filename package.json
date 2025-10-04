@@ -6,9 +6,10 @@
 	"scripts": {
 		"start": "node src/server.js",
 		"build": "npm run browserify",
-		"browserify": "npm run browserify-miieditor && npm run browserify-forgot-password && npm run browserify-reset-password",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"browserify": "npm run browserify-miieditor && npm run browserify-reset-password",
 		"browserify-miieditor": "browserify ./public/assets/js/miieditor.js -o ./public/assets/js/miieditor.bundled.js",
-		"browserify-forgot-password": "browserify ./public/assets/js/forgot-password.js -o ./public/assets/js/forgot-password.bundled.js",
 		"browserify-reset-password": "browserify ./public/assets/js/reset-password.js -o ./public/assets/js/reset-password.bundled.js"
 	},
 	"repository": {
@@ -24,6 +25,9 @@
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.515.0",
 		"@discordjs/rest": "^0.5.0",
+		"@node-saml/node-saml": "^5.0.0",
+		"@pretendonetwork/error-codes": "^1.0.3",
+		"@pretendonetwork/grpc": "^2.2.3",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",
@@ -41,10 +45,13 @@
 		"mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
 		"mongoose": "^6.4.0",
 		"morgan": "^1.10.0",
+		"nice-grpc": "^2.1.13",
 		"nodemailer": "^6.7.5",
 		"stripe": "^9.9.0"
 	},
 	"devDependencies": {
-		"eslint": "^7.32.0"
+		"@pretendonetwork/eslint-config": "^0.0.6",
+		"eslint": "^9.18.0",
+		"globals": "^15.14.0"
 	}
 }

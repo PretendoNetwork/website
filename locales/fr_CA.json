@@ -1,0 +1,90 @@
+{
+	"nav": {
+		"faq": "FAQ",
+		"about": "À Propos",
+		"account": "Compte",
+		"blog": "Blogue",
+		"accountWidget": {
+			"settings": "Paramètres",
+			"logout": "Déconnexion"
+		},
+		"docs": "Documentation",
+		"donate": "Faire un don",
+		"progress": "Progression",
+		"credits": "L'équipe",
+		"dropdown": {
+			"captions": {
+				"about": "À propos du projet",
+				"credits": "Rencontrez l'équipe",
+				"blog": "Un résumé de nos mises à jour récentes",
+				"progress": "Vérifiez la progression et les objectifs du projet"
+			}
+		}
+	},
+	"hero": {
+		"subtitle": "Serveurs de Jeux",
+		"title": "Recréé",
+		"buttons": {
+			"readMore": "En savoir plus"
+		}
+	},
+	"aboutUs": {
+		"title": "À propos de nous",
+		"paragraphs": [
+			"Pretendo est un projet à code source ouvert qui vise à recréer le Nintendo Network pour la 3DS et la Wii U en utilisant la rétro-ingénierie.",
+			"Puisque nos services sont gratuits et à code source libre, ils vont exister longtemps."
+		]
+	},
+	"blogPage": {
+		"publishedOn": "le"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "C'est quoi, Pretendo?",
+				"answer": "Pretendo est une alternative au Nintendo Network à code source libre qui vise à créer des serveurs personnalisés pour la famille de consoles Wii U et 3DS. Notre but est de préserver les fonctionnalités internet de ces consoles, afin de permettre aux joueurs de continuer de jouer à leurs jeux Wii U et 3DS préférés à leur plein potentiel."
+			},
+			{
+				"question": "Est-ce que mon identifiant Nintendo Network fonctionnera avec Pretendo?",
+				"answer": "Malheureusement, non. Les identifiants du Nintendo Network ne fonctionneront pas avec Pretendo, puisque seul Nintendo détient vos données d'utilisateur. Bien qu'une extraction des données soit techniquement possible, ça serait risqué et nécessiterait des données personelles d'utilisateurs que nous ne voulons pas détenir."
+			},
+			{
+				"answer": "Afin de commencer l'installation de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href='/docs/install'>guide d'installation</a>!"
+			},
+			{
+				"question": "Savez-vous quand tel service ou telle fonctionnalité sera prêt(e)?",
+				"answer": "Non. La majorité des fonctionnalités et des services de Pretendo sont développés indépendament (par example, un développeur pourrait être en charge de Miiverse pendant qu'un autre est en charge des Comptes et Amis). Ainsi, nous ne pouvons pas donner une estimation du temps requis pour cela."
+			},
+			{
+				"question": "Quand allez-vous ajouter d'autres jeux?"
+			},
+			{
+				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo?"
+			},
+			{
+				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autres émulateurs?",
+				"answer": "La version 2.1 de Cemu supporte Pretendo sous les paramètres de connexion internet de l'émulateur. Afin d'avoir plus d'information sur l'utilisation de Pretendo avec Cemu, allez-voir la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Certains émulateurs 3DS pourraient prendre en charge Pretendo, mais nous n'avons présentement pas de recommendation officielle ou de guides d'installation. La version la plus récente de Citra ne prend pas en charge Pretendo."
+			},
+			{
+				"answer": "La Wii possède déja des serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Nous ne voulons présentement pas cibler la Switch, car ses services sont payants et complètements différents du Nintendo Network."
+			},
+			{
+				"answer": "Pour la meilleure expérience possible sur console, vous aurez besoin de pirater votre système - par exemple, avec Aroma pour la Wii U et Luma3DS pour la 3DS. Cependant, sur Wii U, la méthode sans piratage SSSL est également disponible, mais avec des fonctionnalités limitées. Regardez le <a href=\"/docs/install\">guide d'installation</a> pour plus de détails.",
+				"question": "Devrais-je pirater ma console pour me connecter?"
+			},
+			{
+				"question": "Si je suis banni du Nintendo Network, vais-je également être banni sur Pretendo?",
+				"answer": "Nous n'avons pas accès aux bannissements du Nintendo Network, donc aucun utilisateur Nintendo Network sera banni dans Pretendo. Cependant, nous avons des règles à respecter lors de l'utilisation du service. L'infraction d'une règle pourrait mener à un bannissement sur Pretendo."
+			},
+			{
+				"question": "Puis-je tricher ou utiliser des mods (modifications de jeu) en ligne sur Pretendo?"
+			}
+		],
+		"title": "Foire Aux Questions",
+		"text": "Voici quelques questions fréquemment posées."
+	},
+	"progress": {
+		"githubRepo": "Répertoire Github",
+		"title": "Progression"
+	}
+}

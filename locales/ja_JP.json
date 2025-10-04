@@ -1,257 +1,429 @@
 {
 	"nav": {
-		"about": "紹介",
-		"faq": "Q&amp;A",
-		"docs": "ドキュメント",
+		"about": "Pretendoについて",
+		"faq": "よくある質問",
+		"docs": "Wiki",
 		"credits": "クレジット",
-		"progress": "進行状況",
+		"progress": "進捗",
 		"blog": "ブログ",
 		"account": "アカウント",
+		"donate": "寄付",
 		"accountWidget": {
 			"settings": "設定",
 			"logout": "ログアウト"
 		},
 		"dropdown": {
 			"captions": {
-				"credits": "チームご紹介",
-				"about": "プロジェクトについて",
-				"blog": "最新のアップデート",
-				"progress": "プロジェクトの進行状況と目的をチェックして",
+				"credits": "チームをご紹介します",
+				"about": "このプロジェクトについて",
+				"blog": "最新のアップデート（簡易版）",
+				"progress": "プロジェクトの進行状況と目的を確認",
 				"faq": "よくある質問"
 			}
-		},
-		"donate": "寄付"
+		}
 	},
 	"hero": {
-		"subtitle": "ネットワークサービス",
-		"title": "復活した",
-		"text": "Pretendo（プリーテンドー）は、任天堂の3DSとWii Uネットワークサービスは終了するなら、みんなの楽しみが続けてることになるの無料とオープンソース復活です",
+		"subtitle": "オンラインを",
+		"title": "取り戻す",
+		"text": "Pretendo（プリテンドー）は、ニンテンドー3DSとWii Uの無料かつオープンソースの代替サーバーです。公式サーバーが稼働停止したあとも、オンライン接続を実現します。",
 		"buttons": {
-			"readMore": "もっと読む"
+			"readMore": "続きを読む"
 		}
 	},
 	"aboutUs": {
-		"title": "私たちについて",
+		"title": "Pretendo について",
 		"paragraphs": [
-			"Pretendo（プリーテンドー）は、3DSとWii Uのニンテンドーネットワーク「クリーンルーム・リバースエンジニアリング」で復活ねらうことのオープンソースプロジェクトである。",
-			"私達のサービスは無料であり、コードが公開されているので、ニンテンドーネットワークが終了してからも末永く運営されることが出来ます。"
+			"Pretendoは、公式のものに代わって3DSとWii Uのニンテンドーネットワークをつくることを目的としたオープンソースのプロジェクトです。",
+			"Pretendo のサービスは無料、そしてオープンソースであり、ニンテンドーネットワークが終了してからも継続して利用することができます。"
 		]
 	},
 	"progress": {
-		"title": "進行状況",
-		"githubRepo": "GitHub リポジトリ"
+		"title": "進捗",
+		"githubRepo": "GitHubリポジトリ"
 	},
 	"faq": {
 		"title": "よくある質問",
-		"text": "よくある質問を紹介します。",
+		"text": "よくある質問への回答一覧です。",
 		"QAs": [
 			{
-				"question": "Pretendo とはなんですか？",
-				"answer": "Pretendo とは、ニンテンドー 3DS と Wii U のニンテンドー ネットワークのカスタム代替サーバーを構築するオープンソース プロジェクトです。Pretendo の目的は、オンライン機能を維持させて、お気に入りのゲーム タイトルを最大限にプレイし続けられるようにすることです。"
+				"question": "Pretendoって何？",
+				"answer": "Pretendoは Wii Uと3DSシリーズのカスタムサーバーを作ろうとしている、オープンソースのニンテンドーネットワーク代替プロジェクトです。私たちの目標はこれらのオンライン機能を維持させ、プレイヤーたちがお気に入りのゲームを全機能をもって長い間できるようにすることです。"
 			},
 			{
-				"question": "ニンテンドー ネットワーク ID（NNID）は Pretendo でも利用できますか？",
-				"answer": "いいえ、残念ですが利用できません。NNID のデータはニンテンドー ネットワークに保存されているため、Pretendo で利用することはできません。NNID をプリテンドー ネットワーク ID（PNID）に変換することもできますが、リスクが高く、機密性の高いユーザー データが必要になります。"
+				"question": "ニンテンドーネットワーク ID（NNID）は Pretendoでもつかえる？",
+				"answer": "残念ながら不可能です。NNIDのデータは任天堂だけがアクセスできるため、Pretendoからは利用できません。理論上NNIDをプリテンドーネットワークID（PNID）への変換は可能ですが、リスクが高く機密情報を必要とします。"
 			},
 			{
-				"question": "Pretendo を使用するにはどうしたらよいですか？",
-				"answer": "Pretendo はまだ公開できるほど開発が進んでいません。準備が整ったら、Homebrew パッチを実行しただけで Pretendo を使用できるようになります。"
+				"question": "Pretendoの使い方は？",
+				"answer": "3DS、Wii U、エミュレーターでPretendo Networkを使うには、<a href=\"/docs/install\">セットアップの手順</a>をご覧ください!"
 			},
 			{
-				"question": "機能やサービスはいつ完成しますか？",
-				"answer": "詳しくはわかりません。Pretendo の機能は各自で開発されています。例えば、とあるユーザーが Miiverse 機能を開発しているとき、アカウント / フレンド機能は別のユーザーが開発している状態になります。そのため、全体的な完成の予想時間はわかりません。"
+				"question": "機能やサービスが完成するのはいつ？",
+				"answer": "正確にはわかりません。Pretendoの機能は各々で開発が進んでいます。例として、ある人がMiiverseを開発しているとき、並行して別の開発者がアカウント/フレンド機能を開発しています。そのため、全体の完成予定時間の予測は困難です。"
 			},
 			{
-				"question": "Pretendo は Cemu などのエミュレーターで機能しますか？",
-				"answer": "Pretendo はニンテンドー ネットワークに接続できるすべてのクライアントに対応します。現在、Pretendo に対応しているエミュレーターは Cemu だけです。Cemu 2.0 はエミュレーターのネットワーク アカウント設定で Pretendo を正式に対応しています。詳しくは、<a href=\"https://pretendo.network/docs/install/cemu\">Cemu を使用して Pretendo に接続する方法</a>をご確認ください。<br>Citra は完全なオンライン プレイに対応していないため、Pretendo では機能しません。スマートフォン向けの 3DS エミュレーターの Mikage は、対応するかどうかは決定していません。"
+				"question": "さらに多くのゲームのサポートはいつ追加されますか？",
+				"answer": "私たちはバックエンドが新しいゲームをサポートするのに十分で、なおかつ新しいゲームを管理するのに十分な時間のある開発者がいると感じたときのみ新しいゲームのサポートに動きます。ほとんどの労力は既存のゲームのサポートを安定させ、完成させることに行きます。私たちはできるだけ既存のゲームのサポートを良くしてから新しいゲームのサポートを始めます。仕事は常に増えていくので、それがいつになるのかはわかりません。"
 			},
 			{
-				"question": "ニンテンドー ネットワークで BAN されたプレイヤーは、Pretendo を利用できませんか？",
-				"answer": "Pretendo はニンテンドー ネットワークの BAN 情報を取得できないため、最初はすべてのユーザーは BAN されていません。このサービスには利用規約を導入するため、違反した場合は BAN されることがあります。"
+				"question": "Pretendoはエミュレーターでも使えるの？",
+				"answer": "いいえ。セキュリティーと管理のために、エミュレーターがあっても、ゲーム機本体が必要です。これによって、セキュリティーが強化され、安全で楽しめる体験のためのルールの適用などが効果的になります。"
 			},
 			{
-				"question": "Pretendo は Wii や Nintendo Switch に対応しますか？",
-				"answer": "Wiiは<a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>によってカスタムが提供されています。Switchに関しては、有料であり、ニンテンドーネットワークと完全に異なるので、対応しかねません。"
+				"question": "Cemuやその他のエミュレーターでも接続できる？",
+				"answer": "Cemu 2.1は、エミュレーターでのネットワークアカウントのオプションでPretendoを公式にサポートしています。Cemuでの使用を開始する方法については、<a href=\"https://pretendo.network/docs/install/cemu\">ドキュメント</a>をご覧ください。<br>一部の3DSエミュレーターまたは、フォークはサポートをしている可能性がありますが、現時点では公式の推奨事項やセットアップ手順はありません。なお、Citraの最終ビルドはPretendoをサポートしていません。"
 			},
 			{
-				"question": "接続するには改造が必要ですか?",
-				"answer": "はい、接続するにはあなたのゲーム機器を改造しなくてはいけません。ですが、Wii UではHomebrew Launcherへのアクセスだけで接続できます。(Haxchi、Coldboot Haxchi、Webブラウザエクスプロイトなど) 3DSの接続方法に関しては後で公開します。"
+				"question": "WiiやNintendo Switchでもつかえる？",
+				"answer": "Wiiには<a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>という代替サーバーがあります。Switchのネットワーク機能は有料であること、またニンテンドーネットワークとは全く異なることから、対応することはありません。"
+			},
+			{
+				"question": "つなげるには改造が必要？",
+				"answer": "最適な環境でプレイするなら、ゲーム機を改造する必要があります。Wii UではAromaを、3DSではLuma3DSをです。しかしWii Uでは、改造しなくても機能が限られたSSSLで接続できます。詳しくは、<a href=\"/docs/install\">セットアップガイド</a>をご覧ください。"
+			},
+			{
+				"question": "ニンテンドーネットワークでBANされていたら、PretendoでもBANされるの？",
+				"answer": "PretendoはニンテンドーネットワークのBAN情報にアクセスすることができないため、PretendoへBANが引き継がれることはありません。ただし、Pretendoの定めたルールに違反するとBANされることがあります。"
+			},
+			{
+				"question": "Pretendoに接続中に、チートやモッドを使えますか？",
+				"answer": "フレンドマッチ中なら許可されます。他のプレーヤーの同意なし（世界中の人とプレイ中など）に、不正な利益を得たりオンライン体験を妨害したりする行為は、禁止されており、BAN対象となる場合があります。3DSでもWii Uでもアカウントやゲーム機に対するBAN処分をよくします。Pretendoはシリアル番号の変更など、従来の「BAN」を無効にする改造に対する追加のセキュリティ対策を使用しています。"
 			}
 		]
 	},
 	"showcase": {
-		"title": "私たちが作るもの",
-		"text": "私たちのプロジェクトは色んな部分に分かれています。その一部を紹介します。",
+		"title": "Pretendoがつくるもの",
+		"text": "Pretendoプロジェクトは多くの部品に分かれています。以下はその一部です。",
 		"cards": [
 			{
 				"title": "ゲームサーバー",
-				"caption": "カスタムサーバーを使ってユーザーたちの好きなゲームとコンテンツを蘇らせます。"
+				"caption": "カスタムサーバーによって、あのゲームやあのコンテンツを取り戻します。"
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "現代に作られたような、Miiverseの再製作。"
+				"caption": "Miiverseが、現代に生まれ変わります。"
 			},
 			{
 				"title": "Cemuサポート",
-				"caption": "あなたの好きなWii Uタイトルを、Wii Uなしでプレイできます!"
+				"caption": "本体なしでも、あのWii Uゲームをプレイしよう！"
 			}
 		]
 	},
 	"credits": {
 		"title": "開発チーム",
-		"text": "プロジェクトの裏のチームをご覧ください"
+		"text": "プロジェクトを支えるチームの紹介",
+		"people": [
+			{
+				"caption": "プロジェクトオーナーおよび主な開発者",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{
+				"caption": "Miiverseの研究と開発",
+				"name": "Jemma (CaramelKat)",
+				"github": "https://github.com/CaramelKat",
+				"picture": "https://github.com/caramelkat.png"
+			},
+			{
+				"caption": "Wii Uの研究、パッチの開発",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"name": "quarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "システムの研究とサーバーアーキテクチャ",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"caption": "Webの開発",
+				"github": "https://github.com/gitlimes",
+				"name": "pinklimes",
+				"picture": "https://github.com/gitlimes.png"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"caption": "システムの研究とサーバーの開発",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"github": "https://github.com/InternalLoss",
+				"caption": "プリザベーションとサーバーアーキテクチャ",
+				"picture": "https://github.com/InternalLoss.png",
+				"name": "Billy"
+			},
+			{
+				"caption": "システムの研究とサーバーの開発",
+				"github": "https://github.com/DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"name": "DaniElectra"
+			},
+			{
+				"caption": "Webとサーバーの開発",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii",
+				"name": "niko"
+			},
+			{
+				"caption": "DevOpsとコミュニティの活動",
+				"picture": "https://github.com/MatthewL246.png",
+				"name": "MatthewL246",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "サーバーの開発と最適化",
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains",
+				"caption": "3DSのパッチ開発と研究"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "スペシャルサンクス",
-		"text": "彼らげいなかったら、Pretendoは存在しなかっただろうと思います。"
+		"text": "Pretendoのいまの姿を作り上げた方たちです。",
+		"people": [
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "GitHubでの貢献者",
+				"caption": "翻訳とその他の貢献"
+			},
+			{
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers",
+				"caption": "Crunchのライブラリ開発"
+			},
+			{
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "3DSの開発とNEXディセクター",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub",
+				"caption": "Miiverseの情報共有"
+			},
+			{
+				"special": "スペシャルサンクス",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"caption": "Nintendoのデータ構造に関する研究",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"caption": "アイコンの制作(MiiエディターとJuxtのリアクション)",
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"caption": "コンソールの研究とゲームサーバー",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"caption": "Wii Uパッチの開発",
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts",
+				"picture": "https://github.com/GaryOderNichts.png"
+			},
+			{
+				"caption": "3DSパッチの作者",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"name": "zaksabeast",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"caption": "サーバーアーキテクチャ",
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"caption": "サーバーアーキテクチャ",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"caption": "Splatoon のローテーションと研究",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon ローテーションと研究",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"caption": "翻訳とその他の貢献",
+				"name": "GitHubの貢献者",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
-		"title": "情報を見逃さないで",
-		"text": "プロジェクトの最新情報を取得するには、私たちのDiscordサーバーに参加してください。",
+		"title": "最新情報を入手する",
+		"text": "プロジェクトの最新情報を入手するには、Pretendo の Discord サーバーに参加してください。",
 		"widget": {
-			"text": "進行状況の最新アップデートをもらいましょう",
+			"text": "進捗状況の最新情報を入手しましょう",
 			"button": "サーバーに参加"
 		}
 	},
 	"footer": {
-		"socials": "ソーシャル",
-		"usefulLinks": "関係リンク",
+		"socials": "SNS",
+		"usefulLinks": "役立つリンク",
 		"widget": {
 			"captions": [
-				"アップデートを多くもらいたいですか?",
-				"Discordサーバーに参加してください!"
+				"最新情報を入手しますか？",
+				"Discordサーバーへ参加しよう！"
 			],
-			"button": "すぐ参加する!"
+			"button": "参加する！"
 		},
 		"bandwidthRaccoonQuotes": [
-			"僕はアライグマのBandwidthだよ！Pretendo Networkのサーバーを繋いでいる電線を噛むのが好きなんだ。美味しい！",
-			"みんな、任天堂と法的に問題ができるんじゃないか、と質問してくるね。ぼくのおばさんが任天堂で働いてるけど、大丈夫だって。",
-			"Webkit v537がWii U用の最高のWebkitのバージョンだよ。ううん、ChromeをWii Uには移さないよ。",
-			"時計が 2038 年 1 月 19 日の 03:14:08 UTC に達するのが待ちきれません!",
-			"Wii U は実際には過小評価されているシステムです。コマーシャルは本当にひどいものでしたが、コンソールは素晴らしいです。えっと、ちょっと待ってください、理由はわかりませんが、ゲームパッドが Wii に接続されていません。",
-			"スーパー マリオ ワールド 2 - ヨッシー アイランドのメイン テーマは絶対的なバップです。",
-			"私のお気に入りの Nintendo Switch リリースは、Nintendo Switch Online + Expansion Pack、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet Another Port Pack、Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain です。エイジ「ニンテンドーWii Uバーチャルコンソールタイトルを本当に気に入ってくれたので、復活させます」パック。あなたは本当に任天堂が気にかけていると言うことができます.",
+			"ボクはアライグマの Bandwidth だよ！Pretendo ネットワークのサーバーを繋いでいるケーブルを噛むのが好きなんだ！(´～｀)ﾓｸﾞﾓｸﾞ...",
+			"みんな「任天堂に怒られないの？」って質問してくるね。ボクのおばさんが任天堂で働いてるけど、大丈夫だって～！",
+			"Webkit v537がWii U用の最高のWebkitのバージョンだよ。いや、ChromeはWii Uに移さないよ。",
+			"2038年1月19日の12時14分08秒(日本時間) になるのが楽しみだな～！",
+			"Wii Uって人気なさすぎだよね～。たしかに、イメージは薄かったけど、遊んでみれば最高だったよ！あれ、ちょっとまって…なんかゲームパッドがWiiに繋がらないんだけど？",
+			"スーパーマリオ ヨッシーアイランドのメイン テーマはいい曲だよね～！",
+			"ボクのお気に入りのNintendo Switchの作品は、Nintendo Switch Online + 追加パック、Nintendo Switch Online + 振動パック、Nintendo Switch Online + Offlineパック、Nintendo Switch Online + 非公式ポートパック、Nintendo Switch Online + 脳を鍛える大人のトレーニング ～Wii Uバーチャルコンソールが本当に人気なので、復活させます～ パック。任天堂はよくわかってるよね～。",
 			"「あなたはアッシュを知っている、彼女の心を祝福しなさい、彼女は一日中UwUの」というように、南部の素敵な言い方です \"Ash uwusはいつも、それは本当に奇妙で愚かで、私は彼らがそうしなかったらいいのに\"",
-			"私のチャンネルでの私の最初のビデオ!! iv 長い間ビデオを作りたいと思っていましたが、ラップトップの動作がかなり悪く、fraps、skype、minecraft を一度に実行できませんでした。しかし、今は終わりです！ IT の先生の助けを借りて、ラップトップの動作が大幅に改善され、録音できるようになりました。皆さんが楽しんでくれることを願っています。!!!"
+			"ボクのチャンネルで最初の動画を公開したよ！！前から動画を作りたいと思っていたけど、ボクのノートパソコンの調子が悪くってね、Fraps とか Skype とか Minecraft を同時に起動できなかったんだよね～。でも、もうだいじょうぶ！IT の先生に聞いてみたら、ノートパソコンの動作が良くなって、録音もできるようになったんだ！よかったら高評価とチャンネル登録してね！",
+			"僕には良い感じに見えるね"
 		]
 	},
 	"progressPage": {
 		"title": "進行状況（英語）",
-		"description": "プロジェクトの進行度とゴールをチェックできます! (1時間ぐらいごとにアップデート、すべてのプロジェクトゴールや進行状況は反映しない)"
+		"description": "プロジェクトの進行状況と目標を確認できます。 (およそ1時間ごとに更新 &amp; すべての目標やプロジェクトが表示されているわけではありません)"
 	},
 	"blogPage": {
 		"title": "ブログ（英語）",
-		"description": "",
-		"publishedOn": "の上",
-		"published": "発行者"
+		"description": "最新情報のまとめです。<a href=\"\\&quot;/account/upgrade\\&quot;\" target=\"\\&quot;_blank\\&quot;\">支援</a>することで、より頻繁に情報を受け取れます。",
+		"publishedOn": "公開日時:",
+		"published": "執筆者："
 	},
 	"localizationPage": {
 		"title": "レッツローカライズ",
 		"description": "公開されているJSONへのリンクを貼り付けてこのサイトに試してみて下さい",
 		"instructions": "ローカライズ方法を開く",
-		"fileInput": "試してみるファイル",
+		"fileInput": "テスト用ファイル",
 		"filePlaceholder": "https://a.link.to/the_file.json",
-		"button": "ファイルを試す"
+		"button": "テストファイル"
 	},
 	"docs": {
-		"missingInLocale": "このページは日本語に翻訳されていません。下記の英語版をご覧ください。",
+		"missingInLocale": "このページはお住まいの地域では利用できません。以下の英語版をご確認ください。",
 		"quickLinks": {
 			"header": "クイックリンク",
 			"links": [
 				{
-					"header": "Pretendoをインストール",
-					"caption": "設定手順を見る"
+					"header": "Pretendoのインストール",
+					"caption": "セットアップの手順を表示する"
 				},
 				{
 					"header": "エラーが発生しましたか?",
-					"caption": "ここで検索する"
+					"caption": "ここで検索してください"
 				}
 			]
 		},
 		"sidebar": {
 			"install": "インストール",
-			"search": "探す",
+			"search": "検索",
 			"juxt_err": "エラーコード - Juxt",
 			"getting_started": "入門",
-			"welcome": "いらっしゃいませ",
+			"welcome": "ようこそ",
 			"install_extended": "Pretendo をインストールする"
 		},
 		"search": {
-			"caption": "下のボックスに入力して、問題に関する情報を入手してください！",
+			"caption": "下にエラーコードを入力して、エラーを検索できます。",
 			"label": "エラーコード",
 			"no_match": "一致するものが見つかりませんでした",
-			"title": "エラーコードを取得しましたか?"
+			"title": "エラーコードが表示されましたか？"
 		}
 	},
 	"account": {
 		"settings": {
-			"downloadFiles": "アカウントファイルをダウンロード",
-			"downloadFilesDescription": "（ニンテンドーネットワークでは動作しません）",
 			"upgrade": "アカウントのアップグレード",
-			"unavailable": "利用不可",
+			"unavailable": "利用できません",
 			"settingCards": {
 				"userSettings": "ユーザー設定",
 				"profile": "プロフィール",
 				"nickname": "ニックネーム",
 				"timezone": "タイムゾーン",
 				"beta": "ベータ",
-				"upgradePrompt": "ベータ サーバーはベータ テスター専用です。<br>ベータ テスターになるには、より高いアカウント ティアにアップグレードしてください。",
-				"signInSecurity": "サインインとセキュリティ",
-				"email": "Eメール",
+				"upgradePrompt": "ベータ サーバーはベータ テスター専用です。<br>ベータ テスターになるには、より高いレベルのアカウントにアップグレードしてください。",
+				"signInSecurity": "ログインとセキュリティ",
+				"email": "メールアドレス",
 				"password": "パスワード",
-				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからサインアウトされます。",
-				"signInHistory": "サインイン履歴",
-				"fullSignInHistory": "サインイン履歴をすべて表示する",
-				"connectedToDiscord": "Discord に接続済み",
-				"newsletterPrompt": "プロジェクトの最新情報をメールで受け取る (いつでもオプトアウトできます)",
+				"passwordResetNotice": "パスワードを変更すると、すべてのデバイスからログアウトされます。",
+				"signInHistory": "ログイン履歴",
+				"fullSignInHistory": "ログイン履歴をすべて表示する",
+				"connectedToDiscord": "Discord に連携済み:",
+				"newsletterPrompt": "プロジェクトの最新情報をメールで受け取る (いつでも配信停止できます)",
 				"passwordPrompt": "Cemu ファイルをダウンロードするには、PNID パスワードを入力してください",
-				"no_edit_from_dashboard": "現在、ユーザー ダッシュボードから PNID 設定を編集することはできません。リンクしたゲーム機からユーザー設定を更新してください",
+				"no_edit_from_dashboard": "現在、WebサイトからのPNID設定の編集には対応していません。ログインしているゲーム機から設定を編集してください。",
 				"gender": "性別",
 				"country": "国/地域",
-				"production": "製造",
-				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへのアクセスが提供されます。涼しい！",
+				"production": "本番環境",
+				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへアクセスできます。",
 				"newsletter": "ニュースレター",
-				"discord": "不和",
-				"noDiscordLinked": "Discord アカウントがリンクされていません。",
+				"discord": "Discord",
+				"noDiscordLinked": "Discord アカウントが連携されていません。",
 				"birthDate": "生年月日",
 				"serverEnv": "サーバー環境",
 				"otherSettings": "その他の設定",
-				"removeDiscord": "Discord アカウントを削除する",
-				"linkDiscord": "Discordアカウントをリンクする",
-				"no_signins_notice": "サインイン履歴は現在追跡されていません。後でもう一度確認してください。!",
-				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度確認してください"
+				"removeDiscord": "Discord アカウントの連携を解除",
+				"linkDiscord": "Discordアカウントを連携する",
+				"no_signins_notice": "ログイン履歴は現在追跡されていません。後でもう一度ご確認ください。",
+				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度ご確認ください。"
 			}
 		},
 		"accountLevel": [
-			"標準\\",
+			"スタンダード",
 			"テスター",
-			"モデレータ",
+			"モデレーター",
 			"デベロッパー"
 		],
-		"banned": "禁止された",
+		"banned": "BAN されました",
 		"loginForm": {
-			"register": "登録",
-			"detailsPrompt": "以下にアカウントの詳細を入力してください",
+			"register": "アカウントを作成",
+			"detailsPrompt": "ログイン情報を入力してください",
 			"username": "ユーザー名",
 			"password": "パスワード",
-			"email": "Eメール",
-			"miiName": "みいの名前",
-			"loginPrompt": "すでにアカウントをお持ちですか？",
+			"email": "メールアドレス",
+			"miiName": "Mii の名前",
+			"loginPrompt": "すでにアカウントをお持ちの場合",
 			"login": "ログイン",
-			"confirmPassword": "パスワードを認証する",
-			"forgotPassword": "パスワードをお忘れですか？",
-			"registerPrompt": "アカウントをお持ちでない場合?"
+			"confirmPassword": "パスワードの確認",
+			"forgotPassword": "パスワードを忘れた場合",
+			"registerPrompt": "アカウントをお持ちでない場合"
 		},
 		"account": "アカウント",
 		"forgotPassword": {
-			"header": "パスワードをお忘れの方",
-			"sub": "以下にメールアドレス/PNIDを入力してください。",
-			"input": "電子メールアドレスまたはPNID",
+			"header": "パスワードを忘れた場合",
+			"sub": "以下にメールアドレスまたは PNID を入力してください。",
+			"input": "メールアドレスまたは PNID",
 			"submit": "送信"
 		},
 		"resetPassword": {
-			"header": "パスワードリセット",
-			"sub": "新しいパスワードを以下に入力",
+			"header": "パスワードのリセット",
+			"sub": "以下に新しいパスワードを入力してください",
 			"password": "パスワード",
 			"confirmPassword": "パスワードの確認",
 			"submit": "送信"
@@ -259,24 +431,27 @@
 	},
 	"upgrade": {
 		"title": "アップグレード",
-		"description": "毎月の目標を達成すると、Pretendo はフルタイムの仕事になり、より良い品質の更新をより速い速度で提供します。",
+		"description": "毎月の目標を達成すると、Pretendoを仕事にすることができ、より良いアップデートを高頻度で開発できるようになります。",
 		"month": "月",
-		"changeTier": "ティアを変更",
-		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> の登録を解除し、<span class=\"newtier\">newtiername</span> を登録してもよろしいですか?",
+		"changeTier": "レベルを変更",
+		"changeTierPrompt": "<span class=\"oldtier\">oldtiername</span> の登録を解除し、<span class=\"newtier\">newtiername</span> を登録しますか？",
 		"back": "戻る",
-		"changeTierConfirm": "ティアを変更",
-		"unsub": "登録解除",
-		"unsubConfirm": "登録解除",
-		"tierSelectPrompt": "ティアを選択",
-		"unsubPrompt": "<span>tiername</span> から退会してもよろしいですか?そのティアに関連付けられた特典にアクセスできなくなります。"
+		"changeTierConfirm": "レベルを変更",
+		"unsub": "登録を解除",
+		"unsubConfirm": "登録を解除",
+		"tierSelectPrompt": "レベルを選択",
+		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルに関連付けられた特典にアクセスできなくなります。"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span>/月 <span>$${goald}</span>、月間目標の <span>${perc}%</span>。",
+		"progress": "<span>$${totd}</span>/<span>$${goald}</span>(寄付額/目標) ー 月間目標の <span>${perc}%</span>の寄付を頂いています。",
 		"upgradePush": "サブスクライバーになってクールな特典にアクセスするには、<a href=\"/account/upgrade\">アップグレード ページ</a>にアクセスしてください。"
 	},
 	"modals": {
+		"cancel": "キャンセル",
 		"confirm": "確認",
-		"close": "近い",
-		"cancel": "キャンセル"
+		"close": "閉じる"
+	},
+	"notfound": {
+		"description": "おっと！このページは見つかりません。"
 	}
 }

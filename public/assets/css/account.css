@@ -126,6 +126,10 @@
 	color: var(--text-shade-1);
 }
 
+.account-sidebar .buttons #account-delete {
+	background-color: #F44336;
+}
+
 /* Settings */
 .settings-wrapper {
 	display: grid;

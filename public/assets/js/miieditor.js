@@ -62,12 +62,12 @@ function initializeMiiData(encodedUserMiiData) {
 	console.log('grabbing rendered miis for later use');
 	const miiStudioNeutralUrl = mii.studioUrl({
 		width: 512,
-		bgColor: '13173300',
+		bgColor: '13173300'
 	});
 	const miiStudioSorrowUrl = mii.studioUrl({
 		width: 512,
 		bgColor: '13173300',
-		expression: 'sorrow',
+		expression: 'sorrow'
 	});
 	document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
 	document.querySelector('.mii-comparison.confirmed img.old-mii').src = miiStudioSorrowUrl;
@@ -86,8 +86,9 @@ document.querySelector('script#encodedUserMiiData').remove();
 const validMiiData = initializeMiiData(encodedUserMiiData);
 if (!validMiiData) {
 	const shouldContinue = window.confirm('Found corrupted mii data, want to continue with a new Mii?');
-	if (!shouldContinue)
+	if (!shouldContinue) {
 		window.location.assign('/account');
+	}
 	initializeMiiData(newMiiData);
 }
 
@@ -118,12 +119,12 @@ function renderMii(heightOverride, buildOverride) {
 		baldMiiFaceImg.src = baldMii.studioUrl({
 			width: 512,
 			bgColor: '13173300',
-			type: 'face_only',
+			type: 'face_only'
 		});
 		miiFaceImg.src = mii.studioUrl({
 			width: 512,
 			bgColor: '13173300',
-			type: 'face_only',
+			type: 'face_only'
 		});
 		miiBodyImg.src = mii.studioAssetUrlBody();
 	}
@@ -174,7 +175,7 @@ function renderMii(heightOverride, buildOverride) {
 	if (!heightOverride && !buildOverride) {
 		const faceMiiStudioUrl = mii.studioUrl({
 			width: 512,
-			bgColor: '13173300',
+			bgColor: '13173300'
 		});
 
 		const faceMiiStudioSmileUrl = mii.studioUrl({
@@ -236,7 +237,9 @@ function handleCalendar(e) {
 }
 
 function preventEmpty(e) {
-	if (e.target.value !== '') return;
+	if (e.target.value !== '') {
+		return;
+	}
 
 	e.target.value = e.target.defaultValue;
 }
@@ -280,7 +283,7 @@ document
 	'mustacheType',
 	'moleEnabled',
 	'gender',
-	'favoriteColor',
+	'favoriteColor'
 ].forEach((prop) => {
 	const el = document.querySelector(`#${prop}${mii[prop]}`);
 	if (el) {
@@ -326,7 +329,7 @@ console.log('[info] preselected value for disableSharing');
 	'height',
 	'build',
 	'miiName',
-	'creatorName',
+	'creatorName'
 ].forEach((prop) => {
 	document.querySelector(`#${prop}`).value = mii[prop];
 	document.querySelector(`#${prop}`).defaultValue = mii[prop];
@@ -390,10 +393,10 @@ function openTab(e, tabType) {
 
 // Here we bind all of the functions to the corresponding buttons
 document.querySelectorAll('.tabs button.tabbtn').forEach((el) => {
-	el.addEventListener('click', (e) => openTab(e, 'tab'));
+	el.addEventListener('click', e => openTab(e, 'tab'));
 });
 document.querySelectorAll('.subtabs button.subtabbtn').forEach((el) => {
-	el.addEventListener('click', (e) => openTab(e, 'subtab'));
+	el.addEventListener('click', e => openTab(e, 'subtab'));
 });
 
 // SUBPAGES
@@ -487,10 +490,10 @@ document
 					mii: {
 						name: mii.miiName,
 						primary: 'Y',
-						data: miiData,
+						data: miiData
 					}
 				})
-			}) .then(({ status }) => {
+			}).then(({ status }) => {
 				// TODO - Make this prettier
 				alert('Mii has been updated. It may take some time for the cached image on the website to update');
 

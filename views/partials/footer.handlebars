@@ -33,11 +33,13 @@
 		<h1>{{ locale.footer.socials }}</h1>
 		<a href="https://twitter.com/PretendoNetwork/" target="_blank">Twitter</a>
 		<a href="https://mastodon.pretendo.network/@pretendo" target="_blank" rel="me">Mastodon</a>
-		<a href="https://invite.gg/pretendo" target="_blank">Discord</a>
+		<a href="https://discord.gg/pretendo" target="_blank">Discord</a>
 		<a href="https://github.com/PretendoNetwork" target="_blank">GitHub</a>
+		<a href="https://bsky.app/profile/pretendo.network" target="_blank">Bluesky</a>
 	</div>
 	<div>
 		<h1>{{ locale.footer.usefulLinks }}</h1>
+		<a href="/terms/privacy">Privacy Policy</a> {{! TODO - Add this to weblate. Quick and dirty for now, just to get something out the door }}
 		<a href="/docs">{{ locale.nav.docs }}</a>
 		<a href="/#faq">{{ locale.nav.faq }}</a>
 		<a href="/progress">{{ locale.nav.progress }}</a>
@@ -45,11 +47,12 @@
 		<a href="/account">{{ locale.nav.account }}</a>
 		<a href="/account/upgrade">{{ locale.nav.donate }}</a>
 	</div>
+	{{! TODO - Create a "Legal" section here }}
 	<div class="discord-server-card-wrapper">
 		<div class="discord-server-card">
 			<h1>{{ locale.footer.widget.captions.[0] }}</h1>
 			<h2>{{ locale.footer.widget.captions.[1] }}</h2>
-			<a href="https://invite.gg/pretendo">
+			<a href="https://discord.gg/pretendo">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
 					<line x1="5" y1="12" x2="19" y2="12"></line>
 					<polyline points="12 5 19 12 12 19"></polyline>
@@ -85,7 +88,7 @@
 			`${unescapeHTML("{{this}}")}`,
 		{{/each}}
 		]
-		
+
 		document.body.addEventListener("click", () =>
 		{
 			bandwidthRaccoonWrapper.classList.remove("speak");

@@ -1,9 +1,9 @@
 {
 	"nav": {
-		"about": "Over",
+		"about": "Over ons",
 		"faq": "FAQ",
 		"docs": "Docs",
-		"credits": "Krediet",
+		"credits": "Bijdragers",
 		"progress": "Vooruitgang",
 		"blog": "Blog",
 		"account": "Account",
@@ -25,7 +25,7 @@
 	"hero": {
 		"subtitle": "Spelservers",
 		"title": "Nagemaakt",
-		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en de Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo servers permanent gestopt worden",
+		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo-servers permanent gestopt worden",
 		"buttons": {
 			"readMore": "Lees meer"
 		}
@@ -33,13 +33,13 @@
 	"aboutUs": {
 		"title": "Over ons",
 		"paragraphs": [
-			"Pretendo is een open source project met het doel om het Nintendo Network voor 3DS en Wii U na te maken met clean-room reverse engineering.",
+			"Pretendo is een open source project met het doel om het Nintendo Network voor de 3DS en Wii U na te maken met clean-room reverse engineering.",
 			"Omdat onze diensten gratis en open source zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
 		]
 	},
 	"progress": {
 		"title": "Vooruitgang",
-		"githubRepo": "GitHub repository"
+		"githubRepo": "GitHub-repository"
 	},
 	"faq": {
 		"title": "Veelgestelde vragen",
@@ -66,8 +66,8 @@
 				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu. Momenteel ondersteunt Pretendo Cemu niet."
 			},
 			{
-				"question": "Als ik van Nintendo Network gebanned ben, blijf ik dan gebanned op Pretendo?",
-				"answer": "Nee. We hebben geen toegang tot de bans van Nintendo Network, dus je zal niet direct gebanned zijn op onze dienst. Echter zullen wij wel regels hebben bij het gebruik van onze diensten. Als je deze breekt, zal je gebanned worden."
+				"question": "Werkt Pretendo op Cemu/emulators?",
+				"answer": "Cemu 2.1 ondersteunt Pretendo officieel onder uw netwerkaccountopties in de emulator. Voor informatie over hoe u aan de slag kunt met Cemu, bekijkt u de <a href=\"https://pretendo.network/docs/install/cemu\">documentatie</a>.<br>Sommige 3DS-emulators of forks ondersteunen ons mogelijk, maar we hebben op dit moment geen officiële aanbevelingen of installatie-instructies. De laatste builds van Citra ondersteunen Pretendo niet."
 			},
 			{
 				"question": "Gaat Pretendo ook de Wii of Switch ondersteunen?",
@@ -75,13 +75,27 @@
 			},
 			{
 				"question": "Heb ik hacks nodig om te verbinden met Pretendo?",
-				"answer": "ja, je zal inderdaad je apparaat moeten hacken. Op de Wii U heb je enkel de Homebrew launcher (d.m.v bijvoorbeeld Haxchi, Coldboot Haxchi, of zelfs de web browser exploit) nodig. Over de 3DS plaatsen we in de toekomst meer informatie."
+				"answer": "Voor de beste ervaring op consoles moet je je systeem hacken - specifiek Aroma voor Wii U en Luma3DS voor 3DS. Op Wii U is de hackless SSSL-methode echter ook beschikbaar met beperkte functionaliteit. Zie onze <a href=\"/docs/install\">installatie-instructies</a> voor meer informatie."
+			},
+			{
+				"answer": "We hebben geen toegang tot de bans van Nintendo Network, dus niet alle Nintendo Network-gebruikers worden verbannen. We hebben echter regels die we moeten volgen bij het gebruik van de service en het niet naleven van deze regels kan resulteren in een ban.",
+				"question": "Als ik verbannen word op Nintendo Network, blijf ik dan verbannen als ik Pretendo gebruik?"
 			}
 		]
 	},
 	"credits": {
 		"title": "Het team",
-		"text": "Ontmoet het team achter het project"
+		"text": "Ontmoet het team achter het project",
+		"people": [
+			{
+				"caption": "Eigenaar en hoofdontwikkelaar",
+				"name": "Jonathan Barrow (jonbarrow)"
+			},
+			{},
+			{
+				"caption": "Wii U onderzoek en patch ontwikkeling"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
@@ -107,7 +121,7 @@
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade page</a>."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgradepagina</a>."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
@@ -185,7 +199,6 @@
 			"loginPrompt": "Heb je al een account?"
 		},
 		"settings": {
-			"downloadFiles": "Download account bestanden",
 			"upgrade": "Account upgraden",
 			"settingCards": {
 				"nickname": "Bijnaam",
@@ -219,7 +232,6 @@
 				"no_newsletter_notice": "Nieuwsbrief is momenteel niet beschikbaar. Kom later weer terug",
 				"no_edit_from_dashboard": "Het aanpassen van PNID instellingen via het gebruikers dashboard is momenteel niet mogelijk. Pas de gebruikers instellingen aan via je gelinkte game console"
 			},
-			"downloadFilesDescription": "(werkt niet op Nintendo Network)",
 			"unavailable": "Niet beschikbaar"
 		},
 		"accountLevel": [

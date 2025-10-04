@@ -1,6 +1,6 @@
+const fs = require('fs');
 const util = require('../util');
 const database = require('../database');
-const fs = require('fs');
 const localeFileNames = fs.readdirSync(`${__dirname}/../../locales`);
 
 async function renderDataMiddleware(request, response, next) {
@@ -16,7 +16,7 @@ async function renderDataMiddleware(request, response, next) {
 	const reqLocale = request.cookies.preferredLocale || request.locale.toString();
 	const locale = util.getLocale(reqLocale);
 
-	let localeList = localeFileNames.map(locale => {
+	let localeList = localeFileNames.map((locale) => {
 		const code = locale.replace('.json', '').replace('_', '-');
 
 		// Check if it's a real language code, or a custom one
@@ -91,6 +91,11 @@ async function renderDataMiddleware(request, response, next) {
 
 			request.pnid = await database.PNID.findOne({ pid: response.locals.account.pid });
 			request.account = response.locals.account;
+
+			if (request.pnid.deleted) {
+				// TODO - We just need to overhaul our API tbh
+				throw new Error('User not found');
+			}
 
 			return next();
 		} catch (error) {

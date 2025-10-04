@@ -1,0 +1,80 @@
+{
+	"nav": {
+		"about": "Tentang",
+		"docs": "Dokumentasi",
+		"credits": "Kredit",
+		"progress": "Kemajuan",
+		"account": "Akun",
+		"accountWidget": {
+			"settings": "Pengaturan",
+			"logout": "Keluar"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Berkenalan dengan Tim",
+				"progress": "Lihat kemajuan dan tujuan proyek",
+				"faq": "Pertanyaan yang sering diajukan",
+				"about": "Tentang projek",
+				"blog": "Update terbaru kami, secara singkat"
+			}
+		},
+		"faq": "Pertanyaan Umum",
+		"blog": "Berita",
+		"donate": "Donasi"
+	},
+	"hero": {
+		"title": "Dibuat ulang",
+		"subtitle": "Server gim",
+		"text": "Pretendo adalah sebuah pengganti server Nintendo yang gratis dan dengan sumber terbuka untuk 3DS dan Wii U, yang memungkinkan konektivitas online untuk semua, bahkan setelah server aslinya dihentikan",
+		"buttons": {
+			"readMore": "Baca lebih lanjut"
+		}
+	},
+	"aboutUs": {
+		"title": "Tentang kami",
+		"paragraphs": [
+			"Pretendo adalah proyek sumber terbuka dengan tujuan untuk membuat ulang Nintendo Network untuk 3DS dan Wii U menggunakan rekaya terbalik ruang bersih.",
+			"Karena layanan kami bersifat gratis dan sumber terbuka, layanan tersebut akan tetap bertahan lama setelah penutupan Nintendo Network yang pasti akan terjadi."
+		]
+	},
+	"progress": {
+		"title": "Perkembangan",
+		"githubRepo": "Repositori Github"
+	},
+	"faq": {
+		"text": "Berikut adalah beberapa pertanyaan umum yang sering diajukan kepada kami untuk mendapatkan informasi yang mudah.",
+		"QAs": [
+			{
+				"question": "Apa itu Pretendo?"
+			},
+			{
+				"answer": "Sayangnya, tidak. NNIDs yang sudah ada tidak bisa digunakan di Pretendo, karena hanya Nintendo memegang data user mu; sedangkan migrasi dari NNID-ke-PNID secara teori memungkinkan, itu bisa berisiko dan membutuhkan data user sensitif yang kami tidak ingin memiliki.",
+				"question": "Apakah NNID yang ada bekerja di Pretendo?"
+			},
+			{
+				"question": "Bagaimana saya mengunakan Pretendo?",
+				"answer": "Untuk memulai dengan Jaringan Pretendo di 3DS, Wii U atau emulator, mohon melihat <a href=\"/docs/install\">instruksi setup</a> kami!"
+			},
+			{},
+			{
+				"question": "Kapan akan kamu tambahkan lebih banyak game?"
+			},
+			{
+				"question": "Jika aku menggunakan emulator, apakah itu cukup untuk menggunakan Pretendo?"
+			},
+			{},
+			{
+				"question": "Akankah Pretendo mendukung Wii/Switch?"
+			},
+			{},
+			{
+				"question": "Jika aku di-banned di Jaringan Nintendo, Apakah aku tetap ter-banned saat menggunakan Pretendo?"
+			}
+		],
+		"title": "Pertanyaan yang sering diajukan"
+	},
+	"modals": {
+		"close": "Tutup",
+		"cancel": "Batal"
+	}
+}

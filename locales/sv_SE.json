@@ -70,9 +70,7 @@
 			"loginPrompt": "Har redan ett konto?"
 		},
 		"settings": {
-			"downloadFiles": "Ladda ner kontofiler",
 			"upgrade": "Uppgradera konto",
-			"downloadFilesDescription": "(kommer inte att funka på Nintendo Nätverket)",
 			"settingCards": {
 				"userSettings": "Användarinställningar",
 				"profile": "Profil",

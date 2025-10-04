@@ -23,7 +23,7 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Spiel-Server",
+		"subtitle": "Spielserver",
 		"title": "Rekonstruiert",
 		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS und die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
 		"buttons": {
@@ -34,7 +34,7 @@
 		"title": "Über uns",
 		"paragraphs": [
 			"Pretendo ist ein Open-Source-Projekt, welches das Nintendo Network für den 3DS und die Wii U durch Clean-Room-Reverse-Engineering rekonstruiert.",
-			"Da unsere Dienste kostenlos und Open-Source sind, können diese auch nach der offiziellen Schließung des Nintendo Networks weiter existieren."
+			"Da unsere Dienste kostenlos und Open-Source sind, werden diese auch zukünftig weiterhin existieren."
 		]
 	},
 	"progress": {
@@ -42,7 +42,7 @@
 		"githubRepo": "Github-Repository"
 	},
 	"faq": {
-		"title": "Frequently Asked Questions (Häufig gestellte Fragen)",
+		"title": "Häufig gestellte Fragen",
 		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen, zur schnellen Informationsbeschaffung.",
 		"QAs": [
 			{
@@ -55,27 +55,39 @@
 			},
 			{
 				"question": "Wie benutze ich Pretendo?",
-				"answer": "Pretendo ist aktuell nicht für die öffentliche Nutzung verfügbar. Sobald das Pretendo Network bereit ist, kannst du es einfach durch unseren Homebrew-Patcher auf deiner Konsole nutzen."
+				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>"
 			},
 			{
 				"question": "Weißt du, wann Funktion/Dienst bereit ist?",
 				"answer": "Nein. Viele der Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt (z. B., ein Entwickler arbeitet am Miiverse während ein anderer an Accounts und der Freundesliste arbeitet), deshalb können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
-				"question": "Funktioniert Pretendo mit CEMU, oder anderen Emulatoren?",
-				"answer": "Pretendo unterstützt jeden Client, der mit dem Nintendo Network interagieren kann. Derzeit ist Cemu der einzige Emulator mit dieser Art von Funktionalität. Cemu 2.0 unterstützt Pretendo offiziell unter deinen Netzwerk-Kontooptionen im Emulator. Informationen zu den ersten Schritten mit Cemu findest du in der <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>.<br>Citra unterstützt kein echtes Online-Spiel und funktioniert daher nicht mit Pretendo und zeigt überhaupt keine Anzeichen dafür, echtes Online-Spiel zu unterstützen. Mikage, ein 3DS-Emulator für mobile Geräte, könnte in Zukunft Unterstützung bieten, obwohl dieser alles andere als sicher ist."
+				"question": "Wann werdet ihr neue Spiele hinzufügen?",
+				"answer": "Wir arbeiten am Hinzufügen neuer Spiele, sobald unsere Backend-Libraries bereit dazu sind, diese zu unterstützen und sobald unsere Entwickler Zeit haben, diese instand zu halten. Eine Menge unserer Zeit fließt in die Stabilisierung und Abschließen der bereits existierenden Spiele. Wir möchten euch die besten Spielerfahrungen möglich machen, bevor wir uns neuen Spieltiteln widmen. Aufgrund von ständiger neu auftauchender Arbeit können wir keine Angaben machen, wann wir neue Spiele hinzufügen werden."
 			},
 			{
-				"question": "Wenn ich im Nintendo Network gebannt wurde, bin ich dann in Pretendo auch gebannt?",
-				"answer": "Wir werden keinen Zugriff auf Nintendos Bannliste haben, weshalb kein Nutzer auf unserem Netzwerk gebannt sein wird. Trotzdem, wir haben Regeln für die Nutzung unserer Dienste und die Nichteinhaltung dieser kann zu einem Bann führen."
+				"question": "Reicht ein Emulator aus, um Pretendo zu nutzen?",
+				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
+			},
+			{
+				"question": "Funktioniert Pretendo auf Cemu/Emulatoren?",
+				"answer": "Cemu 2.1 unterstützt offiziell Pretendo unter den Netzwerk-Account-Optionen im Emulator. Für mehr Informationen, wie du mit Cemu loslegen kannst, beachte bitte die <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>br&gt; Einige 3DS-Emulatoren oder Forks könnten uns unterstützen, aber wir haben zu dieser Zeit keine offizielle Empfehlung oder Setup-Anleitung. Die letzten Builds von Citra unterstützen Pretendo nicht."
 			},
 			{
 				"question": "Wird Pretendo die Wii/Switch unterstützen?",
-				"answer": "Für die Wii gibt es bereits eigene Server von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Aktuell möchten wir die Switch auch nicht als Ziel festlegen, da der Online-Service der Switch kostenpflichtig ist und sich stark vom Nintendo Network unterscheidet."
+				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir nicht an, da es sich um ein gebührenpflichtiges Netzwerk handelt, das sich fundamental vom Nintendo Network unterscheidet."
 			},
 			{
-				"question": "Benötige ich einen Hack um Pretendo zu verwenden?",
-				"answer": "Ja, du musst deine Konsole hacken, allerdings reicht auf der Wii U den Zugriff zum Homebrew-Launcher (z.B. über Haxchi, CBHC, oder den Browser-Exploit). Informationen, wie der 3DS verbunden wird, werden später noch veröffentlicht."
+				"question": "Werde ich meine Konsole modifizieren müssen, um mich verbinden zu können?",
+				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind keine Nintendo Network Nutzer gebannt. Allerdings haben wir Regeln, die bei der Nutzung des Dienstes befolgt werden müssen, und die Nichteinhaltung dieser Regeln kann zu einem Bann führen."
+			},
+			{
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
+				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis von Personen zu stören, die nicht zugestimmt haben (wie beispielsweise in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Konto- und Konsolensperren sowohl für Wii U- als auch für 3DS-Systeme. Pretendo verwendet zusätzliche Sicherheitsmaßnahmen, die traditionelle ‘Entbannungs’-Methoden wie das Ändern der Seriennummer unwirksam machen."
+			},
+			{
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
+				"answer": "Nur in privaten Matches – sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche 'Unban'-Methoden, wie das Ändern der Seriennummer, unwirksam machen."
 			}
 		]
 	},
@@ -85,7 +97,7 @@
 		"cards": [
 			{
 				"title": "Spiel-Server",
-				"caption": "Bringt dir deine Lieblingsspiele und Inhale zurück, mithilfe eigener Server."
+				"caption": "Bringt dir deine Lieblingsspiele und Inhalte zurück, mithilfe eigener Server."
 			},
 			{
 				"title": "Juxtaposition",
@@ -99,11 +111,172 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Triff das Team hinter dem Projekt"
+		"text": "Lerne das Team hinter dem Projekt kennen",
+		"people": [
+			{
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Projektinhaber und leitender Entwickler"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"caption": "Miiverse Analyse/Forschung und Entwicklung",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky",
+				"caption": "Wii U Forschung und Patch-Entwicklung"
+			},
+			{
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom",
+				"name": "SuperMarioDaBom",
+				"caption": "Systemforschung und Serverarchitektur"
+			},
+			{
+				"picture": "https://github.com/gitlimes.png",
+				"name": "pinklimes",
+				"github": "https://github.com/gitlimes",
+				"caption": "Webentwicklung"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000",
+				"caption": "Systemforschung und Server Entwicklung"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss",
+				"caption": "Erhaltung und Server-Architektur"
+			},
+			{
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra",
+				"caption": "Systemforschung und Server-Entwicklung"
+			},
+			{
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii",
+				"caption": "Web- und Serverentwicklung"
+			},
+			{
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246",
+				"caption": "DevOps und Community-Arbeit"
+			},
+			{
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale",
+				"caption": "Server-Entwicklung und Optimierungen"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"caption": "3DS Patch-Entwicklung und Forschung",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie wäre Pretendo nicht, wo es heute ist."
+		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist.",
+		"people": [
+			{
+				"name": "GitHub-Mitwirkende",
+				"caption": "Übersetzungen und andere Beiträge",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"caption": "Crunch Library Entwicklung",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers",
+				"name": "superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"github": "https://github.com/Stary2001",
+				"picture": "https://github.com/Stary2001.png",
+				"caption": "3DS Entwicklung und NEX Dissector"
+			},
+			{
+				"caption": "Miiverse-Informationsaustausch",
+				"github": "https://twitter.com/rverseClub",
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png"
+			},
+			{
+				"special": "Besonderer Dank",
+				"caption": "Forschung zu Nintendo-Datenstrukturen",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Symbole für dem Mii-Editor und Juxt-Reaktionen",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Konsolenforschung und Spiele-Server",
+				"github": "https://github.com/EpicUsername12",
+				"picture": "https://github.com/EpicUsername12.png"
+			},
+			{
+				"github": "https://github.com/GaryOderNichts",
+				"name": "GaryOderNichts",
+				"caption": "Wii U Patch-Entwicklung",
+				"picture": "https://github.com/GaryOderNichts.png"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS Patch-Ersteller",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Server-Architektur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Server-Architektur",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Spatoon-Rotations und Forschung",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon-Rotations und Forschung",
+				"github": "https://github.com/OatmealDome",
+				"picture": "https://github.com/OatmealDome.png"
+			},
+			{
+				"caption": "Lokalisierung und andere Beiträge",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"name": "GitHub-Beiträger",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
@@ -132,7 +305,8 @@
 			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
 			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
 			"So etwas wie \"Du kennst Ash, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Ash schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
-			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!"
+			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!",
+			"Sieht gut für mich aus"
 		]
 	},
 	"progressPage": {
@@ -148,9 +322,9 @@
 	"account": {
 		"accountLevel": [
 			"Standard",
-			"Tester*innen",
-			"Moderator*innen",
-			"Entwickler"
+			"Tester*in",
+			"Moderator*in",
+			"Entwickler*in"
 		],
 		"loginForm": {
 			"login": "Anmelden",
@@ -198,8 +372,6 @@
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
 				"userSettings": "Nutzer-Einstellungen"
 			},
-			"downloadFiles": "Konto-Dateien herunterladen",
-			"downloadFilesDescription": "(funktioniert nicht im Nintendo Network)",
 			"upgrade": "Konto upgraden",
 			"unavailable": "Nicht verfügbar"
 		},
@@ -225,7 +397,7 @@
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
 		"unsub": "Deabonnieren",
-		"unsubPrompt": "Bist du dir sicher, dass du <span>tiername</span> deabonnieren möchtest? Du wirst den Zugang zu den Vorteilen verlieren, die mit dieser Stufe verbunden sind.",
+		"unsubPrompt": "Bist du dir wirklich sicher, dass du dich von <span>tiername</span> ablemden möchtest? Du wirst  <span>sofort</span> den Zugriff auf die Vorteile dieser Stufe verlieren.",
 		"unsubConfirm": "Deabonnieren",
 		"changeTier": "Stufe ändern",
 		"changeTierPrompt": "Bist du dir sicher, dass du <span class=\"oldtier\">oldtiername</span> deabonnieren und <span class=\"newtier\">newtiername</span> abonnieren möchtest?",
@@ -278,5 +450,8 @@
 		"cancel": "Abbrechen",
 		"confirm": "Bestätigen",
 		"close": "Schließen"
+	},
+	"notfound": {
+		"description": "Woops! Diese Seite konnte nicht gefunden werden."
 	}
 }
