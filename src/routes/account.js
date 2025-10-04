@@ -21,7 +21,7 @@ const stripe = new Stripe(config.stripe.secret_key);
 const router = new Router();
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
 
-const gRPCApiChannel = createChannel(`${config.grpc.account.host}:${config.grpc.account.port}`);
+const gRPCApiChannel = createChannel(`${config.grpc.api.host}:${config.grpc.api.port}`);
 const gRPCApiClient = createClient(ApiServiceDefinition, gRPCApiChannel);
 
 // Create OAuth client
