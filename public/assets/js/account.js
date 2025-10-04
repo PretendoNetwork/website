@@ -2,6 +2,10 @@ const updateServerEnvironmentForm = document.querySelector('form.server-selectio
 const serverSelectionSaveButton = document.querySelector('#save-server-selection');
 const editSettingsModal = document.querySelector('.modal-wrapper#edit-settings');
 const editSettingsModalButtonClose = document.getElementById('editSettingsCloseButton');
+const deleteAccountButton = document.getElementById('account-delete');
+const deletePNIDConfirmModal = document.querySelector('.modal-wrapper#confirm-delete');
+const deletePNIDConfirmModalButtonConfirm = document.getElementById('confirmDeleteConfirmButton');
+const deletePNIDConfirmModalButtonClose = document.getElementById('confirmDeleteCloseButton');
 
 editSettingsModalButtonClose?.addEventListener('click', () => {
 	editSettingsModal.classList.add('hidden');
@@ -52,4 +56,21 @@ serverSelectionSaveButton.addEventListener('click', (event) => {
 	} catch (error) {
 		alert(error);
 	}
+});
+
+deleteAccountButton.addEventListener('click', (event) => {
+	event.preventDefault();
+	deletePNIDConfirmModal.classList.remove('hidden');
+});
+
+deletePNIDConfirmModalButtonConfirm?.addEventListener('click', async () => {
+	await fetch('/account/delete', {
+		method: 'POST'
+	});
+
+	deletePNIDConfirmModal.classList.add('hidden');
+});
+
+deletePNIDConfirmModalButtonClose?.addEventListener('click', () => {
+	deletePNIDConfirmModal.classList.add('hidden');
 });

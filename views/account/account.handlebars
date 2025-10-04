@@ -28,6 +28,9 @@
 				<a class="button secondary" id="account-upgrade" href="/account/upgrade">
 					<p class="caption">{{ locale.account.settings.upgrade }}</p>
 				</a>
+				<a class="button secondary" id="account-delete">
+					<p class="caption">{{ locale.account.settings.delete.button }}</p>
+				</a>
 			</div>
 		</div>
 
@@ -194,6 +197,20 @@
 		<p class="modal-caption">{{ locale.account.settings.settingCards.no_edit_from_dashboard }}</p>
 		<div class="modal-button-wrapper">
 			<button class="button primary confirm" id="editSettingsCloseButton">{{ locale.modals.close }}</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal-wrapper hidden" id="confirm-delete">
+	<div class="modal">
+		<h1 class="title dot">{{ locale.account.settings.delete.modalTitle }}</h1>
+		<p class="modal-caption">
+			{{ locale.account.settings.delete.modalDescription }}<br><br>
+			{{ locale.account.settings.delete.modalCaution}}
+		</p>
+		<div class="modal-button-wrapper">
+			<button class="button primary confirm" id="confirmDeleteConfirmButton">{{ locale.account.settings.delete.modalConfirm }}</button>
+			<button class="button primary" id="confirmDeleteCloseButton">{{ locale.modals.close }}</button>
 		</div>
 	</div>
 </div>
