@@ -19,7 +19,7 @@ document.addEventListener('click', (event) => {
 	}
 });
 
-serverSelectionSaveButton.addEventListener('click', (event) => {
+serverSelectionSaveButton?.addEventListener('click', (event) => {
 	event.preventDefault();
 	const checkedInput = updateServerEnvironmentForm.querySelector('input:checked');
 
@@ -58,7 +58,7 @@ serverSelectionSaveButton.addEventListener('click', (event) => {
 	}
 });
 
-deleteAccountButton.addEventListener('click', (event) => {
+deleteAccountButton?.addEventListener('click', (event) => {
 	event.preventDefault();
 	deletePNIDConfirmModal.classList.remove('hidden');
 });
