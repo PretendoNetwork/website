@@ -27,6 +27,7 @@
 		"@discordjs/rest": "^0.5.0",
 		"@node-saml/node-saml": "^5.0.0",
 		"@pretendonetwork/error-codes": "^1.0.3",
+		"@pretendonetwork/grpc": "^2.2.3",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
 		"cookie-parser": "^1.4.5",
@@ -44,6 +45,7 @@
 		"mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
 		"mongoose": "^6.4.0",
 		"morgan": "^1.10.0",
+		"nice-grpc": "^2.1.13",
 		"nodemailer": "^6.7.5",
 		"stripe": "^9.9.0"
 	},

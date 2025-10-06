@@ -381,6 +381,13 @@
 				"no_signins_notice": "Sign in history not currently tracked. Check back again later!",
 				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
 				"no_edit_from_dashboard": "Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console"
+			},
+			"delete": {
+				"button": "Delete Account",
+				"modalTitle": "Delete PNID",
+				"modalDescription": "Are you sure you want to delete your PNID? Your data across services such as the forums, Miiverse, etc. will all be removed. Your Stripe data and subscription will also be automatically deleted.",
+				"modalCaution": "This action cannot be undone.",
+				"modalConfirm": "Yes, delete"
 			}
 		},
 		"accountLevel": [

@@ -50,5 +50,12 @@ module.exports = {
 			secret: jsonConfig.discourse.sso.secret
 		}
 	},
-	email
+	email,
+	grpc: {
+		api: {
+			host: jsonConfig.grpc.api.host,
+			port: jsonConfig.grpc.api.port,
+			api_key: jsonConfig.grpc.api.api_key
+		}
+	}
 };

@@ -4,6 +4,8 @@ const DiscordOauth2 = require('discord-oauth2');
 const Stripe = require('stripe');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
+const { createChannel, createClient, Metadata } = require('nice-grpc');
+const { ApiServiceDefinition } = require('@pretendonetwork/grpc/api/v2/api_service');
 const requireLoginMiddleware = require('../middleware/require-login');
 const database = require('../database');
 const cache = require('../cache');
@@ -18,6 +20,9 @@ const { Router } = express;
 const stripe = new Stripe(config.stripe.secret_key);
 const router = new Router();
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
+
+const gRPCApiChannel = createChannel(`${config.grpc.api.host}:${config.grpc.api.port}`);
+const gRPCApiClient = createClient(ApiServiceDefinition, gRPCApiChannel);
 
 // Create OAuth client
 const discordOAuth = new DiscordOauth2({
@@ -112,7 +117,13 @@ router.get('/register', async (request, response) => {
 });
 
 router.post('/register', async (request, response) => {
-	const { email, username, mii_name, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+	const { email, username, mii_name, birthday, password, password_confirm, 'h-captcha-response': hCaptchaResponse } = request.body;
+
+	// * IP must be forwarded to the account server so we can check for age related issues based on region.
+	// * This is NEVER recorded in our records, ever. See https://github.com/PretendoNetwork/account/pull/194
+	// * for more details. Once the IP is used to query for location, both the IP and location are disregarded
+	// * and no data is stored for blocked users
+	const ip = request.ip; // TODO - Enable `CF-IPCountry` in Cloudflare and only use this as a fallback
 
 	response.cookie('email', email, { domain: '.pretendo.network' });
 	response.cookie('username', username, { domain: '.pretendo.network' });
@@ -120,9 +131,11 @@ router.post('/register', async (request, response) => {
 
 	try {
 		const tokens = await util.register({
+			ip,
 			email,
 			username,
 			mii_name,
+			birthday,
 			password,
 			password_confirm,
 			hCaptchaResponse
@@ -563,6 +576,30 @@ router.post('/sso/discourse', async (request, response, next) => {
 		console.log(error);
 		response.cookie('error_message', error.message, { domain: '.pretendo.network' });
 		return response.redirect('/account/login');
+	}
+});
+
+router.post('/delete', requireLoginMiddleware, async (request, response) => {
+	const { pnid } = request;
+
+	try {
+		await gRPCApiClient.deleteAccount({
+			pid: pnid.pid
+		}, {
+			metadata: Metadata({
+				'X-API-Key': config.grpc.api.api_key
+			})
+		});
+
+		response.json({
+			success: true
+		});
+	} catch (error) {
+		console.error('failed to delete PNID', error);
+		response.json({
+			success: false,
+			error
+		});
 	}
 });
 
