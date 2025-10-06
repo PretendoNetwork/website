@@ -32,6 +32,17 @@
 			{
 				"question": "Tarvitsenko murretun konsolin?",
 				"answer": "Kyllä, sinun pitää murtaa konsolisi yhteyttä varten. Lisätietoja asentamisesta löydät &lt;a href=\"https://pretendo.network/docs/install/wiiu\"&gt;täältä&lt;/a&gt;."
+			},
+			{
+				"question": "Tarvitsenko modeja yhdistääkseni?"
+			},
+			{
+				"question": "Jos minulla on Nintendo Network -kielto, pysyykö se voimassa käyttäessäni Pretendoa?",
+				"answer": "Tiedot Nintendo Network -kielloista eivät ole käytettävissämme, joten millään Nintendo Network -käyttäjällä ei ole kieltoa. Meillä on kuitenkin sääntöjä, joita on noudatettava palvelua käytettäessä, ja näiden sääntöjen noudattamatta jättäminen voi johtaa kieltoon."
+			},
+			{
+				"question": "Saanko käyttää huijauksia tai modeja onlinessa käyttäessäni Pretendoa?",
+				"answer": "Vain yksityisissä peleissä - epäreilun edun saaminen tai verkkokokemuksen häiritseminen sellaisten ihmisten kanssa, jotka eivät ole antaneet siihen suostumustaan (kuten julkisissa peleissä) on kiellon antamisen arvoinen teko. Asetamme säännöllisesti tili- ja konsolikieltoja sekä Wii U- että 3DS-järjestelmille. Pretendo käyttää lisäturvatoimenpiteitä, jotka tekevät perinteisistä \"kiellonpoistamismenetelmistä\", kuten sarjanumeron vaihtamisesta, hyödyttömiä."
 			}
 		],
 		"title": "Usein Kysytyt Kysymykset",
@@ -103,12 +114,75 @@
 		"people": [
 			{
 				"caption": "Projektin omistaja ja johtava kehittäjä"
+			},
+			{},
+			{},
+			{
+				"caption": "Järjestelmäntutkimus ja palvelinarkkitehtuuri"
+			},
+			{
+				"caption": "Web-kehitys"
+			},
+			{
+				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
+			},
+			{
+				"caption": "Säilytystyö ja palvelinarkkitehtuuri"
+			},
+			{
+				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
+			},
+			{
+				"caption": "Web- ja palvelinkehitys"
+			},
+			{},
+			{
+				"caption": "Palvelinkehitys ja -optimointi"
+			},
+			{
+				"caption": "3DS-patchikehitys ja -tutkimus"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
-		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt."
+		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
+		"people": [
+			{
+				"name": "GitHub-osalliset",
+				"caption": "Lokalisaatiot ja muu osallistuminen"
+			},
+			{
+				"caption": "crunch-kirjaston kehitys"
+			},
+			{
+				"caption": "3DS- ja NEX dissector -kehitys"
+			},
+			{},
+			{
+				"special": "Erityiskiitokset",
+				"caption": "Nintendon tietorakenteiden tutkimus"
+			},
+			{},
+			{
+				"caption": "Konsolitutkimus ja pelipalvelimet"
+			},
+			{
+				"caption": "Wii U -patchikehitys"
+			},
+			{},
+			{
+				"caption": "Palvelinarkkitehtuuri"
+			},
+			{
+				"caption": "Palvelinarkkitehtuuri"
+			},
+			{},
+			{},
+			{
+				"name": "GitHub-osalliset"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Pysy ajan tasalla",
@@ -146,7 +220,7 @@
 	},
 	"blogPage": {
 		"title": "Blogi",
-		"description": "",
+		"description": "Uusimmat päivitykset tiivistetyinä lohkoihin. Jos haluat nähdä useammin päivityksiä, harkitse <a href=\"/account/upgrade\" target=\"_blank\">meidän tukemista</a>.",
 		"published": "Julkaissut",
 		"publishedOn": "-"
 	},

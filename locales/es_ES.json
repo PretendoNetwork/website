@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "¿Cómo uso Pretendo?",
-				"answer": "Para comenzar a utilizar Pretendo Network en 3DS, Wii U o emuladores, consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a>."
+				"answer": "¡Para empezar a usar Pretendo Network en 3DS, Wii U o emuladores, consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a>!"
 			},
 			{
 				"question": "¿Sabéis cuándo determinada función/servicio estará listo/a?",
@@ -71,21 +71,19 @@
 			},
 			{
 				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
+				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
 				"question": "¿Pretendo será compatible con la Wii/Switch?",
 				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
-				"question": "Si me expulsan en Nintendo Network, ¿seguiré expulsado cuando use Pretendo?"
+				"question": "¿Necesitaré usar hacks para conectarme?",
+				"answer": "Para la mejor experiencia en consolas, necesitarás hackear tu sistema – específicamente Aroma para Wii U y Luma3DS para 3DS. No obstante, en Wii U también está disponible el método SSSL sin hackeo, aunque con funcionalidad limitada. Consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
 			},
 			{
 				"question": "Si se me ha suspendido el acceso a Nintendo Network, ¿se mantendrá el suspenso en Pretendo?",
 				"answer": "No tenemos acceso a las suspensiones de cuenta de Nintendo Network, entonces todos los usuarios de Nintendo Network no están baneados. Sin embargo, tenemos reglas a seguir al usar el servicio y el incumplimiento de estas reglas puede resultar en una suspensión."
-			},
-			{
-				"question": "¿Puedo utilizar trucos o modificaciones con Pretendo?"
 			}
 		]
 	},

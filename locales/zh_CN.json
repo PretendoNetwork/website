@@ -76,6 +76,14 @@
 			{
 				"question": "Pretendo会支持 Wii/Switch 吗？",
 				"answer": "是的，您需要破解您的设备才能连接；但是，在 Wii U 上，您只需要访问 Homebrew Launcher（即 Haxchi、Coldboot Haxchi 甚至网络浏览器漏洞利用程序），稍后会提供有关 3DS 将如何连接的信息。"
+			},
+			{},
+			{
+				"question": "如果我在 Nintendo Network 上被封禁，那么使用 Pretendo 时我还会保持被封禁状态吗？",
+				"answer": "我们无法访问 Nintendo Network 的禁令，因此所有 Nintendo Network 用户禁令都不生效。但是，在使用 Pretendo 服务时需要遵守我们的一些规则，不遵守这些规则可能会导致被封禁。"
+			},
+			{
+				"answer": "仅在私人匹配中可以 - 获得不公平的优势或破坏未经同意的人的在线体验（如在公开匹配中）是会被封禁的违规行为。我们定期封禁 Wii U 和 3DS 系统应用帐户和主机。Pretendo 使用额外的安全措施，使传统的“解禁”方法（例如更改序列号）无效。"
 			}
 		]
 	},
@@ -99,11 +107,93 @@
 	},
 	"credits": {
 		"title": "团队",
-		"text": "认识项目背后的团队"
+		"text": "认识项目背后的团队",
+		"people": [
+			{
+				"name": "乔纳森·巴罗 (jonbarrow)",
+				"caption": "项目所有者和首席开发人员",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"caption": "Miiverse 研究与开发"
+			},
+			{
+				"caption": "Wii U 研究和补丁开发"
+			},
+			{
+				"caption": "系统研究和服务器架构"
+			},
+			{
+				"caption": "Web 开发"
+			},
+			{
+				"caption": "系统研究和服务器开发"
+			},
+			{},
+			{
+				"caption": "系统研究和服务器开发"
+			},
+			{},
+			{
+				"caption": "DevOps 和社区工作"
+			},
+			{
+				"caption": "服务器开发与优化"
+			},
+			{
+				"caption": "3DS 补丁开发与研究"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "特别感谢",
-		"text": "没有他们，Pretendo 就不会是今天的样子。"
+		"text": "没有他们，Pretendo 就不会是今天的样子。",
+		"people": [
+			{
+				"name": "GitHub 贡献者",
+				"caption": "本地化和其他贡献"
+			},
+			{},
+			{
+				"caption": "3DS 开发和 NEX 解析器"
+			},
+			{
+				"caption": "Miiverse 信息分享"
+			},
+			{
+				"special": "特别感谢",
+				"caption": "对 Nintendo 数据结构的研究"
+			},
+			{
+				"caption": "Mii 编辑器和 Juxt 反应的图标"
+			},
+			{
+				"caption": "主机研究和游戏服务器"
+			},
+			{
+				"caption": "Wii U 补丁开发"
+			},
+			{
+				"caption": "3DS 补丁创建"
+			},
+			{
+				"caption": "服务器架构"
+			},
+			{
+				"caption": "服务器架构"
+			},
+			{
+				"caption": "Splatoon 轮换和研究"
+			},
+			{
+				"caption": "Splatoon 轮换和研究"
+			},
+			{
+				"name": "GitHub 贡献者",
+				"caption": "本地化和其他贡献"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "得到我们的动态与更新",
@@ -132,7 +222,8 @@
 			"超级马里奥世界 2 - 耀西岛 的主题是绝对的爆好听，你无法说服我。",
 			"我最喜欢的 Nintendo Switch 版本是 Nintendo Switch Online + 扩展包、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet another Port Pack 和 Nintendo Switch Online + Kawashima 博士的大脑训练/Brain Age“你真的很喜欢 Nintendo Wii U 虚拟控制台标题，所以我们要把它带回来”包。你真的可以看出任天堂在不在乎。",
 			"就像“你知道 Ash，祝福她的心，她一整天都在 UwU”是南方的一种很好的说法，“Ash一直都是在 uwu ，这真的很奇怪和愚蠢，我希望他们没有”",
-			"涐恠涐の頻檤丄の第①嗰視頻！！涐想製莋視頻已俓佷玖ㄋ，但涐の毞誋夲電脳運哘嘚佷糟糕，涐兂法茼埘運哘 ｆｒāｐ$、$ｋｙｐé 啝 ｍīńéｃｒāｆτ。但現恠結涑ㄋ！恠涐の ＩＴ 佬師の幫助丅，涐の毞誋夲電脳運哘嘚莄ぬㄋ，涐現恠岢苡錄喑ㄋ！涐俙望伱扪嘟囍歡，侞淉伱囍歡，請囍歡啝訂閲！！！"
+			"涐恠涐の頻檤丄の第①嗰視頻！！涐想製莋視頻已俓佷玖ㄋ，但涐の毞誋夲電脳運哘嘚佷糟糕，涐兂法茼埘運哘 ｆｒāｐ$、$ｋｙｐé 啝 ｍīńéｃｒāｆτ。但現恠結涑ㄋ！恠涐の ＩＴ 佬師の幫助丅，涐の毞誋夲電脳運哘嘚莄ぬㄋ，涐現恠岢苡錄喑ㄋ！涐俙望伱扪嘟囍歡，侞淉伱囍歡，請囍歡啝訂閲！！！",
+			"我觉得不错"
 		]
 	},
 	"progressPage": {
@@ -276,5 +367,8 @@
 		"cancel": "取消",
 		"confirm": "确认",
 		"close": "关闭"
+	},
+	"notfound": {
+		"description": "糟糕！我们找不到该页面。"
 	}
 }
