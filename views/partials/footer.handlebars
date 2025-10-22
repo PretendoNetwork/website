@@ -72,7 +72,7 @@
 {{#section 'foot'}}
 	<script>
 		const copyrightYear = document.querySelector("span#copyright-year");
-		copyrightYear.innerText = Date().getFullYear();
+		copyrightYear.innerText = new Date().getFullYear();
 
 		const bandwidthRaccoon = document.querySelector("footer img.bandwidth-raccoon");
 		const bandwidthRaccoonWrapper = document.querySelector("footer .bandwidth-raccoon-wrapper");
