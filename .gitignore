@@ -70,3 +70,7 @@ static-text.json
 
 # keep browserified files out
 *.bundled.js
+
+# remove nuxt files from passing from nuxt-refactor to master
+.nuxt
+.data
