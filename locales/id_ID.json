@@ -386,6 +386,13 @@
 				"no_signins_notice": "Sejerah masuk saat ini tidak dilacak. Silakan cek kembali nanti!",
 				"no_newsletter_notice": "Surat kabar saat ini tidak dilacak. Silakan cek kembali nanti!",
 				"no_edit_from_dashboard": "Pengaturan PNID saat ini tidak dapat diubah melalui situs web. Silakan perbarui pengaturan pengguna dari konsol game yang terhubung."
+			},
+			"delete": {
+				"button": "Hapus Akun",
+				"modalTitle": "Hapus PNID",
+				"modalCaution": "Tindakan ini tidak dapat dibatalkan.",
+				"modalConfirm": "Ya, hapus",
+				"modalDescription": "Apakah Anda yakin ingin menghapus PNID Anda? Semua data Anda di layanan seperti forum, Miiverse, dll., akan dihapus. Data Stripe dan langganan Anda juga akan dihapus secara otomatis."
 			}
 		},
 		"accountLevel": [
