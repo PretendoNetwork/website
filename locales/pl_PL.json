@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Jak mogę użyć Pretendo?",
-				"answer": "Pretendo nie jest aktualnie w takim stanie, w którym może być wykorzystywane publicznie. Jednak gdy będzie już dostępne, będziesz mógł otrzymać dostęp do Pretendo uruchamiając patcher homebrew na twojej konsoli."
+				"answer": "Aby zacząć używać Pretendo Network na 3DS, WII U lub emulatorach, prosimy użyć naszych <a href='/docs/install'>instrukcji instalacji</a>!"
 			},
 			{
 				"question": "Czy zespół Pretendo wie, kiedy funkcja/usługa będzie gotowa?",
@@ -99,7 +99,18 @@
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół, który tworzy projekt"
+		"text": "Poznaj zespół, który tworzy projekt",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Właściciel projektu i główny deweloper",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",

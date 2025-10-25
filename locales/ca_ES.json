@@ -62,7 +62,7 @@
 				"answer": "No. Moltes de les funcions i dels serveis del Pretendo es desenvolupen de manera independent (per exemple, un desenvolupador pot treballar en Miiverse mentre que Comptes i Amics ho fa un altre) i, per tant, no podem donar una estimació de quant de temps trigarà tot en general."
 			},
 			{
-				"question": "Funciona el Pretendo al Cemu o als emuladors?",
+				"question": "Quan afegireu més jocs?",
 				"answer": "Pretendo suporta qualsevol client que pugui interactuar amb Nintendo Network. Actualment, l'únic emulador amb aquesta funció és Cemu. Cemu 2.0 suporta oficialment Pretendo sota la teva configuració del compte de Nintendo Network. Per a més informació sobre com iniciar-se amb Cemu, mira't <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra no suporta el joc en línia de veritat i, per tant, no funciona amb Pretendo i no mostra cap signe de que realment funcioni, el joc en línia. Mikage, un emulador de 3DS per a mòbils podria rebre suport en el futur, tot i que és lluny de ser cert.\n\nPretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
 			},
 			{
@@ -76,6 +76,9 @@
 			{
 				"question": "Necessitaré hacks per connectar-me?",
 				"answer": "Sí, caldrà una consola hackejada per connectar-se; tanmateix, els usuaris de la Wii U només necessitaran accés al Homebrew Launcher (és a dir, Haxchi, Coldboot Haxchi o fins i tot l'exploit del navegador web) i informació sobre com es connectarà la 3DS arribarà més endavant."
+			},
+			{
+				"question": "Necessitaré hacks per connectar-me?"
 			}
 		]
 	},

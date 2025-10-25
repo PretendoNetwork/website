@@ -271,7 +271,14 @@
 				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
 			},
 			"upgrade": "Fiók bővítése",
-			"unavailable": "Nem elérhető"
+			"unavailable": "Nem elérhető",
+			"delete": {
+				"button": "Fiók törlése",
+				"modalTitle": "PNID törlése",
+				"modalDescription": "Biztosan törölni szeretnéd a PNID-ed? Az adataid a különböző szolgáltatásokban, mint pl. a fórumok, Miiverse, stb. eltávolításra kerültnek. A Stripe adatod és előfizetésed is törlésre kerül.",
+				"modalCaution": "Ez nem visszafordítható.",
+				"modalConfirm": "Igen, töröld"
+			}
 		},
 		"accountLevel": [
 			"Normál",
