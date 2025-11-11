@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { FetchError } from 'ofetch';
+
 interface InfoCCResponse {
 	username: string;
 	access_level: number;
@@ -31,32 +33,49 @@ interface DiscordInfoResponse {
 
 const route = useRoute();
 const router = useRouter();
-const account = await useFetch<InfoCCResponse>('/api/account/info'); // TODO: easy way to share this between navbar and account page? is that a good idea?
 
 const showingEditingDisabledModal = ref(false);
 
-if (route.params.connection) { // my nightmares are made of this logic
-	if (import.meta.server) {
-		switch (route.params.connection) { // future proofing for more connections?
-			case 'discord': {
-				if (route.query.code) {
-					await useFetch('/api/account/connections/discord/add', {
+const errorMessage = useState<string | null>('errorMsg');
+const successMessage = useState<string | null>('successMsg');
+
+await callOnce(async () => {
+	const headers = useRequestHeaders(['cookie']);
+
+	switch (route.params.connection) { // future proofing for more connections?
+		case 'discord': {
+			if (typeof route.query.code == 'string') {
+				try {
+					await $fetch('/api/account/connections/discord/add', {
 						method: 'POST',
 						body: {
 							code: route.query.code
-						}
+						},
+						headers
 					});
-				}
-				break;
-			}
-			default:
-				break;
-		}
-	}
-	router.replace('/account');
-}
 
-const discordInfo = await useFetch<DiscordInfoResponse>('/api/account/connections/discord/info');
+					successMessage.value = 'Successfully connected to Discord'; // TODO: replace this toast + localize
+				} catch (error: unknown) {
+					if (error instanceof FetchError) {
+						if (error.statusText) {
+							errorMessage.value = error.statusText;
+						}
+					} else {
+						errorMessage.value = `Error during registration: ${error}`; // TODO: localize
+					}
+				}
+			}
+			break;
+		}
+		default:
+			break;
+	}
+});
+
+router.replace('/account'); // always smash the query parameters when we're done with them
+
+const discordInfo = await useFetch<DiscordInfoResponse>('/api/account/connections/discord/info'); // lazy to prevent scrollbar from snapping
+const account = await useFetch<InfoCCResponse>('/api/account/info'); // TODO: easy way to share this between navbar and account page? is that a good idea?
 
 async function handleUnlinkDiscord() {
 	try {
@@ -406,9 +425,11 @@ async function handleUnlinkDiscord() {
         </div>
       </div>
     </div>
+
     <div
+      v-if="showingEditingDisabledModal"
       id="edit-settings"
-      :class="`modal-wrapper${showingEditingDisabledModal ? '' : ' hidden'}`"
+      class="modal-wrapper"
     >
       <div class="modal">
         <h1 class="title dot">
@@ -426,6 +447,24 @@ async function handleUnlinkDiscord() {
             {{ $t("modals.close") }}
           </button>
         </div>
+      </div>
+    </div>
+
+    <div
+      v-if="errorMessage"
+      class="banner-notice error"
+    >
+      <div>
+        <p>{{ errorMessage }}</p>
+      </div>
+    </div>
+
+    <div
+      v-if="successMessage"
+      class="banner-notice success"
+    >
+      <div>
+        <p>{{ successMessage }}</p>
       </div>
     </div>
   </div>
@@ -701,7 +740,8 @@ fieldset {
 .banner-notice {
 	display: flex;
 	justify-content: center;
-	position: fixed;
+	position: absolute;
+	left: 0;
 	top: -150px;
 	width: 100%;
 	animation: banner-notice 5s;

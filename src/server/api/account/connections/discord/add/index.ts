@@ -33,7 +33,9 @@ export default defineEventHandler(async (event) => {
 			}
 		});
 
-		return { success: true }; // TODO: figure out why $fetch doesn't send cookies but useFetch does so this dumb fix can be removed
+		event.node.res.end();
+
+		return;
 	} catch (error: unknown) {
 		console.log(error);
 		if (error instanceof FetchError) {
