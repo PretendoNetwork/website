@@ -271,7 +271,14 @@
 				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
 			},
 			"upgrade": "Fiók bővítése",
-			"unavailable": "Nem elérhető"
+			"unavailable": "Nem elérhető",
+			"delete": {
+				"button": "Fiók törlése",
+				"modalTitle": "PNID törlése",
+				"modalCaution": "Ez nem visszafordítható.",
+				"modalConfirm": "Igen, töröld",
+				"modalDescription": "Biztosan törölni szeretnéd a PNID-ed? Gondold át a következőket a törlés előtt:\n\nAz adataid minden Pretendo Network szolgáltatásban (beleértve a Fórumot és a Juxtaposition-t) eltávolításra kerültnek.\nA Stripe adatod és előfizetésed is törlésre kerül.\nNem tudod használni ugyanezt a PNID-t egy új fiók számára a jövőben.\nA fiók törlése nem oldja meg a bannolást vagy a technikai problémákat. Ha problémád van, használd a Fórum-ot segítségért."
+			}
 		},
 		"accountLevel": [
 			"Normál",
