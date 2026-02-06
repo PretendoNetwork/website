@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "Über uns",
 		"faq": "FAQ",
-		"docs": "Docs",
+		"docs": "Dokumente",
 		"credits": "Mitwirkende",
 		"progress": "Fortschritt",
 		"blog": "Blog",
@@ -55,10 +55,10 @@
 			},
 			{
 				"question": "Wie benutze ich Pretendo?",
-				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>"
+				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>!"
 			},
 			{
-				"question": "Weißt du, wann Funktion/Dienst bereit ist?",
+				"question": "Weißt du, wann [Funktion/Dienst] bereit ist?",
 				"answer": "Nein. Die verschiedenen Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt, z. B. arbeitet ein Entwickler am Miiverse, während ein anderer an Accounts und der Freundesliste arbeitet. Daher können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
 			},
 			{
@@ -71,7 +71,7 @@
 			},
 			{
 				"question": "Ist Pretendo mit Cemu oder anderen Emulatoren kompatibel?",
-				"answer": "Cemu 2.1 unterstützt offiziell Pretendo unter den Netzwerk-Account-Optionen im Emulator. Für mehr Informationen, wie du mit Cemu loslegen kannst, beachte bitte die <a href=\"https://pretendo.network/docs/install/cemu\">Dokumentation</a>br&gt; Einige 3DS-Emulatoren oder Forks könnten uns unterstützen, aber wir haben zu dieser Zeit keine offizielle Empfehlung oder Setup-Anleitung. Die letzten Builds von Citra unterstützen Pretendo nicht."
+				"answer": "Cemu 2.1 unterstützt Pretendo offiziell unter den Account Einstellungen in den Allgemeinen Einstellungen im Emulator. Weitere Informationen zum Eirichten von Cemu findet man in der <a href=\"„https://pretendo.network/docs/install/cemu“\">Dokumentation</a>. Einige 3DS-Emulatoren oder deren Forks könnten zwar mit Pretendo kompatibel sein, jedoch wir haben derzeit keine offizielle Empfehlung oder gar eine Setup-Anleitung. Bitte beachte, das die finalen Citra Versionen unterstützen Pretendo nicht."
 			},
 			{
 				"question": "Wird Pretendo die Wii oder die Switch unterstützen?",
@@ -105,7 +105,7 @@
 			},
 			{
 				"title": "Cemu-Unterstützung",
-				"caption": "Spiele deine Lieblings-Wii U-Spiele, sogar ohne eine Konsole!"
+				"caption": "Spiele deine lieblings Wii U-Spiele, sogar ohne eine Konsole!"
 			}
 		]
 	},
@@ -224,7 +224,7 @@
 			},
 			{
 				"name": "NinStar",
-				"caption": "Symbole für dem Mii-Editor und Juxt-Reaktionen",
+				"caption": "Symbole für den Mii-Editor und Juxt-Reaktionen",
 				"picture": "https://github.com/ninstar.png",
 				"github": "https://github.com/ninstar"
 			},
@@ -404,7 +404,7 @@
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
 		"unsub": "Deabonnieren",
-		"unsubPrompt": "Bist du dir wirklich sicher, dass du dich von <span>tiername</span> ablemden möchtest? Du wirst  <span>sofort</span> den Zugriff auf die Vorteile dieser Stufe verlieren.",
+		"unsubPrompt": "Bist du dir wirklich sicher, dass du dich von <span>tiername</span> abmelden möchtest? Du wirst <span>sofort</span> den Zugriff auf die Vorteile dieser Stufe verlieren.",
 		"unsubConfirm": "Deabonnieren",
 		"changeTier": "Stufe ändern",
 		"changeTierPrompt": "Bist du dir sicher, dass du <span class=\"oldtier\">oldtiername</span> deabonnieren und <span class=\"newtier\">newtiername</span> abonnieren möchtest?",
