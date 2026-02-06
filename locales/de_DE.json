@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "Über uns",
 		"faq": "FAQ",
-		"docs": "Dokumente",
+		"docs": "Dokumentation",
 		"credits": "Mitwirkende",
 		"progress": "Fortschritt",
 		"blog": "Blog",
@@ -79,7 +79,7 @@
 			},
 			{
 				"question": "Werde ich meine Konsole modifizieren müssen, um mich verbinden zu können?",
-				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind keine Nintendo Network Nutzer gebannt. Allerdings haben wir Regeln, die bei der Nutzung des Dienstes befolgt werden müssen, und die Nichteinhaltung dieser Regeln kann zu einem Bann führen."
+				"answer": "Für die beste Nutzererfahrung auf der Konsole musst du dein System modifizieren. Spezifisch mit Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist allerdings die SSSL Methode verfügbar, die zwar eingeschränkte Funktionen bietet, es aber nicht erfordert die Konsole zu modifizieren. Für weitere Informationen: <a href=\"/docs/install\">Pretendo installieren</a>."
 			},
 			{
 				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo gebannt sein?",
@@ -87,7 +87,7 @@
 			},
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
-				"answer": "In privaten Matches sind Modifikationen und Cheats erlaubt. In öffentlichen Matches ist es jedoch ein bannbarer Verstoß sich einen unfairen Vorteil zu verschaffen und/oder das Online-Erlebnis anderer zu stören. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo verfügt über zusätzliche Sicherheitsmaßnahmen, welche herkömmliche Methoden zur Umgehung dieser, wie das Ändern der Seriennummer, unwirksam machen."
+				"answer": "Nur in privaten Matches, bei denen alle Teilnehmer einverstanden sind. Sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche Entbannungsmethoden, wie das Ändern der Seriennummer, unwirksam machen."
 			}
 		]
 	},
