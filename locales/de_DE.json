@@ -373,7 +373,14 @@
 				"userSettings": "Nutzer-Einstellungen"
 			},
 			"upgrade": "Konto upgraden",
-			"unavailable": "Nicht verfügbar"
+			"unavailable": "Nicht verfügbar",
+			"delete": {
+				"modalConfirm": "Ja, löschen",
+				"modalDescription": "Bist du dir sicher, dass du deine PNID löschen möchtest? Bitte beachte folgende Sachen vor der Löschung:\n\nAll deine Daten (Miiverse/Juxtaposition, Forums, etc.) werden gelöscht.\nDeine Stripe Daten und Abonnement werden auch automatisch gelöscht.\nEs wird nicht möglich sein die gleiche PNID für einen neuen Account zu nutzen.\nDie Accountlöschung löst keine Probleme mit Banns oder Technischem Support. Wenn es Probleme gibt, wende dich bitte zum Forum für Support.",
+				"button": "Konto löschen",
+				"modalTitle": "PNID löschen",
+				"modalCaution": "Dieser Vorgang kann nicht rückgängig gemacht werden."
+			}
 		},
 		"banned": "Gebannt",
 		"account": "Konto",
