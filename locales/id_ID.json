@@ -309,7 +309,7 @@
 			"Wii U sebenarnya adalah sistem yang diremehkan: iklannya sangat buruk, tetapi konsolnya hebat. Huh, tunggu sebentar, saya tidak yakin mengapa GamePad saya tidak terhubung ke Wii saya.",
 			"Tema utama Super Mario World 2 - Yoshi's Island benar-benar hebat dan tidak mungkin Anda akan meyakinkan saya sebaliknya.",
 			"Rilisan Nintendo Switch favorit saya adalah Nintendo Switch Online + Paket Ekspansi, Nintendo Switch Online + Paket Rumble, Nintendo Switch Online + Paket Permainan Offline, Nintendo Switch Online + Paket Rilis Ulang Sekali Lagi, dan Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Anda Sangat Menyukai Judul Konsol Virtual Nintendo Wii U, Jadi Kami Hadirkan Kembali\" Pack. Anda benar-benar melihat Nintendo peduli.",
-			"Seperti \"Kau tahu Ash, hatinya diberkati, dia UwU sepanjang hari\" adalah cara orang Amerika Serikat selatan yang baik untuk mengatakan \"Ash uwus sepanjang waktu dan itu benar-benar aneh dan bodoh dan aku berharap mereka tidak melakukannya\"",
+			"Seperti \"Kau tahu Kip, hatinya diberkati, dia UwU sepanjang hari\" adalah cara orang Amerika Serikat selatan yang baik untuk mengatakan \"Kip uwus sepanjang waktu dan itu benar-benar aneh dan bodoh dan aku berharap mereka tidak melakukannya\"",
 			"Video pertamaku di saluranku!! Aku sudah lama ingin membuat video, tetapi laptopku berjalan sangat buruk dan aku tidak bisa menjalankan fraps, skype, dan minecraft secara bersamaan. Tapi sekarang sudah selesai! Dengan bantuan dari guru IT-ku, laptopku berjalan jauh lebih baik dan aku bisa merekam sekarang! Aku harap kalian semua menikmatinya dan jika kalian menikmatinya, silakan like dan subscribe!!!",
 			"Kelihatannya Bagus Bagi Saya"
 		]
@@ -386,6 +386,13 @@
 				"no_signins_notice": "Sejerah masuk saat ini tidak dilacak. Silakan cek kembali nanti!",
 				"no_newsletter_notice": "Surat kabar saat ini tidak dilacak. Silakan cek kembali nanti!",
 				"no_edit_from_dashboard": "Pengaturan PNID saat ini tidak dapat diubah melalui situs web. Silakan perbarui pengaturan pengguna dari konsol game yang terhubung."
+			},
+			"delete": {
+				"button": "Hapus Akun",
+				"modalTitle": "Hapus PNID",
+				"modalDescription": "Apakah Anda yakin ingin menghapus PNID Anda? Pertimbangkan hal-hal berikut sebelum menghapus:\n\nData akun Anda di semua layanan Pretendo Network (termasuk Forum dan Juxtaposition) akan dihapus.\nData Stripe dan langganan Anda akan dihapus secara otomatis.\nAnda tidak akan dapat menggunakan PNID yang sama pada akun baru di masa depan.\nMenghapus akun tidak akan menyelesaikan masalah terkait larangan atau dukungan teknis. Jika Anda mengalami masalah, silakan gunakan Forum untuk mendapatkan bantuan.",
+				"modalCaution": "Tindakan ini tidak dapat dibatalkan.",
+				"modalConfirm": "Ya, hapus"
 			}
 		},
 		"accountLevel": [
