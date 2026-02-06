@@ -313,7 +313,14 @@
 				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupná. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
 			},
 			"unavailable": "Nedostupné",
-			"upgrade": "Upgradovat účet"
+			"upgrade": "Upgradovat účet",
+			"delete": {
+				"button": "Smazat účet",
+				"modalTitle": "Smazat PNID",
+				"modalDescription": "Jste si jisti, že chcete smazat Vaše PNID? Zvažte prosím následující, než budete pokračovat:\n\nData spojená s Vaším účtem napříč službami Pretendo Network (včetně fóra a Juxtaposition) budou smazána.\nVaše předplatné bude zrušeno a data na platební bráně Stripe odstraněna.\nVytvoříte-li si v budoucnu nový účet, nebudete si na něm moct nastavit stejné uživatelské jméno.\nSmazání účtu nevyřeší problémy s bany a/nebo technickou podporou. Pokud máte potíže, požádejte o pomoc na fóru.",
+				"modalCaution": "Tento úkon nelze vrátit zpět.",
+				"modalConfirm": "Ano, smazat"
+			}
 		},
 		"accountLevel": [
 			"Standardní",
