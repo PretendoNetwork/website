@@ -405,7 +405,14 @@
 				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
 			},
 			"upgrade": "Mettre à Niveau le compte",
-			"unavailable": "Indisponible"
+			"unavailable": "Indisponible",
+			"delete": {
+				"button": "Supprimer le compte",
+				"modalTitle": "Supprimer votre Identifiant Nintendo Network (PNID)",
+				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID? Veuillez tenir compte des éléments suivants avant la suppression:\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
+				"modalCaution": "Cette action ne peut pas être annulée.",
+				"modalConfirm": "Oui, supprimer"
+			}
 		},
 		"banned": "Banni",
 		"accountLevel": [
