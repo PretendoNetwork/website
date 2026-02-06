@@ -23,7 +23,7 @@
 		}
 	},
 	"hero": {
-		"subtitle": "オンラインを",
+		"subtitle": "ゲームサーバー",
 		"title": "取り戻す",
 		"text": "Pretendo（プリテンドー）は、ニンテンドー3DSとWii Uの無料かつオープンソースの代替サーバーです。公式サーバーが稼働停止したあとも、オンライン接続を実現します。",
 		"buttons": {
@@ -392,6 +392,13 @@
 				"linkDiscord": "Discordアカウントを連携する",
 				"no_signins_notice": "ログイン履歴は現在追跡されていません。後でもう一度ご確認ください。",
 				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度ご確認ください。"
+			},
+			"delete": {
+				"button": "アカウントを削除",
+				"modalTitle": "PNIDを削除",
+				"modalDescription": "本当に PNID を削除してもよろしいですか？削除する前に、以下の点をご確認ください。\n\nすべての Pretendo Network サービス（フォーラムおよび Juxtaposition を含む）におけるアカウントデータは完全に削除されます。\nStripe のデータおよびサブスクリプションは自動的に削除されます。\n同じ PNID を今後新しいアカウントで利用することはできません。\nアカウントを削除しても、BANや技術的サポートに関する問題は解決されません。問題がある場合は、フォーラムをご利用ください。",
+				"modalCaution": "この操作は戻せません。",
+				"modalConfirm": "削除"
 			}
 		},
 		"accountLevel": [
