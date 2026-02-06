@@ -374,7 +374,10 @@
 				"no_newsletter_notice": "La newsletter non è al momento disponibile. Ricontrolla più tardi"
 			},
 			"upgrade": "Fai l'upgrade del tuo account",
-			"unavailable": "Non disponibile"
+			"unavailable": "Non disponibile",
+			"delete": {
+				"button": "Elimina Account"
+			}
 		},
 		"account": "Account",
 		"forgotPassword": {
