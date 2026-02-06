@@ -66,16 +66,27 @@
 				"answer": "Treballem en jocs nous un cop les nostres llibreries el puguin donar soport, i hi hagi temps de desenvolupament disponible per mantenir-lo. Molta de la nostra feina està dirigida a estabilitzar i completar jocs ja existents - volem tenir la millor experiència posible en aquests jocs abans de anar-nos cap a nous títols. Com que sempre hi ha nova feina, no podem fer cap aproximació de quan podríem donar suport a més jocs."
 			},
 			{
-				"question": "Si se'm va prohibir l'accés a la Nintendo Network, continuarà prohibit al Pretendo?",
-				"answer": "No tindrem accés a les prohibicions d'accés de la Nintendo Network i a tots els usuaris no se'ls prohibirà utilitzar el nostre servei. Malgrat això, tindrem normes a seguir abans d'utilitzar el servei i, si aquestes normes no es compleixen, podria resultar en la prohibició del nostre servei."
+				"question": "Si faig servir un emulador, no necessito res més per fer servir Pretendo?",
+				"answer": "No. Per raons de seguretat i moderació, encara que facis servir un emulador, necessitaràs una consola real. Això ens permet millorar la seguretat i reforçar l’efectivitat de les normes per a oferir una experiència agradable i segura amb el nostre servei."
 			},
 			{
 				"question": "Funciona Pretendo al Cemu o als emuladors?",
 				"answer": "Cemu 2.1 té suport oficial per a Pretendo sota les opcions de compte per internet a l'emulador. Per a més informació de com iniciar-se amb Cemu, llegiu-vos la <a href=\"https://pretendo.network/docs/install/cemu\">documentació</a>. Certs emuladors de 3DS o derivacions d'aquest podrien funcionar, però no tenim cap recomanació oficial o instruccions d'inici ara mateix. Les últimes versions de Citra no funcionen amb Pretendo."
 			},
 			{
-				"question": "Necessitaré hacks per connectar-me?",
-				"answer": "Sí, caldrà una consola hackejada per connectar-se; tanmateix, els usuaris de la Wii U només necessitaran accés al Homebrew Launcher (és a dir, Haxchi, Coldboot Haxchi o fins i tot l'exploit del navegador web) i informació sobre com es connectarà la 3DS arribarà més endavant."
+				"question": "Pretendo donarà suport a Wii i/o Switch?",
+				"answer": "La Wii ja té servidors personalitzats de part de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no tenim previst centrar-nos en la Switch ja que és un servei de pagament i totalment diferent a la Nintendo Network."
+			},
+			{
+				"question": "Necessitaré hacks per connectar-me?"
+			},
+			{
+				"question": "Si se m’ha vetat l’accés de Nintendo Network, seguiré vetat quan faci servir Pretendo?",
+				"answer": "No tenim accés als vets de Nintendo Network, de manera que cap usuari de Nintendo Network està vetat. Tammateix, tenim normes que cal seguir per fer ús del servei i l’incompliment d’elles pot comportar un vet."
+			},
+			{
+				"question": "Puc fer servir trucs o mods online amb Pretendo?",
+				"answer": "Només en partides privades - tenir avantatge o fastiguejar l’experiència online de gent que no n’ha donat consentiment (i en partides públiques) és una infracció vetable. Sovint vetem comptes i consoles tant a Wii U com a 3DS. Pretendo fa servir mètodes de seguretat més sofisticats que fan que els mètodes tradicionals d’eliminar vets no siguin efectius, com ara canviar el número de sèrie."
 			}
 		]
 	},
@@ -85,7 +96,7 @@
 		"cards": [
 			{
 				"title": "Servidors en línia",
-				"caption": "Tornem els teus jocs en línia preferits mitjançant servidors personalitzats."
+				"caption": "Revivim els teus jocs en línia preferits mitjançant servidors personalitzats."
 			},
 			{
 				"caption": "Una re-imaginació del Miiverse, com si s'hagués fet en una època més moderna.",
@@ -99,7 +110,13 @@
 	},
 	"credits": {
 		"title": "L'equip",
-		"text": "Coneix l'equip que hi ha darrere del projecte"
+		"text": "Coneix l'equip que hi ha darrere del projecte",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Propietari del projecte i desenvolupador principal"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Gràcies especials",
