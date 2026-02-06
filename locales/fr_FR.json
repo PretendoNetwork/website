@@ -50,7 +50,7 @@
 				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "Puis-je me connecter à Pretendo avec un identifiant Nintendo Network existant ?",
+				"question": "J'ai déjà un identifiant Nintendo Network, puis-je l'utiliser avec Pretendo ?",
 				"answer": "Malheureusement, non. Les identifiants existants ne seront pas conservés, et Nintendo restera le seul détenteur de vos données personnelles. Bien qu'une extraction des informations soit théoriquement possible, cela reviendrait à récupérer des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
@@ -62,16 +62,16 @@
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
-				"question": "Quand d'autres jeux seront-ils ajoutés ?",
-				"answer": "Nous travaillons sur de nouveaux jeux une fois que nous estimons que nos bibliothèques internes sont prêtes à les prendre en charge et que du temps de développement est disponible pour les maintenir. Une grande partie de notre travail consiste à stabiliser et finaliser nos jeux existants – nous voulons offrir la meilleure expérience possible avant de passer à de nouveaux titres. Comme de nouvelles tâches surgissent constamment, nous ne pouvons pas estimer quand cela se produira."
+				"question": "Quand allez-vous supporter plus de jeux ?",
+				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo ?",
-				"answer": "Non. Pour des raisons de sécurité et de modération, si vous utilisez un émulateur, vous aurez toujours besoin d'une vraie console. Cela permet une meilleure sécurité et une modération plus efficace pour permettre de créer une expérience sûre et satisfaisante de notre service."
+				"question": "Un émulateur seul est-il suffisant pour utiliser Pretendo ?",
+				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
 				"question": "Pretendo fonctionne-t-il sur Cemu ou un autre émulateur ?",
-				"answer": "La version 2.1 de Cemu prend Pretendo en charge, via les paramètres de connexion de l'émulateur. Pour plus d'informations sur comment s'y prendre, référez-vous à la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br> Certains émulateurs 3DS prennent charge Pretendo, nous n'avons pas de recommandations officielles ou de procédures d'installation pour l'instant. La version la plus récente de Citra ne prend pas en charge Pretendo."
+				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
 				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
@@ -232,7 +232,7 @@
 				"name": "Rambo6Glaz",
 				"picture": "https://github.com/EpicUsername12.png",
 				"github": "https://github.com/EpicUsername12",
-				"caption": "Recherches consoles et serveurs de jeu"
+				"caption": "Recherche sur les consoles, serveurs de jeux"
 			},
 			{
 				"caption": "Développement de patch pour la Wii U",
@@ -346,7 +346,7 @@
 			"title": "Avez-vous un code d'erreur ?",
 			"label": "Code d'erreur",
 			"caption": "Inscrivez-le ci-dessous pour de plus amples informations !",
-			"no_match": "Aucun résultat"
+			"no_match": "Aucun résultat trouvé"
 		},
 		"sidebar": {
 			"search": "Recherche",
@@ -361,14 +361,14 @@
 		"loginForm": {
 			"login": "Se connecter",
 			"detailsPrompt": "Saisissez vos informations de connexion",
-			"password": "Mot de Passe",
+			"password": "Mot de passe",
 			"loginPrompt": "Compte déjà existant ?",
 			"username": "Nom d'utilisateur",
 			"register": "S'inscrire",
-			"confirmPassword": "Confirmez le Mot de Passe",
+			"confirmPassword": "Confirmez le mot de passe",
 			"email": "Email",
 			"miiName": "Surnom du Mii",
-			"forgotPassword": "Mot de Passe oublié ?",
+			"forgotPassword": "Mot de passe oublié ?",
 			"registerPrompt": "Pas encore inscrit ?"
 		},
 		"settings": {
@@ -376,7 +376,7 @@
 				"gender": "Sexe",
 				"profile": "Profil",
 				"nickname": "Surnom",
-				"birthDate": "Date de Naissance",
+				"birthDate": "Date de naissance",
 				"country": "Pays/Région",
 				"timezone": "Fuseau horaire",
 				"serverEnv": "Environment du Serveur",
@@ -387,7 +387,7 @@
 				"newsletterPrompt": "Recevoir les mises à jour par mail (vous pouvez vous désinscrire à tout moment)",
 				"signInSecurity": "Inscription et sécurité",
 				"email": "Email",
-				"password": "Mot de Passe",
+				"password": "Mot de passe",
 				"passwordResetNotice": "Une fois votre mot de passe changé, vous serez déconnecté de tous les appareils.",
 				"signInHistory": "Historique de connexion",
 				"fullSignInHistory": "Voir l'historique de connexion intégral",
@@ -398,20 +398,20 @@
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
 				"newsletter": "Newsletter",
-				"passwordPrompt": "Entrez votre mot de passe d'Identifiant Pretendo Network (PNID) pour télécharger les fichiers Cemu",
+				"passwordPrompt": "Entrez le mot de passe de votre identifiant Pretendo (PNID) pour télécharger les fichiers Cemu",
 				"no_edit_from_dashboard": "La configuration des paramètres PNID depuis le menu utilisateur est actuellement indisponible. Veuillez procéder aux changements depuis votre console.",
-				"userSettings": "Paramètres du Compte",
-				"no_signins_notice": "L'historique de connexion n'est pas encore établi. Réessayez ultérieurement.",
-				"no_newsletter_notice": "Newsletter non disponible actuellement. Revenez plus tard"
+				"userSettings": "Paramètres du compte",
+				"no_signins_notice": "L'historique de connexion n'est pas encore implémenté. Revenez plus tard !",
+				"no_newsletter_notice": "La newsletter n'est pas encore disponible. Revenez plus tard"
 			},
 			"upgrade": "Mettre à Niveau le compte",
 			"unavailable": "Indisponible",
 			"delete": {
 				"button": "Supprimer le compte",
-				"modalTitle": "Supprimer votre Identifiant Nintendo Network (PNID)",
+				"modalTitle": "Supprimer votre compte",
 				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID? Veuillez tenir compte des éléments suivants avant la suppression:\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
 				"modalCaution": "Cette action ne peut pas être annulée.",
-				"modalConfirm": "Oui, supprimer"
+				"modalConfirm": "Oui, supprimez mon compte"
 			}
 		},
 		"banned": "Banni",
@@ -431,7 +431,7 @@
 		"resetPassword": {
 			"header": "Réinitialiser le mot de passe",
 			"sub": "Entrez le nouveau mot de passe ci-dessous",
-			"password": "Mot de Passe",
+			"password": "Mot de passe",
 			"confirmPassword": "Confirmez le mot de passe",
 			"submit": "Soumettre"
 		}
