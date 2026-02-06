@@ -78,7 +78,8 @@
 				"answer": "La Wii ja té servidors personalitzats de part de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no tenim previst centrar-nos en la Switch ja que és un servei de pagament i totalment diferent a la Nintendo Network."
 			},
 			{
-				"question": "Necessitaré hacks per connectar-me?"
+				"question": "Necessitaré hacks per connectar-me?",
+				"answer": "Per a la millor experiència a consoles, també necessitaràs hackejar el teu sistema - específicament Aroma per la Wii U i Luma3DS per la 3DS. Tanmateix, a la Wii U, el mètode SSSL sense hacks també està disponible amb funcionalitat limitada. Mira les <a href=\"/docs/install\">instruccions de configuració</a> per detalls."
 			},
 			{
 				"question": "Si se m’ha vetat l’accés de Nintendo Network, seguiré vetat quan faci servir Pretendo?",
