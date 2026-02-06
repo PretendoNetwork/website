@@ -84,6 +84,10 @@
 			{
 				"question": "Si se me ha suspendido el acceso a Nintendo Network, ¿se mantendrá el suspenso en Pretendo?",
 				"answer": "No tenemos acceso a las suspensiones de cuenta de Nintendo Network, entonces todos los usuarios de Nintendo Network no están baneados. Sin embargo, tenemos reglas a seguir al usar el servicio y el incumplimiento de estas reglas puede resultar en una suspensión."
+			},
+			{
+				"question": "¿Puedo usar trampas o mods con Pretendo?",
+				"answer": "Solo en partidas privadas: obtener una ventaja injusta o interrumpir la experiencia en línea con personas sin consentimiento (como en partidas públicas) es baneable. Regularmente, aplicamos baneos de cuentas y consolas tanto a Wii U como a 3DS. Pretendo utiliza medidas de seguridad adicionales que invalidan los métodos tradicionales de 'desbaneo', como cambiar el número de serie."
 			}
 		]
 	},
@@ -401,7 +405,14 @@
 				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
 			"upgrade": "Subir de rango",
-			"unavailable": "No disponible"
+			"unavailable": "No disponible",
+			"delete": {
+				"button": "Borrar Cuenta",
+				"modalTitle": "Borrar PNID",
+				"modalDescription": "Estás seguro que quieres eliminar tu PNID? Tenga en cuenta lo siguiente antes de la eliminación:\nLos datos de tu cuenta (esto incluye Forum y Juxtaposition) serán borrados en todos los servicios de Pretendo Network.\nTus datos y suscripción de Stripe se eliminarán automáticamente.\nNo serás capaz de usar el mismo PNID en una nueva cuenta en el futuro.\nEliminar una cuenta no soluciona problemas con bandos o soporte técnico. Si tienes un problema, por favor use el Forum para asistencia.",
+				"modalCaution": "Está acción no se puede deshacer.",
+				"modalConfirm": "Sí, eliminar"
+			}
 		},
 		"accountLevel": [
 			"Estándar",
