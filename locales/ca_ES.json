@@ -34,7 +34,7 @@
 		"title": "Sobre nosaltres",
 		"paragraphs": [
 			"Pretendo és un projecte de codi obert que pretén recrear la Nintendo Network per a 3DS i Wii U mitjançant enginyeria inversa.",
-			"Com que els nostres serveis són gratuïts i de codi obert, poden existir fins i tot després del tancament inevitable de la Nintendo Network."
+			"Com que els nostres serveis són gratuïts i de codi obert, existiran per molt de temps."
 		]
 	},
 	"progress": {
@@ -54,8 +54,8 @@
 				"answer": "Malauradament, no. Els NNID existents no funcionaran a Pretendo, ja que només Nintendo té les dades dels usuaris; tot i que una migració de NNID a PNID és teòricament possible, seria arriscat i requeriria dades d'usuari sensibles que no volem tenir."
 			},
 			{
-				"question": "Com faig servir el Pretendo?",
-				"answer": "Pretendo no es troba actualment en un estat llest per a l'ús públic. Tanmateix, un cop ho sigui, podràs utilitzar-lo simplement executant el nostre patcher homebrew a la teva consola."
+				"question": "Com faig servir Pretendo?",
+				"answer": "Per començar amb Pretendo Network a 3DS, Wii U o emuladors, si us plau referiu-vos a les nostres <a href='/docs/install'>instruccions d’inici</a>!"
 			},
 			{
 				"question": "Sabeu quan estarà llesta una funció o un servei?",
@@ -63,15 +63,15 @@
 			},
 			{
 				"question": "Funciona el Pretendo al Cemu o als emuladors?",
-				"answer": "Pretendo suporta qualsevol client que pugui interactuar amb Nintendo Network. Actualment, l'únic emulador amb aquesta funció és Cemu. Cemu 2.0 suporta oficialment Pretendo sota la teva configuració del compte de Nintendo Network. Per a més informació sobre com iniciar-se amb Cemu, mira't <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra no suporta el joc en línia de veritat i, per tant, no funciona amb Pretendo i no mostra cap signe de que realment funcioni, el joc en línia. Mikage, un emulador de 3DS per a mòbils podria rebre suport en el futur, tot i que és lluny de ser cert.\n\nPretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
+				"answer": "Treballem en jocs nous un cop les nostres llibreries el puguin donar soport, i hi hagi temps de desenvolupament disponible per mantenir-lo. Molta de la nostra feina està dirigida a estabilitzar i completar jocs ja existents - volem tenir la millor experiència posible en aquests jocs abans de anar-nos cap a nous títols. Com que sempre hi ha nova feina, no podem fer cap aproximació de quan podríem donar suport a més jocs."
 			},
 			{
 				"question": "Si se'm va prohibir l'accés a la Nintendo Network, continuarà prohibit al Pretendo?",
 				"answer": "No tindrem accés a les prohibicions d'accés de la Nintendo Network i a tots els usuaris no se'ls prohibirà utilitzar el nostre servei. Malgrat això, tindrem normes a seguir abans d'utilitzar el servei i, si aquestes normes no es compleixen, podria resultar en la prohibició del nostre servei."
 			},
 			{
-				"question": "Pretendo afegirà compatibilitat amb la Wii o la Switch?",
-				"answer": "La Wii ja té servidors personalitzats a través del <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no volem orientar-nos a la Switch, ja que és de pagament i està completament fora de la Nintendo Network."
+				"question": "Funciona Pretendo al Cemu o als emuladors?",
+				"answer": "Cemu 2.1 té suport oficial per a Pretendo sota les opcions de compte per internet a l'emulador. Per a més informació de com iniciar-se amb Cemu, llegiu-vos la <a href=\"https://pretendo.network/docs/install/cemu\">documentació</a>. Certs emuladors de 3DS o derivacions d'aquest podrien funcionar, però no tenim cap recomanació oficial o instruccions d'inici ara mateix. Les últimes versions de Citra no funcionen amb Pretendo."
 			},
 			{
 				"question": "Necessitaré hacks per connectar-me?",
