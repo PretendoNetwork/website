@@ -381,6 +381,13 @@
 				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
 				"upgradePrompt": "Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.",
 				"no_edit_from_dashboard": "Editing PNID settings from the user dashboard is currently unavailable. Please update user settings from your linked game console"
+			},
+			"delete": {
+				"button": "Delete Account",
+				"modalTitle": "Delete PNID",
+				"modalDescription": "Are you sure you want to delete your PNID? Please consider the following before deletion:\n\nYour account data across all Pretendo Network services (this includes Forum and Juxtaposition) will be erased.\nYour Stripe data and subscription will be automatically deleted.\nYou will not be able to use the same PNID on a new account in the future.\nDeleting an account does not solve issues with bans or technical support. If you have an issue please use the Forum for assistance.",
+				"modalCaution": "This action cannot be undone.",
+				"modalConfirm": "Yes, delete"
 			}
 		},
 		"accountLevel": [
