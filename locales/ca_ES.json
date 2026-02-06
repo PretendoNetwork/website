@@ -115,7 +115,24 @@
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Propietari del projecte i desenvolupador principal"
+				"caption": "Propietari del projecte i desenvolupador principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Recerca i desenvolupament de Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Recerca i desenvolupament de pedaços per a Wii U",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"caption": "Recerca de sistemes i arquitectura de servidors"
 			}
 		]
 	},
@@ -233,7 +250,7 @@
 	"upgrade": {
 		"tierSelectPrompt": "Selecciona un nivell",
 		"unsub": "Donar-se de baixa",
-		"unsubPrompt": "Estàs segur que vols donar-te de baixa de <span>tiername</span>? Perdràs l'accés a les avantatges associades a ell.",
+		"unsubPrompt": "Esteu segurs que voleu cancel·lar la vostra subscripció a <span>tiername</span>? Perdreu l'accés immediatament a tots els beneficis associats amb aquell nivell.",
 		"back": "Endarrere",
 		"month": "Mes",
 		"unsubConfirm": "Donar-se de baixa",
