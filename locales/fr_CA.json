@@ -26,7 +26,8 @@
 		"title": "Recréé",
 		"buttons": {
 			"readMore": "En savoir plus"
-		}
+		},
+		"text": "Pretendo est un remplacement gratuit et open source des serveurs pour la 3DS et la Wii U, permettant une connexion en ligne pour tous, même après la fermeture des serveurs originaux"
 	},
 	"aboutUs": {
 		"title": "À propos de nous",
@@ -49,24 +50,28 @@
 				"answer": "Malheureusement, non. Les identifiants du Nintendo Network ne fonctionneront pas avec Pretendo, puisque seul Nintendo détient vos données d'utilisateur. Bien qu'une extraction des données soit techniquement possible, ça serait risqué et nécessiterait des données personelles d'utilisateurs que nous ne voulons pas détenir."
 			},
 			{
-				"answer": "Afin de commencer l'installation de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href='/docs/install'>guide d'installation</a>!"
+				"answer": "Afin de commencer l'installation de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href='/docs/install'>guide d'installation</a>!",
+				"question": "Comment puis-je utiliser Pretendo ?"
 			},
 			{
 				"question": "Savez-vous quand tel service ou telle fonctionnalité sera prêt(e)?",
 				"answer": "Non. La majorité des fonctionnalités et des services de Pretendo sont développés indépendament (par example, un développeur pourrait être en charge de Miiverse pendant qu'un autre est en charge des Comptes et Amis). Ainsi, nous ne pouvons pas donner une estimation du temps requis pour cela."
 			},
 			{
-				"question": "Quand allez-vous ajouter d'autres jeux?"
+				"question": "Quand allez-vous ajouter d'autres jeux?",
+				"answer": "Nous commencerons à travailler sur de nouveaux jeux une fois que nos librairies backend seront prêtes à le supporter, et que nos développeurs auront du temps disponible pour assurer la maintenance. Une grande partie de notre travail est consacrée à la stabilisation et à la finalisation de nos jeux existants — nous voulons offrir la meilleure expérience possible sur ces titres avant de passer à de nouvelles productions. Puisque de nouveaux projets arrivent constamment, nous ne pouvons en aucun cas estimer quand cela sera possible."
 			},
 			{
-				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo?"
+				"question": "Si j'utilise un émulateur, sera-t-il suffisant pour utiliser Pretendo?",
+				"answer": "Non. Par mesure de sécurité et de modération, si vous utilisez un émulateur, vous avez quand même besoin d'une vraie console. Cela nous permet d'améliorer la sécurité et d'appliquer les règles de manière plus efficace afin d'offrir une expérience sécurisée et agréable via notre service."
 			},
 			{
 				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autres émulateurs?",
 				"answer": "La version 2.1 de Cemu supporte Pretendo sous les paramètres de connexion internet de l'émulateur. Afin d'avoir plus d'information sur l'utilisation de Pretendo avec Cemu, allez-voir la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Certains émulateurs 3DS pourraient prendre en charge Pretendo, mais nous n'avons présentement pas de recommendation officielle ou de guides d'installation. La version la plus récente de Citra ne prend pas en charge Pretendo."
 			},
 			{
-				"answer": "La Wii possède déja des serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Nous ne voulons présentement pas cibler la Switch, car ses services sont payants et complètements différents du Nintendo Network."
+				"answer": "La Wii possède déja des serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Nous ne voulons présentement pas cibler la Switch, car ses services sont payants et complètements différents du Nintendo Network.",
+				"question": "Pretendo supportera la Wii/Switch ?"
 			},
 			{
 				"answer": "Pour la meilleure expérience possible sur console, vous aurez besoin de pirater votre système - par exemple, avec Aroma pour la Wii U et Luma3DS pour la 3DS. Cependant, sur Wii U, la méthode sans piratage SSSL est également disponible, mais avec des fonctionnalités limitées. Regardez le <a href=\"/docs/install\">guide d'installation</a> pour plus de détails.",
@@ -77,7 +82,8 @@
 				"answer": "Nous n'avons pas accès aux bannissements du Nintendo Network, donc aucun utilisateur Nintendo Network sera banni dans Pretendo. Cependant, nous avons des règles à respecter lors de l'utilisation du service. L'infraction d'une règle pourrait mener à un bannissement sur Pretendo."
 			},
 			{
-				"question": "Puis-je tricher ou utiliser des mods (modifications de jeu) en ligne sur Pretendo?"
+				"question": "Puis-je tricher ou utiliser des mods (modifications de jeu) en ligne sur Pretendo?",
+				"answer": "Seulement en matchs privés — obtenir un avantage injuste ou perturber l'expérience en ligne avec des personnes qui n'y ont pas consenti (comme dans les matchs publics) est une infraction passible de bannissement. Nous appliquons régulièrement des bannissements de compte et de console sur les systèmes Wii U et 3DS. Pretendo utilise des mesures de sécurité supplémentaires qui rendent les méthodes traditionnelles de « dé-bannissement » comme changer votre numéro de série inefficaces."
 			}
 		],
 		"title": "Foire Aux Questions",
@@ -86,5 +92,167 @@
 	"progress": {
 		"githubRepo": "Répertoire Github",
 		"title": "Progression"
+	},
+	"showcase": {
+		"title": "Que faisons-nous ?",
+		"text": "Notre projet comporte plusieurs composants. Voici une partie d'entre eux.",
+		"cards": [
+			{
+				"title": "Serveurs de jeu",
+				"caption": "Ramener vos contenus et jeux favoris en utilisant des serveurs personnalisés"
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Une ré-imagination de Miiverse, comme si elle avait été faite dans l'ère moderne"
+			},
+			{
+				"title": "Support Cemu",
+				"caption": "Jouez a vos titres Wii U sans console !"
+			}
+		]
+	},
+	"credits": {
+		"title": "L'équipe",
+		"text": "Rencontrez l'équipe derrière le projet",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Chef de projet et développeur principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Développement et recherche Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Recherches Wii U et développement du patch",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Recherches systèmes et architecture serveur",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "Développement web",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Recherches systèmes et architecture serveur",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Préservation et architecture serveur",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Recherches systèmes et architecture serveur",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Développement serveur et web",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps et travail communautaire",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Développement et optimisation serveur",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Développements et recherches du patch 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Remerciements spéciaux",
+		"text": "Sans eux, Pretendo n'en serait pas là aujourd'hui",
+		"people": [
+			{
+				"name": "Contributeurs GitHub",
+				"caption": "Localisations et autres contributions",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "Développement de la librairie crunch",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "Développement 3DS et dissecteur NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "Partage d'information Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Remerciements spéciaux",
+				"caption": "Recherches sur les structures de données Nintendo",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Icônes pour l'éditeur Mii et les réactions Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Recherches sur les consoles et serveurs de jeu",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Développement du patch WII U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "Créateur du patch 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Architecture serveur",
+				"picture": "https://github.com/mrjvs.png"
+			}
+		]
 	}
 }

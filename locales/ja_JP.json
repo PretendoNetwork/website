@@ -23,7 +23,7 @@
 		}
 	},
 	"hero": {
-		"subtitle": "オンラインを",
+		"subtitle": "ゲームサーバー",
 		"title": "取り戻す",
 		"text": "Pretendo（プリテンドー）は、ニンテンドー3DSとWii Uの無料かつオープンソースの代替サーバーです。公式サーバーが稼働停止したあとも、オンライン接続を実現します。",
 		"buttons": {
@@ -139,9 +139,9 @@
 			},
 			{
 				"caption": "Webの開発",
-				"github": "https://github.com/gitlimes",
-				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png"
+				"github": "https://github.com/limesdotpink",
+				"name": "limes.pink",
+				"picture": "https://github.com/limesdotpink.png"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -304,7 +304,7 @@
 			"Wii Uって人気なさすぎだよね～。たしかに、イメージは薄かったけど、遊んでみれば最高だったよ！あれ、ちょっとまって…なんかゲームパッドがWiiに繋がらないんだけど？",
 			"スーパーマリオ ヨッシーアイランドのメイン テーマはいい曲だよね～！",
 			"ボクのお気に入りのNintendo Switchの作品は、Nintendo Switch Online + 追加パック、Nintendo Switch Online + 振動パック、Nintendo Switch Online + Offlineパック、Nintendo Switch Online + 非公式ポートパック、Nintendo Switch Online + 脳を鍛える大人のトレーニング ～Wii Uバーチャルコンソールが本当に人気なので、復活させます～ パック。任天堂はよくわかってるよね～。",
-			"「あなたはアッシュを知っている、彼女の心を祝福しなさい、彼女は一日中UwUの」というように、南部の素敵な言い方です \"Ash uwusはいつも、それは本当に奇妙で愚かで、私は彼らがそうしなかったらいいのに\"",
+			"「あなたはキップを知っている、彼女の心を祝福しなさい、彼女は一日中UwUの」というように、南部の素敵な言い方です \"キップ uwusはいつも、それは本当に奇妙で愚かで、私は彼らがそうしなかったらいいのに\"",
 			"ボクのチャンネルで最初の動画を公開したよ！！前から動画を作りたいと思っていたけど、ボクのノートパソコンの調子が悪くってね、Fraps とか Skype とか Minecraft を同時に起動できなかったんだよね～。でも、もうだいじょうぶ！IT の先生に聞いてみたら、ノートパソコンの動作が良くなって、録音もできるようになったんだ！よかったら高評価とチャンネル登録してね！",
 			"僕には良い感じに見えるね"
 		]
@@ -392,6 +392,13 @@
 				"linkDiscord": "Discordアカウントを連携する",
 				"no_signins_notice": "ログイン履歴は現在追跡されていません。後でもう一度ご確認ください。",
 				"no_newsletter_notice": "ニュースレターは現在利用できません。後でもう一度ご確認ください。"
+			},
+			"delete": {
+				"button": "アカウントを削除",
+				"modalTitle": "PNIDを削除",
+				"modalDescription": "本当に PNID を削除してもよろしいですか？削除する前に、以下の点をご確認ください。\n\nすべての Pretendo Network サービス（フォーラムおよび Juxtaposition を含む）におけるアカウントデータは完全に削除されます。\nStripe のデータおよびサブスクリプションは自動的に削除されます。\n同じ PNID を今後新しいアカウントで利用することはできません。\nアカウントを削除しても、BANや技術的サポートに関する問題は解決されません。問題がある場合は、フォーラムをご利用ください。",
+				"modalCaution": "この操作は戻せません。",
+				"modalConfirm": "削除"
 			}
 		},
 		"accountLevel": [
