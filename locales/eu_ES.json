@@ -11,7 +11,9 @@
 			"captions": {
 				"blog": "Azken eguneratzeari buruz",
 				"credits": "Taldea ezagutu",
-				"progress": "Proiektuaren aurrerapenak eta helburuak ikusi"
+				"progress": "Proiektuaren aurrerapenak eta helburuak ikusi",
+				"about": "Proiektuari buruz",
+				"faq": "Ohizko galderak"
 			}
 		},
 		"accountWidget": {
@@ -24,9 +26,106 @@
 		"subtitle": "Jokoaren zerbitzariak",
 		"buttons": {
 			"readMore": "Gehiago irakurri"
-		}
+		},
+		"title": "Berregina",
+		"text": "Pretendo Nintendo 3DS eta Wii U kontsoletarako zerbitzarien ordezkaritza doako eta kode irekiko bat da, eta online konexioa ahalbidetzen die guztiei, jatorrizko zerbitzariak eten ondoren ere."
 	},
 	"aboutUs": {
-		"title": "Guri buruz"
+		"title": "Guri buruz",
+		"paragraphs": [
+			"Pretendo kode-irekikoa den proiektu bat da Nintendo Network berregin nahi duena 3DS eta Wii U-rentzat.",
+			"Gure zerbitzuak dohainik eta kode irekikoak direlako, existituko dira epe luzean."
+		]
+	},
+	"progress": {
+		"title": "Aurrerapenak",
+		"githubRepo": "Github biltegia"
+	},
+	"faq": {
+		"title": "Galdera Sarriak",
+		"text": "Hona hemen sarritan galdetzen zaituzten galderak informazio errazentzarako.",
+		"QAs": [
+			{
+				"question": "Zer da Pretendo?",
+				"answer": "Pretendo kode irekiko Nintendo Networkren ordezkapena da Wii U eta 3DS kontsola-familiako zerbitzari pertsonalizatuak sortu nahi duena. Gure helburua kontsola honen online funtzionalitateak babestea da, jokalariei haien Wii U eta 3DS-ko bideojoku gogokoenak ahalbidetzeko gaitasun guztiarekin."
+			},
+			{
+				"question": "Nire NNIDak Pretendon funtzionatuko du?",
+				"answer": "Zoritxarrez, ez. Existitzen diren NNIDak ez dute Pretendon funtzionatuko, Nintendok bakarrik duelako zure erabiltzaile-datuak; NNIDtik PNIDra truke bat posible da teorikoki, baina arriskutsua izango zen eta erabiltzailearen datu nabarmenak (gordetzea nahiago ez ditugun datuak) eskatuko ziren."
+			},
+			{
+				"question": "Nola erabil dezaket Pretendo?",
+				"answer": "Pretendokin hasteko 3DS, Wii U edo emuladoreetan, mesedez <a href='/docs/install'> instalatzeko gida ikusi </a>!"
+			},
+			{
+				"question": "Badakizue zerbitzu/ezaugarriak noiz egongo diren prest?"
+			},
+			{
+				"question": "Noiz gehituko dituzue joko gehiago?"
+			},
+			{
+				"question": "Emuladore bat erabiltzen badut, nahikoa da Pretendo erabiltzeko?"
+			}
+		]
+	},
+	"specialThanks": {
+		"people": [
+			{},
+			{},
+			{},
+			{},
+			{
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast"
+			}
+		]
+	},
+	"notfound": {
+		"description": "Ups! Ezin izan dugu orrialde hau aurkitu."
+	},
+	"modals": {
+		"confirm": "Baieztatu",
+		"cancel": "Ezeztatu"
+	},
+	"docs": {
+		"sidebar": {
+			"juxt_err": "Errore kodeak - Juxt",
+			"search": "Bilatu",
+			"install": "Instalatu",
+			"install_extended": "Pretendo instalatu",
+			"welcome": "Ongi etorri!",
+			"getting_started": "Hasten"
+		},
+		"search": {
+			"label": "Errore kodea",
+			"caption": "Beheko laukian, zure arazoa idatzi arazoaren informazioa eskuratzeko!",
+			"title": "Errore kode bat duzu?"
+		},
+		"quickLinks": {
+			"links": [
+				{},
+				{
+					"caption": "Hemen bilatu",
+					"header": "Errore bat eduki duzu?"
+				}
+			]
+		}
 	}
 }

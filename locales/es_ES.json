@@ -84,6 +84,10 @@
 			{
 				"question": "Si se me ha suspendido el acceso a Nintendo Network, ¿se mantendrá el suspenso en Pretendo?",
 				"answer": "No tenemos acceso a las suspensiones de cuenta de Nintendo Network, entonces todos los usuarios de Nintendo Network no están baneados. Sin embargo, tenemos reglas a seguir al usar el servicio y el incumplimiento de estas reglas puede resultar en una suspensión."
+			},
+			{
+				"question": "¿Puedo usar trampas o mods con Pretendo?",
+				"answer": "Solo en partidas privadas: obtener una ventaja injusta o interrumpir la experiencia en línea con personas sin consentimiento (como en partidas públicas) es baneable. Regularmente, aplicamos baneos de cuentas y consolas tanto a Wii U como a 3DS. Pretendo utiliza medidas de seguridad adicionales que invalidan los métodos tradicionales de 'desbaneo', como cambiar el número de serie."
 			}
 		]
 	},
@@ -134,10 +138,10 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "pinklimes",
+				"name": "limes.pink",
 				"caption": "Desarrollo web",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -300,7 +304,7 @@
 			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi GamePad no se conecta a mi Wii.",
 			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
 			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
-			"Decir “Conoces a Ash, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Ash hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
+			"Decir “Conoces a Kip, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Kip hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
 			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!",
 			"Me parece bien"
 		]
@@ -401,7 +405,14 @@
 				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
 			},
 			"upgrade": "Subir de rango",
-			"unavailable": "No disponible"
+			"unavailable": "No disponible",
+			"delete": {
+				"button": "Borrar Cuenta",
+				"modalTitle": "Borrar PNID",
+				"modalDescription": "Estás seguro que quieres eliminar tu PNID? Tenga en cuenta lo siguiente antes de la eliminación:\nLos datos de tu cuenta (esto incluye Forum y Juxtaposition) serán borrados en todos los servicios de Pretendo Network.\nTus datos y suscripción de Stripe se eliminarán automáticamente.\nNo serás capaz de usar el mismo PNID en una nueva cuenta en el futuro.\nEliminar una cuenta no soluciona problemas con bandos o soporte técnico. Si tienes un problema, por favor use el Forum para asistencia.",
+				"modalCaution": "Está acción no se puede deshacer.",
+				"modalConfirm": "Sí, eliminar"
+			}
 		},
 		"accountLevel": [
 			"Estándar",

@@ -139,9 +139,9 @@
 			},
 			{
 				"caption": "Sviluppo web",
-				"github": "https://github.com/gitlimes",
-				"name": "pinklimes",
-				"picture": "https://github.com/gitlimes.png"
+				"github": "https://github.com/limesdotpink",
+				"name": "limes.pink",
+				"picture": "https://github.com/limesdotpink.png"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -304,7 +304,7 @@
 			"In realtà la Wii U è un sistema sottovalutato: le pubblicità erano terribili, ma la console è fantastica. Hmm, aspetta un secondo, non so perché ma il mio Gamepad non si connette alla mia Wii.",
 			"Il tema principale di Super Mario World 2 - Yoshi's Island è un bop assurdo e non riuscirai mai a convincermi del contrario.",
 			"I miei titoli preferiti per Nintendo Switch sono Nintendo Switch Online + Pacchetto aggiuntivo, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Pacchetto gioco offline, Nintendo Switch Online + Pacchetto l'ennesima port e Nintendo Switch Online + Pacchetto Brain Training del Dr. Kawashima: Quanti anni ha il tuo cervello? \"Il titolo Virtual Console per Wii U vi è piaciuto così tanto che abbiamo deciso di rimetterlo in vendita.",
-			"Tipo \"Conosci Ash, Dio benedica la sua anima, dice UwU tutto il giorno\" è il modo del sud degli Stati Uniti per dire \"Ash dice uwu costantemente ed è molto strano e stupido e vorrei tanto che non lo facesse\"",
+			"Tipo \"Conosci Kip, Dio benedica la sua anima, dice UwU tutto il giorno\" è il modo del sud degli Stati Uniti per dire \"Kip dice uwu costantemente ed è molto strano e stupido e vorrei tanto che non lo facesse\"",
 			"Il mio primo video sul mio canale!! voglio fare video da un sacco di tempo ma il mio laptop era lento e non riuscivo a far andare fraps, skype e minecraft insieme. ma ora non più! il mio maestro di informatica mi ha aiutato e il mio laptop va molto più veloce e ora riesco a registrare! spero che vi piaccia e se si per favore mettete like e iscrivetevi!!!",
 			"Mi sembra a posto"
 		]
@@ -374,7 +374,10 @@
 				"no_newsletter_notice": "La newsletter non è al momento disponibile. Ricontrolla più tardi"
 			},
 			"upgrade": "Fai l'upgrade del tuo account",
-			"unavailable": "Non disponibile"
+			"unavailable": "Non disponibile",
+			"delete": {
+				"button": "Elimina Account"
+			}
 		},
 		"account": "Account",
 		"forgotPassword": {
