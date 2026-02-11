@@ -125,20 +125,19 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 
 1. Insert your SD Card into your PC.
 2. Back up your badges at the folder on your SD Card `SD:Nintendo 3DS/ID0/ID1/extdata/00000000/000014d1`.
-3. Download [Simple Badge Injector](https://github.com/AntiMach/simple-badge-injector/releases/latest).
+	- This step is optional, but recommended.
+	- This is the encrypted data which can only be restored for this 3DS.
+3. Download the latest version of [Simple Badge Injector](https://github.com/AntiMach/simple-badge-injector/releases/latest).
 4. Insert your SD Card into your console.
 5. Use Nimbus to switch to Pretendo.
-6. Open Simple Badge Injector and make a note of the "Nintendo Network ID" value.
-7. Still inside SBI, choose the option to dump your badge data files.
-8. Turn off your 3DS and remove the SD card. Insert your SD card into your PC.
-9. Download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest).
-10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are. (Located at `sd:/3ds/SimpleBadgeInjector/Dumped`)
-11. Replace the NNID value with the one you made a note of in SBI earlier.
-12. Select `Save As` to save the modified file separately from the backup.
-13. Put your modified badge data filed into `sd:/3ds/SimpleBadgeInjector`
-14. Put your SD card back into your 3DS and go back into SBI
-15. Inject your modified badge data files.
+6. Open Simple Badge Injector and choose the option to dump your badge data files.
+	- This step is optional, but recommended.
+	- This is the unencrypted data and can be restored onto any 3DS.
+7. Still inside SBI, select the option to fix your NNID/PNID.
+8. You can now exit SBI, and your badges should now be back.
 
-All badges _placed_ on the home menu will be deleted, and you have to re-add them in the order you have had them before.
+All badges _placed_ on the home menu might be deleted, and you might have to re-add them in the order you had them before.
 
-If you encounter any errors, restore your backed up badge data through SBI. Injecting badges while using Pretendo Network will make them disappear when swapping back to Nintendo Network, and vice versa.
+If you encounter any errors, first try restoring your backed up badge data through SBI. If that fails, try restoring the encrypted data directly.
+
+Badges disappear when switching between Pretendo Network and Nintendo Network, to make them reappear (even if not on the home menu) just use the fix your NNID/PNID option inside SBI.
