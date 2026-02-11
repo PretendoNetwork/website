@@ -69,8 +69,8 @@ function initializeMiiData(encodedUserMiiData) {
 		bgColor: '13173300',
 		expression: 'sorrow'
 	});
-	document.querySelector('.mii-comparison img.old-mii').src = miiStudioNeutralUrl;
-	document.querySelector('.mii-comparison.confirmed img.old-mii').src = miiStudioSorrowUrl;
+	document.querySelector('.mii-comparison img.old-mii').setAttribute('data-src', miiStudioNeutralUrl);
+	document.querySelector('.mii-comparison.confirmed img.old-mii').setAttribute('data-src', miiStudioSorrowUrl);
 	console.log('initialization complete');
 	console.groupEnd();
 	return true;
@@ -94,7 +94,6 @@ if (!validMiiData) {
 
 // we keeep the images here so we can cache them when we need to change the build/height
 const miiFaceImg = new Image();
-const baldMiiFaceImg = new Image();
 const miiBodyImg = new Image();
 
 // Initial mii render
@@ -107,24 +106,15 @@ function renderMii(heightOverride, buildOverride) {
 	const build = buildOverride || mii.build;
 
 	// if there isn't an override or the images haven't been cached, we load the images
-	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !baldMiiFaceImg.src || !miiBodyImg.src) {
+	if ((!heightOverride && !buildOverride) || !miiFaceImg.src || !miiBodyImg.src) {
 		canvas.style.filter = 'blur(4px) brightness(70%)';
 
-		// we create a copy of the mii and make it bald
-		const baldMii = Object.create(
-			Object.getPrototypeOf(mii),
-			Object.getOwnPropertyDescriptors(mii)
-		);
-		baldMii.hairType = 30;
-		baldMiiFaceImg.src = baldMii.studioUrl({
-			width: 512,
-			bgColor: '13173300',
-			type: 'face_only'
-		});
+		// request a face only render with split depth
 		miiFaceImg.src = mii.studioUrl({
 			width: 512,
 			bgColor: '13173300',
-			type: 'face_only'
+			type: 'face_only',
+			splitMode: 'both' // this will be twice the height
 		});
 		miiBodyImg.src = mii.studioAssetUrlBody();
 	}
@@ -144,7 +134,7 @@ function renderMii(heightOverride, buildOverride) {
 			onMiiFaceImgLoad();
 		};
 	}
-	function onMiiFaceImgLoad() {
+	function onMiiFaceImgLoad_() {
 		if (miiBodyImg.complete) {
 			onBodyImgLoad();
 		} else {
@@ -154,21 +144,33 @@ function renderMii(heightOverride, buildOverride) {
 		}
 	}
 	function onBodyImgLoad() {
-		if (baldMiiFaceImg.complete) {
-			onBaldMiiFaceImgLoad();
+		if (miiFaceImg.complete) {
+			onMiiFaceImgLoad_();
 		} else {
-			baldMiiFaceImg.onload = () => {
-				onBaldMiiFaceImgLoad();
+			miiFaceImg.onload = () => {
+				onMiiFaceImgLoad_();
 			};
 		}
 	}
-	function onBaldMiiFaceImgLoad() {
+	function onMiiFaceImgLoad() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		ctx.drawImage(miiFaceImg, 0, headYPos);
+
+		// in mii studio split depth mode, the back half is on the top
+		// and the front half is on the bottom
+		// the back half needs to be drawn, then the body, then the front
+		const halfHeight = miiFaceImg.height / 2;
+		// top half of the image / back half of the head
+		ctx.drawImage(miiFaceImg, 0, 0, miiFaceImg.width, halfHeight, 0, headYPos, miiFaceImg.width, halfHeight);
+
+		// draw body on top
 		ctx.drawImage(miiBodyImg, bodyXPos, bodyYPos, bodyWidth, bodyHeight);
 
 		// we draw a portion of the bald mii on top of the normal mii to hide the mii's neck (see https://i.imgur.com/U0fpkwi.png)
-		ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
+		// ctx.drawImage(baldMiiFaceImg, 186, 384, 140, 120, 186, headYPos + 384, 140, 120);
+
+		// draw bottom half of the image / front half of the head
+		ctx.drawImage(miiFaceImg, 0, halfHeight, miiFaceImg.width, halfHeight, 0, headYPos, miiFaceImg.width, halfHeight);
+
 		canvas.style.filter = '';
 	}
 
@@ -185,8 +187,8 @@ function renderMii(heightOverride, buildOverride) {
 		});
 
 		// sets the new mii in the save tab to the new mii
-		document.querySelector('.mii-comparison img.new-mii').src = faceMiiStudioUrl;
-		document.querySelector('.mii-comparison.confirmed img.new-mii').src = faceMiiStudioSmileUrl;
+		document.querySelector('.mii-comparison img.new-mii').setAttribute('data-src', faceMiiStudioUrl);
+		document.querySelector('.mii-comparison.confirmed img.new-mii').setAttribute('data-src', faceMiiStudioSmileUrl);
 	}
 }
 
@@ -374,6 +376,18 @@ function openTab(e, tabType) {
 		.replace('SubButton', '')
 		.replace('Button', buttonReplacement);
 	document.querySelector(`#${selectedID}`).classList.add('active');
+
+	// if you selected the save tab...
+	if (selectedID === 'saveTab') {
+		// set data-src on images that have it to src
+		// effectively loading them right now (lazy load)
+		document
+			.querySelectorAll('#saveTab img[data-src]')
+			.forEach((e) => {
+				if (e.getAttribute('data-src') !== e.src)
+					e.setAttribute('src', e.getAttribute('data-src'));
+			});
+	}
 
 	if (tabType === 'tab') {
 		// Click the first subtab button, if there is one
