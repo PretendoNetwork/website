@@ -230,6 +230,12 @@ function nintendoPasswordHash(password, pid) {
 	return hashed;
 }
 
+async function discordMemberHasRole(memberId, roleId) {
+	const response = await discordRest.get(DiscordRoutes.guildMember(config.discord.guild_id, memberId));
+
+	return response.roles.includes(roleId);
+}
+
 async function assignDiscordMemberSupporterRole(memberId, roleId) {
 	if (memberId && memberId.trim() !== '') {
 		await discordRest.put(DiscordRoutes.guildMemberRole(config.discord.guild_id, memberId, config.discord.roles.supporter));
@@ -256,8 +262,100 @@ async function removeDiscordMemberTesterRole(memberId) {
 	}
 }
 
+async function createDiscoursePayload(nonce, accountData) {
+	const groups = config.discourse.groups;
+	const managedGroups = Object.values(groups).flatMap(category => Object.values(category));
+	const addGroups = [];
+
+	// * If more than one of the provided groups in add_groups are configured to
+	// * be automatically set as the primary group, Discourse unfortunately
+	// * appears to set the user's primary group arbitrarily and
+	// * non-deterministically. However, it also ignores groups that the user
+	// * was already in before this sign-in, so the primary group won't change
+	// * if none of the user's group memberships change.
+	if (accountData.connections.discord?.id) {
+		for (const role in groups.discord_role) {
+			if (await discordMemberHasRole(accountData.connections.discord.id, role)) {
+				addGroups.push(groups.discord_role[role]);
+			}
+		}
+	}
+
+	if (accountData.connections.stripe?.tier_level) {
+		for (const tier in groups.stripe_tier) {
+			if (accountData.connections.stripe.tier_level.toString() === tier) {
+				addGroups.push(groups.stripe_tier[tier]);
+			}
+		}
+	}
+
+	for (const level in groups.access_level) {
+		if (accountData.access_level.toString() === level) {
+			addGroups.push(groups.access_level[level]);
+		}
+	}
+
+	const removeGroups = managedGroups.filter(group => !addGroups.includes(group));
+
+	// * Discourse SSO Payload
+	// * https://meta.discourse.org/t/official-single-sign-on-for-discourse-sso/13045
+
+	// * Discourse REQUIRES unique emails, however we do not due to NN also
+	// * not requiring unique email addresses. Email addresses, for now,
+	// * are faked using the users PID. This will essentially disable email
+	// * for the forum, but it's a bullet we have to bite for right now.
+	// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
+	return Buffer.from(new URLSearchParams({
+		nonce: nonce,
+		external_id: accountData.pid,
+		email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
+		username: accountData.username,
+		name: accountData.mii.name,
+		avatar_url: accountData.mii.image_url,
+		avatar_force_update: true,
+		add_groups: addGroups.join(','),
+		remove_groups: removeGroups.join(',')
+	}).toString()).toString('base64');
+}
+
 function signDiscoursePayload(payload) {
 	return crypto.createHmac('sha256', config.discourse.sso.secret).update(payload).digest('hex');
+}
+
+async function discourseUserExists(pid) {
+	const response = await got.get(`${config.discourse.api.base_url}/users/by-external/${pid}.json`, {
+		throwHttpErrors: false,
+		responseType: 'json'
+	});
+
+	if (response.statusCode === 200) {
+		return true;
+	} else if (response.statusCode === 404) {
+		return false;
+	} else {
+		throw new Error(`Discourse API error while checking if user ${pid} exists: ${response.statusCode} - ${JSON.stringify(response.body)}`);
+	}
+}
+
+async function syncDiscourseSso(pnid) {
+	// * Documentation: https://meta.discourse.org/t/sync-discourseconnect-user-data-with-the-sync-sso-route/84398
+	const headers = {
+		'Content-Type': 'multipart/form-data',
+		'Api-Username': config.discourse.api.username,
+		'Api-Key': config.discourse.api.key
+	};
+
+	const payload = await createDiscoursePayload('', pnid);
+	const post_data = {
+		'sso': payload,
+		'sig': signDiscoursePayload(payload)
+	};
+
+	return got.post(`${config.discourse.api.base_url}/admin/users/sync_sso`, {
+		headers: headers,
+		form: post_data,
+		responseType: 'json'
+	});
 }
 
 module.exports = {
@@ -280,5 +378,8 @@ module.exports = {
 	assignDiscordMemberTesterRole,
 	removeDiscordMemberSupporterRole,
 	removeDiscordMemberTesterRole,
-	signDiscoursePayload
+	createDiscoursePayload,
+	signDiscoursePayload,
+	discourseUserExists,
+	syncDiscourseSso
 };

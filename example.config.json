@@ -46,5 +46,32 @@
 		"api_token": "api_token",
 		"board_name": "board_name"
 	},
-	"api_base": "https://api.domain.com"
+	"api_base": "https://api.domain.com",
+	"discourse": {
+		"sso": {
+			"secret": "Discourse SSO secret"
+		},
+		"api": {
+			"base_url": "https://discourse.example.com",
+			"username": "system",
+			"key": "Discourse API key"
+		},
+		"groups": {
+			"access_level": {
+				"1": "testers",
+				"2": "juxt-moderators",
+				"3": "developers"
+			},
+			"stripe_tier": {
+				"1": "supporters-mario",
+				"2": "supporters-super",
+				"3": "supporters-mega"
+			},
+			"discord_role": {
+				"1234567890123456789": "developers",
+				"9876543210987654321": "discord-moderators",
+				"1234567890987654321": "network-moderators"
+			}
+		}
+	}
 }

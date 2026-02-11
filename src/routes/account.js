@@ -467,20 +467,7 @@ router.get('/sso/discourse', async (request, response, next) => {
 		try {
 			const accountData = await util.getUserAccountData(request, response);
 
-			// * Discourse REQUIRES unique emails, however we do not due to NN also
-			// * not requiring unique email addresses. Email addresses, for now,
-			// * are faked using the users PID. This will essentially disable email
-			// * for the forum, but it's a bullet we have to bite for right now.
-			// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
-			const payload = Buffer.from(new URLSearchParams({
-				nonce: decodedPayload.get('nonce'),
-				external_id: accountData.pid,
-				email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
-				username: accountData.username,
-				name: accountData.username,
-				avatar_url: accountData.mii.image_url,
-				avatar_force_update: true
-			}).toString()).toString('base64');
+			const payload = await util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
 
 			const query = new URLSearchParams({
 				sso: payload,
@@ -551,20 +538,7 @@ router.post('/sso/discourse', async (request, response, next) => {
 
 		const accountData = await util.getUserAccountData(request, response);
 
-		// * Discourse REQUIRES unique emails, however we do not due to NN also
-		// * not requiring unique email addresses. Email addresses, for now,
-		// * are faked using the users PID. This will essentially disable email
-		// * for the forum, but it's a bullet we have to bite for right now.
-		// TODO - We can run our own SMTP server which maps fake emails (pid@pretendo.whatever) to users real emails
-		const payload = Buffer.from(new URLSearchParams({
-			nonce: decodedPayload.get('nonce'),
-			external_id: accountData.pid,
-			email: `${accountData.pid}@invalid.com`, // * Hack to get unique emails
-			username: accountData.username,
-			name: accountData.username,
-			avatar_url: accountData.mii.image_url,
-			avatar_force_update: true
-		}).toString()).toString('base64');
+		const payload = await util.createDiscoursePayload(decodedPayload.get('nonce'), accountData);
 
 		const query = new URLSearchParams({
 			sso: payload,
