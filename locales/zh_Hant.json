@@ -11,7 +11,7 @@
 			}
 		},
 		"docs": "文件",
-		"credits": "貢獻者",
+		"credits": "製作人員",
 		"progress": "進度",
 		"blog": "部落格",
 		"account": "帳號",
@@ -26,9 +26,9 @@
 		"buttons": {
 			"readMore": "閱讀更多"
 		},
-		"text": "Pretendo 是為了官方伺服器終止後，還能讓 3DS 和 Wii U 繼續用Nintendo Network的另解，免費且開源的專案",
+		"text": "Pretendo 是一個免費和開源的伺服器替代方案，可以取代任天堂為 3DS 和 Wii U 提供的伺服器，即使原始伺服器終止服務，也能讓所有使用者保持線上連線。",
 		"subtitle": "遊戲伺服器",
-		"title": "重製"
+		"title": "已重建"
 	},
 	"credits": {
 		"text": "見見在專案背後努力的團隊",
@@ -50,12 +50,13 @@
 			}
 		],
 		"text": "我們的專案有很多細項，這裡是其中一些。",
-		"title": "我們正在做什麼"
+		"title": "我們製作什麼"
 	},
 	"faq": {
 		"QAs": [
 			{
-				"question": "Pretendo 是什麼?"
+				"question": "什麼是 Pretendo?",
+				"answer": "Pretendo 是一個開源的 Nintendo Network 取代方案，為了 Wii U 和 3DS 系列遊戲機建立自訂伺服器。我們的目標是保留這些遊戲機的線上功能，讓玩家能夠繼續暢玩他們喜愛的 Wii U 和 3DS 遊戲，並獲得最佳的遊戲體驗。"
 			},
 			{
 				"question": "我現有的 NNID 可以用在 Pretendo 上嗎?",
@@ -63,27 +64,39 @@
 			},
 			{
 				"question": "如何使用 Pretendo ?",
-				"answer": "Pretendo 目前還在內測，但是一旦完成，只要在系統上執行自製補丁就能使用 Pretendo。"
+				"answer": "若要開始在 3DS、Wii U 或模擬器上使用 Pretendo Network，請首先參閱我們的<a href='/docs/install'>設定說明</a>！"
 			},
 			{
 				"answer": "不知道。許多 Pretendo 功能都是獨立開發的（例如 : Miiverse 可能由一位人員開發，而 Accounts 和 Friends 正在由另一位人員開發），因此我們無法告訴你確切的完成時間。",
-				"question": "這些 功能/服務 什麼時候才會完成?"
+				"question": "這些功能/服務什麼時候才會完成？"
 			},
 			{
-				"answer": "Pretendo 主要為了實體 Wii U 和 3DS 而開發，目前為止支援NintendoNetwork(NN)的只有 Cemu。",
-				"question": "Pretendo 能用在 Cemu 之類的模擬器上嗎?"
+				"answer": "一旦我們覺得後端程式庫已經準備好支援新遊戲，而開發者有時間維護，我們就會著手開發新遊戲。我們大量的工作都用於穩定和完善現有遊戲 — 我們希望在開發新遊戲之前，讓現有遊戲擁有盡可能最佳的體驗。由於新遊戲層出不窮，我們無法預估新遊戲何時問世。",
+				"question": "你們什麼時候會新增更多遊戲？"
 			},
 			{
-				"question": "如果我在 Nintendo Network 上被ban帳號，我在用 Pretendo 時還會是鎖著的嗎？",
-				"answer": "我們無法知道你在Nintendo Network有沒有被ban，我們也不會亂ban人。然而，我們之後會制定規則，違者將會被ban。"
+				"question": "如果我使用模擬器，是否足以使用 Pretendo？",
+				"answer": "不行。為了安全和監管的考慮，如果您使用的是模擬器，您仍然需要一台真正的主機。這樣可以提高安全性並更有效地執行規則，從而為我們的服務提供安全愉快的體驗。"
 			},
 			{
-				"answer": "Wii已經有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的客製伺服器. Switch 的部分，他既是收費項目，運作方式也與Nintendo Network全然不同，將不支援。",
+				"answer": "Cemu 2.1 已在模擬器的網路帳號選項中正式支援 Pretendo。有關如何開始使用 Cemu 的資訊，請參閱<a href=\"https://pretendo.network/docs/install/cemu\">文件</a>。 <br>部分 3DS 模擬器或衍生版本可能支援 Pretendo，但目前我們尚無任何官方推薦或設定說明。 Citra 的最終版本不支援 Pretendo。",
+				"question": "Pretendo 可以在 Cemu 或其他模擬器上執行嗎？"
+			},
+			{
+				"answer": "Wii 已擁有由 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自訂伺服器。我們目前不打算為 Switch 推出自訂伺服器，因為需要付費，而且與 Nintendo Network 完全不同。",
 				"question": "Pretendo 會支援 Wii/Switch 嗎？"
 			},
 			{
-				"answer": "是的，你必須破解主機才能連上。然而，Wii U 的話只要有 Homebrew Launcher 就能連接 (軟解)，之後會提供 3DS 連接的指南。",
-				"question": "要連接的話，我需要破解主機嗎 ?"
+				"question": "我需要破解主機進行連線嗎？",
+				"answer": "為了在主機上獲得最佳體驗，您需要破解您的主機 - 特別是 Wii U 的 Aroma 和 3DS 的 Luma3DS。不過在 Wii U 上，無需破解的 SSSL 方法也可用，但功能有限。詳情請參閱我們的<a href=\"/docs/install\">安裝說明</a>。"
+			},
+			{
+				"question": "如果我在 Nintendo Network 上被禁止，那麼使用 Pretendo 時我是否仍會被禁止？",
+				"answer": "我們無法存取 Nintendo Network 的禁止系統，因此並非所有 Nintendo Network 使用者都會被禁止。不過，使用我們的服務時我們必須遵守相關規則，不遵守這些規則可能會導致被禁止。"
+			},
+			{
+				"question": "我可以在 Pretendo 上使用外掛或模組嗎？",
+				"answer": "只能在私人比賽中才可以使用 — 獲得不公平優勢或擾亂未經同意的玩家的線上體驗（例如在公開比賽中）屬於可禁止的違規行為。我們會定期對 Wii U 和 3DS 主機實施帳號和主機封鎖。 Pretendo 採用了額外的安全措施，使更改序號等傳統的「解禁」方法失效。"
 			}
 		],
 		"title": "常見問題",
@@ -115,12 +128,12 @@
 		"title": "關於我們",
 		"paragraphs": [
 			"Pretendo 是一個旨在為了還原 3DS 和 Wii U 的 Nintendo Network，合法使用逆向工程的開源專案。",
-			"我們的服務會是免費和開源的。就算Nintendo Network因為特殊原因中止，還是能繼續使用。"
+			"由於我們的服務是完整免費和開源的，因此可以永久繼續使用。"
 		]
 	},
 	"progress": {
 		"title": "進度",
-		"githubRepo": "Github 倉庫"
+		"githubRepo": "Github 程式碼庫"
 	},
 	"discordJoin": {
 		"title": "持續獲得最新資訊",
@@ -129,5 +142,12 @@
 			"text": "獲取我們進度的即時更新",
 			"button": "加入伺服器"
 		}
+	},
+	"modals": {
+		"close": "關閉",
+		"confirm": "確定"
+	},
+	"notfound": {
+		"description": "哎呀！找不到此頁面。"
 	}
 }

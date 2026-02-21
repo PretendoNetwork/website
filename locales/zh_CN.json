@@ -2,7 +2,7 @@
 	"nav": {
 		"about": "关于",
 		"faq": "FAQ",
-		"docs": "帮助文档",
+		"docs": "文档",
 		"credits": "贡献者",
 		"progress": "进度",
 		"blog": "博客",
@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "如何使用 Pretendo？",
-				"answer": "Pretendo 目前尚未准备好供公众使用。一旦我们准备就绪，您只需在机器上运行我们提供的自制补丁，即可开始使用。"
+				"answer": "想要在3DS、Wii U或模拟器上使用Pretendo，请参见我们的<a href='/docs/install'>设置说明</a>！"
 			},
 			{
 				"question": "什么时候某某功能/服务能完成？",
@@ -63,27 +63,31 @@
 			},
 			{
 				"question": "什么时候会添加更多游戏?",
-				"answer": "Pretendo 支持任何可以与任天堂网络交互的客户端。目前唯一具有此功能的模拟器是 Cemu。 Cemu 2.0 在模拟器中的网络帐户选项下已正式支持了 Pretendo。有关开始使用 Cemu 的信息，请查阅文档。Citra 不支持真正意义上的在线多人联机，因此 Pretendo 在 Citra 上不可用，并且完全没有在未来支持在线多人联机的迹象。Mikage，一款用于移动设备的 3DS 模拟器，可能会在未来支持在线多人联机，尽管这尚不确定。"
+				"answer": "当我们认为后端库已经准备就绪，并且能有开发者有时间去维护新的游戏的时候。我们的诸多精力将会投入在稳定和完善现有游戏上——我们希望在支持新游戏之前能够尽可能地为现有游戏提供更好的体验。由于我们随时可能会有新的工作要做，所以无法为您提供准确的时间。"
 			},
 			{
 				"question": "我只有模拟器，可以使用Pretendo吗？",
-				"answer": "我们无法访问 Nintendo Network 的用户黑名单，因此不会禁止任何用户使用我们的服务。但是，使用本服务时也需要遵守规则，否则可能会导致被禁。"
+				"answer": "不。出于安全和监管的考虑，即使您使用模拟器，仍然需要一台真正的游戏主机。这有助于提高安全性，更有效地处罚违规用户，从而为您提供安全愉快的服务体验。"
 			},
 			{
-				"question": "Pretendo 会支持 Wii/Switch 吗？",
-				"answer": "Cemu 2.1 在模拟器的网络帐户选项下正式支持 Pretendo。有关如何开始设置 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>一些 3DS 模拟器或分支可能支持我们，但目前我们没有任何官方建议或设置说明。Citra 的最终版本目前不支持 Pretendo。"
+				"question": "Pretendo 能摘 Cemu 等模拟器上运行吗？",
+				"answer": "Cemu 2.1 在模拟器的网络帐户选项下正式支持 Pretendo。有关如何开始设置 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>一些 3DS 模拟器或分支可能支持我们，但目前我们没有任何官方建议或设置说明。Citra 的最终版本目前不支持 Pretendo。"
 			},
 			{
 				"question": "Pretendo会支持 Wii/Switch 吗？",
-				"answer": "是的，您需要破解您的设备才能连接；但是，在 Wii U 上，您只需要访问 Homebrew Launcher（即 Haxchi、Coldboot Haxchi 甚至网络浏览器漏洞利用程序），稍后会提供有关 3DS 将如何连接的信息。"
+				"answer": "Wii 已经有了由 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的替代服务器。而 Switch 平台是收费的，并且与 Nintendo Network 系统差异非常大，目前没有支持的计划。"
 			},
-			{},
+			{
+				"question": "我需要破解才能连接吗？",
+				"answer": "为了更好的体验，您需要破解您的系统——也就是说Wii U需要Aroma，3DS需要Luma3DS。然而，在Wii U上，仍由不需要破解的SSSL方法可供选择，但是其功能受限。具体信息请参考我们的 <a href=\"/docs/install\">设置说明</a>。"
+			},
 			{
 				"question": "如果我在 Nintendo Network 上被封禁，那么使用 Pretendo 时我还会保持被封禁状态吗？",
 				"answer": "我们无法访问 Nintendo Network 的禁令，因此所有 Nintendo Network 用户禁令都不生效。但是，在使用 Pretendo 服务时需要遵守我们的一些规则，不遵守这些规则可能会导致被封禁。"
 			},
 			{
-				"answer": "仅在私人匹配中可以 - 获得不公平的优势或破坏未经同意的人的在线体验（如在公开匹配中）是会被封禁的违规行为。我们定期封禁 Wii U 和 3DS 系统应用帐户和主机。Pretendo 使用额外的安全措施，使传统的“解禁”方法（例如更改序列号）无效。"
+				"answer": "仅在私人匹配中可以 - 获得不公平的优势或破坏未经同意的人的在线体验（如在公开匹配中）是会被封禁的违规行为。我们定期封禁 Wii U 和 3DS 系统应用帐户和主机。Pretendo 使用额外的安全措施，使传统的“解禁”方法（例如更改序列号）无效。",
+				"question": "我可以在Pretendo中开挂或使用mod吗？"
 			}
 		]
 	},
@@ -116,33 +120,70 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Miiverse 研究与开发"
+				"caption": "Miiverse 研究与开发",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "Wii U 研究和补丁开发"
+				"caption": "Wii U 研究和补丁开发",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
 			},
 			{
-				"caption": "系统研究和服务器架构"
+				"caption": "系统研究和服务器架构",
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"caption": "Web 开发"
+				"caption": "Web 开发",
+				"name": "limes.pink",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
 			},
 			{
-				"caption": "系统研究和服务器开发"
-			},
-			{},
-			{
-				"caption": "系统研究和服务器开发"
-			},
-			{},
-			{
-				"caption": "DevOps 和社区工作"
+				"caption": "系统研究和服务器开发",
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
 			},
 			{
-				"caption": "服务器开发与优化"
+				"name": "Billy",
+				"caption": "保护主义者和服务器架构",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
 			},
 			{
-				"caption": "3DS 补丁开发与研究"
+				"caption": "系统研究和服务器开发",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"caption": "网站和服务器开发",
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"caption": "DevOps 和社区工作",
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"caption": "服务器开发与优化",
+				"name": "wolfendale",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"caption": "3DS 补丁开发与研究",
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
@@ -152,46 +193,88 @@
 		"people": [
 			{
 				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献"
-			},
-			{},
-			{
-				"caption": "3DS 开发和 NEX 解析器"
+				"caption": "本地化和其他贡献",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			},
 			{
-				"caption": "Miiverse 信息分享"
+				"caption": "crunch库开发",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"caption": "3DS 开发和 NEX 解析器",
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"caption": "Miiverse 信息分享",
+				"name": "rverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
 			},
 			{
 				"special": "特别感谢",
-				"caption": "对 Nintendo 数据结构的研究"
+				"caption": "对 Nintendo 数据结构的研究",
+				"name": "Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
 			},
 			{
-				"caption": "Mii 编辑器和 Juxt 反应的图标"
+				"caption": "Mii 编辑器和 Juxt 反应的图标",
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
 			},
 			{
-				"caption": "主机研究和游戏服务器"
+				"caption": "主机研究和游戏服务器",
+				"name": "Rambo6Glaz",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
 			},
 			{
-				"caption": "Wii U 补丁开发"
+				"caption": "Wii U 补丁开发",
+				"name": "GaryOderNichts",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
 			},
 			{
-				"caption": "3DS 补丁创建"
+				"caption": "3DS 补丁创建",
+				"name": "zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
 			},
 			{
-				"caption": "服务器架构"
+				"caption": "服务器架构",
+				"name": "mrjvs",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
 			},
 			{
-				"caption": "服务器架构"
+				"caption": "服务器架构",
+				"name": "binaryoverload",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
 			},
 			{
-				"caption": "Splatoon 轮换和研究"
+				"caption": "Splatoon 轮换和研究",
+				"name": "Simonx22",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
 			},
 			{
-				"caption": "Splatoon 轮换和研究"
+				"caption": "Splatoon 轮换和研究",
+				"name": "OatmealDome",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
 			},
 			{
 				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献"
+				"caption": "本地化和其他贡献",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
 			}
 		]
 	},
@@ -220,7 +303,7 @@
 			"我迫不及待地等待时钟在 2038 年 1 月 19 日到达 03:14:08 UTC！",
 			"Wii U 实际上是一个被低估的游戏机：营销非常糟糕，但游戏机很棒。嗯，等一下，我不知道为什么，但我的Gamepad没有连接到我的 Wii。",
 			"超级马里奥世界 2 - 耀西岛 的主题是绝对的爆好听，你无法说服我。",
-			"我最喜欢的 Nintendo Switch 版本是 Nintendo Switch Online + 扩展包、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + Offline Play Pack、Nintendo Switch Online + Yet another Port Pack 和 Nintendo Switch Online + Kawashima 博士的大脑训练/Brain Age“你真的很喜欢 Nintendo Wii U 虚拟控制台标题，所以我们要把它带回来”包。你真的可以看出任天堂在不在乎。",
+			"我最喜欢的 Nintendo Switch 版本是 Nintendo Switch Online + 扩展包、Nintendo Switch Online + Rumble Pak、Nintendo Switch Online + 离线游玩包、Nintendo Switch Online + Yet another Port Pack 和 Nintendo Switch Online + 脑科学专家川岛隆太博士监修大人的Nintendo Switch脑部锻炼 “你真的很喜欢 Nintendo Wii U 虚拟控制台标题，所以我们要把它带回来”包。你真的可以看出任天堂在不在乎。",
 			"就像“你知道 Kip，祝福她的心，她一整天都在 UwU”是南方的一种很好的说法，“Kip一直都是在 uwu ，这真的很奇怪和愚蠢，我希望他们没有”",
 			"涐恠涐の頻檤丄の第①嗰視頻！！涐想製莋視頻已俓佷玖ㄋ，但涐の毞誋夲電脳運哘嘚佷糟糕，涐兂法茼埘運哘 ｆｒāｐ$、$ｋｙｐé 啝 ｍīńéｃｒāｆτ。但現恠結涑ㄋ！恠涐の ＩＴ 佬師の幫助丅，涐の毞誋夲電脳運哘嘚莄ぬㄋ，涐現恠岢苡錄喑ㄋ！涐俙望伱扪嘟囍歡，侞淉伱囍歡，請囍歡啝訂閲！！！",
 			"我觉得不错"
@@ -302,7 +385,7 @@
 				"country": "国家/地区",
 				"timezone": "时区",
 				"serverEnv": "服务器环境",
-				"production": "制作",
+				"production": "生产环境",
 				"beta": "Beta 版本",
 				"upgradePrompt": "Beta 服务器仅供 Beta 测试人员使用。<br>要成为 Beta 测试人员，请升级到更高的帐户等级。",
 				"hasAccessPrompt": "您当前的等级为您提供 Beta 服务器访问权限。耶！",
@@ -319,10 +402,17 @@
 				"no_newsletter_notice": "目前没有新闻。请稍后再试",
 				"userSettings": "账号设置",
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
-				"no_edit_from_dashboard": "目前无法编辑在此页面修改 PNID 设置。请通过你的游戏设备修改"
+				"no_edit_from_dashboard": "目前无法在此页面修改 PNID 设置。请通过你的游戏设备修改"
 			},
 			"upgrade": "升级账号",
-			"unavailable": "无法获得"
+			"unavailable": "无法使用",
+			"delete": {
+				"button": "删除账号",
+				"modalTitle": "删除PNID",
+				"modalDescription": "您真的要删除你的PNID吗？请注意以下事项：\n\n您的账号在整个Pretendo网络服务（包含论坛和Juxtaposition）中的数据将被清除。\n您的Stripe支付数据和订阅信息将会被自动删除。\n您将不能再使用同一个PNID创建账号。\n删除账号并不能解决封禁或任何技术问题。如果您有任何问题请去论坛寻求帮助。",
+				"modalCaution": "此操作无法撤销。",
+				"modalConfirm": "删除"
+			}
 		},
 		"accountLevel": [
 			"标准",
@@ -352,7 +442,7 @@
 		"month": "月",
 		"tierSelectPrompt": "选择一个级别",
 		"unsub": "退订",
-		"unsubPrompt": "您确定要退订 <span>tiername</span> 吗？您将无法使用与该等级相关的福利。",
+		"unsubPrompt": "您确定要退订 <span>tiername</span> 吗？您将<span>立即</span>失去与该等级相关的福利。",
 		"unsubConfirm": "退订",
 		"changeTier": "修改级别",
 		"changeTierPrompt": "您确定要取消订阅 <span class=\"oldtier\">oldtiername</span> 并订阅 <span class=\"newtier\">newtiername</span> 吗？",
