@@ -384,8 +384,9 @@ function openTab(e, tabType) {
 		document
 			.querySelectorAll('#saveTab img[data-src]')
 			.forEach((e) => {
-				if (e.getAttribute('data-src') !== e.src)
+				if (e.getAttribute('data-src') !== e.src) {
 					e.setAttribute('src', e.getAttribute('data-src'));
+				}
 			});
 	}
 
