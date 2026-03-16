@@ -4,14 +4,14 @@
 		"dropdown": {
 			"captions": {
 				"about": "關於專案",
-				"progress": "檢視專案進度與目標",
+				"progress": "查看此專案的進度與目標",
 				"credits": "認識團隊",
 				"faq": "常見問題",
 				"blog": "更新摘要"
 			}
 		},
 		"docs": "文件",
-		"credits": "貢獻者",
+		"credits": "製作人員",
 		"progress": "進度",
 		"blog": "部落格",
 		"account": "帳號",
@@ -26,19 +26,93 @@
 		"buttons": {
 			"readMore": "閱讀更多"
 		},
-		"text": "Pretendo 是為了官方伺服器終止後，還能讓 3DS 和 Wii U 繼續用Nintendo Network的另解，免費且開源的專案",
+		"text": "Pretendo 是一個免費和開源的伺服器取代方案，可以取代任天堂為 3DS 和 Wii U 提供的伺服器，即使原始伺服器終止服務，也能讓所有使用者保持線上連線。",
 		"subtitle": "遊戲伺服器",
-		"title": "重製"
+		"title": "已重新建立"
 	},
 	"credits": {
 		"text": "見見在專案背後努力的團隊",
-		"title": "開發團隊"
+		"title": "開發團隊",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "專案擁有者與首席開發人員",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Miiverse 研究與開發",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Wii U 研究與補丁開發",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "系統研究與伺服器架構",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "網站開發",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "系統研究與伺服器開發",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "保護主義者與伺服器架構",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "系統研究與伺服器開發",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "網站與伺服器開發",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps 與社群工作",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "伺服器開發與最佳化",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "3DS補丁開發與研究",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"showcase": {
 		"cards": [
 			{
 				"title": "遊戲伺服器",
-				"caption": "用客製伺服器還原你最愛的遊戲體驗。"
+				"caption": "使用自訂伺服器帶回您喜愛的遊戲和內容。"
 			},
 			{
 				"title": "Juxtaposition",
@@ -50,12 +124,13 @@
 			}
 		],
 		"text": "我們的專案有很多細項，這裡是其中一些。",
-		"title": "我們正在做什麼"
+		"title": "我們製作什麼"
 	},
 	"faq": {
 		"QAs": [
 			{
-				"question": "Pretendo 是什麼?"
+				"question": "什麼是 Pretendo?",
+				"answer": "Pretendo 是一個開源的 Nintendo Network 取代方案，為了 Wii U 和 3DS 系列遊戲機建立自訂伺服器。我們的目標是保留這些遊戲機的線上功能，讓玩家能夠繼續暢玩他們喜愛的 Wii U 和 3DS 遊戲，並獲得最佳的遊戲體驗。"
 			},
 			{
 				"question": "我現有的 NNID 可以用在 Pretendo 上嗎?",
@@ -63,43 +138,142 @@
 			},
 			{
 				"question": "如何使用 Pretendo ?",
-				"answer": "Pretendo 目前還在內測，但是一旦完成，只要在系統上執行自製補丁就能使用 Pretendo。"
+				"answer": "若要開始在 3DS、Wii U 或模擬器上使用 Pretendo Network，請首先參閱我們的<a href='/docs/install'>設定說明</a>！"
 			},
 			{
 				"answer": "不知道。許多 Pretendo 功能都是獨立開發的（例如 : Miiverse 可能由一位人員開發，而 Accounts 和 Friends 正在由另一位人員開發），因此我們無法告訴你確切的完成時間。",
-				"question": "這些 功能/服務 什麼時候才會完成?"
+				"question": "這些功能/服務什麼時候才會完成？"
 			},
 			{
-				"answer": "Pretendo 主要為了實體 Wii U 和 3DS 而開發，目前為止支援NintendoNetwork(NN)的只有 Cemu。",
-				"question": "Pretendo 能用在 Cemu 之類的模擬器上嗎?"
+				"answer": "一旦我們覺得後端程式庫已經準備好支援新遊戲，而開發者有時間維護，我們就會著手開發新遊戲。我們大量的工作都用於穩定和完善現有遊戲 — 我們希望在開發新遊戲之前，讓現有遊戲擁有盡可能最佳的體驗。由於新遊戲層出不窮，我們無法預估新遊戲何時問世。",
+				"question": "你們什麼時候會新增更多遊戲？"
 			},
 			{
-				"question": "如果我在 Nintendo Network 上被ban帳號，我在用 Pretendo 時還會是鎖著的嗎？",
-				"answer": "我們無法知道你在Nintendo Network有沒有被ban，我們也不會亂ban人。然而，我們之後會制定規則，違者將會被ban。"
+				"question": "如果我使用模擬器，是否足以使用 Pretendo？",
+				"answer": "不行。為了安全和監管的考慮，如果您使用的是模擬器，您仍然需要一台真正的主機。這樣可以提高安全性並更有效地執行規則，從而為我們的服務提供安全愉快的體驗。"
 			},
 			{
-				"answer": "Wii已經有 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的客製伺服器. Switch 的部分，他既是收費項目，運作方式也與Nintendo Network全然不同，將不支援。",
+				"answer": "Cemu 2.1 已在模擬器的網路帳號選項中正式支援 Pretendo。有關如何開始使用 Cemu 的資訊，請參閱<a href=\"https://pretendo.network/docs/install/cemu\">文件</a>。 <br>部分 3DS 模擬器或衍生版本可能支援 Pretendo，但目前我們尚無任何官方推薦或設定說明。 Citra 的最終版本不支援 Pretendo。",
+				"question": "Pretendo 可以在 Cemu 或其他模擬器上執行嗎？"
+			},
+			{
+				"answer": "Wii 已擁有由 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自訂伺服器。我們目前不打算為 Switch 推出自訂伺服器，因為需要付費，而且與 Nintendo Network 完全不同。",
 				"question": "Pretendo 會支援 Wii/Switch 嗎？"
 			},
 			{
-				"answer": "是的，你必須破解主機才能連上。然而，Wii U 的話只要有 Homebrew Launcher 就能連接 (軟解)，之後會提供 3DS 連接的指南。",
-				"question": "要連接的話，我需要破解主機嗎 ?"
+				"question": "我需要破解主機進行連線嗎？",
+				"answer": "為了在主機上獲得最佳體驗，您需要破解您的主機 - 特別是 Wii U 的 Aroma 和 3DS 的 Luma3DS。不過在 Wii U 上，無需破解的 SSSL 方法也可用，但功能有限。詳情請參閱我們的<a href=\"/docs/install\">安裝說明</a>。"
+			},
+			{
+				"question": "如果我在 Nintendo Network 上被禁止，那麼使用 Pretendo 時我是否仍會被禁止？",
+				"answer": "我們無法存取 Nintendo Network 的禁止系統，因此並非所有 Nintendo Network 使用者都會被禁止。不過，使用我們的服務時我們必須遵守相關規則，不遵守這些規則可能會導致被禁止。"
+			},
+			{
+				"question": "我可以在 Pretendo 上使用外掛或模組嗎？",
+				"answer": "只能在私人比賽中才可以使用 — 獲得不公平優勢或擾亂未經同意的玩家的線上體驗（例如在公開比賽中）屬於可禁止的違規行為。我們會定期對 Wii U 和 3DS 主機實施帳號和主機封鎖。 Pretendo 採用了額外的安全措施，使更改序號等傳統的「解禁」方法失效。"
 			}
 		],
 		"title": "常見問題",
 		"text": "為了讓你快速理解，我們準備了一些常見問題。"
 	},
 	"specialThanks": {
-		"title": "特別感謝",
-		"text": "沒有他們，Pretendo 就不會是今天的樣子。"
+		"title": "特別鳴謝",
+		"text": "沒有他們，Pretendo 就不會是今天的樣子。",
+		"people": [
+			{
+				"name": "GitHub貢獻者",
+				"caption": "在地化與其他貢獻",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "crunch資料庫開發",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS開發與NEX解剖器",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse 資料分享",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "特別鳴謝",
+				"caption": "任天堂資料結構研究",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Mii 編輯器和 Juxt 反應的圖示",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "主機研究與遊戲伺服器",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Wii U 補丁開發",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS補丁創作者",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "伺服器架構",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "伺服器架構",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Splatoon 輪換與研究",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon 輪換與研究",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub貢獻者",
+				"caption": "在地化和其他貢獻",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"footer": {
 		"widget": {
 			"captions": [
-				"想知道最新動態?",
-				"加入我們的 Discord!"
+				"想了解最新動態嗎？",
+				"加入我們的 Discord 伺服器！"
 			],
-			"button": "現在就加入 !"
+			"button": "立即加入 !"
 		},
 		"usefulLinks": "相關連結",
 		"bandwidthRaccoonQuotes": [
@@ -107,27 +281,184 @@
 			"很多人問我們是否會因此與任天堂發生法律糾紛；我很高興我的阿姨在任天堂工作，她說是合法的。",
 			"Webkit v537 是用於 Wii U 的最佳 Webkit 版本。然而，我們並不會移植 Chrome 轉到 Wii U。",
 			"迫不及待地等待時鐘到達2038年1月19日03:14:08 UTC !",
-			"Wii U实际上是一个被低估的系统：广告好像真的很糟糕，但控制台是伟大的。嗯，等一下，我不知道为什么，但我的游戏手柄没有连接到我的Wii上。"
+			"Wii U 其實是一款被低估的遊戲機：廣告做得確實很糟糕，但主機本身很棒的。等一下，我不知道為什麼，但我的 Gamepad 無法連接至 Wii 主機。",
+			"《超級瑪利歐 耀西島》的主題曲絕對是一首好聽的歌，你休想說服我改變想法。",
+			"我最喜歡的幾款 Nintendo Switch 遊戲是：Nintendo Switch Online + 擴充包、Nintendo Switch Online + 震動包、Nintendo Switch Online + 離線遊玩包、Nintendo Switch Online + 移植包，以及 Nintendo Switch Online + 《腦科學專家 川島隆太博士監修 大人的Nintendo Switch腦部鍛鍊》「遊戲你真的很喜歡我們把它組裝回來了 Wii U 版」。看得出來任天堂真的很用心。",
+			"例如「你知道Kip嗎，可憐的她，她整天都在UwU」是南方人委婉的說法，意思是「Kip總是UwU，這真的很奇怪很蠢，我希望她不要這樣」。",
+			"我的第一支影片上傳到我的頻道囉!! 我一直都想做視頻，但是我的筆記型電腦性能很差，沒辦法同時運行Fraps、Skype和Minecraft。不過現在一切都解決了！在我的IT老師的幫助下，我的筆記型電腦運行流暢了很多，現在可以錄製影片了！希望大家喜歡，如果喜歡的話，請按讚並訂閱哦!!!",
+			"我覺得看起來不錯的"
 		],
-		"socials": "社群帳號"
+		"socials": "社群媒體"
 	},
 	"aboutUs": {
 		"title": "關於我們",
 		"paragraphs": [
-			"Pretendo 是一個旨在為了還原 3DS 和 Wii U 的 Nintendo Network，合法使用逆向工程的開源專案。",
-			"我們的服務會是免費和開源的。就算Nintendo Network因為特殊原因中止，還是能繼續使用。"
+			"Pretendo 是一個開源項目，旨在透過無塵室逆向工程為 3DS 和 Wii U 重新建立 Nintendo Network。",
+			"由於我們的服務是完整免費和開源的，因此可以永久繼續使用。"
 		]
 	},
 	"progress": {
 		"title": "進度",
-		"githubRepo": "Github 倉庫"
+		"githubRepo": "Github 程式碼庫"
 	},
 	"discordJoin": {
 		"title": "持續獲得最新資訊",
-		"text": "加入我们的Discord服务器，获取项目的最新进展。",
+		"text": "加入我們的 Discord 伺服器，取得專案的最新動態。",
 		"widget": {
 			"text": "獲取我們進度的即時更新",
 			"button": "加入伺服器"
+		}
+	},
+	"modals": {
+		"close": "關閉",
+		"confirm": "確定",
+		"cancel": "取消"
+	},
+	"notfound": {
+		"description": "哎呀！找不到此頁面。"
+	},
+	"account": {
+		"loginForm": {
+			"login": "登入",
+			"register": "註冊",
+			"detailsPrompt": "在下面輸入帳號資料",
+			"username": "使用者名稱",
+			"password": "密碼",
+			"confirmPassword": "確認密碼",
+			"email": "電子郵件",
+			"miiName": "Mii 暱稱",
+			"forgotPassword": "忘記密碼？",
+			"registerPrompt": "沒有帳號？",
+			"loginPrompt": "已經有帳號？"
+		},
+		"settings": {
+			"settingCards": {
+				"nickname": "暱稱",
+				"userSettings": "使用者設定",
+				"profile": "個人檔案",
+				"birthDate": "生日",
+				"gender": "性別",
+				"country": "國家/地區",
+				"timezone": "時區",
+				"serverEnv": "伺服器環境",
+				"production": "生產",
+				"beta": "測試版",
+				"upgradePrompt": "測試版伺服器僅供測試人員使用。 <br>若要成為測試人員，請升級到更高的帳號等級。",
+				"hasAccessPrompt": "您目前的帳號等級允許您存取測試版伺服器。太棒了！",
+				"signInSecurity": "登入與安全性",
+				"email": "電子郵件",
+				"password": "密碼",
+				"passwordResetNotice": "變更密碼後，您將從所有裝置上登出。",
+				"signInHistory": "登入歷史紀錄",
+				"fullSignInHistory": "查看完整登入歷史紀錄",
+				"otherSettings": "其他設定",
+				"discord": "Discord",
+				"connectedToDiscord": "已連結的 Discord 帳號:",
+				"removeDiscord": "解除連結 Discord 帳號",
+				"noDiscordLinked": "沒有連結 Discord 帳號。",
+				"linkDiscord": "連結 Discord 帳號",
+				"newsletter": "電子報告",
+				"newsletterPrompt": "透過電子郵件接收專案更新（您可以隨時選擇取消訂閱）",
+				"passwordPrompt": "輸入你的 PNID 密碼以下載 Cemu 檔案",
+				"no_signins_notice": "登入歷史紀錄目前未記錄。請稍後再來查看！",
+				"no_newsletter_notice": "電子報告目前無法使用。請稍後再來查看！",
+				"no_edit_from_dashboard": "目前無法從網站編輯 PNID 設定。請通過已連結的主機上編輯使用者設定。"
+			},
+			"upgrade": "升級帳號",
+			"unavailable": "無法使用",
+			"delete": {
+				"button": "刪除帳號",
+				"modalTitle": "刪除 PNID",
+				"modalDescription": "確定要刪除您的 PNID 嗎？刪除前請考慮以下事項：\n\n您在所有 Pretendo Network 服務（包括論壇和 Juxtaposition）中的帳號資料將會被刪除。\n您的 Stripe 支付資料和訂閱將會自動刪除。\n您將無法在未來的新帳號中使用相同的 PNID。\n刪除帳號無法解決禁止或技術支援方面的問題。如果您遇到問題，請使用論壇尋求協助。",
+				"modalCaution": "此操作無法復原。",
+				"modalConfirm": "是，請刪除"
+			}
+		},
+		"accountLevel": [
+			"標準",
+			"測試人員",
+			"版主人員",
+			"開發人員"
+		],
+		"banned": "已禁止",
+		"account": "帳號",
+		"forgotPassword": {
+			"header": "忘記密碼",
+			"sub": "在下面輸入電子郵件地址/PNID",
+			"input": "電子郵件地址或PNID",
+			"submit": "提交"
+		},
+		"resetPassword": {
+			"header": "重設密碼",
+			"sub": "在下面輸入新密碼",
+			"password": "密碼",
+			"confirmPassword": "確認密碼",
+			"submit": "提交"
+		}
+	},
+	"upgrade": {
+		"title": "升級",
+		"description": "達到每月目標將使 Pretendo 成為一份全職工作，從而以更快的速度提供更高品質的更新。",
+		"month": "月",
+		"tierSelectPrompt": "選擇一個等級",
+		"unsub": "取消訂閱",
+		"unsubPrompt": "您確定要取消訂閱<span>tiername</span>嗎？您將<span>立即</span>失去此等級相關的特權。",
+		"unsubConfirm": "取消訂閱",
+		"changeTier": "變更等級",
+		"changeTierPrompt": "您確定要取消訂閱<span class=\"oldtier\">oldtiername</span>並訂閱<span class=\"newtier\">newtiername</span>嗎？",
+		"changeTierConfirm": "變更等級",
+		"back": "返回"
+	},
+	"progressPage": {
+		"title": "我們的進度",
+		"description": "查看此專案的進度和目標！ （大約每小時更新一次，但不反映所有專案目標或進度）"
+	},
+	"blogPage": {
+		"title": "部落格",
+		"description": "最新更新內容精簡呈現。如果您想查看更頻繁的更新，請考慮<a href=\"/account/upgrade\" target=\"_blank\">支持我們</a>。",
+		"published": "發佈者:",
+		"publishedOn": "於"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span>的<span>$${goald}</span>/月，完成月度目標的<span>${perc}%</span>",
+		"upgradePush": "若要成為訂閱者並獲得超棒的特權，請前往<a href=\"/account/upgrade\">升級頁面</a>。"
+	},
+	"localizationPage": {
+		"title": "讓我們進行在地化",
+		"description": "貼上一個可公開存取的 JSON 語言環境連結，以便在網站上進行測試。",
+		"instructions": "查看在地化說明",
+		"fileInput": "要測試的檔案",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "測試檔案"
+	},
+	"docs": {
+		"missingInLocale": "您所在的地區無法存取此頁面。請查看下面的英文版本。",
+		"quickLinks": {
+			"header": "快速連結",
+			"links": [
+				{
+					"header": "安裝 Pretendo",
+					"caption": "查看設定說明"
+				},
+				{
+					"header": "遇到錯誤？",
+					"caption": "在此處搜尋"
+				}
+			]
+		},
+		"search": {
+			"title": "遇到錯誤代碼？",
+			"caption": "在下面輸入錯誤代碼，以取得有關您問題的資訊！",
+			"label": "錯誤代碼",
+			"no_match": "未找到任何結果"
+		},
+		"sidebar": {
+			"getting_started": "入門指南",
+			"welcome": "歡迎",
+			"install_extended": "安裝 Pretendo",
+			"install": "安裝",
+			"search": "搜尋",
+			"juxt_err": "錯誤代碼 - Juxt"
 		}
 	}
 }

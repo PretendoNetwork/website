@@ -67,19 +67,19 @@
 			},
 			{
 				"question": "Werkt Pretendo op Cemu/emulators?",
-				"answer": "Cemu 2.1 ondersteunt Pretendo officieel onder uw netwerkaccountopties in de emulator. Voor informatie over hoe u aan de slag kunt met Cemu, bekijkt u de <a href=\"https://pretendo.network/docs/install/cemu\">documentatie</a>.<br>Sommige 3DS-emulators of forks ondersteunen ons mogelijk, maar we hebben op dit moment geen officiële aanbevelingen of installatie-instructies. De laatste builds van Citra ondersteunen Pretendo niet."
+				"answer": "Nee,  Voor extra beveiliging en veiligheid, als je een emulator gebruikt. Moet je nog steeds een echte spelcomputer hebben. Dit zorgt voor betere beveiliging en snelle werkzaamheden met de regels voor een leuke en veilige speelervaring op onze servers."
 			},
 			{
-				"question": "Gaat Pretendo ook de Wii of Switch ondersteunen?",
-				"answer": "Er zijn al custom servers voor Wii, namelijk <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Wij willen op het moment de Switch niet ondersteunen omdat Switch online betaald is, en compleet anders is dan Nintendo Network."
+				"question": "Gaat Pretendo ook op Cemu/Emulators werken?",
+				"answer": "Cemu 2.1 ondersteunt officieel Pretendo bij network account opties in de emulator. Voor informatie hoe je moet beginnen op Cemu, Zie de <a href=\"https://pretendo.network/docs/install/cemu\">documentatie</a>.<br> Sommige 3DS emulator of forks worden misschien ondersteunt door ons, maar we hebben geen officiële aanbeveling of instell intructies op dit moment. The laatste versie van Citra ondersteunt geen Pretendo Network"
 			},
 			{
-				"question": "Heb ik hacks nodig om te verbinden met Pretendo?",
-				"answer": "Voor de beste ervaring op consoles moet je je systeem hacken - specifiek Aroma voor Wii U en Luma3DS voor 3DS. Op Wii U is de hackless SSSL-methode echter ook beschikbaar met beperkte functionaliteit. Zie onze <a href=\"/docs/install\">installatie-instructies</a> voor meer informatie."
+				"question": "Gaat Pretendo ooit de Wii of Switch ondersteunen?",
+				"answer": "De Wii heeft al custom servers dankzij  <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We hebben momenteel geen plan om de Switch te ondersteunen, omdat betaald is en een compleet ander netwerk is."
 			},
 			{
 				"answer": "We hebben geen toegang tot de bans van Nintendo Network, dus niet alle Nintendo Network-gebruikers worden verbannen. We hebben echter regels die we moeten volgen bij het gebruik van de service en het niet naleven van deze regels kan resulteren in een ban.",
-				"question": "Als ik verbannen word op Nintendo Network, blijf ik dan verbannen als ik Pretendo gebruik?"
+				"question": "Heb ik hacks nodig om te verbinden?"
 			}
 		]
 	},

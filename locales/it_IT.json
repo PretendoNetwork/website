@@ -6,7 +6,7 @@
 		"credits": "Riconoscimenti",
 		"progress": "Progresso",
 		"blog": "Blog",
-		"account": "Profilo",
+		"account": "Account",
 		"accountWidget": {
 			"settings": "Impostazioni",
 			"logout": "Logout"
@@ -376,7 +376,11 @@
 			"upgrade": "Fai l'upgrade del tuo account",
 			"unavailable": "Non disponibile",
 			"delete": {
-				"button": "Elimina Account"
+				"button": "Elimina Account",
+				"modalTitle": "Elimina PNID",
+				"modalDescription": "Sei sicuro di voler eliminare il tuo PNID? Prima di procedere, considera che:\n\nI dati del tuo account verranno eliminati da tutti i servizi di Pretendo Network (inclusi Forum e Juxtaposition).\nI dati Stripe e la tua inscrizione verranno eliminati automaticamente.\nNon potrai creare un nuovo account con lo stesso PNID in futuro.\nEliminare un account non risolve problemi relativi a ban o supporto tecnico. Se hai un problema di questo genere, per favore usa il Forum per ricevere assistenza.",
+				"modalCaution": "Questa azione non può essere annullata.",
+				"modalConfirm": "Sì, elimina"
 			}
 		},
 		"account": "Account",

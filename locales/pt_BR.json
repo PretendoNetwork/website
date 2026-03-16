@@ -34,7 +34,7 @@
 		"title": "Sobre nós",
 		"paragraphs": [
 			"Utilizando o design de sala limpa, Pretendo é um projeto de código aberto que visa recriar a Nintendo Network para o Wii U e para família de consoles Nintendo 3DS.",
-			"Como os nossos serviços serão gratuitos e de código aberto, eles podem continuar existindo por muito mais tempo após o inevitável encerramento da Nintendo Network."
+			"Como os nossos serviços são gratuitos e de código aberto, eles irão continuar existindo no futuro."
 		]
 	},
 	"progress": {
@@ -55,7 +55,7 @@
 			},
 			{
 				"question": "Como eu uso a Pretendo?",
-				"answer": "Pretendo atualmente não está disponível para uso pelo público geral. No entanto, quando estiver pronto, você poderá usar a Pretendo executando nosso patcher homebrew no seu console."
+				"answer": "Para começar a usar a Pretendo Network no 3DS, Wii U ou emuladores, por favor veja nosso <a href='/docs/install'>setup instructions</a>!"
 			},
 			{
 				"question": "Você sabe quando recurso/serviço estará pronto?",
@@ -66,16 +66,28 @@
 				"answer": "Pretendo suporta qualquer cliente que possa interagir com a Nintendo Network. No momento, o único emulador para um desses consoles com suporte a Nintendo Network é o Cemu. O Cemu 2.0 oficialmente suporta a Pretendo nas configurações de conta do emulador. Para mais informações em como usar a Pretendo no Cemu, por favor visite <a href=\"https://pretendo.network/docs/install/cemu\">a documentação</a>.<br>Citra não suporta o modo online de verdade, e não funciona com a Pretendo, e também não demonstra nenhum sinal de suportar um modo online no futuro. Mikage, um outro emulador de 3DS para celulares, talvez haverá uma maneira de se conectar online no futuro."
 			},
 			{
-				"question": "Se eu for banido da Nintendo Network, continuarei banido ao usar a Pretendo?",
-				"answer": "Não temos acesso aos banimentos da Nintendo Network e nem todos os usuários serão banidos do nosso serviço. No entanto, teremos regras que devem ser seguidas ao utilizar o serviço e o não cumprimento dessas regras pode resultar em um banimento."
+				"question": "Se eu usar um emulador, será o suficiente para usar a Pretendo Network?",
+				"answer": "Não. Para propósitos de segurança e moderação, se você está usando um emulador, você ainda precisará de um console real. Isso permite uma segurança melhor e uma aplicação mais eficaz das regras, a fim de proporcionar uma experiência segura e agradável com o nosso serviço."
 			},
 			{
-				"question": "Pretendo terá suporte ao Wii ou Nintendo Switch?",
+				"question": "A Pretendo funciona no Cemu/emuladores?",
 				"answer": "O Wii já possui servidores personalizados fornecidos pelo <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No momento, não temos interesse em direcionar o projeto ao Nintendo Switch, pois ele oferece um serviço pago e completamente diferente da Nintendo Network."
 			},
 			{
-				"question": "Terei de desbloquear meu console para me conectar?",
-				"answer": "Sim, você precisará desbloquear seu console para se conectar; no entanto, no Wii U você só precisará acessar o Homebrew Launcher (ou seja, Haxchi, Coldboot Haxchi ou até mesmo o exploit do navegador de internet), informações sobre como os consoles Nintendo 3DS se conectarão serão fornecidas em um momento posterior."
+				"question": "A Pretendo vai ter suporte ao Wii/Switch?",
+				"answer": "O Wii já tem servidores customizados fornecidos por <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No momento nós não desejamos dar suporte ao Switch pois os servidores são pagos e são completamente diferente da Nintendo Network."
+			},
+			{
+				"question": "Eu vou precisar de um console desbloqueado para conectar?",
+				"answer": "Para a melhor experiência em consoles, você precisará desbloquear o seu sistema - especificamente Aroma para Wii U e Luma3DS para 3DS. Entretanto, no Wii U, o método SSSL (sem necessidade de desbloqueio) também está disponível com funcionalidade limitada. Veja as nossas<a href=\"/docs/install\">instruções de instalação</a> para mais detalhes."
+			},
+			{
+				"question": "Se eu estou banido na Nintendo Network, eu continuarei banido se usar a Pretendo?",
+				"answer": "Nós não temos acesso aos banimentos da Nintendo Network, então todos os usuários da Nintendo Network não estão banidos. Entretanto, nós temos regras à seguir enquanto se utiliza o serviço, e falhar em segui-lás pode resultar em um banimento."
+			},
+			{
+				"question": "Posso usar trapaças ou modificações online com a Pretendo?",
+				"answer": "Somente em partidas privadas - ganhar vantagem injusta ou atrapalhando a experiência online com pessoas que não tinham consentimento (como em partidas públicas) é motivo para banimento. Nós regularmente aplicamos banimentos de consoles e contas para ambos Wii U e 3DS. A Pretendo usa medidas de segurança extra que fazem métodos de \"desbanimentos\" como mudar o seu número serial não efetivos."
 			}
 		]
 	},
@@ -99,11 +111,169 @@
 	},
 	"credits": {
 		"title": "Equipe",
-		"text": "Conheça a equipe por trás do projeto"
+		"text": "Conheça a equipe por trás do projeto",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Dono do projeto e desenvolvedor líder",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Pesquisa e desenvolvimento do Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Pesquisa e desenvolvimento de atualizações no Wii U",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Pequisa dos sistemas e arquitetura do servidor",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "Desenvolvimento Web",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Pesquisa de sistemas e desenvolvimento do servidor",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Preservacionista e arquitetura do servidor",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Pesquisa de sistemas e desenvolvimento do servidor",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Desenvolvimento Web e do servidor",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Desenvolvimento do servidor e otimização",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Desenvolvimento de atualizações e pesquisa do 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Agradecimentos especiais",
-		"text": "Sem eles, Pretendo não estaria onde está hoje."
+		"text": "Sem eles, Pretendo não estaria onde está hoje.",
+		"people": [
+			{
+				"name": "Contribuidores do GitHub",
+				"caption": "Localizações e outros contribuidores",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "Desenvolvimento do 3DS e dissecador de NEX",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "Compartilhamento de informações do Miiverse",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Agradecimentos especiais",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Icones para o Editor Mii e reações do Juxt",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Pesquisa de consoles e servidores de jogos",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Desenvolvimento de atualizações para o Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "Criador de atualizações para o 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Arquitetura do servidor",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Arquitetura do servidor",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Rotações do Splatoon e pesquisa",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Rotações do Splatoon e pesquisa",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "Contribuidores GitHub",
+				"caption": "Localizações e outros contribuidores",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Fique atualizado",
@@ -132,7 +302,8 @@
 			"O tema principal de Super Mario World 2 - Yoshi's Island tem uma batida muito top e ninguém nunca irá me convencer do contrário.",
 			"Meus lançamentos favoritos do Nintendo Switch foram Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Ainda Outro Port Pack e Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age e o Pacote \"Você Realmente Gostou do Título do Virtual Console do Nintendo Wii U, Então Estamos Trazendo-o de Volta\". Você pode realmente dizer que a Nintendo se importa.",
 			"Tipo \"Você conhece a Kip, abençoe o coração dela, ela faz UwU o dia inteiro\" é uma forma simpática do sul de dizer \"Kip faz UwU o tempo todo e é tãoestranho e estúpido que seria melhor que ela não fizesse isso\"",
-			"Meu primeiro video no canal!! eu tava querendo fazer videos faz muito tempo mas meu notebook tava horrivel e eu nao conseguia usar o fraps, skype e minecraft ao mesmo tempo. mas agora isso acabou! com ajuda do meu professor de TI, agora meu notebook ta bem melhor e eu ja posso gravar! espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!"
+			"Meu primeiro video no canal!! eu tava querendo fazer videos faz muito tempo mas meu notebook tava horrivel e eu nao conseguia usar o fraps, skype e minecraft ao mesmo tempo. mas agora isso acabou! com ajuda do meu professor de TI, agora meu notebook ta bem melhor e eu ja posso gravar! espero que gostem e se gostarem deixem seu like e se inscrevam no canal!!!",
+			"Parece bom para mim"
 		]
 	},
 	"progressPage": {
@@ -201,7 +372,13 @@
 				"signInSecurity": "Acesso e segurança"
 			},
 			"unavailable": "Indisponível",
-			"upgrade": "Aprimorar conta"
+			"upgrade": "Aprimorar conta",
+			"delete": {
+				"button": "Deletar Conta",
+				"modalTitle": "Deletar PNID",
+				"modalCaution": "Esta ação não pode ser desfeita.",
+				"modalConfirm": "Sim, deletar"
+			}
 		},
 		"account": "Conta",
 		"accountLevel": [
@@ -276,5 +453,8 @@
 	"donation": {
 		"progress": "<span>$${totd}</span> de <span>$${goald}</span> por mês, o que significa <span>${perc}%</span> do objetivo mensal.",
 		"upgradePush": "Para se tornar um doador e ganhar acesso a vários benefícios legais, visite a página de <a href=\"/account/upgrade\">upgrade</a>."
+	},
+	"notfound": {
+		"description": "Ops! Nós não conseguimos achar esta página."
 	}
 }
