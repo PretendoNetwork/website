@@ -4,7 +4,7 @@ const { getGithubProjectsCache } = require('../cache');
 const router = new Router();
 
 router.get('/', async (request, response) => {
-	const renderData = {};
+	const renderData = { page: 'home' };
 
 	const githubProjectsCache = await getGithubProjectsCache();
 

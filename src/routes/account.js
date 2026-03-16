@@ -34,7 +34,7 @@ const discordOAuth = new DiscordOauth2({
 
 router.get('/', requireLoginMiddleware, async (request, response) => {
 	// Setup the data to be sent to the handlebars renderer
-	const renderData = {};
+	const renderData = { page: 'account' };
 
 	// Check for Stripe messages
 	const { upgrade_success } = request.query;

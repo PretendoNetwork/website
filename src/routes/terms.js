@@ -9,6 +9,7 @@ const router = new Router();
 
 router.get('/:slug', async (request, response, next) => {
 	const renderData = {
+		page: 'terms',
 		layout: 'blog-opengraph'
 	};
 
