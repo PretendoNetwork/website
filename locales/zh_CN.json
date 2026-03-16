@@ -1,40 +1,40 @@
 {
 	"nav": {
 		"about": "关于",
-		"faq": "FAQ",
+		"faq": "常见问题解答",
 		"docs": "文档",
-		"credits": "贡献者",
+		"credits": "制作人员",
 		"progress": "进度",
 		"blog": "博客",
-		"account": "账户",
+		"account": "账号",
 		"accountWidget": {
 			"settings": "设置",
-			"logout": "登出"
+			"logout": "退出登录"
 		},
 		"donate": "捐赠",
 		"dropdown": {
 			"captions": {
-				"about": "我们的项目",
-				"faq": "常见问题",
+				"about": "关于项目",
+				"faq": "常见问题解答",
 				"blog": "我们最近的更新（简化版）",
 				"credits": "我们的团队",
-				"progress": "查看目前的进度与目标"
+				"progress": "查看该项目的进度与目标"
 			}
 		}
 	},
 	"hero": {
 		"subtitle": "游戏服务器",
-		"title": "重新创建",
+		"title": "已重新创建",
 		"text": "Pretendo 是任天堂 3DS 和 Wii U 服务器的免费和开源替代品，允许所有人在线连接，即使在任天堂官方服务器不再运行",
 		"buttons": {
-			"readMore": "更多"
+			"readMore": "阅读更多"
 		}
 	},
 	"aboutUs": {
 		"title": "关于我们",
 		"paragraphs": [
 			"Pretendo 是一个开源项目，旨在使用逆向工程为 3DS 和 Wii U 重新创建 Nintendo Network。",
-			"此服务免费且开源，即使任天堂官方停服后也仍然可用。"
+			"由于我们的服务是免费且开源的，它们将长期存在下去。"
 		]
 	},
 	"progress": {
@@ -42,7 +42,7 @@
 		"githubRepo": "Github 存储库"
 	},
 	"faq": {
-		"title": "常见问题",
+		"title": "常见问题解答",
 		"text": "以下是针对常见问题的简要的答案。",
 		"QAs": [
 			{
@@ -50,27 +50,27 @@
 				"answer": "Pretendo 是一个开源的 Nintendo Network 替代品，旨在为 Wii U 和 3DS 系列游戏机构建自定义服务器。我们的目标是保留这些游戏机的在线功能，让玩家可以继续尽情畅玩他们最喜欢的 Wii U 和 3DS 游戏。"
 			},
 			{
-				"question": "现有的 NNID 能用于 Pretendo 吗？",
+				"question": "我现有的 NNID 可以用于 Pretendo 吗？",
 				"answer": "遗憾的是，不行。因为只有任天堂拥有您的用户数据，现有的 NNID 不可以用于 Pretendo ；虽然 NNID 到 PNID 的迁移在理论上是可能的，但它存在风险并且需要我们不希望持有的敏感用户数据。"
 			},
 			{
 				"question": "如何使用 Pretendo？",
-				"answer": "想要在3DS、Wii U或模拟器上使用Pretendo，请参见我们的<a href='/docs/install'>设置说明</a>！"
+				"answer": "若想要在 3DS、Wii U 或模拟器上使用 Pretendo Network，请首先参见我们的<a href='/docs/install'>设置说明</a>！"
 			},
 			{
 				"question": "什么时候某某功能/服务能完成？",
 				"answer": "不可以。许多 Pretendo 的功能/服务是独立开发的（例如，Miiverse 可能由一位开发人员构建，而 Accounts 和 Friends 正在由另一位开发人员构建），因此我们无法给出这需要多长时间的总体预计到达时间。"
 			},
 			{
-				"question": "什么时候会添加更多游戏?",
+				"question": "你们什么时候会添加更多游戏？",
 				"answer": "当我们认为后端库已经准备就绪，并且能有开发者有时间去维护新的游戏的时候。我们的诸多精力将会投入在稳定和完善现有游戏上——我们希望在支持新游戏之前能够尽可能地为现有游戏提供更好的体验。由于我们随时可能会有新的工作要做，所以无法为您提供准确的时间。"
 			},
 			{
-				"question": "我只有模拟器，可以使用Pretendo吗？",
-				"answer": "不。出于安全和监管的考虑，即使您使用模拟器，仍然需要一台真正的游戏主机。这有助于提高安全性，更有效地处罚违规用户，从而为您提供安全愉快的服务体验。"
+				"question": "如果我使用模拟器，是否足以使用Pretendo吗？",
+				"answer": "不行。为了安全和监管的考虑，即使您使用模拟器，仍然需要一台真正的游戏主机。这有助于提高安全性，更有效地处罚违规用户，从而为您提供安全愉快的服务体验。"
 			},
 			{
-				"question": "Pretendo 能摘 Cemu 等模拟器上运行吗？",
+				"question": "Pretendo 可以在 Cemu 或其他模拟器上运行吗？",
 				"answer": "Cemu 2.1 在模拟器的网络帐户选项下正式支持 Pretendo。有关如何开始设置 Cemu 的信息，请查看<a href=\"https://pretendo.network/docs/install/cemu\">文档</a>。<br>一些 3DS 模拟器或分支可能支持我们，但目前我们没有任何官方建议或设置说明。Citra 的最终版本目前不支持 Pretendo。"
 			},
 			{
@@ -78,7 +78,7 @@
 				"answer": "Wii 已经有了由 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的替代服务器。而 Switch 平台是收费的，并且与 Nintendo Network 系统差异非常大，目前没有支持的计划。"
 			},
 			{
-				"question": "我需要破解才能连接吗？",
+				"question": "我需要破解主机才能连接吗？",
 				"answer": "为了更好的体验，您需要破解您的系统——也就是说Wii U需要Aroma，3DS需要Luma3DS。然而，在Wii U上，仍由不需要破解的SSSL方法可供选择，但是其功能受限。具体信息请参考我们的 <a href=\"/docs/install\">设置说明</a>。"
 			},
 			{
@@ -105,7 +105,7 @@
 			},
 			{
 				"title": "Cemu 支持",
-				"caption": "即使没有硬件也能玩你最喜欢的 Wii U 游戏！"
+				"caption": "即使没有主机，也能玩你最喜欢的 Wii U 游戏！"
 			}
 		]
 	},
@@ -287,14 +287,14 @@
 		}
 	},
 	"footer": {
-		"socials": "社交",
+		"socials": "社交媒体",
 		"usefulLinks": "相关链接",
 		"widget": {
 			"captions": [
-				"想要知道动态？",
-				"加入我们的 Discord!"
+				"想知道最新动态吗？",
+				"加入我们的 Discord 服务器！"
 			],
-			"button": "现在加入!"
+			"button": "马上加入！"
 		},
 		"bandwidthRaccoonQuotes": [
 			"我是浣熊Bandwidth，我喜欢咬连接 Pretendo Network 服务器的电缆。真好吃！",
@@ -316,8 +316,8 @@
 	"blogPage": {
 		"title": "博客",
 		"description": "最新的更新都浓缩在这里。如果你需要更频繁的更新，请查看 <a href=\"/account/upgrade\" target=\"_blank\">捐赠</a>.",
-		"published": "作者",
-		"publishedOn": "在"
+		"published": "作者:",
+		"publishedOn": "於"
 	},
 	"localizationPage": {
 		"title": "让我们本地化",
@@ -337,7 +337,7 @@
 					"caption": "查看设置说明"
 				},
 				{
-					"header": "有错误吗？",
+					"header": "出现错误？",
 					"caption": "在这里搜索"
 				}
 			]
@@ -345,12 +345,12 @@
 		"search": {
 			"label": "错误代码",
 			"no_match": "没有搜索结果",
-			"title": "得到了一个错误？",
+			"title": "出现错误代码？",
 			"caption": "把错误代码输入在这里来得到帮助！"
 		},
 		"sidebar": {
 			"install": "安装",
-			"juxt_err": "Juxt 的错误代码",
+			"juxt_err": "错误代码 - Juxt",
 			"getting_started": "开始使用",
 			"welcome": "欢迎",
 			"install_extended": "安装 Pretendo",
@@ -374,13 +374,13 @@
 		"settings": {
 			"settingCards": {
 				"newsletterPrompt": "通过电子邮件接收项目更新（您可以随时选择退出）",
-				"discord": "Discord 聊天",
-				"connectedToDiscord": "连接Discord的身份",
-				"removeDiscord": "移除Discord账号",
+				"discord": "Discord",
+				"connectedToDiscord": "已绑定的 Discord 账号:",
+				"removeDiscord": "解除绑定 Discord 账号",
 				"passwordPrompt": "输入您的 PNID 密码以下载 Cemu 文件",
-				"profile": "账号信息",
+				"profile": "个人资料",
 				"nickname": "昵称",
-				"birthDate": "出生日期",
+				"birthDate": "生日",
 				"gender": "性别",
 				"country": "国家/地区",
 				"timezone": "时区",
@@ -392,17 +392,17 @@
 				"signInSecurity": "登录和安全",
 				"email": "邮件",
 				"password": "密码",
-				"passwordResetNotice": "在修改密码后，所有登入的系统会登出。",
+				"passwordResetNotice": "更改密码后，您将从所有设备上注销。",
 				"signInHistory": "登录历史",
 				"fullSignInHistory": "查看所有登录活动",
 				"otherSettings": "其他设置",
-				"noDiscordLinked": "没有连接的Discord账号。",
-				"linkDiscord": "连接Discord账号",
+				"noDiscordLinked": "没有绑定 Discord 账号。",
+				"linkDiscord": "绑定 Discord 账号",
 				"newsletter": "通讯",
 				"no_newsletter_notice": "目前没有新闻。请稍后再试",
-				"userSettings": "账号设置",
+				"userSettings": "用户设置",
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
-				"no_edit_from_dashboard": "目前无法在此页面修改 PNID 设置。请通过你的游戏设备修改"
+				"no_edit_from_dashboard": "目前无法从网站修改 PNID 设置。请通过已绑定的主机上修改用户设置。"
 			},
 			"upgrade": "升级账号",
 			"unavailable": "无法使用",
