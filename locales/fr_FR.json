@@ -6,6 +6,7 @@
 		"credits": "Crédits",
 		"progress": "Progression",
 		"blog": "Blog",
+		"forum": "Forum",
 		"account": "Compte",
 		"accountWidget": {
 			"logout": "Déconnexion",
@@ -16,6 +17,7 @@
 			"captions": {
 				"about": "À propos du projet",
 				"blog": "Nos dernières mises à jour, en condensé",
+				"forum": "Discutez avec des personnes et trouvez du soutien",
 				"progress": "Vérifiez l'avancement et les objectifs du projet",
 				"credits": "Rencontrez l'équipe",
 				"faq": "Questions fréquemment posées"

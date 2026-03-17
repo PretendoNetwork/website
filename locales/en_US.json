@@ -6,6 +6,7 @@
 		"credits": "Credits",
 		"progress": "Progress",
 		"blog": "Blog",
+		"forum": "Forum",
 		"account": "Account",
 		"donate": "Donate",
 		"accountWidget": {
@@ -18,6 +19,7 @@
 				"about": "About the project",
 				"faq": "Frequently asked questions",
 				"blog": "Our latest updates, condensed",
+				"forum": "Chat with others and get support",
 				"progress": "Check the project progress and goals"
 			}
 		}
