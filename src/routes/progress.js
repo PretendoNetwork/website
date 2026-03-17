@@ -5,7 +5,6 @@ const router = new Router();
 
 router.get('/', async (request, response) => {
 	const renderData = {
-		page: 'progress',
 		progressLists: await getGithubProjectsCache(),
 		donationCache: await getStripeDonationCache()
 	};

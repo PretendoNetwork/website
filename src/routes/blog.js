@@ -37,7 +37,6 @@ async function getPostsList() {
 router.get('/', async (request, response) => {
 	const postList = await getPostsList();
 	const renderData = {
-		page: 'blog',
 		postList
 	};
 

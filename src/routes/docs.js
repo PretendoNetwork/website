@@ -32,7 +32,6 @@ router.get([
 	'/errors'
 ], async (_request, response) => {
 	const renderData = {
-		page: 'docs',
 		errorList: JSON.stringify(errorList),
 		currentPage: 'errors'
 	};
