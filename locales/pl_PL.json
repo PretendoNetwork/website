@@ -18,9 +18,11 @@
 				"about": "O projekcie",
 				"faq": "Często zadawane pytania",
 				"blog": "Nasze najnowsze aktualizacje, skondensowane",
-				"progress": "Sprawdź postępy i cele projektu"
+				"progress": "Sprawdź postępy i cele projektu",
+				"forum": "Rozmawiaj z innymi i uzyskaj wsparcie"
 			}
-		}
+		},
+		"forum": "Forum"
 	},
 	"hero": {
 		"subtitle": "Serwery gier",
@@ -42,7 +44,7 @@
 		"githubRepo": "Repozytorium GitHub"
 	},
 	"faq": {
-		"title": "Często Zadawane Pytania",
+		"title": "Często zadawane pytania",
 		"text": "Oto odpowiedzi na pytania, które są nam często zadawane.",
 		"QAs": [
 			{
@@ -99,7 +101,15 @@
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół, który tworzy projekt"
+		"text": "Poznaj zespół, który tworzy projekt",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Właściciel projektu i główny twórca",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",
