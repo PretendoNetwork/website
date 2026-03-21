@@ -17,7 +17,7 @@
 				"credits": "Poznaj zespół",
 				"about": "O projekcie",
 				"faq": "Często zadawane pytania",
-				"blog": "Nasze najnowsze aktualizacje, skondensowane",
+				"blog": "Nasze najnowsze aktualizacje w skrócie",
 				"progress": "Sprawdź postępy i cele projektu",
 				"forum": "Rozmawiaj z innymi i uzyskaj wsparcie"
 			}
@@ -35,8 +35,8 @@
 	"aboutUs": {
 		"title": "O nas",
 		"paragraphs": [
-			"Pretendo to otwarto-źródłowy projekt, którego celem jest odtworzenie serwerów Nintendo Network dla 3DS i Wii U używając inżynierii odtwórczej.",
-			"Nasze usługi będą darmowe i otwarto źródłowe, więc mogą istnieć długo po zamknięciu Nintendo Network."
+			"Pretendo to projekt otwartoźródłowy, którego celem jest odtworzenie Nintendo Network dla konsol 3DS i Wii U przy użyciu inżynierii wstecznej typu clean-room.",
+			"Ponieważ nasze usługi są darmowe i otwartoźródłowe, będą istnieć przez długie lata."
 		]
 	},
 	"progress": {
@@ -49,11 +49,11 @@
 		"QAs": [
 			{
 				"question": "Czym jest Pretendo?",
-				"answer": "Pretendo to otwarto-źródłowy zamiennik dla Nintendo Network, który ma na celu stworzenie niestandardowych serwerów dla konsol Wii U i 3DS. Naszym celem jest zachowanie funkcjonalności usług online tych konsol, aby zezwolić graczom na kontynuowanie ich ulubionych gier na konsolach Wii U i 3DS."
+				"answer": "Pretendo to otwartoźródłowy zamiennik dla Nintendo Network, który ma na celu stworzenie własnych serwerów dla konsol Wii U i 3DS. Naszym celem jest zachowanie funkcji gry online na tych konsolach, aby gracze mogli w pełni cieszyć się swoimi ulubionymi grami na Wii U i 3DS."
 			},
 			{
 				"question": "Czy Pretendo będzie wspierać moje dotychczasowe konto Nintendo Network ID?",
-				"answer": "Niestety nie. Dotychczasowe konta Nintendo Network ID nie zadziałają na Pretendo, ponieważ jedynie Nintendo trzyma twoje dane. Teoretycznie dało by się przekonwertować Nintendo Network ID na Pretendo Network ID, lecz byłoby to ryzykowne i wymagałoby to dostępu do danych osobistych, których nie chcemy przechowywać."
+				"answer": "Niestety nie. Istniejące konta NNID nie będą działać na Pretendo, ponieważ jedynie Nintendo przechowuje dane użytkowników. Teoretycznie możliwa byłaby migracja z NNID na PNID, jednak wiązałoby się to z ryzykiem i wymagałoby dostępu do wrażliwych danych użytkowników, których nie chcemy przechowywać."
 			},
 			{
 				"question": "Jak mogę użyć Pretendo?",
@@ -65,19 +65,31 @@
 			},
 			{
 				"question": "Kiedy dodacie więcej gier?",
-				"answer": "Pretendo wspiera wszystko co łączy się z Nintendo Network, Jedyny emulator który wspiera taką funkcjonalnośc jest Cemu. Cemu 2.0 oficjalnie wspiera Pretendo pod twoimi ustawieniami konta w emulatorze. Dla informacji jak zacząć z Cemu, zapoznaj się z dokumentacją.Citra nie wspiera prawdziwej gry online, więc dlatego nie działa z Pretendo, i w ogóle nie pokazuje żadnych znaków wspierania prawdziwej gry online. Mikage, emulator 3DS na telefonach może zacząć wspierać tą funkcjonalność w przyszłości, lecz jest to daleko od pewności."
+				"answer": "Pracujemy nad nowymi grami, gdy uznamy, że nasze biblioteki backendowe są gotowe, aby je obsłużyć, oraz gdy mamy dostępny czas deweloperski na ich utrzymanie. Dużo naszej pracy poświęcamy stabilizacji i dopracowywaniu już istniejących gier, (chcemy zapewnić jak najlepsze doświadczenie w tych tytułach, zanim przejdziemy do nowych). Ponieważ nowe zadania pojawiają się cały czas, nie możemy określić, kiedy to nastąpi."
 			},
 			{
-				"question": "Jeśli jestem zbanowany na Nintendo Network, czy będę również zbanowany na Pretendo?",
-				"answer": "Nie mamy dostępu do listy zbanowanych użytkowników Nintendo Network, a wszyscy, którzy się na niej znajdują nie będą od początku zbanowani na Pretendo. Mamy jednak zasady, których musisz przestrzegać, ponieważ ich złamanie może doprowadzić do bana."
+				"question": "Czy korzystanie z emulatora pozwoli mi używać Pretendo?",
+				"answer": "Nie. Ze względów bezpieczeństwa i moderacji, nawet jeśli używasz emulatora, wciąż potrzebujesz prawdziwej konsoli. Pozwala to na lepsze zabezpieczenia i skuteczniejsze egzekwowanie zasad, aby zapewnić bezpieczne i przyjemne korzystanie z naszej usługi."
 			},
 			{
-				"question": "Czy Pretendo będzie wspierać konsole Wii/Switch?",
-				"answer": "Konsola Wii już posiada niestandardowe serwery tworzone przez <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Na razie nie chcemy tworzyć usług dla Nintendo Switch, ponieważ usługi tej konsoli są płatne oraz zupełnie inne od Nintendo Network."
+				"question": "Czy Pretendo działa na Cemu/emulatorach?",
+				"answer": "Cemu 2.1 oficjalnie obsługuje Pretendo w opcjach konta sieciowego w emulatorze. Aby dowiedzieć się, jak rozpocząć korzystanie z Cemu, sprawdź <a href=\"https://pretendo.network/docs/install/cemu\">dokumentację</a>.<br>Niektóre emulatory 3DS lub ich modyfikacje mogą nas wspierać, ale obecnie nie mamy żadnych oficjalnych zaleceń ani instrukcji konfiguracji. Ostateczne wersje Citra nie obsługują Pretendo."
 			},
 			{
-				"question": "Czy moja konsola musi być zmodyfikowana, aby połączyć się z Pretendo?",
-				"answer": "Tak, musisz posiadać zmodyfikowaną konsolę; na Wii U potrzebujesz tylko dostępu do Homebrew Launcher (np. Tiramisu, Haxchi). Informacje na temat sposobu podłączenia konsoli 3DS pojawią się w późniejszym terminie."
+				"question": "Czy Pretendo będzie wspierać Wii lub Switch?",
+				"answer": "Konsola Wii już ma własne serwery, udostępnione przez <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Obecnie nie planujemy wspierać Switcha, ponieważ jest to konsola płatna i całkowicie różni się od Nintendo Network."
+			},
+			{
+				"question": "Czy muszę modyfikować konsolę, żeby korzystać z Pretendo?",
+				"answer": "Aby uzyskać najlepsze doświadczenie na konsolach, będziesz musiał zmodyfikować (zhakować) swój system - konkretnie Aroma dla Wii U oraz Luma3DS dla 3DS. Jednak na Wii U dostępna jest też metoda SSSL bez modyfikacji, choć oferuje ograniczoną funkcjonalność. Szczegóły znajdziesz w naszych <a href=\"/docs/install\">instrukcjach instalacji</a>."
+			},
+			{
+				"question": "Jeśli zostałem zbanowany w Nintendo Network, czy pozostanę zbanowany korzystając z Pretendo?",
+				"answer": "Nie mamy dostępu do banów w Nintendo Network, więc wszyscy użytkownicy Nintendo Network nie są zbanowani w Pretendo. Jednak korzystając z naszej usługi trzeba przestrzegać zasad, a ich łamanie może skutkować banem."
+			},
+			{
+				"question": "Czy można korzystać z cheatów lub modów podczas gry online z Pretendo?",
+				"answer": "Tylko w meczach prywatnych - zdobywanie nieuczciwej przewagi lub zakłócanie rozgrywki online osób, które się na to nie zgodziły (tak jak w meczach publicznych), jest przewinieniem, za które można otrzymać bana. Regularnie nakładamy bany na konta i konsole zarówno w systemach Wii U, jak i 3DS. Pretendo korzysta z dodatkowych zabezpieczeń, które sprawiają, że tradycyjne metody „odbanowania” jak zmiana numeru seryjnego są nieskuteczne."
 			}
 		]
 	},
@@ -87,21 +99,21 @@
 		"cards": [
 			{
 				"title": "Serwery gier",
-				"caption": "Serwery twoich ulubionych gier i innych treści powracają."
+				"caption": "Przywracanie ulubionych gier i zawartości dzięki własnym serwerom."
 			},
 			{
 				"title": "Juxtaposition",
-				"caption": "Odnowiona wersja Miiverse, zrobiona tak, jakby została stworzona w dzisiejszych czasach."
+				"caption": "Miiverse w nowej odsłonie, tak jakby został stworzony w dzisiejszych czasach."
 			},
 			{
 				"title": "Wsparcie dla Cemu",
-				"caption": "Graj w twoje ulubione gry na Wii U bez tej konsoli!"
+				"caption": "Graj w twoje ulubione gry na Wii U nawet bez konsoli!"
 			}
 		]
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół, który tworzy projekt",
+		"text": "Poznaj zespół stojący za projektem",
 		"people": [
 			{
 				"name": "Jonathan Barrow (jonbarrow)",
