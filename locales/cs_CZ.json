@@ -18,9 +18,11 @@
 				"faq": "Často kladené dotazy",
 				"about": "O projektu",
 				"blog": "Souhrn nejnovějších aktualizací",
-				"credits": "Seznamte se s týmem"
+				"credits": "Seznamte se s týmem",
+				"forum": "Pro podporu a chatování s ostatními uživateli"
 			}
-		}
+		},
+		"forum": "Fórum"
 	},
 	"hero": {
 		"subtitle": "Herní servery",
