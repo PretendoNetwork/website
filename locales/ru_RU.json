@@ -34,7 +34,7 @@
 		"title": "О нас",
 		"paragraphs": [
 			"Pretendo - проект с открытым исходным кодом, цель которого воссоздать Nintendo Network для консолей 3DS и Wii U, используя обратную-разработку (reverse engineering).",
-			"Так как наши сервисы бесплатны и имеют открытый исходный код, то существовать Pretendo может ещё очень долго после закрытия официального Nintendo Network."
+			"Так как наши сервисы бесплатны и имеют открытый исходный код, они будут существовать еще долго в будущем."
 		]
 	},
 	"progress": {
@@ -74,7 +74,7 @@
 				"answer": "Cemu 2.1 официально поддерживает Pretendo через настройки вашего сетевого профиля на эмуляторе. Чтобы получить информацию о том, как настроить Cemu, проверьте нашу <a href=\"https://pretendo.network/docs/install/cemu\">документацию</a>.<br>Некоторые 3DS-эмуляторы или различные их ответвления могут поддерживать нас, однако у нас пока что нет никаких официальных рекомендаций или инструкций по настройке. Последние версии Citra не поддерживают Pretendo."
 			},
 			{
-				"question": "Будет ли Pretendo поддерживать WIi/Switch?",
+				"question": "Будет ли Pretendo поддерживать Wii/Switch?",
 				"answer": "У Wii уже есть неофициальные сервера, под названием <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. На данный момент мы не собираемся работать с онлайном Switch, так как сервис платный и кардинально отличается от Nintendo Network."
 			},
 			{
@@ -187,12 +187,76 @@
 			},
 			{
 				"caption": "Разработка 3DS и NEX-диссектора",
-				"name": "Stary"
+				"name": "Stary",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
 			},
-			{},
+			{
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub",
+				"name": "rverse",
+				"caption": "Предоставление информации по Miiverse"
+			},
 			{
 				"special": "Особая благодарность",
-				"caption": "Исследование структур данных Nintendo"
+				"caption": "Исследование структур данных Nintendo",
+				"name": "Kinnay",
+				"github": "https://github.com/Kinnay",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
+			},
+			{
+				"name": "NinStar",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar",
+				"caption": "Значки для редактора Mii и реакций Juxt"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Исследования консолей и игровые серверы",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Разработка патчей Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "Создатель патчей 3DS",
+				"github": "https://github.com/zaksabeast",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Серверный архитектур",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Серверный архитектур",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Ротaции и исследование Splatoon",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Ротaции и исследование Splatoon",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork",
+				"name": "Участники на GitHub",
+				"caption": "Локализация и прочий вклад"
 			}
 		]
 	},
@@ -223,7 +287,8 @@
 			"Главная музыкальная тема Super Mario World 2 - Yoshi's Island , просто бомба! Смирись.",
 			"Мои любимые релизы на Nintendo Switch были - Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Еще Один Порт Игр Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Вам Действительно Понравился Nintendo Wii U Virtual Console Игры, Так Что Мы Их возвращаем\" Pack. Ты с уверенностью можешь сказать что Nintendo точно заботится о нас.",
 			"Например, \"Знаешь, Кип, благослови её сердце, она весь день занимается UwU\" - это южный приятный способ сказать \"Кип занимается UwU всё время, и это очень странно и глупо, и я бы хотел, чтобы они этого не делали\"",
-			"Мой первый видеоролик на моём канале! Я хотел сделать видео уже очень давно, но мой ноутбук работал очень плохо и я не мог открыть фрапс , скайп и майнкрафт одновременно. Но теперь этому конец! Благодаря моему учителю по информатике мой ноутбук стал быстрым и теперь я могу снимать ролики! Я надеюсь вам понравится ставьте лайк и подписывайтесь на канал!"
+			"Мой первый видеоролик на моём канале! Я хотел сделать видео уже очень давно, но мой ноутбук работал очень плохо и я не мог открыть фрапс , скайп и майнкрафт одновременно. Но теперь этому конец! Благодаря моему учителю по информатике мой ноутбук стал быстрым и теперь я могу снимать ролики! Я надеюсь вам понравится ставьте лайк и подписывайтесь на канал!",
+			"Выглядит Хорошо Для Меня"
 		]
 	},
 	"progressPage": {
@@ -291,7 +356,14 @@
 				"newsletter": "Газета"
 			},
 			"unavailable": "Недоступно",
-			"upgrade": "Улучшить учётную запись"
+			"upgrade": "Улучшить учётную запись",
+			"delete": {
+				"button": "Удалить Аккаунт",
+				"modalTitle": "Удалить PNID",
+				"modalDescription": "Вы точно хотите удалить PNID? Пожалуйста учтите следующее перед удалением:\n\nДанные вашего аккаунта во всех сервисах Pretendo (включая Форум и Juxtaposition) будут удалены.\nВаши данные Stripe и подписка будут автоматически удалены.\nВы не сможете использовать тоши самай PNID на новом аккаунте в будущем.\nУдаление аккаунта не решает проблемы с запретами или технической поддержкой. Если у вас возникла проблема пожалуйста используйте форум для помощи.",
+				"modalCaution": "Это действие нельзя отменить.",
+				"modalConfirm": "Да, удалить"
+			}
 		},
 		"account": "Учётная запись",
 		"forgotPassword": {
@@ -357,7 +429,7 @@
 		"changeTier": "Поменять уровень",
 		"changeTierPrompt": "Вы уверены что хотите отписаться от <span class=\"oldtier\">oldtiername</span> и подписаться на <span class=\"newtier\">newtiername</span>?",
 		"back": "Назад",
-		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете доступ к функционалу которые шли вместе с данным уровнем."
+		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете доступ к функциям которые были доступны на данном уровне."
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> из <span>$${goald}</span>/в месяц, <span>${perc}%</span> от месячной цели.",
@@ -385,5 +457,8 @@
 		],
 		"text": "Наш проект имеет множество компонентов. Вот некоторые из них.",
 		"title": "Что мы делаем"
+	},
+	"notfound": {
+		"description": "Упс! Мы не смогли найти эту страницу."
 	}
 }
