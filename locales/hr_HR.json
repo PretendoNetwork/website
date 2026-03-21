@@ -1,1 +1,465 @@
-{}
+{
+	"nav": {
+		"about": "Informacije",
+		"faq": "ČPP",
+		"docs": "Dokumenti",
+		"credits": "Zahvale",
+		"progress": "Napredak",
+		"blog": "Blog",
+		"account": "Račun",
+		"donate": "Doniraj",
+		"accountWidget": {
+			"settings": "Postavke",
+			"logout": "Odjava"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Upoznaj tim",
+				"about": "O projektu",
+				"faq": "Često postavljena pitanja",
+				"blog": "Naša najnovija aktualiziranja, sažeto",
+				"progress": "Pregledaj napredak i ciljeve projekta",
+				"forum": "Raspravljaj s drugima i dobij podršku"
+			}
+		},
+		"forum": "Forum"
+	},
+	"hero": {
+		"subtitle": "Serveri za igre",
+		"title": "Ponovo stvoreni",
+		"text": "Pretendo je besplatna aplikacija otvorenog koda, koja služi kao zamjena za Nintendo servere za 3DS i Wii U, omogućujući online povezivanje za sve, čak i nakon što se izvorni serveri ukinu",
+		"buttons": {
+			"readMore": "Saznaj više"
+		}
+	},
+	"aboutUs": {
+		"title": "O nama",
+		"paragraphs": [
+			"Pretendo je projekt otvorenog coda koji ima za cilj rekreirati Nintendo Network za 3DS i Wii U koristeći obrnutog inženjeringa u čistim sobama.",
+			"Budući da su naše usluge besplatne i otvorenog koda, postojat će još dugo u budućnosti."
+		]
+	},
+	"progress": {
+		"title": "Napredak",
+		"githubRepo": "Github repozitorij"
+	},
+	"faq": {
+		"title": "Često postavljena pitanja",
+		"text": "Evo nekoliko često postavljanih pitanja s jednostavnim odgovorima.",
+		"QAs": [
+			{
+				"question": "Što je Pretendo?",
+				"answer": "Pretendo je projekt otvorenog koda koji predstavlja zamjenu za Nintendo Network i ima za cilj izgraditi prilagođene poslužitelje za konzole iz obitelji Wii U i 3DS. Naš cilj je očuvati mrežnu funkcionalnost tih konzola kako bismo igračima omogućili da i dalje igraju svoje omiljene Wii U i 3DS igre u njihovom punom opsegu."
+			},
+			{
+				"question": "Hoće li će moji postojeći NNID-evi raditi na Pretendu?",
+				"answer": "Nažalost, ne. Postojeći NNID-ovi neće raditi na Pretendu jer samo Nintendo posjeduje tvoje korisničke podatke; iako je migracija s NNID-a na PNID teoretski moguća, bila bi rizična te bi zahtijevala osjetljive korisničke podatke koje ne želimo spremati."
+			},
+			{
+				"question": "Kako koristiti Pretendo?",
+				"answer": "Za korištenje Pretendo Networka na 3DS-u, Wii U-u ili emulatorima, pogledaj naše <a href='/docs/install'>upute za instalaciju</a>!"
+			},
+			{
+				"question": "Znaš li kada će funkcija/usluga biti spremna?",
+				"answer": "Ne. Mnoge Pretendo funkcionalnosti i usluge razvijaju se neovisno (na primjer, Miiverse može razvijati jedan programer, dok drugi rade na projektima Računi i Prijatelji), stoga ne možemo dati opću procjenu koliko dugo će to trajati."
+			},
+			{
+				"question": "Kada ćete dodati još igra?",
+				"answer": "Nove igre stvaramo tek kada procijenimo da su naše pozadinske (backend) biblioteke spremne za njihovu podršku i kada imamo dovoljno vremena za njihovo održavanje. Velik dio našeg rada usmjeren je na stabilizaciju i dovršavanje postojećih igara – želimo osigurati najbolje moguće iskustvo u njima prije nego što prijeđemo na izgradnju novih igri. Budući da se stalno pojavljuju novi zadaci, ne možemo procijeniti kada bi se to moglo dogoditi."
+			},
+			{
+				"question": "Ako koristim emulator, hoće li to biti dovoljno za korištenje Pretendoa?",
+				"answer": "Ne. Iz sigurnosnih razloga i moderiranja, ako koristiš emulator i dalje trebaš pravu konzolu. To omogućuje poboljšanu sigurnost i učinkovitije provođenje pravila kako bi se osiguralo sigurno i ugodno iskustvo s našom uslugom."
+			},
+			{
+				"question": "Radi li Pretendo na Cemu/emulatorima?",
+				"answer": "Cemu 2.1 službeno podržava Pretendo putem opcija mrežnog računa unutar emulatora. Za informacije o tome kako početi koristiti Cemu, pogledaj <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaciju</a>.<br>Neki 3DS emulatori ili njihove izvedenice (forkovi) mogli bi nas podržavati, ali trenutačno nemamo službenu preporuku niti upute za postavljanje. Završne verzije Citra emulatora ne podržavaju Pretendo."
+			},
+			{
+				"question": "Hoće li Pretendo podržavati Wii/Switch?",
+				"answer": "Wii već ima prilagođene servere koje pruža <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Trenutačno ne planiramo usmjeriti razvoj na Switch jer je riječ o plaćenoj usluzi i sustavu koji je potpuno drugačiji od Nintendo Networka."
+			},
+			{
+				"question": "Hoću li za povezivanje morati nešto modificirati?",
+				"answer": "Za najbolje iskustvo na konzolama morat ćeš modificirati svoj sustav – konkretno Aroma za Wii U i Luma3DS za 3DS. Međutim, na Wii U je dostupna i metoda bez modifikacija (SSSL), ali s ograničenom funkcionalnošću. Za više detalja pogledaj naše <a href=\"/docs/install\">upute za instalaciju</a>."
+			},
+			{
+				"question": "Ako sam isključen/a na Nintendo Networku, hoću li ostati isključen/a i kada koristim Pretendo?",
+				"answer": "Nemamo pristup zabranama (banovima) na Nintendo Networku, tako da nijedan korisnik Nintendo Networka nije unaprijed zabranjen. Međutim, imamo vlastita pravila korištenja usluge i nepridržavanje tih pravila može rezultirati zabranom."
+			},
+			{
+				"question": "Mogu li koristiti cheatove ili modove online s Pretendom?"
+			}
+		]
+	},
+	"showcase": {
+		"title": "Što stvaramo",
+		"text": "Naš projekt ima mnogo komponenti. Evo nekih od njih.",
+		"cards": [
+			{
+				"title": "Serveri za igre",
+				"caption": "Vraćanje tvojih omiljenih igri i sadržaja putem prilagođenih servera."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Novo zamišljanje Miiversea, kao da je nastalo u modernom dobu."
+			},
+			{
+				"title": "Podrška za Cemu",
+				"caption": "Igraj svoje omiljene Wii U naslove čak i bez konzole!"
+			}
+		]
+	},
+	"credits": {
+		"title": "Tim",
+		"text": "Upoznaj tim projekta",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Vlasnik projekta i glavni programer",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Istraživanje i razvoj Miiversea",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Istraživanje Wii U-a i razvoj zakrpa",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Istraživanje sustava i arhitektura servera",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "Web razvoj",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Istraživanje sustava i razvoj servera",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Očuvanje i arhitektura servera",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Istraživanje sustava i razvoj servera",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Web i razvoj servera",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps i rad zajednice",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Razvoj i optimizacija servera",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Razvoj i istraživanje zakrpa za 3DS",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
+			}
+		]
+	},
+	"specialThanks": {
+		"title": "Posebna zahvala",
+		"text": "Bez njih, Pretendo ne bi bio gdje je danas.",
+		"people": [
+			{
+				"name": "GitHub doprinositelji",
+				"caption": "Lokalizacije i drugi doprinosi",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "razvoj crunch biblioteke",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS razvoj i NEX dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "Dijeljenje Miiverse informacija",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Posebna zahvala",
+				"caption": "Istraživanje Nintendo struktura podataka",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikone za Mii ureživač i Juxt reakcije",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Istraživanje konzola i serveri za igre",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Razvoj zakrpa za Wii U",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "Kreator zakrpa za 3DS",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Arhitektura servera",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Arhitektura servera",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Splatoon faze i istraživanja",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon faze i istraživanja",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub doprinositelji",
+				"caption": "Lokalizacije i drugi doprinosi",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
+	},
+	"discordJoin": {
+		"title": "Budi u tijeku",
+		"text": "Pridruži se našem Discord serveru za dobivanje najnovijih informacija o projektu.",
+		"widget": {
+			"text": "Primaj aktualiziranja u stvarnom vremenu o našem napretku",
+			"button": "Pridruži se serveru"
+		}
+	},
+	"footer": {
+		"socials": "Druženja",
+		"usefulLinks": "Korisne poveznice",
+		"widget": {
+			"captions": [
+				"Želiš biti u tijeku?",
+				"Pridruži se našem Discord serveru!"
+			],
+			"button": "Pridruži se sada!"
+		},
+		"bandwidthRaccoonQuotes": [
+			null,
+			"Mnogi nas pitaju hoćemo li zbog ovoga imati pravnih problema s Nintendom; drago mi je što mogu reći da moja teta radi u Nintendu i ona kaže da je sve u redu.",
+			null,
+			"Jedva čekam da sat dosegne 03:14:08 UTC, 19. siječnja 2038.!",
+			null,
+			null,
+			null,
+			null,
+			null,
+			"Što se mene tiče izgleda dobro"
+		]
+	},
+	"progressPage": {
+		"title": "Naš napredak",
+		"description": "Provjeri napredak i ciljeve projekta! (Aktualizira se otprilike svakih sat vremena, ne odražava SVE ciljeve ili sav napredak projekta)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Najnovija aktualiziranja u sažetim dijelovima. Ako želiš češće novosti <a href=\"/account/upgrade\" target=\"_blank\">podrži nas</a>.",
+		"published": "Izdavač:",
+		"publishedOn": ","
+	},
+	"account": {
+		"account": "Račun",
+		"loginForm": {
+			"login": "Prijava",
+			"register": "Registriraj se",
+			"detailsPrompt": "Dolje unesi podatke o svom računu",
+			"username": "Korisničko ime",
+			"password": "Lozinka",
+			"confirmPassword": "Potvrdi lozinku",
+			"email": "E-mail adresa",
+			"miiName": "Ime Mii-a",
+			"forgotPassword": "Ne sjećaš se lozinke?",
+			"registerPrompt": "Nemaš račun?",
+			"loginPrompt": "Već imaš račun?"
+		},
+		"forgotPassword": {
+			"header": "Zaboravljena lozinka",
+			"sub": "Doule unesi svoju e-mail adresu/PNID",
+			"input": "E-mail adresa ili PNID",
+			"submit": "Pošalji"
+		},
+		"resetPassword": {
+			"header": "Resetiraj lozinku",
+			"sub": "Dolje unesi novu lozinku",
+			"password": "Lozinka",
+			"confirmPassword": "Potvrdi lozinku",
+			"submit": "Pošalji"
+		},
+		"settings": {
+			"upgrade": "Nadogradi račun",
+			"unavailable": "Nedostupno",
+			"settingCards": {
+				"userSettings": "Korisničke postavke",
+				"profile": "Profil",
+				"nickname": "Nadimak",
+				"birthDate": "Datum rođenja",
+				"gender": "Spol",
+				"country": "Zemlja/regija",
+				"timezone": "Vremenska zona",
+				"serverEnv": "Okruženje servera",
+				"production": "Proizvodnja",
+				"beta": "Beta",
+				"upgradePrompt": "Beta serveri su ekskluzivni za beta testere.<br>Ako želiš postati beta tester, nadogradi na višu razinu računa.",
+				"hasAccessPrompt": "Tvoja trenutačna razina ti daje pristup beta serveru. Super!",
+				"signInSecurity": "Prijava i sigurnost",
+				"email": "E-mail adresa",
+				"password": "Lozinka",
+				"passwordResetNotice": "Nakon promjene lozinke, bit ćeš odjavljen/a sa svih uređaja.",
+				"signInHistory": "Povijest prijava",
+				"fullSignInHistory": "Pogledaj cijelu povijest prijava",
+				"otherSettings": "Druge postavke",
+				"discord": "Discord",
+				"connectedToDiscord": "Povezan na Discord kao",
+				"removeDiscord": "Ukloni Discord račun",
+				"noDiscordLinked": "Nema povezanog Discord računa.",
+				"linkDiscord": "Poveži Discord račun",
+				"newsletter": "Bilten",
+				"newsletterPrompt": "Primaj aktualiziranja o projektu putem e-pošte (možeš se odjaviti u bilo kojem trenutku)",
+				"passwordPrompt": "Unesi svoju PNID lozinku za preuzimanje Cemu datoteka",
+				"no_signins_notice": "Povijest prijava se trenutačno ne prati. Navrati kasnije!",
+				"no_newsletter_notice": "Bilten trenutačno nije dostupan. Navrati kasnije",
+				"no_edit_from_dashboard": "Uređivanje postavki PNID-a s korisničke nadzorne ploče trenutačno nije dostupno. Aktualiziraj korisničke postavke s tvoje povezane konzole za igre"
+			},
+			"delete": {
+				"button": "Izbriši račun",
+				"modalTitle": "Izbriši PNID",
+				"modalDescription": "Stvarno želiš izbrisati svoj PNID? Razmotri sljedeće prije brisanja:\n\nTvoji podaci o računu na svim Pretendo Network uslugama (uključujući Forum i Juxtaposition) će se izbrisati.\nTvoji Stripe podaci i pretplata će se automatski izbrisati.\nU budućnosti nećeš moći koristiti isti PNID na novom računu.\nBrisanje računa ne rješava probleme s isključivanjima ili tehničkom podrškom. Ako imaš problem, koristi Forum za pomoć.",
+				"modalCaution": "Ova je nepovratna radnja.",
+				"modalConfirm": "Da, izbriši"
+			}
+		},
+		"accountLevel": [
+			"Standardno",
+			"Tester",
+			"Voditelj",
+			"Programer"
+		],
+		"banned": "Isključen"
+	},
+	"upgrade": {
+		"title": "Nadogradi",
+		"description": "Postizanje mjesečnog cilja će Pretendo učinit stalnim poslom, pružajući kvalitetnija aktualiziranja pri većoj brzini.",
+		"month": "mjesec",
+		"tierSelectPrompt": "Odaberi razinu",
+		"unsub": "Otkaži pretplatu",
+		"unsubPrompt": "Stvarno se želiš odjaviti s <span>tiername</span>? <span>Odmah</span> ćeš izgubiti pristup pogodnostima",
+		"unsubConfirm": "Otkaži pretplatu",
+		"changeTier": "Promijeni razinu",
+		"changeTierPrompt": "Stvarno se želiš odjaviti s <span class=\"oldtier\">oldtiername</span> i pretplatiti se na <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Promijeni razinu",
+		"back": "Natrag"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> od <span>$${goald}</span>/mjesečno, <span>${perc} %</span> mjesečnog cilja.",
+		"upgradePush": "Za pretplatu i pristup još boljim pogodnostima, posjeti <a href=\"/account/upgrade\">stranicu za nadogradnju</a>."
+	},
+	"localizationPage": {
+		"title": "Lokalizirajmo",
+		"description": "Umetni poveznicu na javno dostupnu JSON lokaciju za testiranje na web-stranici",
+		"instructions": "Pogledaj upute za lokalizaciju",
+		"fileInput": "Datoteka za testiranje",
+		"filePlaceholder": "https://poveznica.do/datoteke.json",
+		"button": "Testiraj datoteku"
+	},
+	"docs": {
+		"missingInLocale": "Ova stranica nije dostupna u tvom području. Dolje pogledaj englesku verziju.",
+		"quickLinks": {
+			"header": "Brze poveznice",
+			"links": [
+				{
+					"header": "Instaliraj Pretendo",
+					"caption": "Pogledaj upute za postavljanje"
+				},
+				{
+					"header": "Dogodila se greška?",
+					"caption": "Potraži je ovdje"
+				}
+			]
+		},
+		"search": {
+			"title": "Imaš li kod greške?",
+			"caption": "Upiši taj kod greške u okvir ispod za dobivanje informacija o tvom problemu!",
+			"label": "Kod greške",
+			"no_match": "Nema podudaranja"
+		},
+		"sidebar": {
+			"getting_started": "Kako započeti",
+			"welcome": "Dobro došao, dobro došla",
+			"install_extended": "Instaliraj Pretendo",
+			"install": "Instaliraj",
+			"search": "Traži",
+			"juxt_err": "Kodovi grešaka – Juxt"
+		}
+	},
+	"modals": {
+		"cancel": "Odustani",
+		"confirm": "Potvrdi",
+		"close": "Zatvori"
+	},
+	"notfound": {
+		"description": "Nažalost nismo uspjeli pronaći ovu stranicu."
+	}
+}
