@@ -17,7 +17,8 @@
 				"about": "À propos du projet",
 				"credits": "Rencontrez l'équipe",
 				"blog": "Un résumé de nos mises à jour récentes",
-				"progress": "Vérifiez la progression et les objectifs du projet"
+				"progress": "Vérifiez la progression et les objectifs du projet",
+				"faq": "Foire aux questions"
 			}
 		}
 	},
@@ -251,7 +252,8 @@
 			{
 				"name": "mrjvs",
 				"caption": "Architecture serveur",
-				"picture": "https://github.com/mrjvs.png"
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
 			}
 		]
 	}
