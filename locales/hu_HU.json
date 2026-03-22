@@ -16,11 +16,13 @@
 				"faq": "Gyakran ismételt kérdések",
 				"blog": "A legutolsó frissítéseink, tömören",
 				"progress": "Ellenőrizd a projekt előrehaladást és célokat",
-				"credits": "Találkozz a team-mel"
+				"credits": "Találkozz a team-mel",
+				"forum": "Csevegj másokkal és szerezz segítséget"
 			}
 		},
 		"about": "Névjegy",
-		"faq": "GYIK"
+		"faq": "GYIK",
+		"forum": "Fórum"
 	},
 	"hero": {
 		"subtitle": "Játék szerverek",

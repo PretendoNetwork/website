@@ -16,11 +16,13 @@
 				"faq": "Frequently asked questions",
 				"blog": "Our latest updates, condensed",
 				"progress": "Check the project progress and goals",
-				"credits": "Meet the team"
+				"credits": "Meet the team",
+				"forum": "Chat with others and get support"
 			}
 		},
 		"progress": "Progress",
-		"account": "Account"
+		"account": "Account",
+		"forum": "Forum"
 	},
 	"hero": {
 		"subtitle": "Game servers",

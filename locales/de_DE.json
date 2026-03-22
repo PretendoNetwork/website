@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Über uns",
+		"about": "Über",
 		"faq": "FAQ",
 		"docs": "Dokumentation",
 		"credits": "Mitwirkende",
@@ -18,9 +18,11 @@
 				"about": "Über das Projekt",
 				"faq": "Häufig gestellte Fragen",
 				"blog": "Unsere neuesten Updates, zusammengefasst",
-				"progress": "Überprüfe den Projektfortschritt und die Ziele"
+				"progress": "Überprüfe den Projektfortschritt und die Ziele",
+				"forum": "Schreibe mit anderen und erhalte Hilfe"
 			}
-		}
+		},
+		"forum": "Forum"
 	},
 	"hero": {
 		"subtitle": "Spielserver",
