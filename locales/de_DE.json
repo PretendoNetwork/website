@@ -402,7 +402,7 @@
 	},
 	"upgrade": {
 		"title": "Upgraden",
-		"description": "Sobald wir unser monatliches Ziel erreicht haben, wird Pretendo zu unserem Vollzeitjob, was zu qualitativ hochwertigeren und schnelleren Updates führen wird.",
+		"description": "Das Erreichen des monatlichen Ziels hilft bei der Entwicklung von Pretendo Network, indem es die Server-Infrastruktur finanziert und unserem leitendem Entwickler Jon ermöglicht, in Vollzeit an dem Projekt zu arbeiten.",
 		"month": "Monat",
 		"tierSelectPrompt": "Wähle eine Stufe",
 		"unsub": "Abonnement kündigen",
