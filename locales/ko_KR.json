@@ -13,17 +13,19 @@
 				"about": "이 프로젝트에 대하여",
 				"faq": "자주 묻는 질문",
 				"blog": "우리의 최신 업데이트 (요약)",
-				"progress": "프로젝트 진행 상황과 목표를 확인하세요"
+				"progress": "프로젝트 진행 상황과 목표를 확인하세요",
+				"forum": "다른 사람들과 소통하고 도움을 받으세요"
 			}
 		},
 		"donate": "후원",
 		"accountWidget": {
 			"settings": "설정",
 			"logout": "로그아웃"
-		}
+		},
+		"forum": "포럼"
 	},
 	"hero": {
-		"subtitle": "게임 서버",
+		"subtitle": "재창조된",
 		"title": "게임 서버",
 		"text": "Pretendo는 무료이며 3DS와 Wii U를 위한 Nintendo의 서버의 오픈 소스 대체제이고, 원래 서버가 닫힌 된 후에도 모두를 위해 온라인 연결을 제공합니다",
 		"buttons": {
@@ -34,7 +36,7 @@
 		"title": "우리들에 대해서",
 		"paragraphs": [
 			"Pretendo는 클린룸 리버스 엔지니어링 기법을 이용해 3DS 및 Wii U용 Nintendo 네트워크를 재구현하는 오픈 소스 프로젝트입니다.",
-			"저희 프로젝트는 무료이면서 오픈 소스이기 때문에 닌텐도 네트워크가 종료되고 긴 세월이 지나고도 운영될 수 있습니다."
+			"저희 프로젝트는 무료이면서 오픈 소스이기 때문에, 미래에도 긴 세월 동안 운영될 수 있습니다."
 		]
 	},
 	"progress": {
@@ -66,19 +68,20 @@
 				"answer": "저희는 저희 백엔드 서비스들이 (기반 서비스)들의 지원이 뒷받혀주고 어떤 개발자의 시간이 비었을때 새로운 게임의 서비스를 개발합니다. 대부분 저희가 일하는 것은 현재 지원하는 게임들의 서비스를 완벽하게 만들고 최적화하는데 집중하는데, 그 이유는 먼저 시작한 서비스를 완벽하게 하고 싶기 때문이죠. 버그나 오류가 계속 나오니, 언제부터 새 게임의 서비스를 개발할지는 저희도 모릅니다."
 			},
 			{
-				"question": "제가 닌텐도 네트워크에서 영구 정지가 되어 있다면 Pretendo Network에서도 영구 정지된 상태일까요?",
+				"question": "에뮬레이터를 사용한다면, Pretendo를 사용하는 데에 충분할까요?",
 				"answer": "아니요. 서비스의 보안과 검열을 위해서, 에뮬레이터를 사용하시더라도 실제로 게임기를 소유하셔야 합니다. 이렇게 함으로써 더 강화된 보안과 더 즐거운 서비스를 저희가 제공할 수 있습니다."
 			},
 			{
 				"question": "Pretendo가 Cemu나 다른 에뮬레이터에서 작동하나요?",
-				"answer": "Wii의 서비스는 이미 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>가 제공하고 있습니다. 스위치의 Nintendo Switch Online은 유료이며 닌텐도 네트워크와 전혀 다르기 때문에, 현재로서도 지원할 계획은 없습니다."
+				"answer": "Cemu 2.1은 네트워크 계정 설정을 통해 Pretendo를 공식적으로 지원합니다. Cemu로 시작하는 방법이 궁금하시면, <a href=\"https://pretendo.network/docs/install/cemu\">문서</a>를 참고하세요.<br>일부 3DS 에뮬레이터 혹은 포크는 Pretendo를 지원할 수 있지만, 현재 저희는 공식적으로 설정 방법이나 권장하고 있는 에뮬레이터가 없습니다. Citra의 최종 버전 또한 Pretendo를 지원하지 않습니다."
 			},
 			{
-				"question": "연결하려면 해킹이 필요한가요?",
-				"answer": "네, 연결하기 위해 콘솔 해킹은 필요할 것입니다. 다만, Wii U에서는 홈브루 런처의 접근 권한만 있으면 됩니다 (예. Haxchi, Coldboot Haxchi, 웹 브라우저 취약점). 3DS에서의 연결 방법은 추후에 공개될 것입니다."
+				"question": "Pretendo가 Wii 혹은 스위치도 지원 할 예정인가요?",
+				"answer": "닌텐도 Wii는 이미 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>가 지원하고 있습니다. 또한 닌텐도 스위치 온라인은 유료이고 닌텐도 네트워크와 구조도 완전히 다르기 때문에 아직까진 지원 할 계획이 없습니다."
 			},
 			{
-				"answer": "최고의 경험을 위해서는, 게임기를 해킹하셔야 합니다. 특히 Wii U의 Aroma와 3DS의 Luma3DS로요. 그런데, Wii U에서는, 기능은 제한되있지만 해킹 없이 사용할 수 있는 SSSL 방식도 사용 하실 수 있습니다. 더 많은 정보는 <a href=\"/docs/install\">이 문서</a>를 참고하세요."
+				"answer": "최고의 경험을 위해서는, 게임기를 해킹하셔야 합니다. 특히 Wii U의 Aroma와 3DS의 Luma3DS로요. 그런데, Wii U에서는, 기능은 제한되있지만 해킹 없이 사용할 수 있는 SSSL 방식도 사용 하실 수 있습니다. 더 많은 정보는 <a href=\"/docs/install\">이 문서</a>를 참고하세요.",
+				"question": "연결하기 위해서 기기를 해킹해야 되나요?"
 			},
 			{
 				"answer": "저희는 닌텐도 네트워크의 밴 기록을 알 수 없기 때문에, 닌텐도 네트워크에서의 밴이 그대로 이어지지 않습니다. 다만, 저희도 저희만의 규칙이 있기 때문에, 저희의 규칙을 따르지 않으신다면 밴을 당하실 수 있습니다.",
@@ -113,13 +116,51 @@
 		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
 		"people": [
 			{
-				"caption": "프로젝트 제작자이자 프로젝트를 이끄는 개발자"
+				"caption": "프로젝트 제작자이자 프로젝트를 이끄는 개발자",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Miiverse 연구와 개발"
+				"caption": "Miiverse 연구와 개발",
+				"name": "Jemma (CaramelKat)",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
 			},
 			{
-				"caption": "Wii U 연구 및 패치 개발"
+				"caption": "Wii U 연구 및 패치 개발",
+				"name": "quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "시스템 연구 및 서버 아키텍처 관리",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "웹 개발",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "시스템 연구 및 서버 개발",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "데이터 보존 및 서버 아키텍처 관리",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "시스템 연구 및 서버 개발",
+				"picture": "https://github.com/danielectra.png"
 			}
 		]
 	},
