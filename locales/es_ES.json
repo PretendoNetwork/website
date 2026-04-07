@@ -18,9 +18,11 @@
 				"about": "Sobre el proyecto",
 				"blog": "Un resumen de nuestras últimas actualizaciones",
 				"progress": "Mira el progreso del proyecto y sus metas",
-				"faq": "Preguntas frecuentes"
+				"faq": "Preguntas frecuentes",
+				"forum": "Habla con otros y obtén ayuda"
 			}
-		}
+		},
+		"forum": "Foro"
 	},
 	"hero": {
 		"subtitle": "Servidores en línea",
@@ -151,7 +153,7 @@
 			},
 			{
 				"github": "https://github.com/InternalLoss",
-				"caption": "Conservacionista y arquitectura del servidor",
+				"caption": "Conservacionista y arquitecto del servidor",
 				"picture": "https://github.com/InternalLoss.png",
 				"name": "Billy"
 			},
@@ -288,7 +290,7 @@
 	},
 	"footer": {
 		"socials": "Redes sociales",
-		"usefulLinks": "Énlaces útiles",
+		"usefulLinks": "Enlaces útiles",
 		"widget": {
 			"captions": [
 				"¿Quieres estar al tanto?",
@@ -301,9 +303,9 @@
 			"Muchas personas nos preguntan si podríamos tener problemas legales con Nintendo por esto. Me alegra anunciar que mi tía trabaja en Nintendo y me dijo que no pasaba nada.",
 			"Webkit v537 es la mejor versión de Webkit para la Wii U. No, no vamos a portear Chrome a la Wii U",
 			"¡No puedo esperar a que el reloj llegue a la 03:14:08 UTC el 19 de enero de 2038!",
-			"La Wii U es en realidad un sistema subestimado: los comerciales eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi GamePad no se conecta a mi Wii.",
+			"La Wii U es en realidad un sistema subestimado: los anuncios eran realmente malos, pero la consola es genial. Eh, espera un segundo, no estoy seguro de por qué, pero mi GamePad no se conecta a mi Wii.",
 			"Super Mario World 2 - El tema principal de Yoshi's Island es absolutamente genial y no hay forma de que me convenzas de lo contrario.",
-			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack y Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
+			"Mis lanzamientos favoritos de Nintendo Switch han sido Nintendo Switch Online + Paquete de expansión, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Paquete de juego sin conexión, Nintendo Switch Online + Otro Paquete de adaptaciones más y Nintendo Switch Online + Brain Training del Dr. Kawashima / Brain Pack \"Te gustó mucho el título de la consola virtual de Nintendo Wii U, así que lo traeremos de vuelta\". Realmente puedes decir que a Nintendo le importa.",
 			"Decir “Conoces a Kip, bendice su corazón, hace UwU todo el día “ es la manera del sur de decir “Kip hace uwu todo el tiempo y es bastante raro y idiota y desearía que no lo hiciera”",
 			"Mi primer video en mi canal!! Llevaba mucho tiempo queriendo hacer videos, pero mi computadora portátil funcionaba bastante mal y no podía ejecutar Fraps, Skype y Minecraft al mismo tiempo. ¡pero ahora eso se acabó! ¡con la ayuda de mi profesor de TI, mi computadora portátil funciona mucho mejor y puedo grabar ahora! Espero que les guste y si es así dale me gusta y suscríbete!!!",
 			"Me parece bien"
@@ -352,7 +354,7 @@
 			"getting_started": "Para empezar",
 			"install_extended": "Instalar Pretendo",
 			"search": "Buscar",
-			"juxt_err": "Codigos de error - Juxt",
+			"juxt_err": "Códigos de error - Juxt",
 			"install": "Instalar",
 			"welcome": "Bienvenido"
 		}
@@ -365,7 +367,7 @@
 			"password": "Contraseña",
 			"login": "Iniciar Sesión",
 			"email": "Correo electrónico",
-			"miiName": "Nombre de Mii",
+			"miiName": "Nombre del Mii",
 			"loginPrompt": "¿Ya tienes una cuenta?",
 			"confirmPassword": "Confirmar contraseña",
 			"forgotPassword": "¿Olvidaste tu contraseña?",
@@ -390,26 +392,26 @@
 				"fullSignInHistory": "Ver historial de inicio de sesión completo",
 				"otherSettings": "Otros ajustes",
 				"discord": "Discord",
-				"connectedToDiscord": "Conectado a discord como",
+				"connectedToDiscord": "Conectado a Discord como",
 				"removeDiscord": "Eliminar cuenta de Discord",
 				"noDiscordLinked": "No hay cuenta de Discord vinculada.",
 				"linkDiscord": "Vincular cuenta de Discord",
 				"newsletter": "Boletín",
-				"newsletterPrompt": "Reciba actualizaciones del proyecto por correo electrónico (puede optar por no participar en cualquier momento)",
+				"newsletterPrompt": "Recibe actualizaciones del proyecto por correo electrónico (puedes optar por no participar en cualquier momento)",
 				"passwordPrompt": "Ingresa la contraseña de tu PNID para descargar los archivos de Cemu",
 				"nickname": "Apodo",
 				"upgradePrompt": "Los servidores beta son exclusivos para los beta testers. <br>Para convertirte en un beta tester, actualiza a un nivel de cuenta superior.",
 				"userSettings": "Ajustes de usuario",
 				"no_signins_notice": "El historial de inicios de sesión no es vigilado. ¡Vuelve más tarde!",
-				"no_newsletter_notice": "Boletín no disponible actualmente. Vuelve a intentarlo más tarde",
-				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualice la configuración de usuario desde su consola de juegos vinculada"
+				"no_newsletter_notice": "El boletín no disponible actualmente. Vuelve a intentarlo más tarde",
+				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualiza la configuración de usuario desde tu consola de juegos vinculada"
 			},
 			"upgrade": "Subir de rango",
 			"unavailable": "No disponible",
 			"delete": {
-				"button": "Borrar Cuenta",
+				"button": "Eliminar cuenta",
 				"modalTitle": "Borrar PNID",
-				"modalDescription": "Estás seguro que quieres eliminar tu PNID? Tenga en cuenta lo siguiente antes de la eliminación:\nLos datos de tu cuenta (esto incluye Forum y Juxtaposition) serán borrados en todos los servicios de Pretendo Network.\nTus datos y suscripción de Stripe se eliminarán automáticamente.\nNo serás capaz de usar el mismo PNID en una nueva cuenta en el futuro.\nEliminar una cuenta no soluciona problemas con bandos o soporte técnico. Si tienes un problema, por favor use el Forum para asistencia.",
+				"modalDescription": "¿Estás seguro que quieres eliminar tu PNID? Por favor, ten esto en cuenta antes de eliminar:\n\nTus datos en los servicios de Pretendo Network como los foros y Juxt serán eliminados.\nTus datos y suscripción de Stripe serán automáticamente eliminados.\nNo podrás volver a usar el mismo PNID en una nueva cuenta en el futuro.\nEliminar una cuenta no solucionará las restricciones o el soporte técnico. Si tienes un problema y necesitas asistencia, consulta los foros.",
 				"modalCaution": "Está acción no se puede deshacer.",
 				"modalConfirm": "Sí, eliminar"
 			}
@@ -430,7 +432,7 @@
 		},
 		"resetPassword": {
 			"password": "Contraseña",
-			"confirmPassword": "Confirme la contraseña",
+			"confirmPassword": "Confirma la contraseña",
 			"submit": "Enviar",
 			"header": "Restablecer la contraseña",
 			"sub": "Introduzca una nueva contraseña"
@@ -441,17 +443,17 @@
 		"month": "mes",
 		"tierSelectPrompt": "Selecciona un rango",
 		"unsub": "Cancelar suscripción",
-		"unsubPrompt": "¿Está seguro de que desea darse de baja de <span>tiername</span>? Perderá <span>inmediatamente</span> el acceso a las ventajas asociadas con ese nivel.",
+		"unsubPrompt": "¿Estás seguro de que deseas darte de baja de <span>tiername</span>? Perderás <span>inmediatamente</span> el acceso a las ventajas asociadas con ese nivel.",
 		"unsubConfirm": "Cancelar suscripción",
 		"changeTier": "Cambiar rango",
-		"changeTierPrompt": "¿Está seguro de que desea darse de baja de <span class=\"oldtier\">oldtiername</span> y suscribirse a <span class=\"newtier\">newtiername</span>?",
+		"changeTierPrompt": "¿Estás seguro de que deseas darte de baja de <span class=\"oldtier\">oldtiername</span> y suscribirte a <span class=\"newtier\">newtiername</span>?",
 		"changeTierConfirm": "Cambiar rango",
 		"back": "Atrás",
 		"title": "Subir rango"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> del objetivo mensual.",
-		"upgradePush": "Para convertirse en suscriptor y obtener acceso a beneficios geniales, visite la página <a href=\"/account/upgrade\">actualizar</a>."
+		"upgradePush": "Para convertirse en suscriptor y obtener acceso a beneficios geniales, visita la página <a href=\"/account/upgrade\">actualizar</a>."
 	},
 	"modals": {
 		"cancel": "Cancelar",
