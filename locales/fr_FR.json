@@ -370,6 +370,7 @@
 			"confirmPassword": "Confirmez le mot de passe",
 			"email": "Email",
 			"miiName": "Surnom du Mii",
+			"birthdate": "Date de naissance",
 			"forgotPassword": "Mot de passe oublié ?",
 			"registerPrompt": "Pas encore inscrit ?"
 		},

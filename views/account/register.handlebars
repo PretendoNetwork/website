@@ -24,13 +24,13 @@
 				<input name="mii_name" id="mii_name" value="{{ mii_name }}" maxlength=10 required>
 			</div>
 			<div>
-				<label for="birthday">Birthday</label> {{! TODO - Add this to weblate, hard-coding for now to just push it out }}
+				<label for="birthday">{{ locale.account.loginForm.birthdate }}</label>
 				<input type="date" id="birthday" name="birthday">
 			</div>
 			<br>
 			<div>
 				<label for="password">{{ locale.account.loginForm.password }}</label>
-				<input name="password" id="password" type="password" autocomplete="new-password" minlength="6" maxlength="16" required>
+				<input name="password" id="password" type="password" autocomplete="new-password" minlength="6" maxlength="16" passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];" pattern="[-!-~]{6,16}" required>
 			</div>
 			<div>
 				<label for="password_confirm">{{ locale.account.loginForm.confirmPassword }}</label>
