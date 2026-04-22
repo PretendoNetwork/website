@@ -230,7 +230,7 @@ header {
 	}
 
 	footer {
-		width: 95%;
+		width: 90% !important;
 		margin: auto auto 40px;
 	}
 }
