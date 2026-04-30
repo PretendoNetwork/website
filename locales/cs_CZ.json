@@ -370,7 +370,7 @@
 		"changeTierPrompt": "Jste si jisti, že chcete zrušit předplatné <span class=\"oldtier\">oldtiername</span> a předplácet <span class=\"newtier\">newtiername</span>?",
 		"unsubPrompt": "Jste si jisti, že chcete zrušit předplatné <span>tiername</span>? S <span>okamžitou platností</span> přijdete o všechny výhody spojené s tímto tierem.",
 		"title": "Upgradovat",
-		"description": "Dosažení měsíčního cíle udělá z Pretenda plnohodnotné zaměstnání a umožní nám poskytovat kvalitnější aktualizace v rychlejším tempu."
+		"description": "Dosažení měsíčního cíle pomůže Pretendu s hrazením provozu serverů a umožní našemu vedoucímu vývojáři, Jonovi, na projektu pracovat plnohodnotně, jelikož je jeho hlavním zdrojem příjmů."
 	},
 	"docs": {
 		"quickLinks": {
