@@ -17,10 +17,10 @@
 			"captions": {
 				"about": "À propos du projet",
 				"blog": "Nos dernières mises à jour, en condensé",
-				"forum": "Discutez avec des personnes et trouvez du soutien",
+				"forum": "Discutez avec d'autres personnes et obtenez de l'aide",
 				"progress": "Vérifiez l'avancement et les objectifs du projet",
 				"credits": "Rencontrez l'équipe",
-				"faq": "Questions fréquemment posées"
+				"faq": "Foire aux questions"
 			}
 		}
 	},
@@ -308,7 +308,7 @@
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
 			"\"Tu vois qui c'est Kip ? C'est fou elle dit souvent UwU, tu trouves pas ?\" : c'est vraiment la plus douce des façons de dire \"Kip dit H24 UwU, c'est trop chiant et chelou : à l'aide\".",
 			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !",
-			"Cela me semble bon"
+			"Cela me semble correct"
 		]
 	},
 	"progressPage": {
@@ -412,7 +412,7 @@
 			"delete": {
 				"button": "Supprimer le compte",
 				"modalTitle": "Supprimer votre compte",
-				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID? Veuillez tenir compte des éléments suivants avant la suppression:\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
+				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID ? Veuillez tenir compte des éléments suivants avant la suppression :\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
 				"modalCaution": "Cette action ne peut pas être annulée.",
 				"modalConfirm": "Oui, supprimez mon compte"
 			}
@@ -442,7 +442,7 @@
 	"upgrade": {
 		"title": "Mise à Niveau",
 		"changeTierPrompt": "Êtes-vous sûr de vouloir vous désabonner de <span class=\"oldtier\">oldertiername</span> et vous abonner à <span class=\"newtier\">newtiername</span> ?",
-		"description": "Atteindre le but mensuel fera de Pretendo un travail complet, proposant des mises à jour de meilleures qualité à une plus grande vitesse.",
+		"description": "Atteindre le but mensuel aidera Pretendo Network dans son développement, en participant au financement des infrastructures de serveurs et en permettant à Jon, notre développeur principal, de travailler sur le projet à temps-plein.",
 		"month": "mois",
 		"tierSelectPrompt": "Sélectionnez un niveau",
 		"unsub": "Se désabonner",
