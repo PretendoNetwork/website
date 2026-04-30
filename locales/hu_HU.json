@@ -224,7 +224,8 @@
 			"detailsPrompt": "Add meg a fiók adataid alább",
 			"confirmPassword": "Jelszó megerősítése",
 			"email": "Email",
-			"miiName": "Mii név"
+			"miiName": "Mii név",
+			"birthdate": "Szülinap"
 		},
 		"forgotPassword": {
 			"submit": "Elküld",
@@ -301,7 +302,7 @@
 		"title": "Bővítés",
 		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? <span>Azonnal</span> el fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
 		"changeTier": "Csomag módosítása",
-		"description": "Ha havi cél elérése a Pretendo-t teljes munkaidős munkává teszi, ez jobb minőségű frissítéseket és nagyobb fejlesztési sebességet biztosít.",
+		"description": "Ha havi cél elérése segíti a Pretendo Network fejlesztését, finanszírozva a szerver infrastruktúrát és lehetővé teszi vezető fejlesztőnknek Jon-nak, hogy teljes munkaidőben dolgozzon a projekten.",
 		"month": "hónap",
 		"tierSelectPrompt": "Válassz egy csomagot",
 		"unsub": "Leiratkozás",
