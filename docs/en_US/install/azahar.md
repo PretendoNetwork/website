@@ -11,6 +11,7 @@ The following steps are required for you to connect to the Pretendo Network:
 3. [LLE module setup in Azahar](#lle-module-setup-in-azahar)
 4. [Downloading Nimbus](#downloading-nimbus)
 5. [Using Nimbus](#using-nimbus)
+6. [Link a PNID (optional)](#link-a-pretendo-network-id-optional)
 
 ## Downloading Artic Setup Tool
 
@@ -79,3 +80,21 @@ On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done w
 In Azahar, click `Emulation`, then `Configure`.
 
 Select the `System` menu and click `Enable required LLE modules for online features`. Make sure this box is checked, then click OK.
+
+## Downloading Nimbus
+
+Download the [latest Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest). Be sure to select a zip file labeled either `cia` or `combined`. Once downloaded, extract this zip file.
+
+In Azahar, click `File` and `Open Azahar Folder`. A file explorer window will open. Enter the `sdmc` folder and paste the `3ds` and `cias` folders from the zip file here. If everything goes correct, you should have these two folders in `sdmc` alongside a folder called `Nintendo 3DS`.
+
+Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `cias` folder from the zip file and select `Nimbus.cia`. This will install Nimbus to your emulator.
+
+## Using Nimbus
+
+Open Nimbus within Azahar. Upon opening it, it will notify you that it's been updated. Press START on your controller to restart the system, or press M on your keyboard. Nimbus should automatically reopen itself.
+
+Upon Nimbus reopening, click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus.
+
+## Link a Pretendo Network ID (optional)
+
+To link a Pretendo Network ID (PNID), which is required for some features such as Juxtaposition, open the System Settings app in Azahar and click on Nintendo Network ID settings. From here, you can either link an existing PNID or create a new one. Follow the directions on screen to create/link a PNID.
