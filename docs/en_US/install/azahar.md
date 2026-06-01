@@ -1,5 +1,10 @@
 # Azahar
 
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	This guide only supports official builds provided by the Azahar emulator team. Any unofficial/third-party emulator builds are not supported, and we do not provide technical support for issues caused by using said unofficial builds.
+</div>
+
 <div class="tip">
 	ℹ️ Azahar <b>requires</b> connecting to a real 3DS/2DS system before you can play online. This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (v13.3.1 or higher)</b>. If you don't, please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to install homebrew to your system first.
 </div>
