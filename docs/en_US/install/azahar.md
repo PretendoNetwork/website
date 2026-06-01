@@ -19,37 +19,17 @@ The following steps are required for you to connect to the Pretendo Network:
 
 Universal Updater is the easiest way to get Artic Setup Tool. Universal Updater also comes highly recommended for updating all of your other homebrew apps, so installing it is highly recommended. To install Universal Updater, follow <a href="https://universal-team.net/projects/universal-updater.html" target="_blank">this guide</a>.
 
-Once you have Universal Updater, open it and tap the search button on the bottom screen. Type "Artic Setup Tool" into the search box, then tap OK.
+Once you have Universal Updater, simply open it and search for "Artic Setup Tool". Select `AzaharArticSetup.3dsx` if you want to launch the setup tool from the Homebrew Launcher, or select `AzaharArticSetup.cia` if you want to launch it from your HOME Menu.
 
-Tap the "i" icon on the upper-left corner of the bottom screen, and you should see the item page for Artic Setup Tool. Press A to install it.
+### Without using Universal Updater
 
-Select `AzaharArticSetup.3dsx` if you want to launch the setup tool from the Homebrew Launcher, or select `AzaharArticSetup.cia` if you want to launch it from your HOME Menu.
-
-After a short while, you should see a message pop up on the top screen telling you that the tool has been installed. Exit to the HOME Menu and close out Universal Updater.
-
-Artic Setup Tool is now installed. If you selected the `.cia` file, you should see a message that a new application has been added to the HOME Menu. Press A and you'll now have Artic Setup Tool on your HOME Menu.
-
-### Direct title install
+If you'd prefer not to use Universal Updater, Artic Setup Tool can be installed manually using the FBI title manager.
 
 Before starting, power off your console and insert its SD card into your computer.
 
-You may choose between installing Artic Setup Tool to your HOME Menu or to the Homebrew Launcher.
-
-#### Install to HOME Menu
-
-If you want to launch Artic Setup Tool from your HOME Menu, download `AzaharArticSetup.cia` from the [latest Artic Setup Tool release](https://github.com/azahar-emu/ArticSetupTool/releases/latest) and put it inside the `cias` folder on your SD card. If the `cias` folder doesn't exist on your SD card, create it.
-
-Insert your SD card back into your console.
-
-Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `AzaharArticSetup.cia`. Select either `Install CIA` or `Install and delete CIA`.
-
-Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Press A and you'll now have Artic Setup Tool on your HOME Menu.
-
-#### Install to Homebrew Launcher
+If you want to launch Artic Setup Tool from your HOME Menu, download `AzaharArticSetup.cia` from the [latest Artic Setup Tool release](https://github.com/azahar-emu/ArticSetupTool/releases/latest) and put it on your SD card. Then, open FBI and install it.
 
 If you want to launch Artic Setup Tool from the Homebrew Launcher, download `AzaharArticSetup.3dsx` from the [latest Artic Setup Tool release](https://github.com/azahar-emu/ArticSetupTool/releases/latest) and put it inside the `3ds` folder on your SD card.
-
-Insert your SD card back into your console. From here, you can open the Homebrew Launcher and run the Setup Tool.
 
 ## Using Artic Setup Tool
 
@@ -59,15 +39,17 @@ Insert your SD card back into your console. From here, you can open the Homebrew
 
 Open Artic Setup Tool on your 3DS/2DS. Once it's open, press A to run the tool. An IP address will be displayed on the top screen.
 
-Open Azahar on your computer. Click `File`, then `Set Up System Files...`
+If your system's top screen is broken, hold L + D-Pad Down + SELECT to open the Rosalina menu. Go to `Debugger options...` and enable the debugger, then press B. Your IP address will be displayed in the top-right corner of the bottom screen. Write this IP address somewhere, then disable the debugger and exit the Rosalina menu.
 
-Enter the IP address you see on the top screen into the text box in Azahar, making sure to include the `:5543` at the end. Click OK.
+Open Azahar on your computer. Click `File`, then `Set Up System Files...` A window will pop up containing some information and a text box. `Old 3DS Setup` will be selected regardless of what system you have. This is normal.
+
+Enter the IP address you see on the top screen into the text box in Azahar and click OK.
 
 On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". Click OK to allow the update to proceed.
 
 After a few minutes, Azahar will notify you that the update is complete. Click OK to continue. <b>You are not finished with Artic Setup Tool.</b>
 
-In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address again, and this time, click `New 3DS Setup`. <b>This will work regardless of whether or not your system is a New 3DS/2DS.</b> Click OK.
+In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address again, and this time, click `New 3DS Setup`. <b>This is required regardless of whether or not your system is a New 3DS/2DS.</b> Click OK.
 
 Once again, a screen will appear on Azahar telling you to "update your Nintendo 3DS system". Click OK to allow the update to proceed. Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
 
@@ -79,15 +61,15 @@ On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done w
 
 In Azahar, click `Emulation`, then `Configure`.
 
-Select the `System` menu and click `Enable required LLE modules for online features`. Make sure this box is checked, then click OK.
+Select the `System` menu and click `Enable required LLE modules for online features`. Make sure this box is checked, then click OK. Please note that you will not be able to use savestates while this option is enabled, but you will not be able to play online when it is disabled.
 
 ## Downloading Nimbus
 
 Download the [latest Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest). Be sure to select a zip file labeled either `cia` or `combined`. Once downloaded, extract this zip file.
 
-In Azahar, click `File` and `Open Azahar Folder`. A file explorer window will open. Enter the `sdmc` folder and paste the `3ds` and `cias` folders from the zip file here. If everything goes correct, you should have these two folders in `sdmc` alongside a folder called `Nintendo 3DS`.
+In Azahar, click `File` and `Open Azahar Folder`. A file explorer window will open. Enter the `sdmc` folder and paste the `3ds` folder from the zip file here. If everything goes correct, you should have this folder in `sdmc` alongside a folder called `Nintendo 3DS`.
 
-Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `cias` folder from the zip file and select `Nimbus.cia`. This will install Nimbus to your emulator.
+Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `cias` folder from the zip file and select `nimbus.cia`. This will install Nimbus to your emulator.
 
 ## Using Nimbus
 
