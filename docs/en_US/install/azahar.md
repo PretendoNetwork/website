@@ -90,7 +90,7 @@ Open Nimbus within Azahar. Upon opening it, it will notify you that it's been up
 
 Reopen Nimbus and click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus again.
 
-Once you're connected to Pretendo, you may want to open the HOME Menu and check the Friends List to confirm that you've been assigned a friend code. Please note that Artic Setup Tool does not copy your account or save data from your system. To synchronize your save data, try the <a href="https://db.universal-team.net/3ds/artic-base-server" target="_blank">Artic Base Server</a> homebrew app.
+Once you're connected to Pretendo, you may want to open the HOME Menu and check the Friends List to confirm that you've been assigned a friend code. Please note that Artic Setup Tool does not copy your account or save data from your system. To sync your save data with Azahar, try the <a href="https://db.universal-team.net/3ds/artic-base-server" target="_blank">Artic Base Server</a> homebrew app.
 
 ## Link a Pretendo Network ID (optional)
 
