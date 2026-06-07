@@ -47,7 +47,7 @@ Open Artic Setup Tool on your 3DS/2DS. Once it's open, press A to run the tool. 
 
 If your system's top screen is broken, hold L + D-Pad Down + SELECT to open the Rosalina menu. Go to `Debugger options...` and enable the debugger, then press B. Your IP address will be displayed in the top-right corner of the bottom screen. Write this IP address somewhere, then disable the debugger and exit the Rosalina menu.
 
-Open Azahar on your computer. Click `File`, then `Set Up System Files...` A window will pop up containing some information and a text box. `Old 3DS Setup` will be selected regardless of what system you have. This is normal.
+Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A window will pop up containing some information and a text box. `Old 3DS Setup` will be selected regardless of what system you have. This is normal.
 
 Enter the IP address you see on the top screen into the text box in Azahar and click OK.
 
