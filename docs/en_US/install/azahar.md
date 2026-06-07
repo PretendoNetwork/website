@@ -84,4 +84,4 @@ Reopen Nimbus and click the Pretendo button. Once you have switched to Pretendo,
 
 ## Link a Pretendo Network ID (optional)
 
-To link a Pretendo Network ID (PNID), which is required for some features such as Juxtaposition, open the System Settings app in Azahar and click on Nintendo Network ID settings. From here, you can either link an existing PNID or create a new one. Follow the directions on screen to create/link a PNID.
+Some games and apps require a Pretendo Network ID (PNID) to be linked before you can use them online. To link a PNID, open the System Settings app in Azahar and click on Nintendo Network ID settings. From here, you can either link an existing PNID or create a new one. Follow the directions on screen to create/link a PNID.
