@@ -13,11 +13,10 @@ The following steps are required for you to connect to Pretendo Network:
 
 1. [Downloading Artic Setup Tool](#downloading-artic-setup-tool)
 2. [Using Artic Setup Tool](#using-artic-setup-tool)
-3. [Troubleshooting Artic Setup Tool](#troubleshooting-artic-setup-tool)
-4. [LLE module setup in Azahar](#lle-module-setup-in-azahar)
-5. [Downloading Nimbus](#downloading-nimbus)
-6. [Using Nimbus](#using-nimbus)
-7. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
+3. [LLE module setup in Azahar](#lle-module-setup-in-azahar)
+4. [Downloading Nimbus](#downloading-nimbus)
+5. [Using Nimbus](#using-nimbus)
+6. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
 
 ## Downloading Artic Setup Tool
 
