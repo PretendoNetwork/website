@@ -78,7 +78,7 @@ Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `
 
 ## Using Nimbus
 
-Open Nimbus within Azahar. Upon opening it, it will notify you that it's been updated. Press START on your controller to restart the system, or press M on your keyboard. Nimbus should automatically reopen itself.
+Open Nimbus within Azahar. Upon opening it, it will notify you that it's been updated. Click `Emulation` and then `Stop`.
 
 Upon Nimbus reopening, click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus.
 
