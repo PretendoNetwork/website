@@ -13,10 +13,11 @@ The following steps are required for you to connect to the Pretendo Network:
 
 1. [Downloading Artic Setup Tool](#downloading-artic-setup-tool)
 2. [Using Artic Setup Tool](#using-artic-setup-tool)
-3. [LLE module setup in Azahar](#lle-module-setup-in-azahar)
-4. [Downloading Nimbus](#downloading-nimbus)
-5. [Using Nimbus](#using-nimbus)
-6. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
+3. [Troubleshooting Artic Setup Tool](#troubleshooting-artic-setup-tool)
+4. [LLE module setup in Azahar](#lle-module-setup-in-azahar)
+5. [Downloading Nimbus](#downloading-nimbus)
+6. [Using Nimbus](#using-nimbus)
+7. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
 
 ## Downloading Artic Setup Tool
 
@@ -61,6 +62,10 @@ Once again, a screen will appear on Azahar telling you to "update your Nintendo 
 Once the update is complete, click OK.
 
 On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done with your 3DS/2DS system for this setup. It is no longer needed for the rest of this process.
+
+## Troubleshooting Artic Setup Tool
+
+If you see an error that says `Missing OTP backup on SD card`, you need to remove your system's battery and reinsert it to generate the OTP backup.
 
 ## LLE module setup in Azahar
 
