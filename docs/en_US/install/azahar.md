@@ -49,7 +49,7 @@ If your system's top screen is broken, hold L + D-Pad Down + SELECT to open the 
 
 Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A window will pop up containing some information and a text box. `Old 3DS Setup` will be selected regardless of what system you have. This is normal.
 
-Enter the IP address you see on the top screen into the text box in Azahar and click OK.
+Enter your 3DS/2DS IP address into the text box in Azahar and click OK.
 
 On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". Click OK to allow the update to proceed.
 
