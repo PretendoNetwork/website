@@ -2,7 +2,7 @@
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	This guide only supports official builds provided by the Azahar emulator team. Any unofficial/third-party emulator builds are not supported, and we do not provide technical support for issues caused by using said unofficial builds.
+	This guide only supports official builds provided by the Azahar Emulator team. Any unofficial/third-party emulator builds are not supported, and we do not provide technical support for issues caused by using said unofficial builds.
 </div>
 
 <div class="tip">
