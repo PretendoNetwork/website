@@ -51,23 +51,25 @@ Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A win
 
 Enter your 3DS/2DS IP address into the text box in Azahar and click OK.
 
-On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". Click OK to allow the update to proceed.
+<div class="tip yellow">
+	⚠️ If you see an error that says `Missing OTP backup on SD card`, you need to remove your 3DS/2DS system's battery and reinsert it to generate the OTP backup.
+</div>
+
+<div class="tip yellow">
+	⚠️ If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings.
+</div>
+
+On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". This is actually a process that downloads some required system files from Nintendo so that Azahar can connect online. This won't modify anything on your 3DS/2DS system. Click OK to allow it to proceed.
 
 After a few minutes, Azahar will notify you that the update is complete. Click OK to continue. <b>You are not finished with Artic Setup Tool.</b>
 
-In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address again, and this time, click `New 3DS Setup`. <b>This is required regardless of whether or not your system is a New 3DS/2DS.</b> Click OK.
+In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address again, and this time, click `New 3DS Setup`. <b>This is required and will work regardless of whether or not your system is a New 3DS/2DS.</b> Click OK.
 
-Once again, a screen will appear on Azahar telling you to "update your Nintendo 3DS system". Click OK to allow the update to proceed. Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
+Once again, a screen will appear on Azahar telling you to "update your Nintendo 3DS system". Click OK to allow it to proceed. Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
 
 Once the update is complete, click OK.
 
 On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done with your 3DS/2DS system for this setup. It is no longer needed for the rest of this process.
-
-## Troubleshooting Artic Setup Tool
-
-If you see an error that says `Missing OTP backup on SD card`, you need to remove your system's battery and reinsert it to generate the OTP backup.
-
-If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings.
 
 ## LLE module setup in Azahar
 
