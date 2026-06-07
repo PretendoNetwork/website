@@ -80,7 +80,7 @@ Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `
 
 Open Nimbus within Azahar. Upon opening it, it will notify you that it's been updated. Click `Emulation` and then `Stop`.
 
-Upon Nimbus reopening, click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus.
+Reopen Nimbus and click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus again.
 
 ## Link a Pretendo Network ID (optional)
 
