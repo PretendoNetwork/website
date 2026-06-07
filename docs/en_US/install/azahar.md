@@ -9,7 +9,7 @@
 	ℹ️ Azahar <b>requires</b> connecting to a real 3DS/2DS system using an app called Artic Setup Tool before you can play online. This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (v13.3.1 or higher)</b>. If you don't, please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to install homebrew to your system first.
 </div>
 
-The following steps are required for you to connect to the Pretendo Network:
+The following steps are required for you to connect to Pretendo Network:
 
 1. [Downloading Artic Setup Tool](#downloading-artic-setup-tool)
 2. [Using Artic Setup Tool](#using-artic-setup-tool)
