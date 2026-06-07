@@ -67,6 +67,8 @@ On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done w
 
 If you see an error that says `Missing OTP backup on SD card`, you need to remove your system's battery and reinsert it to generate the OTP backup.
 
+If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings.
+
 ## LLE module setup in Azahar
 
 In Azahar, click `Emulation`, then `Configure`.
