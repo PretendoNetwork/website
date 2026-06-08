@@ -42,11 +42,15 @@ If you want to launch Artic Setup Tool from the Homebrew Launcher, download `Aza
 	ℹ️ Before opening Artic Setup Tool, ensure that your 3DS/2DS is on the same Wi-Fi network as the computer running Azahar.
 </div>
 
+TODO: Image here of Artic Setup Tool running.
+
 Open Artic Setup Tool on your 3DS/2DS. Once it's open, press A to run the tool. An IP address will be displayed on the top screen.
 
 If your system's top screen is broken, hold L + D-Pad Down + SELECT to open the Rosalina menu. Go to `Debugger options...` and enable the debugger, then press B. Your IP address will be displayed in the top-right corner of the bottom screen. Write this IP address somewhere, then disable the debugger and exit the Rosalina menu.
 
 Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A window will pop up containing some information and a text box. `Old 3DS Setup` will be selected regardless of what system you have. This is normal.
+
+<img src="/assets/images/docs/install/azahar/azahar_set_up_enterIP.png" width=100% height=auto/>
 
 Enter your 3DS/2DS IP address into the text box in Azahar and click OK.
 
@@ -58,11 +62,17 @@ Enter your 3DS/2DS IP address into the text box in Azahar and click OK.
 	⚠️ If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings.
 </div>
 
+<img src="/assets/images/docs/install/azahar/azahar_set_up_sysupdate.png" width=100% height=auto/>
+
 On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". This is actually a process that downloads some required system files from Nintendo so that Azahar can connect online. This won't modify anything on your 3DS/2DS system. Click OK to allow it to proceed.
 
 After a few minutes, Azahar will notify you that the update is complete. Click OK to continue. <b>You are not finished with Artic Setup Tool.</b>
 
+<img src="/assets/images/docs/install/azahar/azahar_set_up_enterIP_N3DS.png" width=100% height=auto/>
+
 In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address again, and this time, click `New 3DS Setup`. <b>This is required and will work regardless of whether or not your system is a New 3DS/2DS.</b> Click OK.
+
+<img src="/assets/images/docs/install/azahar/azahar_set_up_sysupdate_N3DS.png" width=100% height=auto/>
 
 Once again, a screen will appear on Azahar telling you to "update your Nintendo 3DS system". Click OK to allow it to proceed. Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
 
@@ -73,6 +83,8 @@ On your 3DS/2DS system, press START to exit Artic Setup Tool. You are now done w
 ## LLE module setup in Azahar
 
 In Azahar, click `Emulation`, then `Configure`.
+
+<img src="/assets/images/docs/install/azahar/azahar_emulation_configure_LLE_module.png" width=100% height=auto/>
 
 Select the `System` menu and click `Enable required LLE modules for online features`. Make sure this box is checked, then click OK. Please note that you will not be able to use savestates while this option is enabled, but you will not be able to play online when it is disabled.
 
@@ -86,7 +98,11 @@ Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `
 
 ## Using Nimbus
 
+<img src="/assets/images/docs/install/azahar/azahar_nimbus_update.png" width=100% height=auto/>
+
 Open Nimbus within Azahar. Upon opening it, it will notify you that it's been updated. Click `Emulation` and then `Stop`.
+
+<img src="/assets/images/docs/install/azahar/azahar_nimbus_pretendo_select.png" width=100% height=auto/>
 
 Reopen Nimbus and click the Pretendo button. Once you have switched to Pretendo, click `Emulation` and then `Stop` to exit Nimbus again.
 
@@ -94,4 +110,4 @@ Once you're connected to Pretendo Network, you may want to open the HOME Menu an
 
 ## Link a Pretendo Network ID (optional)
 
-Some games and apps require a Pretendo Network ID (PNID) to be linked before you can use them online. To link a PNID, open the System Settings app in Azahar and click on Nintendo Network ID settings. From here, you can either link an existing PNID or create a new one. Follow the directions on screen to create/link a PNID.
+Some games and apps require a Pretendo Network ID (PNID) to be linked before you can use them online. To link a PNID, open the System Settings app in Azahar and click on Nintendo Network ID settings. From here, you can either link an existing PNID or create a new one. Follow the directions on screen to create/link a PNID. Please note that even though it says "Nintendo Network ID" throughout, you are still creating/linking a Pretendo Network ID.
