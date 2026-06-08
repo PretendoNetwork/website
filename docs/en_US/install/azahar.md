@@ -60,7 +60,7 @@ Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A win
 	⚠️ If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings. <b>Please note that `Country` and `Region` are two separate drop-down boxes in Azahar.</b> `Country` is the one that needs to be changed to fix this issue.
 </div>
 
-On Azahar, a screen will appear telling you to "update your Nintendo 3DS system". This is actually a process that downloads some required system files from Nintendo so that Azahar can connect online. This won't modify anything on your 3DS/2DS system. Click OK to allow it to proceed.
+On Azahar, a screen will appear telling you to "update your system". This is actually a process that downloads some required system files from Nintendo so that Azahar can connect online. This won't modify anything on your 3DS/2DS system. Click OK to allow it to proceed.
 
 <img src="/assets/images/docs/install/azahar/azahar_set_up_sysupdate.png" width=100% height=auto/>
 
