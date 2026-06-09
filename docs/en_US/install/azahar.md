@@ -53,11 +53,11 @@ Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A win
 <img src="/assets/images/docs/install/azahar/azahar_set_up_enterIP.png" width=100% height=auto/>
 
 <div class="tip yellow">
-	⚠️ If you see an error that says `Missing OTP backup on SD card`, you need to remove your 3DS/2DS system's battery and reinsert it to generate the OTP backup.
+	⚠️ If you see an error that says "Missing OTP backup on SD card", you need to remove your 3DS/2DS system's battery and reinsert it to generate the OTP backup.
 </div>
 
 <div class="tip yellow">
-	⚠️ If you see an error that says `The country configuration does not match the console region`, you need to change the country set in Azahar to match the region of your system. To do this, click `Emulation`, then `Configure`, then click `System`. Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings. <b>Please note that `Country` and `Region` are two separate drop-down boxes in Azahar.</b> `Country` is the one that needs to be changed to fix this issue.
+	⚠️ If you see an error that says "The country configuration does not match the console region", you need to change the country set in Azahar to match the region of your system. To do this, click "Emulation", then "Configure", then click "System". Find the country drop-down box and select your system's country from the list, then click OK to save your configuration settings. <b>Please note that "Country" and "Region" are two separate drop-down boxes in Azahar.</b> "Country" is the one that needs to be changed to fix this issue.
 </div>
 
 On Azahar, a screen will appear telling you to "update your system". This is actually a process that downloads some required system files from Nintendo so that Azahar can connect online. This won't modify anything on your 3DS/2DS system. Click OK to allow it to proceed.
@@ -70,9 +70,11 @@ In Azahar, click `File` and `Set Up System Files...` again. Enter the IP address
 
 <img src="/assets/images/docs/install/azahar/azahar_set_up_enterIP_N3DS.png" width=100% height=auto/>
 
-Once again, a screen will appear on Azahar telling you to "update your Nintendo 3DS system". Click OK to allow it to proceed. Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
+Once again, a screen will appear on Azahar telling you to "update your system". Click OK to allow it to proceed.
 
 <img src="/assets/images/docs/install/azahar/azahar_set_up_sysupdate_N3DS.png" width=100% height=auto/>
+
+Another screen will appear telling you some important information about system updates. Review this information and click "I Accept" to proceed to the update.
 
 Once the update is complete, click OK.
 
