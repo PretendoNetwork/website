@@ -46,13 +46,16 @@ Extract the contents of the zip archive to the root of your SD card. If you are 
 
 Ensure your SD card has all the following files
 
-- `SD:/luma/titles/000400300000BC02/code.ips` (Miiverse, JPN)
-- `SD:/luma/titles/000400300000BD02/code.ips` (Miiverse, USA)
-- `SD:/luma/titles/000400300000BE02/code.ips` (Miiverse, EUR)
-- `SD:/luma/sysmodules/0004013000002F02.ips` (SSL)
-- `SD:/luma/sysmodules/0004013000003202.ips` (FRD/Friends)
-- `SD:/luma/sysmodules/0004013000003802.ips` (ACT/NNID)
-- `SD:/3ds/juxt-prod.pem` (Juxtaposition certificate)
+- `SD:/3ds/nimbus/update/000400300000BC02.ips` (Miiverse, JPN)
+- `SD:/3ds/nimbus/update/000400300000BD02.ips` (Miiverse, USA)
+- `SD:/3ds/nimbus/update/000400300000BE02.ips` (Miiverse, EUR)
+- `SD:/3ds/nimbus/update/0004013000002E02.ips` (Sockets)
+- `SD:/3ds/nimbus/update/0004013000002F02.ips` (SSL)
+- `SD:/3ds/nimbus/update/0004013000002902.ips` (HTTP)
+- `SD:/3ds/nimbus/update/0004013000003202.ips` (FRD/Friends)
+- `SD:/3ds/nimbus/update/0004013000003802.ips` (ACT/NNID)
+- `SD:/3ds/nimbus/update/juxt-prod.pem` (Juxtaposition certificate)
+- `SD:/3ds/nimbus/update/nimbus.3gx` (Nimbus plugin for Luma)
 
 If not installed through Universal-Updater, ensure at least one of the following also exists
 
