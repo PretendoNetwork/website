@@ -53,7 +53,7 @@ Open Azahar on your computer. Click `File`, then `Set Up System Files...`. A win
 <img src="/assets/images/docs/install/azahar/azahar_set_up_enterIP.png" width=100% height=auto/>
 
 <div class="tip yellow">
-	⚠️ If you see an error that says "Missing OTP backup on SD card", you need to run a program to recreate the backup. Put [otp_dump.firm](TODO: Link to it) inside /luma/payloads/ on your SD card, then hold START + Power on your system with the SD card inserted. If you are not immediately booted into the dumper program, select "otp_dump" on the top screen and press A to load it. The program should tell you that your OTP has been successfully dumped. Press A to power off your system.
+	⚠️ If you see an error that says "Missing OTP backup on SD card", you need to run a program to recreate the backup. Put [otp_dump.firm](https://github.com/MisterSheeple/GodMode9/releases/download/otp_1.0.0/otp_dump.firm) inside /luma/payloads/ on your SD card, then hold START + Power on your system with the SD card inserted. If you are not immediately booted into the dumper program, select "otp_dump" on the top screen and press A to load it. The program should tell you that your OTP has been successfully dumped. Press A to power off your system.
 </div>
 
 <div class="tip yellow">
