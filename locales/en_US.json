@@ -332,6 +332,7 @@
 			"confirmPassword": "Confirm password",
 			"email": "Email",
 			"miiName": "Mii name",
+			"birthdate": "Birthdate",
 			"forgotPassword": "Forgot your password?",
 			"registerPrompt": "Don't have an account?",
 			"loginPrompt": "Already have an account?"
