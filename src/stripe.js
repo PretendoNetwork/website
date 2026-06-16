@@ -286,6 +286,15 @@ async function handleStripeEvent(event) {
 				}
 			}
 		}
+
+		try {
+			if (await util.discourseUserExists(pid)) {
+				const updatedPNID = await database.PNID.findOne({ pid });
+				await util.syncDiscourseSso(updatedPNID);
+			}
+		} catch (error) {
+			logger.error(`Error syncing user Discourse SSO | ${pid} | - ${error.message}`);
+		}
 	}
 }
 
