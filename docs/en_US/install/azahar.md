@@ -92,7 +92,7 @@ Select the `System` menu and click `Enable required LLE modules for online featu
 
 Download the [latest Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest). Be sure to select a zip file labeled either `cia` or `combined`. Once downloaded, extract this zip file.
 
-Open your emulator's SDMC folder. By default, this will be located in the main Azahar folder. To get there, click `File` and `Open Azahar Folder`. A file explorer window will open. Enter the `sdmc` folder and paste the `3ds` folder from the zip file into there. If everything goes correct, inside the `sdmc` folder you should have two folders named `3ds` and `Nintendo 3DS` (with the `Nintendo 3DS` folder already being present).
+Click `File` and hover over `Open Azahar Folder`, then click on `SDMC Folder`. A file explorer window will open. Paste the `3ds` folder from the zip file into here. If everything goes correct, you should have two separate folders next to each other named `3ds` and `Nintendo 3DS` (with the `Nintendo 3DS` folder already being present).
 
 Close Azahar and re-open it. Click `File` and `Install CIA`. Navigate into the `cias` folder from the zip file and select `nimbus.cia`, then click OK. This will install Nimbus to your emulator.
 
