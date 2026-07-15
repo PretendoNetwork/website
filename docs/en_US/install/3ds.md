@@ -16,35 +16,44 @@
 </div>
 
 <div class="tip">
-	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (13+)</b>, if you don't please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to homebrew your system first.
+	ℹ️ This guide assumes that you have a <b>Homebrewed System running the latest version of Luma3DS (v13 or higher)</b>. If you don't, please follow this <a href="https://3ds.hacks.guide/" target="_blank">guide</a> on how to install homebrew to your system first.
 </div>
 
 The following steps are required for you to connect to the Pretendo Network:
 
 1. [Downloading Nimbus](#downloading-nimbus)
-2. [Enabling Luma patches](#luma-patches)
-3. [Nimbus](#using-nimbus)
+2. [Enabling Luma patches](#enabling-luma-patches)
+3. [Using Nimbus](#using-nimbus)
+4. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
+5. [Other information](#other-information)
 
 ## Downloading Nimbus
 
-<div class="tip">
-	ℹ️ Nimbus is also available on <a href="https://db.universal-team.net/3ds/nimbus" target="_blank">Universal-Updater</a>. If you do not have Universal-Updater, you may follow this <a href="https://universal-team.net/projects/universal-updater.html" target="_blank">guide</a>. You may download the required files from there, rather than GitHub, or install/update the app directly from your console.
-	<br>
-	<br>
-	ℹ️ If installed directly from your console for the first time, you will still be required to install the associated IPS patches from GitHub. Once installed, updates may be managed purely from Universal-Updater
-</div>
+### Using Universal Updater
+
+The easiest way to get Nimbus is by using Universal Updater. Universal Updater is also great for updating all of your other homebrew apps, so installing it is highly recommended. To install Universal Updater, get it from <a href="https://universal-team.net/projects/universal-updater.html" target="_blank">here</a>.
+
+Once you have Universal Updater, simply open it and search for "Nimbus". Select `nimbus.3dsx` if you want to launch Nimbus from the Homebrew Launcher, or select `nimbus.cia` if you want to launch it from your HOME Menu.
+
+Continue to the [Enabling Luma patches](#luma-patches) section.
+
+### Without using Universal Updater
+
+If you'd prefer not to use Universal Updater, Nimbus can be installed manually by extracting the needed files to your SD card.
 
 Before starting, power off your console and insert its SD card into your computer.
 
-Once inserted, download the latest [Nimbus release](https://github.com/PretendoNetwork/Nimbus/releases/latest).
+You may choose one of the following options:
 
-Nimbus is available as both a 3DSX app and an installable CIA. The releases page offers downloads for both. Select the version you would like to use, or select the `combined.[version].zip` archive to use both.
+- [Installing to HOME Menu](#installing-to-home-menu)
+- [Installing to Homebrew Launcher](#installing-to-homebrew-launcher)
+- [Installing to both HOME Menu and Homebrew Launcher](#installing-to-both-home-menu-and-homebrew-launcher)
 
-<img src="/assets/images/docs/install/3ds/zip-highlight.webp" alt="Screenshot of a GitHub release page with the file combined.[version].zip highlighted" width=100% height=auto/>
+#### Installing to HOME Menu
 
-Extract the contents of the zip archive to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
+If you want to launch Nimbus from your HOME Menu, download the zip file labeled `cia.[version].zip` from the [latest Nimbus release](https://github.com/PretendoNetwork/nimbus/releases/latest) and copy the `3ds` and `cias` folders from inside it to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
 
-Ensure your SD card has all the following files
+Before putting the SD card back in your system, check that it contains all of the following files:
 
 - `SD:/3ds/nimbus/update/000400300000BC02.ips` (Miiverse, JPN)
 - `SD:/3ds/nimbus/update/000400300000BD02.ips` (Miiverse, USA)
@@ -56,21 +65,72 @@ Ensure your SD card has all the following files
 - `SD:/3ds/nimbus/update/0004013000003802.ips` (ACT/NNID)
 - `SD:/3ds/nimbus/update/juxt-prod.pem` (Juxtaposition certificate)
 - `SD:/3ds/nimbus/update/nimbus.3gx` (Nimbus plugin for Luma)
-
-If not installed through Universal-Updater, ensure at least one of the following also exists
-
 - `SD:/cias/nimbus.cia`
+
+Once you've finished copying the files to your SD card, insert the SD card into your 3DS/2DS system.
+
+Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
+
+Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Click OK and you'll now have Nimbus on your HOME Menu.
+
+<b>Continue to the [Enabling Luma patches](#enabling-luma-patches) section.</b>
+
+#### Installing to Homebrew Launcher
+
+If you want to launch Nimbus from the Homebrew Launcher, download the zip file labeled `3dsx.[version].zip` from the [latest Nimbus release](https://github.com/PretendoNetwork/nimbus/releases/latest) and copy the `3ds` folder from inside it to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
+
+Before putting the SD card back in your system, check that it contains all of the following files:
+
+- `SD:/3ds/nimbus/update/000400300000BC02.ips` (Miiverse, JPN)
+- `SD:/3ds/nimbus/update/000400300000BD02.ips` (Miiverse, USA)
+- `SD:/3ds/nimbus/update/000400300000BE02.ips` (Miiverse, EUR)
+- `SD:/3ds/nimbus/update/0004013000002902.ips` (HTTP)
+- `SD:/3ds/nimbus/update/0004013000002E02.ips` (Sockets)
+- `SD:/3ds/nimbus/update/0004013000002F02.ips` (SSL)
+- `SD:/3ds/nimbus/update/0004013000003202.ips` (FRD/Friends)
+- `SD:/3ds/nimbus/update/0004013000003802.ips` (ACT/NNID)
+- `SD:/3ds/nimbus/update/juxt-prod.pem` (Juxtaposition certificate)
+- `SD:/3ds/nimbus/update/nimbus.3gx` (Nimbus plugin for Luma)
 - `SD:/3ds/nimbus.3dsx`
 
-Insert your SD card back into your console.
+Once you've finished copying the files to your SD card, insert the SD card into your 3DS/2DS system.
 
-## Luma patches
+<b>Continue to the [Enabling Luma patches](#enabling-luma-patches) section.</b>
+
+#### Installing to both HOME Menu and Homebrew Launcher
+
+If you want to launch Nimbus from both the HOME Menu and Homebrew Launcher, download the zip file labeled `combined.[version].zip` from the [latest Nimbus release](https://github.com/PretendoNetwork/nimbus/releases/latest) and copy the `3ds` and `cias` folders from inside it to the root of your SD card. If you are asked to merge or overwrite files, accept the changes.
+
+Before putting the SD card back in your system, check that it contains all of the following files:
+
+- `SD:/3ds/nimbus/update/000400300000BC02.ips` (Miiverse, JPN)
+- `SD:/3ds/nimbus/update/000400300000BD02.ips` (Miiverse, USA)
+- `SD:/3ds/nimbus/update/000400300000BE02.ips` (Miiverse, EUR)
+- `SD:/3ds/nimbus/update/0004013000002902.ips` (HTTP)
+- `SD:/3ds/nimbus/update/0004013000002E02.ips` (Sockets)
+- `SD:/3ds/nimbus/update/0004013000002F02.ips` (SSL)
+- `SD:/3ds/nimbus/update/0004013000003202.ips` (FRD/Friends)
+- `SD:/3ds/nimbus/update/0004013000003802.ips` (ACT/NNID)
+- `SD:/3ds/nimbus/update/juxt-prod.pem` (Juxtaposition certificate)
+- `SD:/3ds/nimbus/update/nimbus.3gx` (Nimbus plugin for Luma)
+- `SD:/3ds/nimbus.3dsx`
+- `SD:/cias/nimbus.cia`
+
+Once you've finished copying the files to your SD card, insert the SD card into your 3DS/2DS system.
+
+To install Nimbus to your HOME Menu, open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
+
+Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Click OK and you'll now have Nimbus on your HOME Menu.
+
+<b>Continue to the [Enabling Luma patches](#enabling-luma-patches) section.</b>
+
+## Enabling Luma patches
 
 <div class="tip">
 ℹ️ <b>Skip this step if you've already enabled the required patches on your console for Pretendo Network.</b>
 </div>
 
-In order to make use of the Pretendo Network service, you will need to enable Luma patches on your console. Hold the `SELECT` button on your 3DS and power it on.
+In order to make use of the Pretendo Network service, you will need to enable Luma patches on your console. Hold `SELECT` + `Power` on your 3DS/2DS and power it on.
 
 On the screen that is displayed, make sure that these following options are enabled:
 
@@ -79,35 +139,21 @@ On the screen that is displayed, make sure that these following options are enab
 
 Press `START` to save and continue with these changes.
 
-## Installing Nimbus to HOME Menu
-
-<div class="tip">
-ℹ️ <b>Skip this step if you downloaded the 3DSX only zip file.</b>
-</div>
-
-If you downloaded the combined or cia archives, you can install Nimbus to the HOME Menu for quick and easy access.
-
-Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
-
-Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Click OK and you'll now have Nimbus on your HOME Menu.
-
 ## Using Nimbus
 
-Depending on how you installed Nimbus, launch it either through the Homebrew Launcher or the 3DS HOME Menu. Select either `Pretendo` or `Nintendo` to swap between services.
+Depending on how you installed Nimbus, launch it either through the Homebrew Launcher or the HOME Menu. Select either `Pretendo` or `Nintendo` to swap between services. Your selection persists between reboots.
 
-Your selection persists between reboots.
+## Link a Pretendo Network ID (optional)
 
-## Signing into your PNID
+Some games and apps require a Pretendo Network ID (PNID) to be linked before you can use them online.
 
-The 3DS does not rely on NNIDs for the vast majority of it's game servers. Because of this, using a PNID is also not required for most games<sup><a>[[1]](#footnote-1)</a></sup>.
+To link a PNID, open the System Settings app in Azahar and click on `Nintendo Network ID Settings`. From here, you can either create a new PNID or link an existing one. Follow the directions on your screen to create or link a PNID. Please note that even though it says "Nintendo Network ID" throughout, you are still creating/linking a Pretendo Network ID.
 
-Setting up a PNID on the 3DS is the same as setting up a NNID. You may either create the PNID on your console, or register from an account [on our website](/account/register) and link it to your console once you're ready.
-
-It is recommended to register the PNID on your device at this time, as registering on the website does not currently allow you to change your user data.
+You may also register an account [on our website](/account/register) and link it to your console once you're ready.
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	A Pretendo Network ID may not use the same username as the account already linked to your 3DS! Ensure that you have chosen a different name for your PNID than the name on your NNID.
+	A Pretendo Network ID may not use the same username as the account already linked to your 3DS/2DS! Ensure that you have chosen a different name for your PNID than the name on your NNID.
 </div>
 
 ## Other information
@@ -120,10 +166,6 @@ Nimbus will create a 2nd local account set to the `test` NASC environment. The I
 
 You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS only _normally_ supports one account, and you may only have one account active at a time. However Nintendo implemented support for multiple local accounts on the 3DS/2DS which remains unused on all retail units. On a normal retail unit only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create sandboxed local accounts with different environments
 
-<ul id="footnotes">
-	<li id="footnote-1"><sup>[1]</sup> Some games may require a PNID for certain actions, such as eShop purchases. The only known game which requires a PNID for general use is Nintendo Badge Arcade, which is not yet supported</li>
-</ul>
-
 ### Restoring Nintendo Badge Arcade Badges
 
 1. Insert your SD Card into your PC.
@@ -133,13 +175,13 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 5. Use Nimbus to switch to Pretendo.
 6. Open Simple Badge Injector and make a note of the "Nintendo Network ID" value.
 7. Still inside SBI, choose the option to dump your badge data files.
-8. Turn off your 3DS and remove the SD card. Insert your SD card into your PC.
+8. Turn off your 3DS/2DS and remove the SD card. Insert your SD card into your PC.
 9. Download and open [Advanced Badge Editor](https://github.com/AntiMach/advanced-badge-editor/releases/latest).
 10. Go to `File > Open Data`, then choose the folder where BadgeData.dat and BadgeMngFile.dat are. (Located at `sd:/3ds/SimpleBadgeInjector/Dumped`)
 11. Replace the NNID value with the one you made a note of in SBI earlier.
 12. Select `Save As` to save the modified file separately from the backup.
 13. Put your modified badge data filed into `sd:/3ds/SimpleBadgeInjector`
-14. Put your SD card back into your 3DS and go back into SBI
+14. Put your SD card back into your 3DS/2DS and go back into SBI
 15. Inject your modified badge data files.
 
 All badges _placed_ on the home menu will be deleted, and you have to re-add them in the order you have had them before.
