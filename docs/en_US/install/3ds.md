@@ -71,7 +71,7 @@ Once you've finished copying the files to your SD card, insert the SD card into 
 
 Open FBI. If you do not have FBI, download the latest release from [GitHub](https://github.com/lifehackerhansol/FBI/releases/latest). Select `SD`, then `cias`. Find and select `nimbus.cia`. Select either `Install CIA` or `Install and delete CIA`.
 
-Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Click OK and you'll now have Nimbus on your HOME Menu.
+Once it has finished installing, press the HOME button and exit FBI. You should see a message that a new application has been added to the HOME Menu. Press A or tap OK and you'll now have Nimbus on your HOME Menu.
 
 <b>Continue to the [Enabling Luma patches](#enabling-luma-patches) section.</b>
 
@@ -130,7 +130,7 @@ Once it has finished installing, press the HOME button and exit FBI. You should 
 ℹ️ <b>Skip this step if you've already enabled the required patches on your console for Pretendo Network.</b>
 </div>
 
-In order to make use of the Pretendo Network service, you will need to enable Luma patches on your console. Hold `SELECT` + `Power` on your 3DS/2DS and power it on.
+In order to make use of the Pretendo Network service, you will need to enable Luma patches on your console. With your SD card inserted, hold `SELECT` + `Power` on your 3DS/2DS to turn it on and open the Luma configuration menu.
 
 On the screen that is displayed, make sure that these following options are enabled:
 
