@@ -35,7 +35,7 @@ The easiest way to get Nimbus is by using Universal Updater. Universal Updater i
 
 Once you have Universal Updater, simply open it and search for "Nimbus". Select `nimbus.3dsx` if you want to launch Nimbus from the Homebrew Launcher, or select `nimbus.cia` if you want to launch it from your HOME Menu.
 
-Continue to the [Enabling Luma patches](#luma-patches) section.
+<b>Continue to the [Enabling Luma patches](#enabling-luma-patches) section.</b>
 
 ### Without using Universal Updater
 
