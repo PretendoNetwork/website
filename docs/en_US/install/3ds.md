@@ -106,7 +106,7 @@ You may have thought to yourself; _"2nd local account? What's that? I thought th
 
 ### Hong Kong / Taiwan "Starter Edition" systems
 
-Some 3DS systems sold in Hong Kong and Taiwan with "Starter Edition" branding are not capable of accessing online features. If you try accessing any online features, the system will say "This is not available to this Nintendo 3DS." 
+Some 3DS systems that were sold in Hong Kong and Taiwan with "Starter Edition" branding and with the model number "CTR-S-CHT/J" in the bottom-right corner of the back of the system are not capable of accessing online features. If you try accessing any online features, the system will say "This is not available to this Nintendo 3DS." 
 
 TODO: SOLUTION
 
