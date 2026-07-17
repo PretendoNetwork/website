@@ -147,7 +147,7 @@ Depending on how you installed Nimbus, launch it either through the Homebrew Lau
 
 Some games and apps require a Pretendo Network ID (PNID) to be linked before you can use them online.
 
-To link a PNID, open the System Settings app in Azahar and click on `Nintendo Network ID Settings`. From here, you can either create a new PNID or link an existing one. Follow the directions on your screen to create or link a PNID. Please note that even though it says "Nintendo Network ID" throughout, you are still creating/linking a Pretendo Network ID.
+To link a PNID, open the System Settings app and click on `Nintendo Network ID Settings`. From here, you can either create a new PNID or link an existing one. Follow the directions on your screen to create or link a PNID. Please note that even though it says "Nintendo Network ID" throughout, you are still creating/linking a Pretendo Network ID.
 
 You may also register an account [on our website](/account/register) and link it to your console once you're ready.
 
