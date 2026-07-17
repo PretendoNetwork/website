@@ -15,7 +15,8 @@ The following steps are required for you to connect to the Pretendo Network:
 2. [Enabling Luma patches](#enabling-luma-patches)
 3. [Using Nimbus](#using-nimbus)
 4. [Link a Pretendo Network ID (optional)](#link-a-pretendo-network-id-optional)
-5. [Other information](#other-information)
+5. [FAQ](#faq)
+6. [Troubleshooting](#troubleshooting)
 
 ## Downloading Nimbus
 
@@ -91,7 +92,7 @@ To link a PNID, open the System Settings app and click on `Nintendo Network ID S
 	A Pretendo Network ID may not use the same username as the account already linked to your 3DS/2DS! Ensure that you have chosen a different name for your PNID than the name on your NNID.
 </div>
 
-## Other information
+## FAQ
 
 ### How does Nimbus work?
 
@@ -101,7 +102,19 @@ Nimbus creates a 2nd local account on your system so you can connect to Pretendo
 
 You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS _normally_ supports only one account at a time. However, Nintendo implemented support for multiple local accounts on the 3DS/2DS as a feature for developers to use when testing their games, and it remains unused on all retail units. On a normal retail unit, only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create a local account in the `test` NASC environment. This is used in conjunction with the IPS patches, which make the `test` environment URLs point to Pretendo Network.
 
-### Restoring Nintendo Badge Arcade Badges
+## Troubleshooting
+
+### Hong Kong / Taiwan "Starter Edition" systems
+
+Some 3DS systems sold in Hong Kong and Taiwan with "Starter Edition" branding are not capable of accessing online features. If you try accessing any online features, the system will say "This is not available to this Nintendo 3DS." 
+
+TODO: SOLUTION
+
+### "You cannot create a Nintendo Network ID with your current region settings" error
+
+TODO
+
+### HOME Menu badges have disappeared
 
 Launching Nintendo Badge Arcade on Pretendo Network will result in your badges disappearing due to the locally saved data not matching the data stored on the server. To fix this and restore your badges, follow these steps:
 
