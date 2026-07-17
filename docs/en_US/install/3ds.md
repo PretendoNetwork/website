@@ -33,6 +33,8 @@ Power off your console and insert its SD card into your computer.
 
 You will need to download the [latest Nimbus release](https://github.com/PretendoNetwork/nimbus/releases/latest) from GitHub. You may choose the zip file labeled `cia.[version].zip` if you want to install Nimbus only to the HOME Menu, `3dsx.[version].zip` if you want to install Nimbus only to the Homebrew Launcher, or `combined.[version].zip` if you want to install Nimbus to both the HOME Menu and Homebrew Launcher.
 
+<img src="/assets/images/docs/install/3ds/nimbus_release_page.png" width=100% height=auto/>
+
 Copy the folder(s) from inside the zip file to the root of your SD card. If you are asked to merge or overwrite existing files, accept the changes.
 
 Before putting the SD card back in your system, check that it contains all of the following files:
@@ -97,7 +99,7 @@ Nimbus creates a 2nd local account on your system so you can connect to Pretendo
 
 ### 2nd local account?
 
-You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS _normally_ supports only one account at a time. However, Nintendo implemented support for multiple local accounts on the 3DS/2DS as a feature for developers to use when testing their games, and it remains unused on all retail units. On a normal retail unit, only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create a local account in the `test` NASC environment. This is used in conjunction with the IPS patches, which make the `test` NASC environment URLs point to Pretendo Network.
+You may have thought to yourself; _"2nd local account? What's that? I thought the 3DS only had one account?"_ And you'd be half right. The 3DS _normally_ supports only one account at a time. However, Nintendo implemented support for multiple local accounts on the 3DS/2DS as a feature for developers to use when testing their games, and it remains unused on all retail units. On a normal retail unit, only one local account is ever made, which is set to the `prod` NASC environment. Local accounts may be set to `prod`, `test` or `dev`. Nimbus makes use of this unused feature to create a local account in the `test` NASC environment. This is used in conjunction with the IPS patches, which make the `test` environment URLs point to Pretendo Network.
 
 ### Restoring Nintendo Badge Arcade Badges
 
