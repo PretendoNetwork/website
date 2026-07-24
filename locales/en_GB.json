@@ -334,7 +334,8 @@
 			"forgotPassword": "Forgot your password?",
 			"registerPrompt": "Don't have an account?",
 			"loginPrompt": "Already have an account?",
-			"confirmPassword": "Confirm password"
+			"confirmPassword": "Confirm password",
+			"birthdate": "Birthdate"
 		},
 		"forgotPassword": {
 			"submit": "Submit",
@@ -356,7 +357,7 @@
 				"userSettings": "User settings",
 				"profile": "Profile",
 				"nickname": "Nickname",
-				"birthDate": "Birthdate",
+				"birthDate": "Birth date",
 				"gender": "Gender",
 				"country": "Country/region",
 				"timezone": "Timezone",

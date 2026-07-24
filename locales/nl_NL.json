@@ -18,13 +18,15 @@
 				"blog": "Onze laatste updates, samengevat",
 				"progress": "Bekijk onze voortgang en doelen",
 				"about": "Over het project",
-				"faq": "Veelgestelde vragen"
+				"faq": "Veelgestelde vragen",
+				"forum": "Praat met andere en krijg hulp"
 			}
-		}
+		},
+		"forum": "Forum"
 	},
 	"hero": {
-		"subtitle": "Spelservers",
-		"title": "Nagemaakt",
+		"subtitle": "Game servers",
+		"title": "Hermaakt",
 		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo-servers permanent gestopt worden",
 		"buttons": {
 			"readMore": "Lees meer"
@@ -34,7 +36,7 @@
 		"title": "Over ons",
 		"paragraphs": [
 			"Pretendo is een open source project met het doel om het Nintendo Network voor de 3DS en Wii U na te maken met clean-room reverse engineering.",
-			"Omdat onze diensten gratis en open source zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
+			"Omdat onze diensten gratis en openbaar zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
 		]
 	},
 	"progress": {
@@ -43,7 +45,7 @@
 	},
 	"faq": {
 		"title": "Veelgestelde vragen",
-		"text": "Hier zijn een aantal vragen die wij vaak horen.",
+		"text": "Hier zijn een aantal vragen die vaak worden gesteld.",
 		"QAs": [
 			{
 				"question": "Wat is Pretendo?",
@@ -55,18 +57,18 @@
 			},
 			{
 				"question": "Hoe installeer ik Pretendo?",
-				"answer": "Pretendo is momenteel nog niet klaar voor algemeen gebruik. Zodra het dat wel is, kan je Pretendo gebruiken door een homebrew patcher te gebruiken op je console."
+				"answer": "Om te beginnen met het gebruik van Pretendo op een 3DS, Wii U of emulator, raadpleeg onze <a href='/docs/install'>installatie-instructies</a>!"
 			},
 			{
 				"question": "Wanneer is feature/dienst klaar?",
 				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt bijvoorbeeld door één ontwikkelaar ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
 			},
 			{
-				"question": "Werkt Pretendo op Cemu of andere emulators?",
-				"answer": "Pretendo wordt voornamelijk ontwikkeld voor de hardware van de Wii U en 3DS. Momenteel is de enige emulator met NN ondersteuning, Cemu. Cemu ondersteunt officieel geen custom servers, maar het zou alsnog mogelijk moeten zijn om Pretendo te gebruiken in Cemu. Momenteel ondersteunt Pretendo Cemu niet."
+				"question": "Wanneer voegen jullie meer games toe?",
+				"answer": "We werken aan nieuwe games zodra we vinden dat onze backendbibliotheken klaar zijn om ze te ondersteunen en er ontwikkelaarstijd beschikbaar is om ze te onderhouden. Veel van ons werk gaat naar het stabiliseren en voltooien van onze bestaande games - we willen de best mogelijke ervaring in die games voordat we doorgaan naar nieuwe titels. Omdat er voortdurend nieuw werk opduikt, kunnen we geen schatting maken van wanneer dat zou zijn."
 			},
 			{
-				"question": "Werkt Pretendo op Cemu/emulators?",
+				"question": "Als ik een emulator gebruik, is dat genoeg om Pretendo te gebruiken?",
 				"answer": "Nee,  Voor extra beveiliging en veiligheid, als je een emulator gebruikt. Moet je nog steeds een echte spelcomputer hebben. Dit zorgt voor betere beveiliging en snelle werkzaamheden met de regels voor een leuke en veilige speelervaring op onze servers."
 			},
 			{
@@ -78,8 +80,16 @@
 				"answer": "De Wii heeft al custom servers dankzij  <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We hebben momenteel geen plan om de Switch te ondersteunen, omdat betaald is en een compleet ander netwerk is."
 			},
 			{
-				"answer": "We hebben geen toegang tot de bans van Nintendo Network, dus niet alle Nintendo Network-gebruikers worden verbannen. We hebben echter regels die we moeten volgen bij het gebruik van de service en het niet naleven van deze regels kan resulteren in een ban.",
+				"answer": "Voor de beste ervaring op console, moet jij je systeem modden - vooral voor Aroma op Wii U en Luma3DS op 3DS. Hoewel, op Wii u, de Modloze SSSL methode is ook beschikbaar maar met gelimiteerde funties. Zie <a href=\"/docs/install\">setup instructions</a> voor meer informatie.",
 				"question": "Heb ik hacks nodig om te verbinden?"
+			},
+			{
+				"question": "Als ik gebannen bent op Nintendo Netwerk, blijf ik dan ook verbannen warneer ik Pretendo gebruik?",
+				"answer": "Wij hebben geen toegang tot Nintendo Netwerk's lijst van bannen, zo alle Nintendo Netwerk gebruikers zijn niet gebannen. Maar we hebben regels om te volgen warneer je de service gebruikt en als je de regels niet volgt dan kan het uiteindelijk veroorzaken tot een ban."
+			},
+			{
+				"question": "Kan ik cheats of mods online gebruiken met Pretendo?",
+				"answer": "Alleen maar in prive wedstrijden; want een oneerlijk voordeel krijgen of het verstoren van de online-ervaring met mensen die geen toestemming hebben gegeven (zoals bij openbare wedstrijden) is een strafbaar vergrijp. Wij bannen regulier Accounts, de Wii u en de 3DS systemen. Pretendo gebruikt extra beveiligings maatregelen waardoor traditionele 'onbannen' methoden bijvoorbeeld je seriële nummer te veranderen niet werkt."
 			}
 		]
 	},
@@ -89,17 +99,168 @@
 		"people": [
 			{
 				"caption": "Eigenaar en hoofdontwikkelaar",
-				"name": "Jonathan Barrow (jonbarrow)"
+				"name": "Jonathan Barrow (Jonbarrow)",
+				"picture": "­https://www.github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
 			},
-			{},
 			{
-				"caption": "Wii U onderzoek en patch ontwikkeling"
+				"name": "Jеmma (CaramelKat)",
+				"caption": "Miiverse onderzoek en development",
+				"picture": "https://www.github.com/caramelkat.png",
+				"github": "https://www.github.com/CaramelKat"
+			},
+			{
+				"caption": "Wii U onderzoek en patch ontwikkeling",
+				"name": "Quarky",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Systeem onderzoek en server architectuur",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "pinklimes",
+				"caption": "Web ontwikkeling",
+				"picture": "https://github.com/gitlimes.png",
+				"github": "https://github.com/gitlimes"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "Systems research en server ontwikkeling",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"caption": "Behoudsgezinde en server architectuur",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"caption": "Systeem onderzoek en server developement",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko",
+				"caption": "Web en server developement",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps en communitywerk",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Serverontwikkeling en -optimalisatie",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"caption": "Ontwikkeling en onderzoek van 3DS-patches",
+				"picture": "https://github.com/TraceEntertains.png",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
-		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is."
+		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is.",
+		"people": [
+			{
+				"name": "GitHub-bijdragers",
+				"caption": "Lokalisaties en andere bijdragen",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			},
+			{
+				"name": "superwhiskers",
+				"caption": "crunch library development",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"name": "Stary",
+				"caption": "3DS-ontwikkeling en NEX-dissector",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse informatie delen",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Speciale dank",
+				"caption": "Onderzoek naar Nintendo-datastructuren",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Pictogrammen voor de Mii Editor en Juxt-reacties",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Console onderzoek en spel servers",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Ontwikkeling van Wii U-patches",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS patch creator",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Server architectuur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Serverarchitectuur",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Splatoon-rotaties en onderzoek",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon-rotaties en onderzoek",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "Github Bijdragers",
+				"caption": "Lokalisaties en andere bijdragen",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"progressPage": {
 		"title": "Onze vooruitgang",
@@ -112,26 +273,26 @@
 		"publishedOn": "op"
 	},
 	"localizationPage": {
-		"title": "Laten we meer talen toevoegen",
-		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen",
-		"instructions": "Zie hier instructies voor het vertalen",
+		"title": "Laten we lokaliseren",
+		"description": "Plak een link naar een openbaar toegankelijke JSON-landinstelling om deze op de website te testen",
+		"instructions": "Bekijk lokalisatie-instructies",
 		"fileInput": "Bestand om te testen",
-		"filePlaceholder": "https://een.link.naar/het_bestand.json",
+		"filePlaceholder": "https://a.link.to_file.json",
 		"button": "Test bestand"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgradepagina</a>."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
 		"back": "Terug",
 		"title": "Upgraden",
-		"description": "Het bereiken van de maandelijkse doelstelling maakt van Pretendo een fulltime baan, wat zorgt voor snellere updates van een hogere kwaliteit.",
+		"description": "Het behalen van het maandelijkse doel zal de ontwikkeling van Pretendo Network ondersteunen door zowel onze serverinfrastructuur te financieren als onze hoofdontwikkelaar, Jon, in staat te stellen fulltime aan het project te werken.",
 		"month": "Maand",
 		"tierSelectPrompt": "Selecteer een tier",
 		"unsub": "Opzeggen",
-		"unsubPrompt": "Weet u zeker dat u zich wilt afmelden voor <span>tiername</span>? Je verliest de toegang tot de extraatjes die bij dat niveau horen.",
+		"unsubPrompt": "Weet je zeker dat je je wilt afmelden voor <span>tiername</span>? Je verliest dan <span>onmiddellijk</span> de toegang tot de voordelen die bij dat abonnement horen.",
 		"unsubConfirm": "Opzeggen",
 		"changeTier": "Verander tier",
 		"changeTierConfirm": "Verander van tier"
@@ -181,7 +342,8 @@
 			"Super Mario World 2 - Yoshi's Island's main theme is een geweldig muziek nummer en niemand kan mij van het tegendeel overtuigen.",
 			"Mijn favoriete Nintendo Switch titels zijn Nintendo Switch Online + Uitbreidingspakket, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Speel pakket, Nintendo Switch Online+ Nog Een Port Pakket en Nintendo Switch Online + Dr. Kawashima's Brain Training: Hoe oud is jouw brein? \"jullie hielden veel van de Wii U Virtual Console versie, dus brengen we het terug\" pakket. Je kan zien dat Nintendo er veel om geeft.",
 			"Je weet toch dat \"je kent Kip, prijs haar ziel, ze UwUt elke dag\" de zuidelijke Verenigde Staten hun aardige manier om \"Kip UwUt elke dag en het is raar en gek en ik wil dat ze dat niet deed\" te zeggen",
-			"Mijn eerste videoo op dit kannaal. ik wildu al langur videos make maar me laptop draaidu slecht en ik kon geen fraps en Skype en meincraft draaie op hetzelfdu moment. maar dat is klaar! met wat hellup van mijn IT leraar mijn laptop draaid veel beter en ik kan nu opnemen! Ik hoop jullie genietun ervan en als dat O is, leik en abbonneer!!!"
+			"Mijn eerste videoo op dit kannaal. ik wildu al langur videos make maar me laptop draaidu slecht en ik kon geen fraps en Skype en meincraft draaie op hetzelfdu moment. maar dat is klaar! met wat hellup van mijn IT leraar mijn laptop draaid veel beter en ik kan nu opnemen! Ik hoop jullie genietun ervan en als dat O is, leik en abbonneer!!!",
+			"Ziet er goed uit"
 		]
 	},
 	"account": {
@@ -196,7 +358,8 @@
 			"miiName": "Mii naam",
 			"forgotPassword": "Wachtwoord vergeten?",
 			"registerPrompt": "Nog geen account?",
-			"loginPrompt": "Heb je al een account?"
+			"loginPrompt": "Heb je al een account?",
+			"birthdate": "Geboortedatum"
 		},
 		"settings": {
 			"upgrade": "Account upgraden",
@@ -232,7 +395,14 @@
 				"no_newsletter_notice": "Nieuwsbrief is momenteel niet beschikbaar. Kom later weer terug",
 				"no_edit_from_dashboard": "Het aanpassen van PNID instellingen via het gebruikers dashboard is momenteel niet mogelijk. Pas de gebruikers instellingen aan via je gelinkte game console"
 			},
-			"unavailable": "Niet beschikbaar"
+			"unavailable": "Niet beschikbaar",
+			"delete": {
+				"button": "Verwijder Account",
+				"modalTitle": "Verwijder PNID",
+				"modalDescription": "Weet je zeker dat je je PNID wilt verwijderen? zie eerst de informatie hier onder voordat je het verwijderd:\n\nAlle account data van alle Pretendo Network services (inclusief Forum and Juxtaposition) word verwijderd.\nJe Stripe data en abonnement wordt automatisch verwijdert.\nJe kan in de toekomst dit PNID niet meer gebruiken op een nieuw account.\nJe account verwijderen lost geen problemen op gerelateerd aan bans of technische support. Als je een probleem hebt gebruik a.u.b het forum voor ondersteuning.",
+				"modalCaution": "Deze actie kan niet ongedaan gemaakt worden.",
+				"modalConfirm": "Ja, verwijder"
+			}
 		},
 		"accountLevel": [
 			"Standaard",
@@ -262,7 +432,7 @@
 		"close": "Sluiten"
 	},
 	"docs": {
-		"missingInLocale": "Deze pagina is niet beschikbaar in je huidige taal. Bekijk de Engelse versie hieronder.",
+		"missingInLocale": "Deze pagina is niet beschikbaar in uw taal. Controleer de Engelse versie hieronder.",
 		"quickLinks": {
 			"header": "Snelkoppelingen",
 			"links": [
@@ -290,5 +460,8 @@
 			"install": "Installeer",
 			"juxt_err": "Foutcodes - Juxt"
 		}
+	},
+	"notfound": {
+		"description": "Oeps! We konden deze pagina niet vinden."
 	}
 }

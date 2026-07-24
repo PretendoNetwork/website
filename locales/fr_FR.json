@@ -17,10 +17,10 @@
 			"captions": {
 				"about": "À propos du projet",
 				"blog": "Nos dernières mises à jour, en condensé",
-				"forum": "Discutez avec des personnes et trouvez du soutien",
+				"forum": "Discutez avec d'autres personnes et obtenez de l'aide",
 				"progress": "Vérifiez l'avancement et les objectifs du projet",
 				"credits": "Rencontrez l'équipe",
-				"faq": "Questions fréquemment posées"
+				"faq": "Foire aux questions"
 			}
 		}
 	},
@@ -45,7 +45,7 @@
 	},
 	"faq": {
 		"title": "Foire Aux Questions",
-		"text": "Voici quelques questions fréquemment posées.",
+		"text": "Voici quelques réponses simples à des questions qui nous sont fréquemment posées.",
 		"QAs": [
 			{
 				"question": "Qu'est-ce que Pretendo ?",
@@ -53,26 +53,26 @@
 			},
 			{
 				"question": "J'ai déjà un identifiant Nintendo Network, puis-je l'utiliser avec Pretendo ?",
-				"answer": "Malheureusement, non. Les identifiants existants ne seront pas conservés, et Nintendo restera le seul détenteur de vos données personnelles. Bien qu'une extraction des informations soit théoriquement possible, cela reviendrait à récupérer des milliers de données sensibles : chose que nous désapprouvons."
+				"answer": "Malheureusement, non. Nintendo est le seul détenteur des données propres à votre identifiant Nintendo Network. Bien qu'il soit théoriquement possible de migrer (transférer) ces données, cela reviendrait à stocker des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
 				"question": "Comment utiliser Pretendo ?",
 				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand de nouvelles fonctionnalités ou services seront prêt(e)s ?",
+				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt(e)  à être utilisé(e) ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
-				"question": "Quand allez-vous supporter plus de jeux ?",
+				"question": "Quand est-ce que d'autres jeux seront pris en charge ?",
 				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Un émulateur seul est-il suffisant pour utiliser Pretendo ?",
+				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo ?",
 				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
-				"question": "Pretendo fonctionne-t-il sur Cemu ou un autre émulateur ?",
+				"question": "Est-ce que Pretendo fonctionne sur Cemu ou un autre émulateur ?",
 				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
@@ -122,7 +122,7 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Recherche et développement (Miiverse)",
+				"caption": "Recherche et développement de Miiverse",
 				"github": "https://github.com/CaramelKat",
 				"name": "Jemma (CaramelKat)",
 				"picture": "https://github.com/caramelkat.png"
@@ -300,7 +300,7 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Je suis Bandwidth le Raton Laveur, un vrai glouton. Mon péché mignon ? Les câbles des serveurs Pretendo, pardi !... Miam !",
-			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que c'était OK.",
+			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que ça allait.",
 			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
 			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
 			"La Wii U n'était pas si nulle que ça, en vrai, c'est juste que les pubs étaient vraiment désastreuses... Hum, c'est étrange, j'ai l'impression que mon Gamepad n'arrive pas à se connecter à ma Wii.",
@@ -308,7 +308,7 @@
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
 			"\"Tu vois qui c'est Kip ? C'est fou elle dit souvent UwU, tu trouves pas ?\" : c'est vraiment la plus douce des façons de dire \"Kip dit H24 UwU, c'est trop chiant et chelou : à l'aide\".",
 			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !",
-			"Cela me semble bon"
+			"Cela me semble correct"
 		]
 	},
 	"progressPage": {
@@ -400,7 +400,7 @@
 				"removeDiscord": "Délier le compte Discord",
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Lettre d'information",
 				"passwordPrompt": "Entrez le mot de passe de votre identifiant Pretendo (PNID) pour télécharger les fichiers Cemu",
 				"no_edit_from_dashboard": "La configuration des paramètres PNID depuis le menu utilisateur est actuellement indisponible. Veuillez procéder aux changements depuis votre console.",
 				"userSettings": "Paramètres du compte",
@@ -412,7 +412,7 @@
 			"delete": {
 				"button": "Supprimer le compte",
 				"modalTitle": "Supprimer votre compte",
-				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID? Veuillez tenir compte des éléments suivants avant la suppression:\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
+				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID ? Veuillez tenir compte des éléments suivants avant la suppression :\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
 				"modalCaution": "Cette action ne peut pas être annulée.",
 				"modalConfirm": "Oui, supprimez mon compte"
 			}
@@ -442,7 +442,7 @@
 	"upgrade": {
 		"title": "Mise à Niveau",
 		"changeTierPrompt": "Êtes-vous sûr de vouloir vous désabonner de <span class=\"oldtier\">oldertiername</span> et vous abonner à <span class=\"newtier\">newtiername</span> ?",
-		"description": "Atteindre le but mensuel fera de Pretendo un travail complet, proposant des mises à jour de meilleures qualité à une plus grande vitesse.",
+		"description": "Atteindre le but mensuel aidera Pretendo Network dans son développement, en participant au financement des infrastructures de serveurs et en permettant à Jon, notre développeur principal, de travailler sur le projet à temps-plein.",
 		"month": "mois",
 		"tierSelectPrompt": "Sélectionnez un niveau",
 		"unsub": "Se désabonner",

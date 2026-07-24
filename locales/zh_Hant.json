@@ -295,7 +295,7 @@
 	"aboutUs": {
 		"title": "關於我們",
 		"paragraphs": [
-			"Pretendo 是一個開源項目，旨在透過無塵室逆向工程為 3DS 和 Wii U 重新建立 Nintendo Network。",
+			"Pretendo 是一個開源項目，旨在透過淨室設計逆向工程為 3DS 和 Wii U 重新建立 Nintendo Network。",
 			"由於我們的服務是完整免費和開源的，因此可以永久繼續使用。"
 		]
 	},
@@ -331,7 +331,8 @@
 			"miiName": "Mii 暱稱",
 			"forgotPassword": "忘記密碼？",
 			"registerPrompt": "沒有帳號？",
-			"loginPrompt": "已經有帳號？"
+			"loginPrompt": "已經有帳號？",
+			"birthdate": "生日"
 		},
 		"settings": {
 			"settingCards": {
