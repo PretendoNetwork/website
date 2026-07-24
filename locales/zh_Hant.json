@@ -331,7 +331,8 @@
 			"miiName": "Mii 暱稱",
 			"forgotPassword": "忘記密碼？",
 			"registerPrompt": "沒有帳號？",
-			"loginPrompt": "已經有帳號？"
+			"loginPrompt": "已經有帳號？",
+			"birthdate": "生日"
 		},
 		"settings": {
 			"settingCards": {
