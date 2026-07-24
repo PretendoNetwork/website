@@ -399,7 +399,7 @@
 			"delete": {
 				"button": "Verwijder Account",
 				"modalTitle": "Verwijder PNID",
-				"modalDescription": "Weet je zeker dat je je PNID wilt verwijderen? Houd rekening met het volgende voordat je je account verwijdert:\n\nJe accountgegevens voor alle Pretendo Network-services (inclusief Forum en Juxtaposition) worden verwijderd.\nJe Stripe-gegevens en abonnement worden automatisch verwijderd.\nJe kunt dezelfde PNID in de toekomst niet meer gebruiken voor een nieuw account.\nHet verwijderen van een account lost geen problemen met bans of technische ondersteuning op. Als je een probleem hebt, kun je hulp zoeken op het Forum.",
+				"modalDescription": "Weet je zeker dat je je PNID wilt verwijderen? zie eerst de informatie hier onder voordat je het verwijderd:\n\nAlle account data van alle Pretendo Network services (inclusief Forum and Juxtaposition) word verwijderd.\nJe Stripe data en abonnement wordt automatisch verwijdert.\nJe kan in de toekomst dit PNID niet meer gebruiken op een nieuw account.\nJe account verwijderen lost geen problemen op gerelateerd aan bans of technische support. Als je een probleem hebt gebruik a.u.b het forum voor ondersteuning.",
 				"modalCaution": "Deze actie kan niet ongedaan gemaakt worden.",
 				"modalConfirm": "Ja, verwijder"
 			}
