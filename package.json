@@ -26,7 +26,7 @@
 		"@aws-sdk/client-ses": "^3.515.0",
 		"@discordjs/rest": "^2.6.3",
 		"@node-saml/node-saml": "^5.0.0",
-		"@pretendonetwork/error-codes": "^1.0.3",
+		"@pretendonetwork/error-codes": "^1.2.2",
 		"@pretendonetwork/grpc": "^2.2.3",
 		"browserify": "^17.0.0",
 		"colors": "^1.4.0",
