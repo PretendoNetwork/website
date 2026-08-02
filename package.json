@@ -45,7 +45,7 @@
 		"mii-js": "github:PretendoNetwork/mii-js#v1.0.4",
 		"mongoose": "^6.4.0",
 		"morgan": "^1.10.0",
-		"nice-grpc": "^2.1.13",
+		"nice-grpc": "^2.1.16",
 		"nodemailer": "^6.7.5",
 		"stripe": "^9.9.0"
 	},
