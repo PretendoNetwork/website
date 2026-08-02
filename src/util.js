@@ -203,11 +203,10 @@ async function updateDiscordConnection(discordUser, request, response, fromRetry
 	}
 }
 
-
 async function removeDiscordConnection(request, response, fromRetry = false) {
 	try {
 		return await gRPCApiClient.setDiscordConnectionData({
-			id: discordUser.id
+			id: ''
 		}, {
 			metadata: Metadata({
 				'X-API-Key': config.grpc.api.api_key,
