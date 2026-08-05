@@ -84,12 +84,12 @@
 				"question": "Heb ik hacks nodig om te verbinden?"
 			},
 			{
-				"question": "Als ik ben verbannen op Nintendo Network, ben ik dan ook verbannen op Pretendo?",
-				"answer": "We hebben geen toegang tot de verbanning lijst van nintendo, dus kunnen alle Nintendo Network gebruikers spelen. Hoewel, hebben we onze eigen regels die je moet volgen voor onze service and als je die niet volgt kun je bij ons een ban krijgen."
+				"question": "Als ik gebannen bent op Nintendo Netwerk, blijf ik dan ook verbannen warneer ik Pretendo gebruik?",
+				"answer": "Wij hebben geen toegang tot Nintendo Netwerk's lijst van bannen, zo alle Nintendo Netwerk gebruikers zijn niet gebannen. Maar we hebben regels om te volgen warneer je de service gebruikt en als je de regels niet volgt dan kan het uiteindelijk veroorzaken tot een ban."
 			},
 			{
-				"question": "Can i hacks of mods gebruiken online met Pretendo?",
-				"answer": "Alleen in privé gevechten - gebruik maken van hacks of irriterend gedrag online met mensen die hier niet mee eens zijn (zoals in publieke gevechten) kan gevolgen in een ban. We verbannen vaak accounts en systemen zoals Wii U en 3DS. Pretendo gebruikt iets meer beveiliging maatregelen om exploits zoals serial nummer verandering niet mogelijk is."
+				"question": "Kan ik cheats of mods online gebruiken met Pretendo?",
+				"answer": "Alleen maar in prive wedstrijden; want een oneerlijk voordeel krijgen of het verstoren van de online-ervaring met mensen die geen toestemming hebben gegeven (zoals bij openbare wedstrijden) is een strafbaar vergrijp. Wij bannen regulier Accounts, de Wii u en de 3DS systemen. Pretendo gebruikt extra beveiligings maatregelen waardoor traditionele 'onbannen' methoden bijvoorbeeld je seriële nummer te veranderen niet werkt."
 			}
 		]
 	},
@@ -99,19 +99,19 @@
 		"people": [
 			{
 				"caption": "Eigenaar en hoofdontwikkelaar",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
+				"name": "Jonathan Barrow (Jonbarrow)",
+				"picture": "­https://www.github.com/jonbarrow.png",
+				"github": "https://www.github.com/jonbarrow"
 			},
 			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse onderzoek en developer",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
+				"name": "Jеmma (CaramelKat)",
+				"caption": "Miiverse onderzoek en development",
+				"picture": "https://www.github.com/caramelkat.png",
+				"github": "https://www.github.com/CaramelKat"
 			},
 			{
 				"caption": "Wii U onderzoek en patch ontwikkeling",
-				"name": "quarky",
+				"name": "Quarky",
 				"picture": "https://github.com/ashquarky.png",
 				"github": "https://github.com/ashquarky"
 			},
