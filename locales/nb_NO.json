@@ -11,14 +11,18 @@
 			"captions": {
 				"credits": "Møt laget",
 				"about": "Om prosjektet",
-				"faq": "O-S-S"
+				"faq": "O-S-S",
+				"blog": "Våre siste oppdateringer, kondensert",
+				"forum": "Chat med andre og få hjelp",
+				"progress": "Sjekk ut prosjekt progressen og målene"
 			}
 		},
 		"donate": "Doner",
 		"accountWidget": {
 			"settings": "Innstillinger",
 			"logout": "Logg ut"
-		}
+		},
+		"forum": "Forum"
 	},
 	"hero": {
 		"subtitle": "Spilltjenere",
@@ -32,11 +36,12 @@
 		"title": "Om oss",
 		"paragraphs": [
 			"Pretendo er et fritt kildekodeprosjekt som prøver å implementere Nintendo Network på nytt for 3DS and Wii U ved å bruke helt egen kildekode.",
-			"Siden våres tjenester vil være gratis frie, kan de eksistere lenge etter uunngåelig nedstenging av Nintendo Network."
+			"Siden våres tjenester er i åpen kildekode og er gratis, kan de eksistere lenge frem i tid."
 		]
 	},
 	"progress": {
-		"title": "Framgang"
+		"title": "Framgang",
+		"githubRepo": "Github repositorie"
 	},
 	"faq": {
 		"title": "Ofte stilte spørsmål",
@@ -52,27 +57,39 @@
 			},
 			{
 				"question": "Hvordan bruker jeg Pretendo?",
-				"answer": "Pretendo er ikke klar til offentlig bruk, men når tiden er inne vil du kunne bruke Pretendo ved å kjøre vår hjemmebrent-feilfiks på din konsoll."
+				"answer": "For å starte å bruke Pretendo Network på 3DS, Wii U og emulatorer, vennligst besøk vår <a href='/docs/install'>instrukside</a>!"
 			},
 			{
 				"question": "Vet dere når en funksjon/tjeneste er klar?",
 				"answer": "Nei. Mange av Pretendo sine funksjoner/tjenester er utvikleruavhengelige (for eksempel, Miiverse kan arbeides på av én utvikler mens «Kontoer og Venner» jobbes på av en annen utvikler) og derfor kan vi ikke gi anslå hvor lang tid dette kommer til å ta."
 			},
 			{
-				"question": "Fungerer Pretendo på CEMU/emulatorer?",
-				"answer": "Pretendo er laget for Wii U og 3DS maskinvare i det minste, men akkurat nå den eneste emulatorer med støtte for NN for disse konsollene er Cemu. Cemu støtter ikke tilpasset servere offisielt, men det skal fortsatt være mulig å bruke Pretendo med Cemu. <br>Pretendo støtter ikke Cemu akkurat nå."
+				"question": "Når kommer dere til å tilsette flere spill?",
+				"answer": "Vi jobber med å tilsette nye spill når vi føler at vår backend-bibliotek er klar for å støtte dem, og når det er nok tid for våre utviklere å jobbe med dem. Mye av vårt arbeid går i stabilisering og gjør eksisterende spill klare - vi gi den beste opplevelsen til disse før vi begynner å tilsette ny spiltitler. Ettersom nytt arbeid dukker alltid opp, klarer vi ikke å forutsi når alt dette blir realisert."
 			},
 			{
-				"question": "Hvis jeg er utestengt fra Nintendo Network, kommer jeg til å være utestengt fra Pretendo?",
-				"answer": "Vi kommer ikke til å ha tilgang til Nintendo Network sine utestengelser, og alle brukere kommer ikke til å bli utestengt på vår tjeneste. Vi har fortsatt regler du må følge når du bruker tjenesten, og hvis du ikke følger disse kan du bli utestengt."
+				"question": "Hvis jeg bruker en emulator, vil det være nok for å starte å bruke Pretendo?",
+				"answer": "Nei. Om du bruker en emulator, så vil det på grunn av sikkerhets og modererings grunner, ikke være mulig å spille uten å ha en ekte konsoll. Dette bidrar til sterkere sikkerhetsbeskyttelse og mer effektiv håndhevelse av regler som bidrar til en trygg og behagelig opplevelse med vår tjeneste."
 			},
 			{
-				"question": "Kommer Pretendo til å støtte Wii-en/Switch-en?",
-				"answer": "Wii-en har allerede tilpassede tjenere fra <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Vi tar ikke sikte på Switch-en fordi det er både betalt og helt annerledes fra Nintendo Network."
+				"question": "Kommer Pretendo til å fungere på Cemu/emulatorer?",
+				"answer": "Cemu 2.1 støtter Pretendo offisielt under nettverks-innstillinger til kontoen inni emulatoren. For mer informasjon for hvordan du kan starte å bruke Cemu, sjekk ut <a href=\"https://pretendo.network/docs/install/cemu\">dokumentasjonen</a>. <br>Noen 3DS emulatorer eller forks støtter oss kanskje, men vi har ingen offisiell anbefaling eller oppsettsinstrukser på dette tidspunktet. De siste buildene av Citra støtter ikke Pretendo."
 			},
 			{
-				"question": "Kommer jeg til å trenge en hacket konsoll for å koble til Pretendo?",
-				"answer": "Ja. Du vil måtte hacke din konsoll for å koble til, men på Wii U trenger du bare tilgang til Homebrew Launcher (i.e. Haxchi, Coldboot Haxchi, eller til og med nettleser-utnyttelsen), med info om hvordan 3DS-en kommer til å koble til Pretendo senere."
+				"question": "Vil Pretendo støtte Wii/Switch?",
+				"answer": "Wii har allerede egendefinerte servere levert av <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Akkurat nå, så ønsker vi ikke å målrette Switch, ettersom den har en betalt tjeneste og er helt annerledes i fra Nintendo Network."
+			},
+			{
+				"question": "Trenger jeg hacks for å koble til?",
+				"answer": "For den beste opplevelsen på konsoler, så må du hacke ditt system - spesifikt Aroma for Wii U eller Luma3DS for 3DS. Men, på Wii U, den hack-løse SSSL-metoden er tilgjengelig med limitert funksjonalitet. Se våre <a href=\"/docs/install\">oppsettsinstrusker</a> for mer informasjon."
+			},
+			{
+				"question": "Hvis jeg er utestengt på Nintendo Network, vil jeg være på lik måte utestengt på Pretendo?",
+				"answer": "Vi har ingen tilgang til Nintendo Network sine utestenginger, så ingen Nintendo Network brukere er utestengt. Men, vi har egne regler som må følges ved bruk av tjenesten. Unnlatelse av reglene kan føre til utestengelse."
+			},
+			{
+				"question": "Kan jeg bruke cheats eller mods online med Pretendo?",
+				"answer": "Kun i private spill - å få en fordel eller bryte inn i et online-opplevelse med personer som ikke samtykket (som så i offentlige spill) er utestengelsesmateriale. Vi utestenger konto og konsoller regelmessing både på Wii U og 3DS systemer. Pretendo bruker flere sikkerhetsmarginer for å gjøre de tradisjonelle \"unban\"-metoder som så å endre serienummber ueffektiv."
 			}
 		]
 	},
@@ -89,7 +106,7 @@
 				"caption": "En ny forestilling av Miiverse, som om den hadde vært laget i den moderne æra."
 			},
 			{
-				"title": "Støtte for CEMU",
+				"title": "Støtte for Cemu",
 				"caption": "Spill dine favoritt Wii U-titler, til og med uten Wii U-konsoll!"
 			}
 		]
@@ -99,13 +116,169 @@
 		"text": "Møt laget bak prosjektet",
 		"people": [
 			{
-				"caption": "Prosjekteier og hovedutvikler"
+				"caption": "Prosjekteier og hovedutvikler",
+				"name": "Jonathan Barrow (jonbarrow)",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Forskning på Miiverse og utvikling",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Wii U forsknings- og patchutvikling",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"name": "SuperMarioDaBom",
+				"caption": "Systemforskning og server-arkitektur",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "Webutvikling",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"caption": "System forskning og server utvikling",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"caption": "Preverasjonist og server-arkitektur",
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"caption": "System forskning og server utvikling",
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"caption": "Web og server utvikling",
+				"name": "niko",
+				"picture": "https://github.com/hauntii.png",
+				"github": "https://github.com/hauntii"
+			},
+			{
+				"name": "MatthewL246",
+				"caption": "DevOps og samfunnsarbeid",
+				"picture": "https://github.com/MatthewL246.png",
+				"github": "https://github.com/MatthewL246"
+			},
+			{
+				"name": "wolfendale",
+				"caption": "Server utvikling og optimisering",
+				"picture": "https://github.com/wolfendale.png",
+				"github": "https://github.com/wolfendale"
+			},
+			{
+				"name": "TraceEntertains",
+				"picture": "https://github.com/TraceEntertains.png",
+				"caption": "3DS patch utvikling og forskning",
+				"github": "https://github.com/TraceEntertains"
 			}
 		]
 	},
 	"specialThanks": {
 		"title": "Spesiell takk",
-		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag."
+		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag.",
+		"people": [
+			{
+				"caption": "Lokalisering og andre bidragsytere",
+				"name": "GitHub bidragsytere",
+				"github": "https://github.com/PretendoNetwork",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+			},
+			{
+				"caption": "crunch bibliotekutvikling",
+				"name": "superwhiskers",
+				"picture": "https://github.com/superwhiskers.png",
+				"github": "https://github.com/superwhiskers"
+			},
+			{
+				"caption": "3DS utvikling og NEX dissektor",
+				"picture": "https://github.com/Stary2001.png",
+				"github": "https://github.com/Stary2001",
+				"name": "Stary"
+			},
+			{
+				"name": "rverse",
+				"caption": "Miiverse informasjonsdeling",
+				"picture": "https://github.com/rverseTeam.png",
+				"github": "https://twitter.com/rverseClub"
+			},
+			{
+				"name": "Kinnay",
+				"special": "Spesiell takk",
+				"caption": "Forskning etter Nintendo datastrukturer",
+				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+				"github": "https://github.com/Kinnay"
+			},
+			{
+				"name": "NinStar",
+				"caption": "Ikoner for Mii Editor og Juxt reaksjoner",
+				"picture": "https://github.com/ninstar.png",
+				"github": "https://github.com/ninstar"
+			},
+			{
+				"name": "Rambo6Glaz",
+				"caption": "Konsoll forskning og spillservere",
+				"picture": "https://github.com/EpicUsername12.png",
+				"github": "https://github.com/EpicUsername12"
+			},
+			{
+				"name": "GaryOderNichts",
+				"caption": "Wii U patch utvikling",
+				"picture": "https://github.com/GaryOderNichts.png",
+				"github": "https://github.com/GaryOderNichts"
+			},
+			{
+				"name": "zaksabeast",
+				"caption": "3DS patch skaper",
+				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+				"github": "https://github.com/zaksabeast"
+			},
+			{
+				"name": "mrjvs",
+				"caption": "Server-arkitektur",
+				"picture": "https://github.com/mrjvs.png",
+				"github": "https://github.com/mrjvs"
+			},
+			{
+				"name": "binaryoverload",
+				"caption": "Server-arkitektur",
+				"picture": "https://github.com/binaryoverload.png",
+				"github": "https://github.com/binaryoverload"
+			},
+			{
+				"name": "Simonx22",
+				"caption": "Splatoon rotasjoner og forskning",
+				"picture": "https://github.com/Simonx22.png",
+				"github": "https://github.com/Simonx22"
+			},
+			{
+				"name": "OatmealDome",
+				"caption": "Splatoon-rulleringer og forskning",
+				"picture": "https://github.com/OatmealDome.png",
+				"github": "https://github.com/OatmealDome"
+			},
+			{
+				"name": "GitHub bidragsytere",
+				"caption": "Lokalisering og andre bidragsytere",
+				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+				"github": "https://github.com/PretendoNetwork"
+			}
+		]
 	},
 	"discordJoin": {
 		"title": "Hold deg oppdatert",
@@ -128,13 +301,14 @@
 		"bandwidthRaccoonQuotes": [
 			"Jeg er båndbreddevaskebjørnen, og jeg elsker å bite over kablene som går til Pretendo-nettverkets tjenere. Nam.",
 			"Mange spør oss om vi kommer i rettslige problemer med Nintendo om dette. Jeg er glad for å si at min tante jobber på Nintendo og hun sier at det går fint.",
-			"WebKit v537 er den beste versjonen av WebKit for Wii U. Nei, vi kommer ikke til å portere Chromium til Wii U.",
+			"WebKit v537 er den beste versjonen av WebKit for Wii U. Nei, vi kommer ikke til å overføre Chromium til Wii U.",
 			"Kan ikke vente til klokken når 03:14:08 UTC den 19 Januar 2038.",
-			"Wii U er faktisk et undervurdert system. Reklamene er dårlige, men konsollen er bra. Vent nå litt, hvorfor kobler ikke spillkontrollen min seg til Wii-en?",
+			"Wii U er faktisk et undervurdert system: reklamene har vært dårlige, men konsollen er ellers bra. Vent nå litt, hvorfor kobler ikke spillkontrollen min seg til Wii-en?",
 			"Super Mario World 2 - Yoshi's Islands hovedtema er en klassiker av en låt, og jeg lar meg ikke overbevise om annet.",
-			"",
-			"",
-			"Min første video på min kanal. jeg har ventet med å lage videoer lenge, men min bærbare kjørte veldig dårlig og jeg kunne ikke kjøre Fraps, Skype og minecraft samtidig. nå er det over! med litt hjelp fra min IT-lærer kjører min bærbare mye bedre og jeg kan ta opp skjermen. Håper dere liker denne videoen. Lik og abonner for flere videoer."
+			"Mitt favoritt Nintendo Switch utgivelse har vært Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back\" Pack. Du kan virekelig se at Nintendo bryr seg.",
+			"Liksom \"Du vet Kip, vis henne nåde, og hun UwUer hele dagen\" er en sør god måte å si \"Kip UwUer hele tiden og det er veldig rart og dumt og jeg håper dei ikke gjør det\"",
+			"Min første video på min kanal. jeg har ventet med å lage videoer lenge, men min bærbare kjørte veldig dårlig og jeg kunne ikke kjøre Fraps, Skype og minecraft samtidig. nå er det over! med litt hjelp fra min IT-lærer kjører min bærbare mye bedre og jeg kan ta opp skjermen. Håper dere liker denne videoen. Lik og abonner for flere videoer.",
+			"Ser bra ut for meg"
 		]
 	},
 	"progressPage": {
@@ -143,8 +317,9 @@
 	},
 	"blogPage": {
 		"title": "Blogg",
-		"description": "",
-		"published": "Publisert av"
+		"description": "De siste oppdateringer i kondenserte biter. Hvis du vil se oppdateringer oftere, vurdere å <a href=\"/account/upgrade\" target=\"_blank\">støtte oss</a>.",
+		"published": "Publisert av",
+		"publishedOn": " "
 	},
 	"localizationPage": {
 		"title": "La oss snakke ditt språk",
@@ -168,6 +343,20 @@
 					"caption": "Søk her"
 				}
 			]
+		},
+		"search": {
+			"title": "Fikk en feilkode?",
+			"caption": "Skriv den inn i boksen under for å få informasjon på ditt problem!",
+			"label": "Feilkode",
+			"no_match": "Ingen resultater funnet"
+		},
+		"sidebar": {
+			"getting_started": "Komme i gang",
+			"welcome": "Velkommen",
+			"install_extended": "Installer Pretendo",
+			"install": "Installer",
+			"search": "Søk",
+			"juxt_err": "Feilkoder - Juxt"
 		}
 	},
 	"account": {
@@ -177,15 +366,102 @@
 			"confirmPassword": "Gjenta passord",
 			"register": "Registrering",
 			"email": "E-post",
-			"login": "Logg inn"
+			"login": "Logg inn",
+			"detailsPrompt": "Skriv inn konto informasjonen din under",
+			"username": "Brukernavn",
+			"password": "Passord",
+			"birthdate": "Fødselsdato",
+			"forgotPassword": "Glemte du passordet ditt?",
+			"registerPrompt": "Har ikke en konto?",
+			"loginPrompt": "Har allerede en konto?"
 		},
 		"settings": {
 			"unavailable": "Utilgjengelig",
 			"upgrade": "Oppgrader konto",
 			"settingCards": {
 				"gender": "Kjønn",
-				"beta": "Beta"
+				"beta": "Beta",
+				"userSettings": "Brukerinnstillinger",
+				"profile": "Profil",
+				"nickname": "Kallenavn",
+				"birthDate": "Fødselsdato",
+				"country": "Land/region",
+				"timezone": "Tidssone",
+				"serverEnv": "Servermiljø",
+				"production": "Produksjon",
+				"upgradePrompt": "Beta servere er eksklusivt for beta testere. <br>For å bli en beta tester, oppgrader til en høyere kontonivå.",
+				"hasAccessPrompt": "Din nåværende nivå gir deg tilgang til beta servere. Kult!",
+				"signInSecurity": "Logg inn og sikkerhet",
+				"email": "E-post",
+				"password": "Passord",
+				"passwordResetNotice": "Etter at du har endret passordet, vil du blir logget ut av alle dine enheter.",
+				"signInHistory": "Logg-inn historie",
+				"fullSignInHistory": "Vis hele logg-inn historie",
+				"otherSettings": "Andre innstillinger",
+				"discord": "Discord",
+				"connectedToDiscord": "Koblet til Discord som",
+				"removeDiscord": "Fjern Discord konto",
+				"noDiscordLinked": "Ingen Discord konto tilkoblet.",
+				"linkDiscord": "Koble på Discord konto",
+				"newsletter": "Nyhetsbrev",
+				"newsletterPrompt": "Motta prosjekt oppdatering via e-post (du kan fradra når som helst)",
+				"passwordPrompt": "Skriv inn din PNID passord for å laste ned Cemu-filer",
+				"no_signins_notice": "Logg-inn historie er spores ikke. Sjekk senere!",
+				"no_newsletter_notice": "Nyhetsbrevet er ikke tilgjengelig akkurat nå. Sjekk ut senere",
+				"no_edit_from_dashboard": "Endring av PNID innstillinger fra bruker dashboardet er ikke tilgjenelig akkurat nå. Vennligst oppdater bruker innstillinger fra din påkobla spillkonsoll."
+			},
+			"delete": {
+				"button": "Slett Konto",
+				"modalTitle": "Slett PNID",
+				"modalDescription": "Er du sikker at du vil slette din PNID? Pass over følgende:\n\nAll data fra alle Pretendo Network tjenester (dette inkluderer Forum og Juxtaposition) relatert til din konto vil bli slettet.\nDine Stripe data og abonnement vil bli automatisk slettet.\nDu vil ikke få mulighet til å bruke samme PNID på en ny konto i fremtiden.\nSletting av kontoen løser ikke problemer med utstenginger eller teknisk hjelp. Hvis du har en sak, vennligst bruk Forumet for assistanse.",
+				"modalCaution": "Denne handlingen kan ikke angres.",
+				"modalConfirm": "Ja, slett"
 			}
-		}
+		},
+		"forgotPassword": {
+			"header": "Glemte Passordet",
+			"sub": "Skriv inn din e-post addresse/PNID under",
+			"input": "E-post addresse eller PNID",
+			"submit": "Send inn"
+		},
+		"resetPassword": {
+			"header": "Tilbakestille passordet",
+			"sub": "Skriv inn det nye passordet under",
+			"password": "Passord",
+			"confirmPassword": "Bekreft passord",
+			"submit": "Send inn"
+		},
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Utvikler"
+		],
+		"banned": "Utestengt"
+	},
+	"upgrade": {
+		"title": "Oppgrader",
+		"description": "Ved å nå det månedlige målet vil hjelpe Pretendo Networks utvikling ved å gi økonomisk støtte til vår serverinfrastruktur og tilatte våres hovedutvikleren, Jon, til å fortsette på dette prosjektet som et fulltids job.",
+		"month": "måned",
+		"tierSelectPrompt": "Velg nivå",
+		"unsub": "Slutt abonnementet",
+		"unsubPrompt": "Er du sikker at du vil slutte abonnementet fra <span>tiername</span>? Du vil <span>umiddelbart</span> miste tilgang til dine fordeler som var assosiert med dette nivået.",
+		"unsubConfirm": "Slutt abonnement",
+		"changeTier": "Bytte nivå",
+		"changeTierPrompt": "Er du sikker at du vil slutte abonnementet fra <span class=\"oldtier\">oldtiername</span> og abonnere på <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Bytte nivå",
+		"back": "Tilbake"
+	},
+	"donation": {
+		"progress": "<span>$${totd}</span> av <span>$${goald}</span>/måned, <span>${perc}%</span> av månedsmålet.",
+		"upgradePush": "For å starte et abonnement og få tilgang til kule fordeler, besøk <a href=\"/account/upgrade\">oppgraderingssiden</a>."
+	},
+	"modals": {
+		"cancel": "Avbryt",
+		"confirm": "Bekreft",
+		"close": "Lukk"
+	},
+	"notfound": {
+		"description": "Oops! Vi klarte ikke å finne denne siden."
 	}
 }
