@@ -273,16 +273,16 @@
 		"publishedOn": "op"
 	},
 	"localizationPage": {
-		"title": "Laten we meer talen toevoegen",
-		"description": "Voeg hier een link in voor een openbaar JSON bestand om het op de site te testen",
-		"instructions": "Zie hier instructies voor het vertalen",
+		"title": "Laten we lokaliseren",
+		"description": "Plak een link naar een openbaar toegankelijke JSON-landinstelling om deze op de website te testen",
+		"instructions": "Bekijk lokalisatie-instructies",
 		"fileInput": "Bestand om te testen",
-		"filePlaceholder": "https://een.link.naar/het_bestand.json",
+		"filePlaceholder": "https://a.link.to_file.json",
 		"button": "Test bestand"
 	},
 	"donation": {
 		"progress": "<span>$${totd}</span> van <span>$${goald}</span>/maand, <span>${perc}%</span> van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgradepagina</a>."
+		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
@@ -432,7 +432,7 @@
 		"close": "Sluiten"
 	},
 	"docs": {
-		"missingInLocale": "Deze pagina is niet beschikbaar in je huidige taal. Bekijk de Engelse versie hieronder.",
+		"missingInLocale": "Deze pagina is niet beschikbaar in uw taal. Controleer de Engelse versie hieronder.",
 		"quickLinks": {
 			"header": "Snelkoppelingen",
 			"links": [
