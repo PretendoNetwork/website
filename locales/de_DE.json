@@ -339,7 +339,8 @@
 			"miiName": "Mii Name",
 			"forgotPassword": "Passwort vergessen?",
 			"registerPrompt": "Du hast noch kein Konto?",
-			"loginPrompt": "Du hast schon ein Konto?"
+			"loginPrompt": "Du hast schon ein Konto?",
+			"birthdate": "Geburtsdatum"
 		},
 		"settings": {
 			"settingCards": {
