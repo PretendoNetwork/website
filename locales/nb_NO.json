@@ -12,9 +12,9 @@
 				"credits": "Møt laget",
 				"about": "Om prosjektet",
 				"faq": "O-S-S",
-				"blog": "Våre siste oppdateringer, kondensert",
+				"blog": "Våre siste oppdateringer, sammensatt",
 				"forum": "Chat med andre og få hjelp",
-				"progress": "Sjekk ut prosjekt progressen og målene"
+				"progress": "Se prosjektets framgang og mål"
 			}
 		},
 		"donate": "Doner",
@@ -41,7 +41,7 @@
 	},
 	"progress": {
 		"title": "Framgang",
-		"githubRepo": "Github repositorie"
+		"githubRepo": "GitHub-kodelager"
 	},
 	"faq": {
 		"title": "Ofte stilte spørsmål",
