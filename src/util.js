@@ -191,7 +191,7 @@ async function updateDiscordConnection(discordUser, request, response, fromRetry
 		}, {
 			metadata: Metadata({
 				'X-API-Key': config.grpc.api.api_key,
-				'X-Token': request.headers['access_token']
+				'X-Token': request.cookies.access_token
 			})
 		});
 	} catch {
@@ -210,7 +210,7 @@ async function removeDiscordConnection(request, response, fromRetry = false) {
 		}, {
 			metadata: Metadata({
 				'X-API-Key': config.grpc.api.api_key,
-				'X-Token': request.headers['access_token']
+				'X-Token': request.cookies.access_token
 			})
 		});
 	} catch {
