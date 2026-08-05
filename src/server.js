@@ -127,6 +127,11 @@ app.use((request, response) => {
 	response.render('404');
 });
 
+app.use((error, request, response, _next) => {
+	console.error(error);
+	response.send('<h1>An error occured, try again later</h1>');
+});
+
 logger.info('Setting up handlebars engine');
 app.engine('handlebars', handlebars({
 	helpers: {
