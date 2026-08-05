@@ -60,7 +60,7 @@
 				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt  à être utilisé ?",
+				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt(e)  à être utilisé(e) ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
@@ -300,7 +300,7 @@
 		},
 		"bandwidthRaccoonQuotes": [
 			"Je suis Bandwidth le Raton Laveur, un vrai glouton. Mon péché mignon ? Les câbles des serveurs Pretendo, pardi !... Miam !",
-			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que c'était OK.",
+			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que ça allait.",
 			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
 			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
 			"La Wii U n'était pas si nulle que ça, en vrai, c'est juste que les pubs étaient vraiment désastreuses... Hum, c'est étrange, j'ai l'impression que mon Gamepad n'arrive pas à se connecter à ma Wii.",
@@ -400,7 +400,7 @@
 				"removeDiscord": "Délier le compte Discord",
 				"noDiscordLinked": "Pas de compte Discord associé.",
 				"linkDiscord": "Associer un compte Discord",
-				"newsletter": "Newsletter",
+				"newsletter": "Lettre d'information",
 				"passwordPrompt": "Entrez le mot de passe de votre identifiant Pretendo (PNID) pour télécharger les fichiers Cemu",
 				"no_edit_from_dashboard": "La configuration des paramètres PNID depuis le menu utilisateur est actuellement indisponible. Veuillez procéder aux changements depuis votre console.",
 				"userSettings": "Paramètres du compte",
