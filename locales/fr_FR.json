@@ -45,7 +45,7 @@
 	},
 	"faq": {
 		"title": "Foire Aux Questions",
-		"text": "Voici quelques questions fréquemment posées.",
+		"text": "Voici quelques réponses simples à des questions qui nous sont fréquemment posées.",
 		"QAs": [
 			{
 				"question": "Qu'est-ce que Pretendo ?",
@@ -53,7 +53,7 @@
 			},
 			{
 				"question": "J'ai déjà un identifiant Nintendo Network, puis-je l'utiliser avec Pretendo ?",
-				"answer": "Malheureusement, non. Les identifiants existants ne seront pas conservés, et Nintendo restera le seul détenteur de vos données personnelles. Bien qu'une extraction des informations soit théoriquement possible, cela reviendrait à récupérer des milliers de données sensibles : chose que nous désapprouvons."
+				"answer": "Malheureusement, non. Nintendo est le seul détenteur des données propres à votre identifiant Nintendo Network. Bien qu'il soit théoriquement possible de migrer (transférer) ces données, cela reviendrait à stocker des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
 				"question": "Comment utiliser Pretendo ?",
@@ -64,15 +64,15 @@
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
-				"question": "Quand allez-vous supporter plus de jeux ?",
+				"question": "Quand est-ce que d'autres jeux seront pris en charge ?",
 				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Un émulateur seul est-il suffisant pour utiliser Pretendo ?",
+				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo ?",
 				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
-				"question": "Pretendo fonctionne-t-il sur Cemu ou un autre émulateur ?",
+				"question": "Est-ce que Pretendo fonctionne sur Cemu ou un autre émulateur ?",
 				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
