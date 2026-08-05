@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"faq": "Συχνές Ερωτήσεις",
+		"faq": "Συχνές ερωτήσεις",
 		"accountWidget": {
 			"settings": "Ρυθμίσεις",
 			"logout": "Αποσύνδεση"
@@ -20,7 +20,8 @@
 		"account": "Λογαριασμός",
 		"donate": "Κάνε δωρεά",
 		"credits": "Συντελεστές",
-		"blog": "Blog"
+		"blog": "Blog",
+		"forum": "Φόρουμ"
 	},
 	"hero": {
 		"subtitle": "Servers παιχνιδιών",
