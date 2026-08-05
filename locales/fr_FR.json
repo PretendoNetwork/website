@@ -60,7 +60,7 @@
 				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand de nouvelles fonctionnalités ou services seront prêt(e)s ?",
+				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt  à être utilisé ?",
 				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
@@ -122,7 +122,7 @@
 				"github": "https://github.com/jonbarrow"
 			},
 			{
-				"caption": "Recherche et développement (Miiverse)",
+				"caption": "Recherche et développement de Miiverse",
 				"github": "https://github.com/CaramelKat",
 				"name": "Jemma (CaramelKat)",
 				"picture": "https://github.com/caramelkat.png"
