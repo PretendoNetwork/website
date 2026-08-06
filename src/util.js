@@ -5,12 +5,17 @@ const got = require('got');
 const { marked } = require('marked');
 const { REST: DiscordRest } = require('@discordjs/rest');
 const { Routes: DiscordRoutes } = require('discord-api-types/v10');
+const { createChannel, createClient, Metadata } = require('nice-grpc');
+const { ApiServiceDefinition } = require('@pretendonetwork/grpc/api/v2/api_service');
 const merge = require('lodash.merge');
 const config = require('./config');
 const logger = require('./logger');
 const baseLocale = require(`${__dirname}/../locales/en_US.json`);
 
 const discordRest = new DiscordRest({ version: '10' }).setToken(config.discord.bot_token);
+
+const gRPCApiChannel = createChannel(`${config.grpc.api.host}:${config.grpc.api.port}`);
+const gRPCApiClient = createClient(ApiServiceDefinition, gRPCApiChannel);
 
 function fullUrl(request) {
 	return `${request.protocol}://${request.hostname}${request.originalUrl}`;
@@ -180,38 +185,40 @@ async function getUserAccountData(request, response, fromRetry = false) {
 }
 
 async function updateDiscordConnection(discordUser, request, response, fromRetry = false) {
-	const apiResponse = await apiPostRequest('/v1/connections/add/discord', {
-		Authorization: `${request.cookies.token_type} ${request.cookies.access_token}`
-	}, {
-		data: {
+	try {
+		return await gRPCApiClient.setDiscordConnectionData({
 			id: discordUser.id
+		}, {
+			metadata: Metadata({
+				'X-API-Key': config.grpc.api.api_key,
+				'X-Token': request.cookies.access_token
+			})
+		});
+	} catch {
+		if (fromRetry === true) {
+			throw new Error('Bad');
 		}
-	});
-
-	if (apiResponse.statusCode !== 200 && fromRetry === true) {
-		// TODO: Error message
-		throw new Error('Bad');
-	}
-
-	if (apiResponse.statusCode !== 200) {
 		await refreshLogin(request, response);
-		await updateDiscordConnection(discordUser, request, response, true);
+		return await updateDiscordConnection(discordUser, request, response, true);
 	}
 }
 
 async function removeDiscordConnection(request, response, fromRetry = false) {
-	const apiResponse = await apiDeleteRequest('/v1/connections/remove/discord', {
-		Authorization: `${request.cookies.token_type} ${request.cookies.access_token}`
-	});
-
-	if (apiResponse.statusCode !== 200 && fromRetry === true) {
-		// TODO: Error message
-		throw new Error('Bad');
-	}
-
-	if (apiResponse.statusCode !== 200) {
+	try {
+		return await gRPCApiClient.setDiscordConnectionData({
+			id: ''
+		}, {
+			metadata: Metadata({
+				'X-API-Key': config.grpc.api.api_key,
+				'X-Token': request.cookies.access_token
+			})
+		});
+	} catch {
+		if (fromRetry === true) {
+			throw new Error('Bad');
+		}
 		await refreshLogin(request, response);
-		await removeDiscordConnection(request, response, true);
+		return await removeDiscordConnection(request, response, true);
 	}
 }
 
