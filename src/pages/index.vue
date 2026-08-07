@@ -61,7 +61,7 @@ function titleSuffixHandler(path: string) {
               focusable="false"
             >
               <Icon
-                name="ph:discord-logo-fill"
+                name="fa7-brands:discord"
                 size="32"
               />
             </button>
@@ -77,7 +77,7 @@ function titleSuffixHandler(path: string) {
               focusable="false"
             >
               <Icon
-                name="ph:github-logo-fill"
+                name="fa7-brands:github"
                 size="32"
               />
             </button>
@@ -275,7 +275,7 @@ function titleSuffixHandler(path: string) {
                 aria-label="Open Github"
               >
                 <Icon
-                  name="fa:github"
+                  name="fa7-brands:github"
                   size="24"
                 />
               </a>

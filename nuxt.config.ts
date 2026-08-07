@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+	compatibilityDate: '2026-08-07',
 	srcDir: './src',
 	dir: {
 		public: './src/public',

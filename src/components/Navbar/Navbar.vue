@@ -211,7 +211,7 @@ onMounted(() => {
             aria-label="A link to our Discord server"
           >
             <Icon
-              name="ph:discord-logo-fill"
+              name="fa7-brands:discord"
               size="32"
               mode="svg"
             />
@@ -222,7 +222,7 @@ onMounted(() => {
             aria-label="A link to our Twitter account"
           >
             <Icon
-              name="ph:twitter-logo-fill"
+              name="fa7-brands:twitter"
               size="32"
               mode="svg"
             />
@@ -233,7 +233,7 @@ onMounted(() => {
             aria-label="A link to our GitHub organization"
           >
             <Icon
-              name="ph:github-logo-fill"
+              name="fa7-brands:github"
               size="32"
               mode="svg"
             />
@@ -351,7 +351,7 @@ onMounted(() => {
               aria-label="A link to our Discord server"
             >
               <Icon
-                name="ph:discord-logo-fill"
+                name="fa7-brands:discord"
                 size="32"
                 mode="svg"
               />
@@ -362,7 +362,7 @@ onMounted(() => {
               aria-label="A link to our Twitter account"
             >
               <Icon
-                name="ph:twitter-logo-fill"
+                name="fa7-brands:twitter"
                 size="32"
                 mode="svg"
               />
@@ -373,7 +373,7 @@ onMounted(() => {
               aria-label="A link to our GitHub organization"
             >
               <Icon
-                name="ph:github-logo-fill"
+                name="fa7-brands:github"
                 size="32"
                 mode="svg"
               />
