@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 const { locales, setLocale } = useI18n();
 
+const me = useMeStore();
+const user = computed(() => me.user);
+
 const openDropdown = ref<boolean | string>(false);
-const loggedIn = ref(false);
 function handleDropdownButton(dropdown: boolean | string) {
 	if (!openDropdown.value) {
 		openDropdown.value = dropdown;
@@ -451,7 +453,7 @@ onMounted(() => {
       </div>
 
       <div
-        v-if="loggedIn"
+        v-if="user"
         class="user-widget-wrapper logged-in"
       >
         <div class="user-widget-toggle">
@@ -491,7 +493,7 @@ onMounted(() => {
       </div>
 
       <div
-        v-if="!loggedIn"
+        v-if="!user"
         class="user-widget-wrapper"
       >
         <a

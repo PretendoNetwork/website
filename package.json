@@ -19,9 +19,12 @@
 		"@nuxt/fonts": "^0.14.0",
 		"@nuxt/icon": "^2.4.1",
 		"@nuxtjs/i18n": "^10.6.0",
+		"@pinia/nuxt": "^1.0.1",
+		"@pretendonetwork/grpc": "^2.5.4",
 		"better-sqlite3": "^12.11.1",
 		"eslint": "^9.39.5",
 		"feed": "^6.0.0",
+		"nice-grpc": "^2.1.17",
 		"nuxt": "^4.5.2",
 		"vue": "^3.5.13",
 		"vue-router": "^5.2.0"

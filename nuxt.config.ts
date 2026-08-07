@@ -12,6 +12,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
+		"@pinia/nuxt",
 		'@nuxt/eslint',
 		'@nuxt/fonts',
 		'@nuxt/icon',
@@ -26,9 +27,17 @@ export default defineNuxtConfig({
 	},
 
 	runtimeConfig: {
+		nitro: {
+			envPrefix: "PN_WEBSITE_",
+		},
+		grpcHost: '',
+		grpcApiKey: '',
+
 		public: {
 			apiBase: 'https://api.pretendo.cc',
-			hCaptchaSitekey: ''
+			hCaptchaSitekey: '',
+			homepageUrl: "#",
+			cookieSecure: false,
 		}
 	},
 
@@ -40,6 +49,13 @@ export default defineNuxtConfig({
 			styles: ['normal', 'italic']
 		}
 	},
+
+	components: [
+		{
+			path: "~/components",
+			pathPrefix: false,
+		},
+	],
 
 	content: {
 		build: {

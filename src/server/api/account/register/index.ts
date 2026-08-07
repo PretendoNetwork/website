@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 	try {
 		const apiResponse = await $fetch<RegisterCCResponse>(`/v1/register`, {
 			method: 'POST',
-			baseURL: useRuntimeConfig(event).apiBase,
+			baseURL: useRuntimeConfig(event).public.apiBase,
 			body: body
 		});
 

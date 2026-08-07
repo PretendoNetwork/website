@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 	try {
 		const apiResponse = await $fetch<LoginCCResponse>(`/v1/login`, {
 			method: 'POST',
-			baseURL: useRuntimeConfig(event).apiBase,
+			baseURL: useRuntimeConfig(event).public.apiBase,
 			body: { ...body, grant_type: 'password' }
 		});
 
