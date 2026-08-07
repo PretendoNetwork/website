@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { FetchError } from 'ofetch';
-import type { ApiAuthLogin, ApiAuthLoginRequest } from '~/server/api/auth/login.post';
 
 const route = useRoute();
 const redirect = computed(() => route.query.redirect);
@@ -11,12 +10,12 @@ const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
 	try {
-		await $fetch<ApiAuthLogin>('/api/auth/login', {
+		const res = await $fetch('/api/auth/login', {
 			method: 'POST',
 			body: {
 				username: loginForm.username,
 				password: loginForm.password,
-			} satisfies ApiAuthLoginRequest
+			}
 		});
 
 		if (typeof redirect.value === 'string') {

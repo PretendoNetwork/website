@@ -3,7 +3,7 @@ import { createChannel, createClient, Channel, type Client, Metadata } from "nic
 
 let grpc: { channel: Channel, client: Client<APIDefinition> } | null = null;
 
-function getGrpcClient(event: H3Event): Client<APIDefinition> {
+function getGrpcClient(event: typeof H3Event): Client<APIDefinition> {
 	if (!grpc) {
 		const config = useRuntimeConfig();
 		if (!config.grpcHost || !config.grpcApiKey) {

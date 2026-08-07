@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
 	const feed = new Feed({
 		title: 'Pretendo Network Blog',
 		description: 'The latest updates in condensed chunks',
-		updated: new Date(posts[0].date),
+		updated: posts[0] ? new Date(posts[0].date) : undefined,
 		id: 'http://pretendo.network/',
 		link: 'https://pretendo.network/blog/',
 		image: 'https://pretendo.network/assets/images/opengraph/opengraph-image.png',

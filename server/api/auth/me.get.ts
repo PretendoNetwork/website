@@ -1,6 +1,3 @@
-import { enforceLoggedIn } from '~/server/utils/enforceAuth';
-import { useGrpc } from '~/server/utils/useGrpc';
-
 export interface GetApiAuthMe {
 	pid: number;
 	username: string;
