@@ -6,7 +6,7 @@ This repository contains the source code for [our website](https://pretendo.netw
 
 Prerequisites:
 - Clone the repository
-- Have NodeJS 20 or higher installed
+- Have NodeJS 24 or higher installed
 
 Run the following in your terminal:
 ```bash

@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
-	compatibilityDate: '2024-11-01',
-	devtools: { enabled: true },
 	srcDir: './src',
+	dir: {
+		public: './src/public',
+	},
 
 	nitro: {
 		prerender: {
@@ -24,9 +25,8 @@ export default defineNuxtConfig({
 	},
 
 	runtimeConfig: {
-		apiBase: 'https://api.pretendo.cc',
-
 		public: {
+			apiBase: 'https://api.pretendo.cc',
 			hCaptchaSitekey: ''
 		}
 	},
