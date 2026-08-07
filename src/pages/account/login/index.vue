@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FetchError } from 'ofetch';
+import type { ApiAuthLogin, ApiAuthLoginRequest } from '~/server/api/auth/login.post';
 
 const route = useRoute();
 const redirect = computed(() => route.query.redirect);
@@ -10,9 +11,12 @@ const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
 	try {
-		await $fetch('/api/account/login', {
+		await $fetch<ApiAuthLogin>('/api/auth/login', {
 			method: 'POST',
-			body: loginForm
+			body: {
+				username: loginForm.username,
+				password: loginForm.password,
+			} satisfies ApiAuthLoginRequest
 		});
 
 		if (typeof redirect.value === 'string') {
@@ -24,7 +28,7 @@ async function loginSubmission() {
 		if (error instanceof FetchError) {
 			errorMessage.value = error.statusText;
 		} else {
-			errorMessage.value = `Error during registration: ${error}`; // TODO: localize
+			errorMessage.value = `Error during login: ${error}`; // TODO: localize
 		}
 
 		setTimeout(() => { // TODO: replace this toast
