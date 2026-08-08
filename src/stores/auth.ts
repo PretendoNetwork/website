@@ -1,4 +1,4 @@
-import type { CookieOptions } from "#app";
+import type { CookieOptions } from '#app';
 
 type AuthState = {
 	accessToken: string;
@@ -17,28 +17,28 @@ type AuthState = {
 // because other services use them (and overwrite them)
 // These are not used by the website codebase for security purposes.
 
-const oldCookieTokenType = "Bearer"
-const cookieExpirySec = 7 * 24 * 60 * 60 // 7 days
+const oldCookieTokenType = 'Bearer';
+const cookieExpirySec = 7 * 24 * 60 * 60; // 7 days
 const oldCookieOptions = {
 	domain: '.pretendo.network',
 	secure: false,
 	httpOnly: false,
 	maxAge: cookieExpirySec,
 	refresh: true,
-	readonly: false,
-} satisfies CookieOptions<string> & { readonly: false }
+	readonly: false
+} satisfies CookieOptions<string> & { readonly: false };
 
 // Not actually a store, but may as well be
 export function useAuthStore() {
-	const authState = useCookie<AuthState | null>("pretendo::auth", {
-		sameSite: "strict",
+	const authState = useCookie<AuthState | null>('pretendo::auth', {
+		sameSite: 'strict',
 		secure: useRuntimeConfig().public.cookieSecure,
 		refresh: true,
-		default: () => null,
+		default: () => null
 	});
-	const accessTokenCookie = useCookie<string | null>("access_token", oldCookieOptions);
-	const refreshTokenCookie = useCookie<string | null>("refresh_token", oldCookieOptions);
-	const tokenTypeCookie = useCookie<string | null>("token_type", oldCookieOptions);
+	const accessTokenCookie = useCookie<string | null>('access_token', oldCookieOptions);
+	const refreshTokenCookie = useCookie<string | null>('refresh_token', oldCookieOptions);
+	const tokenTypeCookie = useCookie<string | null>('token_type', oldCookieOptions);
 
 	function getToken() {
 		return authState.value?.accessToken ?? null;
@@ -53,12 +53,11 @@ export function useAuthStore() {
 
 	function set(val: AuthState | null) {
 		if (val) {
-			authState.value = val
+			authState.value = val;
 			accessTokenCookie.value = val.accessToken;
 			refreshTokenCookie.value = val.refreshToken;
 			tokenTypeCookie.value = oldCookieTokenType;
-		}
-		else {
+		} else {
 			authState.value = null;
 			accessTokenCookie.value = null;
 			refreshTokenCookie.value = null;
@@ -69,6 +68,6 @@ export function useAuthStore() {
 	return {
 		getToken,
 		refresh,
-		set,
+		set
 	};
 }

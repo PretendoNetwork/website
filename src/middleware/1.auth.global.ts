@@ -1,4 +1,4 @@
-import type { GetApiAuthMe } from "~/server/api/auth/me.get";
+import type { GetApiAuthMe } from "#shared/api-types"
 
 export default defineNuxtRouteMiddleware(async () => {
 	const meStore = useMeStore();
@@ -20,6 +20,7 @@ export default defineNuxtRouteMiddleware(async () => {
 		meStore.setMe({
 			pid: res.pid,
 			username: res.username,
+			mii: res.mii,
 		});
 	} catch {
 		meStore.setMe(null);

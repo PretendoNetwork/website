@@ -1,31 +1,48 @@
-import { APIDefinition } from "@pretendonetwork/grpc/api/api_service";
-import { createChannel, createClient, Channel, type Client, Metadata } from "nice-grpc";
+import { createChannel, createClient, Metadata } from 'nice-grpc';
+import { APIDefinition } from '@pretendonetwork/grpc/api/api_service';
+import { AccountServiceDefinition } from '@pretendonetwork/grpc/account/v2/account_service';
+import type { Channel, Client, CompatServiceDefinition } from 'nice-grpc';
 
-let grpc: { channel: Channel, client: Client<APIDefinition> } | null = null;
+let grpc: { channel: Channel } | null = null;
 
-function getGrpcClient(event: typeof H3Event): Client<APIDefinition> {
+function getGrpcClient<T extends CompatServiceDefinition>(event: H3Event, def: T, token?: string): Client<T> {
+	const config = useRuntimeConfig(event);
+
 	if (!grpc) {
-		const config = useRuntimeConfig();
-		if (!config.grpcHost || !config.grpcApiKey) {
-			throw new Error("GRPC not configured");
+		if (!config.grpcHost) {
+			throw new Error('GRPC not configured');
 		}
 
-		const channel = createChannel(config.grpcHost);
-		const metadata = new Metadata();
-		metadata.append("X-API-Key", config.grpcApiKey);
 		grpc = {
-			channel,
-			client: createClient(APIDefinition, channel, {
-				"*": {
-					metadata
-				}
-			})
-		}
+			channel: createChannel(config.grpcHost)
+		};
 	}
 
-	return grpc.client;
+	const metadata = new Metadata();
+	if (config.grpcApiKey) {
+		metadata.append('X-API-Key', config.grpcApiKey);
+	}
+	if (token) {
+		metadata.append('X-Token', token);
+	}
+
+	const client = createClient(def, grpc.channel, {
+		'*': {
+			metadata
+		}
+	});
+
+	return client;
 }
 
-export function useGrpc(event: H3Event) {
-	return getGrpcClient(event);
+export function useApiGrpc(event: H3Event): Client<APIDefinition> {
+	return getGrpcClient(event, APIDefinition);
+}
+
+export function useAccountGrpc(event: H3Event): Client<AccountServiceDefinition> {
+	return getGrpcClient(event, AccountServiceDefinition);
+}
+
+export function useApiGrpcWithToken(event: H3Event, token: string): Client<APIDefinition> {
+	return getGrpcClient(event, APIDefinition, token);
 }

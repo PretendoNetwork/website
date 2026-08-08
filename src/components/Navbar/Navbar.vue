@@ -458,23 +458,23 @@ onMounted(() => {
       >
         <div class="user-widget-toggle">
           <img
-            src="url"
-            alt="name"
+            :src="user.mii?.imageUrl ?? '#'"
+						:alt="user.mii?.name ?? ''"
           >
         </div>
         <div class="user-widget">
           <div class="user-avatar">
             <img
-              src=""
-              alt="miiname"
+            	:src="user.mii?.imageUrl ?? '#'"
+              :alt="user.mii?.name ?? ''"
             >
           </div>
           <div class="user-info">
-            <div class="mii-name">
-              miiname
+            <div v-if="user.mii" class="mii-name">
+              {{ user.mii.name }}
             </div>
             <div class="pnid">
-              pnid
+              {{ user.username }}
             </div>
           </div>
           <div class="buttons">

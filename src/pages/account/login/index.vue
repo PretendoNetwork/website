@@ -2,6 +2,7 @@
 import { FetchError } from 'ofetch';
 
 const route = useRoute();
+const auth = useAuthStore();
 const redirect = computed(() => route.query.redirect);
 const registerURI = computed(() => `/account/register${redirect.value ? `?redirect=${redirect.value}` : ''}`);
 
@@ -14,8 +15,12 @@ async function loginSubmission() {
 			method: 'POST',
 			body: {
 				username: loginForm.username,
-				password: loginForm.password,
+				password: loginForm.password
 			}
+		});
+		auth.set({
+			accessToken: res.accessToken,
+			refreshToken: res.refreshToken
 		});
 
 		if (typeof redirect.value === 'string') {

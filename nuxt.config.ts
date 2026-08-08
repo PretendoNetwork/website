@@ -2,7 +2,7 @@ export default defineNuxtConfig({
 	compatibilityDate: '2026-08-07',
 	srcDir: './src',
 	dir: {
-		public: './src/public',
+		public: './src/public'
 	},
 
 	nitro: {
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 	},
 
 	modules: [
-		"@pinia/nuxt",
+		'@pinia/nuxt',
 		'@nuxt/eslint',
 		'@nuxt/fonts',
 		'@nuxt/icon',
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
 	runtimeConfig: {
 		nitro: {
-			envPrefix: "PN_WEBSITE_",
+			envPrefix: 'PN_WEBSITE_'
 		},
 		grpcHost: '',
 		grpcApiKey: '',
@@ -36,8 +36,7 @@ export default defineNuxtConfig({
 		public: {
 			apiBase: 'https://api.pretendo.cc',
 			hCaptchaSitekey: '',
-			homepageUrl: "#",
-			cookieSecure: false,
+			cookieSecure: false
 		}
 	},
 
@@ -52,9 +51,9 @@ export default defineNuxtConfig({
 
 	components: [
 		{
-			path: "~/components",
-			pathPrefix: false,
-		},
+			path: '~/components',
+			pathPrefix: false
+		}
 	],
 
 	content: {
