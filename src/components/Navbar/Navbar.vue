@@ -164,6 +164,19 @@ onMounted(() => {
                 <p class="caption">{{ $t("nav.dropdown.captions.blog") }}</p>
               </div>
             </a>
+            <a href="https://forum.pretendo.network">
+              <div class="icon">
+                <Icon
+                  name="ph:newspaper-fill"
+                  size="32"
+                  mode="svg"
+                />
+              </div>
+              <div>
+                <p class="title">{{ $t("nav.forum") }}</p>
+                <p class="caption">{{ $t("nav.dropdown.captions.forum") }}</p>
+              </div>
+            </a>
             <a href="/progress">
               <div class="icon">
                 <Icon
