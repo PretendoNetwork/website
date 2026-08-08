@@ -30,6 +30,9 @@ export default defineNuxtConfig({
 		nitro: {
 			envPrefix: 'PN_WEBSITE_'
 		},
+
+		githubApiToken: '',
+		stripeSecretKey: '',
 		grpcHost: '',
 		grpcApiKey: '',
 
