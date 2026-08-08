@@ -26,7 +26,8 @@ async function getStripeDonationData(stripe: Stripe): Promise<StripeDonationResp
 
 
 		for (const subscription of activeSubscriptions) {
-			const plan = (subscription as Stripe.Subscription & { plan?: Stripe.Plan }).plan;
+			const plan = subscription.items.data[0]?.plan;
+			if (!plan) continue;
 			donationData.donatorCount += 1;
 			donationData.totalDonationsCents += plan?.amount ?? 0;
 			lastId = subscription.id;

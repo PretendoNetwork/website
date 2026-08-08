@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 /* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { te, t, tm } = useI18n();
+const progress = await useFetch('/api/progress');
 
 const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length - 1;
 const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;
@@ -137,9 +138,12 @@ function titleSuffixHandler(path: string) {
       </div>
       <div class="right sect">
         <h2 class="title">
-          <a href="/progress">{{ $t("progress.title") }}</a>
+          <a href="/progress">{{ $t("progress.title") }} ({{ progress.data.value?.completion ?? 0 }}%)</a>
         </h2>
-        <!--{{> progress-list data=featuredFeatureList purple=true") }}-->
+				<div v-for="project of progress.data.value?.items ?? []" :key="project.title">
+					<p>{{ project.title }} [{{ project.completion }}%]</p>
+				</div>
+				<p v-if="(progress.data.value?.items ?? []).length === 0">No projects</p>
       </div>
     </section>
 
