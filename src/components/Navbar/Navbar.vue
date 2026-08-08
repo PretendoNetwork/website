@@ -4,6 +4,7 @@ const { locales, setLocale } = useI18n();
 const me = useMeStore();
 const user = computed(() => me.user);
 
+const widgetOpen = ref(false);
 const openDropdown = ref<boolean | string>(false);
 function handleDropdownButton(dropdown: boolean | string) {
 	if (!openDropdown.value) {
@@ -221,7 +222,7 @@ onMounted(() => {
 
         <div class="bottom">
           <a
-            href="https://invite.gg/pretendo"
+            href="https://discord.gg/pretendo"
             target="_blank"
             aria-label="A link to our Discord server"
           >
@@ -282,7 +283,7 @@ onMounted(() => {
         href="https://forum.pretendo.network"
         class="hide-on-mobile"
       >
-        <button>Forum</button> <!-- TODO - Translate this -->
+        <button>{{ $t("nav.forum") }}</button>
       </a>
       <a
         href="/account/upgrade"
@@ -469,13 +470,15 @@ onMounted(() => {
         v-if="user"
         class="user-widget-wrapper logged-in"
       >
-        <div class="user-widget-toggle">
+        <div class="user-widget-toggle" @click="widgetOpen = true">
           <img
             :src="user.mii?.imageUrl ?? '#'"
 						:alt="user.mii?.name ?? ''"
           >
         </div>
-        <div class="user-widget">
+        <div class="user-widget" :class="{
+					'active': widgetOpen
+				}">
           <div class="user-avatar">
             <img
             	:src="user.mii?.imageUrl ?? '#'"
