@@ -26,6 +26,7 @@
 		"discord-api-types": "^0.38.53",
 		"eslint": "^9.39.5",
 		"feed": "^6.0.0",
+		"hcaptcha": "^0.2.0",
 		"mongodb": "^7.5.0",
 		"nice-grpc": "^2.1.17",
 		"nodemailer": "^9.0.5",

@@ -64,6 +64,15 @@ export const LoginSchema = z.object({
 });
 export type ApiAuthLoginRequest = z.infer<typeof LoginSchema>;
 
+export const RegisterSchema = z.object({
+	email: z.email(),
+	username: z.string(),
+	miiName: z.string(),
+	password: z.string(),
+	captchaResponse: z.string().optional()
+});
+export type ApiAuthRegisterRequest = z.infer<typeof RegisterSchema>;
+
 export const AccountUpdateSchema = z.object({
 	mii: z.object({
 		name: z.string(),
@@ -83,6 +92,7 @@ export type ApiAuthResetPasswordRequest = z.infer<typeof ResetPasswordSchema>;
 
 export const ForgotPasswordSchema = z.object({
 	emailOrPassword: z.string(),
+	captchaResponse: z.string().optional()
 });
 export type ApiAuthForgotPasswordRequest = z.infer<typeof ForgotPasswordSchema>;
 

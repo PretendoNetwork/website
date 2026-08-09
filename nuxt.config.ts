@@ -34,6 +34,8 @@ export default defineNuxtConfig({
 		githubApiToken: '',
 		stripeSecretKey: '',
 		stripeNotificationEmail: '',
+		hcaptchaSiteKey: '',
+		hcaptchaSecretKey: '',
 		grpcHost: '',
 		grpcApiKey: '',
 		mongoConnectionString: '',

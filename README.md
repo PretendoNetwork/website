@@ -21,16 +21,24 @@ If you'd like to help localize Pretendo Network, you can contribute to the trans
 # Website refactor
 
 The website is currently in a refactor, here is what is still left on the frontend:
-- [ ] Term pages (nuxt content)
-- [ ] Docs (nuxt content)
 - [ ] Styling for progress page
 - [ ] Styling for progress on main page
-- [ ] Donation tier page
-- [ ] Mii editor
-- [ ] Account page
+- [ ] Account: Mii editor
+- [ ] Account: View account
+- [ ] Account: Delete account
+- [ ] Account: Link discord account
+- [ ] Account: Edit server environment
+- [ ] Donations: stripe checkout frontend
+- [ ] Auth: Login
+- [ ] Auth: Logout
+- [ ] Auth: Register
+- [ ] Auth: Forgot password flow
+- [ ] Content: Term pages
+- [ ] Content: Documentation pages
+- [x] Content: Blog
 
 And the tasks left on the backend:
-- [ ] Registration (with captchas)
+- [x] Registration (with captchas)
 - [x] Logout
 - [x] Login
 - [x] Password forgot flow
@@ -41,6 +49,8 @@ And the tasks left on the backend:
 - [x] Account editing (mii saving, server environment changes)
 - [x] Delete account
 - [x] Discourse SSO
+- [x] HCaptcha support
+- [x] RSS feed
 
 Miscellanous tasks:
 - [ ] Merge upstream changes into refactor branch
