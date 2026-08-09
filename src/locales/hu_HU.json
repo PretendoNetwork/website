@@ -16,11 +16,13 @@
 				"faq": "Gyakran ismételt kérdések",
 				"blog": "A legutolsó frissítéseink, tömören",
 				"progress": "Ellenőrizd a projekt előrehaladást és célokat",
-				"credits": "Találkozz a team-mel"
+				"credits": "Találkozz a team-mel",
+				"forum": "Csevegj másokkal és szerezz segítséget"
 			}
 		},
 		"about": "Névjegy",
-		"faq": "GYIK"
+		"faq": "GYIK",
+		"forum": "Fórum"
 	},
 	"hero": {
 		"subtitle": "Játék szerverek",
@@ -66,24 +68,28 @@
 				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Megakarjuk adni a legjobb élményt mielőtt egy új játékra megyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
-				"question": "Működik a Pretendo Cemu-n vagy emulátorokon?",
-				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért hogyan kezdj bele a Cemu-val, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy forkja is lehet hogy támogat minket, de nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk még. A Citra teljes verziója nem támogatja a Pretendo-t."
+				"question": "Ha van egy emulátorom, az elég a Pretendo használatához?",
+				"answer": "Nem. A könnyebb moderáció és biztonság érdekében, az emulátor használatához szükséged lesz egy valódi konzolra is. Ez lehetővé tesz egy biztosabb rendszert és a szabályok hatékonyabb betartattatását, egy élvezetesebb és megbízhatóbb élmény érdekében."
+			},
+			{
+				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért, hogy hogyan kezdj bele a Cemu-val való online játékba, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy annak forkjai lehet támogatnak minket, de egyenlőre nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk hozzájuk. A Citra legújabb verziója nem támogatja a Pretendo-t.",
+				"question": "Működik a Pretendo a Cemu emulátoron/más emulátorokon?"
 			},
 			{
 				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
 				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
 			},
 			{
-				"answer": "A legjobb élményért a konzolokon, kell hackelned kell a konzolt - pontosan Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
-				"question": "Szükségem van hack-re a csatlakozáshoz?"
+				"answer": "A legjobb élményért a konzolokon, hackelned kell a konzolod - pontosabban Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás, de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
+				"question": "Szükségem van hackelésre a csatlakozáshoz?"
 			},
 			{
-				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat.",
-				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?"
+				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?",
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat."
 			},
 			{
-				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?",
-				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása."
+				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása.",
+				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?"
 			}
 		]
 	},
@@ -134,10 +140,10 @@
 				"picture": "https://github.com/supermariodabom.png"
 			},
 			{
-				"picture": "https://github.com/gitlimes.png",
-				"name": "Pinklimes",
+				"picture": "https://github.com/limesdotpink.png",
+				"name": "limes.pink",
 				"caption": "Web fejlesztő",
-				"github": "https://github.com/gitlimes"
+				"github": "https://github.com/limesdotpink"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -192,7 +198,7 @@
 			"A Wii U tulajdonképpen egy alulértékelt rendszer: a reklámok nagyon rosszak voltak, de a konzol nem. Hú, várj egy percet, nem tudom miért nem csatlakozik a Gamepad-om a Wii-omhoz.",
 			"Super Mario World 2 - Yoshi's Island's főcím zenéje abszolút bop, és semmiképpen sem fogsz meggyőzni az ellenkezőjéről.",
 			"A kedvenc Nintendo Switch kiadásaim: a Nintendo Switch Online + Expansion Pack, a Nintendo Switch Online + Rumble Pak, a Nintendo Switch Online + Offline Play Pack, a Nintendo Switch Online + Yet Another Port Pack és a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Nagyon szeretted a Nintendo Wii U Virtual Console-t szóval visszahozzuk\" Pack. Tényleg elmondhatod, hogy a Nintendo figyel rád.",
-			"Az \"Ismered Ash-t, áldd meg a szívét, egész nap UwUzik.\" a déli kedves módja annak, hogy \"Ash uwuzik minden alkalommal, és ez nagyon furcsa és hülye, és azt kívánom, bárcsak ne”",
+			"Az \"Ismered Kip-t, áldd meg a szívét, egész nap UwUzik.\" a déli kedves módja annak, hogy \"Kip uwuzik minden alkalommal, és ez nagyon furcsa és hülye, és azt kívánom, bárcsak ne”",
 			"Első videóm a csatornámon!! Már régóta szertem volna videókat készíteni, de a laptopom elég rosszul ment, és nem tudtam egyszerre futtatni a fraps-t, a skype-ot és a minecraftot. de most vége! informatika tanárom segítségével a laptopom sokkal jobban működik, és már tudok rögzíteni! remélem tetszeni fog és ha igen nyomj egy like-ot és iratkozz fel!!!",
 			"Jónak tűnik nekem"
 		],
@@ -251,7 +257,7 @@
 				"timezone": "Időzóna",
 				"serverEnv": "Szerver környezet",
 				"production": "Éles",
-				"hasAccessPrompt": "A jelenlegi csomag hozzáférést at a béta szerverekhez. Király!",
+				"hasAccessPrompt": "A jelenlegi csomag hozzáférést ad a béta szerverekhez. Király!",
 				"signInSecurity": "Bejelentkezés és biztonság",
 				"email": "Email",
 				"password": "Jelszó",
@@ -267,7 +273,14 @@
 				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
 			},
 			"upgrade": "Fiók bővítése",
-			"unavailable": "Nem elérhető"
+			"unavailable": "Nem elérhető",
+			"delete": {
+				"button": "Fiók törlése",
+				"modalTitle": "PNID törlése",
+				"modalCaution": "Ez nem visszafordítható.",
+				"modalConfirm": "Igen, töröld",
+				"modalDescription": "Biztosan törölni szeretnéd a PNID-ed? Gondold át a következőket a törlés előtt:\n\nAz adataid minden Pretendo Network szolgáltatásban (beleértve a Fórumot és a Juxtaposition-t) eltávolításra kerültnek.\nA Stripe adatod és előfizetésed is törlésre kerül.\nNem tudod használni ugyanezt a PNID-t egy új fiók számára a jövőben.\nA fiók törlése nem oldja meg a bannolást vagy a technikai problémákat. Ha problémád van, használd a Fórum-ot segítségért."
+			}
 		},
 		"accountLevel": [
 			"Normál",
@@ -286,7 +299,7 @@
 	},
 	"upgrade": {
 		"title": "Bővítés",
-		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? El fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
+		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? <span>Azonnal</span> el fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
 		"changeTier": "Csomag módosítása",
 		"description": "Ha havi cél elérése a Pretendo-t teljes munkaidős munkává teszi, ez jobb minőségű frissítéseket és nagyobb fejlesztési sebességet biztosít.",
 		"month": "hónap",

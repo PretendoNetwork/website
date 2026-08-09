@@ -95,7 +95,7 @@ function bandwidthClickHandler() {
         >jipfr</a> & <a
           href="https://limes.pink/"
           target="_blank"
-        >pinklimes</a>
+        >limes.pink</a>
       </p>
     </div>
     <div>

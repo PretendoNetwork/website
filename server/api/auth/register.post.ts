@@ -5,13 +5,15 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 	const grpc = useApiGrpc(event);
 
 	try {
+		// TODO Add ip
+		// TODO Add birthday
 		const res = await grpc.register({
 			email: body.email,
 			miiName: body.miiName,
 			captchaResponse: body.captchaResponse,
 			username: body.username,
 			password: body.password,
-			passwordConfirm: body.password
+			passwordConfirm: body.password,
 		});
 
 		return {

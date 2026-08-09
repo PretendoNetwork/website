@@ -6,6 +6,7 @@
 		"credits": "Credits",
 		"progress": "Progress",
 		"blog": "Blog",
+		"forum": "Forum",
 		"account": "Account",
 		"donate": "Donate",
 		"accountWidget": {
@@ -18,6 +19,7 @@
 				"about": "About the project",
 				"faq": "Frequently asked questions",
 				"blog": "Our latest updates, condensed",
+				"forum": "Chat with others and get support",
 				"progress": "Check the project progress and goals"
 			}
 		}
@@ -138,10 +140,10 @@
 				"github": "https://github.com/SuperMarioDaBom"
 			},
 			{
-				"name": "pinklimes",
+				"name": "limes.pink",
 				"caption": "Web development",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
 			},
 			{
 				"name": "Shutterbug2000",
@@ -304,7 +306,7 @@
 			"The Wii U is actually an underrated system: the commercials were like really bad, but the console is great. Huh, wait a second, I'm not sure why but my Gamepad isn't connecting to my Wii.",
 			"Super Mario World 2 - Yoshi's Island's main theme is an absolute bop and there's no way you're gonna convince me otherwise.",
 			"My favorite Nintendo Switch releases have been Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back\" Pack. You can really tell Nintendo cares.",
-			"Like \"You know Ash, bless her heart, she UwU’s all day\" is the southern nice way of saying \"Ash uwus all the time and it’s really weird and stupid and I wish they didn't\"",
+			"Like \"You know Kip, bless her heart, she UwUs all day\" is the southern nice way of saying \"Kip UwUs all the time and it’s really weird and stupid and I wish they didn't\"",
 			"My first video on my channel!! iv been wanting to make videos for a long time now but my laptop ran pretty bad and i couldn't run fraps, skype and minecraft all at once. but now thats over! with some help from my IT teacher my laptop runs alot better and i can record now! i hope y'all enjoy and if you do please like and subscribe!!!",
 			"Looks Good To Me"
 		]
@@ -330,6 +332,7 @@
 			"confirmPassword": "Confirm password",
 			"email": "Email",
 			"miiName": "Mii name",
+			"birthdate": "Birthdate",
 			"forgotPassword": "Forgot your password?",
 			"registerPrompt": "Don't have an account?",
 			"loginPrompt": "Already have an account?"
@@ -381,6 +384,13 @@
 				"no_signins_notice": "Sign in history not currently tracked. Check back again later!",
 				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
 				"no_edit_from_dashboard": "Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console"
+			},
+			"delete": {
+				"button": "Delete Account",
+				"modalTitle": "Delete PNID",
+				"modalDescription": "Are you sure you want to delete your PNID? Please consider the following before deletion:\n\nYour account data across all Pretendo Network services (this includes Forum and Juxtaposition) will be erased.\nYour Stripe data and subscription will be automatically deleted.\nYou will not be able to use the same PNID on a new account in the future.\nDeleting an account does not solve issues with bans or technical support. If you have an issue please use the Forum for assistance.",
+				"modalCaution": "This action cannot be undone.",
+				"modalConfirm": "Yes, delete"
 			}
 		},
 		"accountLevel": [
@@ -393,7 +403,7 @@
 	},
 	"upgrade": {
 		"title": "Upgrade",
-		"description": "Reaching the monthly goal will make Pretendo a full time job, providing better quality updates at a faster rate.",
+		"description": "Reaching the monthly goal will help Pretendo Network's development by both funding our server infrastructure and allowing our lead developer, Jon, to work on the project as a full-time job.",
 		"month": "month",
 		"tierSelectPrompt": "Select a tier",
 		"unsub": "Unsubscribe",

@@ -1,7 +1,7 @@
 ---
 title: "Test"
 author: "limes.pink"
-author_image: "https://github.com/gitlimes.png"
+author_image: "https://github.com/limes.pink.png"
 date: "January 20, 2038"
 caption: "A post to test the styling of the various elements we might use"
 cover_image: "https://media.discordapp.net/attachments/413884110667251722/886474243662037062/image1.jpg"
@@ -35,23 +35,23 @@ _italic_
 
 ---
 
-| Element      | Description                                                                                                                                                        |
-| :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| table        | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
-| tuble        | The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way.                                               |
-| table        | A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.                   |
+| Element | Description                                                                                                                                                        |
+| :------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| table   | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
+| tuble   | The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way.                                               |
+| table   | A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.                   |
 
-| Element      | Description                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| table        | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
-| tuble        | The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way.                                               |
-| table        | A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.                   |
+| Element | Description                                                                                                                                                        |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| table   | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
+| tuble   | The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way.                                               |
+| table   | A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.                   |
 
-| Element      | Description                                                                                                                                                        |
-| -----------: | -----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| table        | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
-| tuble        | The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way.                                               |
-| table        | A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.                   |
+| Element |                                                                                                                                                        Description |
+| ------: | -----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|   table | The table HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. |
+|   tuble |                                               The tuble HTML element represents tubular data — that is, information presented in a totally gnarly and radical way. |
+|   table |                   A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things. |
 
 Yee haw 🤠
 

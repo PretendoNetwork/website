@@ -34,7 +34,7 @@
 		"title": "Sobre nosaltres",
 		"paragraphs": [
 			"Pretendo és un projecte de codi obert que pretén recrear la Nintendo Network per a 3DS i Wii U mitjançant enginyeria inversa.",
-			"Com que els nostres serveis són gratuïts i de codi obert, poden existir fins i tot després del tancament inevitable de la Nintendo Network."
+			"Com que els nostres serveis són gratuïts i de codi obert, existiran per molt de temps."
 		]
 	},
 	"progress": {
@@ -54,8 +54,8 @@
 				"answer": "Malauradament, no. Els NNID existents no funcionaran a Pretendo, ja que només Nintendo té les dades dels usuaris; tot i que una migració de NNID a PNID és teòricament possible, seria arriscat i requeriria dades d'usuari sensibles que no volem tenir."
 			},
 			{
-				"question": "Com faig servir el Pretendo?",
-				"answer": "Pretendo no es troba actualment en un estat llest per a l'ús públic. Tanmateix, un cop ho sigui, podràs utilitzar-lo simplement executant el nostre patcher homebrew a la teva consola."
+				"question": "Com faig servir Pretendo?",
+				"answer": "Per començar amb Pretendo Network a 3DS, Wii U o emuladors, si us plau referiu-vos a les nostres <a href='/docs/install'>instruccions d’inici</a>!"
 			},
 			{
 				"question": "Sabeu quan estarà llesta una funció o un servei?",
@@ -63,19 +63,31 @@
 			},
 			{
 				"question": "Funciona el Pretendo al Cemu o als emuladors?",
-				"answer": "Pretendo suporta qualsevol client que pugui interactuar amb Nintendo Network. Actualment, l'únic emulador amb aquesta funció és Cemu. Cemu 2.0 suporta oficialment Pretendo sota la teva configuració del compte de Nintendo Network. Per a més informació sobre com iniciar-se amb Cemu, mira't <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra no suporta el joc en línia de veritat i, per tant, no funciona amb Pretendo i no mostra cap signe de que realment funcioni, el joc en línia. Mikage, un emulador de 3DS per a mòbils podria rebre suport en el futur, tot i que és lluny de ser cert.\n\nPretendo està dissenyat en principi per al hardware original de Wii U i 3DS; ara mateix l'únic emulador d'aquestes consoles compatible amb la Nintendo Network és el Cemu. Cemu no és compatible oficialment amb servidors personalitzats, però encara hauria de ser possible fer servir el Pretendo al Cemu.<br>Pretendo actualment no és compatible amb el Cemu."
+				"answer": "Treballem en jocs nous un cop les nostres llibreries el puguin donar soport, i hi hagi temps de desenvolupament disponible per mantenir-lo. Molta de la nostra feina està dirigida a estabilitzar i completar jocs ja existents - volem tenir la millor experiència posible en aquests jocs abans de anar-nos cap a nous títols. Com que sempre hi ha nova feina, no podem fer cap aproximació de quan podríem donar suport a més jocs."
 			},
 			{
-				"question": "Si se'm va prohibir l'accés a la Nintendo Network, continuarà prohibit al Pretendo?",
-				"answer": "No tindrem accés a les prohibicions d'accés de la Nintendo Network i a tots els usuaris no se'ls prohibirà utilitzar el nostre servei. Malgrat això, tindrem normes a seguir abans d'utilitzar el servei i, si aquestes normes no es compleixen, podria resultar en la prohibició del nostre servei."
+				"question": "Si faig servir un emulador, no necessito res més per fer servir Pretendo?",
+				"answer": "No. Per raons de seguretat i moderació, encara que facis servir un emulador, necessitaràs una consola real. Això ens permet millorar la seguretat i reforçar l’efectivitat de les normes per a oferir una experiència agradable i segura amb el nostre servei."
 			},
 			{
-				"question": "Pretendo afegirà compatibilitat amb la Wii o la Switch?",
-				"answer": "La Wii ja té servidors personalitzats a través del <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no volem orientar-nos a la Switch, ja que és de pagament i està completament fora de la Nintendo Network."
+				"question": "Funciona Pretendo al Cemu o als emuladors?",
+				"answer": "Cemu 2.1 té suport oficial per a Pretendo sota les opcions de compte per internet a l'emulador. Per a més informació de com iniciar-se amb Cemu, llegiu-vos la <a href=\"https://pretendo.network/docs/install/cemu\">documentació</a>. Certs emuladors de 3DS o derivacions d'aquest podrien funcionar, però no tenim cap recomanació oficial o instruccions d'inici ara mateix. Les últimes versions de Citra no funcionen amb Pretendo."
+			},
+			{
+				"question": "Pretendo donarà suport a Wii i/o Switch?",
+				"answer": "La Wii ja té servidors personalitzats de part de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualment no tenim previst centrar-nos en la Switch ja que és un servei de pagament i totalment diferent a la Nintendo Network."
 			},
 			{
 				"question": "Necessitaré hacks per connectar-me?",
-				"answer": "Sí, caldrà una consola hackejada per connectar-se; tanmateix, els usuaris de la Wii U només necessitaran accés al Homebrew Launcher (és a dir, Haxchi, Coldboot Haxchi o fins i tot l'exploit del navegador web) i informació sobre com es connectarà la 3DS arribarà més endavant."
+				"answer": "Per a la millor experiència a consoles, també necessitaràs hackejar el teu sistema - específicament Aroma per la Wii U i Luma3DS per la 3DS. Tanmateix, a la Wii U, el mètode SSSL sense hacks també està disponible amb funcionalitat limitada. Mira les <a href=\"/docs/install\">instruccions de configuració</a> per detalls."
+			},
+			{
+				"question": "Si se m’ha vetat l’accés de Nintendo Network, seguiré vetat quan faci servir Pretendo?",
+				"answer": "No tenim accés als vets de Nintendo Network, de manera que cap usuari de Nintendo Network està vetat. Tammateix, tenim normes que cal seguir per fer ús del servei i l’incompliment d’elles pot comportar un vet."
+			},
+			{
+				"question": "Puc fer servir trucs o mods online amb Pretendo?",
+				"answer": "Només en partides privades - tenir avantatge o fastiguejar l’experiència online de gent que no n’ha donat consentiment (i en partides públiques) és una infracció vetable. Sovint vetem comptes i consoles tant a Wii U com a 3DS. Pretendo fa servir mètodes de seguretat més sofisticats que fan que els mètodes tradicionals d’eliminar vets no siguin efectius, com ara canviar el número de sèrie."
 			}
 		]
 	},
@@ -85,7 +97,7 @@
 		"cards": [
 			{
 				"title": "Servidors en línia",
-				"caption": "Tornem els teus jocs en línia preferits mitjançant servidors personalitzats."
+				"caption": "Revivim els teus jocs en línia preferits mitjançant servidors personalitzats."
 			},
 			{
 				"caption": "Una re-imaginació del Miiverse, com si s'hagués fet en una època més moderna.",
@@ -99,7 +111,30 @@
 	},
 	"credits": {
 		"title": "L'equip",
-		"text": "Coneix l'equip que hi ha darrere del projecte"
+		"text": "Coneix l'equip que hi ha darrere del projecte",
+		"people": [
+			{
+				"name": "Jonathan Barrow (jonbarrow)",
+				"caption": "Propietari del projecte i desenvolupador principal",
+				"picture": "https://github.com/jonbarrow.png",
+				"github": "https://github.com/jonbarrow"
+			},
+			{
+				"name": "Jemma (CaramelKat)",
+				"caption": "Recerca i desenvolupament de Miiverse",
+				"picture": "https://github.com/caramelkat.png",
+				"github": "https://github.com/CaramelKat"
+			},
+			{
+				"name": "quarky",
+				"caption": "Recerca i desenvolupament de pedaços per a Wii U",
+				"picture": "https://github.com/ashquarky.png",
+				"github": "https://github.com/ashquarky"
+			},
+			{
+				"caption": "Recerca de sistemes i arquitectura de servidors"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Gràcies especials",
@@ -215,7 +250,7 @@
 	"upgrade": {
 		"tierSelectPrompt": "Selecciona un nivell",
 		"unsub": "Donar-se de baixa",
-		"unsubPrompt": "Estàs segur que vols donar-te de baixa de <span>tiername</span>? Perdràs l'accés a les avantatges associades a ell.",
+		"unsubPrompt": "Esteu segurs que voleu cancel·lar la vostra subscripció a <span>tiername</span>? Perdreu l'accés immediatament a tots els beneficis associats amb aquell nivell.",
 		"back": "Endarrere",
 		"month": "Mes",
 		"unsubConfirm": "Donar-se de baixa",

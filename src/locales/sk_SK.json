@@ -1,1 +1,167 @@
-{}
+{
+	"nav": {
+		"docs": "Dokumentácia",
+		"forum": "Fórum",
+		"account": "Účet",
+		"accountWidget": {
+			"settings": "Nastavenia",
+			"logout": "Odhlásiť sa"
+		},
+		"dropdown": {
+			"captions": {
+				"faq": "Často kladené otazky",
+				"about": "O projekte",
+				"credits": "Zoznámte sa s týmom",
+				"blog": "Súhrn najnovších aktualizácií",
+				"forum": "Chatujte s ostatnými pre podporu",
+				"progress": "Skontrolujte progres a ciele projektu"
+			}
+		},
+		"blog": "Blog",
+		"about": "O nás",
+		"faq": "FAQ",
+		"credits": "Poďakovanie",
+		"progress": "Progres",
+		"donate": "Prispieť"
+	},
+	"hero": {
+		"subtitle": "Herné servery",
+		"title": "Znovuzrodené",
+		"text": "Pretendo je slobodná a open-source náhrada za servery Nintendo pre 3DS a Wii U, ktoré umožňujú konektivitu všetkým, aj po dekativácií pôvodných serverov",
+		"buttons": {
+			"readMore": "Čítať viac"
+		}
+	},
+	"faq": {
+		"title": "Často Kladené Otazky",
+		"QAs": [
+			{
+				"question": "Čo je Pretendo?",
+				"answer": "Pretendo je open-source náhrada za Nintendo Network, ktorej cieľom je vytvoriť vlastné servery pre rodinu konzolí Wii U a 3DS. Chceme zachovať online konektivitu týchto zariadení a umožniť tak hráčom naďalej hrať svole obľúbené Wii U a 3DS tituly."
+			},
+			{
+				"question": "Bude na Pretende fungovať moje terajšie NNID?",
+				"answer": "Bohužial, nie. Existujúce NNID na Pretende nebudú fungovať, pretože Vaše uživateľské dáta vlastní iba Nintendo. Napriek tomu že by bol presun účtu teoreticky možný, bol by riskantný a vyžadoval by citlivé osobné údaje, ktoré si neprajeme držať."
+			},
+			{
+				"question": "Ako začnem s používaním Pretenda?",
+				"answer": "Pokiaľ chcete začať používať Pretendo Network na 3DS, Wii U alebo ich emulátoroch, prosím navštívte náš <a href='/docs/install'>návod k nastaveniu</a>!"
+			},
+			{
+				"question": "Viete kedy bude funkcia/služba hotová?",
+				"answer": "Nie. Mnohé služby a funkcie Pretenda sú vyvíjané nezávisle od seba (napríklad, na Miiverse môže pracovať jeden vývojár, zatiaľ čo druhý pracuje na Účtoch a Priateľoch) a preto nevieme poskytnúť odhady, kedy bude niečo hotové."
+			},
+			{
+				"question": "Kedy pridáte dalšie hry?"
+			}
+		],
+		"text": "Tu je zopár častých otázok, ktoré sa nás ľudia často pýtajú, aby ste boli v obraze."
+	},
+	"showcase": {
+		"title": "Čo robíme"
+	},
+	"credits": {
+		"title": "Tím",
+		"people": [
+			{},
+			{},
+			{},
+			{
+				"name": "SuperMarioDaBom",
+				"picture": "https://github.com/supermariodabom.png",
+				"github": "https://github.com/SuperMarioDaBom"
+			},
+			{
+				"name": "limes.pink",
+				"caption": "Webový vývoj",
+				"picture": "https://github.com/limesdotpink.png",
+				"github": "https://github.com/limesdotpink"
+			},
+			{
+				"name": "Shutterbug2000",
+				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
+				"github": "https://github.com/shutterbug2000"
+			},
+			{
+				"name": "Billy",
+				"picture": "https://github.com/InternalLoss.png",
+				"github": "https://github.com/InternalLoss"
+			},
+			{
+				"name": "DaniElectra",
+				"picture": "https://github.com/danielectra.png",
+				"github": "https://github.com/DaniElectra"
+			},
+			{
+				"name": "niko"
+			}
+		]
+	},
+	"footer": {
+		"usefulLinks": "Užitočné odkazy"
+	},
+	"account": {
+		"loginForm": {
+			"register": "Registrovať sa",
+			"password": "Heslo",
+			"confirmPassword": "Potvrdiť heslo"
+		},
+		"resetPassword": {
+			"password": "Heslo",
+			"confirmPassword": "Potvrdiť heslo"
+		},
+		"settings": {
+			"unavailable": "Nedostupný",
+			"settingCards": {
+				"profile": "Profil",
+				"birthDate": "Dátum narodenia",
+				"gender": "Pohlavie",
+				"country": "Krajina/Región",
+				"beta": "Beta",
+				"email": "Email",
+				"password": "Heslo",
+				"otherSettings": "Ostatné nastavenia",
+				"discord": "Discord"
+			}
+		},
+		"accountLevel": [
+			"Štandardný",
+			null,
+			"Moderátor",
+			"Developer"
+		]
+	},
+	"upgrade": {
+		"month": "mesiac",
+		"back": "Späť"
+	},
+	"localizationPage": {
+		"button": "Testovací súbor"
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Rýchle odkazy"
+		},
+		"sidebar": {
+			"welcome": "Vitajte",
+			"install": "Inštalovať",
+			"search": "Vyhľadať"
+		}
+	},
+	"modals": {
+		"cancel": "Zrušiť",
+		"confirm": "Potvrdiť",
+		"close": "Zavrieť"
+	},
+	"aboutUs": {
+		"title": "O nás",
+		"paragraphs": [
+			"Pretendo je open-source projekt, ktorého cieľom je reimplenetovať Nintendo Network pre 3DS a Wii U pomocou legálneho revere engineeringu.",
+			"Kedže sú naše služby slobodné a open-source, nehrozí, že budú náhle ukončené."
+		]
+	},
+	"progress": {
+		"title": "Progres",
+		"githubRepo": "Github repozitár"
+	}
+}

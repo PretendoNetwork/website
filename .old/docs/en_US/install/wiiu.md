@@ -1,5 +1,10 @@
 # Wii U
 
+<div class="tip red">
+	<strong>CAUTION:</strong>
+	DON'T REMOVE YOUR NNID TO SET UP PRETENDO NETWORK, IT'S NOT NECESSARY AND BY DOING SO YOU WILL LOSE ALL YOUR PREVIOUSLY PURCHASED GAMES AND WILL BE UNABLE TO UPDATE THEM!</strong>
+</div>
+
 You can connect your Wii U to Pretendo using one of 2 methods. Inkay is recommended unless you have some reason to avoid modding your console (e.g. you live in Japan where is is legally gray).
 
 - [Inkay (homebrew - recommended)](#inkay)
@@ -146,7 +151,7 @@ After installing Pretendo, you must register a Pretendo Network ID (PNID). There
 
 <div class="tip red">
 	<strong>CAUTION:</strong>
-	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! If you have any existing Nintendo Network IDs on your Wii U which share the username you wish to use, those accounts MUST be removed from your console first.
+	A Pretendo Network ID may not use the same username as an account already linked to your Wii U! Ensure that you have chosen a different name for your PNID than the name on your NNID.
 </div>
 
 ### Website

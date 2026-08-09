@@ -92,6 +92,8 @@ async function registerSubmission() {
             type="password"
             autocomplete="new-password"
             required
+						passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];"
+						pattern="[-!-~]{6,16}"
           >
         </div>
         <div>

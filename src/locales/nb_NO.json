@@ -96,7 +96,12 @@
 	},
 	"credits": {
 		"title": "Laget",
-		"text": "Møt laget bak prosjektet"
+		"text": "Møt laget bak prosjektet",
+		"people": [
+			{
+				"caption": "Prosjekteier og hovedutvikler"
+			}
+		]
 	},
 	"specialThanks": {
 		"title": "Spesiell takk",
