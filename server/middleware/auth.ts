@@ -17,6 +17,8 @@ export default defineEventHandler(async (event) => {
 				pid: userData.pid,
 				username: userData.username,
 				token: token,
+				accessLevel: userData.accessLevel,
+				email: userData.emailAddress,
 			})
 		} catch (err) {
 			console.error('Failed to request user data: ', err);

@@ -1,3 +1,5 @@
+import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole } from "~~/server/utils/discord";
+
 type DiscordTokenResponse = {
 	"access_token": string,
 	"token_type": string,
@@ -15,6 +17,10 @@ type DiscordUserResponse = {
 // Discord oauth callback
 export default defineEventHandler(async (event) => {
 	const discord = useDiscord(event);
+	if (!discord) {
+		return sendRedirect(event, '/');
+	}
+
 	const discordFetch = $fetch.create({
 		baseURL: discord.baseUrl,
 	});
@@ -42,12 +48,29 @@ export default defineEventHandler(async (event) => {
 		return sendRedirect(event, '/'); // No identify scope
 	}
 
+	const discordId = authInfo.user.id;
 	const grpc = useApiGrpcWithToken(event, accessTokenCookie ?? '');
 	await grpc.setDiscordConnectionData({
-		id: authInfo.user.id
+		id: discordId
 	});
 
-	// TODO set roles based on stripe info
+	const userData = await grpc.getUserData({});
+	const priceId = userData.connections?.stripe?.priceId;
+	const stripe = useStripe(event);
+	if (stripe && priceId) {
+		if (priceId) {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product as string);
+			const discordRoleId = product.metadata.discord_role_id;
+
+			if (discordRoleId) {
+				await assignDiscordMemberSupporterRole(discord, discordId, discordRoleId);
+			}
+			if (product.metadata.beta === 'true') {
+				await assignDiscordMemberTesterRole(discord, discordId);
+			}
+		}
+	}
 
 	return sendRedirect(event, '/account');
 });

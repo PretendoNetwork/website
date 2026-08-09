@@ -64,3 +64,8 @@ export const ForgotPasswordSchema = z.object({
 	emailOrPassword: z.string(),
 });
 export type ApiAuthForgotPasswordRequest = z.infer<typeof ForgotPasswordSchema>;
+
+export const CheckoutSchema = z.object({
+	priceId: z.string(),
+});
+export type ApiAccountCheckoutRequest = z.infer<typeof CheckoutSchema>;

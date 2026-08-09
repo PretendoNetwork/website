@@ -1,3 +1,5 @@
+import { removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole } from "~~/server/utils/discord";
+
 export default defineEventHandler(async (event): Promise<void> => {
 	const auth = enforceLoggedIn(event);
 	const discord = useDiscord(event);
@@ -7,9 +9,26 @@ export default defineEventHandler(async (event): Promise<void> => {
 	})
 
 	const grpc = useApiGrpcWithToken(event, auth.token);
+	const oldUserData = await grpc.getUserData({});
+	const oldDiscordId = oldUserData.connections?.discord?.id;
 	await grpc.setDiscordConnectionData({
 		id: '',
 	});
 
-	// TODO set roles based on stripe info
+	const priceId = oldUserData.connections?.stripe?.priceId;
+	const stripe = useStripe(event);
+	if (stripe) {
+		if (priceId && oldDiscordId) {
+			const price = await stripe.prices.retrieve(priceId);
+			const product = await stripe.products.retrieve(price.product as string);
+			const discordRoleId = product.metadata.discord_role_id;
+
+			if (discordRoleId) {
+				await removeDiscordMemberSupporterRole(discord, oldDiscordId, discordRoleId);
+			}
+			if (product.metadata.beta === 'true') {
+				await removeDiscordMemberTesterRole(discord, oldDiscordId);
+			}
+		}
+	}
 });

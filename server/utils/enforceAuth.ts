@@ -4,6 +4,8 @@ export type AuthContext = {
 	pid: number;
 	username: string;
 	token: string;
+	email: string;
+	accessLevel: number;
 };
 
 export function setAuthContext(event: H3Event, context: AuthContext | null): void {
