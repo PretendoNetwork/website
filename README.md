@@ -36,7 +36,7 @@ And the tasks left on the backend:
 - [ ] Password forgot flow
 - [x] Stripe webhook emails
 - [x] Stripe webhook database updates
-- [x] Discord integration (add/remove roles on link and subscription changes)
+- [] Discord integration (add/remove roles on link and subscription changes)
 - [ ] Creation of stripe subscriptions
 - [ ] Account editing (mii saving, server environment changes)
 - [ ] Delete account
