@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
 		githubApiToken: '',
 		stripeSecretKey: '',
+		stripeNotificationEmail: '',
 		grpcHost: '',
 		grpcApiKey: '',
 		mongoConnectionString: '',
@@ -43,6 +44,10 @@ export default defineNuxtConfig({
 		smtpSecure: true,
 		smtpFromEmail: '',
 		smtpFromName: '',
+		discordBotToken: '',
+		discordGuildId: '',
+		discordTesterRoleId: '',
+		discordSupporterRoleId: '',
 
 		public: {
 			apiBase: 'https://api.pretendo.cc',

@@ -4,6 +4,7 @@ import { PnidDocument, usePapr } from "./papr";
 import { Transporter } from "nodemailer";
 import { PaprMatchKeysAndValues } from "papr";
 import type { H3Event } from 'h3';
+import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole, removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole, useDiscord } from "./discord";
 
 async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Customer, ops: { pid: number, title: string, body: string }): Promise<void> {
 	try {
@@ -35,6 +36,7 @@ async function sendToNotificationEmails(mailer: Transporter, notificationEmails:
 
 export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook: Stripe.Event, notificationEmails: string[]) {
 	const mailer = useMailer(event);
+	const discord = useDiscord(event);
 	const papr = await usePapr(event);
 
 	if (!mailer || !papr) {
@@ -134,14 +136,18 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
 			// Canceling old subscription, do nothing but update webhook date and remove Discord roles
 			if (product.metadata.beta === 'true') {
-				await util.removeDiscordMemberTesterRole(discordId).catch((error) => {
-					console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
-				});
+				if (discord && discordId) {
+					await removeDiscordMemberTesterRole(discord, discordId).catch((error) => {
+						console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
+					});
+				}
 			}
 
-			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
-				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
-			});
+			if (discord && discordId && product.metadata.discord_role_id) {
+				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
+					console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
+				});
+			}
 
 			await papr.Pnid.updateOne({
 				pid,
@@ -172,9 +178,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					updateData.server_access_level = 'test';
 				}
 
-				await util.assignDiscordMemberTesterRole(discordId).catch((error) => {
-					console.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
-				});
+				if (discord && discordId) {
+					await assignDiscordMemberTesterRole(discord, discordId).catch((error) => {
+						console.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
+					});
+				}
 			} else {
 				// * Assume any status other than active means payment has not been fulfilled
 				// * Once the payment goes through, status should update to active
@@ -183,9 +191,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					updateData.server_access_level = 'prod';
 				}
 
-				await util.removeDiscordMemberTesterRole(discordId).catch((error) => {
-					console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
-				});
+				if (discord && discordId) {
+					await removeDiscordMemberTesterRole(discord, discordId).catch((error) => {
+						console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
+					});
+				}
 			}
 		}
 
@@ -225,9 +235,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				body: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
 			})
 
-			await util.assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
-				console.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
-			});
+			if (discord && discordId && product.metadata.discord_role_id) {
+				await assignDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
+					console.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
+				});
+			}
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `New ${product.name} subscription`,
@@ -240,9 +252,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				body: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
 			})
 
-			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
-				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
-			});
+			if (discord && discordId && product.metadata.discord_role_id) {
+				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
+					console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
+				});
+			}
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Canceled ${product.name} subscription`,
@@ -255,9 +269,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				body: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
 			})
 
-			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
-				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
-			});
+			if (discord && discordId && product.metadata.discord_role_id) {
+				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
+					console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
+				});
+			}
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,
@@ -270,9 +286,11 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				body: `Your subscription for the ${product.name} tier has changed status to ${subscription.status}. This is usually caused by payment failure. Your account has been reverted back to default until payment resumes. If you believe this to be an error, please reach out for support on our Discord server, and we thank you for your previous support!`
 			})
 
-			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
-				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
-			});
+			if (discord && discordId && product.metadata.discord_role_id) {
+				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
+					console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
+				});
+			}
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,

@@ -1,4 +1,5 @@
 import { Stripe } from "stripe";
+import { handleStripeEvent } from "~~/server/utils/handleStripeWebhook";
 
 export default defineEventHandler(async (event): Promise<{ success: boolean, message?: string }> => {
 	const config = useRuntimeConfig(event);
@@ -21,7 +22,9 @@ export default defineEventHandler(async (event): Promise<{ success: boolean, mes
 		}
 	}
 
-	await handleStripeEvent(stripe, webhookEvent);
+	const notificationEmails: string[] = [];
+	if (config.stripeNotificationEmail) notificationEmails.push(config.stripeNotificationEmail);
+	await handleStripeEvent(event, stripe, webhookEvent, notificationEmails);
 
 	return {
 		success: true,
