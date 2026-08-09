@@ -1,7 +1,13 @@
 import { Stripe } from "stripe";
+import { useMailer } from "./mailer";
+import { PnidDocument, usePapr } from "./papr";
+import { Transporter } from "nodemailer";
+import { PaprMatchKeysAndValues } from "papr";
+import type { H3Event } from 'h3';
 
-async function sendEmailToCustomer(customer: Stripe.Customer, ops: { pid: number, title: String, body: string }): Promise<void> {
+async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Customer, ops: { pid: number, title: string, body: string }): Promise<void> {
 	try {
+		if (!customer.email) throw new Error("Customer does not have an email");
 		await mailer.sendMail({
 			to: customer.email,
 			subject: ops.title,
@@ -12,7 +18,7 @@ async function sendEmailToCustomer(customer: Stripe.Customer, ops: { pid: number
 	}
 }
 
-async function sendToNotificationEmails(notificationEmails: string[], ops: { title: String, body: string }): Promise<void> {
+async function sendToNotificationEmails(mailer: Transporter, notificationEmails: string[], ops: { title: string, body: string }): Promise<void> {
 	for (const email of notificationEmails) {
 		// * Send notification emails for new sub
 		try {
@@ -28,6 +34,14 @@ async function sendToNotificationEmails(notificationEmails: string[], ops: { tit
 }
 
 export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook: Stripe.Event, notificationEmails: string[]) {
+	const mailer = useMailer(event);
+	const papr = await usePapr(event);
+
+	if (!mailer || !papr) {
+		console.warn('Mailer/database not configured, ignoring stripe webhook');
+		return;
+	}
+
 	if (webhook.type === 'customer.subscription.updated' || webhook.type === 'customer.subscription.deleted') {
 		const subscription = webhook.data.object;
 		const subscriptionItem = subscription.items.data[0];
@@ -59,7 +73,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					console.error(`Error refunding subscription | ${customer.id}, ${subscription.id}`, error);
 				}
 
-				await sendEmailToCustomer(customer, {
+				await sendEmailToCustomer(mailer, customer, {
 					pid: 0,
 					title: 'Pretendo Network Subscription Failed - No Linked PNID',
 					body: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
@@ -72,7 +86,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 		}
 
 		const pid = Number(customer.metadata.pnid_pid);
-		const pnid = await database.PNID.findOne({ pid });
+		const pnid = await papr.Pnid.findOne({ pid });
 
 		if (!pnid) {
 			// PNID does not exist
@@ -95,7 +109,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					console.error(`Error refunding subscription | ${customer.id}, ${subscription.id} |`, error);
 				}
 
-				await sendEmailToCustomer(customer, {
+				await sendEmailToCustomer(mailer, customer, {
 					pid: 0,
 					title: 'Pretendo Network Subscription Failed - PNID Not Found',
 					body: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
@@ -107,47 +121,47 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 			return;
 		}
 
-		const latestWebhookTimestamp = pnid.get('connections.stripe.latest_webhook_timestamp');
+		const latestWebhookTimestamp = pnid.connections?.stripe?.latest_webhook_timestamp;
 
 		if (latestWebhookTimestamp && latestWebhookTimestamp >= webhook.created) {
 			// Do nothing, this webhook is older than the latest seen
 			return;
 		}
 
-		const currentSubscriptionId = pnid.get('connections.stripe.subscription_id');
-		const discordId = pnid.get('connections.discord.id');
+		const currentSubscriptionId = pnid.connections?.stripe?.subscription_id;
+		const discordId = pnid.connections?.discord?.id;
 
 		if (subscription.status === 'canceled' && currentSubscriptionId && subscription.id !== currentSubscriptionId) {
 			// Canceling old subscription, do nothing but update webhook date and remove Discord roles
 			if (product.metadata.beta === 'true') {
-				util.removeDiscordMemberTesterRole(discordId).catch((error) => {
+				await util.removeDiscordMemberTesterRole(discordId).catch((error) => {
 					console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
 				});
 			}
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
+			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
 			});
 
-			const updateData = {
-				'connections.stripe.latest_webhook_timestamp': webhook.created
-			};
-
-			await database.PNID.updateOne({
+			await papr.Pnid.updateOne({
 				pid,
 				'connections.stripe.latest_webhook_timestamp': {
 					$lte: webhook.created
 				}
-			}, { $set: updateData }).exec();
+			}, {
+				$set: {
+					'connections.stripe.latest_webhook_timestamp': webhook.created
+				}
+			});
 
 			return;
 		}
 
-		const updateData = {
-			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : null,
-			'connections.stripe.price_id': subscription.status === 'active' ? subscriptionItem.plan.id : null,
+		const updateData: PaprMatchKeysAndValues<PnidDocument> = {
+			'connections.stripe.subscription_id': subscription.status === 'active' ? subscription.id : undefined,
+			'connections.stripe.price_id': subscription.status === 'active' ? subscriptionItem.plan.id : undefined,
 			'connections.stripe.tier_level': subscription.status === 'active' ? Number(product.metadata.tier_level || 0) : 0,
-			'connections.stripe.tier_name': subscription.status === 'active' ? product.name : null,
+			'connections.stripe.tier_name': subscription.status === 'active' ? product.name : undefined,
 			'connections.stripe.latest_webhook_timestamp': webhook.created
 		};
 
@@ -158,7 +172,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					updateData.server_access_level = 'test';
 				}
 
-				util.assignDiscordMemberTesterRole(discordId).catch((error) => {
+				await util.assignDiscordMemberTesterRole(discordId).catch((error) => {
 					console.error(`Error assigning user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
 				});
 			} else {
@@ -169,18 +183,20 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					updateData.server_access_level = 'prod';
 				}
 
-				util.removeDiscordMemberTesterRole(discordId).catch((error) => {
+				await util.removeDiscordMemberTesterRole(discordId).catch((error) => {
 					console.error(`Error removing user Discord tester role | ${customer.id}, ${discordId}, ${pid} |`, error);
 				});
 			}
 		}
 
-		await database.PNID.updateOne({
+		await papr.Pnid.updateOne({
 			pid,
 			'connections.stripe.latest_webhook_timestamp': {
 				$lte: webhook.created
 			}
-		}, { $set: updateData }).exec();
+		}, {
+			$set: updateData
+		});
 
 		if (subscription.status === 'active') {
 			// Get all the customers active subscriptions
@@ -203,62 +219,62 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				}
 			}
 
-			await sendEmailToCustomer(customer, {
+			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Active`,
 				body: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
 			})
 
-			util.assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
+			await util.assignDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				console.error(`Error assigning user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
 			});
 
-			await sendToNotificationEmails(notificationEmails, {
+			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `New ${product.name} subscription`,
-				body: `${pnid.get('username')} just became a ${product.name} tier subscriber`,
+				body: `${pnid.username} just became a ${product.name} tier subscriber`,
 			})
 		} else if (subscription.status === 'canceled') {
-			await sendEmailToCustomer(customer, {
+			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Canceled`,
 				body: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
 			})
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
+			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
 			});
 
-			await sendToNotificationEmails(notificationEmails, {
+			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Canceled ${product.name} subscription`,
-				body: `${pnid.get('username')} just canceled their ${product.name} tier subscription`,
+				body: `${pnid.username} just canceled their ${product.name} tier subscription`,
 			})
 		} else if (subscription.status === 'unpaid') {
-			await sendEmailToCustomer(customer, {
+			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Unpaid`,
 				body: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
 			})
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
+			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
 			});
 
-			await sendToNotificationEmails(notificationEmails, {
+			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,
-				body: `${pnid.get('username')}'s ${product.name} tier subscription has been canceled due to non payment`,
+				body: `${pnid.username}'s ${product.name} tier subscription has been canceled due to non payment`,
 			})
 		} else {
-			await sendEmailToCustomer(customer, {
+			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - ${subscription.status}`,
 				body: `Your subscription for the ${product.name} tier has changed status to ${subscription.status}. This is usually caused by payment failure. Your account has been reverted back to default until payment resumes. If you believe this to be an error, please reach out for support on our Discord server, and we thank you for your previous support!`
 			})
 
-			util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
+			await util.removeDiscordMemberSupporterRole(discordId, product.metadata.discord_role_id).catch((error) => {
 				console.error(`Error removing user Discord supporter role | ${customer.id}, ${discordId}, ${pid}, ${product.metadata.discord_role_id} |`, error);
 			});
 
-			await sendToNotificationEmails(notificationEmails, {
+			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,
 				body: `${pnid.username}'s ${product.name} tier subscription status has been changed to ${subscription.status}`,
 			})

@@ -30,7 +30,7 @@ async function loginSubmission() {
 		}
 	} catch (error: unknown) {
 		if (error instanceof FetchError) {
-			errorMessage.value = error.statusText;
+			errorMessage.value = error.message;
 		} else {
 			errorMessage.value = `Error during login: ${error}`; // TODO: localize
 		}

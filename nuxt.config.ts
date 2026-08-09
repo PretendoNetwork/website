@@ -35,6 +35,14 @@ export default defineNuxtConfig({
 		stripeSecretKey: '',
 		grpcHost: '',
 		grpcApiKey: '',
+		mongoConnectionString: '',
+		smtpHost: '',
+		smtpPort: 587,
+		smtpUser: '',
+		smtpPassword: '',
+		smtpSecure: true,
+		smtpFromEmail: '',
+		smtpFromName: '',
 
 		public: {
 			apiBase: 'https://api.pretendo.cc',

@@ -1,3 +1,5 @@
+import type { H3Event } from 'h3'
+
 export type AuthContext = {
 	pid: number;
 };
@@ -15,7 +17,7 @@ export function enforceLoggedIn(event: H3Event): AuthContext {
 	if (!context) {
 		throw createError({
 			status: 401,
-			statusText: 'This action requires authentication'
+			message: 'This action requires authentication'
 		});
 	}
 	return context;

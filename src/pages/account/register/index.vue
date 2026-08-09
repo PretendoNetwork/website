@@ -27,7 +27,7 @@ async function registerSubmission() {
 		}
 	} catch (error: unknown) {
 		if (error instanceof FetchError) {
-			errorMessage.value = error.statusText;
+			errorMessage.value = error.message;
 		} else {
 			if (error === 'challenge-closed') { // Thrown if the captcha is closed, can be safely ignored
 				return;

@@ -1,4 +1,5 @@
 import { Stripe } from "stripe"
+import type { H3Event } from 'h3'
 
 let stripe: Stripe | null = null;
 

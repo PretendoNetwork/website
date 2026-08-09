@@ -21,13 +21,13 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			if (error.details === 'INVALID_ARGUMENT: User not found') {
 				throw createError({
 					status: 400,
-					statusText: 'User not found'
+					message: 'User not found'
 				});
 			}
 			if (error.details === 'INVALID_ARGUMENT: Password is incorrect') {
 				throw createError({
 					status: 400,
-					statusText: 'Password was incorrect'
+					message: 'Password was incorrect'
 				});
 			}
 		}
