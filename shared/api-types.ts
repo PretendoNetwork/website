@@ -33,6 +33,10 @@ export type ApiAuthLogin = {
 	refreshToken: string;
 };
 
+export type ApiAccountDiscordLink = {
+	url: string
+};
+
 export const LoginSchema = z.object({
 	username: z.string(),
 	password: z.string()

@@ -45,12 +45,15 @@ export default defineNuxtConfig({
 		smtpFromEmail: '',
 		smtpFromName: '',
 		discordBotToken: '',
+		discordClientId: '',
+		discordClientSecret: '',
 		discordGuildId: '',
 		discordTesterRoleId: '',
 		discordSupporterRoleId: '',
 		discourseSsoSecret: '',
 
 		public: {
+			baseUrl: 'https://pretendo.network',
 			apiBase: 'https://api.pretendo.cc',
 			hCaptchaSitekey: '',
 			cookieSecure: false

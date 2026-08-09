@@ -6,7 +6,11 @@ type DiscordIds = { guildId: string, supporterRoleId: string | null, testerRoleI
 
 type DiscordInstance = {
 	rest: REST,
+	clientId: string,
+	clientSecret: string,
+	baseUrl: string,
 	ids: DiscordIds,
+	makeCallbackUrl: () => string,
 }
 
 let discordInstance: DiscordInstance | null = null;
@@ -14,14 +18,20 @@ let discordInstance: DiscordInstance | null = null;
 export function useDiscord(event: H3Event): DiscordInstance | null {
 	if (!discordInstance) {
 		const config = useRuntimeConfig(event);
-		if (config.discordBotToken && config.discordGuildId) {
+		if (config.discordBotToken && config.discordGuildId && config.discordClientId && config.discordClientSecret) {
 			discordInstance = {
 				rest: new REST({ version: '10' }).setToken(config.discordBotToken),
+				baseUrl: "https://discord.com/api/v10",
+				clientId: config.discordClientId,
+				clientSecret: config.discordClientSecret,
 				ids: {
 					guildId: config.discordGuildId,
 					testerRoleId: config.discordTesterRoleId ? config.discordTesterRoleId : null,
 					supporterRoleId: config.discordSupporterRoleId ? config.discordSupporterRoleId : null,
-				}
+				},
+				makeCallbackUrl() {
+					return new URL('/account/connect/discord', config.public.baseUrl).toString()
+				},
 			}
 		}
 	}

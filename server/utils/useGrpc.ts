@@ -52,3 +52,7 @@ export function useAccountGrpc(event: H3Event): Client<AccountServiceDefinition>
 export function useLegacyApiGrpcWithToken(event: H3Event, token: string): Client<APIDefinition> {
 	return getGrpcClient(event, APIDefinition, token);
 }
+
+export function useApiGrpcWithToken(event: H3Event, token: string): Client<APIDefinition> {
+	return getGrpcClient(event, APIDefinition, token);
+}

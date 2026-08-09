@@ -34,6 +34,8 @@ async function sendToNotificationEmails(mailer: Transporter, notificationEmails:
 	}
 }
 
+// Handles incoming webhooks from stripe, does not validate.
+// This does not use account server GRPC since the GRPC method can't change the access levels yet
 export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook: Stripe.Event, notificationEmails: string[]) {
 	const mailer = useMailer(event);
 	const discord = useDiscord(event);
