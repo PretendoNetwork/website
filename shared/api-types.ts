@@ -38,3 +38,25 @@ export const LoginSchema = z.object({
 	password: z.string()
 });
 export type ApiAuthLoginRequest = z.infer<typeof LoginSchema>;
+
+export const AccountUpdateSchema = z.object({
+	mii: z.object({
+		name: z.string(),
+		primary: z.enum(['Y', 'N']),
+		data: z.string()
+	}).optional(),
+	environment: z.enum(['prod', 'test', 'dev']).optional()
+});
+export type ApiAccountUpdateRequest = z.infer<typeof AccountUpdateSchema>;
+
+export const ResetPasswordSchema = z.object({
+	password: z.string(),
+	passwordConfirm: z.string(),
+	resetToken: z.string(),
+});
+export type ApiAuthResetPasswordRequest = z.infer<typeof ResetPasswordSchema>;
+
+export const ForgotPasswordSchema = z.object({
+	emailOrPassword: z.string(),
+});
+export type ApiAuthForgotPasswordRequest = z.infer<typeof ForgotPasswordSchema>;

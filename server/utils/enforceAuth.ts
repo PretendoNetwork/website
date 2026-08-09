@@ -2,9 +2,11 @@ import type { H3Event } from 'h3'
 
 export type AuthContext = {
 	pid: number;
+	username: string;
+	token: string;
 };
 
-export function setAuthContext(event: H3Event, context: AuthContext): void {
+export function setAuthContext(event: H3Event, context: AuthContext | null): void {
 	event.context.auth = context;
 }
 

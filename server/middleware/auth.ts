@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
 	const authHeader = getRequestHeader(event, 'authorization');
-	event.context.auth = null;
+	setAuthContext(event, null)
 	if (authHeader) {
 		try {
 			const [type, token] = authHeader.split(' ', 2);
@@ -13,10 +13,11 @@ export default defineEventHandler(async (event) => {
 			const grpc = useLegacyApiGrpcWithToken(event, token);
 			const userData = await grpc.getUserData({});
 
-			event.context.auth = {
+			setAuthContext(event, {
 				pid: userData.pid,
-				username: userData.username
-			};
+				username: userData.username,
+				token: token,
+			})
 		} catch (err) {
 			console.error('Failed to request user data: ', err);
 			return; // Continue like nothing happened, further steps will validate if authed
