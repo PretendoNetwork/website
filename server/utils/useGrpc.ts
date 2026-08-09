@@ -1,4 +1,5 @@
 import { createChannel, createClient, Metadata } from 'nice-grpc';
+import { ApiServiceDefinition } from '@pretendonetwork/grpc/api/v2/api_service';
 import { APIDefinition } from '@pretendonetwork/grpc/api/api_service';
 import { AccountServiceDefinition } from '@pretendonetwork/grpc/account/v2/account_service';
 import type { Channel, Client, CompatServiceDefinition } from 'nice-grpc';
@@ -36,7 +37,11 @@ function getGrpcClient<T extends CompatServiceDefinition>(event: H3Event, def: T
 	return client;
 }
 
-export function useApiGrpc(event: H3Event): Client<APIDefinition> {
+export function useApiGrpc(event: H3Event): Client<ApiServiceDefinition> {
+	return getGrpcClient(event, ApiServiceDefinition);
+}
+
+export function useLegacyApiGrpc(event: H3Event): Client<APIDefinition> {
 	return getGrpcClient(event, APIDefinition);
 }
 
@@ -44,6 +49,6 @@ export function useAccountGrpc(event: H3Event): Client<AccountServiceDefinition>
 	return getGrpcClient(event, AccountServiceDefinition);
 }
 
-export function useApiGrpcWithToken(event: H3Event, token: string): Client<APIDefinition> {
+export function useLegacyApiGrpcWithToken(event: H3Event, token: string): Client<APIDefinition> {
 	return getGrpcClient(event, APIDefinition, token);
 }

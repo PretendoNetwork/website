@@ -1,9 +1,10 @@
 import { ServerError } from "nice-grpc";
 import { ApiAuthLogin, LoginSchema } from "#shared/api-types"
+import { useLegacyApiGrpc } from "~~/server/utils/useGrpc";
 
 export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 	const body = await readZodBody(event, LoginSchema);
-	const grpc = useApiGrpc(event);
+	const grpc = useLegacyApiGrpc(event);
 
 	try {
 		const res = await grpc.login({

@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
 			if (!token) {
 				throw new Error('Invalid token');
 			}
-			const grpc = useApiGrpcWithToken(event, token);
+			const grpc = useLegacyApiGrpcWithToken(event, token);
 			const userData = await grpc.getUserData({});
 
 			event.context.auth = {
