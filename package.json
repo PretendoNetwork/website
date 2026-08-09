@@ -45,5 +45,14 @@
 		"@types/nodemailer": "^8.0.1",
 		"eslint-plugin-vue": "^10.0.0",
 		"sass-embedded": "^1.86.3"
+	},
+	"allowScripts": {
+		"better-sqlite3@12.11.1": true,
+		"esbuild@0.28.1": true,
+		"esbuild@0.27.7": true,
+		"esbuild@0.25.12": true,
+		"protobufjs@7.6.5": true,
+		"unrs-resolver@1.12.2": true,
+		"@parcel/watcher@2.6.0": true
 	}
 }

@@ -53,6 +53,6 @@ And the tasks left on the backend:
 - [x] RSS feed
 
 Miscellanous tasks:
-- [ ] Merge upstream changes into refactor branch
+- [x] Merge upstream changes into refactor branch
 - [ ] Security testing
 - [ ] Document configuration
