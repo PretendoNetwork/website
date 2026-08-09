@@ -31,17 +31,18 @@ The website is currently in a refactor, here is what is still left on the fronte
 
 And the tasks left on the backend:
 - [ ] Registration (with captchas)
-- [ ] Logout
+- [x] Logout
 - [x] Login
-- [ ] Password forgot flow
+- [x] Password forgot flow
 - [x] Stripe webhook emails
 - [x] Stripe webhook database updates
-- [] Discord integration (add/remove roles on link and subscription changes)
+- [ ] Discord integration (add/remove roles on link and subscription changes)
 - [ ] Creation of stripe subscriptions
-- [ ] Account editing (mii saving, server environment changes)
-- [ ] Delete account
+- [x] Account editing (mii saving, server environment changes)
+- [x] Delete account
 - [x] Discourse SSO
 
 Miscellanous tasks:
 - [ ] Merge upstream changes into refactor branch
 - [ ] Security testing
+- [ ] Document configuration

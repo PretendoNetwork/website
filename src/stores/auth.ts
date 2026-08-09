@@ -65,9 +65,14 @@ export function useAuthStore() {
 		}
 	}
 
+	function logout() {
+		set(null);
+	}
+
 	return {
 		getToken,
 		refresh,
-		set
+		set,
+		logout,
 	};
 }
