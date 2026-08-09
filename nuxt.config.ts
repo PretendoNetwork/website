@@ -69,6 +69,14 @@ export default defineNuxtConfig({
 		}
 	},
 
+	icon: {
+		clientBundle: {
+			scan: true,
+		},
+		provider: 'none',
+		serverBundle: "local",
+	},
+
 	components: [
 		{
 			path: '~/components',
