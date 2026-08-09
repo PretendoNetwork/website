@@ -37,6 +37,27 @@ export type ApiAccountDiscordLink = {
 	url: string
 };
 
+export type ApiAccountCheckoutLink = {
+	url: string
+};
+
+export type TierItem = {
+	priceId: string;
+	tierLevel: number;
+	priceCents: number;
+	thumbnailUrl: string | null;
+	name: string;
+	description: string | null;
+	perks: {
+		discordRead: boolean;
+		beta: boolean;
+	}
+}
+
+export type ApiAccountTiers = {
+	tiers: TierItem[];
+}
+
 export const LoginSchema = z.object({
 	username: z.string(),
 	password: z.string()

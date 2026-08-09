@@ -12,6 +12,7 @@ const pnidSchema = schema({
 	server_access_level: types.enum(['prod', 'test', 'dev'] as const, { required: true }),
 	connections: types.object({
 		stripe: types.object({
+			customer_id: types.string(),
 			subscription_id: types.string(),
 			price_id: types.string(),
 			tier_level: types.number(),
