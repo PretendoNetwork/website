@@ -2,9 +2,9 @@ export type Me = {
 	pid: number;
 	username: string;
 	mii: {
-		imageUrl: string,
-		name: string,
-	} | null,
+		imageUrl: string;
+		name: string;
+	} | null;
 };
 
 export const useMeStore = defineStore('me', () => {

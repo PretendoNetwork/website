@@ -3,7 +3,7 @@ import { ApiServiceDefinition } from '@pretendonetwork/grpc/api/v2/api_service';
 import { APIDefinition } from '@pretendonetwork/grpc/api/api_service';
 import { AccountServiceDefinition } from '@pretendonetwork/grpc/account/v2/account_service';
 import type { Channel, Client, CompatServiceDefinition } from 'nice-grpc';
-import type { H3Event } from 'h3'
+import type { H3Event } from 'h3';
 
 let grpc: { channel: Channel } | null = null;
 

@@ -1,8 +1,10 @@
-import type { GetApiAuthMe } from "#shared/api-types"
+import type { GetApiAuthMe } from '#shared/api-types';
 
 export default defineNuxtRouteMiddleware(async () => {
 	const meStore = useMeStore();
-	if (meStore.loaded) return; // Already loaded
+	if (meStore.loaded) {
+		return;
+	} // Already loaded
 
 	const authStore = useAuthStore();
 	const token = authStore.getToken();
@@ -14,13 +16,13 @@ export default defineNuxtRouteMiddleware(async () => {
 	try {
 		const res = await $fetch<GetApiAuthMe>('/api/auth/me', {
 			headers: {
-				'Authorization': `Bearer ${token}`
+				Authorization: `Bearer ${token}`
 			}
-		})
+		});
 		meStore.setMe({
 			pid: res.pid,
 			username: res.username,
-			mii: res.mii,
+			mii: res.mii
 		});
 	} catch {
 		meStore.setMe(null);

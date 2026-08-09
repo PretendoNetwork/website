@@ -1,32 +1,35 @@
-import { Stripe } from "stripe";
-import { useMailer } from "./mailer";
-import { PnidDocument, usePapr } from "./papr";
-import { Transporter } from "nodemailer";
-import { PaprMatchKeysAndValues } from "papr";
+import { useMailer } from './mailer';
+import { usePapr } from './papr';
+import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole, removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole, useDiscord } from './discord';
+import type { Transporter } from 'nodemailer';
+import type { PaprMatchKeysAndValues } from 'papr';
+import type { Stripe } from 'stripe';
 import type { H3Event } from 'h3';
-import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole, removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole, useDiscord } from "./discord";
+import type { PnidDocument } from './papr';
 
-async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Customer, ops: { pid: number, title: string, body: string }): Promise<void> {
+async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Customer, ops: { pid: number; title: string; body: string }): Promise<void> {
 	try {
-		if (!customer.email) throw new Error("Customer does not have an email");
+		if (!customer.email) {
+			throw new Error('Customer does not have an email');
+		}
 		await mailer.sendMail({
 			to: customer.email,
 			subject: ops.title,
-			text: ops.body,
+			text: ops.body
 		});
 	} catch (error) {
 		console.error(`Error sending email | ${customer.id}, ${ops.pid}, ${customer.email} |`, error);
 	}
 }
 
-async function sendToNotificationEmails(mailer: Transporter, notificationEmails: string[], ops: { title: string, body: string }): Promise<void> {
+async function sendToNotificationEmails(mailer: Transporter, notificationEmails: string[], ops: { title: string; body: string }): Promise<void> {
 	for (const email of notificationEmails) {
 		// * Send notification emails for new sub
 		try {
 			await mailer.sendMail({
 				to: email,
 				subject: `[Pretendo] - ${ops.title}`,
-				text: ops.body,
+				text: ops.body
 			});
 		} catch (error) {
 			console.error(`Error sending notification email | ${email} |`, error);
@@ -49,7 +52,9 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 	if (webhook.type === 'customer.subscription.updated' || webhook.type === 'customer.subscription.deleted') {
 		const subscription = webhook.data.object;
 		const subscriptionItem = subscription.items.data[0];
-		if (!subscriptionItem) throw new Error("No subscription item subscription");
+		if (!subscriptionItem) {
+			throw new Error('No subscription item subscription');
+		}
 		const product = await stripe.products.retrieve(subscriptionItem.plan.product as string);
 		const customer = await stripe.customers.retrieve(subscription.customer as string);
 
@@ -69,7 +74,9 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 
 					const invoice = await stripe.invoices.retrieve(subscription.latest_invoice as string);
 					const intent = invoice.payments?.data[0]?.payment.payment_intent;
-					if (!intent) throw new Error("No intent found")
+					if (!intent) {
+						throw new Error('No intent found');
+					}
 					await stripe.refunds.create({
 						payment_intent: intent as string
 					});
@@ -81,7 +88,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					pid: 0,
 					title: 'Pretendo Network Subscription Failed - No Linked PNID',
 					body: `Your recent subscription to Pretendo Network has failed.\nThis is due to no PNID PID being linked to the Stripe customer account used. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}`
-				})
+				});
 			} else {
 				console.error(`Stripe user ${customer.id} has no PNID linked!`);
 			}
@@ -104,7 +111,9 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					if (subscription.latest_invoice) {
 						const invoice = await stripe.invoices.retrieve(subscription.latest_invoice as string);
 						const intent = invoice.payments?.data[0]?.payment.payment_intent;
-						if (!intent) throw new Error("No intent found")
+						if (!intent) {
+							throw new Error('No intent found');
+						}
 						await stripe.refunds.create({
 							payment_intent: intent as string
 						});
@@ -117,7 +126,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 					pid: 0,
 					title: 'Pretendo Network Subscription Failed - PNID Not Found',
 					body: `Your recent subscription to Pretendo Network has failed.\nThis is due to the provided PNID not being found. The subscription has been canceled and refunded. Please contact Jon immediately.\nStripe Customer ID: ${customer.id}\nPNID PID: ${pid}`
-				})
+				});
 			} else {
 				console.error(`PNID PID ${pid} does not exist! Found on Stripe user ${customer.id}!`);
 			}
@@ -235,7 +244,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Active`,
 				body: `Thank you for purchasing the ${product.name} tier! We greatly value your support, thank you for helping keep Pretendo Network alive!\nIt may take a moment for your account dashboard to reflect these changes. Please wait a moment and refresh the dashboard to see them!`
-			})
+			});
 
 			if (discord && discordId && product.metadata.discord_role_id) {
 				await assignDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
@@ -245,14 +254,14 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `New ${product.name} subscription`,
-				body: `${pnid.username} just became a ${product.name} tier subscriber`,
-			})
+				body: `${pnid.username} just became a ${product.name} tier subscriber`
+			});
 		} else if (subscription.status === 'canceled') {
 			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Canceled`,
 				body: `Your subscription for the ${product.name} tier has been canceled. We thank for your previous support, and hope you still enjoy the network! `
-			})
+			});
 
 			if (discord && discordId && product.metadata.discord_role_id) {
 				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
@@ -262,14 +271,14 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Canceled ${product.name} subscription`,
-				body: `${pnid.username} just canceled their ${product.name} tier subscription`,
-			})
+				body: `${pnid.username} just canceled their ${product.name} tier subscription`
+			});
 		} else if (subscription.status === 'unpaid') {
 			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - Unpaid`,
 				body: `Your subscription for the ${product.name} tier has been canceled due to non payment. We thank for your previous support, and hope you still enjoy the network! `
-			})
+			});
 
 			if (discord && discordId && product.metadata.discord_role_id) {
 				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
@@ -279,14 +288,14 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,
-				body: `${pnid.username}'s ${product.name} tier subscription has been canceled due to non payment`,
-			})
+				body: `${pnid.username}'s ${product.name} tier subscription has been canceled due to non payment`
+			});
 		} else {
 			await sendEmailToCustomer(mailer, customer, {
 				pid,
 				title: `Pretendo Network ${product.name} Subscription - ${subscription.status}`,
 				body: `Your subscription for the ${product.name} tier has changed status to ${subscription.status}. This is usually caused by payment failure. Your account has been reverted back to default until payment resumes. If you believe this to be an error, please reach out for support on our Discord server, and we thank you for your previous support!`
-			})
+			});
 
 			if (discord && discordId && product.metadata.discord_role_id) {
 				await removeDiscordMemberSupporterRole(discord, discordId, product.metadata.discord_role_id).catch((error) => {
@@ -296,8 +305,8 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 
 			await sendToNotificationEmails(mailer, notificationEmails, {
 				title: `Removed ${product.name} subscription`,
-				body: `${pnid.username}'s ${product.name} tier subscription status has been changed to ${subscription.status}`,
-			})
+				body: `${pnid.username}'s ${product.name} tier subscription status has been changed to ${subscription.status}`
+			});
 		}
 	}
 }

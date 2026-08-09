@@ -1,9 +1,11 @@
-import { ApiAuthLogin, RegisterSchema } from "#shared/api-types"
+import { RegisterSchema } from '#shared/api-types';
+import type { ApiAuthLogin } from '#shared/api-types';
 
 export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 	const body = await readZodBody(event, RegisterSchema);
 	const grpc = useApiGrpc(event);
 
+	// eslint-disable-next-line no-useless-catch -- Temp before error handling is implemented
 	try {
 		// TODO Add ip
 		// TODO Add birthday
@@ -13,7 +15,7 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			captchaResponse: body.captchaResponse,
 			username: body.username,
 			password: body.password,
-			passwordConfirm: body.password,
+			passwordConfirm: body.password
 		});
 
 		return {
@@ -21,6 +23,7 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			refreshToken: res.refreshToken
 		};
 	} catch (error: unknown) {
+		// TODO handle errors
 		throw error;
 	}
 });

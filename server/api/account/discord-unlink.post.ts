@@ -1,18 +1,20 @@
-import { removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole } from "~~/server/utils/discord";
+import { removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole } from '~~/server/utils/discord';
 
 export default defineEventHandler(async (event): Promise<void> => {
 	const auth = enforceLoggedIn(event);
 	const discord = useDiscord(event);
-	if (!discord) throw createError({
-		status: 400,
-		message: 'Discord integration not configured',
-	})
+	if (!discord) {
+		throw createError({
+			status: 400,
+			message: 'Discord integration not configured'
+		});
+	}
 
 	const grpc = useApiGrpcWithToken(event, auth.token);
 	const oldUserData = await grpc.getUserData({});
 	const oldDiscordId = oldUserData.connections?.discord?.id;
 	await grpc.setDiscordConnectionData({
-		id: '',
+		id: ''
 	});
 
 	const priceId = oldUserData.connections?.stripe?.priceId;

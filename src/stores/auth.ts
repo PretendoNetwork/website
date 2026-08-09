@@ -1,3 +1,4 @@
+/* eslint-disable no-self-assign -- Self assign is needed for refresh cookies */
 import type { CookieOptions } from '#app';
 
 type AuthState = {
@@ -73,6 +74,6 @@ export function useAuthStore() {
 		getToken,
 		refresh,
 		set,
-		logout,
+		logout
 	};
 }

@@ -1,5 +1,5 @@
-import { GetUserDataResponse } from "@pretendonetwork/grpc/api/get_user_data_rpc";
-import { createHmac } from "node:crypto";
+import { createHmac } from 'node:crypto';
+import type { GetUserDataResponse } from '@pretendonetwork/grpc/api/get_user_data_rpc';
 
 function getDicourseSignature(secret: string, payload: string) {
 	return createHmac('sha256', secret).update(payload).digest('hex');
@@ -42,7 +42,7 @@ export default defineEventHandler(async (event) => {
 		const redirect = `/sso/discourse?${redirectUrlParams}`;
 
 		const urlParams = new URLSearchParams();
-		urlParams.append('redirect', redirect)
+		urlParams.append('redirect', redirect);
 		return sendRedirect(event, `/login?${urlParams}`); // Not logged in, redirect to login
 	}
 

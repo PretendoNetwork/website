@@ -1,24 +1,30 @@
-import { ApiAccountTiers, TierItem } from "~~/shared/api-types";
+import type { ApiAccountTiers, TierItem } from '~~/shared/api-types';
 
 export default defineEventHandler(async (event): Promise<ApiAccountTiers> => {
 	enforceLoggedIn(event);
 	const stripe = useStripe(event);
-	if (!stripe) throw createError({
-		status: 400,
-		message: 'Stripe integration not configured',
-	})
+	if (!stripe) {
+		throw createError({
+			status: 400,
+			message: 'Stripe integration not configured'
+		});
+	}
 
 	const prices = await stripe.prices.list().autoPagingToArray({ limit: 10 });
 	const products = await stripe.products.list().autoPagingToArray({ limit: 10 });
 
 	const tiers: TierItem[] = [];
 
-	for (let product of products) {
-		if (!product.active) continue;
+	for (const product of products) {
+		if (!product.active) {
+			continue;
+		}
 		const price = prices.find(price => price.id === product.default_price);
-		if (!price) continue;
+		if (!price) {
+			continue;
+		}
 
-		const tierLevel = Number(product.metadata.tier_level ?? "0");
+		const tierLevel = Number(product.metadata.tier_level ?? '0');
 		const hasDiscordReadPerk = product.metadata.discord_read === 'true';
 		const hasBetaAccessPerk = product.metadata.beta === 'true';
 
@@ -31,12 +37,12 @@ export default defineEventHandler(async (event): Promise<ApiAccountTiers> => {
 			description: product.description,
 			perks: {
 				discordRead: hasDiscordReadPerk,
-				beta: hasBetaAccessPerk,
-			},
-		})
+				beta: hasBetaAccessPerk
+			}
+		});
 	}
 
 	return {
-		tiers,
-	}
+		tiers
+	};
 });

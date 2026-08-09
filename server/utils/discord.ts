@@ -1,17 +1,17 @@
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v10';
-import type { H3Event } from 'h3'
+import type { H3Event } from 'h3';
 
-type DiscordIds = { guildId: string, supporterRoleId: string | null, testerRoleId: string | null }
+type DiscordIds = { guildId: string; supporterRoleId: string | null; testerRoleId: string | null };
 
 type DiscordInstance = {
-	rest: REST,
-	clientId: string,
-	clientSecret: string,
-	baseUrl: string,
-	ids: DiscordIds,
-	makeCallbackUrl: () => string,
-}
+	rest: REST;
+	clientId: string;
+	clientSecret: string;
+	baseUrl: string;
+	ids: DiscordIds;
+	makeCallbackUrl: () => string;
+};
 
 let discordInstance: DiscordInstance | null = null;
 
@@ -21,18 +21,18 @@ export function useDiscord(event: H3Event): DiscordInstance | null {
 		if (config.discordBotToken && config.discordGuildId && config.discordClientId && config.discordClientSecret) {
 			discordInstance = {
 				rest: new REST({ version: '10' }).setToken(config.discordBotToken),
-				baseUrl: "https://discord.com/api/v10",
+				baseUrl: 'https://discord.com/api/v10',
 				clientId: config.discordClientId,
 				clientSecret: config.discordClientSecret,
 				ids: {
 					guildId: config.discordGuildId,
 					testerRoleId: config.discordTesterRoleId ? config.discordTesterRoleId : null,
-					supporterRoleId: config.discordSupporterRoleId ? config.discordSupporterRoleId : null,
+					supporterRoleId: config.discordSupporterRoleId ? config.discordSupporterRoleId : null
 				},
 				makeCallbackUrl() {
-					return new URL('/account/connect/discord', config.public.baseUrl).toString()
-				},
-			}
+					return new URL('/account/connect/discord', config.public.baseUrl).toString();
+				}
+			};
 		}
 	}
 

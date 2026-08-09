@@ -1,4 +1,4 @@
-import { Octokit } from "octokit";
+import type { Octokit } from 'octokit';
 
 export type GithubProjectTaskStatus = 'completed' | 'inprogress' | 'notstarted';
 
@@ -7,17 +7,17 @@ export type GithubProject = {
 	url: string;
 	tasks: Array<{
 		title: string;
-		status: GithubProjectTaskStatus,
-	}>
-}
+		status: GithubProjectTaskStatus;
+	}>;
+};
 
 export type GithubProjectResponse = {
 	projects: GithubProject[];
-}
+};
 
-const orgName = "PretendoNetwork";
+const orgName = 'PretendoNetwork';
 const cacheMaxAgeMs = 60 * 60 * 1000; // 1 hour
-let cache: { response: GithubProjectResponse, createdAt: Date } | null = null;
+let cache: { response: GithubProjectResponse; createdAt: Date } | null = null;
 
 const getProjectsV2GQL = `
 query getProjectsV2($orgName: String!, $cursor: String) {
@@ -79,7 +79,7 @@ query getProjectsV2Fields($id: ID!, $cursor: String) {
 `;
 
 async function getGitHubProjectsV2(octokit: Octokit) {
-	const projects: Array<{ id: string, title: string, url: string | null }> = [];
+	const projects: Array<{ id: string; title: string; url: string | null }> = [];
 
 	const data = await octokit.graphql.paginate(getProjectsV2GQL, {
 		orgName: orgName
@@ -89,7 +89,7 @@ async function getGitHubProjectsV2(octokit: Octokit) {
 		projects.push({
 			id: node.id,
 			title: node.title,
-			url: node.repositories.nodes[0]?.url ?? null,
+			url: node.repositories.nodes[0]?.url ?? null
 		});
 	}
 
@@ -97,7 +97,7 @@ async function getGitHubProjectsV2(octokit: Octokit) {
 }
 
 async function getGitHubProjectsV2Fields(octokit: Octokit, id: string) {
-	const output: Array<{ title: string, column: string }> = [];
+	const output: Array<{ title: string; column: string }> = [];
 
 	const data: any = await octokit.graphql.paginate(getProjectsV2FieldsGQL, {
 		id: id
@@ -125,7 +125,7 @@ async function getGithubProjectsData(octokit: Octokit): Promise<GithubProjectRes
 		const projectOutput: GithubProject = {
 			title: project.title,
 			url: project.url,
-			tasks: [],
+			tasks: []
 		};
 
 		const fields = await getGitHubProjectsV2Fields(octokit, project.id);
@@ -133,24 +133,26 @@ async function getGithubProjectsData(octokit: Octokit): Promise<GithubProjectRes
 		const fieldMap: Record<string, GithubProjectTaskStatus> = {
 			done: 'completed',
 			in_progress: 'inprogress',
-			todo: 'notstarted',
-		}
+			todo: 'notstarted'
+		};
 
 		for (const field of fields) {
 			const normalizedStatus = field.column.toLowerCase().replace(' ', '_');
 			const status = fieldMap[normalizedStatus];
-			if (!status) continue;
+			if (!status) {
+				continue;
+			}
 			projectOutput.tasks.push({
 				status,
-				title: field.title,
-			})
+				title: field.title
+			});
 		}
 
 		output.push(projectOutput);
 	}
 
 	return {
-		projects: output,
+		projects: output
 	};
 }
 
@@ -159,8 +161,8 @@ export async function getGithubProjects(octokit: Octokit | null, ignoreCache = f
 		// No github credentials, assume there are no projects
 		if (!octokit) {
 			return {
-				projects: [],
-			}
+				projects: []
+			};
 		}
 
 		cache = {

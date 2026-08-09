@@ -1,18 +1,18 @@
-import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole } from "~~/server/utils/discord";
+import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole } from '~~/server/utils/discord';
 
 type DiscordTokenResponse = {
-	"access_token": string,
-	"token_type": string,
-	"expires_in": number,
-	"refresh_token": string,
-	"scope": string
-}
+	access_token: string;
+	token_type: string;
+	expires_in: number;
+	refresh_token: string;
+	scope: string;
+};
 
 type DiscordUserResponse = {
-	"user"?: {
-		id: string,
-	}
-}
+	user?: {
+		id: string;
+	};
+};
 
 // Discord oauth callback
 export default defineEventHandler(async (event) => {
@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
 	}
 
 	const discordFetch = $fetch.create({
-		baseURL: discord.baseUrl,
+		baseURL: discord.baseUrl
 	});
 	const accessTokenCookie = getCookie(event, 'access_token');
 	const query = getQuery(event);
@@ -34,14 +34,14 @@ export default defineEventHandler(async (event) => {
 
 	const tokens = await discordFetch<DiscordTokenResponse>('/oauth2/token', {
 		body: new URLSearchParams({
-			'grant_type': 'authorization_code',
-			'code': authCode,
-			'redirect_uri': discord.makeCallbackUrl(),
+			grant_type: 'authorization_code',
+			code: authCode,
+			redirect_uri: discord.makeCallbackUrl()
 		})
 	});
 	const authInfo = await discordFetch<DiscordUserResponse>('/oauth2/@me', {
 		headers: {
-			'Authorization': `Bearer ${tokens.access_token}`
+			Authorization: `Bearer ${tokens.access_token}`
 		}
 	});
 	if (!authInfo.user) {

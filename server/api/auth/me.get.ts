@@ -1,4 +1,4 @@
-import type { GetApiAuthMe } from "#shared/api-types"
+import type { GetApiAuthMe } from '#shared/api-types';
 
 export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 	const auth = enforceLoggedIn(event);
@@ -8,9 +8,11 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 	return {
 		pid: data.pid,
 		username: data.username,
-		mii: data.mii ? {
-			imageUrl: `https://r2-cdn.pretendo.cc/mii/${data.pid}/normal_face.png`,
-			name: data.mii.name,
-		} : null,
+		mii: data.mii
+			? {
+					imageUrl: `https://r2-cdn.pretendo.cc/mii/${data.pid}/normal_face.png`,
+					name: data.mii.name
+				}
+			: null
 	};
 });

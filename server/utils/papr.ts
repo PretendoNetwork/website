@@ -1,6 +1,6 @@
-import { MongoClient } from "mongodb";
-import Papr, { schema, types } from "papr"
-import type { H3Event } from 'h3'
+import { MongoClient } from 'mongodb';
+import Papr, { schema, types } from 'papr';
+import type { H3Event } from 'h3';
 
 const papr = new Papr();
 let conn: MongoClient | null = null;
@@ -17,10 +17,10 @@ const pnidSchema = schema({
 			price_id: types.string(),
 			tier_level: types.number(),
 			tier_name: types.string(),
-			latest_webhook_timestamp: types.number(),
+			latest_webhook_timestamp: types.number()
 		}),
 		discord: types.object({
-			id: types.string(),
+			id: types.string()
 		})
 	})
 });
@@ -29,7 +29,7 @@ export type PnidDocument = (typeof pnidSchema)[0];
 
 const paprInstance = {
 	papr,
-	Pnid,
+	Pnid
 } as const;
 
 export type PaprInstance = typeof paprInstance;

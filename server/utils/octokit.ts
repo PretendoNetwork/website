@@ -1,5 +1,5 @@
-import { Octokit } from "octokit"
-import type { H3Event } from 'h3'
+import { Octokit } from 'octokit';
+import type { H3Event } from 'h3';
 
 let octokit: Octokit | null = null;
 

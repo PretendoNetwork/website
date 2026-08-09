@@ -140,10 +140,15 @@ function titleSuffixHandler(path: string) {
         <h2 class="title">
           <a href="/progress">{{ $t("progress.title") }} ({{ progress.data.value?.completion ?? 0 }}%)</a>
         </h2>
-				<div v-for="project of progress.data.value?.items ?? []" :key="project.title">
-					<p>{{ project.title }} [{{ project.completion }}%]</p>
-				</div>
-				<p v-if="(progress.data.value?.items ?? []).length === 0">No projects</p>
+        <div
+          v-for="project of progress.data.value?.items ?? []"
+          :key="project.title"
+        >
+          <p>{{ project.title }} [{{ project.completion }}%]</p>
+        </div>
+        <p v-if="(progress.data.value?.items ?? []).length === 0">
+          No projects
+        </p>
       </div>
     </section>
 

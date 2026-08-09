@@ -470,23 +470,32 @@ onMounted(() => {
         v-if="user"
         class="user-widget-wrapper logged-in"
       >
-        <div class="user-widget-toggle" @click="widgetOpen = true">
+        <div
+          class="user-widget-toggle"
+          @click="widgetOpen = true"
+        >
           <img
             :src="user.mii?.imageUrl ?? '#'"
-						:alt="user.mii?.name ?? ''"
+            :alt="user.mii?.name ?? ''"
           >
         </div>
-        <div class="user-widget" :class="{
-					'active': widgetOpen
-				}">
+        <div
+          class="user-widget"
+          :class="{
+            'active': widgetOpen
+          }"
+        >
           <div class="user-avatar">
             <img
-            	:src="user.mii?.imageUrl ?? '#'"
+              :src="user.mii?.imageUrl ?? '#'"
               :alt="user.mii?.name ?? ''"
             >
           </div>
           <div class="user-info">
-            <div v-if="user.mii" class="mii-name">
+            <div
+              v-if="user.mii"
+              class="mii-name"
+            >
               {{ user.mii.name }}
             </div>
             <div class="pnid">

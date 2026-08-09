@@ -73,10 +73,10 @@ export default defineNuxtConfig({
 
 	icon: {
 		clientBundle: {
-			scan: true,
+			scan: true
 		},
 		provider: 'none',
-		serverBundle: "local",
+		serverBundle: 'local'
 	},
 
 	components: [
