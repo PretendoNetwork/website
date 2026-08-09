@@ -48,6 +48,7 @@ export default defineNuxtConfig({
 		discordGuildId: '',
 		discordTesterRoleId: '',
 		discordSupporterRoleId: '',
+		discourseSsoSecret: '',
 
 		public: {
 			apiBase: 'https://api.pretendo.cc',
