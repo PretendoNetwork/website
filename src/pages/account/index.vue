@@ -1,14 +1,74 @@
 <script setup lang="ts">
+import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
+
 definePageMeta({
 	needsAuth: true
 });
 
-const me = useMeStore();
+const { data: profile } = await useApiFetch('/api/auth/me', { });
+
+async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment']) {
+	try {
+		await apiFetch('/api/account/update', {
+			method: 'PATCH',
+			body: {
+				environment: env
+			} satisfies ApiAccountUpdateRequest
+		});
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
+
+async function deleteAccount() {
+	try {
+		await apiFetch('/api/account/delete', {
+			method: 'POST'
+		});
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
+
+async function linkDiscord() {
+	try {
+		const result = await apiFetch('/api/account/discord-link', {
+			method: 'GET'
+		});
+		await navigateTo(result.url, { external: true });
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
 </script>
 
 <template>
-  <div>
-    <h1>Hello {{ me.user?.username }}</h1>
+  <div v-if="profile">
+    <h1>Hello {{ profile.username }}</h1>
     <p>TODO: account stub page</p>
+    <div :style="{ border: '1px solid white', margin: '2rem 0' }">
+      <p>Environment ({{ profile.serverAccessLevel }})</p>
+      <button @click="updateServerEnvironment('prod')">
+        Prod
+      </button>
+      <button @click="updateServerEnvironment('test')">
+        Test
+      </button>
+      <button @click="updateServerEnvironment('dev')">
+        Dev
+      </button>
+    </div>
+    <button @click="linkDiscord()">
+      Link discord
+    </button>
+    <button
+      :style="{ color: 'red' }"
+      @click="deleteAccount()"
+    >
+      Delete account
+    </button>
   </div>
 </template>
