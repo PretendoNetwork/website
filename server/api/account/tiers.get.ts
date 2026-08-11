@@ -4,10 +4,7 @@ export default defineEventHandler(async (event): Promise<ApiAccountTiers> => {
 	enforceLoggedIn(event);
 	const stripe = useStripe(event);
 	if (!stripe) {
-		throw createError({
-			status: 400,
-			message: 'Stripe integration not configured'
-		});
+		throw createApiError('INTEGRATION_DISABLED');
 	}
 
 	const prices = await stripe.prices.list().autoPagingToArray({ limit: 10 });

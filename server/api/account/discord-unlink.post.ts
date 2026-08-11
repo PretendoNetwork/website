@@ -4,10 +4,7 @@ export default defineEventHandler(async (event): Promise<void> => {
 	const auth = enforceLoggedIn(event);
 	const discord = useDiscord(event);
 	if (!discord) {
-		throw createError({
-			status: 400,
-			message: 'Discord integration not configured'
-		});
+		throw createApiError('INTEGRATION_DISABLED');
 	}
 
 	const grpc = useApiGrpcWithToken(event, auth.token);

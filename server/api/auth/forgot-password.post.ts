@@ -7,10 +7,7 @@ export default defineEventHandler(async (event): Promise<void> => {
 
 	const captchaResult = await hcaptchaVerify(event, body.captchaResponse);
 	if (!captchaResult) {
-		throw createError({
-			status: 400,
-			message: 'Invalid captcha'
-		});
+		throw createApiError('INVALID_CAPTCHA');
 	}
 
 	await grpc.forgotPassword({

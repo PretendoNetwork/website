@@ -34,7 +34,6 @@ export default defineNuxtConfig({
 		githubApiToken: '',
 		stripeSecretKey: '',
 		stripeNotificationEmail: '',
-		hcaptchaSiteKey: '',
 		hcaptchaSecretKey: '',
 		grpcHost: '',
 		grpcApiKey: '',
@@ -57,7 +56,7 @@ export default defineNuxtConfig({
 		public: {
 			baseUrl: 'https://pretendo.network',
 			apiBase: 'https://api.pretendo.cc',
-			hCaptchaSitekey: '',
+			hcaptchaSiteKey: '',
 			cookieSecure: false
 		}
 	},

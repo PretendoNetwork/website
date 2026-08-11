@@ -13,7 +13,7 @@ export async function hcaptchaVerify(event: H3Event, captchaResponse: string | n
 	if (!captchaResponse) {
 		return false;
 	} // No captcha filled in, invalid
-	const captchaVerify = await hcaptcha.verify(config.hcaptchaSiteKey, captchaResponse, undefined, config.hcaptchaSiteKey);
+	const captchaVerify = await hcaptcha.verify(config.hcaptchaSecretKey, captchaResponse, undefined, config.public.hcaptchaSiteKey);
 
 	if (!captchaVerify.success) {
 		return false;

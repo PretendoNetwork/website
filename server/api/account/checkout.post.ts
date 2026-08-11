@@ -8,10 +8,7 @@ export default defineEventHandler(async (event): Promise<ApiAccountCheckoutLink>
 	const stripe = useStripe(event);
 	const config = useRuntimeConfig(event);
 	if (!stripe || !papr) {
-		throw createError({
-			status: 400,
-			message: 'Stripe integration not configured'
-		});
+		throw createApiError('INTEGRATION_DISABLED');
 	}
 
 	const body = await readZodBody(event, CheckoutSchema);
@@ -30,10 +27,7 @@ export default defineEventHandler(async (event): Promise<ApiAccountCheckoutLink>
 
 	// ensure PNID always has latest customer ID
 	if (auth.accessLevel >= 2) {
-		throw createError({
-			status: 400,
-			message: 'Staff members do not need to purchase tiers'
-		});
+		throw createApiError('STAFF_NO_DONATE');
 	}
 	await papr.Pnid.updateOne({ pid: auth.pid }, {
 		$set: {

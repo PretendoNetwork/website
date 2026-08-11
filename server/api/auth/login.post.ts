@@ -1,4 +1,4 @@
-import { ServerError } from 'nice-grpc';
+import { ClientError } from 'nice-grpc';
 import { LoginSchema } from '#shared/api-types';
 import type { ApiAuthLogin } from '#shared/api-types';
 
@@ -18,18 +18,12 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			refreshToken: res.refreshToken
 		};
 	} catch (error: unknown) {
-		if (error instanceof ServerError) {
+		if (error instanceof ClientError) {
 			if (error.details === 'INVALID_ARGUMENT: User not found') {
-				throw createError({
-					status: 400,
-					message: 'User not found'
-				});
+				throw createApiError('INVALID_USERNAME');
 			}
 			if (error.details === 'INVALID_ARGUMENT: Password is incorrect') {
-				throw createError({
-					status: 400,
-					message: 'Password was incorrect'
-				});
+				throw createApiError('INVALID_PASSWORD');
 			}
 		}
 		throw error;
