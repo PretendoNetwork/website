@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const slug = useRoute().params.slug;
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 	return queryCollection('blog').path(`/blog/${slug}`).first();
@@ -31,7 +31,10 @@ useHead({
 
 <template>
   <div class="card-wrap">
-    <div class="blog-card">
+    <div
+      v-if="post"
+      class="blog-card"
+    >
       <h1 class="title">
         {{ post.title }}
       </h1>
