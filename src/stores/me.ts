@@ -17,6 +17,7 @@ export const useMeStore = defineStore('me', () => {
 	}
 
 	function clear(): void {
+		loaded.value = false;
 		data.value = null;
 	}
 

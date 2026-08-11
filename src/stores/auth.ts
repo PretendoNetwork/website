@@ -64,6 +64,7 @@ export function useAuthStore() {
 			refreshTokenCookie.value = null;
 			tokenTypeCookie.value = null;
 		}
+		useMeStore().clear();
 	}
 
 	function logout() {

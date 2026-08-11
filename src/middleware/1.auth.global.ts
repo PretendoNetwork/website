@@ -7,6 +7,7 @@ export default defineNuxtRouteMiddleware(async () => {
 	} // Already loaded
 
 	const authStore = useAuthStore();
+	authStore.refresh();
 	const token = authStore.getToken();
 	if (!token) {
 		meStore.setMe(null);
