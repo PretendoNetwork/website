@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
-import { FetchError } from 'ofetch';
+import type { ApiAuthRegisterRequest } from '~~/shared/api-types';
 
 const route = useRoute();
 const redirect = computed(() => route.query.redirect);
@@ -15,9 +15,15 @@ async function registerSubmission() {
 	try {
 		const hCaptchaResponse = invisibleHcaptcha.value ? (await invisibleHcaptcha.value.executeAsync()).response : null;
 
-		await $fetch('/api/account/register', {
+		await $fetch('/api/auth/register', {
 			method: 'POST',
-			body: { ...registerForm, hCaptchaResponse }
+			body: {
+				email: registerForm.email,
+				miiName: registerForm.mii_name,
+				password: registerForm.password,
+				username: registerForm.username,
+				captchaResponse: hCaptchaResponse ?? undefined
+			} satisfies ApiAuthRegisterRequest
 		});
 
 		if (typeof redirect.value === 'string') {
@@ -26,16 +32,13 @@ async function registerSubmission() {
 			await navigateTo('/account');
 		}
 	} catch (error: unknown) {
-		if (error instanceof FetchError) {
-			errorMessage.value = error.message;
-		} else {
-			if (error === 'challenge-closed') { // Thrown if the captcha is closed, can be safely ignored
-				return;
-			}
-
-			errorMessage.value = `Error during registration: ${error}`; // TODO: localize
+		if (error === 'challenge-closed') {
+			// Thrown if the captcha is closed, can be safely ignored
+			return;
 		}
 
+		const err = getApiError(error);
+		errorMessage.value = err.code;
 		setTimeout(() => { // TODO: replace this toast
 			errorMessage.value = null;
 		}, 5000);
@@ -119,9 +122,9 @@ async function registerSubmission() {
       </form>
     </div>
     <vue-hcaptcha
-      v-if="$config.public.hCaptchaSitekey"
+      v-if="$config.public.hcaptchaSiteKey"
       ref="invisibleHcaptcha"
-      :sitekey="$config.public.hCaptchaSitekey"
+      :sitekey="$config.public.hcaptchaSiteKey"
       class="h-captcha"
       size="invisible"
     />

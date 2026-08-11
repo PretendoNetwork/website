@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { FetchError } from 'ofetch';
-
 const route = useRoute();
 const auth = useAuthStore();
 const redirect = computed(() => route.query.redirect);
@@ -29,11 +27,8 @@ async function loginSubmission() {
 			await navigateTo('/account');
 		}
 	} catch (error: unknown) {
-		if (error instanceof FetchError) {
-			errorMessage.value = error.message;
-		} else {
-			errorMessage.value = `Error during login: ${error}`; // TODO: localize
-		}
+		const err = getApiError(error);
+		errorMessage.value = err.code;
 
 		setTimeout(() => { // TODO: replace this toast
 			errorMessage.value = null;
