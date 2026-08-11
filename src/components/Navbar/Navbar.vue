@@ -2,6 +2,7 @@
 const { locales, setLocale } = useI18n();
 
 const me = useMeStore();
+const authStore = useAuthStore();
 const user = computed(() => me.user);
 
 const widgetOpen = ref(false);
@@ -508,11 +509,12 @@ onMounted(() => {
                 {{ $t("nav.accountWidget.settings") }}
               </button>
             </a>
-            <a href="/account/logout">
-              <button class="button logout">
-                {{ $t("nav.accountWidget.logout") }}
-              </button>
-            </a>
+            <button
+              class="button logout"
+              @click="authStore.logout()"
+            >
+              {{ $t("nav.accountWidget.logout") }}
+            </button>
           </div>
         </div>
       </div>
