@@ -52,10 +52,11 @@ export default defineNuxtConfig({
 		discordTesterRoleId: '',
 		discordSupporterRoleId: '',
 		discourseSsoSecret: '',
+		apiBase: 'http://localhost:8056',
+		apiBaseHost: 'api.pretendo.cc',
 
 		public: {
 			baseUrl: 'https://pretendo.network',
-			apiBase: 'https://api.pretendo.cc',
 			hcaptchaSiteKey: '',
 			cookieSecure: false
 		}

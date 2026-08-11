@@ -3,6 +3,8 @@ import { z } from 'zod';
 export type GetApiAuthMe = {
 	pid: number;
 	username: string;
+	accessLevel: number;
+	serverAccessLevel: 'dev' | 'test' | 'prod';
 	mii: {
 		imageUrl: string;
 		name: string;

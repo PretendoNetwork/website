@@ -34,13 +34,14 @@ declare module 'nuxt/schema' {
 		discordSupporterRoleId: string;
 
 		discourseSsoSecret: string;
+
+		apiBase: string;
+		apiBaseHost: string;
 	}
 
 	interface PublicRuntimeConfig {
 		baseUrl: string;
-		apiBase: string;
 		cookieSecure: boolean;
-
 		hcaptchaSiteKey: string;
 	}
 }

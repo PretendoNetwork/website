@@ -8,6 +8,8 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 	return {
 		pid: data.pid,
 		username: data.username,
+		accessLevel: data.accessLevel,
+		serverAccessLevel: data.serverAccessLevel as any,
 		mii: data.mii
 			? {
 					imageUrl: `https://r2-cdn.pretendo.cc/mii/${data.pid}/normal_face.png`,
