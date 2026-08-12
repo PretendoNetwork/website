@@ -666,10 +666,14 @@ header div.dropdown-button-wrapper::after {
 }
 
 header nav button {
-	background: none !important;
+	background: none;
 	color: var(--text-shade-1);
 	margin: 0 17px;
 	padding: 0;
+}
+header nav button:hover {
+	background: none;
+	color: var(--text-shade-3);
 }
 
 header nav button.active {
