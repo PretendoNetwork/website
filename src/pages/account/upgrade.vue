@@ -6,7 +6,20 @@ definePageMeta({
 });
 
 const { data: tierData } = await useApiFetch('/api/account/tiers');
+const { data: profile } = await useApiFetch('/api/auth/me');
 const sortedTiers = computed(() => [...tierData.value?.tiers ?? []].sort((a, b) => a.tierLevel - b.tierLevel));
+
+async function unsubscribe() {
+	try {
+		await apiFetch('/api/account/unsubscribe', {
+			method: 'POST'
+		});
+		await navigateTo('/account');
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
 
 async function checkout(priceId: string) {
 	try {
@@ -21,6 +34,10 @@ async function checkout(priceId: string) {
 		const err = getApiError(error);
 		alert(err.code);
 	}
+}
+
+function hasSubscription(priceId: string) {
+	return profile.value?.stripeTier && priceId === profile.value.stripeTier.priceId;
 }
 </script>
 
@@ -45,7 +62,16 @@ async function checkout(priceId: string) {
         :src="tier.thumbnailUrl"
       >
       <p>Cost: {{ tier.priceCents }} cents</p>
-      <button @click="checkout(tier.priceId)">
+      <button
+        v-if="hasSubscription(tier.priceId)"
+        @click="unsubscribe()"
+      >
+        Unsubscribe
+      </button>
+      <button
+        v-else
+        @click="checkout(tier.priceId)"
+      >
         Checkout
       </button>
     </div>
