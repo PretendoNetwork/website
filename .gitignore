@@ -6,3 +6,6 @@
 dist
 node_modules
 .env
+
+# Old configuration ignored for safety
+config.json
