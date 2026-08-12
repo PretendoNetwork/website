@@ -115,6 +115,13 @@ async function registerSubmission() {
             required
           >
         </div>
+        <vue-hcaptcha
+          v-if="$config.public.hcaptchaSiteKey"
+          ref="hcaptcha"
+          :sitekey="$config.public.hcaptchaSiteKey"
+          class="h-captcha"
+          theme="dark"
+        />
         <div class="buttons">
           <button type="submit">
             {{ $t("account.loginForm.register") }}
@@ -126,13 +133,6 @@ async function registerSubmission() {
         </div>
       </form>
     </div>
-    <vue-hcaptcha
-      v-if="$config.public.hcaptchaSiteKey"
-      ref="invisibleHcaptcha"
-      :sitekey="$config.public.hcaptchaSiteKey"
-      class="h-captcha"
-      size="invisible"
-    />
     <div
       v-if="errorMessage"
       class="banner-notice error"
