@@ -6,6 +6,11 @@ export type GetApiAuthMe = {
 	accessLevel: number;
 	serverAccessLevel: 'dev' | 'test' | 'prod';
 	discordId: string | null;
+	stripeTier: {
+		subscriptionId: string;
+		priceId: string;
+		tierName: string;
+	} | null;
 	mii: {
 		imageUrl: string;
 		name: string;

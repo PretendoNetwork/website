@@ -18,7 +18,8 @@ export default defineEventHandler(async (event) => {
 				username: userData.username,
 				token: token,
 				accessLevel: userData.accessLevel,
-				email: userData.emailAddress
+				email: userData.emailAddress,
+				stripeSubscriptionId: userData.connections?.stripe?.subscriptionId ?? null
 			});
 		} catch (err) {
 			console.error('Failed to request user data: ', err);

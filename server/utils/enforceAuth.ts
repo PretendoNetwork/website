@@ -6,6 +6,7 @@ export type AuthContext = {
 	token: string;
 	email: string;
 	accessLevel: number;
+	stripeSubscriptionId: string | null;
 };
 
 export function setAuthContext(event: H3Event, context: AuthContext | null): void {
