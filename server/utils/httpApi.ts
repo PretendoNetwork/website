@@ -1,10 +1,15 @@
 import { request } from 'undici';
 import type { Dispatcher } from 'undici';
 
-export function useHttpApi(event: H3Event, token?: string) {
+export type HttpApiOptions = {
+	headers?: HeadersInit; body?: string; method?: Dispatcher.HttpMethod;
+};
+export type HttpApiFetch = <T>(url: string, ops?: HttpApiOptions) => Promise<T>;
+
+export function useHttpApi(event: H3Event, token?: string): HttpApiFetch {
 	const config = useRuntimeConfig(event);
 
-	return (url: string, opts: { headers?: HeadersInit; body?: string; method?: Dispatcher.HttpMethod } = {}) => {
+	async function httpFetch<T>(url: string, opts: HttpApiOptions = {}): Promise<T> {
 		const headers = new Headers(opts.headers);
 		headers.set('Host', config.apiBaseHost); // Can't use fetch due to Host header overwriting
 		if (token) {
@@ -12,10 +17,24 @@ export function useHttpApi(event: H3Event, token?: string) {
 		}
 
 		const urlWithBase = new URL(url, config.apiBase);
-		return request(urlWithBase, {
+		const response = await request(urlWithBase, {
 			method: opts.method,
 			headers: Object.fromEntries(headers.entries()),
 			body: opts?.body
 		});
-	};
+
+		if (response.statusCode >= 400) {
+			const err = new Error(`Request failed with ${response.statusCode}`);
+			try {
+				(err as any).data = await response.body.text();
+			} catch {
+				// It's already errored, we don't need to know the body
+			}
+			throw err;
+		}
+
+		return await response.body.json() as T;
+	}
+
+	return httpFetch;
 }
