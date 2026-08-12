@@ -5,7 +5,8 @@ definePageMeta({
 	needsAuth: true
 });
 
-const { data: profile } = await useApiFetch('/api/auth/me', { });
+const authStore = useAuthStore();
+const { data: profile, refresh } = await useApiFetch('/api/auth/me', { });
 
 async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment']) {
 	try {
@@ -15,6 +16,7 @@ async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment
 				environment: env
 			} satisfies ApiAccountUpdateRequest
 		});
+		await refresh();
 	} catch (error: unknown) {
 		const err = getApiError(error);
 		alert(err.code);
@@ -26,6 +28,8 @@ async function deleteAccount() {
 		await apiFetch('/api/account/delete', {
 			method: 'POST'
 		});
+		authStore.logout();
+		await navigateTo('/');
 	} catch (error: unknown) {
 		const err = getApiError(error);
 		alert(err.code);

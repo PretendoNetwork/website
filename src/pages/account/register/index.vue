@@ -3,6 +3,7 @@ import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
 import type { ApiAuthRegisterRequest } from '~~/shared/api-types';
 
 const route = useRoute();
+const auth = useAuthStore();
 const redirect = computed(() => route.query.redirect);
 const loginURI = computed(() => `/account/login${redirect.value ? `?redirect=${redirect.value}` : ''}`);
 
@@ -15,7 +16,7 @@ async function registerSubmission() {
 	try {
 		const hCaptchaResponse = invisibleHcaptcha.value ? (await invisibleHcaptcha.value.executeAsync()).response : null;
 
-		await $fetch('/api/auth/register', {
+		const res = await $fetch('/api/auth/register', {
 			method: 'POST',
 			body: {
 				email: registerForm.email,
@@ -24,6 +25,10 @@ async function registerSubmission() {
 				username: registerForm.username,
 				captchaResponse: hCaptchaResponse ?? undefined
 			} satisfies ApiAuthRegisterRequest
+		});
+		auth.set({
+			accessToken: res.accessToken,
+			refreshToken: res.refreshToken
 		});
 
 		if (typeof redirect.value === 'string') {
