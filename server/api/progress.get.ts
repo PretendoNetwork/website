@@ -13,7 +13,8 @@ export default defineEventHandler(async (event): Promise<GetProgress> => {
 	const items: ProgressItem[] = projects.map((v) => {
 		const totalTasks = v.tasks.length;
 		const completedTasks = v.tasks.filter(v => v.status === 'completed').length;
-		const percentage = Math.floor(completedTasks / totalTasks * 100);
+		const halfCompletedTasks = v.tasks.filter(v => v.status === 'inprogress').length;
+		const percentage = Math.floor((completedTasks + (halfCompletedTasks * 0.5)) / totalTasks * 100);
 
 		return {
 			title: v.title,
@@ -26,7 +27,7 @@ export default defineEventHandler(async (event): Promise<GetProgress> => {
 		};
 	});
 	const summedCompletion = items.reduce((a, v) => a + v.completion, 0);
-	const completionPercentage = Math.floor(summedCompletion / items.length * 100);
+	const completionPercentage = Math.floor(summedCompletion / items.length);
 
 	return {
 		completion: completionPercentage,
@@ -34,20 +35,6 @@ export default defineEventHandler(async (event): Promise<GetProgress> => {
 			currentCents: donationData.totalDonationsCents,
 			goalCents: donationGoalCents
 		},
-		items: projects.map((v) => {
-			const totalTasks = v.tasks.length;
-			const completedTasks = v.tasks.filter(v => v.status === 'completed').length;
-			const percentage = Math.floor(completedTasks / totalTasks * 100);
-
-			return {
-				title: v.title,
-				githubUrl: v.url,
-				completion: percentage,
-				tasks: v.tasks.map(task => ({
-					status: task.status,
-					title: task.title
-				}))
-			};
-		})
+		items
 	};
 });
