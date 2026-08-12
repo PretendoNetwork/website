@@ -68,11 +68,9 @@ query getProjectsV2($orgName: String!, $cursor: String) {
 async function getGitHubProjectsWithItemsV2(octokit: Octokit) {
 	const projects: Array<{ id: string; title: string; url: string | null; items: Array<{ title: string; column: string }> }> = [];
 
-	console.log('Get projects');
 	const data = await octokit.graphql.paginate(getProjectsWithItemsV2GQL, {
 		orgName: orgName
 	});
-	console.log('Finished get projects');
 
 	for (const node of data.organization.projectsV2.nodes) {
 		projects.push({

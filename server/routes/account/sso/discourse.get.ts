@@ -1,4 +1,5 @@
 import { createHmac } from 'node:crypto';
+import { ClientError } from 'nice-grpc';
 import type { GetUserDataResponse } from '@pretendonetwork/grpc/api/get_user_data_rpc';
 
 function getDicourseSignature(secret: string, payload: string) {
@@ -33,17 +34,24 @@ export default defineEventHandler(async (event) => {
 	let userData: GetUserDataResponse | null = null;
 	if (accessTokenCookie) {
 		const grpc = useApiGrpcWithToken(event, accessTokenCookie);
-		userData = await grpc.getUserData({});
+		try {
+			userData = await grpc.getUserData({});
+		} catch (err: unknown) {
+			const isTokenError = err instanceof ClientError && err.details === 'UNAUTHENTICATED: Missing or invalid authentication token';
+			if (!isTokenError) {
+				throw err;
+			}
+		}
 	}
 	if (!userData) {
 		const redirectUrlParams = new URLSearchParams();
 		redirectUrlParams.append('sso', query.sso.toString());
 		redirectUrlParams.append('sig', query.sig.toString());
-		const redirect = `/sso/discourse?${redirectUrlParams}`;
+		const redirect = `/account/sso/discourse?${redirectUrlParams}`;
 
 		const urlParams = new URLSearchParams();
 		urlParams.append('redirect', redirect);
-		return sendRedirect(event, `/login?${urlParams}`); // Not logged in, redirect to login
+		return sendRedirect(event, `/account/login?${urlParams}`); // Not logged in, redirect to login
 	}
 
 	// Build final payload for discourse

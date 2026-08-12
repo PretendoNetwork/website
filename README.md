@@ -105,7 +105,7 @@ Miscellanous tasks:
   - [x] Discord role syncing
   - [x] Login/logout
   - [x] Register
-  - [ ] Discourse SSO
+  - [x] Discourse SSO
   - [ ] HCaptcha
   - [ ] RSS feed
   - [ ] Stripe checkout

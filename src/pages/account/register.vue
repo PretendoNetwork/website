@@ -32,7 +32,7 @@ async function registerSubmission() {
 		});
 
 		if (typeof redirect.value === 'string') {
-			await navigateTo(redirect.value);
+			await navigateTo(redirect.value, { external: true });
 		} else {
 			await navigateTo('/account');
 		}
