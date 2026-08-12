@@ -5,6 +5,7 @@ export type GetApiAuthMe = {
 	username: string;
 	accessLevel: number;
 	serverAccessLevel: 'dev' | 'test' | 'prod';
+	discordId: string | null;
 	mii: {
 		imageUrl: string;
 		name: string;

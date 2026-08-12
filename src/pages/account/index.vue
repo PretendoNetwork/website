@@ -47,6 +47,18 @@ async function linkDiscord() {
 		alert(err.code);
 	}
 }
+
+async function unlinkDiscord() {
+	try {
+		await apiFetch('/api/account/discord-unlink', {
+			method: 'POST'
+		});
+		await refresh();
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
 </script>
 
 <template>
@@ -65,7 +77,16 @@ async function linkDiscord() {
         Dev
       </button>
     </div>
-    <button @click="linkDiscord()">
+    <button
+      v-if="profile.discordId"
+      @click="unlinkDiscord()"
+    >
+      Unlink {{ profile.discordId }} discord
+    </button>
+    <button
+      v-else
+      @click="linkDiscord()"
+    >
       Link discord
     </button>
     <button

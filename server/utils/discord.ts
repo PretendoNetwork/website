@@ -39,11 +39,13 @@ export function useDiscord(event: H3Event): DiscordInstance | null {
 	return discordInstance;
 }
 
-export async function assignDiscordMemberSupporterRole(discord: DiscordInstance, memberId: string, roleId: string) {
+export async function assignDiscordMemberSupporterRole(discord: DiscordInstance, memberId: string, roleId: string | null) {
 	if (discord.ids.supporterRoleId) {
 		await discord.rest.put(Routes.guildMemberRole(discord.ids.guildId, memberId, discord.ids.supporterRoleId));
 	}
-	await discord.rest.put(Routes.guildMemberRole(discord.ids.guildId, memberId, roleId));
+	if (roleId) {
+		await discord.rest.put(Routes.guildMemberRole(discord.ids.guildId, memberId, roleId));
+	}
 }
 
 export async function assignDiscordMemberTesterRole(discord: DiscordInstance, memberId: string) {
@@ -52,11 +54,13 @@ export async function assignDiscordMemberTesterRole(discord: DiscordInstance, me
 	}
 }
 
-export async function removeDiscordMemberSupporterRole(discord: DiscordInstance, memberId: string, roleId: string) {
+export async function removeDiscordMemberSupporterRole(discord: DiscordInstance, memberId: string, roleId: string | null) {
 	if (discord.ids.supporterRoleId) {
 		await discord.rest.delete(Routes.guildMemberRole(discord.ids.guildId, memberId, discord.ids.supporterRoleId));
 	}
-	await discord.rest.delete(Routes.guildMemberRole(discord.ids.guildId, memberId, roleId));
+	if (roleId) {
+		await discord.rest.delete(Routes.guildMemberRole(discord.ids.guildId, memberId, roleId));
+	}
 }
 
 export async function removeDiscordMemberTesterRole(discord: DiscordInstance, memberId: string) {
