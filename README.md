@@ -106,13 +106,13 @@ Miscellanous tasks:
   - [x] Login/logout
   - [x] Register
   - [x] Discourse SSO
-  - [ ] HCaptcha
+  - [x] HCaptcha
   - [x] RSS feed
   - [ ] Stripe checkout
   - [ ] Stripe donation progress
   - [ ] Stripe webhooks (+ mailing)
-  - [ ] Forgot password flow
+  - [x] Forgot password flow
   - [x] Delete account
   - [x] server environment changing
-  - [ ] Mii edits saving
+  - [x] Mii edits saving
   - [x] Auth cookies

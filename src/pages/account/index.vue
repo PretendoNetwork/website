@@ -6,7 +6,7 @@ definePageMeta({
 });
 
 const authStore = useAuthStore();
-const { data: profile, refresh } = await useApiFetch('/api/auth/me', { });
+const { data: profile, refresh } = await useApiFetch('/api/auth/me');
 
 async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment']) {
 	try {
@@ -59,6 +59,21 @@ async function unlinkDiscord() {
 		alert(err.code);
 	}
 }
+
+async function updateMii() {
+	try {
+		await apiFetch('/api/account/update', {
+			method: 'PATCH',
+			body: {
+				mii: { name: 'steve', primary: 'Y', data: 'AwAAQMjn20WghCBw2qjhdwOzuI0n2QAAAFhzAHQAZQB2AGUAAAAAAAAAAAAAACoWCgBLBQFoRBgm\r\nNEYUjRIJaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAALaT' }
+			} satisfies ApiAccountUpdateRequest
+		});
+		await refresh();
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(err.code);
+	}
+}
 </script>
 
 <template>
@@ -88,6 +103,11 @@ async function unlinkDiscord() {
       @click="linkDiscord()"
     >
       Link discord
+    </button>
+    <button
+      @click="updateMii()"
+    >
+      Update Mii
     </button>
     <button
       :style="{ color: 'red' }"
