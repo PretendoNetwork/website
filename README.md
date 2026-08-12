@@ -99,3 +99,20 @@ Miscellanous tasks:
 - [x] Merge upstream changes into refactor branch
 - [ ] Security testing
 - [x] Document configuration
+- [ ] Backend testing
+  - [x] Github progress tracking
+  - [x] Discord linking
+  - [x] Discord role syncing
+  - [x] Login/logout
+  - [x] Register
+  - [ ] Discourse SSO
+  - [ ] HCaptcha
+  - [ ] RSS feed
+  - [ ] Stripe checkout
+  - [ ] Stripe donation progress
+  - [ ] Stripe webhooks (+ mailing)
+  - [ ] Forgot password flow
+  - [x] Delete account
+  - [x] server environment changing
+  - [ ] Mii edits saving
+  - [x] Auth cookies
