@@ -9,6 +9,7 @@ declare module 'nuxt/schema' {
 		githubApiToken: string;
 
 		stripeSecretKey: string;
+		stripeWebhookSecret: string;
 		stripeNotificationEmail: string;
 
 		hcaptchaSecretKey: string;

@@ -45,7 +45,8 @@ There are no fully required configuration variables, the app can runs minimally 
 |                              | `PN_WEBSITE_DISCORD_SUPPORTER_ROLE_ID` | Role to give for supporter access             | (No role)                    |
 |                              |                                        |                                               |                              |
 | Payments                     | `PN_WEBSITE_STRIPE_SECRET_KEY`         | Stripe secret key                             | -                            |
-| (Requires `discord` feature) | `PN_WEBSITE_STRIPE_NOTIFICATION_EMAIL` | Email address to send stripe notifications to | (No notifications)           |
+| (Requires `discord` feature) | `PN_WEBSITE_STRIPE_WEBHOOK_SECRET`     | Stripe webhook signing key                    | -                            |
+|                              | `PN_WEBSITE_STRIPE_NOTIFICATION_EMAIL` | Email address to send stripe notifications to | (No notifications)           |
 |                              | `PN_WEBSITE_MONGO_CONNECTION_STRING`   | MongoDB connection string for account server  | -                            |
 |                              | `PN_WEBSITE_SMTP_HOST`                 | Host for the SMTP server                      | -                            |
 |                              | `PN_WEBSITE_SMTP_PORT`                 | Port for the SMTP server                      | `587`                        |

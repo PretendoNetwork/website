@@ -49,7 +49,7 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 		return;
 	}
 
-	if (webhook.type === 'customer.subscription.updated' || webhook.type === 'customer.subscription.deleted') {
+	if (webhook.type === 'customer.subscription.updated' || webhook.type === 'customer.subscription.created' || webhook.type === 'customer.subscription.deleted') {
 		const subscription = webhook.data.object;
 		const subscriptionItem = subscription.items.data[0];
 		if (!subscriptionItem) {

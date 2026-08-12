@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
 		githubApiToken: '',
 		stripeSecretKey: '',
+		stripeWebhookSecret: '',
 		stripeNotificationEmail: '',
 		hcaptchaSecretKey: '',
 		grpcHost: '',
