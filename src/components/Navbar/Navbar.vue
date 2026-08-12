@@ -1,11 +1,11 @@
 <script lang="ts" setup>
+import { Popover } from 'reka-ui/namespaced';
 const { locales, setLocale } = useI18n();
 
 const me = useMeStore();
 const authStore = useAuthStore();
 const user = computed(() => me.user);
 
-const widgetOpen = ref(false);
 const openDropdown = ref<boolean | string>(false);
 function handleDropdownButton(dropdown: boolean | string) {
 	if (!openDropdown.value) {
@@ -467,56 +467,59 @@ onMounted(() => {
         </div>
       </div>
 
-      <div
-        v-if="user"
-        class="user-widget-wrapper logged-in"
-      >
-        <div
-          class="user-widget-toggle"
-          @click="widgetOpen = true"
+      <div class="user-widget-wrapper logged-in">
+        <Popover.Root
+          v-if="user"
+          as="div"
         >
-          <img
-            :src="user.mii?.imageUrl ?? '#'"
-            :alt="user.mii?.name ?? ''"
+          <Popover.Trigger
+            as="div"
+            class="user-widget-toggle"
           >
-        </div>
-        <div
-          class="user-widget"
-          :class="{
-            'active': widgetOpen
-          }"
-        >
-          <div class="user-avatar">
             <img
               :src="user.mii?.imageUrl ?? '#'"
               :alt="user.mii?.name ?? ''"
             >
-          </div>
-          <div class="user-info">
-            <div
-              v-if="user.mii"
-              class="mii-name"
+          </Popover.Trigger>
+          <Popover.Portal>
+            <Popover.Content
+              as="div"
+              force-mount
+              class="user-widget"
             >
-              {{ user.mii.name }}
-            </div>
-            <div class="pnid">
-              {{ user.username }}
-            </div>
-          </div>
-          <div class="buttons">
-            <a href="/account">
-              <button class="button primary">
-                {{ $t("nav.accountWidget.settings") }}
-              </button>
-            </a>
-            <button
-              class="button logout"
-              @click="authStore.logout()"
-            >
-              {{ $t("nav.accountWidget.logout") }}
-            </button>
-          </div>
-        </div>
+              <div class="user-avatar">
+                <img
+                  :src="user.mii?.imageUrl ?? '#'"
+                  :alt="user.mii?.name ?? ''"
+                >
+              </div>
+              <div class="user-info">
+                <div
+                  v-if="user.mii"
+                  class="mii-name"
+                >
+                  {{ user.mii.name }}
+                </div>
+                <div class="pnid">
+                  {{ user.username }}
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="/account">
+                  <button class="button primary">
+                    {{ $t("nav.accountWidget.settings") }}
+                  </button>
+                </a>
+                <button
+                  class="button logout"
+                  @click="authStore.logout()"
+                >
+                  {{ $t("nav.accountWidget.logout") }}
+                </button>
+              </div>
+            </Popover.Content>
+          </Popover.Portal>
+        </Popover.Root>
       </div>
 
       <div
@@ -539,7 +542,7 @@ onMounted(() => {
   </header>
 </template>
 
-<style scoped>
+<style>
 header {
 	position: fixed;
 	top: 0;
@@ -882,22 +885,19 @@ header .user-widget-wrapper.logged-in .user-widget-toggle {
 }
 
 header .user-widget-wrapper .user-widget-toggle img,
-header .user-widget .user-avatar img {
+.user-widget .user-avatar img {
 	width: 100%;
 	height: 100%;
 }
 
-header .user-widget {
+.user-widget {
 	max-height: 0;
 	overflow: hidden;
 
 	box-sizing: border-box;
 	transition: max-height 300ms, padding 200ms, opacity 150ms;
 
-	position: absolute;
-	right: 0;
-	top: 48px;
-	padding: 0;
+	margin-top: 16px;
 	background: var(--bg-shade-2);
 	border-radius: 8px;
 	text-align: center;
@@ -906,13 +906,13 @@ header .user-widget {
 	box-shadow: 0 0 10px -2px var(--bg-shade-0);
 }
 
-header .user-widget.active {
+.user-widget[data-state="open"] {
 	max-height: 100vh;
 	padding: 36px;
 	opacity: 1;
 }
 
-header .user-widget .user-avatar {
+.user-widget .user-avatar {
 	width: 128px;
 	height: 128px;
 	margin: auto;
@@ -921,19 +921,20 @@ header .user-widget .user-avatar {
 	overflow: hidden;
 }
 
-header .user-widget .user-info {
+.user-widget .user-info {
+	color: var(--text-shade-1);
 	margin-top: 12px;
 }
 
-header .user-widget .user-info .mii-name {
+.user-widget .user-info .mii-name {
 	color: var(--text-shade-3);
 }
 
-header .user-widget .buttons {
+.user-widget .buttons {
 	margin-top: 12px;
 }
 
-header .user-widget .button {
+.user-widget .button {
 	margin-top: 12px;
 	width: 100%;
 	padding: 8px 60px;

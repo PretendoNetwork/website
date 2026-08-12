@@ -22,6 +22,7 @@
 		"@nuxtjs/i18n": "^10.6.0",
 		"@pinia/nuxt": "^1.0.1",
 		"@pretendonetwork/grpc": "^2.5.4",
+		"@vueuse/core": "^14.4.0",
 		"better-sqlite3": "^12.11.1",
 		"discord-api-types": "^0.38.53",
 		"eslint": "^9.39.5",
@@ -33,6 +34,7 @@
 		"nuxt": "^4.5.2",
 		"octokit": "^5.0.5",
 		"papr": "^17.1.1",
+		"reka-ui": "^2.10.3",
 		"stripe": "^22.4.0",
 		"vue": "^3.5.13",
 		"vue-router": "^5.2.0",
@@ -53,6 +55,7 @@
 		"esbuild@0.25.12": true,
 		"protobufjs@7.6.5": true,
 		"unrs-resolver@1.12.2": true,
-		"@parcel/watcher@2.6.0": true
+		"@parcel/watcher@2.6.0": true,
+		"vue-demi@0.14.10": true
 	}
 }
