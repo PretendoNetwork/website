@@ -666,7 +666,7 @@ header div.dropdown-button-wrapper::after {
 }
 
 header nav button {
-	background: none;
+	background: none !important;
 	color: var(--text-shade-1);
 	margin: 0 17px;
 	padding: 0;
@@ -854,6 +854,7 @@ header .locale-dropdown-toggle {
 header .locale-dropdown-toggle:hover,
 header .locale-dropdown-toggle.active {
 	color: var(--text-shade-3);
+	background: none;
 }
 
 header .user-widget-wrapper {
