@@ -485,6 +485,9 @@ onMounted(() => {
             <Popover.Content
               as="div"
               force-mount
+              align="end"
+              side="bottom"
+              :side-offset="16"
               class="user-widget"
             >
               <div class="user-avatar">
@@ -897,7 +900,6 @@ header .user-widget-wrapper .user-widget-toggle img,
 	box-sizing: border-box;
 	transition: max-height 300ms, padding 200ms, opacity 150ms;
 
-	margin-top: 16px;
 	background: var(--bg-shade-2);
 	border-radius: 8px;
 	text-align: center;
