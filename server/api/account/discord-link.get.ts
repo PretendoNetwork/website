@@ -11,7 +11,7 @@ export default defineEventHandler(async (event): Promise<ApiAccountDiscordLink> 
 	const redirectUrl = discord.makeCallbackUrl();
 	const url = new URL('https://discord.com/oauth2/authorize');
 	url.searchParams.set('response_type', 'code');
-	url.searchParams.set('client_id', 'code');
+	url.searchParams.set('client_id', discord.clientId);
 	url.searchParams.set('scope', 'identify');
 	url.searchParams.set('redirect_uri', redirectUrl);
 	url.searchParams.set('prompt', 'scope');

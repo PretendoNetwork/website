@@ -33,8 +33,11 @@ export default defineEventHandler(async (event) => {
 	}
 
 	const tokens = await discordFetch<DiscordTokenResponse>('/oauth2/token', {
+		method: 'POST',
 		body: new URLSearchParams({
 			grant_type: 'authorization_code',
+			client_id: discord.clientId,
+			client_secret: discord.clientSecret,
 			code: authCode,
 			redirect_uri: discord.makeCallbackUrl()
 		})
