@@ -20,26 +20,30 @@ type AuthState = {
 
 const oldCookieTokenType = 'Bearer';
 const cookieExpirySec = 7 * 24 * 60 * 60; // 7 days
-const oldCookieOptions = {
-	domain: '.pretendo.network',
+const oldCookieOptions = (url: string) => ({
+	domain: `.${new URL(url).hostname}`,
 	secure: false,
 	httpOnly: false,
 	maxAge: cookieExpirySec,
+	sameSite: 'lax',
 	refresh: true,
 	readonly: false
-} satisfies CookieOptions<string> & { readonly: false };
+} satisfies CookieOptions<string> & { readonly: false });
 
 // Not actually a store, but may as well be
 export function useAuthStore() {
+	const config = useRuntimeConfig().public;
 	const authState = useCookie<AuthState | null>('pretendo::auth', {
-		sameSite: 'strict',
-		secure: useRuntimeConfig().public.cookieSecure,
+		sameSite: 'lax',
+		secure: config.cookieSecure,
+		maxAge: cookieExpirySec,
 		refresh: true,
 		default: () => null
 	});
-	const accessTokenCookie = useCookie<string | null>('access_token', oldCookieOptions);
-	const refreshTokenCookie = useCookie<string | null>('refresh_token', oldCookieOptions);
-	const tokenTypeCookie = useCookie<string | null>('token_type', oldCookieOptions);
+	const oldOpts = oldCookieOptions(config.baseUrl);
+	const accessTokenCookie = useCookie<string | null>('access_token', oldOpts);
+	const refreshTokenCookie = useCookie<string | null>('refresh_token', oldOpts);
+	const tokenTypeCookie = useCookie<string | null>('token_type', oldOpts);
 
 	function getToken() {
 		return authState.value?.accessToken ?? null;
