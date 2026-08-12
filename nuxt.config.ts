@@ -57,6 +57,7 @@ export default defineNuxtConfig({
 
 		public: {
 			baseUrl: 'https://pretendo.network',
+			cdnBaseUrl: 'https://r2-cdn.pretendo.cc',
 			hcaptchaSiteKey: '',
 			cookieSecure: true
 		}

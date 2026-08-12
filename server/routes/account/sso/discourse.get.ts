@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
 		email: `${userData.pid}@invalid.com`, // Don't change, used by other systems
 		username: userData.username,
 		name: userData.username,
-		avatar_url: `https://r2-cdn.pretendo.cc/mii/${userData.pid}/normal_face.png`,
+		avatar_url: `${config.public.cdnBaseUrl}/mii/${userData.pid}/normal_face.png`,
 		avatar_force_update: 'true'
 	});
 	const encodedReturnPayload = Buffer.from(returnPayload.toString()).toString('base64');

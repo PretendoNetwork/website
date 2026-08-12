@@ -1,6 +1,7 @@
 import type { GetApiAuthMe } from '#shared/api-types';
 
 export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
+	const config = useRuntimeConfig(event);
 	const auth = enforceLoggedIn(event);
 
 	const grpc = useAccountGrpc(event);
@@ -12,7 +13,7 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 		serverAccessLevel: data.serverAccessLevel as any,
 		mii: data.mii
 			? {
-					imageUrl: `https://r2-cdn.pretendo.cc/mii/${data.pid}/normal_face.png`,
+					imageUrl: `${config.public.cdnBaseUrl}/mii/${data.pid}/normal_face.png`,
 					name: data.mii.name
 				}
 			: null

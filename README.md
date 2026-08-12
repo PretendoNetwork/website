@@ -24,40 +24,41 @@ If you'd like to help localize Pretendo Network, you can contribute to the trans
 The application can be configured with environment variables. `.env` files are available for development.
 There are no fully required configuration variables, the app can runs minimally without any configuration:
 
-| Feature                      | Variable                               | Description                                   | Default                    |
-| ---------------------------- | -------------------------------------- | --------------------------------------------- | -------------------------- |
-| Core                         | `PN_WEBSITE_PUBLIC_BASE_URL`           | Base URL of the app                           | `https://pretendo.network` |
-|                              | `PN_WEBSITE_PUBLIC_COOKIE_SECURE`      | Should Secure be enabled for auth cookies     | `true`                     |
-|                              |                                        |                                               |                            |
-| Authentication               | `PN_WEBSITE_GRPC_HOST`                 | Account server GRPC host + port               | -                          |
-|                              | `PN_WEBSITE_GRPC_API_KEY`              | Account server GRPC API key                   | -                          |
-|                              | `PN_WEBSITE_API_BASE`                  | Base URL of the account server                | `https://api.pretendo.cc`  |
-|                              | `PN_WEBSITE_API_BASE_HOST`             | Hostname of the account server                | `api.pretendo.cc`          |
-|                              |                                        |                                               |                            |
-| Progress tracking            | `PN_WEBSITE_GITHUB_API_TOKEN`          | Github API token                              | -                          |
-|                              |                                        |                                               |                            |
-| Discord                      | `PN_WEBSITE_DISCORD_BOT_TOKEN`         | Discord bot token                             | -                          |
-|                              | `PN_WEBSITE_DISCORD_CLIENT_ID`         | Discord OAuth client ID                       | -                          |
-|                              | `PN_WEBSITE_DISCORD_CLIENT_SECRET`     | Discord OAuth client secret                   | -                          |
-|                              | `PN_WEBSITE_DISCORD_GUILD_ID`          | Discord server ID for role linking            | -                          |
-|                              | `PN_WEBSITE_DISCORD_TESTER_ROLE_ID`    | Role to give for tester access                | (No role)                  |
-|                              | `PN_WEBSITE_DISCORD_SUPPORTER_ROLE_ID` | Role to give for supporter access             | (No role)                  |
-|                              |                                        |                                               |                            |
-| Payments                     | `PN_WEBSITE_STRIPE_SECRET_KEY`         | Stripe secret key                             | -                          |
-| (Requires `discord` feature) | `PN_WEBSITE_STRIPE_NOTIFICATION_EMAIL` | Email address to send stripe notifications to | (No notifications)         |
-|                              | `PN_WEBSITE_MONGO_CONNECTION_STRING`   | MongoDB connection string for account server  | -                          |
-|                              | `PN_WEBSITE_SMTP_HOST`                 | Host for the SMTP server                      | -                          |
-|                              | `PN_WEBSITE_SMTP_PORT`                 | Port for the SMTP server                      | `587`                      |
-|                              | `PN_WEBSITE_SMTP_SECURE`               | Use a secure SMTP connection                  | `true`                     |
-|                              | `PN_WEBSITE_SMTP_USER`                 | Username for the SMTP server                  | (No SMTP auth)             |
-|                              | `PN_WEBSITE_SMTP_PASSWORD`             | Password for the SMTP server                  | (No SMTP auth)             |
-|                              | `PN_WEBSITE_SMTP_FROM_EMAIL`           | Email to sent emails from                     | -                          |
-|                              | `PN_WEBSITE_SMTP_FROM_NAME`            | Display of the FROM email adress              | -                          |
-|                              |                                        |                                               |                            |
-| Captcha                      | `PN_WEBSITE_HCAPTCHA_SECRET_KEY`       | HCaptcha secret key                           | -                          |
-|                              | `PN_WEBSITE_PUBLIC_HCAPTCHA_SITE_KEY`  | HCaptcha site key                             | -                          |
-|                              |                                        |                                               |                            |
-| Discourse SSO                | `PN_WEBSITE_DISCOURSE_SSO_SECRET`      | Discourse SSO secret                          | -                          |
+| Feature                      | Variable                               | Description                                   | Default                      |
+| ---------------------------- | -------------------------------------- | --------------------------------------------- | ---------------------------- |
+| Core                         | `PN_WEBSITE_PUBLIC_BASE_URL`           | Base URL of the app                           | `https://pretendo.network`   |
+|                              | `PN_WEBSITE_PUBLIC_CDN_BASE_URL`       | Base URL for the CDN                          | `https://r2-cdn.pretendo.cc` |
+|                              | `PN_WEBSITE_PUBLIC_COOKIE_SECURE`      | Should Secure be enabled for auth cookies     | `true`                       |
+|                              |                                        |                                               |                              |
+| Authentication               | `PN_WEBSITE_GRPC_HOST`                 | Account server GRPC host + port               | -                            |
+|                              | `PN_WEBSITE_GRPC_API_KEY`              | Account server GRPC API key                   | -                            |
+|                              | `PN_WEBSITE_API_BASE`                  | Base URL of the account server                | `https://api.pretendo.cc`    |
+|                              | `PN_WEBSITE_API_BASE_HOST`             | Hostname of the account server                | `api.pretendo.cc`            |
+|                              |                                        |                                               |                              |
+| Progress tracking            | `PN_WEBSITE_GITHUB_API_TOKEN`          | Github API token                              | -                            |
+|                              |                                        |                                               |                              |
+| Discord                      | `PN_WEBSITE_DISCORD_BOT_TOKEN`         | Discord bot token                             | -                            |
+|                              | `PN_WEBSITE_DISCORD_CLIENT_ID`         | Discord OAuth client ID                       | -                            |
+|                              | `PN_WEBSITE_DISCORD_CLIENT_SECRET`     | Discord OAuth client secret                   | -                            |
+|                              | `PN_WEBSITE_DISCORD_GUILD_ID`          | Discord server ID for role linking            | -                            |
+|                              | `PN_WEBSITE_DISCORD_TESTER_ROLE_ID`    | Role to give for tester access                | (No role)                    |
+|                              | `PN_WEBSITE_DISCORD_SUPPORTER_ROLE_ID` | Role to give for supporter access             | (No role)                    |
+|                              |                                        |                                               |                              |
+| Payments                     | `PN_WEBSITE_STRIPE_SECRET_KEY`         | Stripe secret key                             | -                            |
+| (Requires `discord` feature) | `PN_WEBSITE_STRIPE_NOTIFICATION_EMAIL` | Email address to send stripe notifications to | (No notifications)           |
+|                              | `PN_WEBSITE_MONGO_CONNECTION_STRING`   | MongoDB connection string for account server  | -                            |
+|                              | `PN_WEBSITE_SMTP_HOST`                 | Host for the SMTP server                      | -                            |
+|                              | `PN_WEBSITE_SMTP_PORT`                 | Port for the SMTP server                      | `587`                        |
+|                              | `PN_WEBSITE_SMTP_SECURE`               | Use a secure SMTP connection                  | `true`                       |
+|                              | `PN_WEBSITE_SMTP_USER`                 | Username for the SMTP server                  | (No SMTP auth)               |
+|                              | `PN_WEBSITE_SMTP_PASSWORD`             | Password for the SMTP server                  | (No SMTP auth)               |
+|                              | `PN_WEBSITE_SMTP_FROM_EMAIL`           | Email to sent emails from                     | -                            |
+|                              | `PN_WEBSITE_SMTP_FROM_NAME`            | Display of the FROM email adress              | -                            |
+|                              |                                        |                                               |                              |
+| Captcha                      | `PN_WEBSITE_HCAPTCHA_SECRET_KEY`       | HCaptcha secret key                           | -                            |
+|                              | `PN_WEBSITE_PUBLIC_HCAPTCHA_SITE_KEY`  | HCaptcha site key                             | -                            |
+|                              |                                        |                                               |                              |
+| Discourse SSO                | `PN_WEBSITE_DISCOURSE_SSO_SECRET`      | Discourse SSO secret                          | -                            |
 
 
 # Website refactor
