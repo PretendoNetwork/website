@@ -1,13 +1,13 @@
 import { useMailer } from './mailer';
 import { usePapr } from './papr';
 import { assignDiscordMemberSupporterRole, assignDiscordMemberTesterRole, removeDiscordMemberSupporterRole, removeDiscordMemberTesterRole, useDiscord } from './discord';
-import type { Transporter } from 'nodemailer';
 import type { PaprMatchKeysAndValues } from 'papr';
 import type { Stripe } from 'stripe';
 import type { H3Event } from 'h3';
+import type { Mailer } from './mailer';
 import type { PnidDocument } from './papr';
 
-async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Customer, ops: { pid: number; title: string; body: string }): Promise<void> {
+async function sendEmailToCustomer(mailer: Mailer, customer: Stripe.Customer, ops: { pid: number; title: string; body: string }): Promise<void> {
 	try {
 		if (!customer.email) {
 			throw new Error('Customer does not have an email');
@@ -22,7 +22,7 @@ async function sendEmailToCustomer(mailer: Transporter, customer: Stripe.Custome
 	}
 }
 
-async function sendToNotificationEmails(mailer: Transporter, notificationEmails: string[], ops: { title: string; body: string }): Promise<void> {
+async function sendToNotificationEmails(mailer: Mailer, notificationEmails: string[], ops: { title: string; body: string }): Promise<void> {
 	for (const email of notificationEmails) {
 		// * Send notification emails for new sub
 		try {
