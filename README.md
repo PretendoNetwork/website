@@ -107,7 +107,7 @@ Miscellanous tasks:
   - [x] Register
   - [x] Discourse SSO
   - [ ] HCaptcha
-  - [ ] RSS feed
+  - [x] RSS feed
   - [ ] Stripe checkout
   - [ ] Stripe donation progress
   - [ ] Stripe webhooks (+ mailing)
