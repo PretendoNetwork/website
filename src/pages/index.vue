@@ -25,7 +25,6 @@ function titleSuffixHandler(path: string) {
 </script>
 
 <template>
-  <div>
     <NuxtRouteAnnouncer />
 
     <section class="hero">
@@ -410,7 +409,7 @@ function titleSuffixHandler(path: string) {
       </div>
       <div class="circle" />
     </section>
-  </div>
+
 </template>
 
 <style lang="scss" scoped>
