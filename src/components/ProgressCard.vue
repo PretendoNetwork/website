@@ -15,7 +15,7 @@ const targetIsVisible = useElementVisibility(chartRef, {
 });
 const currentlyVisiblePercentage = computed(() => targetIsVisible.value ? props.item.completion : 0);
 const animatedPercentage = useTransition(currentlyVisiblePercentage, {
-	duration: 2000,
+	duration: 1000,
 	easing: TransitionPresets.easeInOutQuad
 });
 
