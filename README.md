@@ -110,8 +110,8 @@ Miscellanous tasks:
   - [x] HCaptcha
   - [x] RSS feed
   - [x] Stripe checkout
-  - [ ] Stripe donation progress
-  - [ ] Stripe webhooks (+ mailing)
+  - [x] Stripe donation progress
+  - [x] Stripe webhooks (+ mailing)
   - [x] Forgot password flow
   - [x] Delete account
   - [x] server environment changing
