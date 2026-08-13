@@ -65,8 +65,8 @@ There are no fully required configuration variables, the app can runs minimally 
 # Website refactor
 
 The website is currently in a refactor, here is what is still left on the frontend:
-- [ ] Styling for progress page
-- [ ] Styling for progress on main page
+- [x] Styling for progress page
+- [x] Styling for progress on main page
 - [ ] Account: Mii editor
 - [ ] Account: View account
 - [ ] Account: Delete account
