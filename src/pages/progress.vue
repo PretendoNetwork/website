@@ -115,7 +115,10 @@ const goalText = computed(() => {
         :key="project.title"
         class="purple-card"
       >
-        <p>{{ project.title }}</p>
+        <ProgressCard
+          show-title
+          :item="project"
+        />
       </div>
       <p v-if="projects.length === 0">
         No projects
@@ -125,6 +128,12 @@ const goalText = computed(() => {
 </template>
 
 <style scoped>
+.purple-card {
+	padding: 50px 20px;
+	border-radius: 10px;
+	background: var(--bg-shade-0);
+}
+
 .progress-hero {
 	width: 100%;
 	display: flex;
