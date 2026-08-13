@@ -454,7 +454,7 @@
 	},
 	"donation": {
 		"upgradePush": "Pour s'abonner et avoir accès à des récompenses spéciales, visitez <a href=\"/account/upgrade\">la page de mise à niveau</a>.",
-		"progress": "<span>$${totd}</span> sur <span>$${goald}</span>/mois, <span>${perc}%</span> du but mensuel."
+		"progress": "<span>${totd}</span> sur <span>${goald}</span>/mois, <span>{perc}%</span> du but mensuel."
 	},
 	"modals": {
 		"cancel": "Annuler",

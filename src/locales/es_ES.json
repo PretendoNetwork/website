@@ -452,7 +452,7 @@
 		"title": "Subir rango"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> del objetivo mensual.",
+		"progress": "<span>${totd}</span> de <span>${goald}</span>/mes, <span>{perc}%</span> del objetivo mensual.",
 		"upgradePush": "Para convertirse en suscriptor y obtener acceso a beneficios geniales, visita la página <a href=\"/account/upgrade\">actualizar</a>."
 	},
 	"modals": {

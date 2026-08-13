@@ -214,7 +214,7 @@
 		"changeTierPrompt": "Είσαι σίγουρος ότι θέλεις να καταργήσεις τη συνδρομή σου από <span class=\"oldtier\">oldtiername</span> και να εγγραφείς στο <span class=\"newtier\">newtiername</span>;"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> από<span>$${goald}</span>/μήνα, <span>${perc}%</span> του μηνιαίου στόχου.",
+		"progress": "<span>${totd}</span> από<span>${goald}</span>/μήνα, <span>{perc}%</span> του μηνιαίου στόχου.",
 		"upgradePush": "Για να γίνεις συνδρομητής και να αποκτήσεις πρόσβαση σε κούλ οφέλη, επισκέψου την <a href=\"/account/upgrade\">σελίδα αναβάθμισης</a>."
 	},
 	"localizationPage": {

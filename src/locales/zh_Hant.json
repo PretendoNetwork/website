@@ -422,7 +422,7 @@
 		"publishedOn": "於"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span>的<span>$${goald}</span>/月，完成月度目標的<span>${perc}%</span>",
+		"progress": "<span>${totd}</span>的<span>${goald}</span>/月，完成月度目標的<span>{perc}%</span>",
 		"upgradePush": "若要成為訂閱者並獲得超棒的特權，請前往<a href=\"/account/upgrade\">升級頁面</a>。"
 	},
 	"localizationPage": {

@@ -187,7 +187,7 @@
 	},
 	"donation": {
 		"upgradePush": "Para facerte un subscritor e acceder a grandes vantaxes, visita a <a href=\"/account/upgrade\">páxina de actualización</a>.",
-		"progress": "<span>$${totd}</span> de <span>$${goald}</span>/mes, <span>${perc}%</span> do obxectivo mensual."
+		"progress": "<span>${totd}</span> de <span>${goald}</span>/mes, <span>{perc}%</span> do obxectivo mensual."
 	},
 	"localizationPage": {
 		"description": "Pega unha ligazón a unha configuración rexional JSON de acceso público para probala no teu sitio web",

@@ -401,7 +401,7 @@
 		"unsubPrompt": "Ви впевнені, що бажаєте скасувати підписку на <span>tiername</span>? Ви втратите доступ до бонусів, пов’язаних із цим рівнем."
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> з <span>$${goald}</span>/місяць, <span>${perc}%</span> місячної цілі.",
+		"progress": "<span>${totd}</span> з <span>${goald}</span>/місяць, <span>{perc}%</span> місячної цілі.",
 		"upgradePush": "Щоб стати передплатником і отримати доступ до цікавих бонусів, відвідайте <a href=\"/account/upgrade\">сторінку прокачки</a>."
 	},
 	"localizationPage": {

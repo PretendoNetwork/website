@@ -448,7 +448,7 @@
 		"filePlaceholder": "mew://a.meow.site/4_jzon.jzon"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/munth, <span>${perc}%</span> of teh monthly goal",
+		"progress": "<span>${totd}</span> of <span>${goald}</span>/munth, <span>{perc}%</span> of teh monthly goal",
 		"upgradePush": "u wanna become super kitteh and get kool perkz?? <a href=\"/account/upgrade\">upgrade now!!</a>"
 	},
 	"notfound": {

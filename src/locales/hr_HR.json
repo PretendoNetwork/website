@@ -414,7 +414,7 @@
 		"back": "Natrag"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> od <span>$${goald}</span>/mjesečno, <span>${perc} %</span> mjesečnog cilja.",
+		"progress": "<span>${totd}</span> od <span>${goald}</span>/mjesečno, <span>{perc} %</span> mjesečnog cilja.",
 		"upgradePush": "Za pretplatu i pristup još boljim pogodnostima, posjeti <a href=\"/account/upgrade\">stranicu za nadogradnju</a>."
 	},
 	"localizationPage": {

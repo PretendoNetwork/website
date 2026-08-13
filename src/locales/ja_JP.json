@@ -450,7 +450,7 @@
 		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルに関連付けられた特典にアクセスできなくなります。"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span>/<span>$${goald}</span>(寄付額/目標) ー 月間目標の <span>${perc}%</span>の寄付を頂いています。",
+		"progress": "<span>${totd}</span>/<span>${goald}</span>(寄付額/目標) ー 月間目標の <span>{perc}%</span>の寄付を頂いています。",
 		"upgradePush": "サブスクライバーになってクールな特典にアクセスするには、<a href=\"/account/upgrade\">アップグレード ページ</a>にアクセスしてください。"
 	},
 	"modals": {

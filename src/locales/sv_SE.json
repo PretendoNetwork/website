@@ -270,7 +270,7 @@
 	},
 	"donation": {
 		"upgradePush": "För att bli en prenumerant och få tillgång till coola förmåner, besök <a href=\"/account/upgrade\">uppgraderingssidan</a>.",
-		"progress": "<span>$${totd}</span> av <span>$${goald}</span>/månad, <span>${perc}%</span> av det månatliga målet."
+		"progress": "<span>${totd}</span> av <span>${goald}</span>/månad, <span>{perc}%</span> av det månatliga målet."
 	},
 	"modals": {
 		"close": "Stäng",

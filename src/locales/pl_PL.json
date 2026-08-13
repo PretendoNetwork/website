@@ -291,7 +291,7 @@
 		"description": "Osiągnięcie celu miesięcznego sprawi, że Pretendo stanie się pracą na pełen etat, zapewniając aktualizacje lepszej jakości w szybszym tempie."
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> z <span>$${goald}</span>/miesiąc, <span>${perc}%</span> miesięcznego celu.",
+		"progress": "<span>${totd}</span> z <span>${goald}</span>/miesiąc, <span>{perc}%</span> miesięcznego celu.",
 		"upgradePush": "Aby zostać subskrybentem i uzyskać dostęp do fajnych bonusów, odwiedź <a href=\"/account/upgrade\">stronę ulepszeń</a>."
 	},
 	"modals": {

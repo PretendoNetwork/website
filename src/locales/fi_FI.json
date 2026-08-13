@@ -353,7 +353,7 @@
 		"confirm": "Vahvista"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> tavoitteesta <span>$${goald}</span>/kuussa, <span>${perc}%</span> kuukausitavoitteesta.",
+		"progress": "<span>${totd}</span> tavoitteesta <span>${goald}</span>/kuussa, <span>{perc}%</span> kuukausitavoitteesta.",
 		"upgradePush": "Tullaksesi tilaajaksi ja saadaksesi siistejä etuja, vieraile <a href=\"/account/upgrade\">tilityypin korotussivulla</a>."
 	}
 }

@@ -252,7 +252,7 @@
 	},
 	"donation": {
 		"upgradePush": "لتصبح مشتركا والوصول إلى الامتيازات الرائعة ، تفضل بزيارة صفحة <a href=\"/account/upgrade\">upgrade</a>.",
-		"progress": "<span> $${totd} </span> من <span> $${goald} </span> / شهريًا ، <span> ${perc}٪ </span> من الهدف الشهري."
+		"progress": "<span> ${totd} </span> من <span> ${goald} </span> / شهريًا ، <span> {perc}٪ </span> من الهدف الشهري."
 	},
 	"showcase": {
 		"title": "ماذا نقوم به",

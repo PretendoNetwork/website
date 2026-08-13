@@ -457,7 +457,7 @@
 		}
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> z měsíčního cíle <span>$${goald} </span> vybráno (<span>${perc}%</span> měsíčního cíle)",
+		"progress": "<span>${totd}</span> z měsíčního cíle <span>${goald} </span> vybráno (<span>{perc}%</span> měsíčního cíle)",
 		"upgradePush": "Abyste se stal(a) předplatitelem a získal(a) přístup k zajímavým výhodám navštivte <a href=\"/account/upgrade\">upgrade stránku</a>."
 	},
 	"notfound": {

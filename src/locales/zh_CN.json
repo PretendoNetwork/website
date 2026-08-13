@@ -452,7 +452,7 @@
 		"back": "退回"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> <span>$${goald}</span>/月，<span>${perc}%</span> 的每月目标。",
+		"progress": "<span>${totd}</span> <span>${goald}</span>/月，<span>{perc}%</span> 的每月目标。",
 		"upgradePush": "要成为订阅者并获得超值福利，请访问<a href=\"/account/upgrade\">升级页面</a>。"
 	},
 	"modals": {
