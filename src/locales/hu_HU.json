@@ -414,7 +414,7 @@
 		"description": "Tekintsd meg a projekt előrehaladását és céljait! (Minden órában frissítve, így nem tükröz minden projekt célt vagy az előrehaladást."
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> a <span>$${goald}</span>/hó, <span>${perc}%</span> a havi célból.",
+		"progress": "<span>${totd}</span> a <span>${goald}</span>/hó, <span>{perc}%</span> a havi célból.",
 		"upgradePush": "Hogy előfizetővé válhass, és hozzáférj király cuccokhoz, látogasd meg a <a href=\"/account/upgrade\">bővítés oldalt</a>."
 	},
 	"localizationPage": {

@@ -219,7 +219,7 @@
 	},
 	"donation": {
 		"upgradePush": "Жазылу және керемет қондырмаларға қол жеткізу үшін <a href=\"/account/upgrade\">жаңарту бетіне</a> кіріңіз.",
-		"progress": "<span>$${totd}</span>/айына <span>$${goald}</span>, айлық мақсаттың <span>${perc}%</span>."
+		"progress": "<span>${totd}</span>/айына <span>${goald}</span>, айлық мақсаттың <span>{perc}%</span>."
 	},
 	"localizationPage": {
 		"title": "Жергілікті жерлестірейік",

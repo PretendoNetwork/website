@@ -432,7 +432,7 @@
 		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете доступ к функциям которые были доступны на данном уровне."
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> из <span>$${goald}</span>/в месяц, <span>${perc}%</span> от месячной цели.",
+		"progress": "<span>${totd}</span> из <span>${goald}</span>/в месяц, <span>{perc}%</span> от месячной цели.",
 		"upgradePush": "Чтобы стать подписчиком и получить доступ к крутым возможностям, посетите <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"modals": {

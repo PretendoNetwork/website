@@ -307,6 +307,6 @@
 	},
 	"donation": {
 		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>.",
-		"progress": "Objectiu mensual: <span>$${totd}</span> de <span>$${goald}</span>/al mes, <span>${perc}%</span>."
+		"progress": "Objectiu mensual: <span>${totd}</span> de <span>${goald}</span>/al mes, <span>{perc}%</span>."
 	}
 }

@@ -274,7 +274,7 @@
 		"changeTier": "Schimbă nivelul"
 	},
 	"donation": {
-		"progress": "<span>${totd}$</span> din <span>${goald}$</span>/lună, <span>${perc}%</span> din ținta lunară.",
+		"progress": "<span>{totd}$</span> din <span>{goald}$</span>/lună, <span>{perc}%</span> din ținta lunară.",
 		"upgradePush": "Pentru a te abona și să ai acces la benefici faine, vizitează <a href=\"/account/upgrade\">această pagină</a>."
 	}
 }

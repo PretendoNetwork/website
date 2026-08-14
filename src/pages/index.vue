@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ProgressItem } from '~~/shared/api-types';
+
 /* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { te, t, tm } = useI18n();
 const progress = await useFetch('/api/progress');
@@ -6,6 +8,19 @@ const progress = await useFetch('/api/progress');
 const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length - 1;
 const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;
 const maxContributorsIndex = computed(() => tm<string>('specialThanks.people') as string[]).value.length - 1;
+
+const summaryProgress = computed<ProgressItem>(() => {
+	return {
+		completion: progress.data.value?.completion ?? 0,
+		title: '',
+		tasks: (progress.data.value?.items ?? []).map((item) => {
+			return {
+				status: item.completion === 100 ? 'completed' : 'inprogress',
+				title: `${item.title} [${item.completion}%]`
+			};
+		})
+	};
+});
 
 function array(n: number) {
 	return Array.from({ length: n + 1 }, (_, i) => i);
@@ -116,40 +131,35 @@ function titleSuffixHandler(path: string) {
     </div>
   </section>
 
-  <section class="progress column-2">
-    <div class="left sect">
-      <div class="left-meta">
-        <h2
-          id="about"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
-        >
-          {{ $t("aboutUs.title") }}
+    <section class="progress column-2">
+      <div class="left sect">
+        <div class="left-meta">
+          <h2
+            id="about"
+            class="dot title"
+            :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
+          >
+            {{ $t("aboutUs.title") }}
+          </h2>
+          <p
+            v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length"
+            :key="i"
+            class="text"
+          >
+            {{ $t(`aboutUs.paragraphs[${i-1}]`) }}
+          </p>
+        </div>
+      </div>
+      <div class="right sect">
+        <h2 class="title">
+          <a href="/progress">{{ $t("progress.title") }}</a>
         </h2>
-        <p
-          v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length - 1"
-          :key="i"
-          class="text"
-        >
-          {{ $t(`aboutUs.paragraphs[${i}]`) }}
-        </p>
+        <ProgressCard
+          purple
+          :item="summaryProgress"
+        />
       </div>
-    </div>
-    <div class="right sect">
-      <h2 class="title">
-        <a href="/progress">{{ $t("progress.title") }} ({{ progress.data.value?.completion ?? 0 }}%)</a>
-      </h2>
-      <div
-        v-for="project of progress.data.value?.items ?? []"
-        :key="project.title"
-      >
-        <p>{{ project.title }} [{{ project.completion }}%]</p>
-      </div>
-      <p v-if="(progress.data.value?.items ?? []).length === 0">
-        No projects
-      </p>
-    </div>
-  </section>
+    </section>
 
   <section class="faq">
     <div class="sect-top sect">

@@ -415,7 +415,7 @@
 		"back": "Back"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> of <span>$${goald}</span>/month, <span>${perc}%</span> of the monthly goal.",
+		"progress": "<span>${totd}</span> of <span>${goald}</span>/month, <span>{perc}%</span> of the monthly goal.",
 		"upgradePush": "To become a subscriber and gain access to cool perks, visit the <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"localizationPage": {
