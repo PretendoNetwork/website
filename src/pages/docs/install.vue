@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const { te, t, tm } = useI18n();
-
 useHead({
 	title: 'Install',
 	meta: [

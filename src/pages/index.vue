@@ -131,35 +131,35 @@ function titleSuffixHandler(path: string) {
     </div>
   </section>
 
-    <section class="progress column-2">
-      <div class="left sect">
-        <div class="left-meta">
-          <h2
-            id="about"
-            class="dot title"
-            :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
-          >
-            {{ $t("aboutUs.title") }}
-          </h2>
-          <p
-            v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length"
-            :key="i"
-            class="text"
-          >
-            {{ $t(`aboutUs.paragraphs[${i-1}]`) }}
-          </p>
-        </div>
-      </div>
-      <div class="right sect">
-        <h2 class="title">
-          <a href="/progress">{{ $t("progress.title") }}</a>
+  <section class="progress column-2">
+    <div class="left sect">
+      <div class="left-meta">
+        <h2
+          id="about"
+          class="dot title"
+          :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
+        >
+          {{ $t("aboutUs.title") }}
         </h2>
-        <ProgressCard
-          purple
-          :item="summaryProgress"
-        />
+        <p
+          v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length"
+          :key="i"
+          class="text"
+        >
+          {{ $t(`aboutUs.paragraphs[${i-1}]`) }}
+        </p>
       </div>
-    </section>
+    </div>
+    <div class="right sect">
+      <h2 class="title">
+        <a href="/progress">{{ $t("progress.title") }}</a>
+      </h2>
+      <ProgressCard
+        purple
+        :item="summaryProgress"
+      />
+    </div>
+  </section>
 
   <section class="faq">
     <div class="sect-top sect">

@@ -78,7 +78,7 @@ The website is currently in a refactor, here is what is still left on the fronte
 - [ ] Auth: Register
 - [ ] Auth: Forgot password flow
 - [ ] Content: Term pages
-- [ ] Content: Documentation pages
+- [X] Content: Documentation pages
 - [x] Content: Blog
 
 And the tasks left on the backend:

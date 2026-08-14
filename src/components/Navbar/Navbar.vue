@@ -32,7 +32,7 @@ onMounted(() => {
       class="left-section"
     >
       <button
-			id="mobile-button"
+        id="mobile-button"
         :class="{ 'dropdown-button': true, 'hide-on-desktop': true, active: openDropdown === 'mobile' }"
         @click="handleDropdownButton('mobile')"
       >

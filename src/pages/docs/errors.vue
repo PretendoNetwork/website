@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const { te, t, tm } = useI18n();
-
 const query = ref<string>('');
 const results = ref<any[]>([]);
 
