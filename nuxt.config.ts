@@ -98,6 +98,88 @@ export default defineNuxtConfig({
 		}
 	},
 
+	app: {
+		head: {
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: '/assets/images/icons/favicon.ico'
+				},
+				{
+					rel: 'apple-touch-icon',
+					sizes: '180x180',
+					href: '/assets/images/icons/apple-touch-icon.png'
+				},
+				{
+					rel: 'icon',
+					sizes: '32x32',
+					type: 'image/png',
+					href: '/assets/images/icons/favicon-32x32.png'
+				},
+				{
+					rel: 'icon',
+					sizes: '16x16',
+					type: 'image/png',
+					href: '/assets/images/icons/favicon-16x16.png'
+				},
+				{
+					rel: 'mask-icon',
+					href: '/assets/images/icons/safari-pinned-tab.svg',
+					color: '#1b1f3b'
+				},
+				{ rel: 'manifest', href: '/assets/site.webmanifest' },
+				{
+					rel: 'alternate',
+					type: 'application/rss+xml',
+					title: 'Pretendo Network Blog',
+					href: '/blog/feed.xml'
+				}
+			],
+			meta: [
+				{ name: 'msapplication-config', content: '/assets/browserconfig.xml' },
+				{ 'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge' },
+				{ name: 'apple-mobile-web-app-title', content: 'Pretendo Network' },
+				{ name: 'application-name', content: 'Pretendo Network' },
+				{ name: 'msapplication-TileColor', content: '#1b1f3b' },
+				{ name: 'theme-color', content: '#1b1f3b' },
+				{
+					property: 'og:description',
+					content:
+						'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles'
+				},
+				{ property: 'og:type', content: 'website' },
+				{ property: 'og:url', content: 'https://pretendo.network' },
+				{
+					property: 'og:image',
+					content:
+						'https://pretendo.network/assets/images/opengraph/opengraph-image.png'
+				},
+				{ property: 'og:image:alt', content: '' },
+				{ property: 'og:site_name', content: 'Pretendo Network' },
+				{ property: 'twitter:url', content: 'https://pretendo.network/' },
+				{ property: 'twitter:card', content: 'summary_large_image' },
+				{ property: 'twitter:site', content: '@PretendoNetwork' },
+				{
+					property: 'twitter:description',
+					content:
+						'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles'
+				},
+				{
+					property: 'twitter:image',
+					content:
+						'https://pretendo.network/assets/images/opengraph/opengraph-image.png'
+				},
+				{
+					name: 'description',
+					content:
+						'An open source Nintendo Network replacement that aims to build custom servers for the WiiU and 3DS family of consoles'
+				},
+				{ property: 'robots', content: 'index, follow' }
+			]
+		}
+	},
+
 	i18n: {
 		compilation: {
 			strictMessage: false

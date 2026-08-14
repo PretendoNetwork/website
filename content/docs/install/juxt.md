@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to install Juxtaposition."
+---
+
 # Installing Juxtaposition
 
 <div class="tip">

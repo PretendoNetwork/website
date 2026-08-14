@@ -25,391 +25,390 @@ function titleSuffixHandler(path: string) {
 </script>
 
 <template>
-    <NuxtRouteAnnouncer />
+  <NuxtRouteAnnouncer />
 
-    <section class="hero">
-      <div class="hero-meta">
-        <h3 class="subtitle">
-          {{ $t("hero.subtitle") }}
-        </h3>
-        <h1
-          class="title dot"
-          :data-title-suffix="titleSuffixHandler('hero.titlesuffix')"
+  <section class="hero">
+    <div class="hero-meta">
+      <h3 class="subtitle">
+        {{ $t("hero.subtitle") }}
+      </h3>
+      <h1
+        class="title dot"
+        :data-title-suffix="titleSuffixHandler('hero.titlesuffix')"
+      >
+        {{ $t("hero.title") }}
+      </h1>
+      <p class="text">
+        {{ $t("hero.text") }}
+      </p>
+      <div class="buttons">
+        <a
+          href="/#about"
+          class="do-button-margin"
         >
-          {{ $t("hero.title") }}
-        </h1>
-        <p class="text">
-          {{ $t("hero.text") }}
+          <button class="button primary">
+            {{ $t("hero.buttons.readMore") }}
+          </button>
+        </a>
+        <a
+          href="https://discord.gg/pretendo"
+          class="do-button-margin"
+          target="_blank"
+          aria-label="Open Discord"
+        >
+          <button
+            class="button secondary discord icon-btn"
+            focusable="false"
+          >
+            <Icon
+              name="fa7-brands:discord"
+              size="32"
+            />
+          </button>
+        </a>
+        <a
+          href="https://github.com/PretendoNetwork/"
+          class="do-button-margin"
+          target="_blank"
+          aria-label="Open Github"
+        >
+          <button
+            class="button secondary github icon-btn"
+            focusable="false"
+          >
+            <Icon
+              name="fa7-brands:github"
+              size="32"
+            />
+          </button>
+        </a>
+        <a
+          href="/account/upgrade"
+          target="_blank"
+          aria-label="Upgrade account"
+        >
+          <button
+            class="button secondary github icon-btn"
+            focusable="false"
+          >
+            <Icon
+              name="ph:heart-fill"
+              size="32"
+            />
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="light-purple-circle">
+        <img
+          class="n2ds"
+          src="/assets/images/n2ds.png"
+          alt=""
+        >
+        <div class="deco">
+          <HeroDeco />
+        </div>
+      </div>
+    </div>
+    <div class="misc">
+      <div class="purple-circle" />
+    </div>
+  </section>
+
+  <section class="progress column-2">
+    <div class="left sect">
+      <div class="left-meta">
+        <h2
+          id="about"
+          class="dot title"
+          :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
+        >
+          {{ $t("aboutUs.title") }}
+        </h2>
+        <p
+          v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length - 1"
+          :key="i"
+          class="text"
+        >
+          {{ $t(`aboutUs.paragraphs[${i}]`) }}
         </p>
-        <div class="buttons">
-          <a
-            href="/#about"
-            class="do-button-margin"
+      </div>
+    </div>
+    <div class="right sect">
+      <h2 class="title">
+        <a href="/progress">{{ $t("progress.title") }} ({{ progress.data.value?.completion ?? 0 }}%)</a>
+      </h2>
+      <div
+        v-for="project of progress.data.value?.items ?? []"
+        :key="project.title"
+      >
+        <p>{{ project.title }} [{{ project.completion }}%]</p>
+      </div>
+      <p v-if="(progress.data.value?.items ?? []).length === 0">
+        No projects
+      </p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="sect-top sect">
+      <h2
+        id="faq"
+        class="dot title"
+        :data-title-suffix="titleSuffixHandler('faq.titleSuffix')"
+      >
+        {{ $t("faq.title") }}
+      </h2>
+      <p class="text">
+        {{ $t("faq.text") }}
+      </p>
+    </div>
+    <div class="questions column-2">
+      <div class="left questions-left">
+        <details
+          v-for="i in even(nOfQAs)"
+          :key="i"
+          class="question-and-answer"
+        >
+          <summary>
+            {{ $t(`faq.QAs[${i}].question`) }}
+          </summary>
+          <p
+            class="text"
+            v-html="$t(`faq.QAs[${i}].answer`)"
+          />
+        </details>
+      </div>
+
+      <div class="right questions-right">
+        <details
+          v-for="i in odd(nOfQAs)"
+          :key="i"
+          class="question-and-answer"
+        >
+          <summary>
+            {{ $t(`faq.QAs[${i}].question`) }}
+          </summary>
+          <p
+            class="text"
+            v-html="$t(`faq.QAs[${i}].answer`)"
+          />
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="sect-top sect">
+      <h2
+        id="showcase"
+        class="dot title"
+        :data-title-suffix="titleSuffixHandler('showcase.titleSuffix')"
+      >
+        {{ $t("showcase.title") }}
+      </h2>
+      <p class="text">
+        {{ $t("showcase.text") }}
+      </p>
+    </div>
+    <div class="grid">
+      <div class="item highlight">
+        <Icon
+          name="ph:hard-drives-fill"
+          size="48"
+          mode="svg"
+        />
+        <h1>{{ $t("showcase.cards.0.title") }}</h1>
+        <p>{{ $t("showcase.cards.0.caption") }}</p>
+      </div>
+      <div class="item">
+        <Icon
+          name="ph:users-fill"
+          size="48"
+          mode="svg"
+        />
+        <h1>{{ $t("showcase.cards.1.title") }}</h1>
+        <p>{{ $t("showcase.cards.1.caption") }}</p>
+      </div>
+      <div class="item">
+        <Icon
+          name="ph:game-controller-fill"
+          size="48"
+          mode="svg"
+        />
+        <h1>{{ $t("showcase.cards.2.title") }}</h1>
+        <p>{{ $t("showcase.cards.2.caption") }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="sect-top sect team-top">
+      <h2
+        id="credits"
+        class="dot title"
+        :data-title-suffix="titleSuffixHandler('credits.titleSuffix')"
+      >
+        {{ $t("credits.title") }}
+      </h2>
+      <p class="text">
+        {{ $t("credits.text") }}
+      </p>
+    </div>
+    <div class="team-cards">
+      <div
+        v-for="i in array(maxCoreStaffIndex)"
+        :key="i"
+        class="card"
+      >
+        <div class="card-left">
+          <img
+            :src="$t(`credits.people[${i}].picture`)"
+            class="pfp"
+            alt=""
           >
-            <button class="button primary">
-              {{ $t("hero.buttons.readMore") }}
-            </button>
-          </a>
-          <a
-            href="https://discord.gg/pretendo"
-            class="do-button-margin"
-            target="_blank"
-            aria-label="Open Discord"
-          >
-            <button
-              class="button secondary discord icon-btn"
-              focusable="false"
-            >
-              <Icon
-                name="fa7-brands:discord"
-                size="32"
-              />
-            </button>
-          </a>
-          <a
-            href="https://github.com/PretendoNetwork/"
-            class="do-button-margin"
-            target="_blank"
-            aria-label="Open Github"
-          >
-            <button
-              class="button secondary github icon-btn"
-              focusable="false"
+        </div>
+        <div class="card-core">
+          <span
+            v-if="$te(`credits.people[${i}].special`)"
+            class="sub"
+          >{{ $t(`credits.people[${i}].special`) }}</span>
+          <h3 class="title">
+            <span>{{ $t(`credits.people[${i}].name`) }}</span>
+            <a
+              :href="$t(`credits.people[${i}].github`)"
+              class="github"
+              target="_blank"
+              aria-label="Open Github"
             >
               <Icon
                 name="fa7-brands:github"
-                size="32"
+                size="24"
               />
-            </button>
-          </a>
-          <a
-            href="/account/upgrade"
-            target="_blank"
-            aria-label="Upgrade account"
-          >
-            <button
-              class="button secondary github icon-btn"
-              focusable="false"
-            >
-              <Icon
-                name="ph:heart-fill"
-                size="32"
-              />
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="light-purple-circle">
-          <img
-            class="n2ds"
-            src="/assets/images/n2ds.png"
-            alt=""
-          >
-          <div class="deco">
-            <HeroDeco />
-          </div>
-        </div>
-      </div>
-      <div class="misc">
-        <div class="purple-circle" />
-      </div>
-    </section>
-
-    <section class="progress column-2">
-      <div class="left sect">
-        <div class="left-meta">
-          <h2
-            id="about"
-            class="dot title"
-            :data-title-suffix="titleSuffixHandler('aboutUs.titleSuffix')"
-          >
-            {{ $t("aboutUs.title") }}
-          </h2>
-          <p
-            v-for="i in computed(() => tm<string>('aboutUs.paragraphs') as string[]).value.length - 1"
-            :key="i"
-            class="text"
-          >
-            {{ $t(`aboutUs.paragraphs[${i}]`) }}
+            </a>
+          </h3>
+          <p class="text">
+            {{ $t(`credits.people[${i}].caption`) }}
           </p>
         </div>
       </div>
-      <div class="right sect">
-        <h2 class="title">
-          <a href="/progress">{{ $t("progress.title") }} ({{ progress.data.value?.completion ?? 0 }}%)</a>
-        </h2>
-        <div
-          v-for="project of progress.data.value?.items ?? []"
-          :key="project.title"
-        >
-          <p>{{ project.title }} [{{ project.completion }}%]</p>
-        </div>
-        <p v-if="(progress.data.value?.items ?? []).length === 0">
-          No projects
-        </p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="faq">
-      <div class="sect-top sect">
-        <h2
-          id="faq"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('faq.titleSuffix')"
-        >
-          {{ $t("faq.title") }}
-        </h2>
-        <p class="text">
-          {{ $t("faq.text") }}
-        </p>
-      </div>
-      <div class="questions column-2">
-        <div class="left questions-left">
-          <details
-            v-for="i in even(nOfQAs)"
+  <section class="team-helpers">
+    <div class="sect-top sect">
+      <h2
+        id="special-thanks"
+        class="dot title"
+        :data-title-suffix="titleSuffixHandler('specialThanks.titleSuffix')"
+      >
+        {{ $t("specialThanks.title") }}
+      </h2>
+      <p class="text">
+        {{ $t("specialThanks.text") }}
+      </p>
+    </div>
+    <div class="animation-wrapper">
+      <div class="row first">
+        <div class="team-helpers-cards">
+          <a
+            v-for="i in [...even(maxContributorsIndex), ...even(maxContributorsIndex)]"
             :key="i"
-            class="question-and-answer"
+            :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
+            target="_blank"
+            :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
           >
-            <summary>
-              {{ $t(`faq.QAs[${i}].question`) }}
-            </summary>
-            <p
-              class="text"
-              v-html="$t(`faq.QAs[${i}].answer`)"
-            />
-          </details>
-        </div>
-
-        <div class="right questions-right">
-          <details
-            v-for="i in odd(nOfQAs)"
-            :key="i"
-            class="question-and-answer"
-          >
-            <summary>
-              {{ $t(`faq.QAs[${i}].question`) }}
-            </summary>
-            <p
-              class="text"
-              v-html="$t(`faq.QAs[${i}].answer`)"
-            />
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="showcase">
-      <div class="sect-top sect">
-        <h2
-          id="showcase"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('showcase.titleSuffix')"
-        >
-          {{ $t("showcase.title") }}
-        </h2>
-        <p class="text">
-          {{ $t("showcase.text") }}
-        </p>
-      </div>
-      <div class="grid">
-        <div class="item highlight">
-          <Icon
-            name="ph:hard-drives-fill"
-            size="48"
-            mode="svg"
-          />
-          <h1>{{ $t("showcase.cards.0.title") }}</h1>
-          <p>{{ $t("showcase.cards.0.caption") }}</p>
-        </div>
-        <div class="item">
-          <Icon
-            name="ph:users-fill"
-            size="48"
-            mode="svg"
-          />
-          <h1>{{ $t("showcase.cards.1.title") }}</h1>
-          <p>{{ $t("showcase.cards.1.caption") }}</p>
-        </div>
-        <div class="item">
-          <Icon
-            name="ph:game-controller-fill"
-            size="48"
-            mode="svg"
-          />
-          <h1>{{ $t("showcase.cards.2.title") }}</h1>
-          <p>{{ $t("showcase.cards.2.caption") }}</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="team">
-      <div class="sect-top sect team-top">
-        <h2
-          id="credits"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('credits.titleSuffix')"
-        >
-          {{ $t("credits.title") }}
-        </h2>
-        <p class="text">
-          {{ $t("credits.text") }}
-        </p>
-      </div>
-      <div class="team-cards">
-        <div
-          v-for="i in array(maxCoreStaffIndex)"
-          :key="i"
-          class="card"
-        >
-          <div class="card-left">
-            <img
-              :src="$t(`credits.people[${i}].picture`)"
-              class="pfp"
-              alt=""
-            >
-          </div>
-          <div class="card-core">
-            <span
-              v-if="$te(`credits.people[${i}].special`)"
-              class="sub"
-            >{{ $t(`credits.people[${i}].special`) }}</span>
-            <h3 class="title">
-              <span>{{ $t(`credits.people[${i}].name`) }}</span>
-              <a
-                :href="$t(`credits.people[${i}].github`)"
-                class="github"
-                target="_blank"
-                aria-label="Open Github"
+            <div class="img-wrapper">
+              <img
+                :src="$t(`specialThanks.people[${i}].picture`)"
+                class="pfp"
+                alt=""
               >
-                <Icon
-                  name="fa7-brands:github"
-                  size="24"
-                />
-              </a>
-            </h3>
-            <p class="text">
-              {{ $t(`credits.people[${i}].caption`) }}
-            </p>
-          </div>
+            </div>
+            <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
+            <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
+          </a>
         </div>
       </div>
-    </section>
-
-    <section class="team-helpers">
-      <div class="sect-top sect">
-        <h2
-          id="special-thanks"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('specialThanks.titleSuffix')"
-        >
-          {{ $t("specialThanks.title") }}
-        </h2>
-        <p class="text">
-          {{ $t("specialThanks.text") }}
-        </p>
-      </div>
-      <div class="animation-wrapper">
-        <div class="row first">
-          <div class="team-helpers-cards">
-            <a
-              v-for="i in [...even(maxContributorsIndex), ...even(maxContributorsIndex)]"
-              :key="i"
-              :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
-              target="_blank"
-              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
-            >
-              <div class="img-wrapper">
-                <img
-                  :src="$t(`specialThanks.people[${i}].picture`)"
-                  class="pfp"
-                  alt=""
-                >
-              </div>
-              <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
-              <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
-            </a>
-          </div>
-        </div>
-        <div class="row second">
-          <div class="team-helpers-cards">
-            <a
-              v-for="i in [...odd(maxContributorsIndex), ...odd(maxContributorsIndex)]"
-              :key="i"
-              :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
-              target="_blank"
-              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
-            >
-              <div class="img-wrapper">
-                <img
-                  :src="$t(`specialThanks.people[${i}].picture`)"
-                  class="pfp"
-                  alt=""
-                >
-              </div>
-              <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
-              <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="update-signup">
-      <div class="sect hero-meta reduced-margin">
-        <!-- keeping this one as is because i'd fix this using a logotype component and components are out of scope for now -->
-        <svg
-          alt=""
-          xmlns="http://www.w3.org/2000/svg"
-          width="48.87"
-          height="71.093"
-          viewBox="0 0 48.87 71.093"
-        >
-          <g
-            id="XMLID_6_"
-            transform="translate(0)"
+      <div class="row second">
+        <div class="team-helpers-cards">
+          <a
+            v-for="i in [...odd(maxContributorsIndex), ...odd(maxContributorsIndex)]"
+            :key="i"
+            :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
+            target="_blank"
+            :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
           >
-            <path
-              id="XMLID_15_"
-              d="M69.581,29.593c-2.029,1.068-.249,4.129,1.78,3.061,5.162-2.67,11.463-2.6,16.981-1.1,4.735,1.282,9.5,3.845,12.246,8.045,1.246,1.922,4.307.142,3.061-1.78C96.921,27.386,80.3,24.04,69.581,29.593Z"
-              transform="translate(-60.112 -20.086)"
-              fill="#9d6ff3"
-            />
-            <path
-              id="XMLID_14_"
-              d="M103.359,21.045c-3.951-6.159-10.751-10-17.657-11.89C77.763,6.948,68.721,7.019,61.281,10.9c-2.029,1.068-.249,4.129,1.78,3.061,6.586-3.453,14.667-3.311,21.644-1.388,5.981,1.638,12.1,4.913,15.521,10.252C101.507,24.783,104.569,23,103.359,21.045Z"
-              transform="translate(-54.766 -7.693)"
-              fill="#9d6ff3"
-            />
-            <path
-              id="XMLID_9_"
-              d="M65.995,47.8a20.7,20.7,0,0,0-12.958,4.45H47.27a2.579,2.579,0,0,0-2.67,2.456v47.239a2.763,2.763,0,0,0,2.67,2.67h5.838a2.639,2.639,0,0,0,2.528-2.67V87.564A21.228,21.228,0,1,0,65.995,47.8Zm0,33.178a12,12,0,1,1,12-12A12,12,0,0,1,65.995,80.978Z"
-              transform="translate(-44.6 -33.522)"
-              fill="#9d6ff3"
-            />
-          </g>
-        </svg>
-        <h2
-          id="discord-join"
-          class="dot title"
-          :data-title-suffix="titleSuffixHandler('discordJoin.titleSuffix')"
-        >
-          {{ $t("discordJoin.title") }}
-        </h2>
-        <p class="text">
-          {{ $t("discordJoin.text") }}
-        </p>
+            <div class="img-wrapper">
+              <img
+                :src="$t(`specialThanks.people[${i}].picture`)"
+                class="pfp"
+                alt=""
+              >
+            </div>
+            <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
+            <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
+          </a>
+        </div>
       </div>
-      <div class="floating-serverjoin">
-        <p>{{ $t("discordJoin.widget.text") }}</p>
-        <a
-          href="https://discord.gg/pretendo"
-          target="_blank"
-        >{{ $t("discordJoin.widget.button") }}</a>
-      </div>
-      <div class="circle" />
-    </section>
+    </div>
+  </section>
 
+  <section class="update-signup">
+    <div class="sect hero-meta reduced-margin">
+      <!-- keeping this one as is because i'd fix this using a logotype component and components are out of scope for now -->
+      <svg
+        alt=""
+        xmlns="http://www.w3.org/2000/svg"
+        width="48.87"
+        height="71.093"
+        viewBox="0 0 48.87 71.093"
+      >
+        <g
+          id="XMLID_6_"
+          transform="translate(0)"
+        >
+          <path
+            id="XMLID_15_"
+            d="M69.581,29.593c-2.029,1.068-.249,4.129,1.78,3.061,5.162-2.67,11.463-2.6,16.981-1.1,4.735,1.282,9.5,3.845,12.246,8.045,1.246,1.922,4.307.142,3.061-1.78C96.921,27.386,80.3,24.04,69.581,29.593Z"
+            transform="translate(-60.112 -20.086)"
+            fill="#9d6ff3"
+          />
+          <path
+            id="XMLID_14_"
+            d="M103.359,21.045c-3.951-6.159-10.751-10-17.657-11.89C77.763,6.948,68.721,7.019,61.281,10.9c-2.029,1.068-.249,4.129,1.78,3.061,6.586-3.453,14.667-3.311,21.644-1.388,5.981,1.638,12.1,4.913,15.521,10.252C101.507,24.783,104.569,23,103.359,21.045Z"
+            transform="translate(-54.766 -7.693)"
+            fill="#9d6ff3"
+          />
+          <path
+            id="XMLID_9_"
+            d="M65.995,47.8a20.7,20.7,0,0,0-12.958,4.45H47.27a2.579,2.579,0,0,0-2.67,2.456v47.239a2.763,2.763,0,0,0,2.67,2.67h5.838a2.639,2.639,0,0,0,2.528-2.67V87.564A21.228,21.228,0,1,0,65.995,47.8Zm0,33.178a12,12,0,1,1,12-12A12,12,0,0,1,65.995,80.978Z"
+            transform="translate(-44.6 -33.522)"
+            fill="#9d6ff3"
+          />
+        </g>
+      </svg>
+      <h2
+        id="discord-join"
+        class="dot title"
+        :data-title-suffix="titleSuffixHandler('discordJoin.titleSuffix')"
+      >
+        {{ $t("discordJoin.title") }}
+      </h2>
+      <p class="text">
+        {{ $t("discordJoin.text") }}
+      </p>
+    </div>
+    <div class="floating-serverjoin">
+      <p>{{ $t("discordJoin.widget.text") }}</p>
+      <a
+        href="https://discord.gg/pretendo"
+        target="_blank"
+      >{{ $t("discordJoin.widget.button") }}</a>
+    </div>
+    <div class="circle" />
+  </section>
 </template>
 
 <style lang="scss" scoped>

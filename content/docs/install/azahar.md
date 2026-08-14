@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to set up Pretendo on Azahar, the 3DS/2DS emulator."
+---
+
 # Azahar
 
 <div class="tip red">

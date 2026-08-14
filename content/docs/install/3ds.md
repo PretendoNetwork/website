@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to set up Pretendo on the 3DS/2DS family of consoles."
+---
+
 # 3DS/2DS Family
 
 <div class="tip red">

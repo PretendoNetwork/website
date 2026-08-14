@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+	title: 'Blog'
+});
 /* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { data: allPosts } = await useAsyncData('blog', () => queryCollection('blog').all());
 

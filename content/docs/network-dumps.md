@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to gather network dumps of games."
+---
+
 # Network Dumps
 One of the best ways to support the project is to help in gathering network dumps of games. These network dumps can be used by developers to help understand how the servers operate in a live environment. This kind of data greatly simplifies development of the servers, as it removes a large amount of guesswork and reverse engineering.
 

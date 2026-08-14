@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to set up Pretendo on the Wii U console."
+---
+
 # Wii U
 
 <div class="tip red">

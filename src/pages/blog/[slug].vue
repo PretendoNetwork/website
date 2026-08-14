@@ -9,20 +9,12 @@ if (!post.value) {
 }
 
 useHead({
-	title: `${post.value.title} | Pretendo Network Blog`,
+	title: `${post.value.title} | Blog`,
 	meta: [
 		{ property: 'description', content: post.value.caption },
-		{ property: 'og:title', content: `${post.value.title} | Pretendo Network Blog` },
 		{ property: 'og:description', content: post.value.caption },
-		{ property: 'og:type', content: 'website' },
-		{ property: 'og:url', content: 'https://pretendo.network/' },
 		{ property: 'og:image', content: post.value.cover_image },
-		{ property: 'og:image:alt', content: 'Pretendo Network' },
-		{ property: 'og:site_name', content: 'Pretendo Network' },
-		{ name: 'twitter:url', content: 'https://pretendo.network/' },
-		{ name: 'twitter:card', content: 'summary_large_image' },
-		{ name: 'twitter:site', content: '@PretendoNetwork' },
-		{ name: 'twitter:title', content: `${post.value.title} | Pretendo Network Blog` },
+		{ property: 'og:image:alt', content: '' },
 		{ name: 'twitter:description', content: post.value.caption },
 		{ name: 'twitter:image', content: post.value.cover_image }
 	]

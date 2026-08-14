@@ -1,3 +1,7 @@
+---
+description: "Instructions on how to set up Pretendo on Cemu, the Wii U emulator."
+---
+
 <div class="tip green">This Guide may be missing some info or incomplete.</div>
 
 # Cemu
