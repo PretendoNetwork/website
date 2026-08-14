@@ -14,6 +14,7 @@ export type GetApiAuthMe = {
 	mii: {
 		imageUrl: string;
 		name: string;
+		data: string;
 	} | null;
 };
 

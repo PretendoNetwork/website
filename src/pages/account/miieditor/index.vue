@@ -1,19 +1,21 @@
 <script setup lang="ts">
-// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors
 import Mii from '@pretendonetwork/mii-js';
 import { decode } from 'base64-arraybuffer';
-// we don't want the navbar or the footer
-import type { Subtab, Tab } from '@/utils/miieditor';
-// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors either
 import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
-// eslint-disable-next-line import/no-unresolved -- i genuinely don't know why this errors either either
 import { miiEditorJSON } from '@/utils/miieditor';
+import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
+import type { Subtab, Tab } from '@/utils/miieditor';
 
 const { t } = useI18n();
 
 definePageMeta({
-	layout: 'slot-only'
+	layout: 'slot-only',
+	needsAuth: true
 });
+
+const { data: profile } = await useApiFetch('/api/auth/me');
+
+console.log('miidata', profile.value?.mii?.data);
 
 useHead({
 	title: 'Mii Editor | Pretendo Network'
@@ -22,7 +24,7 @@ useHead({
 // TODO: literally all the backend stuff
 const fallbackMiiData =
 	'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
-const miiDataString: string = fallbackMiiData;
+const miiDataString: string = profile.value?.mii?.data || fallbackMiiData;
 
 // keeps track of tabs and pagination
 const activeTab = ref<string>('faceType');
@@ -37,19 +39,8 @@ const loadingCanvas = ref<boolean>(false);
 // these are used in the save modal
 const saving = ref<boolean>(false);
 let oldMii: Mii | null = null;
-const oldMiiNeutralUrl = computed(() => {
-	return oldMii?.studioUrl({
-		width: 512,
-		bgColor: '13173300'
-	});
-});
-const oldMiiSorrowUrl = computed(() => {
-	return oldMii?.studioUrl({
-		width: 512,
-		bgColor: '13173300',
-		expression: 'sorrow'
-	});
-});
+let oldMiiNeutralUrl = '';
+let oldMiiSorrowUrl = '';
 const newMiiNeutralUrl = computed(() => {
 	return mii.value.studioUrl({
 		width: 512,
@@ -78,6 +69,16 @@ function initializeMiiData(encodedUserMiiData: string) {
 		mii.value = tempMii;
 		// we also initialize the old mii variable, which will be used to render the miis in the save dialogue
 		oldMii = tempMii;
+		oldMiiNeutralUrl = oldMii?.studioUrl({
+			width: 512,
+			bgColor: '13173300'
+		});
+
+		oldMiiSorrowUrl = oldMii?.studioUrl({
+			width: 512,
+			bgColor: '13173300',
+			expression: 'sorrow'
+		});
 	} catch (err) {
 		console.error('failed to decode mii data', err);
 		console.groupEnd();
@@ -280,14 +281,26 @@ function getSubPageFromValue(value: string, newSubTab: string, newTab: string) {
 async function handleSave() {
 	saving.value = true;
 
-	console.log('TODO: logic', mii.value);
+	try {
+		await apiFetch('/api/account/update', {
+			method: 'PATCH',
+			body: {
+				mii: { name: mii.value.miiName, primary: 'Y', data: mii.value.encode().toString('base64') }
+			} satisfies ApiAccountUpdateRequest
+		});
 
-	setTimeout(() => {
+		setTimeout(() => {
 		// TODO - Make this prettier
-		alert(t('miiEditor.miiSaved'));
+			alert(t('miiEditor.miiSaved'));
 
-		navigateTo('/account');
-	}, 5000);
+			navigateTo('/account');
+		}, 3000);
+
+		// await refresh();
+	} catch (error: unknown) {
+		const err = getApiError(error);
+		alert(`${err.code}: ${err.message}`);
+	}
 }
 </script>
 
@@ -423,7 +436,11 @@ async function handleSave() {
                 </button>
               </div>
               <div
-                v-for="subtab in tab.subTabs?.filter(s => s.name === activeSubTab && s.type !== 'slider')?.filter(s => (s?.values?.length || 0) > 1)"
+                v-for="subtab in tab.subTabs
+                  ?.filter(
+                    (s) => s.name === activeSubTab && s.type !== 'slider',
+                  )
+                  ?.filter((s) => (s?.values?.length || 0) > 1)"
                 :key="subtab.name"
                 class="pagination"
               >
@@ -862,7 +879,6 @@ div.params-wrapper {
 	max-width: 36rem;
 	height: auto;
 	aspect-ratio: 39/40;
-
 }
 
 div.tabs,
@@ -897,7 +913,7 @@ div.subtabs .subtabbtn {
 	border-radius: 0.4rem;
 	background: none;
 	padding: 0.4rem;
-	color: var(--text-shade-1)
+	color: var(--text-shade-1);
 }
 
 div.subtabs .subtabbtn {
@@ -1309,7 +1325,7 @@ input[type="range"].invert {
 	.params-resizer {
 		max-width: 28rem;
 		height: auto;
-		gap: .5rem
+		gap: 0.5rem;
 	}
 
 	form.params .tab {
@@ -1330,7 +1346,7 @@ input[type="range"].invert {
 	}
 
 	.subtab.info {
-	grid-template-rows: repeat(3, auto) 1fr;
+		grid-template-rows: repeat(3, auto) 1fr;
 	}
 
 	.subtab.info .icons input[type="checkbox"] {
@@ -1373,12 +1389,12 @@ input[type="range"].invert {
 		box-shadow: inset 0 0 0 0.25rem var(--accent-shade-1);
 	}
 
-		fieldset input[type="radio"]:checked + label {
-	background: var(--bg-shade-4);
-	box-shadow:
-		inset 0 0 0 0.2rem var(--accent-shade-1),
-		inset 0 0 0 0.3rem var(--bg-shade-1);
-}
+	fieldset input[type="radio"]:checked + label {
+		background: var(--bg-shade-4);
+		box-shadow:
+			inset 0 0 0 0.2rem var(--accent-shade-1),
+			inset 0 0 0 0.3rem var(--bg-shade-1);
+	}
 
 	fieldset .subpage.has-sliders {
 		gap: 1rem;
@@ -1391,7 +1407,7 @@ input[type="range"].invert {
 
 @media screen and (max-width: 400px) {
 	.params-wrapper {
-		padding: .0rem 0.5rem;
+		padding: 0rem 0.5rem;
 	}
 
 	.mii-comparison .icon {
@@ -1400,7 +1416,7 @@ input[type="range"].invert {
 
 	div.tabs,
 	div.subtabs {
-		gap: .2rem
+		gap: 0.2rem;
 	}
 
 	div.tabs .tabbtn,

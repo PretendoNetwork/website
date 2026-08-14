@@ -24,7 +24,7 @@
 		"@pinia/nuxt": "^1.0.1",
 		"@pretendonetwork/error-codes": "^1.2.2",
 		"@pretendonetwork/grpc": "^2.5.4",
-		"@pretendonetwork/mii-js": "^1.0.9",
+		"@pretendonetwork/mii-js": "^1.0.11",
 		"@vueuse/core": "^14.4.0",
 		"base64-arraybuffer": "^1.0.2",
 		"better-sqlite3": "^12.11.1",

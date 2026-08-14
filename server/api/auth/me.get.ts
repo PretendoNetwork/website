@@ -22,7 +22,8 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 		mii: data.mii
 			? {
 					imageUrl: `${config.public.cdnBaseUrl}/mii/${data.pid}/normal_face.png`,
-					name: data.mii.name
+					name: data.mii.name,
+					data: data.mii.data
 				}
 			: null
 	};

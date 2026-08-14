@@ -65,7 +65,7 @@ async function updateMii() {
 		await apiFetch('/api/account/update', {
 			method: 'PATCH',
 			body: {
-				mii: { name: 'steve', primary: 'Y', data: 'AwAAQMjn20WghCBw2qjhdwOzuI0n2QAAAFhzAHQAZQB2AGUAAAAAAAAAAAAAACoWCgBLBQFoRBgm\r\nNEYUjRIJaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAALaT' }
+				mii: { name: 'steve', primary: 'Y', data: 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC' }
 			} satisfies ApiAccountUpdateRequest
 		});
 		await refresh();
