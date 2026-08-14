@@ -472,9 +472,11 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="user-widget-wrapper logged-in">
+      <div
+        v-if="user"
+        class="user-widget-wrapper logged-in"
+      >
         <Popover.Root
-          v-if="user"
           as="div"
         >
           <Popover.Trigger
