@@ -28,8 +28,11 @@ onMounted(() => {
 
 <template>
   <header :class="{ 'transparent': scrollY === 0 }">
-    <div class="left-section">
+    <div
+      class="left-section"
+    >
       <button
+			id="mobile-button"
         :class="{ 'dropdown-button': true, 'hide-on-desktop': true, active: openDropdown === 'mobile' }"
         @click="handleDropdownButton('mobile')"
       >
@@ -205,7 +208,7 @@ onMounted(() => {
                 <p class="caption">{{ $t("docs.quickLinks.links[0].caption") }}</p>
               </div>
             </a>
-            <a href="/docs/search">
+            <a href="/docs/errors">
               <div class="icon">
                 <Icon
                   name="ph:warning-fill"
@@ -260,7 +263,9 @@ onMounted(() => {
     </div>
 
     <nav>
-      <div class="dropdown-button-wrapper hide-on-mobile">
+      <div
+        class="dropdown-button-wrapper hide-on-mobile"
+      >
         <button
           :class="{ 'dropdown-button': true, active: openDropdown === 'about' }"
           @click="handleDropdownButton('about')"
@@ -416,7 +421,7 @@ onMounted(() => {
                 <p class="caption">{{ $t("docs.quickLinks.links[0].caption") }}</p>
               </div>
             </a>
-            <a href="/docs/search">
+            <a href="/docs/errors">
               <div class="icon">
                 <Icon
                   name="ph:warning-fill"

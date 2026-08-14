@@ -180,6 +180,11 @@ p.switch-tier-modal-caption span {
 	padding: 12px 24px;
 }
 
+.purple-card {
+	border-radius: 10px;
+  background: var(--bg-shade-0);
+}
+
 @media screen and (max-width: 600px) {
 	div.modal {
 		padding: 24px;
