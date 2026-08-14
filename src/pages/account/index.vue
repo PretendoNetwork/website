@@ -7,6 +7,7 @@ definePageMeta({
 
 const authStore = useAuthStore();
 const { data: profile, refresh } = await useApiFetch('/api/auth/me');
+const { data: connections, refresh: refreshConnections } = await useApiFetch('/api/auth/me-connections');
 
 async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment']) {
 	try {
@@ -54,6 +55,7 @@ async function unlinkDiscord() {
 			method: 'POST'
 		});
 		await refresh();
+		await refreshConnections();
 	} catch (error: unknown) {
 		const err = getApiError(error);
 		alert(err.code);
@@ -96,7 +98,13 @@ async function updateMii() {
       v-if="profile.discordId"
       @click="unlinkDiscord()"
     >
-      Unlink {{ profile.discordId }} discord
+      Unlink discord: <span v-if="connections?.discord">
+        <img
+          :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
+          :src="connections.discord.avatarUrl ?? '#'"
+        >
+        {{ connections.discord.username }}
+      </span>
     </button>
     <button
       v-else

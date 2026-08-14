@@ -2,6 +2,13 @@ import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v10';
 import type { H3Event } from 'h3';
 
+export type DiscordUser = {
+	id: string;
+	username: string;
+	discriminator: string;
+	avatar?: string;
+};
+
 type DiscordIds = { guildId: string; supporterRoleId: string | null; testerRoleId: string | null };
 
 type DiscordInstance = {
@@ -67,4 +74,8 @@ export async function removeDiscordMemberTesterRole(discord: DiscordInstance, me
 	if (discord.ids.testerRoleId) {
 		await discord.rest.delete(Routes.guildMemberRole(discord.ids.guildId, memberId, discord.ids.testerRoleId));
 	}
+}
+
+export async function getDiscordUser(discord: DiscordInstance, userId: string) {
+	return await discord.rest.get(Routes.user(userId)) as DiscordUser;
 }

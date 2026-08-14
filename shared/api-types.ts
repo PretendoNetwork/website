@@ -18,6 +18,17 @@ export type GetApiAuthMe = {
 	} | null;
 };
 
+export type GetApiAuthMeConections = {
+	pid: number;
+	discord: {
+		id: string;
+		username: string;
+		discriminator: string;
+		avatar: string | null;
+		avatarUrl: string | null;
+	} | null;
+};
+
 export type ProgressItem = {
 	title: string;
 	githubUrl?: string;
