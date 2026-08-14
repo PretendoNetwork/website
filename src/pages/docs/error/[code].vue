@@ -29,26 +29,28 @@ definePageMeta({
   <div class="content-inner">
     <h1>Error Code {{ error?.code }}</h1>
     <table>
-      <tr>
-        <th>System</th>
-        <td>{{ error?.module.system }}</td>
-      </tr>
-      <tr>
-        <th>Module</th>
-        <td>{{ error?.module.name }} ({{ error?.module.description }})</td>
-      </tr>
-      <tr>
-        <th>Message</th>
-        <td>{{ error?.message }}</td>
-      </tr>
-      <tr>
-        <th>Cause</th>
-        <td>{{ error?.long_description }}</td>
-      </tr>
-      <tr>
-        <th>Solution</th>
-        <td>{{ error?.long_solution }}</td>
-      </tr>
+      <tbody>
+        <tr>
+          <th>System</th>
+          <td>{{ error?.module.system }}</td>
+        </tr>
+        <tr>
+          <th>Module</th>
+          <td>{{ error?.module.name }} ({{ error?.module.description }})</td>
+        </tr>
+        <tr>
+          <th>Message</th>
+          <td>{{ error?.message }}</td>
+        </tr>
+        <tr>
+          <th>Cause</th>
+          <td>{{ error?.long_description }}</td>
+        </tr>
+        <tr>
+          <th>Solution</th>
+          <td>{{ error?.long_solution }}</td>
+        </tr>
+      </tbody>
     </table>
 
     <p>
