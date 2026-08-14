@@ -39,16 +39,16 @@ body,
   width: 100%;
   max-width: 100vw;
   position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   color: var(--text-shade-3);
   justify-content: center;
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
-.main-body {
+/* .main-body {
   overflow-y: hidden; /* Fixes the dowuble scrollbars caused by the last background circle */
-}
+/*}*/ 
 
 code {
   display: inline-block;
