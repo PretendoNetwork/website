@@ -1,32 +1,37 @@
 <script setup lang="ts">
-const query = ref<string>('');
-const results = ref<any[]>([]);
+import { refDebounced } from '@vueuse/core';
+import { createTextMaskInputElement } from 'text-mask-core';
 
-async function onSearch() {
-	if (!query.value) {
-		console.log('returning');
-		return (results.value = []);
-	}
-
-	let normErrCode = query.value.trim();
-	// if the user hasn't put a - in the error code, we add it for them in the query
-	if (normErrCode.length > 3 && /\d/.test(normErrCode[3] || '')) {
-		normErrCode = `${normErrCode.substring(0, 3)}-${normErrCode.substring(3)}`;
-	}
-
-	console.log(normErrCode);
-
-	const { data: searchResults } = await useAsyncData(
-		`errorcodes-${normErrCode}`,
-		() => {
-			return queryCollection('errorcodes')
-				.where('stem', 'LIKE', `${normErrCode}%`)
-				.all();
-		}
-	);
-
-	results.value = searchResults.value || [];
+const query = ref('');
+const maskInput = createTextMaskInputElement(undefined);
+const mask: Array<RegExp | string> = [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+function handleInput(e: InputEvent) {
+	const el = e.target as HTMLInputElement;
+	maskInput.update(el.value, {
+		inputElement: el,
+		mask,
+		guide: false
+	});
+	query.value = el.value;
 }
+
+const debouncedQuery = refDebounced(query);
+const { data: searchResults } = await useAsyncData(
+	() => `errorcodes-${debouncedQuery.value}`,
+	async () => {
+		if (!debouncedQuery.value) {
+			return [];
+		}
+		return await queryCollection('errorcodes')
+			.where('stem', 'LIKE', `${debouncedQuery.value}%`)
+			.limit(25)
+			.all();
+	},
+	{
+		watch: [debouncedQuery]
+	}
+);
+const results = computed(() => searchResults.value ?? []);
 
 useHead({
 	title: 'Search',
@@ -63,10 +68,9 @@ definePageMeta({
       <div class="input-wrapper">
         <input
           id="errorCode"
-          v-model="query"
           :class="{ 'has-match': results.length }"
           placeholder="012-3456"
-          @input="onSearch"
+          @input="handleInput"
         >
         <ul
           v-if="results.length"
