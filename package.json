@@ -9,6 +9,7 @@
 		"build": "nuxt build",
 		"prepare": "nuxt prepare",
 		"dev": "nuxt dev",
+		"dev:host": "nuxt dev --host",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
@@ -23,7 +24,9 @@
 		"@pinia/nuxt": "^1.0.1",
 		"@pretendonetwork/error-codes": "^1.2.2",
 		"@pretendonetwork/grpc": "^2.5.4",
+		"@pretendonetwork/mii-js": "^1.0.9",
 		"@vueuse/core": "^14.4.0",
+		"base64-arraybuffer": "^1.0.2",
 		"better-sqlite3": "^12.11.1",
 		"discord-api-types": "^0.38.53",
 		"eslint": "^9.39.5",
@@ -32,14 +35,19 @@
 		"mongodb": "^7.5.0",
 		"nice-grpc": "^2.1.17",
 		"nodemailer": "^9.0.5",
+		"node-stdlib-browser": "^1.2.0",
 		"nuxt": "^4.5.2",
 		"octokit": "^5.0.5",
 		"papr": "^17.1.1",
 		"reka-ui": "^2.10.3",
 		"stripe": "^22.4.0",
+
 		"vue": "^3.5.13",
 		"vue-router": "^5.2.0",
 		"zod": "^4.4.3"
+	},
+	"overrides": {
+		"vite": "^6.3.2"
 	},
 	"devDependencies": {
 		"@iconify-json/fa7-brands": "^1.2.4",
