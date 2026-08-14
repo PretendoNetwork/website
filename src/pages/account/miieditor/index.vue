@@ -230,8 +230,7 @@ function setActiveTab(newTab: string) {
 
 	// open the subtab with the selected element in it
 	setActiveSubTab(
-		miiEditorJSON.tabs.filter(t => t.name === newTab)[0].subTabs?.[0].name ||
-		'',
+		miiEditorJSON.tabs.filter(t => t.name === newTab)?.[0]?.subTabs?.[0]?.name ?? '',
 		newTab
 	);
 	activeTab.value = newTab;
@@ -305,9 +304,6 @@ async function handleSave() {
 </script>
 
 <template>
-  <!--<ClientOnly
-    fallback-tag="span"
-  >-->
   <div :class="{ 'miieditor-wrapper': true, saving: saving }">
     <svg
       class="logotype"
@@ -798,12 +794,6 @@ async function handleSave() {
       </div>
     </div>
   </div>
-  <!--<template #fallback>
-      <div class="fallback">
-        <p>{{ $t('miiEditor.loading') }}</p>
-      </div>
-    </template>
-  </ClientOnly>-->
 </template>
 
 <style lang="scss" scoped>
