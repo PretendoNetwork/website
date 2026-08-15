@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+/* eslint-disable vue/no-v-html -- FAQ have links in them in raw HTML */
 import type { ProgressItem } from '~~/shared/api-types';
 
-/* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { te, t, tm } = useI18n();
 const progress = await useFetch('/api/progress');
 
@@ -187,7 +187,7 @@ function titleSuffixHandler(path: string) {
             </summary>
             <p
               class="text"
-              v-html="$t(`faq.QAs[${i}].answer`)"
+              v-html="$t(`faq.QAs[${i}].answer`, {}, { escapeParameter: true })"
             />
           </details>
         </div>
