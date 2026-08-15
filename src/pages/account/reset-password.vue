@@ -2,10 +2,10 @@
 import type { ApiAuthResetPasswordRequest } from '~~/shared/api-types';
 
 const route = useRoute();
+const { t } = useI18n();
 const form = reactive({ password: '', passwordConfirm: '' });
 const errorMessage = ref<string | null>();
 
-// TODO style this entire page
 async function submit() {
 	const resetToken = route.query.token?.toString();
 	try {
@@ -20,8 +20,6 @@ async function submit() {
 				resetToken
 			} satisfies ApiAuthResetPasswordRequest
 		});
-
-		alert('Success - your password has been changed');
 		await navigateTo('/account');
 	} catch (error: unknown) {
 		const err = getApiError(error);
@@ -37,29 +35,36 @@ async function submit() {
   <div>
     <div class="account-form-wrapper">
       <form
-        class="account register"
+        class="account"
         @submit.prevent="submit"
       >
-        <h2>Change password</h2>
+        <h2>{{ t('account.resetPassword.header') }}</h2>
+        <p>{{ t('account.resetPassword.sub') }}</p>
         <div>
-          <label>Password</label>
+          <label for="password">{{ t('account.resetPassword.password') }}</label>
           <input
+            id="password"
             v-model="form.password"
-            type="text"
+            type="password"
             required
+            name="password"
+            autocomplete="new-password"
           >
         </div>
         <div>
-          <label>Confirm password</label>
+          <label for="password_confirm">{{ t('account.resetPassword.confirmPassword') }}</label>
           <input
+            id="password_confirm"
             v-model="form.passwordConfirm"
-            type="text"
+            name="password_confirm"
+            type="password"
+            autocomplete="new-password"
             required
           >
         </div>
         <div class="buttons">
           <button type="submit">
-            Submit
+            {{ t('account.resetPassword.submit') }}
           </button>
         </div>
       </form>
@@ -76,5 +81,5 @@ async function submit() {
 </template>
 
 <style scoped>
-@import "/assets/css/auth.css";
+@import "~/assets/css/auth.css";
 </style>

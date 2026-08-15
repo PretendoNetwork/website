@@ -106,6 +106,9 @@ form.account a.register {
 	z-index: 3;
 }
 
+.banner-notice.success div {
+	background: var(--green-shade-0);
+}
 .banner-notice.error div {
 	background: var(--red-shade-1);
 }
@@ -129,6 +132,14 @@ form.account.register div.email,
 form.account.register div.buttons {
 	grid-column: 1 / span 2;
 }
+
+form.account.forgot-password div.h-captcha {
+	grid-column: 1 / span 2;
+	display: flex;
+	justify-content: center;
+}
+
+
 
 @media screen and (max-width: 720px) {
 	form.account.register {

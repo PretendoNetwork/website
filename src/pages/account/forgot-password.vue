@@ -97,5 +97,5 @@ async function submit() {
 </template>
 
 <style scoped>
-@import "~/assets/css/forgot-password.css";
+@import "~/assets/css/auth.css";
 </style>
