@@ -31,7 +31,6 @@ export function getSafeRedirectUrl(input: string | null, baseUrl: string, allowe
 
 export function useAuthUtils() {
 	const authStore = useAuthStore();
-	const route = useRoute();
 	const config = useRuntimeConfig();
 	const allowedRedirectHosts = computed(() => config.public.redirectHosts.split(' ').map(v => v.trim()).filter(v => v.length > 0));
 
@@ -46,11 +45,12 @@ export function useAuthUtils() {
 				external: redirectUrl.external
 			});
 		},
-		async redirectToLogin() {
-			await navigateTo({
+		redirectToLogin(to?: string | undefined) {
+			const target = to ?? useRoute().fullPath;
+			return navigateTo({
 				path: '/account/login',
 				query: {
-					redirect: route.fullPath
+					redirect: target
 				}
 			});
 		},

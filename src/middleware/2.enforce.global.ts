@@ -1,5 +1,8 @@
-function notAllowed() {
-	return navigateTo('/');
+import type { RouteLocationNormalizedGeneric } from 'vue-router';
+
+function notAllowed(to: RouteLocationNormalizedGeneric) {
+	const authUtils = useAuthUtils();
+	return authUtils.redirectToLogin(to.fullPath);
 }
 
 export default defineNuxtRouteMiddleware(async (to) => {
@@ -10,7 +13,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
 	if (to.meta.needsAuth) {
 		if (!meStore.user) {
-			return notAllowed();
+			return notAllowed(to);
 		}
 	}
 });
