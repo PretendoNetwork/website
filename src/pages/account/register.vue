@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
 import type { ApiAuthRegisterRequest } from '~~/shared/api-types';
 
 const route = useRoute();
@@ -19,11 +18,17 @@ const loginURI = computed(() => {
 const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
 
 const errorMessage = ref<string | null>();
-const invisibleHcaptcha = ref<VueHcaptcha | null>(null);
+const captchaRef = useTemplateRef('captcha');
 
 async function registerSubmission() {
 	try {
-		const hCaptchaResponse = invisibleHcaptcha.value ? (await invisibleHcaptcha.value.executeAsync()).response : null;
+		let captchaResponse: string | null = null;
+		if (captchaRef.value) {
+			captchaResponse = await captchaRef.value.getToken();
+			if (!captchaResponse) {
+				return;
+			}
+		}
 
 		const res = await $fetch('/api/auth/register', {
 			method: 'POST',
@@ -32,7 +37,7 @@ async function registerSubmission() {
 				miiName: registerForm.mii_name,
 				password: registerForm.password,
 				username: registerForm.username,
-				captchaResponse: hCaptchaResponse ?? undefined
+				captchaResponse: captchaResponse ?? undefined
 			} satisfies ApiAuthRegisterRequest
 		});
 		auth.set({
@@ -41,11 +46,6 @@ async function registerSubmission() {
 		});
 		await authUtils.safelyRedirectAfterLogin(redirect.value);
 	} catch (error: unknown) {
-		if (error === 'challenge-closed') {
-			// Thrown if the captcha is closed, can be safely ignored
-			return;
-		}
-
 		const err = getApiError(error);
 		errorMessage.value = err.code;
 		setTimeout(() => { // TODO: replace this toast
@@ -119,11 +119,11 @@ async function registerSubmission() {
             required
           >
         </div>
-        <vue-hcaptcha
+        <Captcha
           v-if="$config.public.hcaptchaSiteKey"
-          ref="hcaptcha"
-          :sitekey="$config.public.hcaptchaSiteKey"
+          ref="captcha"
           class="h-captcha"
+          :site-key="$config.public.hcaptchaSiteKey"
           theme="dark"
         />
         <div class="buttons">

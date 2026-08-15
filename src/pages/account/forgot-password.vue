@@ -1,36 +1,44 @@
 <script setup lang="ts">
-import VueHcaptcha from '@hcaptcha/vue3-hcaptcha';
 import type { ApiAuthForgotPasswordRequest } from '~~/shared/api-types';
+
+const { t } = useI18n();
 
 const form = reactive({ emailOrUsername: '' });
 
 const errorMessage = ref<string | null>();
-const hcaptcha = ref<VueHcaptcha | null>(null);
+const successMessage = ref<string | null>();
+const captchaRef = useTemplateRef('captcha');
 
-// TODO style this entire page
 async function submit() {
+	errorMessage.value = null;
+	successMessage.value = null;
 	try {
-		const hCaptchaResponse = hcaptcha.value ? (await hcaptcha.value.executeAsync()).response : null;
+		let captchaResponse: string | null = null;
+		if (captchaRef.value) {
+			captchaResponse = await captchaRef.value.getToken();
+			if (!captchaResponse) {
+				return;
+			}
+		}
 
 		await $fetch('/api/auth/forgot-password', {
 			method: 'POST',
 			body: {
 				emailOrPassword: form.emailOrUsername,
-				captchaResponse: hCaptchaResponse ?? undefined
+				captchaResponse: captchaResponse ?? undefined
 			} satisfies ApiAuthForgotPasswordRequest
 		});
 
-		alert('Success - check your inbox');
-		await navigateTo('/');
+		// Success
+		form.emailOrUsername = '';
+		successMessage.value = 'An email has been sent.';
+		setTimeout(() => {
+			successMessage.value = null;
+		}, 5000);
 	} catch (error: unknown) {
-		if (error === 'challenge-closed') {
-			// Thrown if the captcha is closed, can be safely ignored
-			return;
-		}
-
 		const err = getApiError(error);
 		errorMessage.value = err.code;
-		setTimeout(() => { // TODO: replace this toast
+		setTimeout(() => {
 			errorMessage.value = null;
 		}, 5000);
 	}
@@ -41,30 +49,41 @@ async function submit() {
   <div>
     <div class="account-form-wrapper">
       <form
-        class="account register"
+        class="account forgot-password"
         @submit.prevent="submit"
       >
-        <h2>Forgot password</h2>
+        <h2>{{ t('account.forgotPassword.header') }}</h2>
+        <p>{{ t('account.forgotPassword.sub') }}</p>
         <div>
+          <label for="input">{{ t('account.forgotPassword.input') }}</label>
           <input
+            id="input"
             v-model="form.emailOrUsername"
             type="text"
             required
           >
         </div>
-        <vue-hcaptcha
+        <Captcha
           v-if="$config.public.hcaptchaSiteKey"
-          ref="hcaptcha"
-          :sitekey="$config.public.hcaptchaSiteKey"
+          ref="captcha"
           class="h-captcha"
+          :site-key="$config.public.hcaptchaSiteKey"
           theme="dark"
         />
         <div class="buttons">
           <button type="submit">
-            Send
+            {{ t('account.forgotPassword.submit') }}
           </button>
         </div>
       </form>
+    </div>
+    <div
+      v-if="successMessage"
+      class="banner-notice success"
+    >
+      <div>
+        <p>{{ successMessage }}</p>
+      </div>
     </div>
     <div
       v-if="errorMessage"
@@ -78,5 +97,5 @@ async function submit() {
 </template>
 
 <style scoped>
-@import "/assets/css/auth.css";
+@import "~/assets/css/forgot-password.css";
 </style>
