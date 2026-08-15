@@ -74,10 +74,10 @@ The website is currently in a refactor, here is what is still left on the fronte
 - [X] Account: Edit server environment
 - [ ] Account: Edit account info
 - [X] Donations: stripe checkout frontend
-- [ ] Auth: Login
-- [ ] Auth: Logout
-- [ ] Auth: Register
-- [ ] Auth: Forgot password flow
+- [x] Auth: Login
+- [x] Auth: Logout
+- [x] Auth: Register
+- [x] Auth: Forgot password flow
 - [ ] Content: Term pages
 - [ ] April fools'
 - [X] Content: Documentation pages
