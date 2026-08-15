@@ -78,8 +78,8 @@ The website is currently in a refactor, here is what is still left on the fronte
 - [x] Auth: Logout
 - [x] Auth: Register
 - [x] Auth: Forgot password flow
-- [ ] Content: Term pages
-- [ ] April fools'
+- [X] Content: Term pages
+- [X] April fools'
 - [X] Content: Documentation pages
 - [x] Content: Blog
 

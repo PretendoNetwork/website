@@ -9,7 +9,7 @@ if (!termContent.value) {
 }
 
 useHead({
-	title: `${termContent.value.title} | Docs`,
+	title: `${termContent.value.title} | Terms`,
 	meta: [
 		{ property: 'description', content: termContent.value.description },
 		{ property: 'og:description', content: termContent.value.description },
