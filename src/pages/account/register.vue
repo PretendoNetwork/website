@@ -4,6 +4,7 @@ import type { ApiAuthRegisterRequest } from '~~/shared/api-types';
 const route = useRoute();
 const auth = useAuthStore();
 const authUtils = useAuthUtils();
+const toasts = useToasts();
 const redirect = computed(() => route.query.redirect?.toString() ?? null);
 const loginURI = computed(() => {
 	if (redirect.value) {
@@ -16,8 +17,6 @@ const loginURI = computed(() => {
 });
 
 const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
-
-const errorMessage = ref<string | null>();
 const captchaRef = useTemplateRef('captcha');
 
 async function registerSubmission() {
@@ -47,10 +46,10 @@ async function registerSubmission() {
 		await authUtils.safelyRedirectAfterLogin(redirect.value);
 	} catch (error: unknown) {
 		const err = getApiError(error);
-		errorMessage.value = err.code;
-		setTimeout(() => { // TODO: replace this toast
-			errorMessage.value = null;
-		}, 5000);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
 }
 </script>
@@ -136,14 +135,6 @@ async function registerSubmission() {
           >{{ $t("account.loginForm.loginPrompt") }}</a>
         </div>
       </form>
-    </div>
-    <div
-      v-if="errorMessage"
-      class="banner-notice error"
-    >
-      <div>
-        <p>{{ errorMessage }}</p>
-      </div>
     </div>
   </div>
 </template>

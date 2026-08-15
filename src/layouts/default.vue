@@ -11,6 +11,7 @@ useHead({
     id="root"
     class="main-body"
   >
+    <ToastRenderer />
     <Navbar />
     <div class="wrapper">
       <slot />

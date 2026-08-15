@@ -2,6 +2,7 @@
 const route = useRoute();
 const auth = useAuthStore();
 const authUtils = useAuthUtils();
+const toasts = useToasts();
 const redirect = computed(() => route.query.redirect?.toString() ?? null);
 const registerURI = computed(() => {
 	if (redirect.value) {
@@ -14,7 +15,6 @@ const registerURI = computed(() => {
 });
 
 const loginForm = reactive({ username: '', password: '' });
-const errorMessage = ref<string | null>();
 
 async function loginSubmission() {
 	try {
@@ -32,11 +32,10 @@ async function loginSubmission() {
 		await authUtils.safelyRedirectAfterLogin(redirect.value);
 	} catch (error: unknown) {
 		const err = getApiError(error);
-		errorMessage.value = err.code;
-
-		setTimeout(() => { // TODO: replace this toast
-			errorMessage.value = null;
-		}, 5000);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
 }
 </script>
@@ -84,14 +83,6 @@ async function loginSubmission() {
           >{{ $t("account.loginForm.registerPrompt") }}</a>
         </div>
       </form>
-    </div>
-    <div
-      v-if="errorMessage"
-      class="banner-notice error"
-    >
-      <div>
-        <p>{{ errorMessage }}</p>
-      </div>
     </div>
   </div>
 </template>
