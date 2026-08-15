@@ -30,7 +30,8 @@ const { data: connections, refresh: refreshConnections } = await useApiFetch('/a
 
 const selectedServerEnv = ref(profile.value?.serverAccessLevel);
 const dialogContainer = ref(null);
-const modalIsOpen = ref(false);
+const deleteModalOpen = ref(false);
+const editModalOpen = ref(false);
 
 async function updateServerEnvironment(
 	env: ApiAccountUpdateRequest['environment']
@@ -151,7 +152,7 @@ useHead({
             {{ $t("account.settings.upgrade") }}
           </p>
         </NuxtLink>
-        <AlertDialogRoot v-model:open="modalIsOpen">
+        <AlertDialogRoot v-model:open="deleteModalOpen">
           <AlertDialogTrigger
             id="account-delete"
             class="secondary"
@@ -188,236 +189,252 @@ useHead({
         </AlertDialogRoot>
       </div>
     </div>
-
-    <div class="settings-wrapper">
-      <h2
-        id="user-settings"
-        class="section-header"
-      >
-        {{ $t("account.settings.settingCards.userSettings") }}
-      </h2>
-      <div class="setting-card">
-        <h2 class="header">
-          {{ $t("account.settings.settingCards.profile") }}
-        </h2>
-        <a
-          href="/account/edit/profile"
-          class="edit"
+    <AlertDialogRoot v-model:open="editModalOpen">
+      <div class="settings-wrapper">
+        <h2
+          id="user-settings"
+          class="section-header"
         >
-          <Icon
-            name="ph:pencil"
-            size="26"
-          />
-        </a>
-        <ul class="setting-list">
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.nickname") }}
-            </p>
-            <p class="value">
-              {{ profile.mii?.name }}
-            </p>
-          </li>
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.birthDate") }}
-            </p>
-            <p class="value">
-              {{ profile.birthday }}
-            </p>
-          </li>
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.gender") }}
-            </p>
-            <p class="value">
-              {{ profile.gender }}
-            </p>
-          </li>
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.country") }}
-            </p>
-            <p class="value">
-              {{ profile.country }}
-            </p>
-          </li>
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.timezone") }}
-            </p>
-            <p class="value">
-              {{ profile.timezone }}
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="setting-card">
-        <h2 class="header">
-          {{ $t("account.settings.settingCards.serverEnv") }}
+          {{ $t("account.settings.settingCards.userSettings") }}
         </h2>
-        <fieldset :disabled="profile.accessLevel < 1">
-          <form
-            id="server"
-            class="server-selection"
+        <div class="setting-card">
+          <h2 class="header">
+            {{ $t("account.settings.settingCards.profile") }}
+          </h2>
+
+          <AlertDialogTrigger
+            class="edit"
           >
-            <input
-              id="prod"
-              v-model="selectedServerEnv"
-              type="radio"
-              value="prod"
+            <Icon
+              name="ph:pencil"
+              size="26"
+            />
+          </AlertDialogTrigger>
+          <AlertDialogPortal :to="dialogContainer ?? undefined">
+            <AlertDialogOverlay />
+            <AlertDialogContent class="modal">
+              <AlertDialogTitle>{{ $t("account.settings.unavailable") }}.</AlertDialogTitle>
+              <AlertDialogDescription class="modal-caption">
+                <p>
+                  {{ $t('account.settings.settingCards.no_edit_from_dashboard') }}
+                </p>
+              </AlertDialogDescription>
+              <div class="modal-button-wrapper">
+                <AlertDialogCancel class="cancel">
+                  {{ $t("modals.close") }}
+                </AlertDialogCancel>
+              </div>
+            </AlertDialogContent>
+          </AlertDialogPortal>
+          <ul class="setting-list">
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.nickname") }}
+              </p>
+              <p class="value">
+                {{ profile.mii?.name }}
+              </p>
+            </li>
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.birthDate") }}
+              </p>
+              <p class="value">
+                {{ profile.birthday }}
+              </p>
+            </li>
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.gender") }}
+              </p>
+              <p class="value">
+                {{ profile.gender }}
+              </p>
+            </li>
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.country") }}
+              </p>
+              <p class="value">
+                {{ profile.country }}
+              </p>
+            </li>
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.timezone") }}
+              </p>
+              <p class="value">
+                {{ profile.timezone }}
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="setting-card">
+          <h2 class="header">
+            {{ $t("account.settings.settingCards.serverEnv") }}
+          </h2>
+          <fieldset :disabled="profile.accessLevel < 1">
+            <form
+              id="server"
+              class="server-selection"
             >
-            <label for="prod">
-              <Icon
-                name="ph:cube"
-                size="36"
-              />
-              <h2>{{ $t("account.settings.settingCards.production") }}</h2>
-            </label>
-            <input
-              id="test"
-              v-model="selectedServerEnv"
-              type="radio"
-              value="test"
-            >
+              <input
+                id="prod"
+                v-model="selectedServerEnv"
+                type="radio"
+                value="prod"
+              >
+              <label for="prod">
+                <Icon
+                  name="ph:cube"
+                  size="36"
+                />
+                <h2>{{ $t("account.settings.settingCards.production") }}</h2>
+              </label>
+              <input
+                id="test"
+                v-model="selectedServerEnv"
+                type="radio"
+                value="test"
+              >
 
-            <label for="test">
-              <Icon
-                name="ph:flask"
-                size="36"
-              />
-              <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
-            </label>
-          </form>
-        </fieldset>
+              <label for="test">
+                <Icon
+                  name="ph:flask"
+                  size="36"
+                />
+                <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
+              </label>
+            </form>
+          </fieldset>
 
-        <button
-          v-if="
-            profile.accessLevel >= 1 &&
-              selectedServerEnv !== profile.serverAccessLevel
-          "
-          id="save-server-selection"
-          class="button secondary"
-          @click.prevent="() => updateServerEnvironment(selectedServerEnv)"
-        >
-          Save
-        </button>
-        <p
-          v-html="
-            profile.accessLevel < 1
-              ? $t('account.settings.settingCards.upgradePrompt')
-              : $t('account.settings.settingCards.hasAccessPrompt')
-          "
-        />
-      </div>
-
-      <h2
-        id="security"
-        class="section-header"
-      >
-        {{ $t("account.settings.settingCards.signInSecurity") }}
-      </h2>
-      <div class="setting-card">
-        <h2 class="header">
-          {{ $t("account.account") }}
-        </h2>
-        <a
-          href="/account/edit/login-info"
-          class="edit"
-        >
-          <Icon
-            name="ph:pencil"
-            size="26"
-          />
-        </a>
-        <ul class="setting-list">
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.email") }}
-            </p>
-            <p class="value">
-              {{ profile.emailAddress }}
-            </p>
-          </li>
-          <li>
-            <p class="label">
-              {{ $t("account.settings.settingCards.password") }}
-            </p>
-            <p class="value">
-              ●●●●●●●●
-            </p>
-          </li>
-        </ul>
-        <p>{{ $t("account.settings.settingCards.passwordResetNotice") }}</p>
-      </div>
-
-      <div class="setting-card sign-in-history">
-        <h2 class="header">
-          {{ $t("account.settings.settingCards.signInHistory") }}
-        </h2>
-        <p>{{ $t("account.settings.settingCards.no_signins_notice") }}</p>
-      </div>
-
-      <h2
-        id="other"
-        class="section-header"
-      >
-        {{ $t("account.settings.settingCards.otherSettings") }}
-      </h2>
-      <div class="setting-card">
-        <h2 class="header">
-          {{ $t("account.settings.settingCards.discord") }}
-        </h2>
-
-        <p
-          v-if="profile.discordId"
-          class="discord-profile"
-        >
-          {{ $t("account.settings.settingCards.connectedToDiscord") }}
-          <img
-            :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
-            :src="connections?.discord?.avatarUrl ?? '#'"
-          >@{{
-            connections?.discord?.username
-          }}.
-        </p>
-
-        <button
-          v-if="profile.discordId"
-          id="remove-discord-connection"
-          class="button secondary"
-          @click="unlinkDiscord"
-        >
-          {{ $t("account.settings.settingCards.removeDiscord") }}
-        </button>
-        <p v-else>
-          {{ $t("account.settings.settingCards.noDiscordLinked") }}
-          <NuxtLink
-            :style="{cursor: 'pointer'}"
-            @click="linkDiscord"
+          <button
+            v-if="
+              profile.accessLevel >= 1 &&
+                selectedServerEnv !== profile.serverAccessLevel
+            "
+            id="save-server-selection"
+            class="button secondary"
+            @click.prevent="() => updateServerEnvironment(selectedServerEnv)"
           >
-            {{ $t("account.settings.settingCards.linkDiscord") }}
-          </NuxtLink>
-        </p>
-      </div>
+            Save
+          </button>
+          <p
+            v-html="
+              profile.accessLevel < 1
+                ? $t('account.settings.settingCards.upgradePrompt')
+                : $t('account.settings.settingCards.hasAccessPrompt')
+            "
+          />
+        </div>
 
-      <div class="setting-card">
-        <h2 class="header">
-          {{ $t("account.settings.settingCards.newsletter") }}
+        <h2
+          id="security"
+          class="section-header"
+        >
+          {{ $t("account.settings.settingCards.signInSecurity") }}
         </h2>
-        <p>{{ $t("account.settings.settingCards.no_newsletter_notice") }}</p>
+        <div class="setting-card">
+          <h2 class="header">
+            {{ $t("account.account") }}
+          </h2>
+          <AlertDialogTrigger
+            class="edit"
+          >
+            <Icon
+              name="ph:pencil"
+              size="26"
+            />
+          </AlertDialogTrigger>
+          <ul class="setting-list">
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.email") }}
+              </p>
+              <p class="value">
+                {{ profile.emailAddress }}
+              </p>
+            </li>
+            <li>
+              <p class="label">
+                {{ $t("account.settings.settingCards.password") }}
+              </p>
+              <p class="value">
+                ●●●●●●●●
+              </p>
+            </li>
+          </ul>
+          <p>{{ $t("account.settings.settingCards.passwordResetNotice") }}</p>
+        </div>
+
+        <div class="setting-card sign-in-history">
+          <h2 class="header">
+            {{ $t("account.settings.settingCards.signInHistory") }}
+          </h2>
+          <p>{{ $t("account.settings.settingCards.no_signins_notice") }}</p>
+        </div>
+
+        <h2
+          id="other"
+          class="section-header"
+        >
+          {{ $t("account.settings.settingCards.otherSettings") }}
+        </h2>
+        <div class="setting-card">
+          <h2 class="header">
+            {{ $t("account.settings.settingCards.discord") }}
+          </h2>
+
+          <p
+            v-if="profile.discordId"
+            class="discord-profile"
+          >
+            {{ $t("account.settings.settingCards.connectedToDiscord") }}
+            <img
+              :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
+              :src="connections?.discord?.avatarUrl ?? '#'"
+            >@{{
+              connections?.discord?.username
+            }}.
+          </p>
+
+          <button
+            v-if="profile.discordId"
+            id="remove-discord-connection"
+            class="button secondary"
+            @click="unlinkDiscord"
+          >
+            {{ $t("account.settings.settingCards.removeDiscord") }}
+          </button>
+          <p v-else>
+            {{ $t("account.settings.settingCards.noDiscordLinked") }}
+            <NuxtLink
+              :style="{cursor: 'pointer'}"
+              @click="linkDiscord"
+            >
+              {{ $t("account.settings.settingCards.linkDiscord") }}
+            </NuxtLink>
+          </p>
+        </div>
+
+        <div class="setting-card">
+          <h2 class="header">
+            {{ $t("account.settings.settingCards.newsletter") }}
+          </h2>
+          <p>{{ $t("account.settings.settingCards.no_newsletter_notice") }}</p>
         <!--
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
 					<label for="marketing">{{ locale.account.settings.settingCards.newsletterPrompt }}</label>
 				</form>
 				-->
+        </div>
       </div>
-    </div>
+    </AlertDialogRoot>
     <div
       id="delete-account"
-      :class="{ 'modal-wrapper': true, hidden: !modalIsOpen }"
+      :class="{ 'modal-wrapper': true, hidden: !(deleteModalOpen || editModalOpen) }"
     >
       <div ref="dialogContainer" />
     </div>
@@ -583,7 +600,7 @@ useHead({
 }
 
 .account-sidebar .buttons #account-delete {
-	background-color: #f44336;
+	background: var(--red-shade-2);
 }
 
 .modal p.noundo {
@@ -627,12 +644,13 @@ useHead({
 .setting-card .edit {
 	color: var(--text-shade-1);
 	background: var(--bg-shade-3);
-	border-radius: 100%;
+	border-radius: 10000px;
 	position: absolute;
 	top: 42px;
 	right: 48px;
 	width: 48px;
 	height: 48px;
+	padding: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;

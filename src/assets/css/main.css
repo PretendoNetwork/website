@@ -23,7 +23,7 @@
   --green-shade-0: #37a985;
   --green-shade-1: #59c9a5;
 
-  --red-shade-2: #ff4580;
+  --red-shade-2: #e84059;
   --red-shade-1: #a9375b;
   --yellow-shade-1: #ffd966;
 
@@ -178,7 +178,8 @@ div.modal h2 {
 	background: var(--bg-shade-4);
 }
 .modal-button-wrapper button.alert {
-	background: var(--red-shade-1);
+	background: var(--red-shade-2);
+	font-weight: bold;
 }
 .modal-button-wrapper button.action {
 	background: var(--green-shade-0);
