@@ -102,7 +102,7 @@ Miscellanous tasks:
 - [x] Merge upstream changes into refactor branch
 - [ ] Security testing
 - [x] Document configuration
-- [ ] Backend testing
+- [x] Backend testing
   - [x] Github progress tracking
   - [x] Discord linking
   - [x] Discord role syncing
