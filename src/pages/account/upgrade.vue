@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* eslint-disable vue/no-v-html -- locale files still have raw html */
 import {
 	AlertDialogAction,
 	AlertDialogCancel,
@@ -10,7 +11,7 @@ import {
 	AlertDialogTitle,
 	AlertDialogTrigger
 } from 'reka-ui';
-import type { ApiAccountCheckoutRequest } from '~~/shared/api-types';
+import type { ApiAccountCheckoutRequest, TierItem } from '~~/shared/api-types';
 
 const { t } = useI18n();
 
@@ -24,11 +25,11 @@ const sortedTiers = computed(() =>
 	[...(tierData.value?.tiers ?? [])].sort((a, b) => a.tierLevel - b.tierLevel)
 );
 
-const selectedTier = ref(profile.value?.stripeTier);
-const selectedTierPriceId = computed(() => selectedTier?.value?.priceId || '');
+const selectedTierPriceId = ref<null | string>(profile.value?.stripeTier?.priceId ?? null);
+const selectedTier = computed<TierItem | null>(() => selectedTierPriceId.value ? sortedTiers.value.find(v => v.priceId === selectedTierPriceId.value) ?? null : null);
 const modalIsOpen = ref(false);
 
-const dialogContainer = ref(null);
+const dialogContainer = useTemplateRef('dialogContainer');
 
 const progress = await useFetch('/api/progress');
 const donations = computed(() => progress.data.value?.donations);
@@ -213,7 +214,6 @@ useHead({
           class="tier-radio"
           :data-tier-name="tier.name"
           :value="tier.priceId"
-          @click="selectedTier = tier"
         >
         <label
           class="tier"
@@ -221,7 +221,7 @@ useHead({
         >
           <div class="tier-thumbnail">
             <img
-              :src="tier.thumbnailUrl"
+              :src="tier.thumbnailUrl ?? undefined"
               width="100%"
               height="auto"
               alt="Tier icon"
@@ -255,19 +255,19 @@ useHead({
         </label>
       </template>
       <div
-        v-if="hasSubscription(selectedTier?.priceId || '')"
+        v-if="selectedTierPriceId && hasSubscription(selectedTierPriceId)"
         class="button-wrapper"
       >
         <AlertDialogRoot v-model:open="modalIsOpen">
           <AlertDialogTrigger>
             {{ $t("upgrade.unsub") }}
           </AlertDialogTrigger>
-          <AlertDialogPortal :to="dialogContainer">
+          <AlertDialogPortal :to="dialogContainer ?? undefined">
             <AlertDialogOverlay />
             <AlertDialogContent class="modal">
               <AlertDialogTitle>{{ $t("upgrade.unsub") }}?</AlertDialogTitle>
               <AlertDialogDescription class="modal-caption">
-                <span v-html="$t('upgrade.unsubPrompt').replace('tiername', profile?.stripeTier?.tierName)" />
+                <span v-html="$t('upgrade.unsubPrompt').replace('tiername', profile?.stripeTier?.tierName ?? '')" />
               </AlertDialogDescription>
               <div class="modal-button-wrapper">
                 <AlertDialogCancel class="cancel">
@@ -292,12 +292,12 @@ useHead({
           <AlertDialogTrigger>
             {{ $t("upgrade.changeTier") }}
           </AlertDialogTrigger>
-          <AlertDialogPortal :to="dialogContainer">
+          <AlertDialogPortal :to="dialogContainer ?? undefined">
             <AlertDialogOverlay />
             <AlertDialogContent class="modal">
               <AlertDialogTitle>{{ $t("upgrade.changeTier") }}?</AlertDialogTitle>
               <AlertDialogDescription class="modal-caption">
-                <span v-html="$t('upgrade.changeTierPrompt').replace('oldtiername', profile?.stripeTier?.tierName).replace('newtiername', selectedTier?.name)" />
+                <span v-html="$t('upgrade.changeTierPrompt').replace('oldtiername', profile.stripeTier.tierName).replace('newtiername', selectedTier?.name ?? '')" />
               </AlertDialogDescription>
               <div class="modal-button-wrapper">
                 <AlertDialogCancel class="cancel">

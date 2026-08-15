@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* eslint-disable vue/no-v-html -- locale files still have raw html */
 import {
 	AlertDialogAction,
 	AlertDialogCancel,
@@ -157,7 +158,7 @@ useHead({
           >
             {{ $t("account.settings.delete.button") }}
           </AlertDialogTrigger>
-          <AlertDialogPortal :to="dialogContainer">
+          <AlertDialogPortal :to="dialogContainer ?? undefined">
             <AlertDialogOverlay />
             <AlertDialogContent class="modal">
               <AlertDialogTitle>{{ $t("account.settings.delete.modalTitle") }}?</AlertDialogTitle>
