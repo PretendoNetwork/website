@@ -46,9 +46,9 @@ body,
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
-/* .main-body {
+.main-body {
   overflow-y: hidden; /* Fixes the dowuble scrollbars caused by the last background circle */
-/*}*/ 
+} 
 
 code {
   display: inline-block;
