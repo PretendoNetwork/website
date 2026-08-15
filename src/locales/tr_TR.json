@@ -421,7 +421,7 @@
 	},
 	"donation": {
 		"upgradePush": "Abone olmak ve harika avantajlara erişmek için <a href=\"/account/upgrade\">yükseltme sayfasını</a> ziyaret edin.",
-		"progress": "Ayda <span>${totd}</span>, <span>${goald}</span>/ay, aylık hedefin <span>%{perc}</span>."
+		"progress": "Ayda {totd}, {goald}/ay, aylık hedefin <span>%{perc}</span>."
 	},
 	"blogPage": {
 		"published": "Tarafından yayınlandı",

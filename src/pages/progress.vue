@@ -1,5 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { t } = useI18n();
 
 const progress = await useFetch('/api/progress');
@@ -7,12 +6,12 @@ const projects = computed(() => progress.data.value?.items ?? []);
 const donations = computed(() => progress.data.value?.donations);
 const goalPercentage = computed(() => Math.floor((donations.value?.currentCents ?? 0) / (donations.value?.goalCents ?? 0) * 100));
 
-const goalText = computed(() => {
-	return t('donation.progress', {
+const goalTextVars = computed(() => {
+	return {
 		totd: Math.round((donations.value?.currentCents ?? 0) / 100).toString(),
 		goald: Math.round((donations.value?.goalCents ?? 0) / 100).toString(),
 		perc: goalPercentage.value.toString()
-	});
+	};
 });
 </script>
 
@@ -85,10 +84,25 @@ const goalText = computed(() => {
         <p class="localeReplace">
           <span
             class="goal-text-content"
-            v-html="goalText"
-          />
+          >
+            <i18n-t keypath="donation.progress">
+              <template #totd>
+                <span>${{ goalTextVars.totd }}</span>
+              </template>
+              <template #goald>
+                <span>${{ goalTextVars.goald }}</span>
+              </template>
+              <template #perc>
+                <span>{{ goalTextVars.perc }}%</span>
+              </template>
+            </i18n-t>
+          </span>
           {{ ' ' }}
-          <span v-html="t('donation.upgradePush')" />
+          <i18n-t keypath="donation.upgradePushText">
+            <template #link>
+              <a href="/account/upgrade">{{ t('donation.upgradePushLinkText') }}</a>
+            </template>
+          </i18n-t>
         </p>
       </div>
 

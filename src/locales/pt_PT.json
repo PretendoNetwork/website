@@ -274,7 +274,7 @@
 		"description": "Verifique o andamento do projeto e as suas metas! (Atualizado em média a cada uma hora, não reflete TODAS as metas ou progresso do projeto)"
 	},
 	"donation": {
-		"progress": "<span>${totd}</span> de <span>${goald}</span> por mês, o que significa <span>{perc}%</span> do objetivo mensal.",
+		"progress": "{totd} de {goald} por mês, o que significa {perc} do objetivo mensal.",
 		"upgradePush": "Para se tornar um doador e ganhar acesso a vários benefícios legais, visite a página de <a href=\"/account/upgrade\">upgrade</a>."
 	}
 }

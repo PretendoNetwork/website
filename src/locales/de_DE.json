@@ -414,7 +414,7 @@
 		"changeTierConfirm": "Stufe ändern"
 	},
 	"donation": {
-		"progress": "<span>${totd}</span> von <span>${goald}</span>/Monat, <span>{perc}%</span> des monatlichen Ziels.",
+		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels.",
 		"upgradePush": "Um Abonnent zu werden und Zugang zu coolen Vorteilen zu erhalten, besuche die <a href=\"/account/upgrade\">Upgrade-Seite</a>."
 	},
 	"localizationPage": {

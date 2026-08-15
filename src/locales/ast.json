@@ -206,7 +206,7 @@
 		"back": "Atrás"
 	},
 	"donation": {
-		"progress": "<span>{totd}$</span> de <span>{goald}$</span>/mes, <span>{perc}%</span> de la meta mensual.",
+		"progress": "<span>{totd}$</span> de <span>{goald}$</span>/mes, {perc} de la meta mensual.",
 		"upgradePush": "Pa convertise en soscriptor/a ya tener accesu a coses guais, visita la <a href=\"/account/upgrade\">páxina d'anovamientu</a>."
 	},
 	"docs": {

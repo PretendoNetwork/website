@@ -414,7 +414,7 @@
 		"back": "பின்"
 	},
 	"donation": {
-		"progress": "மாதாந்திர இலக்கில் <span>${totd}</span> <span>${goald}</span>/mouth, <span>{perc}%</span>.",
+		"progress": "மாதாந்திர இலக்கில் {totd} {goald}/mouth, {perc}.",
 		"upgradePush": "சந்தாதாரராவதற்கும் சிறந்த சலுகைகளுக்கான அணுகலைப் பெறுவதற்கும், <a href=\"/account/upgrade\">மேம்படுத்தல் பக்கத்தைப்</a> பார்வையிடவும்."
 	},
 	"localizationPage": {

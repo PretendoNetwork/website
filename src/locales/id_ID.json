@@ -417,7 +417,7 @@
 		"back": "Kembali"
 	},
 	"donation": {
-		"progress": "<span>${totd}</span> dari <span>${goald}</span> per bulan, <span>{perc}%</span> dari target bulanan.",
+		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan.",
 		"upgradePush": "Untuk menjadi pelanggan dan mendapatkan akses ke berbagai keuntungan menarik, kunjungi <a href=\"/account/upgrade\">halaman upgrade</a>."
 	},
 	"localizationPage": {

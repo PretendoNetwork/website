@@ -13,8 +13,6 @@ import {
 } from 'reka-ui';
 import type { ApiAccountCheckoutRequest, TierItem } from '~~/shared/api-types';
 
-const { t } = useI18n();
-
 definePageMeta({
 	needsAuth: true
 });
@@ -35,12 +33,12 @@ const progress = await useFetch('/api/progress');
 const donations = computed(() => progress.data.value?.donations);
 const goalPercentage = computed(() => Math.floor((donations.value?.currentCents ?? 0) / (donations.value?.goalCents ?? 0) * 100));
 
-const goalText = computed(() => {
-	return t('donation.progress', {
+const goalTextVars = computed(() => {
+	return {
 		totd: Math.round((donations.value?.currentCents ?? 0) / 100).toString(),
 		goald: Math.round((donations.value?.goalCents ?? 0) / 100).toString(),
 		perc: goalPercentage.value.toString()
-	});
+	};
 });
 
 async function unsubscribe() {
@@ -196,10 +194,21 @@ useHead({
         />
         <div class="progress-bar-capped" />
       </div>
-      <p
+      <span
         class="localeReplace"
-        v-html="goalText"
-      />
+      >
+        <i18n-t keypath="donation.progress">
+          <template #totd>
+            <span>${{ goalTextVars.totd }}</span>
+          </template>
+          <template #goald>
+            <span>${{ goalTextVars.goald }}</span>
+          </template>
+          <template #perc>
+            <span>{{ goalTextVars.perc }}%</span>
+          </template>
+        </i18n-t>
+      </span>
     </div>
 
     <form method="post">

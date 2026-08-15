@@ -414,7 +414,7 @@
 		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class=\"oldtier\">oldtiername</span> and subscribe to <span class=\"newtier\">newtiername</span>?"
 	},
 	"donation": {
-		"progress": "<span>${totd}</span> of <span>${goald}</span>/month, <span>{perc}%</span> of the monthly goal.",
+		"progress": "{totd} of {goald}/month, {perc} of the monthly goal.",
 		"upgradePush": "To become a subscriber and gain access to cool perks, visit the <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"localizationPage": {

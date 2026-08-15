@@ -349,7 +349,7 @@
 		"month": "달"
 	},
 	"donation": {
-		"progress": "<span>${goald}</span>/월 중에서 <span>${totd}</span> , 매달 목표의 <span>{perc}%</span>.",
+		"progress": "{goald}/월 중에서 {totd} , 매달 목표의 {perc}.",
 		"upgradePush": "구독자가 되고 멋진 혜택을 받으시려면, <a href=\"/account/upgrade\">업그레이드 페이지</a>를 방문하세요."
 	}
 }
