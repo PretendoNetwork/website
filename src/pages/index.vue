@@ -5,9 +5,11 @@ import type { ProgressItem } from '~~/shared/api-types';
 const { te, t, tm } = useI18n();
 const progress = await useFetch('/api/progress');
 
-const nOfQAs = computed(() => tm<string>('faq.QAs') as string[]).value.length - 1;
-const maxCoreStaffIndex = computed(() => tm<string>('credits.people') as string[]).value.length - 1;
-const maxContributorsIndex = computed(() => tm<string>('specialThanks.people') as string[]).value.length - 1;
+const faqItems = computed(() => Object.keys(tm<string>('faq.QAs')));
+const { data: team } = await useAsyncData(async () => queryCollection('team').first());
+const teamMembers = computed(() => team.value?.people ?? []);
+const { data: specialThanks } = await useAsyncData(async () => (await queryCollection('specialThanks').first()));
+const specialThanksMembers = computed(() => specialThanks.value?.people ?? []);
 
 const summaryProgress = computed<ProgressItem>(() => {
 	return {
@@ -22,16 +24,9 @@ const summaryProgress = computed<ProgressItem>(() => {
 	};
 });
 
-function array(n: number) {
-	return Array.from({ length: n + 1 }, (_, i) => i);
-}
-
-function odd(n: number) {
-	return array(n).filter(i => i % 2 === 1);
-}
-
-function even(n: number) {
-	return array(n).filter(i => i % 2 === 0);
+function arraySplit<T>(array: Array<T>, groupCount: number): Array<Array<T>> {
+	return Array.from({ length: groupCount })
+		.map((_, groupIndex) => array.filter((_, i) => i % groupCount === groupIndex));
 }
 
 function titleSuffixHandler(path: string) {
@@ -174,25 +169,16 @@ function titleSuffixHandler(path: string) {
         </p>
       </div>
       <div class="questions column-2">
-        <div class="left questions-left">
+        <div
+          v-for="(faq, groupIndex) of arraySplit(faqItems, 2)"
+          :key="groupIndex"
+          :class="{
+            'left questions-left': groupIndex === 0,
+            'right questions-right': groupIndex === 1,
+          }"
+        >
           <details
-            v-for="i in even(nOfQAs)"
-            :key="i"
-            class="question-and-answer"
-          >
-            <summary>
-              {{ $t(`faq.QAs[${i}].question`) }}
-            </summary>
-            <p
-              class="text"
-              v-html="$t(`faq.QAs[${i}].answer`)"
-            />
-          </details>
-        </div>
-
-        <div class="right questions-right">
-          <details
-            v-for="i in odd(nOfQAs)"
+            v-for="i in faq"
             :key="i"
             class="question-and-answer"
           >
@@ -267,26 +253,22 @@ function titleSuffixHandler(path: string) {
       </div>
       <div class="team-cards">
         <div
-          v-for="i in array(maxCoreStaffIndex)"
-          :key="i"
+          v-for="member in teamMembers"
+          :key="member.github"
           class="card"
         >
           <div class="card-left">
             <img
-              :src="$t(`credits.people[${i}].picture`)"
+              :src="member.picture"
               class="pfp"
               alt=""
             >
           </div>
           <div class="card-core">
-            <span
-              v-if="$te(`credits.people[${i}].special`)"
-              class="sub"
-            >{{ $t(`credits.people[${i}].special`) }}</span>
             <h3 class="title">
-              <span>{{ $t(`credits.people[${i}].name`) }}</span>
+              <span>{{ member.name }}</span>
               <a
-                :href="$t(`credits.people[${i}].github`)"
+                :href="member.github"
                 class="github"
                 target="_blank"
                 aria-label="Open Github"
@@ -298,7 +280,7 @@ function titleSuffixHandler(path: string) {
               </a>
             </h3>
             <p class="text">
-              {{ $t(`credits.people[${i}].caption`) }}
+              {{ $t(`credits.roles.${member.captionKey}`) }}
             </p>
           </div>
         </div>
@@ -319,45 +301,32 @@ function titleSuffixHandler(path: string) {
         </p>
       </div>
       <div class="animation-wrapper">
-        <div class="row first">
+        <div
+          v-for="(members, groupIndex) of arraySplit(specialThanksMembers, 2)"
+          :key="groupIndex"
+          class="row"
+          :class="{
+            first: groupIndex === 0,
+            second: groupIndex === 1,
+          }"
+        >
           <div class="team-helpers-cards">
             <a
-              v-for="i in [...even(maxContributorsIndex), ...even(maxContributorsIndex)]"
-              :key="i"
-              :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
+              v-for="member in [...members, ...members]"
+              :key="member.name"
+              :href="member.github"
               target="_blank"
-              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
+              :class="{ 'helper-card': true, 'special': member.isSpecial }"
             >
               <div class="img-wrapper">
                 <img
-                  :src="$t(`specialThanks.people[${i}].picture`)"
+                  :src="member.picture"
                   class="pfp"
                   alt=""
                 >
               </div>
-              <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
-              <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
-            </a>
-          </div>
-        </div>
-        <div class="row second">
-          <div class="team-helpers-cards">
-            <a
-              v-for="i in [...odd(maxContributorsIndex), ...odd(maxContributorsIndex)]"
-              :key="i"
-              :href="$te(`specialThanks.people[${i}].github`) ? $t(`specialThanks.people[${i}].github`) : undefined"
-              target="_blank"
-              :class="{ 'helper-card': true, 'special': $te(`specialThanks.people[${i}].special`) }"
-            >
-              <div class="img-wrapper">
-                <img
-                  :src="$t(`specialThanks.people[${i}].picture`)"
-                  class="pfp"
-                  alt=""
-                >
-              </div>
-              <span>{{ $t(`specialThanks.people[${i}].name`) }}</span>
-              <p>{{ $t(`specialThanks.people[${i}].caption`) }}</p>
+              <span>{{ member.name }}</span>
+              <p>{{ $t(`specialThanks.reasons.${member.captionKey}`) }}</p>
             </a>
           </div>
         </div>

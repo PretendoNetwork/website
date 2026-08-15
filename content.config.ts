@@ -65,6 +65,31 @@ export default defineContentConfig({
 				}),
 				code: z.string()
 			})
+		}),
+		team: defineCollection({
+			type: 'data',
+			source: 'team.json',
+			schema: z.object({
+				people: z.array(z.object({
+					name: z.string(),
+					captionKey: z.string(),
+					picture: z.string().url(),
+					github: z.string().url()
+				}))
+			})
+		}),
+		specialThanks: defineCollection({
+			type: 'data',
+			source: 'specialthanks.json',
+			schema: z.object({
+				people: z.array(z.object({
+					name: z.string(),
+					captionKey: z.string(),
+					picture: z.string().url(),
+					github: z.string().url(),
+					isSpecial: z.boolean().default(false)
+				}))
+			})
 		})
 	}
 });

@@ -114,171 +114,35 @@
 	"credits": {
 		"title": "The team",
 		"text": "Meet the team behind the project",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Project owner and lead developer",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse research and development",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "Wii U research and patch development",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Systems research and server architecture",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Web development",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Systems research and server development",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "Preservationist and server architecture",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Systems research and server development",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko",
-				"caption": "Web and server development",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps and community work",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Server development and optimization",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "3DS patch development and research",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"roles": {
+			"owner": "Project owner and lead developer",
+			"miiverseDev": "Miiverse research and development",
+			"wiiuResearchAndPatchDev": "Wii U research and patch development",
+			"researchAndGameDev": "Systems research and server development",
+			"researchAndServerArch": "Systems research and server architecture",
+			"webDev": "Web development",
+			"preserveAndServerArch": "Preservationist and server architecture",
+			"webDevAndGameDev": "Web and server development",
+			"gameDevAndOptimise": "Server development and optimization",
+			"ctrResearchAndPatchDev": "3DS patch development and research",
+			"devopsAndCommunityWork": "DevOps and community work"
+		}
 	},
 	"specialThanks": {
 		"title": "Special thanks",
 		"text": "Without them, Pretendo wouldn't be where it is today.",
-		"people": [
-			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "crunch library development",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS development and NEX dissector",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse information sharing",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Special thanks",
-				"caption": "Research on Nintendo datastructures",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icons for the Mii Editor and Juxt reactions",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Console research and game servers",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Wii U patch development",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS patch creator",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Server architecture",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Server architecture",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Splatoon rotations and research",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon rotations and research",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub contributors",
-				"caption": "Localizations and other contributions",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"general": "Localizations and other contributions",
+			"forCrunch": "crunch library development",
+			"forCtrDev": "3DS development and NEX dissector",
+			"forMiiverseHelp": "Miiverse information sharing",
+			"forResearch": "Research on Nintendo datastructures",
+			"forServerDev": "Console research and game servers",
+			"forIcons": "Icons for the Mii Editor and Juxt reactions",
+			"forSplatoon": "Splatoon rotations and research",
+			"forPatches": "Console patch development",
+			"forServers": "Server architecture"
+		}
 	},
 	"discordJoin": {
 		"title": "Stay up to date",
@@ -419,7 +283,7 @@
 		"upgradePush": "To become a subscriber and gain access to cool perks, visit the <a href=\"/account/upgrade\">upgrade page</a>."
 	},
 	"miiEditor": {
-		"nickname":"Nickname",
+		"nickname": "Nickname",
 		"creator": "Creator",
 		"birthday": "Birthday",
 		"clickToSet": "Click to set",
