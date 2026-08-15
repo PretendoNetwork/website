@@ -140,7 +140,7 @@ div.modal-wrapper {
 	align-items: center;
 	background: rgba(0, 0, 0, 0.6);
 
-	z-index: 10;
+	z-index: 100;
 }
 div.modal-wrapper.hidden {
 	display: none;
@@ -152,33 +152,36 @@ div.modal {
 	text-align: left;
 	width: min(660px, 90%);
 	box-sizing: border-box;
+	margin: auto;
 }
 
-div.modal h1 {
+div.modal h2 {
 	margin-top: 0;
-}
-p.modal-caption {
-	color: var(--text-shade-1);
-}
-p.modal-caption span,
-p.switch-tier-modal-caption span {
 	color: var(--text-shade-3);
+}
+
+.modal-caption span span {
+	color: var(--text-shade-3);
+	font-weight: bold;
 }
 
 .modal-button-wrapper {
 	margin-top: 24px;
-	display: flex;
-	justify-content: flex-end;
-}
-.modal-button-wrapper button {
-	margin-left: 12px;
-	width: fit-content;
-}
-.modal-button-wrapper button.cancel {
-	background: none;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 1em;
 }
 .modal-button-wrapper button {
 	padding: 12px 24px;
+}
+.modal-button-wrapper button.cancel {
+	background: var(--bg-shade-4);
+}
+.modal-button-wrapper button.alert {
+	background: var(--red-shade-1);
+}
+.modal-button-wrapper button.action {
+	background: var(--green-shade-0);
 }
 
 .purple-card {
@@ -270,6 +273,31 @@ input[type="range"]:focus::-moz-range-thumb {
 	background-color: var(--accent-shade-3);
 }
 
+.progress-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 12px;
+	margin: 1rem 0;
+	border-radius: 6px;
+	background: var(--bg-shade-3);
+}
+.progress-bar-real,
+.progress-bar-capped {
+	position: absolute;
+	height: 100%;
+	border-radius: 6px;
+	width: var(--progress-bar-width);
+}
+.progress-bar-capped {
+	background-color: var(--accent-shade-0);
+	max-width: 100%;
+}
+.progress-bar-real {
+	background-color: var(--green-shade-1);
+	width: calc(var(--progress-bar-width) - 6px);
+	left: 6px;
+}
 
 .wrapper {
 	width: 95%;
@@ -293,6 +321,10 @@ input[type="range"]:focus::-moz-range-thumb {
   .hide-on-desktop {
     display: unset !important;
   }
+
+	.modal-button-wrapper {
+		grid-auto-flow: row;
+	}
 }
 
 /* Scrollbar styling 'cause it's fancy */

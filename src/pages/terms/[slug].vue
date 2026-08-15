@@ -7,6 +7,16 @@ const { data: termContent } = await useAsyncData(`terms-${slug}`, () => {
 if (!termContent.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
+
+useHead({
+	title: `${termContent.value.title} | Docs`,
+	meta: [
+		{ property: 'description', content: termContent.value.description },
+		{ property: 'og:description', content: termContent.value.description },
+		{ property: 'og:image:alt', content: '' },
+		{ name: 'twitter:description', content: termContent.value.description }
+	]
+});
 </script>
 
 <template>

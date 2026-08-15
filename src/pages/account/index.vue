@@ -1,15 +1,39 @@
 <script setup lang="ts">
+import {
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogOverlay,
+	AlertDialogPortal,
+	AlertDialogRoot,
+	AlertDialogTitle,
+	AlertDialogTrigger, ToastDescription, ToastProvider, ToastRoot, ToastViewport
+} from 'reka-ui';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
 
 definePageMeta({
 	needsAuth: true
 });
 
+const upgradeSuccess = ref(useRoute().query.upgrade_success === 'true');
+const upgradeError = ref(useRoute().query.upgrade_success === 'false');
+const showToast = computed(() => upgradeSuccess.value || upgradeError.value);
+if (showToast.value) {
+	useRouter().replace({ query: {} });
+}
+
 const authStore = useAuthStore();
 const { data: profile, refresh } = await useApiFetch('/api/auth/me');
 const { data: connections, refresh: refreshConnections } = await useApiFetch('/api/auth/me-connections');
 
-async function updateServerEnvironment(env: ApiAccountUpdateRequest['environment']) {
+const selectedServerEnv = ref(profile.value?.serverAccessLevel);
+const dialogContainer = ref(null);
+const modalIsOpen = ref(false);
+
+async function updateServerEnvironment(
+	env: ApiAccountUpdateRequest['environment']
+) {
 	try {
 		await apiFetch('/api/account/update', {
 			method: 'PATCH',
@@ -62,66 +86,738 @@ async function unlinkDiscord() {
 	}
 }
 
-async function updateMii() {
-	try {
-		await apiFetch('/api/account/update', {
-			method: 'PATCH',
-			body: {
-				mii: { name: 'steve', primary: 'Y', data: 'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC' }
-			} satisfies ApiAccountUpdateRequest
-		});
-		await refresh();
-	} catch (error: unknown) {
-		const err = getApiError(error);
-		alert(err.code);
-	}
-}
+useHead({
+	title: `Account`
+});
+
 </script>
 
 <template>
-  <div v-if="profile">
-    <h1>Hello {{ profile.username }}</h1>
-    <p>TODO: account stub page</p>
-    <div :style="{ border: '1px solid white', margin: '2rem 0' }">
-      <p>Environment ({{ profile.serverAccessLevel }})</p>
-      <button @click="updateServerEnvironment('prod')">
-        Prod
-      </button>
-      <button @click="updateServerEnvironment('test')">
-        Test
-      </button>
-      <button @click="updateServerEnvironment('dev')">
-        Dev
-      </button>
-    </div>
-    <button
-      v-if="profile.discordId"
-      @click="unlinkDiscord()"
-    >
-      Unlink discord: <span v-if="connections?.discord">
-        <img
-          :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
-          :src="connections.discord.avatarUrl ?? '#'"
+  <div
+    v-if="profile"
+    class="account-wrapper"
+  >
+    <div class="account-sidebar">
+      <div class="user">
+        <a
+          href="/account/miieditor"
+          class="mii"
         >
-        {{ connections.discord.username }}
-      </span>
-    </button>
-    <button
-      v-else
-      @click="linkDiscord()"
+          <img
+            :src="profile.mii?.imageUrl"
+            alt="Mii image"
+          >
+        </a>
+        <p class="miiname">
+          {{ profile.mii?.name }}
+        </p>
+        <p
+          class="username"
+          :value="profile.username"
+        >
+          PNID: {{ profile.username }}
+        </p>
+        <p
+          v-if="profile.stripeTier?.tierName"
+          :class="`tier-name access-level-${profile.accessLevel}`"
+          :value="profile.stripeTier?.tierName"
+        >
+          {{ profile.stripeTier?.tierName }}
+        </p>
+        <p
+          v-else-if="profile.accessLevel !== -1"
+          :class="`tier-name access-level-${profile.accessLevel}`"
+          :value="$t(`account.accountLevel[${profile.accessLevel}]`)"
+        >
+          {{ $t(`account.accountLevel[${profile.accessLevel}]`) }}
+        </p>
+
+        <p
+          v-else
+          class="tier-name access-level-banned"
+          :value="$t('account.banned')"
+        >
+          {{ $t("account.banned") }}
+        </p>
+      </div>
+      <div class="buttons">
+        <NuxtLink
+          id="account-upgrade"
+          class="button secondary"
+          to="/account/upgrade"
+        >
+          <p class="caption">
+            {{ $t("account.settings.upgrade") }}
+          </p>
+        </NuxtLink>
+        <AlertDialogRoot v-model:open="modalIsOpen">
+          <AlertDialogTrigger
+            id="account-delete"
+            class="secondary"
+          >
+            {{ $t("account.settings.delete.button") }}
+          </AlertDialogTrigger>
+          <AlertDialogPortal :to="dialogContainer">
+            <AlertDialogOverlay />
+            <AlertDialogContent class="modal">
+              <AlertDialogTitle>{{ $t("account.settings.delete.modalTitle") }}?</AlertDialogTitle>
+              <AlertDialogDescription class="modal-caption">
+                <p
+                  style="white-space: pre-line;"
+                >
+                  {{ $t('account.settings.delete.modalDescription') }}
+                </p>
+                <p class="noundo">
+                  {{ $t('account.settings.delete.modalCaution') }}
+                </p>
+              </AlertDialogDescription>
+              <div class="modal-button-wrapper">
+                <AlertDialogCancel class="cancel">
+                  {{ $t("modals.cancel") }}
+                </AlertDialogCancel>
+                <AlertDialogAction
+                  class="alert"
+                  @click="deleteAccount"
+                >
+                  {{ $t("account.settings.delete.modalConfirm") }}
+                </AlertDialogAction>
+              </div>
+            </AlertDialogContent>
+          </AlertDialogPortal>
+        </AlertDialogRoot>
+      </div>
+    </div>
+
+    <div class="settings-wrapper">
+      <h2
+        id="user-settings"
+        class="section-header"
+      >
+        {{ $t("account.settings.settingCards.userSettings") }}
+      </h2>
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.profile") }}
+        </h2>
+        <a
+          href="/account/edit/profile"
+          class="edit"
+        >
+          <Icon
+            name="ph:pencil"
+            size="26"
+          />
+        </a>
+        <ul class="setting-list">
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.nickname") }}
+            </p>
+            <p class="value">
+              {{ profile.mii?.name }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.birthDate") }}
+            </p>
+            <p class="value">
+              {{ profile.birthday }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.gender") }}
+            </p>
+            <p class="value">
+              {{ profile.gender }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.country") }}
+            </p>
+            <p class="value">
+              {{ profile.country }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.timezone") }}
+            </p>
+            <p class="value">
+              {{ profile.timezone }}
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.serverEnv") }}
+        </h2>
+        <fieldset :disabled="profile.accessLevel < 1">
+          <form
+            id="server"
+            class="server-selection"
+          >
+            <input
+              id="prod"
+              v-model="selectedServerEnv"
+              type="radio"
+              value="prod"
+            >
+            <label for="prod">
+              <Icon
+                name="ph:cube"
+                size="36"
+              />
+              <h2>{{ $t("account.settings.settingCards.production") }}</h2>
+            </label>
+            <input
+              id="test"
+              v-model="selectedServerEnv"
+              type="radio"
+              value="test"
+            >
+
+            <label for="test">
+              <Icon
+                name="ph:flask"
+                size="36"
+              />
+              <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
+            </label>
+          </form>
+        </fieldset>
+
+        <button
+          v-if="
+            profile.accessLevel >= 1 &&
+              selectedServerEnv !== profile.serverAccessLevel
+          "
+          id="save-server-selection"
+          class="button secondary"
+          @click.prevent="() => updateServerEnvironment(selectedServerEnv)"
+        >
+          Save
+        </button>
+        <p
+          v-html="
+            profile.accessLevel < 1
+              ? $t('account.settings.settingCards.upgradePrompt')
+              : $t('account.settings.settingCards.hasAccessPrompt')
+          "
+        />
+      </div>
+
+      <h2
+        id="security"
+        class="section-header"
+      >
+        {{ $t("account.settings.settingCards.signInSecurity") }}
+      </h2>
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.account") }}
+        </h2>
+        <a
+          href="/account/edit/login-info"
+          class="edit"
+        >
+          <Icon
+            name="ph:pencil"
+            size="26"
+          />
+        </a>
+        <ul class="setting-list">
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.email") }}
+            </p>
+            <p class="value">
+              {{ profile.emailAddress }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.password") }}
+            </p>
+            <p class="value">
+              ●●●●●●●●
+            </p>
+          </li>
+        </ul>
+        <p>{{ $t("account.settings.settingCards.passwordResetNotice") }}</p>
+      </div>
+
+      <div class="setting-card sign-in-history">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.signInHistory") }}
+        </h2>
+        <p>{{ $t("account.settings.settingCards.no_signins_notice") }}</p>
+      </div>
+
+      <h2
+        id="other"
+        class="section-header"
+      >
+        {{ $t("account.settings.settingCards.otherSettings") }}
+      </h2>
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.discord") }}
+        </h2>
+
+        <p
+          v-if="profile.discordId"
+          class="discord-profile"
+        >
+          {{ $t("account.settings.settingCards.connectedToDiscord") }}
+          <img
+            :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
+            :src="connections?.discord?.avatarUrl ?? '#'"
+          >@{{
+            connections?.discord?.username
+          }}.
+        </p>
+
+        <button
+          v-if="profile.discordId"
+          id="remove-discord-connection"
+          class="button secondary"
+          @click="unlinkDiscord"
+        >
+          {{ $t("account.settings.settingCards.removeDiscord") }}
+        </button>
+        <p v-else>
+          {{ $t("account.settings.settingCards.noDiscordLinked") }}
+          <NuxtLink
+            :style="{cursor: 'pointer'}"
+            @click="linkDiscord"
+          >
+            {{ $t("account.settings.settingCards.linkDiscord") }}
+          </NuxtLink>
+        </p>
+      </div>
+
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.newsletter") }}
+        </h2>
+        <p>{{ $t("account.settings.settingCards.no_newsletter_notice") }}</p>
+        <!--
+				<form id="other">
+					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
+					<label for="marketing">{{ locale.account.settings.settingCards.newsletterPrompt }}</label>
+				</form>
+				-->
+      </div>
+    </div>
+    <div
+      id="delete-account"
+      :class="{ 'modal-wrapper': true, hidden: !modalIsOpen }"
     >
-      Link discord
-    </button>
-    <button
-      @click="updateMii()"
+      <div ref="dialogContainer" />
+    </div>
+    <div
+      v-if="showToast"
+      :class="{'banner-notice': true, success: upgradeSuccess, error: upgradeError }"
     >
-      Update Mii
-    </button>
-    <button
-      :style="{ color: 'red' }"
-      @click="deleteAccount()"
-    >
-      Delete account
-    </button>
+      <ToastProvider>
+        <ToastRoot as="div">
+          <ToastDescription
+            v-if="upgradeSuccess"
+            as="p"
+          >
+            Account upgraded successfully
+          </ToastDescription>
+          <ToastDescription
+            v-if="upgradeError"
+            as="p"
+          >
+            Account upgrade failed
+          </ToastDescription>
+        </ToastRoot>
+
+        <ToastViewport as="p" />
+      </ToastProvider>
+    </div>
   </div>
 </template>
+
+<style scoped>
+/* Removing until it's done */
+.sign-in-history a {
+	display: none;
+}
+
+.account-wrapper {
+	display: grid;
+	column-gap: 48px;
+	margin-top: 80px;
+	color: var(--text-shade-1);
+}
+
+/* Account settings sidebar */
+.account-sidebar .user {
+	margin: 55px auto auto;
+	width: fit-content;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.account-sidebar .user .miiname {
+	font-size: 1.2rem;
+	color: var(--text-shade-3);
+	margin: 8px 0 4px;
+}
+.account-sidebar .user .username {
+	margin: 0;
+}
+.account-sidebar .user .tier-name {
+	margin: 12px 0;
+	line-height: 1.2em;
+	border-radius: 1.2em;
+	border-width: 2px;
+	border-style: solid;
+	padding: 4px 16px;
+}
+
+.account-sidebar .user .tier-level-0,
+.account-sidebar .user .access-level-0 {
+	background: #2a2f50;
+	color: var(--text-shade-1);
+	border-color: #383f6b;
+}
+.account-sidebar .user .tier-level-1 {
+	background: rgba(255, 132, 132, 0.2);
+	color: #ff8484;
+	border-color: rgba(255, 132, 132, 0.8);
+}
+.account-sidebar .user .tier-level-2 {
+	background: rgba(89, 201, 165, 0.3);
+	color: #59c9a5;
+	border-color: #59c9a5;
+}
+.account-sidebar .user .tier-level-3 {
+	background: rgba(202, 177, 251, 0.3);
+	color: var(--accent-shade-3);
+	border-color: var(--accent-shade-3);
+}
+.account-sidebar .user .access-level-banned {
+	background: rgba(255, 63, 0, 0.1);
+	color: #ff3f00;
+	border-color: rgba(255, 63, 0, 0.8);
+}
+.account-sidebar .user .access-level-1 {
+	background: rgba(100, 247, 239, 0.3);
+	color: #64f7ef;
+	border-color: #64f7ef;
+}
+.account-sidebar .user .access-level-2 {
+	background: rgba(255, 199, 89, 0.3);
+	color: #ffc759;
+	border-color: #ffc759;
+}
+.account-sidebar .user .access-level-3 {
+	background: rgba(90, 255, 21, 0.3);
+	color: #5aff15;
+	border-color: #5aff15;
+}
+
+.account-sidebar .user a.mii {
+	position: relative;
+	display: block;
+	width: 128px;
+	height: 128px;
+	overflow: hidden;
+	border-radius: 100%;
+	background: var(--bg-shade-3);
+}
+.account-sidebar .user a.mii::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:
+		no-repeat center/50% url("@/public/assets/images/edit.svg"),
+		rgba(55, 60, 101, 0.7);
+	opacity: 0;
+	transition: opacity 150ms;
+}
+.account-sidebar .user a.mii:hover::after {
+	opacity: 1;
+}
+
+.account-sidebar .user .mii {
+	width: 100%;
+	height: 100%;
+}
+.account-sidebar .buttons {
+	display: grid;
+	grid-auto-flow: row;
+	gap: 16px;
+}
+.account-sidebar .buttons a {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 20px 0 0 0;
+	text-decoration: none;
+	text-align: center;
+}
+.account-sidebar .buttons a svg {
+	margin-bottom: 16px;
+}
+.account-sidebar .buttons a p.caption {
+	margin: 0;
+}
+.account-sidebar .buttons p.cemu-warning {
+	margin: 4px 0 0;
+	font-size: 0.7rem;
+	color: var(--text-shade-1);
+}
+
+.account-sidebar .buttons #account-delete {
+	background-color: #f44336;
+}
+
+.modal p.noundo {
+	font-weight: bold;
+	color: var(--text-shade-3)
+}
+
+/* Settings */
+.settings-wrapper {
+	display: grid;
+	grid-column-start: 2;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+}
+.settings-wrapper a {
+	color: var(--accent-shade-1);
+	text-decoration: none;
+	font-weight: bold;
+}
+.settings-wrapper a:hover {
+	text-decoration: underline;
+}
+.settings-wrapper h2.section-header {
+	margin-top: 40px;
+	grid-column: 1 / 3;
+	color: var(--text-shade-3);
+}
+
+.setting-card {
+	display: grid;
+	grid-template-rows: 35px repeat(2, auto);
+	row-gap: 24px;
+	position: relative;
+	border-radius: 10px;
+	background: var(--bg-shade-2);
+	padding: 48px 60px;
+}
+.setting-card * {
+	margin: 0;
+}
+.setting-card .edit {
+	color: var(--text-shade-1);
+	background: var(--bg-shade-3);
+	border-radius: 100%;
+	position: absolute;
+	top: 42px;
+	right: 48px;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.setting-card .edit:hover {
+	background: var(--bg-shade-3);
+	color: var(--text-shade-3);
+}
+.setting-card .edit svg {
+	pointer-events: none;
+}
+
+.setting-card .header {
+	color: var(--text-shade-3);
+}
+
+.setting-card .setting-list {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 24px;
+	list-style: none;
+	padding: 0;
+}
+.setting-card .setting-list p.label {
+	color: var(--text-shade-3);
+	margin-bottom: 4px;
+}
+
+fieldset {
+	position: relative;
+	height: min-content;
+	padding: 0;
+	border: none;
+}
+
+.setting-card .server-selection {
+	display: flex;
+	border-radius: 5px;
+	overflow: hidden;
+	background: var(--bg-shade-3);
+}
+.setting-card .server-selection input {
+	display: none;
+}
+.server-selection input + label {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	flex: 50%;
+	color: var(--text-shade-1);
+	padding: 40px;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.server-selection input + label h2 {
+	margin-top: 12px;
+	color: var(--text-shade-1);
+}
+.server-selection input:checked + label,
+.server-selection input:checked + label h2 {
+	background: var(--accent-shade-0);
+	color: var(--text-shade-3);
+}
+
+.setting-card #link-discord-account {
+	width: 100%;
+	padding: 12px 48px;
+	cursor: pointer;
+	background: var(--bg-shade-3);
+}
+
+.setting-card .discord-profile {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.setting-card button {
+	width: 100%;
+	height: fit-content;
+	padding: 12px 48px;
+	align-self: flex-end;
+	cursor: pointer;
+	background: var(--bg-shade-3);
+}
+
+.setting-card.span-both-columns {
+	grid-column: 1 / span 2;
+}
+
+@keyframes banner-notice {
+	0% {
+		top: -150px;
+	}
+	20% {
+		top: 35px;
+	}
+	80% {
+		top: 35px;
+	}
+	100% {
+		top: -150px;
+	}
+}
+.banner-notice {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: -150px;
+	left: 0;
+	width: 100vw;
+	animation: banner-notice 5s;
+	z-index: 100;
+	color: var(--text-shade-3)
+}
+.banner-notice div {
+	padding: 4px 36px;
+	border-radius: 5px;
+	z-index: 3;
+}
+.banner-notice.success div {
+	background: var(--green-shade-0);
+}
+.banner-notice.error div {
+	background: var(--red-shade-1);
+
+}
+
+footer {
+	margin-top: 80px;
+}
+
+@media screen and (max-width: 1300px) {
+	.account-wrapper {
+		margin: 20px 0;
+	}
+
+	.settings-wrapper {
+		grid-column-start: 1;
+	}
+
+	.account-sidebar {
+		margin: 0;
+	}
+
+	.account-sidebar .user .mii {
+		width: 128px;
+		height: 128px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.settings-wrapper {
+		display: block;
+		width: 100%;
+	}
+
+	.setting-card {
+		margin-bottom: 24px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.setting-card {
+		padding: 24px;
+		width: calc(100vw - 48px);
+		margin-left: -5vw;
+		margin-right: -2.5vw;
+		border-radius: 0;
+		margin-bottom: 12px;
+	}
+
+	.setting-card .edit {
+		top: 20px;
+		right: 20px;
+		transform: scale(0.85);
+	}
+
+	.setting-card .server-selection {
+		flex-flow: column;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.setting-card .setting-list {
+		grid-template-columns: auto;
+	}
+}
+</style>

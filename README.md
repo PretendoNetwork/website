@@ -68,16 +68,18 @@ The website is currently in a refactor, here is what is still left on the fronte
 - [x] Styling for progress page
 - [x] Styling for progress on main page
 - [X] Account: Mii editor
-- [ ] Account: View account
-- [ ] Account: Delete account
-- [ ] Account: Link discord account
-- [ ] Account: Edit server environment
-- [ ] Donations: stripe checkout frontend
+- [X] Account: View account
+- [X] Account: Delete account
+- [X] Account: Link discord account
+- [X] Account: Edit server environment
+- [ ] Account: Edit account info
+- [X] Donations: stripe checkout frontend
 - [ ] Auth: Login
 - [ ] Auth: Logout
 - [ ] Auth: Register
 - [ ] Auth: Forgot password flow
 - [ ] Content: Term pages
+- [ ] April fools'
 - [X] Content: Documentation pages
 - [x] Content: Blog
 

@@ -10,13 +10,19 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 		pid: data.pid,
 		username: data.username,
 		accessLevel: data.accessLevel,
+		birthday: data.birthday,
+		gender: data.gender,
+		country: data.country,
+		timezone: data.timezone,
+		emailAddress: data.emailAddress,
 		serverAccessLevel: data.serverAccessLevel as any,
 		discordId: data.connections?.discord?.id ?? null,
 		stripeTier: data.connections?.stripe?.subscriptionId
 			? {
 					subscriptionId: data.connections.stripe.subscriptionId,
 					priceId: data.connections.stripe.priceId ?? '',
-					tierName: data.connections.stripe.tierName ?? ''
+					tierName: data.connections.stripe.tierName ?? '',
+					tierLevel: data.connections.stripe.tierLevel ?? ''
 				}
 			: null,
 		mii: data.mii

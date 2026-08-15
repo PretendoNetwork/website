@@ -4,12 +4,18 @@ export type GetApiAuthMe = {
 	pid: number;
 	username: string;
 	accessLevel: number;
+	birthday: string;
+	gender: string;
+	country: string;
+	timezone: string;
+	emailAddress: string;
 	serverAccessLevel: 'dev' | 'test' | 'prod';
 	discordId: string | null;
 	stripeTier: {
 		subscriptionId: string;
 		priceId: string;
 		tierName: string;
+		tierLevel: string | number;
 	} | null;
 	mii: {
 		imageUrl: string;

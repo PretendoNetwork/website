@@ -4,8 +4,6 @@ const { data: error } = await useAsyncData(`${code}`, () => {
 	return queryCollection('errorcodes').where('stem', '=', code).first();
 });
 
-console.log(error.value);
-
 if (!error.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
