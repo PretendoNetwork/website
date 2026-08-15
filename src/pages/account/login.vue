@@ -1,8 +1,17 @@
 <script setup lang="ts">
 const route = useRoute();
 const auth = useAuthStore();
-const redirect = computed(() => route.query.redirect);
-const registerURI = computed(() => `/account/register${redirect.value ? `?redirect=${redirect.value}` : ''}`);
+const authUtils = useAuthUtils();
+const redirect = computed(() => route.query.redirect?.toString() ?? null);
+const registerURI = computed(() => {
+	if (redirect.value) {
+		const params = new URLSearchParams({
+			redirect: redirect.value
+		});
+		return `/account/register?${params}`;
+	}
+	return `/account/register`;
+});
 
 const loginForm = reactive({ username: '', password: '' });
 const errorMessage = ref<string | null>();
@@ -20,12 +29,7 @@ async function loginSubmission() {
 			accessToken: res.accessToken,
 			refreshToken: res.refreshToken
 		});
-
-		if (typeof redirect.value === 'string') {
-			await navigateTo(redirect.value, { external: true });
-		} else {
-			await navigateTo('/account');
-		}
+		await authUtils.safelyRedirectAfterLogin(redirect.value);
 	} catch (error: unknown) {
 		const err = getApiError(error);
 		errorMessage.value = err.code;

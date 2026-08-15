@@ -4,8 +4,17 @@ import type { ApiAuthRegisterRequest } from '~~/shared/api-types';
 
 const route = useRoute();
 const auth = useAuthStore();
-const redirect = computed(() => route.query.redirect);
-const loginURI = computed(() => `/account/login${redirect.value ? `?redirect=${redirect.value}` : ''}`);
+const authUtils = useAuthUtils();
+const redirect = computed(() => route.query.redirect?.toString() ?? null);
+const loginURI = computed(() => {
+	if (redirect.value) {
+		const params = new URLSearchParams({
+			redirect: redirect.value
+		});
+		return `/account/login?${params}`;
+	}
+	return `/account/login`;
+});
 
 const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
 
@@ -30,12 +39,7 @@ async function registerSubmission() {
 			accessToken: res.accessToken,
 			refreshToken: res.refreshToken
 		});
-
-		if (typeof redirect.value === 'string') {
-			await navigateTo(redirect.value, { external: true });
-		} else {
-			await navigateTo('/account');
-		}
+		await authUtils.safelyRedirectAfterLogin(redirect.value);
 	} catch (error: unknown) {
 		if (error === 'challenge-closed') {
 			// Thrown if the captcha is closed, can be safely ignored

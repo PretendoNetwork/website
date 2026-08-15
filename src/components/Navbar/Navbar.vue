@@ -3,7 +3,7 @@ import { Popover } from 'reka-ui/namespaced';
 const { locales, setLocale } = useI18n();
 
 const me = useMeStore();
-const authStore = useAuthStore();
+const authUtils = useAuthUtils();
 const user = computed(() => me.user);
 
 const openDropdown = ref<boolean | string>(false);
@@ -522,7 +522,7 @@ onMounted(() => {
                 </a>
                 <button
                   class="button logout"
-                  @click="authStore.logout()"
+                  @click="authUtils.logout()"
                 >
                   {{ $t("nav.accountWidget.logout") }}
                 </button>

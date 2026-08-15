@@ -42,6 +42,8 @@ declare module 'nuxt/schema' {
 
 	interface PublicRuntimeConfig {
 		baseUrl: string;
+		cdnBaseUrl: string;
+		redirectHosts: string;
 		cookieSecure: boolean;
 		hcaptchaSiteKey: string;
 	}
