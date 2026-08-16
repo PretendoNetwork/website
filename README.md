@@ -119,3 +119,25 @@ Miscellanous tasks:
   - [x] server environment changing
   - [x] Mii edits saving
   - [x] Auth cookies
+
+Testing findings:
+- [X] progress total percentage not rounded properly
+- [X] faq open first by default
+- [X] fix github icon size on team
+- [ ] click out of bandwidth doesn't close bandwidth (use vueuse onclickoutside)
+- [ ] fix hover and clickaway on navbar
+- [ ] fix locale list not having the same layout, no clickaway
+- [ ] progress is a wrench?
+
+- [ ] rss feed wrong content type
+
+- [ ] progress page has no mobile layout (jvs you suck)
+
+- [ ] docs errors page, ironically, gives an error
+- [ ] docs headings are very purple
+- [ ] docs codeblocks *not* very purple
+
+- [ ] need error page
+- [ ] need 404 page
+
+- ? progress seems to sometimes not load for jvs?

@@ -180,6 +180,7 @@ function titleSuffixHandler(path: string) {
           <details
             v-for="i in faq"
             :key="i"
+            :open="i === '0'"
             class="question-and-answer"
           >
             <summary>
@@ -275,7 +276,7 @@ function titleSuffixHandler(path: string) {
               >
                 <Icon
                   name="fa7-brands:github"
-                  size="24"
+                  size="36"
                 />
               </a>
             </h3>
