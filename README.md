@@ -127,7 +127,7 @@ Testing findings:
 - [X] click out of bandwidth doesn't close bandwidth (use vueuse onclickoutside)
 - [ ] fix hover and clickaway on navbar
 - [ ] fix locale list not having the same layout, no clickaway
-- [ ] progress is a wrench?
+- [X] progress is a wrench?
 
 - [ ] rss feed wrong content type
 
@@ -137,7 +137,23 @@ Testing findings:
 - [ ] docs headings are very purple
 - [ ] docs codeblocks *not* very purple
 
+- [ ] upgrade: progress numbers not bold
+- [ ] upgrade: align perk text with icon
+
+- [ ] miieditor logs serverside
+- [ ] just move as much stuff as possible to renderside really
+
+- [ ] account shows beta switch even if it's disabled
+- [ ] if user has beta access they should be able to change back to prod
+- [ ] add dev server env button
+- [ ] discord link/remove success toast
+
+- [ ] forgot password shows success toast even w no captcha (doesn't actually submit)
+- [ ] signup birthdate editor
+
 - [ ] need error page
 - [ ] need 404 page
+
+- [ ] docs index page redirect should be in config, not as a page
 
 - ? progress seems to sometimes not load for jvs?
