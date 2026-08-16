@@ -1,3 +1,4 @@
 export default {
-	fallbackLocale: 'en-US'
+	fallbackLocale: 'en-US',
+	warnHtmlMessage: false
 };
