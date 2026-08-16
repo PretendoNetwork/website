@@ -3,7 +3,7 @@ import type { H3Event } from 'h3';
 
 export async function hcaptchaVerify(event: H3Event, captchaResponse: string | null | undefined): Promise<boolean> {
 	const config = useRuntimeConfig(event);
-	if (!config.hcaptchaSiteKey) {
+	if (!config.public.hcaptchaSiteKey) {
 		return true;
 	} // No captcha is configured, always valid
 	if (!config.hcaptchaSecretKey) {
