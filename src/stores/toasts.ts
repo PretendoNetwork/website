@@ -20,6 +20,9 @@ export const useToasts = defineStore('toasts', () => {
 		remove(id: number) {
 			toasts.value = toasts.value.filter(v => v.id !== id);
 		},
+		clear() {
+			toasts.value = [];
+		},
 		publish(item: ToastContent) {
 			toasts.value.push({
 				id: idCounter++,

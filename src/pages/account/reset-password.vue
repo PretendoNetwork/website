@@ -2,13 +2,13 @@
 import type { ApiAuthResetPasswordRequest } from '~~/shared/api-types';
 
 const route = useRoute();
+const toasts = useToasts();
 const { t } = useI18n();
 const form = reactive({ password: '', passwordConfirm: '' });
-const errorMessage = ref<string | null>();
 
-async function submit() {
-	const resetToken = route.query.token?.toString();
-	try {
+const { execute } = useAsync({
+	async handler() {
+		const resetToken = route.query.token?.toString();
 		if (!resetToken) {
 			throw new Error('No reset token provided');
 		}
@@ -21,14 +21,15 @@ async function submit() {
 			} satisfies ApiAuthResetPasswordRequest
 		});
 		await navigateTo('/account');
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		errorMessage.value = err.code;
-		setTimeout(() => { // TODO: replace this toast
-			errorMessage.value = null;
-		}, 5000);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 </script>
 
 <template>
@@ -36,7 +37,7 @@ async function submit() {
     <div class="account-form-wrapper">
       <form
         class="account"
-        @submit.prevent="submit"
+        @submit.prevent="execute"
       >
         <h2>{{ t('account.resetPassword.header') }}</h2>
         <p>{{ t('account.resetPassword.sub') }}</p>
@@ -68,14 +69,6 @@ async function submit() {
           </button>
         </div>
       </form>
-    </div>
-    <div
-      v-if="errorMessage"
-      class="banner-notice error"
-    >
-      <div>
-        <p>{{ errorMessage }}</p>
-      </div>
     </div>
   </div>
 </template>

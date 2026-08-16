@@ -2,6 +2,15 @@
 import { Toast } from 'reka-ui/namespaced';
 
 const toastStore = useToasts();
+const route = useRoute();
+const routeKey = computed(() => route.path);
+
+watch(routeKey, () => {
+	toastStore.clear(); // Clear toasts when route changes
+});
+onUnmounted(() => {
+	toastStore.clear(); // Clear toasts toast rendered gets removed (route change)
+});
 
 function handleOpenUpdate(id: number, open: boolean) {
 	if (!open) {

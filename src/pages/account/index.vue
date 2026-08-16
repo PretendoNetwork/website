@@ -1,30 +1,36 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html -- locale files still have raw html */
-import {
-	AlertDialogAction,
-	AlertDialogCancel,
-	AlertDialogContent,
-	AlertDialogDescription,
-	AlertDialogOverlay,
-	AlertDialogPortal,
-	AlertDialogRoot,
-	AlertDialogTitle,
-	AlertDialogTrigger, ToastDescription, ToastProvider, ToastRoot, ToastViewport
-} from 'reka-ui';
+import { watchImmediate } from '@vueuse/core';
+import { AlertDialog } from 'reka-ui/namespaced';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
 
+const authStore = useAuthStore();
+const toasts = useToasts();
+const route = useRoute();
 definePageMeta({
 	needsAuth: true
 });
 
-const upgradeSuccess = ref(useRoute().query.upgrade_success === 'true');
-const upgradeError = ref(useRoute().query.upgrade_success === 'false');
-const showToast = computed(() => upgradeSuccess.value || upgradeError.value);
-if (showToast.value) {
+const upgradeSuccessQuery = computed(() => route.query.upgrade_success);
+watchImmediate(upgradeSuccessQuery, (val) => {
+	if (!val) {
+		return;
+	}
+	if (val === 'true') {
+		toasts.publish({
+			type: 'success',
+			text: 'Account upgraded successfully'
+		});
+	}
+	if (val === 'false') {
+		toasts.publish({
+			type: 'error',
+			text: 'Account upgrade failed'
+		});
+	}
 	useRouter().replace({ query: {} });
-}
+});
 
-const authStore = useAuthStore();
 const { data: profile, refresh } = await useApiFetch('/api/auth/me');
 const { data: connections, refresh: refreshConnections } = await useApiFetch('/api/auth/me-connections');
 
@@ -33,10 +39,8 @@ const dialogContainer = ref(null);
 const deleteModalOpen = ref(false);
 const editModalOpen = ref(false);
 
-async function updateServerEnvironment(
-	env: ApiAccountUpdateRequest['environment']
-) {
-	try {
+const { execute: executeUpdateServerEnvironment } = useAsync({
+	async handler(env: ApiAccountUpdateRequest['environment']) {
 		await apiFetch('/api/account/update', {
 			method: 'PATCH',
 			body: {
@@ -44,49 +48,65 @@ async function updateServerEnvironment(
 			} satisfies ApiAccountUpdateRequest
 		});
 		await refresh();
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
-async function deleteAccount() {
-	try {
+const { execute: executeDeleteAccount } = useAsync({
+	async handler() {
 		await apiFetch('/api/account/delete', {
 			method: 'POST'
 		});
 		authStore.logout();
 		await navigateTo('/');
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
-async function linkDiscord() {
-	try {
+const { execute: executeLinkDiscord } = useAsync({
+	async handler() {
 		const result = await apiFetch('/api/account/discord-link', {
 			method: 'GET'
 		});
 		await navigateTo(result.url, { external: true });
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
-async function unlinkDiscord() {
-	try {
+const { execute: executeUnlinkDiscord } = useAsync({
+	async handler() {
 		await apiFetch('/api/account/discord-unlink', {
 			method: 'POST'
 		});
 		await refresh();
 		await refreshConnections();
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
 useHead({
 	title: `Account`
@@ -152,18 +172,18 @@ useHead({
             {{ $t("account.settings.upgrade") }}
           </p>
         </NuxtLink>
-        <AlertDialogRoot v-model:open="deleteModalOpen">
-          <AlertDialogTrigger
+        <AlertDialog.Root v-model:open="deleteModalOpen">
+          <AlertDialog.Trigger
             id="account-delete"
             class="secondary"
           >
             {{ $t("account.settings.delete.button") }}
-          </AlertDialogTrigger>
-          <AlertDialogPortal :to="dialogContainer ?? undefined">
-            <AlertDialogOverlay />
-            <AlertDialogContent class="modal">
-              <AlertDialogTitle>{{ $t("account.settings.delete.modalTitle") }}?</AlertDialogTitle>
-              <AlertDialogDescription class="modal-caption">
+          </AlertDialog.Trigger>
+          <AlertDialog.Portal :to="dialogContainer ?? undefined">
+            <AlertDialog.Overlay />
+            <AlertDialog.Content class="modal">
+              <AlertDialog.Title>{{ $t("account.settings.delete.modalTitle") }}?</AlertDialog.Title>
+              <AlertDialog.Description class="modal-caption">
                 <p
                   style="white-space: pre-line;"
                 >
@@ -172,24 +192,24 @@ useHead({
                 <p class="noundo">
                   {{ $t('account.settings.delete.modalCaution') }}
                 </p>
-              </AlertDialogDescription>
+              </AlertDialog.Description>
               <div class="modal-button-wrapper">
-                <AlertDialogCancel class="cancel">
+                <AlertDialog.Cancel class="cancel">
                   {{ $t("modals.cancel") }}
-                </AlertDialogCancel>
-                <AlertDialogAction
-                  class="alert"
-                  @click="deleteAccount"
+                </AlertDialog.Cancel>
+                <AlertDialog.Action
+                  class="alert."
+                  @click="executeDeleteAccount"
                 >
                   {{ $t("account.settings.delete.modalConfirm") }}
-                </AlertDialogAction>
+                </AlertDialog.Action>
               </div>
-            </AlertDialogContent>
-          </AlertDialogPortal>
-        </AlertDialogRoot>
+            </AlertDialog.Content>
+          </AlertDialog.Portal>
+        </AlertDialog.Root>
       </div>
     </div>
-    <AlertDialogRoot v-model:open="editModalOpen">
+    <AlertDialog.Root v-model:open="editModalOpen">
       <div class="settings-wrapper">
         <h2
           id="user-settings"
@@ -202,30 +222,30 @@ useHead({
             {{ $t("account.settings.settingCards.profile") }}
           </h2>
 
-          <AlertDialogTrigger
+          <AlertDialog.Trigger
             class="edit"
           >
             <Icon
               name="ph:pencil"
               size="26"
             />
-          </AlertDialogTrigger>
-          <AlertDialogPortal :to="dialogContainer ?? undefined">
-            <AlertDialogOverlay />
-            <AlertDialogContent class="modal">
-              <AlertDialogTitle>{{ $t("account.settings.unavailable") }}.</AlertDialogTitle>
-              <AlertDialogDescription class="modal-caption">
+          </AlertDialog.Trigger>
+          <AlertDialog.Portal :to="dialogContainer ?? undefined">
+            <AlertDialog.Overlay />
+            <AlertDialog.Content class="modal">
+              <AlertDialog.Title>{{ $t("account.settings.unavailable") }}.</AlertDialog.Title>
+              <AlertDialog.Description class="modal-caption">
                 <p>
                   {{ $t('account.settings.settingCards.no_edit_from_dashboard') }}
                 </p>
-              </AlertDialogDescription>
+              </AlertDialog.Description>
               <div class="modal-button-wrapper">
-                <AlertDialogCancel class="cancel">
+                <AlertDialog.Cancel class="cancel">
                   {{ $t("modals.close") }}
-                </AlertDialogCancel>
+                </AlertDialog.Cancel>
               </div>
-            </AlertDialogContent>
-          </AlertDialogPortal>
+            </AlertDialog.Content>
+          </AlertDialog.Portal>
           <ul class="setting-list">
             <li>
               <p class="label">
@@ -316,7 +336,7 @@ useHead({
             "
             id="save-server-selection"
             class="button secondary"
-            @click.prevent="() => updateServerEnvironment(selectedServerEnv)"
+            @click.prevent="() => executeUpdateServerEnvironment(selectedServerEnv)"
           >
             Save
           </button>
@@ -339,14 +359,14 @@ useHead({
           <h2 class="header">
             {{ $t("account.account") }}
           </h2>
-          <AlertDialogTrigger
+          <AlertDialog.Trigger
             class="edit"
           >
             <Icon
               name="ph:pencil"
               size="26"
             />
-          </AlertDialogTrigger>
+          </AlertDialog.Trigger>
           <ul class="setting-list">
             <li>
               <p class="label">
@@ -403,7 +423,7 @@ useHead({
             v-if="profile.discordId"
             id="remove-discord-connection"
             class="button secondary"
-            @click="unlinkDiscord"
+            @click="executeUnlinkDiscord"
           >
             {{ $t("account.settings.settingCards.removeDiscord") }}
           </button>
@@ -411,7 +431,7 @@ useHead({
             {{ $t("account.settings.settingCards.noDiscordLinked") }}
             <NuxtLink
               :style="{cursor: 'pointer'}"
-              @click="linkDiscord"
+              @click="executeLinkDiscord"
             >
               {{ $t("account.settings.settingCards.linkDiscord") }}
             </NuxtLink>
@@ -431,35 +451,12 @@ useHead({
 				-->
         </div>
       </div>
-    </AlertDialogRoot>
+    </AlertDialog.Root>
     <div
       id="delete-account"
       :class="{ 'modal-wrapper': true, hidden: !(deleteModalOpen || editModalOpen) }"
     >
       <div ref="dialogContainer" />
-    </div>
-    <div
-      v-if="showToast"
-      :class="{'banner-notice': true, success: upgradeSuccess, error: upgradeError }"
-    >
-      <ToastProvider>
-        <ToastRoot as="div">
-          <ToastDescription
-            v-if="upgradeSuccess"
-            as="p"
-          >
-            Account upgraded successfully
-          </ToastDescription>
-          <ToastDescription
-            v-if="upgradeError"
-            as="p"
-          >
-            Account upgrade failed
-          </ToastDescription>
-        </ToastRoot>
-
-        <ToastViewport as="p" />
-      </ToastProvider>
     </div>
   </div>
 </template>

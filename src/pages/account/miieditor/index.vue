@@ -37,7 +37,6 @@ const miiFaceUrl = ref<string>('');
 const miiBodyUrl = ref<string>('');
 const loadingCanvas = ref<boolean>(false);
 // these are used in the save modal
-const saving = ref<boolean>(false);
 let oldMii: Mii | null = null;
 let oldMiiNeutralUrl = '';
 let oldMiiSorrowUrl = '';
@@ -277,34 +276,37 @@ function getSubPageFromValue(value: string, newSubTab: string, newTab: string) {
 	return subpageIndex;
 }
 
-async function handleSave() {
-	saving.value = true;
-
-	try {
-		await apiFetch('/api/account/update', {
+const toasts = useToasts();
+const { isLoading: isSaving, execute } = useAsync({
+	handler() {
+		return apiFetch('/api/account/update', {
 			method: 'PATCH',
 			body: {
 				mii: { name: mii.value.miiName, primary: 'Y', data: mii.value.encode().toString('base64') }
 			} satisfies ApiAccountUpdateRequest
 		});
-
+	},
+	onSuccess() {
+		toasts.publish({
+			type: 'success',
+			text: t('miiEditor.miiSaved')
+		});
 		setTimeout(() => {
-		// TODO - Make this prettier
-			alert(t('miiEditor.miiSaved'));
-
 			navigateTo('/account');
 		}, 3000);
-
-		// await refresh();
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(`${err.code}: ${err.message}`);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 </script>
 
 <template>
-  <div :class="{ 'miieditor-wrapper': true, saving: saving }">
+  <div :class="{ 'miieditor-wrapper': true, saving: isSaving }">
     <svg
       class="logotype"
       xmlns="http://www.w3.org/2000/svg"
@@ -654,7 +656,7 @@ async function handleSave() {
                     <button
                       id="saveButton"
                       :class="{ button: true, primary: true }"
-                      @click.prevent="handleSave()"
+                      @click.prevent="execute()"
                     >
                       {{ $t("miiEditor.save") }}!
                     </button>

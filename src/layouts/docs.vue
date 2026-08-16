@@ -18,6 +18,7 @@ useHead({
     id="root"
     class="main-body"
   >
+    <ToastRenderer />
     <div class="docs-wrapper">
       <a
         href="/"

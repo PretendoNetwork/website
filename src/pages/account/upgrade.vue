@@ -17,6 +17,7 @@ definePageMeta({
 	needsAuth: true
 });
 
+const toasts = useToasts();
 const { data: tierData } = await useApiFetch('/api/account/tiers');
 const { data: profile } = await useApiFetch('/api/auth/me');
 const sortedTiers = computed(() =>
@@ -41,20 +42,24 @@ const goalTextVars = computed(() => {
 	};
 });
 
-async function unsubscribe() {
-	try {
+const { execute: executeUnsubscribe } = useAsync({
+	async handler() {
 		await apiFetch('/api/account/unsubscribe', {
 			method: 'POST'
 		});
 		await navigateTo('/account');
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
-async function checkout(priceId: string) {
-	try {
+const { execute: executeCheckout } = useAsync({
+	async handler(priceId: string) {
 		const result = await apiFetch('/api/account/checkout', {
 			method: 'POST',
 			body: {
@@ -62,11 +67,15 @@ async function checkout(priceId: string) {
 			} satisfies ApiAccountCheckoutRequest
 		});
 		await navigateTo(result.url, { external: true });
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
-		alert(err.code);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 
 function hasSubscription(priceId: string) {
 	return (
@@ -284,7 +293,7 @@ useHead({
                 </AlertDialogCancel>
                 <AlertDialogAction
                   class="alert"
-                  @click="unsubscribe"
+                  @click="executeUnsubscribe"
                 >
                   {{ $t("upgrade.unsubConfirm") }}
                 </AlertDialogAction>
@@ -314,7 +323,7 @@ useHead({
                 </AlertDialogCancel>
                 <AlertDialogAction
                   class="action"
-                  @click="() => checkout(selectedTier?.priceId || '')"
+                  @click="() => executeCheckout(selectedTier?.priceId || '')"
                 >
                   {{ $t("modals.confirm") }}
                 </AlertDialogAction>
@@ -330,7 +339,7 @@ useHead({
       >
         <button
 
-          @click.prevent="checkout(selectedTier.priceId)"
+          @click.prevent="executeCheckout(selectedTier.priceId)"
         >
           Subscribe to {{ selectedTier.name }}
         </button>

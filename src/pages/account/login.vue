@@ -16,8 +16,8 @@ const registerURI = computed(() => {
 
 const loginForm = reactive({ username: '', password: '' });
 
-async function loginSubmission() {
-	try {
+const { execute } = useAsync({
+	async handler() {
 		const res = await $fetch('/api/auth/login', {
 			method: 'POST',
 			body: {
@@ -30,14 +30,15 @@ async function loginSubmission() {
 			refreshToken: res.refreshToken
 		});
 		await authUtils.safelyRedirectAfterLogin(redirect.value);
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
 		toasts.publish({
 			type: 'error',
 			text: err.message
 		});
 	}
-}
+});
 </script>
 
 <template>
@@ -45,7 +46,7 @@ async function loginSubmission() {
     <div class="account-form-wrapper">
       <form
         class="account"
-        @submit.prevent="loginSubmission"
+        @submit.prevent="execute"
       >
         <h2>{{ $t("account.loginForm.login") }}</h2>
         <p>{{ $t("account.loginForm.detailsPrompt") }}</p>

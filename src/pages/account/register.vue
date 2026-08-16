@@ -19,8 +19,8 @@ const loginURI = computed(() => {
 const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
 const captchaRef = useTemplateRef('captcha');
 
-async function registerSubmission() {
-	try {
+const { execute } = useAsync({
+	async handler() {
 		let captchaResponse: string | null = null;
 		if (captchaRef.value) {
 			captchaResponse = await captchaRef.value.getToken();
@@ -44,14 +44,15 @@ async function registerSubmission() {
 			refreshToken: res.refreshToken
 		});
 		await authUtils.safelyRedirectAfterLogin(redirect.value);
-	} catch (error: unknown) {
+	},
+	onError(error) {
 		const err = getApiError(error);
 		toasts.publish({
 			type: 'error',
 			text: err.message
 		});
 	}
-}
+});
 </script>
 
 <template>
@@ -59,7 +60,7 @@ async function registerSubmission() {
     <div class="account-form-wrapper">
       <form
         class="account register"
-        @submit.prevent="registerSubmission"
+        @submit.prevent="execute"
       >
         <h2>{{ $t("account.loginForm.register") }}</h2>
         <p>{{ $t("account.loginForm.detailsPrompt") }}</p>

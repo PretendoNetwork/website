@@ -2,17 +2,13 @@
 import type { ApiAuthForgotPasswordRequest } from '~~/shared/api-types';
 
 const { t } = useI18n();
+const toasts = useToasts();
+const captchaRef = useTemplateRef('captcha');
 
 const form = reactive({ emailOrUsername: '' });
 
-const errorMessage = ref<string | null>();
-const successMessage = ref<string | null>();
-const captchaRef = useTemplateRef('captcha');
-
-async function submit() {
-	errorMessage.value = null;
-	successMessage.value = null;
-	try {
+const { execute } = useAsync({
+	async handler() {
 		let captchaResponse: string | null = null;
 		if (captchaRef.value) {
 			captchaResponse = await captchaRef.value.getToken();
@@ -28,21 +24,21 @@ async function submit() {
 				captchaResponse: captchaResponse ?? undefined
 			} satisfies ApiAuthForgotPasswordRequest
 		});
-
-		// Success
-		form.emailOrUsername = '';
-		successMessage.value = 'An email has been sent.';
-		setTimeout(() => {
-			successMessage.value = null;
-		}, 5000);
-	} catch (error: unknown) {
+	},
+	onSuccess() {
+		toasts.publish({
+			type: 'success',
+			text: 'An email has been sent.'
+		});
+	},
+	onError(error) {
 		const err = getApiError(error);
-		errorMessage.value = err.code;
-		setTimeout(() => {
-			errorMessage.value = null;
-		}, 5000);
+		toasts.publish({
+			type: 'error',
+			text: err.message
+		});
 	}
-}
+});
 </script>
 
 <template>
@@ -50,7 +46,7 @@ async function submit() {
     <div class="account-form-wrapper">
       <form
         class="account forgot-password"
-        @submit.prevent="submit"
+        @submit.prevent="execute"
       >
         <h2>{{ t('account.forgotPassword.header') }}</h2>
         <p>{{ t('account.forgotPassword.sub') }}</p>
@@ -76,22 +72,6 @@ async function submit() {
           </button>
         </div>
       </form>
-    </div>
-    <div
-      v-if="successMessage"
-      class="banner-notice success"
-    >
-      <div>
-        <p>{{ successMessage }}</p>
-      </div>
-    </div>
-    <div
-      v-if="errorMessage"
-      class="banner-notice error"
-    >
-      <div>
-        <p>{{ errorMessage }}</p>
-      </div>
     </div>
   </div>
 </template>
