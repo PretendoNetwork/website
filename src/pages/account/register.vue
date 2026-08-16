@@ -19,7 +19,7 @@ const loginURI = computed(() => {
 const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
 const captchaRef = useTemplateRef('captcha');
 
-const { execute } = useAsync({
+const { execute, isLoading } = useAsync({
 	async handler() {
 		let captchaResponse: string | null = null;
 		if (captchaRef.value) {
@@ -128,7 +128,8 @@ const { execute } = useAsync({
         />
         <div class="buttons">
           <button type="submit">
-            {{ $t("account.loginForm.register") }}
+            <Loader v-if="isLoading" />
+            <span v-else>{{ $t("account.loginForm.register") }}</span>
           </button>
           <a
             :href="loginURI"

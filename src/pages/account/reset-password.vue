@@ -6,7 +6,7 @@ const toasts = useToasts();
 const { t } = useI18n();
 const form = reactive({ password: '', passwordConfirm: '' });
 
-const { execute } = useAsync({
+const { execute, isLoading } = useAsync({
 	async handler() {
 		const resetToken = route.query.token?.toString();
 		if (!resetToken) {
@@ -65,7 +65,8 @@ const { execute } = useAsync({
         </div>
         <div class="buttons">
           <button type="submit">
-            {{ t('account.resetPassword.submit') }}
+            <Loader v-if="isLoading" />
+            <span v-else>{{ $t("account.resetPassword.submit") }}</span>
           </button>
         </div>
       </form>

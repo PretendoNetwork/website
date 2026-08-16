@@ -39,7 +39,7 @@ const dialogContainer = ref(null);
 const deleteModalOpen = ref(false);
 const editModalOpen = ref(false);
 
-const { execute: executeUpdateServerEnvironment } = useAsync({
+const { execute: executeUpdateServerEnvironment, isLoading: isLoadingUpdateServerEnv } = useAsync({
 	async handler(env: ApiAccountUpdateRequest['environment']) {
 		await apiFetch('/api/account/update', {
 			method: 'PATCH',
@@ -58,7 +58,7 @@ const { execute: executeUpdateServerEnvironment } = useAsync({
 	}
 });
 
-const { execute: executeDeleteAccount } = useAsync({
+const { execute: executeDeleteAccount, isLoading: isLoadingDelete } = useAsync({
 	async handler() {
 		await apiFetch('/api/account/delete', {
 			method: 'POST'
@@ -75,7 +75,7 @@ const { execute: executeDeleteAccount } = useAsync({
 	}
 });
 
-const { execute: executeLinkDiscord } = useAsync({
+const { execute: executeLinkDiscord, isLoading: isLoadingLink } = useAsync({
 	async handler() {
 		const result = await apiFetch('/api/account/discord-link', {
 			method: 'GET'
@@ -91,7 +91,7 @@ const { execute: executeLinkDiscord } = useAsync({
 	}
 });
 
-const { execute: executeUnlinkDiscord } = useAsync({
+const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 	async handler() {
 		await apiFetch('/api/account/discord-unlink', {
 			method: 'POST'
@@ -194,15 +194,19 @@ useHead({
                 </p>
               </AlertDialog.Description>
               <div class="modal-button-wrapper">
-                <AlertDialog.Cancel class="cancel">
+                <AlertDialog.Cancel
+                  :disabled="isLoadingDelete"
+                  class="cancel"
+                >
                   {{ $t("modals.cancel") }}
                 </AlertDialog.Cancel>
-                <AlertDialog.Action
-                  class="alert."
+                <button
+                  class="alert"
                   @click="executeDeleteAccount"
                 >
-                  {{ $t("account.settings.delete.modalConfirm") }}
-                </AlertDialog.Action>
+                  <Loader v-if="isLoadingDelete" />
+                  <span v-else>{{ $t("account.settings.delete.modalConfirm") }}</span>
+                </button>
               </div>
             </AlertDialog.Content>
           </AlertDialog.Portal>
@@ -338,7 +342,8 @@ useHead({
             class="button secondary"
             @click.prevent="() => executeUpdateServerEnvironment(selectedServerEnv)"
           >
-            Save
+            <Loader v-if="isLoadingUpdateServerEnv" />
+            <span v-else>Save</span>
           </button>
           <p
             v-html="
@@ -425,7 +430,8 @@ useHead({
             class="button secondary"
             @click="executeUnlinkDiscord"
           >
-            {{ $t("account.settings.settingCards.removeDiscord") }}
+            <Loader v-if="isLoadingUnlink" />
+            <span v-else>{{ $t("account.settings.settingCards.removeDiscord") }}</span>
           </button>
           <p v-else>
             {{ $t("account.settings.settingCards.noDiscordLinked") }}
@@ -433,7 +439,8 @@ useHead({
               :style="{cursor: 'pointer'}"
               @click="executeLinkDiscord"
             >
-              {{ $t("account.settings.settingCards.linkDiscord") }}
+              <Loader v-if="isLoadingLink" />
+              <span v-else>{{ $t("account.settings.settingCards.linkDiscord") }}</span>
             </NuxtLink>
           </p>
         </div>

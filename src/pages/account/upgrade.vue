@@ -1,7 +1,6 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html -- locale files still have raw html */
 import {
-	AlertDialogAction,
 	AlertDialogCancel,
 	AlertDialogContent,
 	AlertDialogDescription,
@@ -42,7 +41,7 @@ const goalTextVars = computed(() => {
 	};
 });
 
-const { execute: executeUnsubscribe } = useAsync({
+const { execute: executeUnsubscribe, isLoading: isLoadingUnsubscribe } = useAsync({
 	async handler() {
 		await apiFetch('/api/account/unsubscribe', {
 			method: 'POST'
@@ -58,7 +57,7 @@ const { execute: executeUnsubscribe } = useAsync({
 	}
 });
 
-const { execute: executeCheckout } = useAsync({
+const { execute: executeCheckout, isLoading: isLoadingCheckout } = useAsync({
 	async handler(priceId: string) {
 		const result = await apiFetch('/api/account/checkout', {
 			method: 'POST',
@@ -288,15 +287,19 @@ useHead({
                 <span v-html="$t('upgrade.unsubPrompt').replace('tiername', profile?.stripeTier?.tierName ?? '')" />
               </AlertDialogDescription>
               <div class="modal-button-wrapper">
-                <AlertDialogCancel class="cancel">
+                <AlertDialogCancel
+                  :disabled="isLoadingUnsubscribe"
+                  class="cancel"
+                >
                   {{ $t("modals.cancel") }}
                 </AlertDialogCancel>
-                <AlertDialogAction
+                <button
                   class="alert"
                   @click="executeUnsubscribe"
                 >
-                  {{ $t("upgrade.unsubConfirm") }}
-                </AlertDialogAction>
+                  <Loader v-if="isLoadingUnsubscribe" />
+                  <span v-else>{{ $t("upgrade.unsubConfirm") }}</span>
+                </button>
               </div>
             </AlertDialogContent>
           </AlertDialogPortal>
@@ -318,15 +321,19 @@ useHead({
                 <span v-html="$t('upgrade.changeTierPrompt').replace('oldtiername', profile.stripeTier.tierName).replace('newtiername', selectedTier?.name ?? '')" />
               </AlertDialogDescription>
               <div class="modal-button-wrapper">
-                <AlertDialogCancel class="cancel">
+                <AlertDialogCancel
+                  :disabled="isLoadingCheckout"
+                  class="cancel"
+                >
                   {{ $t("modals.cancel") }}
                 </AlertDialogCancel>
-                <AlertDialogAction
+                <button
                   class="action"
                   @click="() => executeCheckout(selectedTier?.priceId || '')"
                 >
-                  {{ $t("modals.confirm") }}
-                </AlertDialogAction>
+                  <Loader v-if="isLoadingCheckout" />
+                  <span v-else>{{ $t("modals.confirm") }}</span>
+                </button>
               </div>
             </AlertDialogContent>
           </AlertDialogPortal>
@@ -341,7 +348,8 @@ useHead({
 
           @click.prevent="executeCheckout(selectedTier.priceId)"
         >
-          Subscribe to {{ selectedTier.name }}
+          <Loader v-if="isLoadingCheckout" />
+          <span v-else>Subscribe to {{ selectedTier.name }}</span>
         </button>
       </div>
       <div

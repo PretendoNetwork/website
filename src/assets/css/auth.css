@@ -33,7 +33,7 @@ form.account p {
 	margin: 12px 0;
 }
 
-form.account div {
+form.account > div {
 	margin-top: 24px;
 }
 

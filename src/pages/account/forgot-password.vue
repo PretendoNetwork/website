@@ -7,7 +7,7 @@ const captchaRef = useTemplateRef('captcha');
 
 const form = reactive({ emailOrUsername: '' });
 
-const { execute } = useAsync({
+const { execute, isLoading } = useAsync({
 	async handler() {
 		let captchaResponse: string | null = null;
 		if (captchaRef.value) {
@@ -68,7 +68,8 @@ const { execute } = useAsync({
         />
         <div class="buttons">
           <button type="submit">
-            {{ t('account.forgotPassword.submit') }}
+            <Loader v-if="isLoading" />
+            <span v-else>{{ $t("account.forgotPassword.submit") }}</span>
           </button>
         </div>
       </form>

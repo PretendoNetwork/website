@@ -16,7 +16,7 @@ const registerURI = computed(() => {
 
 const loginForm = reactive({ username: '', password: '' });
 
-const { execute } = useAsync({
+const { execute, isLoading } = useAsync({
 	async handler() {
 		const res = await $fetch('/api/auth/login', {
 			method: 'POST',
@@ -75,8 +75,8 @@ const { execute } = useAsync({
         </div>
         <div class="buttons">
           <button type="submit">
-            <!-- TODO: loading state on button. ... style maybe? -->
-            {{ $t("account.loginForm.login") }}
+            <Loader v-if="isLoading" />
+            <span v-else>{{ $t("account.loginForm.login") }}</span>
           </button>
           <a
             :href="registerURI"
