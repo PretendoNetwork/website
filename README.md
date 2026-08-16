@@ -124,7 +124,7 @@ Testing findings:
 - [X] progress total percentage not rounded properly
 - [X] faq open first by default
 - [X] fix github icon size on team
-- [ ] click out of bandwidth doesn't close bandwidth (use vueuse onclickoutside)
+- [X] click out of bandwidth doesn't close bandwidth (use vueuse onclickoutside)
 - [ ] fix hover and clickaway on navbar
 - [ ] fix locale list not having the same layout, no clickaway
 - [ ] progress is a wrench?

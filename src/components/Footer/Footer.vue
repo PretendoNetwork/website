@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { onClickOutside } from '@vueuse/core';
 const { tm, t } = useI18n();
 const year = new Date().getFullYear();
 
@@ -6,12 +7,17 @@ const bandwidthQuoteIndex = ref<number>(-1);
 const quotes = computed(() => tm<string>('footer.bandwidthRaccoonQuotes') as string[]);
 const totalBandwidthQuotes = computed(() => quotes.value.length);
 const currentQuote = computed(() => t(`footer.bandwidthRaccoonQuotes[${Math.max(0, bandwidthQuoteIndex.value)}]`));
+const bandwidthOpen = ref<boolean>(false);
+
+const bandwidthRef = ref(null);
+onClickOutside(bandwidthRef, () => bandwidthOpen.value = false);
 
 watch([totalBandwidthQuotes], () => {
 	bandwidthQuoteIndex.value = -1;
 });
 
 function bandwidthClickHandler() {
+	bandwidthOpen.value = true;
 	if (bandwidthQuoteIndex.value + 1 >= totalBandwidthQuotes.value) {
 		bandwidthQuoteIndex.value = 0;
 	} else {
@@ -146,7 +152,10 @@ function bandwidthClickHandler() {
           {{ $t("footer.widget.button") }}
         </a>
       </div>
-      <div :class="{ 'bandwidth-raccoon-wrapper': true, 'speak': bandwidthQuoteIndex !== -1 }">
+      <div
+        ref="bandwidthRef"
+        :class="{ 'bandwidth-raccoon-wrapper': true, 'speak': bandwidthOpen }"
+      >
         <div class="text-bubble">
           <p>{{ currentQuote }}</p>
         </div>
