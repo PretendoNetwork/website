@@ -33,7 +33,7 @@ const notStartedTasks = computed(() => props.item.tasks.filter(v => v.status ===
       <div>
         <div class="feature-progress-chart">
           <p class="percentage-label">
-            {{ Math.floor(animatedPercentage) }}%
+            {{ Math.round(animatedPercentage) }}%
           </p>
           <svg
             ref="chart"

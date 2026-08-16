@@ -14,7 +14,7 @@ export default defineEventHandler(async (event): Promise<GetProgress> => {
 		const totalTasks = v.tasks.length;
 		const completedTasks = v.tasks.filter(v => v.status === 'completed').length;
 		const halfCompletedTasks = v.tasks.filter(v => v.status === 'inprogress').length;
-		const percentage = Math.floor((completedTasks + (halfCompletedTasks * 0.5)) / totalTasks * 100);
+		const percentage = Math.round((completedTasks + (halfCompletedTasks * 0.5)) / totalTasks * 100);
 
 		return {
 			title: v.title,
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event): Promise<GetProgress> => {
 		};
 	});
 	const summedCompletion = items.reduce((a, v) => a + v.completion, 0);
-	const completionPercentage = Math.floor(summedCompletion / items.length);
+	const completionPercentage = Math.round(summedCompletion / items.length);
 
 	return {
 		completion: completionPercentage,
