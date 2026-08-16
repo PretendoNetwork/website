@@ -14,6 +14,14 @@ const registerURI = computed(() => {
 	return `/account/register`;
 });
 
+const login = useLogin();
+const { status } = useAsyncData(async () => {
+	const result = await login.handleRefresh();
+	if (result.hasNewTokens || login.isLoggedIn()) {
+		await authUtils.safelyRedirectAfterLogin(redirect.value);
+	}
+}, { server: false });
+
 const loginForm = reactive({ username: '', password: '' });
 
 const { execute, isLoading } = useAsync({
@@ -42,7 +50,16 @@ const { execute, isLoading } = useAsync({
 </script>
 
 <template>
-  <div>
+  <div v-if="status !== 'success'">
+    <div class="account-form-wrapper">
+      <form
+        class="account loading"
+      >
+        <Loader />
+      </form>
+    </div>
+  </div>
+  <div v-else>
     <div class="account-form-wrapper">
       <form
         class="account"

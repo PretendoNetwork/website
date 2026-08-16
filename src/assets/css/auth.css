@@ -120,6 +120,12 @@ form.account.register {
 	column-gap: 24px;
 	margin-bottom: 48px;
 }
+form.account.loading {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
 
 form.account.register .h-captcha {
 	grid-column: 1 / span 2;
