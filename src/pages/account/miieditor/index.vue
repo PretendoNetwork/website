@@ -30,6 +30,7 @@ const miiDataString: string = profile.value?.mii?.data || fallbackMiiData;
 const activeTab = ref<string>('faceType');
 const activeSubTab = ref<string>('faceType');
 const activeSubPage = ref<number>(0);
+const hasSaved = ref(false);
 // mii rendering business
 const mii = ref<any>(null);
 const miiCanvas = ref<any>(null);
@@ -287,10 +288,7 @@ const { isLoading: isSaving, execute } = useAsync({
 		});
 	},
 	onSuccess() {
-		toasts.publish({
-			type: 'success',
-			text: t('miiEditor.miiSaved')
-		});
+		hasSaved.value = true;
 		setTimeout(() => {
 			navigateTo('/account');
 		}, 3000);
@@ -306,7 +304,7 @@ const { isLoading: isSaving, execute } = useAsync({
 </script>
 
 <template>
-  <div :class="{ 'miieditor-wrapper': true, saving: isSaving }">
+  <div :class="{ 'miieditor-wrapper': true, saving: hasSaved }">
     <svg
       class="logotype"
       xmlns="http://www.w3.org/2000/svg"
@@ -658,7 +656,8 @@ const { isLoading: isSaving, execute } = useAsync({
                       :class="{ button: true, primary: true }"
                       @click.prevent="execute()"
                     >
-                      {{ $t("miiEditor.save") }}!
+                      <Loader v-if="isSaving" />
+                      <span v-else>{{ $t("miiEditor.save") }}!</span>
                     </button>
                   </div>
                 </template>
