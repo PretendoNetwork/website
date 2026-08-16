@@ -100,7 +100,7 @@ And the tasks left on the backend:
 
 Miscellanous tasks:
 - [x] Merge upstream changes into refactor branch
-- [ ] Security testing
+- [x] Security testing
 - [x] Document configuration
 - [x] Backend testing
   - [x] Github progress tracking
