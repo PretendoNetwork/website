@@ -20,10 +20,7 @@ export function getAuthContext(event: H3Event): AuthContext | null {
 export function enforceLoggedIn(event: H3Event): AuthContext {
 	const context = getAuthContext(event);
 	if (!context) {
-		throw createError({
-			status: 401,
-			message: 'This action requires authentication'
-		});
+		throw createApiError('UNAUTHENTICATED');
 	}
 	return context;
 }

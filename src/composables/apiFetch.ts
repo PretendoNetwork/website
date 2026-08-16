@@ -1,8 +1,8 @@
 export const apiFetch = $fetch.create({
 	onRequest({ options }) {
-		const token = useAuthStore().getToken();
-		if (token) {
-			options.headers.set('Authorization', 'Bearer ' + token);
+		const tokens = useAuthStore().getTokens();
+		if (tokens) {
+			options.headers.set('Authorization', 'Bearer ' + tokens.accessToken);
 		}
 	},
 	async onResponseError({ response }) {

@@ -45,8 +45,15 @@ export function useAuthStore() {
 	const refreshTokenCookie = useCookie<string | null>('refresh_token', oldOpts);
 	const tokenTypeCookie = useCookie<string | null>('token_type', oldOpts);
 
-	function getToken() {
-		return authState.value?.accessToken ?? null;
+	function getTokens() {
+		if (!authState.value) {
+			return null;
+		}
+
+		return {
+			accessToken: authState.value.accessToken,
+			refreshToken: authState.value.refreshToken
+		};
 	}
 
 	function refresh() {
@@ -76,7 +83,7 @@ export function useAuthStore() {
 	}
 
 	return {
-		getToken,
+		getTokens,
 		refresh,
 		set,
 		logout

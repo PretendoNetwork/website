@@ -8,8 +8,8 @@ export default defineNuxtRouteMiddleware(async () => {
 
 	const authStore = useAuthStore();
 	authStore.refresh();
-	const token = authStore.getToken();
-	if (!token) {
+	const tokens = authStore.getTokens();
+	if (!tokens) {
 		meStore.setMe(null);
 		return; // No token
 	}
@@ -17,7 +17,7 @@ export default defineNuxtRouteMiddleware(async () => {
 	try {
 		const res = await $fetch<GetApiAuthMe>('/api/auth/me', {
 			headers: {
-				Authorization: `Bearer ${token}`
+				Authorization: `Bearer ${tokens.accessToken}`
 			}
 		});
 		meStore.setMe({

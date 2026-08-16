@@ -90,6 +90,11 @@ export const LoginSchema = z.object({
 });
 export type ApiAuthLoginRequest = z.infer<typeof LoginSchema>;
 
+export const RefreshSchema = z.object({
+	token: z.string()
+});
+export type ApiAuthRefreshRequest = z.infer<typeof RefreshSchema>;
+
 export const RegisterSchema = z.object({
 	email: z.email(),
 	username: z.string(),

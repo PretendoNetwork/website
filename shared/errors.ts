@@ -6,7 +6,8 @@ const apiErrorCodes = {
 	STAFF_NO_DONATE: 'Staff members do not need to purchase tiers',
 	INVALID_CAPTCHA: 'Invalid captcha, try again',
 	INVALID_USERNAME: 'Could not find user',
-	INVALID_PASSWORD: 'Incorrect password'
+	INVALID_PASSWORD: 'Incorrect password',
+	UNAUTHENTICATED: 'This request needs authentication'
 } as const;
 
 export type ApiErrorCodes = keyof typeof apiErrorCodes;
@@ -19,7 +20,8 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	STAFF_NO_DONATE: 400,
 	INVALID_CAPTCHA: 400,
 	INVALID_USERNAME: 400,
-	INVALID_PASSWORD: 400
+	INVALID_PASSWORD: 400,
+	UNAUTHENTICATED: 401
 };
 
 export function getTextForApiErrorCode(code: ApiErrorCodes): string {
