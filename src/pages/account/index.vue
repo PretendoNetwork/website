@@ -31,6 +31,26 @@ watchImmediate(upgradeSuccessQuery, (val) => {
 	useRouter().replace({ query: {} });
 });
 
+const discordLinkQuery = computed(() => route.query.discord_link_success);
+watchImmediate(discordLinkQuery, (val) => {
+	if (!val) {
+		return;
+	}
+	if (val === 'true') {
+		toasts.publish({
+			type: 'success',
+			text: 'Discord account linked successfully'
+		});
+	}
+	if (val === 'false') {
+		toasts.publish({
+			type: 'error',
+			text: 'Failed to link Discord account'
+		});
+	}
+	useRouter().replace({ query: {} });
+});
+
 const { data: profile, refresh } = await useApiFetch('/api/auth/me');
 const { data: connections, refresh: refreshConnections } = await useApiFetch('/api/auth/me-connections');
 
@@ -334,7 +354,7 @@ useHead({
                 />
                 <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
               </label>
-							<input
+              <input
                 v-if="profile.accessLevel === 3"
                 id="dev"
                 v-model="selectedServerEnv"

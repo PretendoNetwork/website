@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
 		}
 	});
 	if (!authInfo.user) {
-		return sendRedirect(event, '/'); // No identify scope
+		return sendRedirect(event, '/account?discord_link_success=false'); // No identify scope
 	}
 
 	const discordId = authInfo.user.id;
@@ -75,5 +75,5 @@ export default defineEventHandler(async (event) => {
 		}
 	}
 
-	return sendRedirect(event, '/account');
+	return sendRedirect(event, '/account?discord_link_success=true');
 });

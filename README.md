@@ -131,10 +131,10 @@ Testing findings:
 
 - [X] rss feed wrong content type
 
-- [?] progress page has no mobile layout (jvs you suck)
-- [?] progress seems to sometimes not load for jvs?
+- [X] progress page has no mobile layout (jvs you suck)
+- [X] progress seems to sometimes not load for jvs?
 
-idk jvs, seems to work on my machine!
+idk jvs, seems to work on my machine... and yours too now???
 
 - [ ] docs errors page, ironically, gives an error
 - [X] docs headings are very purple
@@ -150,7 +150,7 @@ idk jvs, seems to work on my machine!
 - [X] account shows beta switch even if it's disabled
 - [X] if user has beta access they should be able to change back to prod
 - [X] add dev server env button
-- [ ] discord link/remove success toast
+- [X] discord link success/fail toast
 
 - [ ] forgot password shows success toast even w no captcha (doesn't actually submit)
 - [ ] signup birthdate editor
