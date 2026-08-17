@@ -542,15 +542,15 @@ onMounted(() => {
             class="locale-dropdown"
           >
             <button
-              v-for="locale in sortedLocales"
-              :key="locale.code"
+              v-for="l in sortedLocales"
+              :key="l.code"
               class="option"
               @click="
-                setLocale(locale.code);
+                setLocale(l.code);
                 close();
               "
             >
-              {{ locale.name }}
+              {{ l.name }}
             </button>
           </Popover.Content>
         </Popover.Root>
