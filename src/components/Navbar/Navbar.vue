@@ -11,7 +11,7 @@ import {
 } from 'reka-ui';
 import { Popover } from 'reka-ui/namespaced';
 import type { LocaleObject } from '@nuxtjs/i18n';
-const { locales, setLocale } = useI18n();
+const { locales, setLocale, locale } = useI18n();
 
 /* TODO: Mobile stuff */
 
@@ -29,7 +29,10 @@ function scoreLocale(cObj: LocaleObject): number {
 	}
 }
 const sortedLocales = locales.value.sort((a, b) => {
-	return scoreLocale(a) - scoreLocale(b);
+	const sA = scoreLocale(a);
+	const sB = scoreLocale(b);
+
+	return sA - sB || (a?.name || '').localeCompare(b?.name || '', locale.value);
 });
 
 const me = useMeStore();
@@ -51,7 +54,6 @@ onMounted(() => {
   <header :class="{ transparent: scrollY === 0 }">
     <NavigationMenuRoot
       v-model="currentTrigger"
-      :disable-pointer-leave-close="true"
       class="nav-menu-root"
     >
       <NavigationMenuList class="left-section">
