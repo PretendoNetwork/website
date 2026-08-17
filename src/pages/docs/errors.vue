@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { refDebounced } from '@vueuse/core';
-import { createTextMaskInputElement } from 'text-mask-core';
+import { interopDefault } from 'mlly';
+// Nuxt hates commonjs modules. this fixes them
+import * as tmcModule from 'text-mask-core';
+const { createTextMaskInputElement } = interopDefault(tmcModule);
 
 const query = ref('');
 const maskInput = createTextMaskInputElement(undefined);

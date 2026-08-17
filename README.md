@@ -136,7 +136,7 @@ Testing findings:
 
 idk jvs, seems to work on my machine... and yours too now???
 
-- [ ] docs errors page, ironically, gives an error
+- [X] docs errors page, ironically, gives an error
 - [X] docs headings are very purple
 - [X] docs codeblocks *not* very purple
 - [X] docs index page redirect should be in config, not as a page
