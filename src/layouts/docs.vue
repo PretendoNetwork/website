@@ -193,6 +193,13 @@ button#openSidebar {
 	width: 100%;
 }
 
+:deep(.nav-viewport-wrapper) {
+	padding: 0;
+}
+:deep(.nav-menu-viewport) {
+	margin-top: 8px;
+}
+
 .docs-wrapper :deep(.content-inner:not(.search)) a {
 	text-decoration: none;
 	font-weight: bold;

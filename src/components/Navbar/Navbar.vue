@@ -676,6 +676,10 @@ header:has(.nav-menu-viewport[data-state="open"]),
 	box-shadow: 0 0 0 600vw rgba(27, 31, 59, 0.8);
 }
 
+header.transparent:has(.nav-menu-viewport[data-state="open"]) {
+	background: rgba(27, 31, 59, 0.85);;
+}
+
 header.transparent,
 header.transparent::before {
 	background: rgba(27, 31, 59, 0);
