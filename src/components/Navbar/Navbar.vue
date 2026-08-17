@@ -26,11 +26,17 @@ function scoreLocale(cObj: LocaleObject): number {
 		return 2;
 	}
 }
-const sortedLocales = locales.value.sort((a, b) => {
-	const sA = scoreLocale(a);
-	const sB = scoreLocale(b);
 
-	return sA - sB || (a?.name || '').localeCompare(b?.name || '', locale.value);
+const sortedLocales = computed(() => {
+	const sorted = [...locales.value];
+	sorted.sort((a, b) => {
+		const sA = scoreLocale(a);
+		const sB = scoreLocale(b);
+
+		return sA - sB || (a?.name || '').localeCompare(b?.name || '', locale.value);
+	});
+
+	return sorted;
 });
 
 const me = useMeStore();

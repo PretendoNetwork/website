@@ -155,7 +155,5 @@ idk jvs, seems to work on my machine... and yours too now???
 - [ ] forgot password shows success toast even w no captcha (doesn't actually submit)
 - [ ] signup birthdate editor
 
-- [ ] need error page
-- [ ] need 404 page
-
-
+- [X] need error page
+- [X] need 404 page

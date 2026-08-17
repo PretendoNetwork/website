@@ -51,15 +51,23 @@ watchImmediate(discordLinkQuery, (val) => {
 	useRouter().replace({ query: {} });
 });
 
-const { data: profile, refresh } = await useApiFetch('/api/auth/me');
-const { data: connections, refresh: refreshConnections } = await useApiFetch('/api/auth/me-connections');
-
-const selectedServerEnv = ref(profile.value?.serverAccessLevel);
 const dialogContainer = ref(null);
 const deleteModalOpen = ref(false);
 const editModalOpen = ref(false);
+const selectedServerEnv = ref<string | undefined>('');
+const { data: profile, refresh } = await useApiFetch('/api/auth/me', {
+	onResponse: (opt) => {
+		selectedServerEnv.value = opt.response._data?.serverAccessLevel;
+	}
+});
+const { data: connections, refresh: refreshConnections } = await useApiFetch(
+	'/api/auth/me-connections'
+);
 
-const { execute: executeUpdateServerEnvironment, isLoading: isLoadingUpdateServerEnv } = useAsync({
+const {
+	execute: executeUpdateServerEnvironment,
+	isLoading: isLoadingUpdateServerEnv
+} = useAsync({
 	async handler(env: ApiAccountUpdateRequest['environment']) {
 		await apiFetch('/api/account/update', {
 			method: 'PATCH',
@@ -131,7 +139,6 @@ const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 useHead({
 	title: `Account`
 });
-
 </script>
 
 <template>
@@ -202,15 +209,17 @@ useHead({
           <AlertDialog.Portal :to="dialogContainer ?? undefined">
             <AlertDialog.Overlay />
             <AlertDialog.Content class="modal">
-              <AlertDialog.Title>{{ $t("account.settings.delete.modalTitle") }}?</AlertDialog.Title>
+              <AlertDialog.Title>
+                {{
+                  $t("account.settings.delete.modalTitle")
+                }}?
+              </AlertDialog.Title>
               <AlertDialog.Description class="modal-caption">
-                <p
-                  style="white-space: pre-line;"
-                >
-                  {{ $t('account.settings.delete.modalDescription') }}
+                <p style="white-space: pre-line">
+                  {{ $t("account.settings.delete.modalDescription") }}
                 </p>
                 <p class="noundo">
-                  {{ $t('account.settings.delete.modalCaution') }}
+                  {{ $t("account.settings.delete.modalCaution") }}
                 </p>
               </AlertDialog.Description>
               <div class="modal-button-wrapper">
@@ -225,7 +234,9 @@ useHead({
                   @click="executeDeleteAccount"
                 >
                   <Loader v-if="isLoadingDelete" />
-                  <span v-else>{{ $t("account.settings.delete.modalConfirm") }}</span>
+                  <span v-else>{{
+                    $t("account.settings.delete.modalConfirm")
+                  }}</span>
                 </button>
               </div>
             </AlertDialog.Content>
@@ -246,9 +257,7 @@ useHead({
             {{ $t("account.settings.settingCards.profile") }}
           </h2>
 
-          <AlertDialog.Trigger
-            class="edit"
-          >
+          <AlertDialog.Trigger class="edit">
             <Icon
               name="ph:pencil"
               size="26"
@@ -257,10 +266,14 @@ useHead({
           <AlertDialog.Portal :to="dialogContainer ?? undefined">
             <AlertDialog.Overlay />
             <AlertDialog.Content class="modal">
-              <AlertDialog.Title>{{ $t("account.settings.unavailable") }}.</AlertDialog.Title>
+              <AlertDialog.Title>
+                {{ $t("account.settings.unavailable") }}.
+              </AlertDialog.Title>
               <AlertDialog.Description class="modal-caption">
                 <p>
-                  {{ $t('account.settings.settingCards.no_edit_from_dashboard') }}
+                  {{
+                    $t("account.settings.settingCards.no_edit_from_dashboard")
+                  }}
                 </p>
               </AlertDialog.Description>
               <div class="modal-button-wrapper">
@@ -318,7 +331,11 @@ useHead({
           <h2 class="header">
             {{ $t("account.settings.settingCards.serverEnv") }}
           </h2>
-          <fieldset :disabled="profile.serverAccessLevel === 'prod' && profile.accessLevel < 1">
+          <fieldset
+            :disabled="
+              profile.serverAccessLevel === 'prod' && profile.accessLevel < 1
+            "
+          >
             <form
               id="server"
               class="server-selection"
@@ -337,7 +354,10 @@ useHead({
                 <h2>{{ $t("account.settings.settingCards.production") }}</h2>
               </label>
               <input
-                v-if="profile.serverAccessLevel !== 'prod' || profile.accessLevel > 0"
+                v-if="
+                  profile.serverAccessLevel !== 'prod' ||
+                    profile.accessLevel > 0
+                "
                 id="test"
                 v-model="selectedServerEnv"
                 type="radio"
@@ -345,7 +365,10 @@ useHead({
               >
 
               <label
-                v-if="profile.serverAccessLevel !== 'prod' || profile.accessLevel > 0"
+                v-if="
+                  profile.serverAccessLevel !== 'prod' ||
+                    profile.accessLevel > 0
+                "
                 for="test"
               >
                 <Icon
@@ -382,7 +405,9 @@ useHead({
             "
             id="save-server-selection"
             class="button secondary"
-            @click.prevent="() => executeUpdateServerEnvironment(selectedServerEnv)"
+            @click.prevent="
+              () => executeUpdateServerEnvironment(selectedServerEnv)
+            "
           >
             <Loader v-if="isLoadingUpdateServerEnv" />
             <span v-else>Save</span>
@@ -406,9 +431,7 @@ useHead({
           <h2 class="header">
             {{ $t("account.account") }}
           </h2>
-          <AlertDialog.Trigger
-            class="edit"
-          >
+          <AlertDialog.Trigger class="edit">
             <Icon
               name="ph:pencil"
               size="26"
@@ -459,11 +482,9 @@ useHead({
           >
             {{ $t("account.settings.settingCards.connectedToDiscord") }}
             <img
-              :style="{ height: '25px', width: '25px', borderRadius: '100px'}"
+              :style="{ height: '25px', width: '25px', borderRadius: '100px' }"
               :src="connections?.discord?.avatarUrl ?? '#'"
-            >@{{
-              connections?.discord?.username
-            }}.
+            >@{{ connections?.discord?.username }}.
           </p>
 
           <button
@@ -473,16 +494,20 @@ useHead({
             @click="executeUnlinkDiscord"
           >
             <Loader v-if="isLoadingUnlink" />
-            <span v-else>{{ $t("account.settings.settingCards.removeDiscord") }}</span>
+            <span v-else>{{
+              $t("account.settings.settingCards.removeDiscord")
+            }}</span>
           </button>
           <p v-else>
             {{ $t("account.settings.settingCards.noDiscordLinked") }}
             <NuxtLink
-              :style="{cursor: 'pointer'}"
+              :style="{ cursor: 'pointer' }"
               @click="executeLinkDiscord"
             >
               <Loader v-if="isLoadingLink" />
-              <span v-else>{{ $t("account.settings.settingCards.linkDiscord") }}</span>
+              <span v-else>{{
+                $t("account.settings.settingCards.linkDiscord")
+              }}</span>
             </NuxtLink>
           </p>
         </div>
@@ -492,7 +517,7 @@ useHead({
             {{ $t("account.settings.settingCards.newsletter") }}
           </h2>
           <p>{{ $t("account.settings.settingCards.no_newsletter_notice") }}</p>
-        <!--
+          <!--
 				<form id="other">
 					<input type="checkbox" id="marketing" name="marketing" {{#if account.flags.marketing}}checked{{/if}}>
 					<label for="marketing">{{ locale.account.settings.settingCards.newsletterPrompt }}</label>
@@ -503,7 +528,10 @@ useHead({
     </AlertDialog.Root>
     <div
       id="delete-account"
-      :class="{ 'modal-wrapper': true, hidden: !(deleteModalOpen || editModalOpen) }"
+      :class="{
+        'modal-wrapper': true,
+        hidden: !(deleteModalOpen || editModalOpen),
+      }"
     >
       <div ref="dialogContainer" />
     </div>
@@ -651,7 +679,7 @@ useHead({
 
 .modal p.noundo {
 	font-weight: bold;
-	color: var(--text-shade-3)
+	color: var(--text-shade-3);
 }
 
 /* Settings */
@@ -810,7 +838,7 @@ fieldset {
 	width: 100vw;
 	animation: banner-notice 5s;
 	z-index: 100;
-	color: var(--text-shade-3)
+	color: var(--text-shade-3);
 }
 .banner-notice div {
 	padding: 4px 36px;
@@ -822,7 +850,6 @@ fieldset {
 }
 .banner-notice.error div {
 	background: var(--red-shade-1);
-
 }
 
 footer {

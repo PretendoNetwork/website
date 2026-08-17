@@ -341,6 +341,12 @@
 		"confirm": "Confirm",
 		"close": "Close"
 	},
+	"errorPage": {
+		"500": {
+			"title": "Server error!",
+			"description": "Please try again later."
+		}
+	},
 	"notfound": {
 		"description": "Oops! We could not find this page."
 	}
