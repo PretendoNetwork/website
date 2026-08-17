@@ -131,7 +131,10 @@ Testing findings:
 
 - [X] rss feed wrong content type
 
-- [ ] progress page has no mobile layout (jvs you suck)
+- [?] progress page has no mobile layout (jvs you suck)
+- [?] progress seems to sometimes not load for jvs?
+
+idk jvs, seems to work on my machine!
 
 - [ ] docs errors page, ironically, gives an error
 - [X] docs headings are very purple
@@ -141,8 +144,8 @@ Testing findings:
 - [X] upgrade: progress numbers not bold
 - [X] upgrade: align perk text with icon
 
-- [ ] miieditor logs serverside
-- [ ] just move as much stuff as possible to renderside really
+- [X] miieditor logs serverside
+- [?] just move as much stuff as possible to renderside really
 
 - [X] account shows beta switch even if it's disabled
 - [X] if user has beta access they should be able to change back to prod
@@ -155,4 +158,4 @@ Testing findings:
 - [ ] need error page
 - [ ] need 404 page
 
-- ? progress seems to sometimes not load for jvs?
+

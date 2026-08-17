@@ -15,8 +15,6 @@ definePageMeta({
 
 const { data: profile } = await useApiFetch('/api/auth/me');
 
-console.log('miidata', profile.value?.mii?.data);
-
 useHead({
 	title: 'Mii Editor | Pretendo Network'
 });
@@ -58,14 +56,10 @@ const newMiiSmileUrl = computed(() => {
 // this initalizes a mii for editing
 // returns true if mii data was parsed successfully
 function initializeMiiData(encodedUserMiiData: string) {
-	console.group('initalizing Mii data');
-	console.log('encoded mii data:', encodedUserMiiData);
-
 	// We initialize the Mii object
 	try {
-		console.log('attempting to parse mii data');
 		// @ts-expect-error -- this works just fine
-		const tempMii = new Mii(decode(miiDataString));
+		const tempMii = new Mii(decode(encodedUserMiiData));
 		mii.value = tempMii;
 		// we also initialize the old mii variable, which will be used to render the miis in the save dialogue
 		oldMii = tempMii;
@@ -79,14 +73,10 @@ function initializeMiiData(encodedUserMiiData: string) {
 			bgColor: '13173300',
 			expression: 'sorrow'
 		});
-	} catch (err) {
-		console.error('failed to decode mii data', err);
-		console.groupEnd();
+	} catch {
 		return false;
 	}
 
-	console.log('initialization complete');
-	console.groupEnd();
 	return true;
 }
 
@@ -112,7 +102,6 @@ function loadImageAsync(url: string): Promise<HTMLImageElement> {
 // this renders the mii to canvas
 async function renderMii(_e?: Event, sizeChange?: boolean) {
 	if (!miiCanvas.value) {
-		console.log('[ERROR]: nocanvas');
 		return;
 	}
 
@@ -241,8 +230,6 @@ function setActiveSubTab(newSubTab: string, newTab: string) {
 		return;
 	}
 
-	console.log(mii.value);
-
 	// open the subpage at which the selected value is located
 	activeSubPage.value = getSubPageFromValue(
 		mii.value?.[newSubTab],
@@ -268,9 +255,8 @@ function getSubPageFromValue(value: string, newSubTab: string, newTab: string) {
 			if (a?.find(e => e === value)) {
 				subpageIndex = i;
 			}
-		} catch (e) {
-			console.log(e);
-			return 0;
+		} catch {
+			return;
 		}
 	});
 
