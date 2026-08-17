@@ -1,6 +1,13 @@
 import { ClientError } from 'nice-grpc';
 import { LoginSchema } from '#shared/api-types';
+import type { ApiErrorCodes } from '~~/shared/errors';
 import type { ApiAuthLogin } from '#shared/api-types';
+
+const errors: Record<string, ApiErrorCodes> = {
+	'INVALID_ARGUMENT: User not found': 'INVALID_USERNAME',
+	'INVALID_ARGUMENT: Password is incorrect': 'INVALID_PASSWORD',
+	'UNAUTHENTICATED: Account has been deleted': 'ACCOUNT_DELETED'
+};
 
 export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 	const body = await readZodBody(event, LoginSchema);
@@ -19,11 +26,9 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 		};
 	} catch (error: unknown) {
 		if (error instanceof ClientError) {
-			if (error.details === 'INVALID_ARGUMENT: User not found') {
-				throw createApiError('INVALID_USERNAME');
-			}
-			if (error.details === 'INVALID_ARGUMENT: Password is incorrect') {
-				throw createApiError('INVALID_PASSWORD');
+			const errorCode = errors[error.details];
+			if (errorCode) {
+				throw createApiError(errorCode);
 			}
 		}
 		throw error;

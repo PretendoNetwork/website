@@ -7,7 +7,17 @@ const apiErrorCodes = {
 	INVALID_CAPTCHA: 'Invalid captcha, try again',
 	INVALID_USERNAME: 'Could not find user',
 	INVALID_PASSWORD: 'Incorrect password',
-	UNAUTHENTICATED: 'This request needs authentication'
+	UNAUTHENTICATED: 'This request needs authentication',
+	UNDER_THIRTEEN: 'Must be 13 or older to use these services',
+	INVALID_EMAIL: 'Invalid email address',
+	USERNAME_TOO_SHORT: 'Username is too short',
+	USERNAME_TOO_LONG: 'Username is too long',
+	USERNAME_INVALID_CHARS: 'Username contains invalid characters',
+	USERNAME_IN_USE: 'PNID already in use',
+	MIINAME_TOO_LONG: 'Mii name too long',
+	INVALID_PASSWORD_INPUT: 'Password must be between 6 and 16 characters long',
+	INVALID_PASSWORD_NO_MATCH: 'Passwords do not match',
+	ACCOUNT_DELETED: 'Account has been deleted'
 } as const;
 
 export type ApiErrorCodes = keyof typeof apiErrorCodes;
@@ -21,7 +31,17 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	INVALID_CAPTCHA: 400,
 	INVALID_USERNAME: 400,
 	INVALID_PASSWORD: 400,
-	UNAUTHENTICATED: 401
+	UNAUTHENTICATED: 401,
+	UNDER_THIRTEEN: 400,
+	ACCOUNT_DELETED: 400,
+	INVALID_EMAIL: 400,
+	INVALID_PASSWORD_INPUT: 400,
+	INVALID_PASSWORD_NO_MATCH: 400,
+	MIINAME_TOO_LONG: 400,
+	USERNAME_IN_USE: 400,
+	USERNAME_INVALID_CHARS: 400,
+	USERNAME_TOO_LONG: 400,
+	USERNAME_TOO_SHORT: 400
 };
 
 export function getTextForApiErrorCode(code: ApiErrorCodes): string {

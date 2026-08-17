@@ -100,7 +100,7 @@ export const RegisterSchema = z.object({
 	username: z.string(),
 	miiName: z.string(),
 	password: z.string(),
-	birthday: z.string(),
+	birthday: z.iso.date(),
 	captchaResponse: z.string().optional()
 });
 export type ApiAuthRegisterRequest = z.infer<typeof RegisterSchema>;
