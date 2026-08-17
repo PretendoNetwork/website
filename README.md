@@ -157,3 +157,5 @@ idk jvs, seems to work on my machine... and yours too now???
 
 - [X] need error page
 - [X] need 404 page
+
+- [ ] error handling
