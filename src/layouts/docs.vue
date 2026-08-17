@@ -198,6 +198,14 @@ button#openSidebar {
 	font-weight: bold;
 	color: var(--accent-shade-1);
 }
+.docs-wrapper :deep(.content-inner:not(.search)) h1 a,
+.docs-wrapper :deep(.content-inner:not(.search)) h2 a,
+.docs-wrapper :deep(.content-inner:not(.search)) h3 a,
+.docs-wrapper :deep(.content-inner:not(.search)) h4 a,
+.docs-wrapper :deep(.content-inner:not(.search)) h5 a,
+.docs-wrapper :deep(.content-inner:not(.search)) h6 a {
+	color: var(--text-shade-3);
+}
 
 .docs-wrapper :deep(header) {
 	position: relative;
@@ -206,7 +214,7 @@ button#openSidebar {
 	left: 0 !important;
 }
 
-.docs-wrapper :deep(header) #mobile-button,
+.docs-wrapper :deep(header) .nav-menu-trigger.mobile,
 .docs-wrapper :deep(header) .logo-link {
 	display: none !important;
 }

@@ -247,22 +247,22 @@ useHead({
           <div class="tier-text">
             <p class="tier-name">{{ tier.name }}</p>
             <div class="tier-perks">
-              <p v-if="tier.perks.beta">
+              <div v-if="tier.perks.beta">
                 <Icon
                   name="ph:flask"
                   size="20"
                   style="color: var(--green-shade-1)"
                 />
-                Beta server access
-              </p>
-              <p v-if="tier.perks.discordRead">
+                <p>Beta server access</p>
+              </div>
+              <div v-if="tier.perks.discordRead">
                 <Icon
                   name="ph:chats"
                   size="20"
                   style="color: var(--accent-shade-2)"
                 />
-                Read-only access to select dev channels on Discord
-              </p>
+                <p>Read-only access to select dev channels on Discord</p>
+              </div>
             </div>
           </div>
           <p class="price">
@@ -436,7 +436,7 @@ p.caption {
 	text-align: left;
 	margin-bottom: 0;
 }
-.account-form-wrapper .progress-bar-wrapper p span {
+.account-form-wrapper .progress-bar-wrapper span span {
 	color: var(--text-shade-3);
 	font-weight: 600;
 }
@@ -539,7 +539,7 @@ label.tier .tier-name {
 
 label.tier .tier-perks {
 	text-align: left;
-	width: 70%;
+	max-width: 70%;
 	margin: 24px auto 48px;
 }
 
@@ -551,7 +551,11 @@ label.tier .tier-perks p span {
 label.tier .tier-perks div {
 	display: grid;
 	grid-template-columns: 16px auto;
-	gap: 8px;
+	gap: 10px;
+}
+
+label.tier .tier-perks div span {
+	margin-top: 2px;
 }
 
 label.tier p.price {

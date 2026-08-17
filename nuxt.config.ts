@@ -32,6 +32,10 @@ export default defineNuxtConfig({
 		}
 	},
 
+	routeRules: {
+		'/docs': { redirect: '/docs/welcome' }
+	},
+
 	runtimeConfig: {
 		nitro: {
 			envPrefix: 'PN_WEBSITE_'

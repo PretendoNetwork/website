@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
 		favicon: 'http://pretendo.network/favicon.ico',
 		copyright: 'Pretendo Network',
 		feedLinks: {
-			atom: 'https://pretendo.network/blog/rss.xml'
+			atom: 'https://pretendo.network/blog/feed.xml'
 		}
 	});
 
@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
 
 	feed.addCategory('Technology');
 
-	event.res.setHeader('content-type', 'text/xml');
+	setHeader(event, 'content-type', 'text/xml');
 
 	return feed.rss2();
 });

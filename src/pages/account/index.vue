@@ -298,7 +298,7 @@ useHead({
           <h2 class="header">
             {{ $t("account.settings.settingCards.serverEnv") }}
           </h2>
-          <fieldset :disabled="profile.accessLevel < 1">
+          <fieldset :disabled="profile.serverAccessLevel === 'prod' && profile.accessLevel < 1">
             <form
               id="server"
               class="server-selection"
@@ -317,18 +317,40 @@ useHead({
                 <h2>{{ $t("account.settings.settingCards.production") }}</h2>
               </label>
               <input
+                v-if="profile.serverAccessLevel !== 'prod' || profile.accessLevel > 0"
                 id="test"
                 v-model="selectedServerEnv"
                 type="radio"
                 value="test"
               >
 
-              <label for="test">
+              <label
+                v-if="profile.serverAccessLevel !== 'prod' || profile.accessLevel > 0"
+                for="test"
+              >
                 <Icon
                   name="ph:flask"
                   size="36"
                 />
                 <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
+              </label>
+							<input
+                v-if="profile.accessLevel === 3"
+                id="dev"
+                v-model="selectedServerEnv"
+                type="radio"
+                value="dev"
+              >
+
+              <label
+                v-if="profile.accessLevel === 3"
+                for="dev"
+              >
+                <Icon
+                  name="ph:code"
+                  size="36"
+                />
+                <h2>Dev</h2>
               </label>
             </form>
           </fieldset>

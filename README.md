@@ -125,27 +125,28 @@ Testing findings:
 - [X] faq open first by default
 - [X] fix github icon size on team
 - [X] click out of bandwidth doesn't close bandwidth (use vueuse onclickoutside)
-- [ ] fix hover and clickaway on navbar
-- [ ] fix locale list not having the same layout, no clickaway
+- [X] fix hover and clickaway on navbar
+- [X] fix locale list not having the same layout, no clickaway
 - [X] progress is a wrench?
 
-- [ ] rss feed wrong content type
+- [X] rss feed wrong content type
 
 - [ ] progress page has no mobile layout (jvs you suck)
 
 - [ ] docs errors page, ironically, gives an error
-- [ ] docs headings are very purple
-- [ ] docs codeblocks *not* very purple
+- [X] docs headings are very purple
+- [X] docs codeblocks *not* very purple
+- [X] docs index page redirect should be in config, not as a page
 
-- [ ] upgrade: progress numbers not bold
-- [ ] upgrade: align perk text with icon
+- [X] upgrade: progress numbers not bold
+- [X] upgrade: align perk text with icon
 
 - [ ] miieditor logs serverside
 - [ ] just move as much stuff as possible to renderside really
 
-- [ ] account shows beta switch even if it's disabled
-- [ ] if user has beta access they should be able to change back to prod
-- [ ] add dev server env button
+- [X] account shows beta switch even if it's disabled
+- [X] if user has beta access they should be able to change back to prod
+- [X] add dev server env button
 - [ ] discord link/remove success toast
 
 - [ ] forgot password shows success toast even w no captcha (doesn't actually submit)
@@ -153,7 +154,5 @@ Testing findings:
 
 - [ ] need error page
 - [ ] need 404 page
-
-- [ ] docs index page redirect should be in config, not as a page
 
 - ? progress seems to sometimes not load for jvs?

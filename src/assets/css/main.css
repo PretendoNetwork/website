@@ -52,7 +52,7 @@ body,
 
 code {
   display: inline-block;
-  background-color: #191919;
+  background-color: var(--bg-shade-0);
   padding: 4px;
   border-radius: 4px;
   font-family: Consolas, Monaco, "Andale Mono", monospace;
