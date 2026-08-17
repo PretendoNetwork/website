@@ -153,9 +153,9 @@ idk jvs, seems to work on my machine... and yours too now???
 - [X] discord link success/fail toast
 
 - [X] forgot password shows success toast even w no captcha (doesn't actually submit)
-- [ ] signup birthdate editor
+- [x] signup birthdate editor
 
 - [X] need error page
 - [X] need 404 page
 
-- [ ] error handling
+- [x] error handling
