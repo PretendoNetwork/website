@@ -152,7 +152,7 @@ idk jvs, seems to work on my machine... and yours too now???
 - [X] add dev server env button
 - [X] discord link success/fail toast
 
-- [ ] forgot password shows success toast even w no captcha (doesn't actually submit)
+- [X] forgot password shows success toast even w no captcha (doesn't actually submit)
 - [ ] signup birthdate editor
 
 - [X] need error page

@@ -134,7 +134,6 @@ form.account.register .h-captcha {
 }
 
 form.account.register p,
-form.account.register div.email,
 form.account.register div.buttons {
 	grid-column: 1 / span 2;
 }

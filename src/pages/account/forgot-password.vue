@@ -13,7 +13,7 @@ const { execute, isLoading } = useAsync({
 		if (captchaRef.value) {
 			captchaResponse = await captchaRef.value.getToken();
 			if (!captchaResponse) {
-				return;
+				return false;
 			}
 		}
 
@@ -24,12 +24,21 @@ const { execute, isLoading } = useAsync({
 				captchaResponse: captchaResponse ?? undefined
 			} satisfies ApiAuthForgotPasswordRequest
 		});
+
+		return true;
 	},
-	onSuccess() {
-		toasts.publish({
-			type: 'success',
-			text: 'An email has been sent.'
-		});
+	onSuccess(data) {
+		if (data) {
+			toasts.publish({
+				type: 'success',
+				text: 'An email has been sent.'
+			});
+		} else {
+			toasts.publish({
+				type: 'error',
+				text: 'Please complete captcha.'
+			});
+		}
 	},
 	onError(error) {
 		const err = getApiError(error);
