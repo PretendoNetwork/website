@@ -5,6 +5,8 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 	const body = await readZodBody(event, RegisterSchema);
 	const grpc = useApiGrpc(event);
 
+	console.log(body.birthday);
+
 	// eslint-disable-next-line no-useless-catch -- Temp before error handling is implemented
 	try {
 		// TODO Add ip
@@ -15,7 +17,7 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			captchaResponse: body.captchaResponse,
 			username: body.username,
 			password: body.password,
-			passwordConfirm: body.password
+			passwordConfirm: body.password,
 		});
 
 		return {

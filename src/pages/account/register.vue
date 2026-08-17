@@ -16,7 +16,7 @@ const loginURI = computed(() => {
 	return `/account/login`;
 });
 
-const registerForm = reactive({ email: '', username: '', mii_name: '', password: '', password_confirm: '' });
+const registerForm = reactive({ email: '', username: '', mii_name: '', birthday: '', password: '', password_confirm: '' });
 const captchaRef = useTemplateRef('captcha');
 
 const { execute, isLoading } = useAsync({
@@ -36,6 +36,7 @@ const { execute, isLoading } = useAsync({
 				miiName: registerForm.mii_name,
 				password: registerForm.password,
 				username: registerForm.username,
+				birthday: registerForm.birthday,
 				captchaResponse: captchaResponse ?? undefined
 			} satisfies ApiAuthRegisterRequest
 		});
@@ -92,6 +93,16 @@ const { execute, isLoading } = useAsync({
             v-model="registerForm.mii_name"
             name="mii_name"
             maxlength="10"
+            required
+          >
+        </div>
+        <div>
+          <label for="mii_name">{{ $t("account.loginForm.birthdate") }}</label>
+          <input
+            id="birthday"
+            v-model="registerForm.birthday"
+            name="birthday"
+            type="date"
             required
           >
         </div>
