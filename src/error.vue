@@ -34,7 +34,7 @@ const { error } = defineProps<{ error: any }>();
 
       <img
         src="/assets/images/shockedbandwidth.svg"
-        class="bandwidth"
+        class="bandwidth generic"
       >
     </div>
   </DefaultLayout>
@@ -72,8 +72,44 @@ const { error } = defineProps<{ error: any }>();
 	.bandwidth {
 			margin: 16rem auto -120px;
 	}
-	.bandwidth.bandwidth.notfound {
+	.bandwidth.notfound {
 		margin: 6rem auto 16rem;
 	}
+}
+
+@media screen and (max-width: 900px) {
+	.bandwidth.generic {
+		margin: 4rem auto -100px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+.status {
+	font-size: 6rem;
+}
+.description {
+	font-size: 1.5rem;
+}
+.bandwidth {
+	height: 16rem;
+}
+.bandwidth.notfound {
+	height: 24rem;
+}
+}
+
+@media screen and (max-width: 420px) {
+.status {
+	font-size: 4rem;
+}
+.description {
+	font-size: 1.25rem;
+}
+.bandwidth {
+	height: 12rem;
+}
+.bandwidth.notfound {
+	height: 16rem;
+}
 }
 </style>
