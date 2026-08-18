@@ -19,7 +19,19 @@ useHead({
 	title: 'Mii Editor | Pretendo Network'
 });
 
-// TODO: literally all the backend stuff
+const beforeUnload = (e: BeforeUnloadEvent) => {
+	e?.preventDefault();
+	e.returnValue = '';
+};
+
+onMounted(() => {
+	window.addEventListener('beforeunload', beforeUnload);
+});
+
+onBeforeUnmount(() => {
+	window.removeEventListener('beforeunload', beforeUnload);
+});
+
 const fallbackMiiData =
 	'AwAAQOlVognnx0GC2qjhdwOzuI0n2QAAAGBzAHQAZQB2AGUAAAAAAAAAAAAAAEBAAAAhAQJoRBgmNEYUgRIXaA0AACkAUkhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAANeC';
 const miiDataString: string = profile.value?.mii?.data || fallbackMiiData;
