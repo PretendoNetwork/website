@@ -61,7 +61,7 @@ const { error } = defineProps<{ error: any }>();
 }
 
 .bandwidth.notfound {
-	height: 32rem;
+	height: 26rem;
 	margin-bottom: 4em;
 }
 
@@ -94,7 +94,7 @@ const { error } = defineProps<{ error: any }>();
 	height: 16rem;
 }
 .bandwidth.notfound {
-	height: 24rem;
+	height: 16rem;
 }
 }
 
