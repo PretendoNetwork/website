@@ -365,7 +365,7 @@ useHead({
 
               <input
                 v-if="
-                  profile.serverAccessLevel !== 'prod' ||
+                  profile.serverAccessLevel === 'test' ||
                     profile.accessLevel > 0
                 "
                 id="test"
@@ -375,7 +375,7 @@ useHead({
               >
               <label
                 v-if="
-                  profile.serverAccessLevel !== 'prod' ||
+                  profile.serverAccessLevel === 'test' ||
                     profile.accessLevel > 0
                 "
                 for="test"
@@ -388,7 +388,7 @@ useHead({
               </label>
 
               <input
-                v-if="profile.accessLevel === 3"
+                v-if="profile.accessLevel === 3 || profile.serverAccessLevel === 'dev'"
                 id="dev"
                 v-model="selectedServerEnv"
                 type="radio"
@@ -396,7 +396,7 @@ useHead({
               >
 
               <label
-                v-if="profile.accessLevel === 3"
+                v-if="profile.accessLevel === 3 || profile.serverAccessLevel === 'dev'"
                 for="dev"
               >
                 <Icon
@@ -410,8 +410,7 @@ useHead({
 
           <button
             v-if="
-              profile.accessLevel >= 1 &&
-                selectedServerEnv !== profile.serverAccessLevel
+              selectedServerEnv !== profile.serverAccessLevel
             "
             id="save-server-selection"
             class="button secondary"
