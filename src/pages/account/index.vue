@@ -4,6 +4,8 @@ import { watchImmediate } from '@vueuse/core';
 import { AlertDialog } from 'reka-ui/namespaced';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
 
+const { locale } = useI18n();
+
 const authStore = useAuthStore();
 const toasts = useToasts();
 const route = useRoute();
@@ -132,6 +134,16 @@ const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 		});
 	}
 });
+
+function parseBirthday(iso: string): string {
+	const s = iso.split('-');
+
+	const y = Number(s[0]);
+	const m = Number(s[1]) - 1;
+	const d = Number(s[2]);
+
+	return new Date(Date.UTC(y, m, d)).toLocaleDateString(locale as unknown as string);
+}
 
 useHead({
 	title: `Account`
@@ -294,7 +306,7 @@ useHead({
                 {{ $t("account.settings.settingCards.birthDate") }}
               </p>
               <p class="value">
-                {{ profile.birthday }}
+                {{ parseBirthday(profile.birthday) }}
               </p>
             </li>
             <li>
@@ -318,7 +330,7 @@ useHead({
                 {{ $t("account.settings.settingCards.timezone") }}
               </p>
               <p class="value">
-                {{ profile.timezone }}
+                {{ profile.timezone.replaceAll('_', ' ') }}
               </p>
             </li>
           </ul>
