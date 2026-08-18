@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
 
 	feed.addCategory('Technology');
 
-	setHeader(event, 'content-type', 'text/xml');
+	setHeader(event, 'content-type', 'application/rss+xml');
 
 	return feed.rss2();
 });
