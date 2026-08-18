@@ -51,18 +51,15 @@ watchImmediate(discordLinkQuery, (val) => {
 	useRouter().replace({ query: {} });
 });
 
-const dialogContainer = ref(null);
-const deleteModalOpen = ref(false);
-const editModalOpen = ref(false);
-const selectedServerEnv = ref<string | undefined>('');
-const { data: profile, refresh } = await useApiFetch('/api/auth/me', {
-	onResponse: (opt) => {
-		selectedServerEnv.value = opt.response._data?.serverAccessLevel;
-	}
-});
+const { data: profile, refresh } = await useApiFetch('/api/auth/me');
 const { data: connections, refresh: refreshConnections } = await useApiFetch(
 	'/api/auth/me-connections'
 );
+
+const dialogContainer = ref(null);
+const deleteModalOpen = ref(false);
+const editModalOpen = ref(false);
+const selectedServerEnv = ref<'dev' | 'test' | 'prod' | undefined>(profile.value?.serverAccessLevel);
 
 const {
 	execute: executeUpdateServerEnvironment,
@@ -353,6 +350,7 @@ useHead({
                 />
                 <h2>{{ $t("account.settings.settingCards.production") }}</h2>
               </label>
+
               <input
                 v-if="
                   profile.serverAccessLevel !== 'prod' ||
@@ -363,7 +361,6 @@ useHead({
                 type="radio"
                 value="test"
               >
-
               <label
                 v-if="
                   profile.serverAccessLevel !== 'prod' ||
@@ -377,6 +374,7 @@ useHead({
                 />
                 <h2>{{ $t("account.settings.settingCards.beta") }}</h2>
               </label>
+
               <input
                 v-if="profile.accessLevel === 3"
                 id="dev"
