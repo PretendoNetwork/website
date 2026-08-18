@@ -35,6 +35,7 @@ const { execute, isLoading } = useAsync({
 				email: registerForm.email,
 				miiName: registerForm.mii_name,
 				password: registerForm.password,
+				passwordConfirm: registerForm.password_confirm,
 				username: registerForm.username,
 				birthday: registerForm.birthday,
 				captchaResponse: captchaResponse ?? undefined

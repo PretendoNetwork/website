@@ -51,7 +51,7 @@ export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
 			captchaResponse: body.captchaResponse,
 			username: body.username,
 			password: body.password,
-			passwordConfirm: body.password
+			passwordConfirm: body.passwordConfirm
 		});
 
 		return {

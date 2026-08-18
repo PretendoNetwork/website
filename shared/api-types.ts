@@ -96,10 +96,11 @@ export const RefreshSchema = z.object({
 export type ApiAuthRefreshRequest = z.infer<typeof RefreshSchema>;
 
 export const RegisterSchema = z.object({
-	email: z.email(),
+	email: z.string(),
 	username: z.string(),
 	miiName: z.string(),
 	password: z.string(),
+	passwordConfirm: z.string(),
 	birthday: z.iso.date(),
 	captchaResponse: z.string().optional()
 });
