@@ -16,13 +16,11 @@
 				"faq": "Sıkça sorulan sorular",
 				"about": "Proje hakkında",
 				"progress": "Projenin ilerleyişi ve hedeflerine göz atın",
-				"blog": "En son güncellemelerimiz",
-				"forum": ""
+				"blog": "En son güncellemelerimiz"
 			}
 		},
 		"donate": "Bağış",
-		"credits": "Katkıda bulunanlar",
-		"forum": ""
+		"credits": "Katkıda bulunanlar"
 	},
 	"hero": {
 		"subtitle": "Oyun sunucuları",
@@ -113,20 +111,7 @@
 	},
 	"credits": {
 		"title": "Takımımız",
-		"text": "Projenin arkasındaki ekip ile tanışın",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Projenin arkasındaki ekip ile tanışın"
 	},
 	"account": {
 		"settings": {
@@ -163,14 +148,7 @@
 				"discord": "Discord"
 			},
 			"upgrade": "Hesabı yükselt",
-			"unavailable": "Mevcut değil",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"unavailable": "Mevcut değil"
 		},
 		"loginForm": {
 			"forgotPassword": "Şifreni mi unuttun?",
@@ -183,8 +161,7 @@
 			"username": "Kullanıcı adı",
 			"password": "Şifre",
 			"confirmPassword": "Şifreyi onayla",
-			"email": "E-posta",
-			"birthdate": ""
+			"email": "E-posta"
 		},
 		"accountLevel": [
 			"Standart",
@@ -279,24 +256,10 @@
 	},
 	"specialThanks": {
 		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
-		"title": "Ayrıca teşekkürler",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"title": "Ayrıca teşekkürler"
 	},
 	"donation": {
-		"progress": "Ayda {totd}, {goald}/ay, aylık hedefin %{perc}.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "Ayda {totd}, {goald}/ay, aylık hedefin %{perc}."
 	},
 	"blogPage": {
 		"published": "Tarafından yayınlandı",
@@ -328,26 +291,5 @@
 	},
 	"notfound": {
 		"description": "Woops! Bu sayfayı bulamadık."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

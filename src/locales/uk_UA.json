@@ -76,20 +76,7 @@
 	},
 	"credits": {
 		"title": "Команда",
-		"text": "Познайомтеся з командою проекту",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Познайомтеся з командою проекту"
 	},
 	"nav": {
 		"credits": "Титри",
@@ -110,11 +97,9 @@
 				"blog": "Наші останні оновлення, скорочено",
 				"progress": "Проверіти прогресс проєкту та цілі",
 				"about": "Про проєкт",
-				"faq": "Часті питання",
-				"forum": ""
+				"faq": "Часті питання"
 			}
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "Ігрові сервери",
@@ -130,19 +115,7 @@
 	},
 	"specialThanks": {
 		"title": "Особлива подяка",
-		"text": "Без них Pretendo не було б таким, яким воно є сьогодні.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Без них Pretendo не було б таким, яким воно є сьогодні."
 	},
 	"discordJoin": {
 		"title": "Будьте в курсі подій",
@@ -193,8 +166,7 @@
 			"registerPrompt": "Немає акаунту?",
 			"loginPrompt": "Вже є акаунт?",
 			"detailsPrompt": "Введіть дані свого облікового запису нижче",
-			"forgotPassword": "Забули пароль?",
-			"birthdate": ""
+			"forgotPassword": "Забули пароль?"
 		},
 		"settings": {
 			"upgrade": "Прокачати акаунт",
@@ -230,14 +202,7 @@
 				"no_signins_notice": "Вхідна історія зараз не відстежується. Спробуйте пізніше!",
 				"no_edit_from_dashboard": "Редагування налаштувань PNID з інформаційної панелі користувача зараз не доступна. Будь ласка, оновіть налаштування користувача з прив'язаної ігрової консолі"
 			},
-			"unavailable": "Не доступно",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"unavailable": "Не доступно"
 		},
 		"accountLevel": [
 			"Стандартний",
@@ -275,9 +240,7 @@
 		"unsubPrompt": "Ви впевнені, що бажаєте скасувати підписку на <span>tiername</span>? Ви втратите доступ до бонусів, пов’язаних із цим рівнем."
 	},
 	"donation": {
-		"progress": "{totd} з {goald}/місяць, {perc} місячної цілі.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} з {goald}/місяць, {perc} місячної цілі."
 	},
 	"localizationPage": {
 		"title": "Давайте локалізуємо",
@@ -328,26 +291,5 @@
 	},
 	"notfound": {
 		"description": "Упс! Сторінка не знайдена."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

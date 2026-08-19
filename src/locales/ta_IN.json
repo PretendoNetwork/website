@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "அணி",
-		"text": "திட்டத்தின் பின்னணியில் உள்ள குழுவைச் சந்திக்கவும்",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "திட்டத்தின் பின்னணியில் உள்ள குழுவைச் சந்திக்கவும்"
 	},
 	"specialThanks": {
 		"title": "சிறப்பு நன்றி",
-		"text": "அவர்கள் இல்லாமல், ப்ரெடென்டோ இன்று இருக்கும் இடத்தில் இருக்காது.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "அவர்கள் இல்லாமல், ப்ரெடென்டோ இன்று இருக்கும் இடத்தில் இருக்காது."
 	},
 	"discordJoin": {
 		"title": "புதுப்பித்த நிலையில் இருங்கள்",
@@ -198,8 +173,7 @@
 			"miiName": "மியின் பெயர்",
 			"forgotPassword": "உங்கள் கடவுச்சொல்லை மறந்துவிட்டீர்களா?",
 			"registerPrompt": "கணக்கு இல்லையா?",
-			"loginPrompt": "ஏற்கனவே கணக்கு உள்ளதா?",
-			"birthdate": ""
+			"loginPrompt": "ஏற்கனவே கணக்கு உள்ளதா?"
 		},
 		"forgotPassword": {
 			"header": "கடவுச்சொல் மறந்துவிட்டது",
@@ -279,9 +253,7 @@
 		"back": "பின்"
 	},
 	"donation": {
-		"progress": "மாதாந்திர இலக்கில் {totd} {goald}/mouth, {perc}.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "மாதாந்திர இலக்கில் {totd} {goald}/mouth, {perc}."
 	},
 	"localizationPage": {
 		"title": "உள்ளூர்மயமாக்குவோம்",
@@ -328,26 +300,5 @@
 	},
 	"notfound": {
 		"description": "அச்சச்சோ! இந்தப் பக்கத்தை எங்களால் கண்டுபிடிக்க முடியவில்லை."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

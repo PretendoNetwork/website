@@ -95,36 +95,11 @@
 	},
 	"credits": {
 		"title": "Наша команда",
-		"text": "Знакомьтесь с командой работающей над Pretendo",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Знакомьтесь с командой работающей над Pretendo"
 	},
 	"specialThanks": {
 		"title": "Особая благодарность",
-		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Без них, Pretendo не был бы таким какой он есть сегодня."
 	},
 	"discordJoin": {
 		"title": "Будьте в курсе всех новостей",
@@ -299,9 +274,7 @@
 		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете доступ к функциям которые были доступны на данном уровне."
 	},
 	"donation": {
-		"progress": "{totd} из {goald}/в месяц, {perc} от месячной цели.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} из {goald}/в месяц, {perc} от месячной цели."
 	},
 	"modals": {
 		"cancel": "Отменить",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Упс! Мы не смогли найти эту страницу."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

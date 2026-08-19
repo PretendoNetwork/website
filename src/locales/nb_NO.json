@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Laget",
-		"text": "Møt laget bak prosjektet",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Møt laget bak prosjektet"
 	},
 	"specialThanks": {
 		"title": "Spesiell takk",
-		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag."
 	},
 	"discordJoin": {
 		"title": "Hold deg oppdatert",
@@ -317,9 +292,7 @@
 		"back": "Tilbake"
 	},
 	"donation": {
-		"progress": "$${totd} av $${goald}/måned, ${perc}% av månedsmålet.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "$${totd} av $${goald}/måned, ${perc}% av månedsmålet."
 	},
 	"modals": {
 		"cancel": "Avbryt",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Oops! Vi klarte ikke å finne denne siden."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

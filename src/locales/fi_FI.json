@@ -34,8 +34,7 @@
 				"answer": "Kyllä, sinun pitää murtaa konsolisi yhteyttä varten. Lisätietoja asentamisesta löydät &lt;a href=\"https://pretendo.network/docs/install/wiiu\"&gt;täältä&lt;/a&gt;."
 			},
 			{
-				"question": "Tarvitsenko modeja yhdistääkseni?",
-				"answer": ""
+				"question": "Tarvitsenko modeja yhdistääkseni?"
 			},
 			{
 				"question": "Jos minulla on Nintendo Network -kielto, pysyykö se voimassa käyttäessäni Pretendoa?",
@@ -56,8 +55,7 @@
 				"credits": "Tutustu tiimiin",
 				"about": "Tietoja projektista",
 				"faq": "Usein kysytyt kysymykset",
-				"progress": "Tutustu projektin edistymiseen ja tavoitteisiin",
-				"forum": ""
+				"progress": "Tutustu projektin edistymiseen ja tavoitteisiin"
 			}
 		},
 		"about": "Tietoja",
@@ -71,8 +69,7 @@
 		},
 		"donate": "Lahjoita",
 		"blog": "Blogi",
-		"credits": "Tekijät",
-		"forum": ""
+		"credits": "Tekijät"
 	},
 	"hero": {
 		"subtitle": "Pelipalvelimet",
@@ -113,36 +110,11 @@
 	},
 	"credits": {
 		"title": "Tiimi",
-		"text": "Tutustu tiimiin projektin takana",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Tutustu tiimiin projektin takana"
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
-		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt."
 	},
 	"discordJoin": {
 		"title": "Pysy ajan tasalla",
@@ -171,8 +143,7 @@
 			"Super Mario World 2 - Yoshi's Island:in pääteema on kuminta hottia, ja et voi millään saada minua muuttamaan mielipidettäni.",
 			"Omat lempi Switch-julkaisuni ovat Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Piditte pelistä Wii U:lla niin paljon, että toimme sen takaisin\" Pack. Näkee selvästi, että Nintendo välittää.",
 			"\"Tiedäthän rakkaan Kipin, joka söpöilee koko ajan\" on kaunis tapa sanoa \"Kip söpöstelee koko ajan ja se on tosi outoa ja tyhmää ja toivoisin että ne eivät tekisi sitä\"",
-			"Munekavideomunomallakanavalla!! oon halunnut tehä viteoita jo kauan, mutta mun läppäri oli huono, eikä pyörittäny frapsia , skypeä ja minecrafia yhtaikaa! nyt se on ohi! mun ATK-maikka autto ja nytmun läppäri pyörii paljon paremmin ja voin nauhottaa! toivottavasti tykkäätte ja laittakaa tykkäykseen ja tilaukseen!!!",
-			""
+			"Munekavideomunomallakanavalla!! oon halunnut tehä viteoita jo kauan, mutta mun läppäri oli huono, eikä pyörittäny frapsia , skypeä ja minecrafia yhtaikaa! nyt se on ohi! mun ATK-maikka autto ja nytmun läppäri pyörii paljon paremmin ja voin nauhottaa! toivottavasti tykkäätte ja laittakaa tykkäykseen ja tilaukseen!!!"
 		]
 	},
 	"progressPage": {
@@ -197,8 +168,7 @@
 			"forgotPassword": "Unohditko salasanasi?",
 			"loginPrompt": "Onko tili jo luotu?",
 			"username": "Käyttäjänimi",
-			"registerPrompt": "Ei vielä tiliä?",
-			"birthdate": ""
+			"registerPrompt": "Ei vielä tiliä?"
 		},
 		"settings": {
 			"upgrade": "Nosta tililuokkaa",
@@ -234,13 +204,6 @@
 				"no_newsletter_notice": "Uutiskirje ei ole tällä hetkellä saatavilla. Palaa asiaan myöhemmin",
 				"no_signins_notice": "Kirjautumishistoriaa ei toistaiseksi seurata. Palaa asiaan myöhemmin!",
 				"no_edit_from_dashboard": "PNID -asetuksia ei toistaiseksi voi muokata koontinäytöltä. Päivitä asetukset linkitetyltä konsoliltasi"
-			},
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
 			}
 		},
 		"accountLevel": [
@@ -322,32 +285,6 @@
 		"confirm": "Vahvista"
 	},
 	"donation": {
-		"progress": "{totd} tavoitteesta {goald}/kuussa, {perc} kuukausitavoitteesta.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
+		"progress": "{totd} tavoitteesta {goald}/kuussa, {perc} kuukausitavoitteesta."
 	}
 }

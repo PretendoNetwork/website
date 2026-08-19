@@ -12,8 +12,7 @@
 				"progress": "Vezi progresul și obiectivele proiectului",
 				"faq": "Întrebări puse frecvent",
 				"credits": "Cunoaște echipa",
-				"blog": "Ultimele actualizări, pe scurt",
-				"forum": ""
+				"blog": "Ultimele actualizări, pe scurt"
 			}
 		},
 		"donate": "Donează",
@@ -21,8 +20,7 @@
 		"accountWidget": {
 			"settings": "Setări",
 			"logout": "Deloghează-te"
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "Servere de Jocuri",
@@ -78,18 +76,6 @@
 			{
 				"question": "Va trebui să îmi modific consola?",
 				"answer": "Da, va trebui să-ți modifici consola pentru a te conecta; însă, pe Wii U îți trebuie doar acces la Homebrew Launcher (adică Haxchi, Coldboot Haxchi, sau chiar exploit-ul de pe browser-ul web), cu informații despre cum 3DS se va conecta sosind la o dată mai târzie."
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		]
 	},
@@ -113,36 +99,11 @@
 	},
 	"credits": {
 		"title": "Echipa",
-		"text": "Întâlnește echipa din spatele proiectului",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Întâlnește echipa din spatele proiectului"
 	},
 	"specialThanks": {
 		"title": "Mulțumiri speciale",
-		"text": "Fără ei, Pretendo nu ar ajunge unde este astăzi.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Fără ei, Pretendo nu ar ajunge unde este astăzi."
 	},
 	"discordJoin": {
 		"title": "Fii la zi",
@@ -171,8 +132,7 @@
 			"Genericul de la Super Mario World 2 - Yoshi's Island e absolut genial și n-ai cum să mă convingi altfel.",
 			"Lansările mele preferate pe Nintendo Switch au fost Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Încă niște porturi Pack și Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Chiar v-a plăcut jocul ăsta pe Wii U Virtual Console așa de mult că vi-l aducem din nou\" Pack. Poți vedea că lui Nintendo chiar îi pasă.",
 			"Gen \"Știi pe Kip, să-i dea Dumnezeu sănătate, face UwU-uri toată ziua\" e modul de la țară de a zice \"Kip face numai UwU-uri și e foarte aiurea și stupid și mi-aș dori să nu mai facă\"",
-			"primu meu video pe canalul meu!! mereu miam dorit să fac videouri da laptopu era praf si nu mergeau fraps, skype sau minecraft in același timp, dar acum gata! profa de TIC ma ajutat și acum laptopu merge mult mai bn și pot să și filmez! sper să vă placă și nu uitati sa dati un like și subscribe!!!",
-			""
+			"primu meu video pe canalul meu!! mereu miam dorit să fac videouri da laptopu era praf si nu mergeau fraps, skype sau minecraft in același timp, dar acum gata! profa de TIC ma ajutat și acum laptopu merge mult mai bn și pot să și filmez! sper să vă placă și nu uitati sa dati un like și subscribe!!!"
 		]
 	},
 	"progressPage": {
@@ -182,8 +142,7 @@
 	"blogPage": {
 		"title": "Blog",
 		"published": "Publicată de",
-		"publishedOn": "pe",
-		"description": ""
+		"publishedOn": "pe"
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
@@ -210,8 +169,7 @@
 			"miiName": "Numele Mii-ului",
 			"forgotPassword": "Ți-ai uitat parola?",
 			"registerPrompt": "Nu ai un cont?",
-			"loginPrompt": "Ai deja un cont?",
-			"birthdate": ""
+			"loginPrompt": "Ai deja un cont?"
 		},
 		"settings": {
 			"upgrade": "Trece-ți contul la un nivel superior",
@@ -247,14 +205,7 @@
 				"no_newsletter_notice": "Buletin indisponibil. Reveniți mai târziu",
 				"newsletter": "Buletin informativ"
 			},
-			"unavailable": "Indisponibil",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"unavailable": "Indisponibil"
 		},
 		"accountLevel": [
 			"Standard",
@@ -322,32 +273,6 @@
 		"changeTier": "Schimbă nivelul"
 	},
 	"donation": {
-		"progress": "{totd}$ din {goald}$/lună, {perc} din ținta lunară.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
+		"progress": "{totd}$ din {goald}$/lună, {perc} din ținta lunară."
 	}
 }

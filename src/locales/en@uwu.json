@@ -16,8 +16,7 @@
 				"about": "seez infomations",
 				"faq": "frekuentwy askud kweshtunz",
 				"progress": "see projekt progrez",
-				"blog": "new thingzz, but smol",
-				"forum": ""
+				"blog": "new thingzz, but smol"
 			}
 		},
 		"progress": "eta wen",
@@ -113,36 +112,11 @@
 	},
 	"credits": {
 		"title": "dev kittehs",
-		"text": "see kittehz who maek pretender!!",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "see kittehz who maek pretender!!"
 	},
 	"specialThanks": {
 		"title": "speshul thx",
-		"text": "theze kittehs helpd!!",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "theze kittehs helpd!!"
 	},
 	"discordJoin": {
 		"text": "entr de discord for new infoz from kittehs 4 pretender!!",
@@ -191,8 +165,7 @@
 			"username": "kitteh name",
 			"forgotPassword": "i forget secret kitteh word!! halp!",
 			"confirmPassword": "confirm secret kitteh words",
-			"registerPrompt": "maek a new kitteh",
-			"birthdate": ""
+			"registerPrompt": "maek a new kitteh"
 		},
 		"settings": {
 			"settingCards": {
@@ -228,14 +201,7 @@
 				"no_edit_from_dashboard": "changin yor kitteh opshuns from interwebs is nono!! do from yor konsole."
 			},
 			"unavailable": "no :(",
-			"upgrade": "become super kitteh",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"upgrade": "become super kitteh"
 		},
 		"account": "kitteh",
 		"forgotPassword": {
@@ -322,32 +288,9 @@
 		"filePlaceholder": "mew://a.meow.site/4_jzon.jzon"
 	},
 	"donation": {
-		"progress": "{totd} of {goald}/munth, {perc} of teh monthly goal",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} of {goald}/munth, {perc} of teh monthly goal"
 	},
 	"notfound": {
 		"description": "uh oh! we did a widdle fucky wucky! oopsie daisie! oh noes!!!!!"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

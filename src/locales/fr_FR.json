@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "L'équipe",
-		"text": "Rencontrez l'équipe derrière le projet",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Rencontrez l'équipe derrière le projet"
 	},
 	"specialThanks": {
 		"title": "Sincères remerciements",
-		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui."
 	},
 	"discordJoin": {
 		"title": "Rejoignez-nous",
@@ -317,9 +292,7 @@
 		"back": "Retour"
 	},
 	"donation": {
-		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel."
 	},
 	"modals": {
 		"cancel": "Annuler",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

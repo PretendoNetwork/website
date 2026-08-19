@@ -41,36 +41,11 @@
 	},
 	"credits": {
 		"title": "Náš tým",
-		"text": "Seznamte se s týmem, co za projektem stojí",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Seznamte se s týmem, co za projektem stojí"
 	},
 	"specialThanks": {
 		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
-		"title": "Zvláštní poděkování",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"title": "Zvláštní poděkování"
 	},
 	"faq": {
 		"QAs": [
@@ -322,32 +297,9 @@
 		}
 	},
 	"donation": {
-		"progress": "{totd} z měsíčního cíle ${goald}  vybráno ({perc} měsíčního cíle)",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} z měsíčního cíle ${goald}  vybráno ({perc} měsíčního cíle)"
 	},
 	"notfound": {
 		"description": "Jejda! Tuto stránku jsme nenalezli."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

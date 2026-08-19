@@ -10,8 +10,7 @@
 				"about": "Información del proyeutu",
 				"faq": "Entrugues frecuentes",
 				"blog": "Los últimos anovamientos, concentraos",
-				"progress": "Revisa'l progresu ya les metes del proyetu",
-				"forum": ""
+				"progress": "Revisa'l progresu ya les metes del proyetu"
 			}
 		},
 		"about": "Tocante a",
@@ -21,8 +20,7 @@
 		"progress": "Progresu",
 		"blog": "Blogue",
 		"account": "Cuenta",
-		"donate": "Donar",
-		"forum": ""
+		"donate": "Donar"
 	},
 	"hero": {
 		"subtitle": "Sirvidores de xuegu",
@@ -77,18 +75,6 @@
 			{
 				"question": "¿Tengo d'usar hacks pa conectame?",
 				"answer": "Sí, tienes de hackiar la consola pa conectate. Por embargu, en Wii U namás tienes d'acceder al Homebrew Launcher (pente Haxchi, ColdBoot Haxchi o pente l'exploit del restolador web) ya en 3DS visita la documentación d'esti sitiu web pa saber cómo conectate."
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		],
 		"title": "Entrugues frecuentes"
@@ -113,36 +99,11 @@
 	},
 	"credits": {
 		"title": "L'equipu",
-		"text": "Conoz al equipu que ta detrás del proyeutu",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Conoz al equipu que ta detrás del proyeutu"
 	},
 	"specialThanks": {
 		"title": "Agradecimientu especial",
-		"text": "Ensin estes persones, Pretendo nun taría onde ta güei.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Ensin estes persones, Pretendo nun taría onde ta güei."
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -154,8 +115,7 @@
 			"La canción principal de Super Mario World 2 - Yoshi's Island ye mui bona ya nun hai forma de que me convenzas de lo contrario.",
 			"Les mios versiones de Nintendo Switch favorites foron: Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Otru Xuegu Portáu Pack ya Nintendo Switch Online + Brain Training / Brain Age «Prestóte muncho la versión de la Virtual Console de Wii U, poro volvemos trayela» del Dr. Kawashima Pack. Pa que dempués digas que Nintendo nun s'esmolez.",
 			"«Xá conoces a la bendita de Kip, fai UwU tol día» ye la forma suave ya sureña de dicir «Kip fai UwU tol tiempu, ye bien rara ya fata. Axallá que nun lo fore»",
-			"¡¡El primer videu de la mio canal!! Quixi facer vídeos demientres munchu tiempu mas el mio portátil yera un poco malu ya nun podía executar FRAPS, Skype ya Minecraft al empar. ¡Agora xá nun ye asina! Cola ayuda del mio profe d'informática, el portátil funciona muncho meyor ya xá puedo grabar. Espero qu'esfrutéis ya que vos suscribáis si lo facéis.",
-			""
+			"¡¡El primer videu de la mio canal!! Quixi facer vídeos demientres munchu tiempu mas el mio portátil yera un poco malu ya nun podía executar FRAPS, Skype ya Minecraft al empar. ¡Agora xá nun ye asina! Cola ayuda del mio profe d'informática, el portátil funciona muncho meyor ya xá puedo grabar. Espero qu'esfrutéis ya que vos suscribáis si lo facéis."
 		],
 		"socials": "Redes sociales",
 		"usefulLinks": "Enllaces útiles",
@@ -185,8 +145,7 @@
 			"miiName": "Nome del Mii",
 			"forgotPassword": "¿Escaeciesti la contraseña?",
 			"registerPrompt": "¿Nun tienes una cuenta?",
-			"loginPrompt": "¿Xá tienes una cuenta?",
-			"birthdate": ""
+			"loginPrompt": "¿Xá tienes una cuenta?"
 		},
 		"settings": {
 			"upgrade": "Anovar la cuenta",
@@ -222,13 +181,6 @@
 				"newsletterPrompt": "Recibi los anovamientos del proyeutu per corréu electrónicu (pues dexar de recibilos cuando quieras)",
 				"passwordPrompt": "Introduz la to contraseña de PNID pa baxar los ficheros de Cemu",
 				"no_signins_notice": "L'historial d'anicios de sesión nun se ta rexistrando. ¡Volvi equí dempués!"
-			},
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
 			}
 		},
 		"accountLevel": [
@@ -238,20 +190,7 @@
 			"Desendolcador/a"
 		],
 		"account": "Cuenta",
-		"banned": "Espulsáu/ada",
-		"forgotPassword": {
-			"submit": "",
-			"header": "",
-			"sub": "",
-			"input": ""
-		},
-		"resetPassword": {
-			"confirmPassword": "",
-			"sub": "",
-			"header": "",
-			"password": "",
-			"submit": ""
-		}
+		"banned": "Espulsáu/ada"
 	},
 	"upgrade": {
 		"unsubPrompt": "¿De xuru que quies dexar de tar soscritu/a a <span>tiername</span>? Vas perder l'accesu a tolos beneficios asociaos con esi nivel.",
@@ -267,9 +206,7 @@
 		"back": "Atrás"
 	},
 	"donation": {
-		"progress": "{totd}$ de {goald}$/mes, {perc} de la meta mensual.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd}$ de {goald}$/mes, {perc} de la meta mensual."
 	},
 	"docs": {
 		"missingInLocale": "Esta páxina nun ta disponible na to llingua. Revisa la versión n'inglés que ta abaxo.",
@@ -325,29 +262,5 @@
 		"cancel": "Encaboxar",
 		"confirm": "Confirmar",
 		"close": "Zarrar"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

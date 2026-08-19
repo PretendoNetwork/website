@@ -113,20 +113,7 @@
 	},
 	"credits": {
 		"title": "A csapat",
-		"text": "Ismerd meg a csapatot a projekt mögött",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Ismerd meg a csapatot a projekt mögött"
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -252,19 +239,7 @@
 	},
 	"specialThanks": {
 		"title": "Külön köszönet",
-		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van."
 	},
 	"discordJoin": {
 		"title": "Maradj napra kész",
@@ -279,9 +254,7 @@
 		"description": "Tekintsd meg a projekt előrehaladását és céljait! (Minden órában frissítve, így nem tükröz minden projekt célt vagy az előrehaladást."
 	},
 	"donation": {
-		"progress": "{totd} a {goald}/hó, {perc} a havi célból.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} a {goald}/hó, {perc} a havi célból."
 	},
 	"localizationPage": {
 		"title": "Fordíts",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Hoppá! Nem találjuk ezt az oldalt."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

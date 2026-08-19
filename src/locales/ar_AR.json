@@ -18,11 +18,9 @@
 				"about": "حول المشروع",
 				"faq": "أسئلة مكررة",
 				"blog": "آخر تحديثاتنا ، مكثفة",
-				"progress": "تحقق من تقدم المشروع والأهداف",
-				"forum": ""
+				"progress": "تحقق من تقدم المشروع والأهداف"
 			}
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "سيرفرات الألعاب",
@@ -78,53 +76,16 @@
 			{
 				"question": "هل احتاج أن اهكر حتي اتصل؟",
 				"answer": "نعم، ستحتاج إلي تهكير جهازك لكن علي الوي يو تحتاج فقط إلي الهومبرو لانشر اي هاكسي او موخا اما علي ال3 دي اس سيتم الاعلان في وقتا لاحقاً."
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		]
 	},
 	"credits": {
 		"title": "الفريق",
-		"text": "قابل الفريق وراء المشروع",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "قابل الفريق وراء المشروع"
 	},
 	"specialThanks": {
 		"title": "شكرا خاصة",
-		"text": "من غيرهم، بريتندو لن نكن بشكلها.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "من غيرهم، بريتندو لن نكن بشكلها."
 	},
 	"progressPage": {
 		"title": "تقدمنا",
@@ -133,8 +94,7 @@
 	"blogPage": {
 		"title": "البلوج",
 		"published": "صادرة من",
-		"publishedOn": "نشرت في",
-		"description": ""
+		"publishedOn": "نشرت في"
 	},
 	"localizationPage": {
 		"title": "لنترجم",
@@ -155,7 +115,7 @@
 		},
 		"socials": "مواقع الاتصال",
 		"bandwidthRaccoonQuotes": [
-			"",
+			null,
 			"كثير من الناس يسألوننا عما إذا كنا سنواجه مشكلة قانونية مع نينتندو بسبب هذا. يسعدني أن أقول إن عمتي تعمل في نينتندو وتقول إنه على ما يرام.",
 			"ويب كيت إصدار ٥٣٧ هو أفضل إصدار من ويب كيت لـالوي يو . لا ، لن نقوم بنقل كروم إلى الوي.",
 			"لا أستطيع الانتظار حتى تصل الساعة إلى 03:14:08 بالتوقيت العالمي المنسق في 19 يناير 2038!",
@@ -163,8 +123,7 @@
 			"سوبر ماريو وورلد 2 - الموضوع الرئيسي لجزيرة يوشي هو بوب مطلق وليس هناك طريقة لإقناعي بخلاف ذلك.",
 			"كانت إصدارات Nintendo Switch المفضلة لدي هي Nintendo Switch Online + Expansion Pack و Nintendo Switch Online + Rumble Pak و Nintendo Switch Online + Offline Play Pack و Nintendo Switch Online + بعد حزمة منافذ أخرى ونينتندو سويتش أونلاين + تدريب دماغ / دماغ كاواشيما Age \"لقد أحببت حقًا عنوان وحدة التحكم الافتراضية لـ Nintendo Wii U ، لذلك نحن نعيدها مرة أخرى\". يمكنك حقًا إخبار Nintendo عن اهتماماتها.",
 			"مثل \"أنت تعرف آش ، بارك قلبها ، إنها UwU طوال اليوم\" هي الطريقة الجنوبية اللطيفة لقول \"Kip uwus طوال الوقت وهو حقًا غريب وغبي وأتمنى ألا يفعلوا ذلك\"",
-			"أول فيديو لي على قناتي !! لقد كنت أرغب في إنشاء مقاطع فيديو لفترة طويلة الآن ولكن جهاز الكمبيوتر المحمول الخاص بي كان سيئًا للغاية ولم أتمكن من تشغيل برنامج fraps و skype و minecraft مرة واحدة. ولكن هذا انتهى الآن! مع بعض المساعدة من مدرس تكنولوجيا المعلومات الخاص بي ، يعمل الكمبيوتر المحمول بشكل أفضل بكثير ويمكنني التسجيل الآن! أتمنى أن تستمتعوا ، وإذا رغبت في ذلك ، يرجى الإعجاب والاشتراك !!!",
-			""
+			"أول فيديو لي على قناتي !! لقد كنت أرغب في إنشاء مقاطع فيديو لفترة طويلة الآن ولكن جهاز الكمبيوتر المحمول الخاص بي كان سيئًا للغاية ولم أتمكن من تشغيل برنامج fraps و skype و minecraft مرة واحدة. ولكن هذا انتهى الآن! مع بعض المساعدة من مدرس تكنولوجيا المعلومات الخاص بي ، يعمل الكمبيوتر المحمول بشكل أفضل بكثير ويمكنني التسجيل الآن! أتمنى أن تستمتعوا ، وإذا رغبت في ذلك ، يرجى الإعجاب والاشتراك !!!"
 		]
 	},
 	"discordJoin": {
@@ -210,14 +169,7 @@
 				"no_edit_from_dashboard": "تغيير اعدادات حساب البريتيندو من لوحة التحكم غير ممكن حالياً. برجاء تغيير الإعدادات من الكونسول خاصتك"
 			},
 			"upgrade": "رفع مستوى الحساب",
-			"unavailable": "غير متوفر",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"unavailable": "غير متوفر"
 		},
 		"banned": "محظور",
 		"loginForm": {
@@ -231,8 +183,7 @@
 			"loginPrompt": "هل لديك حساب؟",
 			"confirmPassword": "تأكيد كلمة المرور",
 			"registerPrompt": "ليس لديك حساب؟",
-			"miiName": "اسم المي",
-			"birthdate": ""
+			"miiName": "اسم المي"
 		},
 		"accountLevel": [
 			"اساسي",
@@ -299,9 +250,7 @@
 		}
 	},
 	"donation": {
-		"progress": " ${totd}  من  ${goald}  / شهريًا ،  {perc}٪  من الهدف الشهري.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": " ${totd}  من  ${goald}  / شهريًا ،  {perc}٪  من الهدف الشهري."
 	},
 	"showcase": {
 		"title": "ماذا نقوم به",
@@ -325,29 +274,5 @@
 		"cancel": "إلغاء",
 		"confirm": "تأكيد",
 		"close": "غلق"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Equipe",
-		"text": "Conheça a equipe por trás do projeto",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Conheça a equipe por trás do projeto"
 	},
 	"specialThanks": {
 		"title": "Agradecimentos especiais",
-		"text": "Sem eles, Pretendo não estaria onde está hoje.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Sem eles, Pretendo não estaria onde está hoje."
 	},
 	"discordJoin": {
 		"title": "Fique atualizado",
@@ -322,32 +297,9 @@
 		"close": "Fechar"
 	},
 	"donation": {
-		"progress": "{totd} de {goald} por mês, o que significa {perc} do objetivo mensal.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} de {goald} por mês, o que significa {perc} do objetivo mensal."
 	},
 	"notfound": {
 		"description": "Ops! Nós não conseguimos achar esta página."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

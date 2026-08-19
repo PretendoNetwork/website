@@ -11,8 +11,7 @@
 				"about": "Σχετικά με το έργο μας",
 				"progress": "Κοίταξε την πρόοδο του έργου και τους στόχους του",
 				"blog": "Οι πιο πρόσφατες ενημερώσεις, συνοπτικά",
-				"faq": "Συχνές ερωτήσεις",
-				"forum": ""
+				"faq": "Συχνές ερωτήσεις"
 			}
 		},
 		"about": "Πληροφορίες",
@@ -77,37 +76,13 @@
 			{
 				"answer": "Ναι, θα χρειαστείς να τροποποιήσεις τη συσκευή σου για να συνδεθείς. Όμως, χρειάζεσαι μόνο πρόσβαση στο Homebrew Launcher (π.χ Haxchi, Coldboot Haxchi, ή web browser exploit) στο Wii U, με πληροφορίες στο πως θα συνδεθείςστο 3DS να έρχονται σε μελλοντική ημερομηνία.",
 				"question": "Θα χρειαστώ hacks για να συνδεθώ;"
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		],
 		"title": "Συχνές ερωτήσεις"
 	},
 	"specialThanks": {
 		"title": "Ιδιαίτερα ευχαριστώ",
-		"text": "Χωρίς αυτά τα άτομα, το Pretendo δεν θα ήταν εδώ που είναι τώρα.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Χωρίς αυτά τα άτομα, το Pretendo δεν θα ήταν εδώ που είναι τώρα."
 	},
 	"account": {
 		"settings": {
@@ -144,14 +119,7 @@
 				"linkDiscord": "Σύνδεση λογαριασμού Discord"
 			},
 			"unavailable": "Μη διαθέσιμο",
-			"upgrade": "Αναβάθμιση λογαριασμού",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"upgrade": "Αναβάθμιση λογαριασμού"
 		},
 		"loginForm": {
 			"detailsPrompt": "Συμπλήρωσε τα στοιχεία του λογαριασμού παρακάτω",
@@ -164,8 +132,7 @@
 			"email": "Ηλεκτρονική διέυθυνση (E-Mail)",
 			"registerPrompt": "Δεν έχεις λογαριασμό;",
 			"miiName": "Όνομα Mii",
-			"loginPrompt": "Έχεις ήδη λογαριασμό;",
-			"birthdate": ""
+			"loginPrompt": "Έχεις ήδη λογαριασμό;"
 		},
 		"resetPassword": {
 			"sub": "Συμπλήρωσε παρακάτω το νέο κωδικό σου",
@@ -191,20 +158,7 @@
 	},
 	"credits": {
 		"text": "Γνώρισε την ομάδα που αναπτύσσει το project",
-		"title": "Η ομάδα",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"title": "Η ομάδα"
 	},
 	"discordJoin": {
 		"text": "Μπές στον Discord server μας για να λαμβάνεις τις νεότερες ενημερώσεις μας πάνω στο project.",
@@ -231,8 +185,7 @@
 			"Το main theme του Super Mario World 2 - Yoshi's Island είναι ό,τι καλυτερο και δεν μεταπείθεις με την καμία.",
 			"Οι αγαπημένες μου κυκλοφορίες του Nintendo Switch είναι το Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, και Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Σου Αρεσε Πολύ Το Χ Παιχνίδι Wii U Virtual Console , Οπότε Το Φέρνουμε Πίσω\" Pack. Είναι προφανές πως η Nintendo ενδιαφέρεται.",
 			"Ήξερες ότι το \"Ξέρεις ότι η Kip, νά' ναι καλά η ψυχούλα, κάνει όλη μέρα UwU\" είναι ο ευγενικός τρόπος να πείς \"Η Kip κάνει UwU συνέχεια και είναι περίεργο και χαζό και μακάρι να μην το έκανε;\"",
-			"Το πρώτο βίντεω στο κανάλι μου!! περίμενα να κάνω βίντεος για πολι καιρό αλλά το λαπτοπ μου ετρεθε πολυ κακά και δεν μπορουσα να τρεχω το fraps, skype κι minecraft ολα μαζι. αλλα αυτο τελιωσε! με λιγο βοηθεια απο το δασκαλο πληροφορικισ μου το λαπτ0π μου τρεχι πολυ καλυτερα και μπορο να καταγράψω τορα! ευχομαι να το απολαυσετε και αν ναι, παρ{'@'}καλο καντε λαεκ και σαμπσκραϊμπ!",
-			""
+			"Το πρώτο βίντεω στο κανάλι μου!! περίμενα να κάνω βίντεος για πολι καιρό αλλά το λαπτοπ μου ετρεθε πολυ κακά και δεν μπορουσα να τρεχω το fraps, skype κι minecraft ολα μαζι. αλλα αυτο τελιωσε! με λιγο βοηθεια απο το δασκαλο πληροφορικισ μου το λαπτ0π μου τρεχι πολυ καλυτερα και μπορο να καταγράψω τορα! ευχομαι να το απολαυσετε και αν ναι, παρ{'@'}καλο καντε λαεκ και σαμπσκραϊμπ!"
 		],
 		"socials": "Κοινωνικά δίκτυα",
 		"usefulLinks": "Χρήσιμοι σύνδεσμοι"
@@ -257,9 +210,7 @@
 		"changeTierPrompt": "Είσαι σίγουρος ότι θέλεις να καταργήσεις τη συνδρομή σου από <span class=\"oldtier\">oldtiername</span> και να εγγραφείς στο <span class=\"newtier\">newtiername</span>;"
 	},
 	"donation": {
-		"progress": "{totd} από{goald}/μήνα, {perc} του μηνιαίου στόχου.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} από{goald}/μήνα, {perc} του μηνιαίου στόχου."
 	},
 	"localizationPage": {
 		"description": "Επικόλλησε έναν σύνδεσμο σε μια δημόσια προσβάσιμη τοποθεσία JSON για να τη δοκιμάσεις στον ιστότοπο",
@@ -325,29 +276,5 @@
 		"cancel": "Ακύρωση",
 		"close": "Κλείσιμο",
 		"confirm": "Επιβεβαίωση"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

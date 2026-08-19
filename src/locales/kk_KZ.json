@@ -39,18 +39,6 @@
 			{
 				"answer": "Иә, қосылу үшін құрылғыны бұзу керек. Wii U үшін сізге тек Homebrew Launcher керек болады (Haxchi, Coldboot Haxchi т.б. сияқты). 3DS-пен қолдануға/қалай қосылатыны үшін ақпарат кейінірек қолжетімді болады.",
 				"question": "Pretendo-ні қолдау үшін, консольді бұзуға керекпін бе?"
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		],
 		"title": "Жиі Қойылатын Сұрақтар",
@@ -75,11 +63,9 @@
 				"about": "Жоба туралы",
 				"faq": "Жақында қойылған сұрақтар",
 				"blog": "Біздің соңғы жаңартуларымыз қысқартылған",
-				"progress": "Жобаның барысы мен мақсаттарын тексеріңіз",
-				"forum": ""
+				"progress": "Жобаның барысы мен мақсаттарын тексеріңіз"
 			}
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "Ойын серверлері",
@@ -95,42 +81,16 @@
 	},
 	"specialThanks": {
 		"text": "Оларсыз Pretendo қазіргідей болмас еді.",
-		"title": "Ерекше рақмет",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"title": "Ерекше рақмет"
 	},
 	"credits": {
 		"title": "Команда",
-		"text": "Жобаның артында тұрған командамен танысыңыз",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Жобаның артында тұрған командамен танысыңыз"
 	},
 	"blogPage": {
 		"published": "Жарияланды:",
 		"title": "Блог",
-		"publishedOn": ",",
-		"description": ""
+		"publishedOn": ","
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -142,8 +102,7 @@
 			"Super Mario World 2 ойынының негізгі әні - Yoshi's Island - нақты бомба! Сіз маған басқаны дәлелдей алмайсыз.",
 			"Nintendo Switch-тегі менің сүйікті шығарылымдарым - Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Тағы Бір Порт Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Сізге Nintendo Wii U виртуалды консоль ойындары ұнады, сондықтан біз оларды қайтарып жатырмыз\" Pack. Сіз Nintendo бізге шынымен қамқорлық жасайтынын анық айта аласыз.",
 			"Мысалы, \"Сен Кип білесің, Құдай оны жарылқасын, ол күні бойы UwU-п тұр\" - оңтүстік айтылуының жақсы мысалы - \"Кип үнемі шығып UwU-п, бұл өте оғаш және тітіркендіргіш, ол мұны ешқашан жасамайды деп үміттенемін.\"",
-			"Минін каналымдағы бірінші бейееммм!!11!!!! Мен ұзақ уақыт бойы видео тусіргім келді, бирақ ноутбук өте байау болды, мен бір уақытта фрапс, скайп жане майнкамптты аша алмадым. бірақ енді бітті! инфраматика пәнінен мұғалімнің көмегімен ноутбук жылдам болды, енді мен сртке түсіре аламын!!! Сізге унәйды дйеп үміттенемін, лупил басып, жазылыңыз!!!!!!\"",
-			""
+			"Минін каналымдағы бірінші бейееммм!!11!!!! Мен ұзақ уақыт бойы видео тусіргім келді, бирақ ноутбук өте байау болды, мен бір уақытта фрапс, скайп жане майнкамптты аша алмадым. бірақ енді бітті! инфраматика пәнінен мұғалімнің көмегімен ноутбук жылдам болды, енді мен сртке түсіре аламын!!! Сізге унәйды дйеп үміттенемін, лупил басып, жазылыңыз!!!!!!\""
 		],
 		"socials": "Әлеуметтік желілер",
 		"usefulLinks": "Пайдалы сілтемелер",
@@ -198,8 +157,7 @@
 			"forgotPassword": "Құпиясөзімді ұмыттым...",
 			"loginPrompt": "Менде аккаунтым бар",
 			"registerPrompt": "Әлі тіркелмегенсіз бе?",
-			"email": "Пошта",
-			"birthdate": ""
+			"email": "Пошта"
 		},
 		"settings": {
 			"upgrade": "Аккаунтты жақсарту",
@@ -235,13 +193,6 @@
 				"no_newsletter_notice": "Газет қазір қолжетімді емес. Кейінірек оралыңыз",
 				"no_edit_from_dashboard": "PNID параметрлерін өзгерту қазір мүмкін емес. Байланыстырылған ойын консолінен пайдаланушы деректерін жаңартыңыз",
 				"hasAccessPrompt": "Қазіргі уақытта сіздің деңгейіңіз бета серверлеріне қол жеткізуге мүмкіндік береді. Керемет!"
-			},
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
 			}
 		},
 		"accountLevel": [
@@ -250,20 +201,7 @@
 			"Модератор",
 			"Developer"
 		],
-		"banned": "Тыйым салынған",
-		"forgotPassword": {
-			"submit": "",
-			"header": "",
-			"sub": "",
-			"input": ""
-		},
-		"resetPassword": {
-			"confirmPassword": "",
-			"sub": "",
-			"header": "",
-			"password": "",
-			"submit": ""
-		}
+		"banned": "Тыйым салынған"
 	},
 	"upgrade": {
 		"title": "Жаңарту",
@@ -279,9 +217,7 @@
 		"unsubPrompt": "<span>tiername</span> жазылуынан бас тартқыңыз келетініне сенімдісіз бе? Осы деңгеймен бірге келген қондырмалардың құқықтарын жоғалтасыз."
 	},
 	"donation": {
-		"progress": "{totd}/айына {goald}, айлық мақсаттың {perc}.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd}/айына {goald}, айлық мақсаттың {perc}."
 	},
 	"localizationPage": {
 		"title": "Жергілікті жерлестірейік",
@@ -325,29 +261,5 @@
 		"cancel": "Болдырмау",
 		"confirm": "Растау",
 		"close": "Жабу"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

@@ -6,33 +6,14 @@
 		"accountWidget": {
 			"settings": "roghainnean",
 			"logout": "log a-mach"
-		},
-		"dropdown": {
-			"captions": {
-				"progress": "",
-				"credits": "",
-				"faq": "",
-				"blog": "",
-				"forum": "",
-				"about": ""
-			}
-		},
-		"credits": "",
-		"docs": "",
-		"about": "",
-		"account": "",
-		"faq": "",
-		"donate": ""
+		}
 	},
 	"progress": {
-		"title": "adhartas",
-		"githubRepo": ""
+		"title": "adhartas"
 	},
 	"blogPage": {
 		"title": "bloga",
-		"publishedOn": "air",
-		"description": "",
-		"published": ""
+		"publishedOn": "air"
 	},
 	"account": {
 		"account": "cunntas",
@@ -42,20 +23,10 @@
 			"username": "ainm-cleachdaidh",
 			"password": "facal-faire",
 			"email": "post-d",
-			"birthdate": "co-là breith",
-			"forgotPassword": "",
-			"loginPrompt": "",
-			"registerPrompt": "",
-			"detailsPrompt": "",
-			"miiName": "",
-			"confirmPassword": ""
+			"birthdate": "co-là breith"
 		},
 		"resetPassword": {
-			"password": "facal-faire",
-			"confirmPassword": "",
-			"sub": "",
-			"header": "",
-			"submit": ""
+			"password": "facal-faire"
 		},
 		"settings": {
 			"settingCards": {
@@ -68,36 +39,7 @@
 				"beta": "Beta",
 				"email": "post-d",
 				"password": "facal-faire",
-				"discord": "Discord",
-				"serverEnv": "",
-				"noDiscordLinked": "",
-				"signInSecurity": "",
-				"fullSignInHistory": "",
-				"userSettings": "",
-				"linkDiscord": "",
-				"no_newsletter_notice": "",
-				"removeDiscord": "",
-				"passwordPrompt": "",
-				"no_signins_notice": "",
-				"profile": "",
-				"upgradePrompt": "",
-				"connectedToDiscord": "",
-				"newsletterPrompt": "",
-				"newsletter": "",
-				"hasAccessPrompt": "",
-				"signInHistory": "",
-				"passwordResetNotice": "",
-				"otherSettings": "",
-				"no_edit_from_dashboard": ""
-			},
-			"upgrade": "",
-			"unavailable": "",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
+				"discord": "Discord"
 			}
 		},
 		"accountLevel": [
@@ -106,248 +48,23 @@
 			"modaràtair",
 			"leasaichear"
 		],
-		"banned": "toirmisgte",
-		"forgotPassword": {
-			"submit": "",
-			"header": "",
-			"sub": "",
-			"input": ""
-		}
+		"banned": "toirmisgte"
 	},
 	"upgrade": {
 		"month": "mìos",
-		"back": "air ais",
-		"changeTierPrompt": "",
-		"unsub": "",
-		"changeTier": "",
-		"unsubPrompt": "",
-		"changeTierConfirm": "",
-		"title": "",
-		"description": "",
-		"unsubConfirm": "",
-		"tierSelectPrompt": ""
+		"back": "air ais"
 	},
 	"docs": {
 		"sidebar": {
 			"welcome": "fàilte",
 			"install_extended": "stàlaich pretendo",
 			"install": "stàlaich",
-			"search": "putan luirg",
-			"getting_started": "",
-			"juxt_err": ""
-		},
-		"quickLinks": {
-			"header": "",
-			"links": [
-				{
-					"caption": "",
-					"header": ""
-				},
-				{
-					"caption": "",
-					"header": ""
-				}
-			]
-		},
-		"search": {
-			"title": "",
-			"no_match": "",
-			"caption": "",
-			"label": ""
-		},
-		"missingInLocale": ""
+			"search": "putan luirg"
+		}
 	},
 	"modals": {
 		"cancel": "cuir dheth",
 		"confirm": "deimhnich",
 		"close": "dùin"
-	},
-	"faq": {
-		"QAs": [
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
-			}
-		],
-		"text": "",
-		"title": ""
-	},
-	"localizationPage": {
-		"instructions": "",
-		"filePlaceholder": "",
-		"fileInput": "",
-		"title": "",
-		"button": "",
-		"description": ""
-	},
-	"specialThanks": {
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		},
-		"text": "",
-		"title": ""
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"hero": {
-		"title": "",
-		"buttons": {
-			"readMore": ""
-		},
-		"text": "",
-		"subtitle": ""
-	},
-	"showcase": {
-		"cards": [
-			{
-				"caption": "",
-				"title": ""
-			},
-			{
-				"caption": "",
-				"title": ""
-			},
-			{
-				"caption": "",
-				"title": ""
-			}
-		],
-		"text": "",
-		"title": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"donation": {
-		"upgradePushText": "",
-		"progress": "",
-		"upgradePushLinkText": ""
-	},
-	"credits": {
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		},
-		"title": "",
-		"text": ""
-	},
-	"discordJoin": {
-		"title": "",
-		"text": "",
-		"widget": {
-			"text": "",
-			"button": ""
-		}
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
-	},
-	"footer": {
-		"bandwidthRaccoonQuotes": [
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"usefulLinks": "",
-		"widget": {
-			"captions": [
-				"",
-				""
-			],
-			"button": ""
-		},
-		"socials": ""
-	},
-	"aboutUs": {
-		"paragraphs": [
-			"",
-			""
-		],
-		"title": ""
-	},
-	"progressPage": {
-		"title": "",
-		"description": ""
 	}
 }

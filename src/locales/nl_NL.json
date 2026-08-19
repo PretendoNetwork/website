@@ -97,34 +97,12 @@
 		"title": "Het team",
 		"text": "Ontmoet het team achter het project",
 		"roles": {
-			"owner": "Projecteigenaar en hoofdontwikkelaar",
-			"researchAndGameDev": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
+			"owner": "Projecteigenaar en hoofdontwikkelaar"
 		}
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
-		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is."
 	},
 	"progressPage": {
 		"title": "Onze vooruitgang",
@@ -145,9 +123,7 @@
 		"button": "Test bestand"
 	},
 	"donation": {
-		"progress": "{totd} van {goald}/maand, {perc} van de maandelijkse doelstelling.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} van {goald}/maand, {perc} van de maandelijkse doelstelling."
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
@@ -328,26 +304,5 @@
 	},
 	"notfound": {
 		"description": "Oeps! We konden deze pagina niet vinden."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

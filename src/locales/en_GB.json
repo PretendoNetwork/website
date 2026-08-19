@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "The team",
-		"text": "Meet the team behind the project",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Meet the team behind the project"
 	},
 	"specialThanks": {
 		"title": "Special thanks",
-		"text": "Without these people. Pretendo wouldn't be where it is today.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Without these people. Pretendo wouldn't be where it is today."
 	},
 	"discordJoin": {
 		"title": "Stay up to date",
@@ -279,9 +254,7 @@
 		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class=\"oldtier\">oldtiername</span> and subscribe to <span class=\"newtier\">newtiername</span>?"
 	},
 	"donation": {
-		"progress": "{totd} of {goald}/month, {perc} of the monthly goal.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} of {goald}/month, {perc} of the monthly goal."
 	},
 	"localizationPage": {
 		"title": "Let's localise",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Oops! We could not find this page."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

@@ -18,11 +18,9 @@
 				"about": "このプロジェクトについて",
 				"blog": "最新のアップデート（簡易版）",
 				"progress": "プロジェクトの進行状況と目的を確認",
-				"faq": "よくある質問",
-				"forum": ""
+				"faq": "よくある質問"
 			}
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "ゲームサーバー",
@@ -113,36 +111,11 @@
 	},
 	"credits": {
 		"title": "開発チーム",
-		"text": "プロジェクトを支えるチームの紹介",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "プロジェクトを支えるチームの紹介"
 	},
 	"specialThanks": {
 		"title": "スペシャルサンクス",
-		"text": "Pretendoのいまの姿を作り上げた方たちです。",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Pretendoのいまの姿を作り上げた方たちです。"
 	},
 	"discordJoin": {
 		"title": "最新情報を入手する",
@@ -285,8 +258,7 @@
 			"login": "ログイン",
 			"confirmPassword": "パスワードの確認",
 			"forgotPassword": "パスワードを忘れた場合",
-			"registerPrompt": "アカウントをお持ちでない場合",
-			"birthdate": ""
+			"registerPrompt": "アカウントをお持ちでない場合"
 		},
 		"account": "アカウント",
 		"forgotPassword": {
@@ -317,9 +289,7 @@
 		"unsubPrompt": "<span>tiername</span> から退会しますか？そのレベルに関連付けられた特典にアクセスできなくなります。"
 	},
 	"donation": {
-		"progress": "{totd}/{goald}(寄付額/目標) ー 月間目標の {perc}の寄付を頂いています。",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd}/{goald}(寄付額/目標) ー 月間目標の {perc}の寄付を頂いています。"
 	},
 	"modals": {
 		"cancel": "キャンセル",
@@ -328,26 +298,5 @@
 	},
 	"notfound": {
 		"description": "おっと！このページは見つかりません。"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

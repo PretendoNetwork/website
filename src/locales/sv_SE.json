@@ -12,8 +12,7 @@
 				"about": "Om projektet",
 				"credits": "Träffa teamet",
 				"blog": "Våra senaste uppdateringar, kondenserat",
-				"faq": "Vanliga frågor",
-				"forum": ""
+				"faq": "Vanliga frågor"
 			}
 		},
 		"account": "Konto",
@@ -21,8 +20,7 @@
 			"settings": "Inställningar",
 			"logout": "Logga ut"
 		},
-		"donate": "Donera",
-		"forum": ""
+		"donate": "Donera"
 	},
 	"hero": {
 		"subtitle": "Spel servrar",
@@ -41,36 +39,11 @@
 	},
 	"credits": {
 		"title": "Teamet",
-		"text": "Träffa teamet bakom projektet",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Träffa teamet bakom projektet"
 	},
 	"specialThanks": {
 		"title": "Särskilda tack",
-		"text": "Utan dem skulle Pretendo inte vara där det är idag.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Utan dem skulle Pretendo inte vara där det är idag."
 	},
 	"progressPage": {
 		"description": "Kolla in projektets framsteg och mål! (Updateras varje timme eller så, reflekterar inte ALLA projekt mål eller framsteg)",
@@ -94,8 +67,7 @@
 			"confirmPassword": "Bekräfta lösenord",
 			"registerPrompt": "Har inte ett konto?",
 			"miiName": "Mii namn",
-			"loginPrompt": "Har redan ett konto?",
-			"birthdate": ""
+			"loginPrompt": "Har redan ett konto?"
 		},
 		"settings": {
 			"upgrade": "Uppgradera konto",
@@ -131,14 +103,7 @@
 				"no_newsletter_notice": "Nyhetsbrev inte tillgänligt för närvarande. Kom tillbaka senare",
 				"no_edit_from_dashboard": "Redigering av PNID-inställningar från användarinstrumentpanelen är inte tillgängligt för nuvarande. Vänligen uppdatera användarinställningar från din kopplade spelkonsol"
 			},
-			"unavailable": "Otillgänglig",
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
-			}
+			"unavailable": "Otillgänglig"
 		},
 		"resetPassword": {
 			"header": "Återställ Lösenord",
@@ -185,8 +150,7 @@
 			"Super Mario Värld 2 - Yoshi's Ö's huvud signaturmelodi är en absolut bop är det finns inget sätt att du kommer övertyga mig annars.",
 			"Mina favorit Nintendo Switch släpp har varit Nintendo Switch Online + Expansion Paket, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Spel Paket, Nintendo Switch Online + Ännu En Port Paket, och Nintendo Switch Online + Dr. Kawashima's Hjärn Träning / Hjärnålder \"Du Gillade Verkligen WII U Virtual Konsol Titeln, Så Vi Tar Den Tillbaka\" Paket. Du kan verkligen se att Nintendo bryr sig.",
 			"Som \"Du vet Kip, välsigna hennes hjärta, hon UwUar varje dag\" är det trevliga sydliga sättet att säga \"Kip uwuar hela tiden och det är verkligen konstigt och dumt och jag önskar att hen inte gjorde det\"",
-			"Min första video på min kanal!! Ja har velat göra videor länge nu men min laptop rann ganska dåligt och jag kunde inte köra fraps, skype och minecraft på samma gång. men nu är det över! med lite hjälp från min IT lärare kör min laptop mycket bättre och jag kan spela in nu! jag hoppas att ni alla tycker om den här videon och om du gör det snälla gilla och premenurera!!!",
-			""
+			"Min första video på min kanal!! Ja har velat göra videor länge nu men min laptop rann ganska dåligt och jag kunde inte köra fraps, skype och minecraft på samma gång. men nu är det över! med lite hjälp från min IT lärare kör min laptop mycket bättre och jag kan spela in nu! jag hoppas att ni alla tycker om den här videon och om du gör det snälla gilla och premenurera!!!"
 		],
 		"socials": "Sociala medier",
 		"usefulLinks": "Användbara länkar",
@@ -231,18 +195,6 @@
 			{
 				"question": "Kommer jag behöva hacks för att ansluta?",
 				"answer": "Ja, du kommer att behöva hacka din enhet för att ansluta; Dock på Wii U kommer du bara att behöva tillgång till Homebrew Launchern (dvs. Haxchi,Coldboot Haxchi, eller till och med webbläsar utnyttjandet), med information om hur 3DSet kommer ansluta kommande vid ett senare datum."
-			},
-			{
-				"question": "",
-				"answer": ""
-			},
-			{
-				"answer": "",
-				"question": ""
-			},
-			{
-				"question": "",
-				"answer": ""
 			}
 		],
 		"title": "Vanliga frågor",
@@ -317,37 +269,11 @@
 		}
 	},
 	"donation": {
-		"progress": "{totd} av {goald}/månad, {perc} av det månatliga målet.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} av {goald}/månad, {perc} av det månatliga målet."
 	},
 	"modals": {
 		"close": "Stäng",
 		"confirm": "Bekräfta",
 		"cancel": "Avbryt"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

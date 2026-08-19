@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Tim",
-		"text": "Upoznaj tim projekta",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Upoznaj tim projekta"
 	},
 	"specialThanks": {
 		"title": "Posebna zahvala",
-		"text": "Bez njih, Pretendo ne bi bio gdje je danas.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Bez njih, Pretendo ne bi bio gdje je danas."
 	},
 	"discordJoin": {
 		"title": "Budi u tijeku",
@@ -170,7 +145,7 @@
 			"Wii U je zapravo podcijenjen sustav: reklame su bile stvarno loše, ali konzola je odlična. Hm, čekaj malo, nisam siguran zašto, ali moj GamePad se ne povezuje s mojim Wii-jem.",
 			"Super Mario World 2 – Glavna tema od Yoshi Island je apsolutni hit i nema šanse da me uvjeriš u suprotno.",
 			"Moja omiljena izdanja za Nintendo Switch su Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack i Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age „You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back”. Stvarno se vidi da je Nintendu stalo.",
-			"",
+			null,
 			"Moj prvi video na mom kanalu!! Već dugo želim snimati videa, ali je moj laptop radio prilično loše i nisam mogao pokrenuti Fraps, Skype i Minecraft odjednom. Ali sada je to sve prošlo! Uz pomoć mog učitelja informatike moj laptop radi puno bolje i sada mogu snimati! Nadam se da ćeš uživati, te ako da, lajkaj i pretplati se!!!",
 			"Što se mene tiče izgleda dobro"
 		]
@@ -279,9 +254,7 @@
 		"back": "Natrag"
 	},
 	"donation": {
-		"progress": "{totd} od {goald}/mjesečno, {perc} % mjesečnog cilja.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} od {goald}/mjesečno, {perc} % mjesečnog cilja."
 	},
 	"localizationPage": {
 		"title": "Lokalizirajmo",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Nažalost nismo uspjeli pronaći ovu stranicu."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

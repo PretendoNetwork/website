@@ -18,11 +18,9 @@
 				"progress": "Comprova l'estat del projecte i les seves metes",
 				"about": "Més sobre el projecte",
 				"faq": "Preguntes freqüents",
-				"blog": "Les nostres últimes actualitzacions, resumides",
-				"forum": ""
+				"blog": "Les nostres últimes actualitzacions, resumides"
 			}
-		},
-		"forum": ""
+		}
 	},
 	"hero": {
 		"subtitle": "Servidors en línia",
@@ -113,36 +111,11 @@
 	},
 	"credits": {
 		"title": "L'equip",
-		"text": "Coneix l'equip que hi ha darrere del projecte",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Coneix l'equip que hi ha darrere del projecte"
 	},
 	"specialThanks": {
 		"title": "Gràcies especials",
-		"text": "Sense ells, Pretendo no sería al lloc que n'hi és avui.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Sense ells, Pretendo no sería al lloc que n'hi és avui."
 	},
 	"discordJoin": {
 		"widget": {
@@ -170,9 +143,8 @@
 			"Realment, la Wii U és un sistema infravalorat: els anuncis van ser dolents, però la consola és genial. Ah, un moment, no estic segur perquè, però el meu Gamepad no s'està connectant a la meva Wii.",
 			"El tema principal de Super Mario World 2 - Yoshi's Island és boníssim i no hi ha manera de fer-me canviar d'opinió.",
 			"Els meus llançaments de Nintendo Switch han sigut Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack , Nintendo Switch Online + Yet Another Port Pack i Nintendo Switch Online + Dr. Kawashima's Brain Training/Brain Age \"Et va gustar molt el títol de la consola virtual de Nintendo Wii U, així que la portem de volta\" Pack. Realment pots dir que a Nintendo li importa.",
-			"",
-			"El meu primer vídeo al canal! He volgut fer vídeos des de fa molt, però el meu portàtil no funcionava bé i no podia fer funcionar fraps, skype o minecraft tot a la vegada. Però això s'ha acabat! Amb l'ajuda del meu professor de TI el meu portàtil funciona molt millor i ara puc grabar! Desitjo que tots gaudiu i si ho feu deixeu m'agrada i subscriviu-vos!!!",
-			""
+			null,
+			"El meu primer vídeo al canal! He volgut fer vídeos des de fa molt, però el meu portàtil no funcionava bé i no podia fer funcionar fraps, skype o minecraft tot a la vegada. Però això s'ha acabat! Amb l'ajuda del meu professor de TI el meu portàtil funciona molt millor i ara puc grabar! Desitjo que tots gaudiu i si ho feu deixeu m'agrada i subscriviu-vos!!!"
 		]
 	},
 	"account": {
@@ -187,8 +159,7 @@
 			"forgotPassword": "T'has olvidat la teva contrasenya?",
 			"register": "Crear compte",
 			"registerPrompt": "No tens un compte?",
-			"loginPrompt": "Ja tens un compte?",
-			"birthdate": ""
+			"loginPrompt": "Ja tens un compte?"
 		},
 		"account": "Compte",
 		"settings": {
@@ -225,20 +196,12 @@
 				"birthDate": "Dia de naixement",
 				"serverEnv": "Entorn del servidor",
 				"signInSecurity": "Inici de sessió i seguretat"
-			},
-			"delete": {
-				"modalDescription": "",
-				"modalCaution": "",
-				"modalTitle": "",
-				"modalConfirm": "",
-				"button": ""
 			}
 		},
 		"forgotPassword": {
 			"sub": "Posa el teu correu electrònic/PNID abaix",
 			"input": "Correu electrònic o PNID",
-			"submit": "Sotmetre",
-			"header": ""
+			"submit": "Sotmetre"
 		},
 		"resetPassword": {
 			"password": "Contrasenya",
@@ -271,8 +234,7 @@
 		"changeTier": "Canvia el nivell",
 		"changeTierPrompt": "Estàs segur que vols donar-te de baixa de <span class=\"oldtier\">oldtiername</span> i donar-te d'alta a <span class=\"newtier\">newtiername</span>?",
 		"changeTierConfirm": "Canvia de nivell",
-		"title": "Actualitza",
-		"description": ""
+		"title": "Actualitza"
 	},
 	"progressPage": {
 		"title": "El nostre progrés",
@@ -296,8 +258,7 @@
 			"header": "Enllaços d'accés ràpid",
 			"links": [
 				{
-					"header": "Instal·lar Pretendo",
-					"caption": ""
+					"header": "Instal·lar Pretendo"
 				},
 				{
 					"header": "Has tingut un error?",
@@ -322,32 +283,6 @@
 		"missingInLocale": "Aquesta pàgina no està disponible al teu idioma. Si us plau, consulta la versió en anglès a sota."
 	},
 	"donation": {
-		"progress": "Objectiu mensual: {totd} de {goald}/al mes, {perc}.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"notfound": {
-		"description": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
+		"progress": "Objectiu mensual: {totd} de {goald}/al mes, {perc}."
 	}
 }

@@ -15,14 +15,12 @@
 				"progress": "Lihat kemajuan dan tujuan proyek",
 				"faq": "Pertanyaan yang sering diajukan",
 				"about": "Tentang projek",
-				"blog": "Update terbaru kami, secara singkat",
-				"forum": ""
+				"blog": "Update terbaru kami, secara singkat"
 			}
 		},
 		"faq": "Pertanyaan Umum",
 		"blog": "Berita",
-		"donate": "Donasi",
-		"forum": ""
+		"donate": "Donasi"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
@@ -118,36 +116,11 @@
 	},
 	"credits": {
 		"title": "Tim",
-		"text": "Temui tim di balik proyek ini",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Temui tim di balik proyek ini"
 	},
 	"specialThanks": {
 		"title": "Lebih banyak terimah kasih",
-		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini."
 	},
 	"discordJoin": {
 		"title": "Menikuti update",
@@ -203,8 +176,7 @@
 			"miiName": "Nama Mii",
 			"forgotPassword": "Lupa kata sandi?",
 			"registerPrompt": "Tidak punya akun?",
-			"loginPrompt": "Sudah punya akun?",
-			"birthdate": ""
+			"loginPrompt": "Sudah punya akun?"
 		},
 		"forgotPassword": {
 			"header": "Lupa Kata Sandi",
@@ -284,9 +256,7 @@
 		"back": "Kembali"
 	},
 	"donation": {
-		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan."
 	},
 	"localizationPage": {
 		"title": "Mari kita lokalkan",
@@ -328,26 +298,5 @@
 	},
 	"notfound": {
 		"description": "Maaf! Kami tidak dapat menemukan halaman ini."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "团队",
-		"text": "认识一下项目背后的团队",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "认识一下项目背后的团队"
 	},
 	"specialThanks": {
 		"title": "特别感谢",
-		"text": "没有他们，Pretendo 就不会是今天的样子。",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "没有他们，Pretendo 就不会是今天的样子。"
 	},
 	"discordJoin": {
 		"title": "得到我们的动态与更新",
@@ -317,9 +292,7 @@
 		"back": "退回"
 	},
 	"donation": {
-		"progress": "{totd} {goald}/月，{perc} 的每月目标。",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} {goald}/月，{perc} 的每月目标。"
 	},
 	"modals": {
 		"cancel": "取消",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "糟糕！我们找不到该页面。"
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

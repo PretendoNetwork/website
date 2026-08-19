@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Lerne das Team hinter dem Projekt kennen",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Lerne das Team hinter dem Projekt kennen"
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist."
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
@@ -279,9 +254,7 @@
 		"changeTierConfirm": "Stufe ändern"
 	},
 	"donation": {
-		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels."
 	},
 	"localizationPage": {
 		"description": "Füge einen Link zu einem öffentlich zugänglichen JSON-Locale ein, um es auf der Website zu testen",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "Woops! Diese Seite konnte nicht gefunden werden."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

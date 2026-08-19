@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Incontra il team dietro al progetto"
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
-		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi."
 	},
 	"discordJoin": {
 		"title": "Tieniti aggiornato",
@@ -204,8 +179,7 @@
 			"loginPrompt": "Hai già un account?",
 			"confirmPassword": "Conferma password",
 			"email": "Email",
-			"registerPrompt": "Non hai un account?",
-			"birthdate": ""
+			"registerPrompt": "Non hai un account?"
 		},
 		"settings": {
 			"settingCards": {
@@ -322,32 +296,9 @@
 		"close": "Chiudi"
 	},
 	"donation": {
-		"progress": "{totd} di {goald}/mese, {perc} del goal mensile.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} di {goald}/mese, {perc} del goal mensile."
 	},
 	"notfound": {
 		"description": "Oops! Non siamo riusciti a trovare questa pagina."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

@@ -113,36 +113,11 @@
 	},
 	"credits": {
 		"title": "Equipo",
-		"text": "Conoce al equipo tras el proyecto",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"text": "Conoce al equipo tras el proyecto"
 	},
 	"specialThanks": {
 		"title": "Agradecimientos especiales",
-		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "Sin ellos, Pretendo no sería lo que es hoy."
 	},
 	"discordJoin": {
 		"title": "Mantente al día",
@@ -317,9 +292,7 @@
 		"title": "Subir rango"
 	},
 	"donation": {
-		"progress": "{totd} de {goald}/mes, {perc} del objetivo mensual.",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd} de {goald}/mes, {perc} del objetivo mensual."
 	},
 	"modals": {
 		"cancel": "Cancelar",
@@ -328,26 +301,5 @@
 	},
 	"notfound": {
 		"description": "¡Vaya! No hemos podido encontrar esta página."
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
-		}
 	}
 }

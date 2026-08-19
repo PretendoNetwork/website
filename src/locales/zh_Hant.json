@@ -34,20 +34,7 @@
 	},
 	"credits": {
 		"text": "認識一下此專案背後的團隊",
-		"title": "開發團隊",
-		"roles": {
-			"researchAndGameDev": "",
-			"owner": "",
-			"ctrResearchAndPatchDev": "",
-			"preserveAndServerArch": "",
-			"devopsAndCommunityWork": "",
-			"webDevAndGameDev": "",
-			"miiverseDev": "",
-			"researchAndServerArch": "",
-			"gameDevAndOptimise": "",
-			"wiiuResearchAndPatchDev": "",
-			"webDev": ""
-		}
+		"title": "開發團隊"
 	},
 	"showcase": {
 		"cards": [
@@ -119,19 +106,7 @@
 	},
 	"specialThanks": {
 		"title": "特別鳴謝",
-		"text": "沒有他們，Pretendo 就不會是今天的樣子。",
-		"reasons": {
-			"forMiiverseHelp": "",
-			"forResearch": "",
-			"forSplatoon": "",
-			"forServers": "",
-			"forCtrDev": "",
-			"forIcons": "",
-			"forPatches": "",
-			"forServerDev": "",
-			"forCrunch": "",
-			"general": ""
-		}
+		"text": "沒有他們，Pretendo 就不會是今天的樣子。"
 	},
 	"footer": {
 		"widget": {
@@ -287,9 +262,7 @@
 		"publishedOn": "於"
 	},
 	"donation": {
-		"progress": "{totd}的{goald}/月，完成月度目標的{perc}",
-		"upgradePushText": "",
-		"upgradePushLinkText": ""
+		"progress": "{totd}的{goald}/月，完成月度目標的{perc}"
 	},
 	"localizationPage": {
 		"title": "讓我們進行在地化",
@@ -327,27 +300,6 @@
 			"install": "安裝",
 			"search": "搜尋",
 			"juxt_err": "錯誤代碼 - Juxt"
-		}
-	},
-	"miiEditor": {
-		"corruptedData": "",
-		"noCanvas": "",
-		"clickToSet": "",
-		"nickname": "",
-		"save": "",
-		"saveCaption": "",
-		"loading": "",
-		"miiSaved": "",
-		"copying": "",
-		"favorite": "",
-		"birthday": "",
-		"sharing": "",
-		"creator": ""
-	},
-	"errorPage": {
-		"500": {
-			"description": "",
-			"title": ""
 		}
 	}
 }
