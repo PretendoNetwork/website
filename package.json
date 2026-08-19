@@ -10,6 +10,7 @@
 		"prepare": "nuxt prepare",
 		"dev": "nuxt dev",
 		"dev:host": "nuxt dev --host",
+		"typecheck": "nuxt typecheck",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
 	},
@@ -55,7 +56,8 @@
 		"@pretendonetwork/eslint-config": "^0.1.4",
 		"@types/nodemailer": "^8.0.1",
 		"eslint-plugin-vue": "^10.0.0",
-		"sass-embedded": "^1.86.3"
+		"sass-embedded": "^1.86.3",
+		"vue-tsc": "^3.3.10"
 	},
 	"allowScripts": {
 		"better-sqlite3@12.11.1": true,

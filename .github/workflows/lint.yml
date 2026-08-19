@@ -22,5 +22,8 @@ jobs:
       - name: Prepare linting
         run: npm run prepare
 
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Lint
         run: npm run lint -- --max-warnings=0
