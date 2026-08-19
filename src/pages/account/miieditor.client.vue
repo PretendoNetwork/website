@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Mii from '@pretendonetwork/mii-js';
+import { watchOnce } from '@vueuse/core';
 import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
 import { miiEditorJSON } from '@/utils/miieditor';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
@@ -65,9 +66,7 @@ const newMiiSmileUrl = computed(() => {
 });
 
 function base64ToArrayBuffer(base64: string): ArrayBuffer {
-	const binaryString = atob(base64);
-	const binaryArray = new TextEncoder().encode(binaryString);
-	return binaryArray.buffer;
+	return new Uint8Array([...atob(base64)].map(v => v.charCodeAt(0))).buffer;
 }
 
 // this initalizes a mii for editing
@@ -89,7 +88,8 @@ function initializeMiiData(encodedUserMiiData: string) {
 			bgColor: '13173300',
 			expression: 'sorrow'
 		});
-	} catch {
+	} catch (err) {
+		console.error('Failed to load mii data', err);
 		return false;
 	}
 
@@ -188,7 +188,7 @@ async function renderMii(_e?: Event, sizeChange?: boolean) {
 	loadingCanvas.value = false;
 }
 
-onMounted(() => {
+watchOnce(miiCanvas, () => {
 	renderMii();
 });
 
