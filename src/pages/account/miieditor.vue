@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Mii from '@pretendonetwork/mii-js';
-import { decode } from 'base64-arraybuffer';
 import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
 import { miiEditorJSON } from '@/utils/miieditor';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
@@ -65,13 +64,18 @@ const newMiiSmileUrl = computed(() => {
 	});
 });
 
+function base64ToArrayBuffer(base64: string): ArrayBuffer {
+	const binaryString = atob(base64);
+	const binaryArray = new TextEncoder().encode(binaryString);
+	return binaryArray.buffer;
+}
+
 // this initalizes a mii for editing
 // returns true if mii data was parsed successfully
 function initializeMiiData(encodedUserMiiData: string) {
 	// We initialize the Mii object
 	try {
-		// @ts-expect-error -- this works just fine
-		const tempMii = new Mii(decode(encodedUserMiiData));
+		const tempMii = new Mii(base64ToArrayBuffer(encodedUserMiiData) as any);// ArrayBuffer isn't a Buffer, but it works fine
 		mii.value = tempMii;
 		// we also initialize the old mii variable, which will be used to render the miis in the save dialogue
 		oldMii = tempMii;
