@@ -371,7 +371,8 @@
 			"miiName": "Mii 账号名",
 			"forgotPassword": "忘记了密码？",
 			"registerPrompt": "没有一个账号？",
-			"loginPrompt": "已经有了一个账号？"
+			"loginPrompt": "已经有了一个账号？",
+			"birthdate": "生日"
 		},
 		"settings": {
 			"settingCards": {
@@ -400,8 +401,8 @@
 				"otherSettings": "其他设置",
 				"noDiscordLinked": "没有绑定 Discord 账号。",
 				"linkDiscord": "绑定 Discord 账号",
-				"newsletter": "通讯",
-				"no_newsletter_notice": "目前没有新闻。请稍后再试",
+				"newsletter": "电子报告",
+				"no_newsletter_notice": "电子报告目前不可用，请稍后再来查看。",
 				"userSettings": "用户设置",
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
 				"no_edit_from_dashboard": "目前无法从网站修改 PNID 设置。请通过已绑定的主机上修改用户设置。"

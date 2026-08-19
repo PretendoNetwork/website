@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Über",
+		"about": "Über Pretendo",
 		"faq": "FAQ",
 		"docs": "Dokumentation",
 		"credits": "Mitwirkende",
@@ -339,7 +339,8 @@
 			"miiName": "Mii Name",
 			"forgotPassword": "Passwort vergessen?",
 			"registerPrompt": "Du hast noch kein Konto?",
-			"loginPrompt": "Du hast schon ein Konto?"
+			"loginPrompt": "Du hast schon ein Konto?",
+			"birthdate": "Geburtsdatum"
 		},
 		"settings": {
 			"settingCards": {

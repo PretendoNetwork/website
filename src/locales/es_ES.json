@@ -371,7 +371,8 @@
 			"loginPrompt": "¿Ya tienes una cuenta?",
 			"confirmPassword": "Confirmar contraseña",
 			"forgotPassword": "¿Olvidaste tu contraseña?",
-			"username": "Nombre de usuario"
+			"username": "Nombre de usuario",
+			"birthdate": "Fecha de cumpleaños"
 		},
 		"settings": {
 			"settingCards": {
@@ -439,7 +440,7 @@
 		}
 	},
 	"upgrade": {
-		"description": "Alcanzar la meta mensual hará de Pretendo un trabajo de tiempo completo, brindando actualizaciones de mejor calidad a un ritmo más rápido.",
+		"description": "Alcanzar la meta mensual ayudará al desarrollo de Pretendo Network financiando la infaestructura de los servidores y permitiendo al desarrollador principal, Jon, trabajar en el proyecto como un trabajo a tiempo completo.",
 		"month": "mes",
 		"tierSelectPrompt": "Selecciona un rango",
 		"unsub": "Cancelar suscripción",
