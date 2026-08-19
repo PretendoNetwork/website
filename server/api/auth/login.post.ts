@@ -3,6 +3,13 @@ import { LoginSchema } from '#shared/api-types';
 import type { ApiErrorCodes } from '~~/shared/errors';
 import type { ApiAuthLogin } from '#shared/api-types';
 
+const bucket = createRatelimitBucket({
+	id: 'login',
+	points: 30,
+	durationSec: 5 * 60, // 5 minutes
+	blockDurationSec: 1 * 60 * 60 // 1 hour
+});
+
 const errors: Record<string, ApiErrorCodes> = {
 	'INVALID_ARGUMENT: User not found': 'INVALID_USERNAME',
 	'INVALID_ARGUMENT: Password is incorrect': 'INVALID_PASSWORD',
@@ -10,6 +17,7 @@ const errors: Record<string, ApiErrorCodes> = {
 };
 
 export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
+	await enforceRatelimit(event, bucket);
 	const body = await readZodBody(event, LoginSchema);
 	const grpc = useApiGrpc(event);
 

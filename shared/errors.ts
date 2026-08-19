@@ -1,5 +1,6 @@
 const apiErrorCodes = {
 	UNPARSABLE_ERROR: 'Fatal exception!',
+	RATELIMITED: 'Too many requests!',
 	UNHANDLED_ERROR: 'Something went wrong',
 	INVALID_INPUT: 'Invalid input',
 	INTEGRATION_DISABLED: 'Integration with this service is disabled',
@@ -24,6 +25,7 @@ export type ApiErrorCodes = keyof typeof apiErrorCodes;
 
 export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	UNPARSABLE_ERROR: 500,
+	RATELIMITED: 429,
 	UNHANDLED_ERROR: 500,
 	INVALID_INPUT: 400,
 	INTEGRATION_DISABLED: 500,

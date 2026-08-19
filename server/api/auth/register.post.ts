@@ -3,6 +3,13 @@ import { RegisterSchema } from '#shared/api-types';
 import type { ApiErrorCodes } from '~~/shared/errors';
 import type { ApiAuthLogin } from '#shared/api-types';
 
+const bucket = createRatelimitBucket({
+	id: 'register',
+	points: 15,
+	durationSec: 5 * 60, // 5 minutes
+	blockDurationSec: 1 * 60 * 60 // 1 hour
+});
+
 const errors: Record<string, ApiErrorCodes> = {
 	'INVALID_ARGUMENT: Captcha verification failed': 'INVALID_CAPTCHA',
 	'INVALID_ARGUMENT: Invalid email address': 'INVALID_EMAIL',
@@ -39,6 +46,7 @@ function assertAge(birthDate: string | undefined) {
 }
 
 export default defineEventHandler(async (event): Promise<ApiAuthLogin> => {
+	await enforceRatelimit(event, bucket);
 	const body = await readZodBody(event, RegisterSchema);
 	const grpc = useApiGrpc(event);
 	assertAge(body.birthday);

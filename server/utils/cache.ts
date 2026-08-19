@@ -70,7 +70,7 @@ function createCacher(event: H3Event): Cacher {
 	};
 }
 
-export function useCacher(event: H3Event): Cacher | null {
+export function useCacher(event: H3Event): Cacher {
 	if (!cacher) {
 		cacher = createCacher(event);
 	}
