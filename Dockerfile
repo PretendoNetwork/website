@@ -44,6 +44,6 @@ EXPOSE 8080
 COPY package.json .
 
 COPY --from=dependencies ${app_dir}/node_modules ${app_dir}/node_modules
-COPY --from=build ${app_dir}/.output ${app_dir}/.output
+COPY --chown=node:node --from=build ${app_dir}/.output ${app_dir}/.output
 
 CMD ["node", "--enable-source-maps", ".output/server/index.mjs"]
