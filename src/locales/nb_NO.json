@@ -113,172 +113,11 @@
 	},
 	"credits": {
 		"title": "Laget",
-		"text": "Møt laget bak prosjektet",
-		"people": [
-			{
-				"caption": "Prosjekteier og hovedutvikler",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Forskning på Miiverse og utvikling",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "Wii U forsknings- og patchutvikling",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Systemforskning og server-arkitektur",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Webutvikling",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "System forskning og server utvikling",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "Preverasjonist og server-arkitektur",
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"caption": "System forskning og server utvikling",
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"caption": "Web og server utvikling",
-				"name": "niko",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps og samfunnsarbeid",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Server utvikling og optimisering",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png",
-				"caption": "3DS patch utvikling og forskning",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Møt laget bak prosjektet"
 	},
 	"specialThanks": {
 		"title": "Spesiell takk",
-		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag.",
-		"people": [
-			{
-				"caption": "Lokalisering og andre bidragsytere",
-				"name": "GitHub bidragsytere",
-				"github": "https://github.com/PretendoNetwork",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			},
-			{
-				"caption": "crunch bibliotekutvikling",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"caption": "3DS utvikling og NEX dissektor",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001",
-				"name": "Stary"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse informasjonsdeling",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Spesiell takk",
-				"caption": "Forskning etter Nintendo datastrukturer",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikoner for Mii Editor og Juxt reaksjoner",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Konsoll forskning og spillservere",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Wii U patch utvikling",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS patch skaper",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Server-arkitektur",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Server-arkitektur",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Splatoon rotasjoner og forskning",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon-rulleringer og forskning",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub bidragsytere",
-				"caption": "Lokalisering og andre bidragsytere",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Uten dem, hadde ikke Pretendo vært der det er i dag."
 	},
 	"discordJoin": {
 		"title": "Hold deg oppdatert",
@@ -453,8 +292,7 @@
 		"back": "Tilbake"
 	},
 	"donation": {
-		"progress": "<span>$${totd}</span> av <span>$${goald}</span>/måned, <span>${perc}%</span> av månedsmålet.",
-		"upgradePush": "For å starte et abonnement og få tilgang til kule fordeler, besøk <a href=\"/account/upgrade\">oppgraderingssiden</a>."
+		"progress": "$${totd} av $${goald}/måned, ${perc}% av månedsmålet."
 	},
 	"modals": {
 		"cancel": "Avbryt",

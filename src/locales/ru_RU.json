@@ -95,172 +95,11 @@
 	},
 	"credits": {
 		"title": "Наша команда",
-		"text": "Знакомьтесь с командой работающей над Pretendo",
-		"people": [
-			{
-				"caption": "Владелец проекта и ведущий разработчик",
-				"name": "Джонатан Барроу (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Джемма (CaramelKat)",
-				"caption": "Исследование и разработка Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Исследование Wii U и разработка патчей",
-				"github": "https://github.com/ashquarky",
-				"picture": "https://github.com/ashquarky.png",
-				"name": "quarky"
-			},
-			{
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Серверная архитектура и исследование систем",
-				"name": "SuperMarioDaBom"
-			},
-			{
-				"caption": "Веб-разработка",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink",
-				"name": "limes.pink"
-			},
-			{
-				"caption": "Исследование систем и разработка серверов",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"name": "Shutterbug2000",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"name": "Билли",
-				"caption": "Серверная архитектура и архивариус"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Исследование систем и разработка серверов",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko",
-				"caption": "Веб и серверная разработка",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps и работа с сообществом",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Разработка и оптимизация серверов",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "Исследования и разработка патчей для 3DS",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Знакомьтесь с командой работающей над Pretendo"
 	},
 	"specialThanks": {
 		"title": "Особая благодарность",
-		"text": "Без них, Pretendo не был бы таким какой он есть сегодня.",
-		"people": [
-			{
-				"name": "Участники на GitHub",
-				"caption": "Переводы и другая помощь",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "Разработка библиотеки Crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"caption": "Разработка 3DS и NEX-диссектора",
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
-				"caption": "Предоставление информации по Miiverse"
-			},
-			{
-				"special": "Особая благодарность",
-				"caption": "Исследование структур данных Nintendo",
-				"name": "Kinnay",
-				"github": "https://github.com/Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
-			},
-			{
-				"name": "NinStar",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar",
-				"caption": "Значки для редактора Mii и реакций Juxt"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Исследования консолей и игровые серверы",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Разработка патчей Wii U",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "Создатель патчей 3DS",
-				"github": "https://github.com/zaksabeast",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Серверный архитектур",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Серверный архитектур",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Ротaции и исследование Splatoon",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Ротaции и исследование Splatoon",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "Участники на GitHub",
-				"caption": "Локализация и прочий вклад"
-			}
-		]
+		"text": "Без них, Pretendo не был бы таким какой он есть сегодня."
 	},
 	"discordJoin": {
 		"title": "Будьте в курсе всех новостей",
@@ -435,8 +274,7 @@
 		"unsubPrompt": "Вы уверены в том что хотите отписаться от <span>tiername</span>? Вы потеряете доступ к функциям которые были доступны на данном уровне."
 	},
 	"donation": {
-		"progress": "{totd} из {goald}/в месяц, {perc} от месячной цели.",
-		"upgradePush": "Чтобы стать подписчиком и получить доступ к крутым возможностям, посетите <a href=\"/account/upgrade\">upgrade page</a>."
+		"progress": "{totd} из {goald}/в месяц, {perc} от месячной цели."
 	},
 	"modals": {
 		"cancel": "Отменить",

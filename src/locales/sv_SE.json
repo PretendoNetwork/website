@@ -181,7 +181,7 @@
 				"question": "Vet du när funktion/tjänst kommer bli redo?"
 			},
 			{
-				"answer": "Pretendo stödjer alla klienter som kan interagera med Nintendo Nätverket. För nuvarande så är den enda emulatorn med denna typ av funktionalitet Cemu. Cemu 2.0 stödjer officielt Pretendo under din nätverks konto inställning i emulatorn. För information om hur du kan komma igång med Cemu, kolla in<a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra stödjer inte äkta online spelande och alltså fungerar inte med Pretendo, och visar inte tecken av att stödja äkta online spelande alls. Mikage, en 3DS emulator för mobila enheter, kan ge stöd i framtiden men detta är långt från säkert.",
+				"answer": "Pretendo stödjer alla klienter som kan interagera med Nintendo Nätverket. För nuvarande så är den enda emulatorn med denna typ av funktionalitet Cemu. Cemu 2.0 stödjer officielt Pretendo under din nätverks konto inställning i emulatorn. För information om hur du kan komma igång med Cemu, kolla indocumentation.Citra stödjer inte äkta online spelande och alltså fungerar inte med Pretendo, och visar inte tecken av att stödja äkta online spelande alls. Mikage, en 3DS emulator för mobila enheter, kan ge stöd i framtiden men detta är långt från säkert.",
 				"question": "Fungerar Pretendo på Cemu/emulatorer?"
 			},
 			{
@@ -190,7 +190,7 @@
 			},
 			{
 				"question": "Kommer Pretendo att stödja Wiiet/Switchet?",
-				"answer": "Wiiet har redan anpassade servrar som tillhandahålls av <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Vi för nuvarande önskar inte att rikta in oss på Switchet eftersom den är både betald och helt annorlunda än Nintendo Nätverket."
+				"answer": "Wiiet har redan anpassade servrar som tillhandahålls av <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Vi för nuvarande önskar inte att rikta in oss på Switchet eftersom den är både betald och helt annorlunda än Nintendo Nätverket."
 			},
 			{
 				"question": "Kommer jag behöva hacks för att ansluta?",
@@ -269,7 +269,6 @@
 		}
 	},
 	"donation": {
-		"upgradePush": "För att bli en prenumerant och få tillgång till coola förmåner, besök <a href=\"/account/upgrade\">uppgraderingssidan</a>.",
 		"progress": "{totd} av {goald}/månad, {perc} av det månatliga målet."
 	},
 	"modals": {

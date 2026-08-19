@@ -111,81 +111,7 @@
 	},
 	"credits": {
 		"title": "Takımımız",
-		"text": "Projenin arkasındaki ekip ile tanışın",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Proje lideri ve baş geliştirici",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"picture": "https://github.com/caramelkat.png",
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse için araştırma ve geliştirme",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Wii U için araştırma ve yama geliştirme",
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"caption": "Sistem araştırmaları ve sunucu mimarisi"
-			},
-			{
-				"picture": "https://github.com/limesdotpink.png",
-				"caption": "Web geliştirme",
-				"github": "https://github.com/limesdotpink",
-				"name": "limes.pink"
-			},
-			{
-				"caption": "Sistem araştırması ve sunucu geliştirme",
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"caption": "Koruma uzmanı ve sunucu mimarisi"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Sistem araştırmaları ve sunucu geliştirme",
-				"github": "https://github.com/DaniElectra",
-				"picture": "https://github.com/danielectra.png"
-			},
-			{
-				"name": "niko",
-				"caption": "Web ve sunucu geliştirme",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"picture": "https://github.com/MatthewL246.png",
-				"name": "MatthewL246",
-				"caption": "DevOps ve topluluk çalışması",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Sunucu geliştirme ve optimizasyon",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "3DS yaması geliştirme ve araştırma",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Projenin arkasındaki ekip ile tanışın"
 	},
 	"account": {
 		"settings": {
@@ -330,98 +256,10 @@
 	},
 	"specialThanks": {
 		"text": "Onlar olmasaydı, Pretendo bugün olduğu yerde olamazdı.",
-		"title": "Ayrıca teşekkürler",
-		"people": [
-			{
-				"caption": "Yerelleştirme ve diğer katkılar",
-				"name": "GitHub katılımcıları",
-				"github": "https://github.com/PretendoNetwork",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			},
-			{
-				"caption": "crunch kütüphanesi̇ geli̇şti̇rme",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png",
-				"caption": "3DS geliştirme ve NEX dissektörü",
-				"name": "Stary"
-			},
-			{
-				"caption": "Miiverse bilgi paylaşımı",
-				"github": "https://twitter.com/rverseClub",
-				"picture": "https://github.com/rverseTeam.png",
-				"name": "rverse"
-			},
-			{
-				"github": "https://github.com/Kinnay",
-				"special": "Özel teşekkürler",
-				"name": "Kinnay",
-				"caption": "Nintendo veri yapıları üzerine araştırmalar",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128"
-			},
-			{
-				"picture": "https://github.com/ninstar.png",
-				"caption": "Mii Editor ve Juxt reactions için ikonlar",
-				"name": "NinStar",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"name": "Rambo6Glaz",
-				"caption": "Konsol araştırmaları ve oyun sunucuları",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Wii U yaması geliştirme",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS yama yaratıcısı",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"caption": "Sunucu mimarisi",
-				"name": "mrjvs",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload",
-				"caption": "Sunucu mimarisi"
-			},
-			{
-				"caption": "Splatoon rotasyonları ve araştırması",
-				"name": "Simonx22",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"github": "https://github.com/OatmealDome",
-				"caption": "Splatoon rotasyonları ve araştırması",
-				"name": "OatmealDome",
-				"picture": "https://github.com/OatmealDome.png"
-			},
-			{
-				"name": "GitHub katılımcıları",
-				"caption": "Yerelleştirme ve diğer katkılar",
-				"github": "https://github.com/PretendoNetwork",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			}
-		]
+		"title": "Ayrıca teşekkürler"
 	},
 	"donation": {
-		"upgradePush": "Abone olmak ve harika avantajlara erişmek için <a href=\"/account/upgrade\">yükseltme sayfasını</a> ziyaret edin.",
-		"progress": "Ayda {totd}, {goald}/ay, aylık hedefin <span>%{perc}</span>."
+		"progress": "Ayda {totd}, {goald}/ay, aylık hedefin %{perc}."
 	},
 	"blogPage": {
 		"published": "Tarafından yayınlandı",

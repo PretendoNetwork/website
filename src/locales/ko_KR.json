@@ -113,73 +113,11 @@
 	},
 	"credits": {
 		"title": "개발 팀",
-		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
-		"people": [
-			{
-				"caption": "프로젝트 제작자이자 프로젝트를 이끄는 개발자",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"caption": "Miiverse 연구와 개발",
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Wii U 연구 및 패치 개발",
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "시스템 연구 및 서버 아키텍처 관리",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "웹 개발",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "시스템 연구 및 서버 개발",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "데이터 보존 및 서버 아키텍처 관리",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "시스템 연구 및 서버 개발",
-				"picture": "https://github.com/danielectra.png"
-			}
-		]
+		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요"
 	},
 	"specialThanks": {
 		"title": "Special Thanks",
-		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
-		"people": [
-			{},
-			{},
-			{},
-			{},
-			{
-				"caption": "닌텐도 자료구조 연구"
-			},
-			{},
-			{
-				"caption": "게임기 연구 및 게임 서버"
-			}
-		]
+		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다."
 	},
 	"discordJoin": {
 		"title": "최신 정보",
@@ -349,7 +287,6 @@
 		"month": "달"
 	},
 	"donation": {
-		"progress": "{goald}/월 중에서 {totd} , 매달 목표의 {perc}.",
-		"upgradePush": "구독자가 되고 멋진 혜택을 받으시려면, <a href=\"/account/upgrade\">업그레이드 페이지</a>를 방문하세요."
+		"progress": "{goald}/월 중에서 {totd} , 매달 목표의 {perc}."
 	}
 }

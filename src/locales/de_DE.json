@@ -113,172 +113,11 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Lerne das Team hinter dem Projekt kennen",
-		"people": [
-			{
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Projektinhaber und leitender Entwickler"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"caption": "Miiverse Analyse/Forschung und Entwicklung",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"caption": "Forschung und Patch-Entwicklung für die Wii U"
-			},
-			{
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
-				"caption": "Systemforschung und Serverarchitektur"
-			},
-			{
-				"picture": "https://github.com/limesdotpink.png",
-				"name": "limes.pink",
-				"github": "https://github.com/limesdotpink",
-				"caption": "Webentwicklung"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "Systemforschung und Serverentwicklung"
-			},
-			{
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"caption": "Erhaltung und Serverarchitektur"
-			},
-			{
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra",
-				"caption": "Systemforschung und Serverentwicklung"
-			},
-			{
-				"name": "niko",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii",
-				"caption": "Web- und Serverentwicklung"
-			},
-			{
-				"name": "MatthewL246",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246",
-				"caption": "DevOps und Community-Arbeit"
-			},
-			{
-				"name": "wolfendale",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale",
-				"caption": "Server-Entwicklung und Optimierungen"
-			},
-			{
-				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png",
-				"caption": "3DS Patch-Entwicklung und Forschung",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Lerne das Team hinter dem Projekt kennen"
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist.",
-		"people": [
-			{
-				"name": "GitHub-Mitwirkende",
-				"caption": "Übersetzungen und andere Beiträge",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"caption": "Crunch Library Entwicklung",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"github": "https://github.com/Stary2001",
-				"picture": "https://github.com/Stary2001.png",
-				"caption": "3DS Entwicklung und NEX Dissector"
-			},
-			{
-				"caption": "Miiverse-Informationsaustausch",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png"
-			},
-			{
-				"special": "Besonderer Dank",
-				"caption": "Forschung zu Nintendo-Datenstrukturen",
-				"name": "Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Symbole für den Mii-Editor und Juxt-Reaktionen",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Konsolenforschung und Spiele-Server",
-				"github": "https://github.com/EpicUsername12",
-				"picture": "https://github.com/EpicUsername12.png"
-			},
-			{
-				"github": "https://github.com/GaryOderNichts",
-				"name": "GaryOderNichts",
-				"caption": "Wii U Patch-Entwicklung",
-				"picture": "https://github.com/GaryOderNichts.png"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS Patch-Ersteller",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Server-Architektur",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Serverarchitektur",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Forschung zu Splatoon und Arena-Rotationen",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Forschung zu Splatoon und Arena-Rotationen",
-				"github": "https://github.com/OatmealDome",
-				"picture": "https://github.com/OatmealDome.png"
-			},
-			{
-				"caption": "Lokalisierung und andere Beiträge",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "GitHub-Mitwirkende",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist."
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
@@ -415,8 +254,7 @@
 		"changeTierConfirm": "Stufe ändern"
 	},
 	"donation": {
-		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels.",
-		"upgradePush": "Um Abonnent zu werden und Zugang zu coolen Vorteilen zu erhalten, besuche die <a href=\"/account/upgrade\">Upgrade-Seite</a>."
+		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels."
 	},
 	"localizationPage": {
 		"description": "Füge einen Link zu einem öffentlich zugänglichen JSON-Locale ein, um es auf der Website zu testen",

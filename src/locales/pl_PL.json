@@ -113,15 +113,7 @@
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół stojący za projektem",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Właściciel projektu i główny twórca",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			}
-		]
+		"text": "Poznaj zespół stojący za projektem"
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",
@@ -291,8 +283,7 @@
 		"description": "Osiągnięcie celu miesięcznego sprawi, że Pretendo stanie się pracą na pełen etat, zapewniając aktualizacje lepszej jakości w szybszym tempie."
 	},
 	"donation": {
-		"progress": "{totd} z {goald}/miesiąc, {perc} miesięcznego celu.",
-		"upgradePush": "Aby zostać subskrybentem i uzyskać dostęp do fajnych bonusów, odwiedź <a href=\"/account/upgrade\">stronę ulepszeń</a>."
+		"progress": "{totd} z {goald}/miesiąc, {perc} miesięcznego celu."
 	},
 	"modals": {
 		"cancel": "Anuluj",

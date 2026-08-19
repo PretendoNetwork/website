@@ -41,172 +41,11 @@
 	},
 	"credits": {
 		"title": "Náš tým",
-		"text": "Seznamte se s týmem, co za projektem stojí",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"caption": "Vlastník projektu a vedoucí vývojář"
-			},
-			{
-				"caption": "Výzkum a vývoj služby Miiverse",
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky",
-				"caption": "Výzkum konzole Wii U a vývoj záplat"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Systémový výzkum a serverová architektura",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Webový vývoj",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "Systémový výzkum a vývoj serverů"
-			},
-			{
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss",
-				"caption": "Archivace dat a serverová architektura"
-			},
-			{
-				"github": "https://github.com/DaniElectra",
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"caption": "Systémový výzkum a vývoj serverů"
-			},
-			{
-				"name": "niko",
-				"caption": "Vývoj webu a serverů",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"caption": "DevOps a práce s komunitou",
-				"github": "https://github.com/MatthewL246",
-				"name": "MatthewL246",
-				"picture": "https://github.com/MatthewL246.png"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Vývoj serverového softwaru a optimalizace",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains",
-				"caption": "Vývoj 3DS záplat a výzkum"
-			}
-		]
+		"text": "Seznamte se s týmem, co za projektem stojí"
 	},
 	"specialThanks": {
 		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
-		"title": "Zvláštní poděkování",
-		"people": [
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "Přispívající na GitHubu",
-				"caption": "Lokalizace a jiné příspěvky"
-			},
-			{
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"caption": "vývoj knihovny crunch"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001",
-				"caption": "3DS vývoj a disektor NEX"
-			},
-			{
-				"name": "rverse",
-				"caption": "Sdílení informací o Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Zvláštní poděkování",
-				"caption": "Výzkum datových struktur Nintenda",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"github": "https://github.com/ninstar",
-				"name": "NinStar",
-				"caption": "Ikony pro Mii Editor a Juxt reakce",
-				"picture": "https://github.com/ninstar.png"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Konzolový výzkum a herní servery",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"picture": "https://github.com/GaryOderNichts.png",
-				"caption": "Vývoj Wii U záplat",
-				"github": "https://github.com/GaryOderNichts",
-				"name": "GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast",
-				"caption": "Tvůrce 3DS záplat"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Serverová architektura",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Serverová architektura",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"caption": "Splatoon rotace a výzkum",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22",
-				"name": "Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon rotace a výzkum",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub přispěvovatelé",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"caption": "Lokalizace a další příspěvky"
-			}
-		]
+		"title": "Zvláštní poděkování"
 	},
 	"faq": {
 		"QAs": [
@@ -458,8 +297,7 @@
 		}
 	},
 	"donation": {
-		"progress": "{totd} z měsíčního cíle <span>${goald} </span> vybráno ({perc} měsíčního cíle)",
-		"upgradePush": "Abyste se stal(a) předplatitelem a získal(a) přístup k zajímavým výhodám navštivte <a href=\"/account/upgrade\">upgrade stránku</a>."
+		"progress": "{totd} z měsíčního cíle ${goald}  vybráno ({perc} měsíčního cíle)"
 	},
 	"notfound": {
 		"description": "Jejda! Tuto stránku jsme nenalezli."

@@ -62,14 +62,14 @@
 			},
 			{
 				"question": "¿Pretendo funciona colos emuladores?",
-				"answer": "Pretendo ye compatible con cualesquier veceru qu'interactúe cola Nintendo Network. Anguaño, l'únicu emulador que ye compatible oficialmente con esti tipu de función ye Cemu na versión 2.0. Pa consiguir más información tocante a cómo comenzar con Cemu, revisa la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra nun ye compatible col xuegu en llinia de verdá ya nun hai señes de que lo seya nel futuru, poro, Pretendo nun funciona. Mikage, un emulador de 3DS pa preseos móviles, ye posible que forna esta compatibilidá nel futuru magar que nun se sabe."
+				"answer": "Pretendo ye compatible con cualesquier veceru qu'interactúe cola Nintendo Network. Anguaño, l'únicu emulador que ye compatible oficialmente con esti tipu de función ye Cemu na versión 2.0. Pa consiguir más información tocante a cómo comenzar con Cemu, revisa la documentación.Citra nun ye compatible col xuegu en llinia de verdá ya nun hai señes de que lo seya nel futuru, poro, Pretendo nun funciona. Mikage, un emulador de 3DS pa preseos móviles, ye posible que forna esta compatibilidá nel futuru magar que nun se sabe."
 			},
 			{
 				"question": "Si toi espulsáu/ada de la Nintendo Network, ¿voi talo tamién en Pretendo?",
 				"answer": "Nun tenemos accesu a les espulsiones de la Nintendo Network y, polo tanto, el nuesu serviciu nun contien nengún perfil espulsáu. Por embargu, tenemos regles que s'han cumplir ya si nun lo faes podriemos espulsate."
 			},
 			{
-				"answer": "La Wii xá tien sirvidores personalizaos que forne <a href=\"https://wiimmfi.de/ \" target=\"_blank\">Wiimmfi</a>. Anguaño nun queremos centranos nes funciones en llinia de la Switch darréu que son de pagu ya completamente estremaes.",
+				"answer": "La Wii xá tien sirvidores personalizaos que forne <a href=\"https://wiimmfi.de/ \">Wiimmfi</a>. Anguaño nun queremos centranos nes funciones en llinia de la Switch darréu que son de pagu ya completamente estremaes.",
 				"question": "¿Pretendo va ser compatible con Wii/Switch?"
 			},
 			{
@@ -206,8 +206,7 @@
 		"back": "Atrás"
 	},
 	"donation": {
-		"progress": "<span>{totd}$</span> de <span>{goald}$</span>/mes, {perc} de la meta mensual.",
-		"upgradePush": "Pa convertise en soscriptor/a ya tener accesu a coses guais, visita la <a href=\"/account/upgrade\">páxina d'anovamientu</a>."
+		"progress": "{totd}$ de {goald}$/mes, {perc} de la meta mensual."
 	},
 	"docs": {
 		"missingInLocale": "Esta páxina nun ta disponible na to llingua. Revisa la versión n'inglés que ta abaxo.",

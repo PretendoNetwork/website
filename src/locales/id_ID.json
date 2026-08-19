@@ -116,172 +116,11 @@
 	},
 	"credits": {
 		"title": "Tim",
-		"text": "Temui tim di balik proyek ini",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Pemilik proyek dan pengembang utama",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Penelitian dan pengembangan Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "Penelitian dan pengembangan patch Wii U",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Penelitian sistem dan arsitektur server",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Pengembangan web",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Penelitian sistem dan pengembangan server",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "Pengarsipan dan arsitektur server",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Penelitian sistem dan pengembangan server",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko",
-				"caption": "Pengembangan web dan server",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps dan kerja komunitas",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Pengembangan dan pengoptimalan server",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "Pengembangan dan penelitian patch 3DS",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Temui tim di balik proyek ini"
 	},
 	"specialThanks": {
 		"title": "Lebih banyak terimah kasih",
-		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini.",
-		"people": [
-			{
-				"name": "Kontributor GitHub",
-				"caption": "Lokalisasi dan kontribusi lainnya",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "pengembangan pustaka crunch",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "pengembangan 3DS dan disektor NEX",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "berbagi informasi Miiverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "lebih banyak terima kasih",
-				"caption": "Penelitian tentang struktur data Nintendo",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikon untuk Editor Mii dan reaksi Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Riset konsol dan server game",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Pengembangan patch Wii U",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "Pembuat patch 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Arsitektur server",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Arsitektur server",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Rotasi Splatoon dan penelitian",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Rotasi Splatoon dan penelitian",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "Kontributor GitHub",
-				"caption": "Lokalisasi dan kontribusi lainnya",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini."
 	},
 	"discordJoin": {
 		"title": "Menikuti update",
@@ -417,8 +256,7 @@
 		"back": "Kembali"
 	},
 	"donation": {
-		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan.",
-		"upgradePush": "Untuk menjadi pelanggan dan mendapatkan akses ke berbagai keuntungan menarik, kunjungi <a href=\"/account/upgrade\">halaman upgrade</a>."
+		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan."
 	},
 	"localizationPage": {
 		"title": "Mari kita lokalkan",

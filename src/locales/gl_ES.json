@@ -51,7 +51,7 @@
 			},
 			{
 				"question": "Pretendo funciona en emuladores como Cemu/Citra?",
-				"answer": "Pretendo é compatible con calquera cliente que poida interactuar coa Nintendo Network. Actualmente, o único emulador con este tipo de funcionalidades é Cemu. Cemu 2.0 é oficialmente compatible con Pretendo nas opcións de conta de rede do emulador. Para obter información sobre como comezar con Cemu, consulta a <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br>Citra non admite o xogo real en liña e, polo tanto, non funciona con Pretendo e non mostra ningún signo de ser compatible co xogo real en liña. Mikage, un emulador de 3DS para dispositivos móbiles, pode ofrecer soporte no futuro, aínda que non é certo."
+				"answer": "Pretendo é compatible con calquera cliente que poida interactuar coa Nintendo Network. Actualmente, o único emulador con este tipo de funcionalidades é Cemu. Cemu 2.0 é oficialmente compatible con Pretendo nas opcións de conta de rede do emulador. Para obter información sobre como comezar con Cemu, consulta a documentación.Citra non admite o xogo real en liña e, polo tanto, non funciona con Pretendo e non mostra ningún signo de ser compatible co xogo real en liña. Mikage, un emulador de 3DS para dispositivos móbiles, pode ofrecer soporte no futuro, aínda que non é certo."
 			},
 			{
 				"question": "Se me ban de Nintendo Network, tamén se me prohibirá de Pretendo?",
@@ -59,7 +59,7 @@
 			},
 			{
 				"question": "Terei a Pretendo de ter soporte é Wii/Switch?",
-				"answer": "A Wii xa ten servidores personalizados proporcionados por <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Actualmente non queremos apuntar ao Switch, xa que é de pago e completamente diferente da Nintendo Network."
+				"answer": "A Wii xa ten servidores personalizados proporcionados por <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Actualmente non queremos apuntar ao Switch, xa que é de pago e completamente diferente da Nintendo Network."
 			},
 			{
 				"answer": "Si, terás que cortar o teu dispositivo para conectarte; Non obstante, en Wii U só necesitarás acceso ao Homebrew Launcher (é dicir, Haxchi, Coldboot Haxchi ou mesmo o exploit do navegador web), e en 3DS necesitarás a última versión de Luma, máis información en Documentos.",
@@ -186,7 +186,6 @@
 		}
 	},
 	"donation": {
-		"upgradePush": "Para facerte un subscritor e acceder a grandes vantaxes, visita a <a href=\"/account/upgrade\">páxina de actualización</a>.",
 		"progress": "{totd} de {goald}/mes, {perc} do obxectivo mensual."
 	},
 	"localizationPage": {

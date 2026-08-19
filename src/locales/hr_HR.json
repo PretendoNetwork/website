@@ -113,172 +113,11 @@
 	},
 	"credits": {
 		"title": "Tim",
-		"text": "Upoznaj tim projekta",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Vlasnik projekta i glavni programer",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Istraživanje i razvoj Miiversea",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "Istraživanje Wii U-a i razvoj zakrpa",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Istraživanje sustava i arhitektura servera",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Web razvoj",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Istraživanje sustava i razvoj servera",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "Očuvanje i arhitektura servera",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Istraživanje sustava i razvoj servera",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko",
-				"caption": "Web i razvoj servera",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps i rad zajednice",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Razvoj i optimizacija servera",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "Razvoj i istraživanje zakrpa za 3DS",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "Upoznaj tim projekta"
 	},
 	"specialThanks": {
 		"title": "Posebna zahvala",
-		"text": "Bez njih, Pretendo ne bi bio gdje je danas.",
-		"people": [
-			{
-				"name": "GitHub doprinositelji",
-				"caption": "Lokalizacije i drugi doprinosi",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "razvoj crunch biblioteke",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS razvoj i NEX dissector",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "Dijeljenje Miiverse informacija",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Posebna zahvala",
-				"caption": "Istraživanje Nintendo struktura podataka",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikone za Mii ureživač i Juxt reakcije",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Istraživanje konzola i serveri za igre",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Razvoj zakrpa za Wii U",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "Kreator zakrpa za 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Arhitektura servera",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Arhitektura servera",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Splatoon faze i istraživanja",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon faze i istraživanja",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub doprinositelji",
-				"caption": "Lokalizacije i drugi doprinosi",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "Bez njih, Pretendo ne bi bio gdje je danas."
 	},
 	"discordJoin": {
 		"title": "Budi u tijeku",
@@ -415,8 +254,7 @@
 		"back": "Natrag"
 	},
 	"donation": {
-		"progress": "{totd} od {goald}/mjesečno, <span>{perc} %</span> mjesečnog cilja.",
-		"upgradePush": "Za pretplatu i pristup još boljim pogodnostima, posjeti <a href=\"/account/upgrade\">stranicu za nadogradnju</a>."
+		"progress": "{totd} od {goald}/mjesečno, {perc} % mjesečnog cilja."
 	},
 	"localizationPage": {
 		"title": "Lokalizirajmo",

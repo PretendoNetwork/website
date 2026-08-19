@@ -63,7 +63,7 @@
 			},
 			{
 				"question": "Funcționează Pretendo pe Cemu/emulatoare?",
-				"answer": "Pretendo funcționează pe orice client care poate interacționa cu Nintendo Network. Momentan singurul emulator cu această funcționalitate este Cemu. Cemu 2.0 permite folosirea Pretendo prin schimbarea setărilor legate de cont. Pentru începe să folosiți Cemu, vedeți <a href=\"https://pretendo.network/docs/install/cemu\">documentația</a>.<br>Citra nu oferă nici un fel de funcționalitate online, deci nu poate folosi Pretendo și nu sunt semne că va permite vreodată funcționalitate online. Mikage, un emulator 3DS pentru dispozitive mobile, ar putea oferi această funcționalitate, dar nu avem nimic mai mult de spus."
+				"answer": "Pretendo funcționează pe orice client care poate interacționa cu Nintendo Network. Momentan singurul emulator cu această funcționalitate este Cemu. Cemu 2.0 permite folosirea Pretendo prin schimbarea setărilor legate de cont. Pentru începe să folosiți Cemu, vedeți documentația.Citra nu oferă nici un fel de funcționalitate online, deci nu poate folosi Pretendo și nu sunt semne că va permite vreodată funcționalitate online. Mikage, un emulator 3DS pentru dispozitive mobile, ar putea oferi această funcționalitate, dar nu avem nimic mai mult de spus."
 			},
 			{
 				"question": "Dacă sunt restricționat de pe Nintendo Network, o să rămân restricționat și pe Pretendo?",
@@ -71,7 +71,7 @@
 			},
 			{
 				"question": "Va avea Pretendo suport pentru Wii/Switch?",
-				"answer": "Wii are deja servere personalizate furnizate de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Deocamdată nu dorim să ne legăm de Switch deoarece costă și este diferit de Nintendo Network."
+				"answer": "Wii are deja servere personalizate furnizate de <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Deocamdată nu dorim să ne legăm de Switch deoarece costă și este diferit de Nintendo Network."
 			},
 			{
 				"question": "Va trebui să îmi modific consola?",
@@ -141,7 +141,6 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
 		"published": "Publicată de",
 		"publishedOn": "pe"
 	},
@@ -274,7 +273,6 @@
 		"changeTier": "Schimbă nivelul"
 	},
 	"donation": {
-		"progress": "<span>{totd}$</span> din <span>{goald}$</span>/lună, {perc} din ținta lunară.",
-		"upgradePush": "Pentru a te abona și să ai acces la benefici faine, vizitează <a href=\"/account/upgrade\">această pagină</a>."
+		"progress": "{totd}$ din {goald}$/lună, {perc} din ținta lunară."
 	}
 }

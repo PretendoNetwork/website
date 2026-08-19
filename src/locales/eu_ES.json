@@ -68,35 +68,6 @@
 			}
 		]
 	},
-	"specialThanks": {
-		"people": [
-			{},
-			{},
-			{},
-			{},
-			{
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast"
-			}
-		]
-	},
 	"notfound": {
 		"description": "Ups! Ezin izan dugu orrialde hau aurkitu."
 	},

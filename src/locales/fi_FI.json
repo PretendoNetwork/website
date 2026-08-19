@@ -19,7 +19,7 @@
 			},
 			{
 				"question": "Toimiiko Pretendo Cemu:lla/emulaattoreissa?",
-				"answer": "Pretendo tukee kaikkia asiakasohjelmia, jotka pystyvät keskustelemaan Nintendo Network:in kanssa. Tällä hetkellä ainoa emulaattori, jossa on nämä toiminnallisuudet on Cemu. Cemu 2.0 tukee Pretendoa virallisesti emulaattorin verkkotili-asetusten kautta. LIsäinformaatiota siitä, kuinka pääset alkuun Cemu:n kanssa löytyy <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra ei tue todellista online-pelaamista ja ei sikäli siis toimi Pretendon kanssa, myöskään tulevaisuuden suunnitelmissa ei näytä olevan todellista online-tukea. Mikage, 3DS-emulaattori mobiililaitteille saattaa tulevaisuudessa tukea verkkotoimintoja, mutta tämä on yhä hyvin epävarmaa."
+				"answer": "Pretendo tukee kaikkia asiakasohjelmia, jotka pystyvät keskustelemaan Nintendo Network:in kanssa. Tällä hetkellä ainoa emulaattori, jossa on nämä toiminnallisuudet on Cemu. Cemu 2.0 tukee Pretendoa virallisesti emulaattorin verkkotili-asetusten kautta. LIsäinformaatiota siitä, kuinka pääset alkuun Cemu:n kanssa löytyy documentation.Citra ei tue todellista online-pelaamista ja ei sikäli siis toimi Pretendon kanssa, myöskään tulevaisuuden suunnitelmissa ei näytä olevan todellista online-tukea. Mikage, 3DS-emulaattori mobiililaitteille saattaa tulevaisuudessa tukea verkkotoimintoja, mutta tämä on yhä hyvin epävarmaa."
 			},
 			{
 				"question": "Jos minut on bännätty Nintendo Networkista, pysynkö bännissä myös Pretendossa?",
@@ -27,7 +27,7 @@
 			},
 			{
 				"question": "Tuleeko Pretendo tukemaan Wii:tä/Switch:iä?",
-				"answer": "Wii:lle on jo omat palvelimensa jotka tarjoaa <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Meillä ei tällä hetkellä ole halua kohdentaa palveluitamme Switch:ille, sillä kyseessä on maksullinen täysin Nintendo Network:ista poikkeava palvelu."
+				"answer": "Wii:lle on jo omat palvelimensa jotka tarjoaa <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Meillä ei tällä hetkellä ole halua kohdentaa palveluitamme Switch:ille, sillä kyseessä on maksullinen täysin Nintendo Network:ista poikkeava palvelu."
 			},
 			{
 				"question": "Tarvitsenko murretun konsolin?",
@@ -110,79 +110,11 @@
 	},
 	"credits": {
 		"title": "Tiimi",
-		"text": "Tutustu tiimiin projektin takana",
-		"people": [
-			{
-				"caption": "Projektin omistaja ja johtava kehittäjä"
-			},
-			{},
-			{},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Web-kehitys"
-			},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
-			},
-			{
-				"caption": "Säilytystyö ja palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
-			},
-			{
-				"caption": "Web- ja palvelinkehitys"
-			},
-			{},
-			{
-				"caption": "Palvelinkehitys ja -optimointi"
-			},
-			{
-				"caption": "3DS-patchikehitys ja -tutkimus"
-			}
-		]
+		"text": "Tutustu tiimiin projektin takana"
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
-		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
-		"people": [
-			{
-				"name": "GitHub-osalliset",
-				"caption": "Lokalisaatiot ja muu osallistuminen"
-			},
-			{
-				"caption": "crunch-kirjaston kehitys"
-			},
-			{
-				"caption": "3DS- ja NEX dissector -kehitys"
-			},
-			{},
-			{
-				"special": "Erityiskiitokset",
-				"caption": "Nintendon tietorakenteiden tutkimus"
-			},
-			{},
-			{
-				"caption": "Konsolitutkimus ja pelipalvelimet"
-			},
-			{
-				"caption": "Wii U -patchikehitys"
-			},
-			{},
-			{
-				"caption": "Palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Palvelinarkkitehtuuri"
-			},
-			{},
-			{},
-			{
-				"name": "GitHub-osalliset"
-			}
-		]
+		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt."
 	},
 	"discordJoin": {
 		"title": "Pysy ajan tasalla",
@@ -353,7 +285,6 @@
 		"confirm": "Vahvista"
 	},
 	"donation": {
-		"progress": "{totd} tavoitteesta {goald}/kuussa, {perc} kuukausitavoitteesta.",
-		"upgradePush": "Tullaksesi tilaajaksi ja saadaksesi siistejä etuja, vieraile <a href=\"/account/upgrade\">tilityypin korotussivulla</a>."
+		"progress": "{totd} tavoitteesta {goald}/kuussa, {perc} kuukausitavoitteesta."
 	}
 }

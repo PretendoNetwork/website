@@ -113,172 +113,11 @@
 	},
 	"credits": {
 		"title": "团队",
-		"text": "认识一下项目背后的团队",
-		"people": [
-			{
-				"name": "乔纳森·巴罗 (jonbarrow)",
-				"caption": "项目所有者和首席开发人员",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"caption": "Miiverse 研究与开发",
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Wii U 研究和补丁开发",
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "系统研究和服务器架构",
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"caption": "Web 开发",
-				"name": "limes.pink",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"caption": "系统研究和服务器开发",
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "保护主义者和服务器架构",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"caption": "系统研究和服务器开发",
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"caption": "网站和服务器开发",
-				"name": "niko",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"caption": "DevOps 和社区工作",
-				"name": "MatthewL246",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"caption": "服务器开发与优化",
-				"name": "wolfendale",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"caption": "3DS 补丁开发与研究",
-				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "认识一下项目背后的团队"
 	},
 	"specialThanks": {
 		"title": "特别感谢",
-		"text": "没有他们，Pretendo 就不会是今天的样子。",
-		"people": [
-			{
-				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"caption": "crunch库开发",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"caption": "3DS 开发和 NEX 解析器",
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"caption": "Miiverse 信息分享",
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"special": "特别感谢",
-				"caption": "对 Nintendo 数据结构的研究",
-				"name": "Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"caption": "Mii 编辑器和 Juxt 反应的图标",
-				"name": "NinStar",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"caption": "主机研究和游戏服务器",
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"caption": "Wii U 补丁开发",
-				"name": "GaryOderNichts",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"caption": "3DS 补丁创建",
-				"name": "zaksabeast",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"caption": "服务器架构",
-				"name": "mrjvs",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"caption": "服务器架构",
-				"name": "binaryoverload",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"caption": "Splatoon 轮换和研究",
-				"name": "Simonx22",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"caption": "Splatoon 轮换和研究",
-				"name": "OatmealDome",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub 贡献者",
-				"caption": "本地化和其他贡献",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "没有他们，Pretendo 就不会是今天的样子。"
 	},
 	"discordJoin": {
 		"title": "得到我们的动态与更新",
@@ -453,8 +292,7 @@
 		"back": "退回"
 	},
 	"donation": {
-		"progress": "{totd} {goald}/月，{perc} 的每月目标。",
-		"upgradePush": "要成为订阅者并获得超值福利，请访问<a href=\"/account/upgrade\">升级页面</a>。"
+		"progress": "{totd} {goald}/月，{perc} 的每月目标。"
 	},
 	"modals": {
 		"cancel": "取消",

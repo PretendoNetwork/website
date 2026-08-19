@@ -113,172 +113,11 @@
 	},
 	"credits": {
 		"title": "அணி",
-		"text": "திட்டத்தின் பின்னணியில் உள்ள குழுவைச் சந்திக்கவும்",
-		"people": [
-			{
-				"name": "சொனாதன் பாரோ (சோன்பரோ)",
-				"caption": "திட்ட உரிமையாளர் மற்றும் முன்னணி உருவாக்குபவர்",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "செம்மா (கேரமல்கேட்)",
-				"caption": "பல்வேறு ஆராய்ச்சி மற்றும் மேம்பாடு",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "குவார்க்கி",
-				"caption": "Wii உ ஆராய்ச்சி மற்றும் இணைப்பு மேம்பாடு",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "சிச்டம்ச் ஆராய்ச்சி மற்றும் சர்வர் கட்டமைப்பு",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "வலை வளர்ச்சி",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "சட்டர்பக்2000",
-				"caption": "சிச்டம்ச் ஆராய்ச்சி மற்றும் சர்வர் மேம்பாடு",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "பில்லி",
-				"caption": "பாதுகாப்பாளர் மற்றும் சர்வர் கட்டிடக்கலை",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "டேனி எலக்ட்ரா",
-				"caption": "சிச்டம்ச் ஆராய்ச்சி மற்றும் சர்வர் மேம்பாடு",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "நிகோ",
-				"caption": "இணையம் மற்றும் சர்வர் மேம்பாடு",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "மத்தேயுL246",
-				"caption": "DevOps மற்றும் சமூகப் பணி",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "ஓநாய்",
-				"caption": "சேவையக மேம்பாடு மற்றும் மேம்படுத்தல்",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "ட்ரேச் என்டர்டெயின்ச்",
-				"caption": "3DS ஒட்டு மேம்பாடு மற்றும் ஆராய்ச்சி",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"text": "திட்டத்தின் பின்னணியில் உள்ள குழுவைச் சந்திக்கவும்"
 	},
 	"specialThanks": {
 		"title": "சிறப்பு நன்றி",
-		"text": "அவர்கள் இல்லாமல், ப்ரெடென்டோ இன்று இருக்கும் இடத்தில் இருக்காது.",
-		"people": [
-			{
-				"name": "GitHub பங்களிப்பாளர்கள்",
-				"caption": "உள்ளூர்மயமாக்கல் மற்றும் பிற பங்களிப்புகள்",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "சூப்பர்விச்கர்கள்",
-				"caption": "நெருக்கடி நூலக வளர்ச்சி",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "பழையது",
-				"caption": "3DS வளர்ச்சி மற்றும் NEX டிசெக்டர்",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "தலைகீழ்",
-				"caption": "பல்வேறு செய்தி பகிர்வு",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "கின்னே",
-				"special": "சிறப்பு நன்றி",
-				"caption": "நிண்டெண்டோ தரவு கட்டமைப்புகள் பற்றிய ஆராய்ச்சி",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "நின்ச்டார்",
-				"caption": "Mii எடிட்டர் மற்றும் Juxt எதிர்வினைகளுக்கான சின்னங்கள்",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "ராம்போ6 கிளாச்",
-				"caption": "கன்சோல் ஆராய்ச்சி மற்றும் கேம் சர்வர்கள்",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "கேரிஓடர்நிச்ட்ச்",
-				"caption": "Wii உ இணைப்பு வளர்ச்சி",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "சாக்சபீச்ட்",
-				"caption": "3DS ஒட்டு கிரியேட்டர்",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "சேவையக கட்டமைப்பு",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "பைனரி ஓவர்லோட்",
-				"caption": "சேவையக கட்டமைப்பு",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "சைமன்எக்ச்22",
-				"caption": "ச்ப்ளட்டூன் சுழற்சிகள் மற்றும் ஆராய்ச்சி",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "ஓட்மீல்டோம்",
-				"caption": "ச்ப்ளட்டூன் சுழற்சிகள் மற்றும் ஆராய்ச்சி",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub பங்களிப்பாளர்கள்",
-				"caption": "உள்ளூர்மயமாக்கல் மற்றும் பிற பங்களிப்புகள்",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"text": "அவர்கள் இல்லாமல், ப்ரெடென்டோ இன்று இருக்கும் இடத்தில் இருக்காது."
 	},
 	"discordJoin": {
 		"title": "புதுப்பித்த நிலையில் இருங்கள்",
@@ -414,8 +253,7 @@
 		"back": "பின்"
 	},
 	"donation": {
-		"progress": "மாதாந்திர இலக்கில் {totd} {goald}/mouth, {perc}.",
-		"upgradePush": "சந்தாதாரராவதற்கும் சிறந்த சலுகைகளுக்கான அணுகலைப் பெறுவதற்கும், <a href=\"/account/upgrade\">மேம்படுத்தல் பக்கத்தைப்</a> பார்வையிடவும்."
+		"progress": "மாதாந்திர இலக்கில் {totd} {goald}/mouth, {perc}."
 	},
 	"localizationPage": {
 		"title": "உள்ளூர்மயமாக்குவோம்",

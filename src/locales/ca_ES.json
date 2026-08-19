@@ -111,30 +111,7 @@
 	},
 	"credits": {
 		"title": "L'equip",
-		"text": "Coneix l'equip que hi ha darrere del projecte",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Propietari del projecte i desenvolupador principal",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"caption": "Recerca i desenvolupament de Miiverse",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"name": "quarky",
-				"caption": "Recerca i desenvolupament de pedaços per a Wii U",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "Recerca de sistemes i arquitectura de servidors"
-			}
-		]
+		"text": "Coneix l'equip que hi ha darrere del projecte"
 	},
 	"specialThanks": {
 		"title": "Gràcies especials",
@@ -306,7 +283,6 @@
 		"missingInLocale": "Aquesta pàgina no està disponible al teu idioma. Si us plau, consulta la versió en anglès a sota."
 	},
 	"donation": {
-		"upgradePush": "Per esdevenir suscriptor i guanyar accés a increïbles avantatges, vés a <a href=\"/account/upgrade\">la pàgina de millores</a>.",
 		"progress": "Objectiu mensual: {totd} de {goald}/al mes, {perc}."
 	}
 }
