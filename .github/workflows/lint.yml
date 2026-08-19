@@ -14,10 +14,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Prepare linting
+        run: npm run prepare
+
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Lint
-        run: npm run lint
+        run: npm run lint -- --max-warnings=0

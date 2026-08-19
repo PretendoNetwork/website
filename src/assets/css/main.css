@@ -1,0 +1,347 @@
+:root {
+  /* 1 is the base color, <1 are darker variations and >1 are lighter */
+  /* todo: why so many shades */
+
+  --bg-shade-0: #131733;
+  --bg-shade-1: #1b1f3b;
+  --bg-shade-2: #23274a;
+  --bg-shade-2-5: #2d3258;
+  --bg-shade-3: #373c65;
+  --bg-shade-3-5: #404673;
+  --bg-shade-4: #494f81;
+
+  --accent-shade-0: #673db6;
+  --accent-shade-1: #9d6ff3;
+  --accent-shade-2: #a185d6;
+  --accent-shade-3: #cab1fb;
+
+  --text-shade-0: #8990c1;
+  --text-shade-1: #a1a8d9;
+  --text-shade-2: #cac1f5;
+  --text-shade-3: #fff;
+
+  --green-shade-0: #37a985;
+  --green-shade-1: #59c9a5;
+
+  --red-shade-2: #e84059;
+  --red-shade-1: #a9375b;
+  --yellow-shade-1: #ffd966;
+
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--bg-shade-1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+body,
+.main-body {
+  width: 100%;
+  max-width: 100vw;
+  position: relative; /* This fixes overflow-x not hiding on Safari on mobile */
+  overflow-x: hidden;
+  margin: 0;
+  color: var(--text-shade-3);
+  justify-content: center;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.main-body {
+  overflow-y: hidden; /* Fixes the dowuble scrollbars caused by the last background circle */
+} 
+
+code {
+  display: inline-block;
+  background-color: var(--bg-shade-0);
+  padding: 4px;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: 0.9em;
+  color: var(--text-shade-2);
+}
+
+h1.dot:not([data-title-suffix]):after,
+h2.dot:not([data-title-suffix]):after {
+	content: ".";
+	display: inline-block;
+	color: var(--accent-shade-1);
+}
+
+h1.dot[data-title-suffix]:after,
+h2.dot[data-title-suffix]:after {
+	content: attr(data-title-suffix);
+	display: inline-block;
+	color: var(--accent-shade-1);
+}
+
+/* BUTTONS */
+
+button,
+.button {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	border-radius: 6px;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	color: var(--text-shade-3);
+	padding: 12px 48px;
+	background: var(--bg-shade-3);
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+button:hover,
+.button:hover {
+	background: var(--bg-shade-4);
+}
+button.inactive {
+	pointer-events: none;
+}
+button.primary,
+.button.primary {
+	background: var(--accent-shade-0);
+}
+button.primary:hover,
+.button.primary:hover {
+	background: var(--accent-shade-1);
+}
+
+button.secondary.icon-btn,
+.button.secondary.icon-btn {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button svg,
+.button svg {
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+
+/* MODALS */
+
+body.modal-open {
+	overflow: hidden;
+}
+
+div.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.6);
+
+	z-index: 100;
+}
+div.modal-wrapper.hidden {
+	display: none;
+}
+div.modal {
+	background: var(--bg-shade-3);
+	padding: 48px;
+	border-radius: 8px;
+	text-align: left;
+	width: min(660px, 90%);
+	box-sizing: border-box;
+	margin: auto;
+}
+
+div.modal h2 {
+	margin-top: 0;
+	color: var(--text-shade-3);
+}
+
+.modal-caption span span {
+	color: var(--text-shade-3);
+	font-weight: bold;
+}
+
+.modal-button-wrapper {
+	margin-top: 24px;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 1em;
+}
+.modal-button-wrapper button {
+	padding: 12px 24px;
+}
+.modal-button-wrapper button.cancel {
+	background: var(--bg-shade-4);
+}
+.modal-button-wrapper button.alert {
+	background: var(--red-shade-2);
+	font-weight: bold;
+}
+.modal-button-wrapper button.action {
+	background: var(--green-shade-0);
+}
+
+.purple-card {
+	border-radius: 10px;
+  background: var(--bg-shade-0);
+}
+
+@media screen and (max-width: 600px) {
+	div.modal {
+		padding: 24px;
+	}
+}
+
+/* MISC FORM COMPONENTS */
+
+input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	background: var(--bg-shade-3);
+	padding: 12px;
+	margin: 4px;
+	margin-left: 0;
+	border-radius: 4px;
+	vertical-align: -65%;
+	width: fit-content;
+	cursor: pointer;
+}
+input[type="checkbox"]:checked {
+	background: no-repeat center/contain url(/assets/images/check.svg), var(--accent-shade-0);
+}
+
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	background-color: var(--bg-shade-3);
+	border: none;
+	border-radius: 4px;
+	padding: 12px;
+	color: var(--text-shade-3);
+	width: calc(100% - 24px);
+}
+input:focus {
+	background-color: var(--bg-shade-4);
+	outline: none;
+	transition: 150ms;
+}
+input[type="range"] {
+	background: transparent;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+	background: var(--bg-shade-3);
+	height: 1rem;
+	border-radius: .25rem;
+}
+input[type="range"]::-moz-range-track {
+	background: var(--bg-shade-3);
+	border-radius: .25rem;
+	height: 1rem;
+}
+input[type="range"]::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 1.5rem;
+	height: 3rem;
+	margin-top: -1.25rem;
+	background-color: var(--accent-shade-1);
+	border-radius: .5rem;
+}
+input[type="range"]::-moz-range-thumb {
+	width: 1.5rem;
+	height: 3rem;
+	border: none;
+	border-radius: .5rem;
+	background-color: var(--accent-shade-1);
+}
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]:focus::-webkit-slider-thumb {
+	background-color: var(--accent-shade-3);
+}
+input[type="range"]:focus::-moz-range-thumb {
+	background-color: var(--accent-shade-3);
+}
+
+.progress-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 12px;
+	margin: 1rem 0;
+	border-radius: 6px;
+	background: var(--bg-shade-3);
+}
+.progress-bar-real,
+.progress-bar-capped {
+	position: absolute;
+	height: 100%;
+	border-radius: 6px;
+	width: var(--progress-bar-width);
+}
+.progress-bar-capped {
+	background-color: var(--accent-shade-0);
+	max-width: 100%;
+}
+.progress-bar-real {
+	background-color: var(--green-shade-1);
+	width: calc(var(--progress-bar-width) - 6px);
+	left: 6px;
+}
+
+.wrapper {
+	width: 95%;
+	max-width: 1590px;
+	margin: 48px auto 0;
+}
+
+.hide-on-desktop {
+  display: none !important;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+		width: 90%;
+	}
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .hide-on-desktop {
+    display: unset !important;
+  }
+
+	.modal-button-wrapper {
+		grid-auto-flow: row;
+	}
+}
+
+/* Scrollbar styling 'cause it's fancy */
+html::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+html::-webkit-scrollbar-track {
+	background: var(--bg-shade-1);
+}
+html::-webkit-scrollbar-thumb {
+	background-color: var(--text-shade-0);
+	border-radius: 24px;
+	border: 3px solid var(--bg-shade-1);
+}
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--text-shade-0) var(--bg-shade-1);
+}

@@ -1,0 +1,353 @@
+{
+	"nav": {
+		"about": "About",
+		"faq": "FAQ",
+		"docs": "Docs",
+		"credits": "Credits",
+		"progress": "Progress",
+		"blog": "Blog",
+		"forum": "Forum",
+		"account": "Account",
+		"donate": "Donate",
+		"accountWidget": {
+			"settings": "Settings",
+			"logout": "Logout"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Meet the team",
+				"about": "About the project",
+				"faq": "Frequently asked questions",
+				"blog": "Our latest updates, condensed",
+				"forum": "Chat with others and get support",
+				"progress": "Check the project progress and goals"
+			}
+		}
+	},
+	"hero": {
+		"subtitle": "Game servers",
+		"title": "Recreated",
+		"text": "Pretendo is a free and open source replacement for Nintendo's servers for both the 3DS and Wii U, allowing online connectivity for all, even after the original servers are discontinued",
+		"buttons": {
+			"readMore": "Read more"
+		}
+	},
+	"aboutUs": {
+		"title": "About us",
+		"paragraphs": [
+			"Pretendo is an open-source project that aims to recreate Nintendo Network for the 3DS and Wii U using clean-room reverse engineering.",
+			"Since our services are free and open source, they will exist long into the future."
+		]
+	},
+	"progress": {
+		"title": "Progress",
+		"githubRepo": "Github repository"
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"text": "Here are some common questions we're asked for easy information.",
+		"QAs": [
+			{
+				"question": "What is Pretendo?",
+				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+			},
+			{
+				"question": "Will my existing NNIDs work on Pretendo?",
+				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+			},
+			{
+				"question": "How do I use Pretendo?",
+				"answer": "To get started with Pretendo Network on 3DS, Wii U or emulators, please see our <a href='/docs/install'>setup instructions</a>!"
+			},
+			{
+				"question": "Do you know when feature/service will be ready?",
+				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+			},
+			{
+				"question": "When will you add more games?",
+				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilizing and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
+			},
+			{
+				"question": "If I use an emulator, will that be enough to use Pretendo?",
+				"answer": "No. For purposes of security and moderation, if you are using an emulator, you still need a real console. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service."
+			},
+			{
+				"question": "Does Pretendo work on Cemu/emulators?",
+				"answer": "Cemu 2.1 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Some 3DS emulators or forks might support us, but we do not have any official recommendation or setup instructions at this time. The final builds of Citra do not support Pretendo."
+			},
+			{
+				"question": "Will Pretendo support the Wii/Switch?",
+				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
+			},
+			{
+				"question": "Will I need hacks to connect?",
+				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
+			},
+			{
+				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
+				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban."
+			},
+			{
+				"question": "Can I use cheats or mods online with Pretendo?",
+				"answer": "Only in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense. We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
+			}
+		]
+	},
+	"showcase": {
+		"title": "What we make",
+		"text": "Our project has many components. Here are some of them.",
+		"cards": [
+			{
+				"title": "Game servers",
+				"caption": "Bringing back your favorite games and content using custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "A re-imagining of Miiverse, as if it were made in the modern era."
+			},
+			{
+				"title": "Cemu support",
+				"caption": "Play your favorite Wii U titles even without a console!"
+			}
+		]
+	},
+	"credits": {
+		"title": "The team",
+		"text": "Meet the team behind the project",
+		"roles": {
+			"owner": "Project owner and lead developer",
+			"miiverseDev": "Miiverse research and development",
+			"wiiuResearchAndPatchDev": "Wii U research and patch development",
+			"researchAndGameDev": "Systems research and server development",
+			"researchAndServerArch": "Systems research and server architecture",
+			"webDev": "Web development",
+			"preserveAndServerArch": "Preservationist and server architecture",
+			"webDevAndGameDev": "Web and server development",
+			"gameDevAndOptimise": "Server development and optimization",
+			"ctrResearchAndPatchDev": "3DS patch development and research",
+			"devopsAndCommunityWork": "DevOps and community work"
+		}
+	},
+	"specialThanks": {
+		"title": "Special thanks",
+		"text": "Without them, Pretendo wouldn't be where it is today.",
+		"reasons": {
+			"general": "Localizations and other contributions",
+			"forCrunch": "crunch library development",
+			"forCtrDev": "3DS development and NEX dissector",
+			"forMiiverseHelp": "Miiverse information sharing",
+			"forResearch": "Research on Nintendo datastructures",
+			"forServerDev": "Console research and game servers",
+			"forIcons": "Icons for the Mii Editor and Juxt reactions",
+			"forSplatoon": "Splatoon rotations and research",
+			"forPatches": "Console patch development",
+			"forServers": "Server architecture"
+		}
+	},
+	"discordJoin": {
+		"title": "Stay up to date",
+		"text": "Join our Discord server to get the latest updates on the project.",
+		"widget": {
+			"text": "Get realtime updates to our progress",
+			"button": "Join the server"
+		}
+	},
+	"footer": {
+		"socials": "Socials",
+		"usefulLinks": "Useful links",
+		"widget": {
+			"captions": [
+				"Want to keep updated?",
+				"Join our Discord server!"
+			],
+			"button": "Join now!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"I'm Bandwidth the Raccoon, and I love biting the cables going into Pretendo Network's servers. Yum!",
+			"Many people ask us if we're gonna get in legal trouble with Nintendo over this; I am happy to say that my aunt works at Nintendo and she says it's fine.",
+			"Webkit v537 is the best version of Webkit for Wii U. No, we're not going to port Chrome to the Wii U.",
+			"I can't wait for the clock to reach 03:14:08 UTC on the 19th of January 2038!",
+			"The Wii U is actually an underrated system: the commercials were like really bad, but the console is great. Huh, wait a second, I'm not sure why but my Gamepad isn't connecting to my Wii.",
+			"Super Mario World 2 - Yoshi's Island's main theme is an absolute bop and there's no way you're gonna convince me otherwise.",
+			"My favorite Nintendo Switch releases have been Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back\" Pack. You can really tell Nintendo cares.",
+			"Like \"You know Kip, bless her heart, she UwUs all day\" is the southern nice way of saying \"Kip UwUs all the time and it’s really weird and stupid and I wish they didn't\"",
+			"My first video on my channel!! iv been wanting to make videos for a long time now but my laptop ran pretty bad and i couldn't run fraps, skype and minecraft all at once. but now thats over! with some help from my IT teacher my laptop runs alot better and i can record now! i hope y'all enjoy and if you do please like and subscribe!!!",
+			"Looks Good To Me"
+		]
+	},
+	"progressPage": {
+		"title": "Our progress",
+		"description": "Check the project progress and goals! (Updated every hour or so, does not reflect ALL project goals or progress)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "The latest updates in condensed chunks. If you want to see more frequent updates, consider <a href=\"/account/upgrade\" target=\"_blank\">supporting us</a>.",
+		"published": "Published by",
+		"publishedOn": "on"
+	},
+	"account": {
+		"account": "Account",
+		"loginForm": {
+			"login": "Login",
+			"register": "Register",
+			"detailsPrompt": "Enter your account details below",
+			"username": "Username",
+			"password": "Password",
+			"confirmPassword": "Confirm password",
+			"email": "Email",
+			"miiName": "Mii name",
+			"birthdate": "Birthdate",
+			"forgotPassword": "Forgot your password?",
+			"registerPrompt": "Don't have an account?",
+			"loginPrompt": "Already have an account?"
+		},
+		"forgotPassword": {
+			"header": "Forgot Password",
+			"sub": "Enter your email address/PNID below",
+			"input": "Email address or PNID",
+			"submit": "Submit"
+		},
+		"resetPassword": {
+			"header": "Reset Password",
+			"sub": "Enter new password below",
+			"password": "Password",
+			"confirmPassword": "Confirm password",
+			"submit": "Submit"
+		},
+		"settings": {
+			"upgrade": "Upgrade account",
+			"unavailable": "Unavailable",
+			"settingCards": {
+				"userSettings": "User settings",
+				"profile": "Profile",
+				"nickname": "Nickname",
+				"birthDate": "Birth date",
+				"gender": "Gender",
+				"country": "Country/region",
+				"timezone": "Timezone",
+				"serverEnv": "Server environment",
+				"production": "Production",
+				"beta": "Beta",
+				"upgradePrompt": "Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.",
+				"hasAccessPrompt": "Your current tier gives you beta server access. Cool!",
+				"signInSecurity": "Sign in and security",
+				"email": "Email",
+				"password": "Password",
+				"passwordResetNotice": "After changing your password, you will be signed out from all devices.",
+				"signInHistory": "Sign in history",
+				"fullSignInHistory": "View full sign in history",
+				"otherSettings": "Other settings",
+				"discord": "Discord",
+				"connectedToDiscord": "Connected to Discord as",
+				"removeDiscord": "Remove Discord account",
+				"noDiscordLinked": "No Discord account linked.",
+				"linkDiscord": "Link Discord account",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Receive project updates via email (you can opt-out at any time)",
+				"passwordPrompt": "Enter your PNID password to download Cemu files",
+				"no_signins_notice": "Sign in history not currently tracked. Check back again later!",
+				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
+				"no_edit_from_dashboard": "Editing PNID settings from user dashboard is currently unavailable. Please update user settings from your linked game console"
+			},
+			"delete": {
+				"button": "Delete Account",
+				"modalTitle": "Delete PNID",
+				"modalDescription": "Are you sure you want to delete your PNID? Please consider the following before deletion:\n\nYour account data across all Pretendo Network services (this includes Forum and Juxtaposition) will be erased.\nYour Stripe data and subscription will be automatically deleted.\nYou will not be able to use the same PNID on a new account in the future.\nDeleting an account does not solve issues with bans or technical support. If you have an issue please use the Forum for assistance.",
+				"modalCaution": "This action cannot be undone.",
+				"modalConfirm": "Yes, delete"
+			}
+		},
+		"accountLevel": [
+			"Standard",
+			"Tester",
+			"Moderator",
+			"Developer"
+		],
+		"banned": "Banned"
+	},
+	"upgrade": {
+		"title": "Upgrade",
+		"description": "Reaching the monthly goal will help Pretendo Network's development by both funding our server infrastructure and allowing our lead developer, Jon, to work on the project as a full-time job.",
+		"month": "month",
+		"tierSelectPrompt": "Select a tier",
+		"unsub": "Unsubscribe",
+		"unsubPrompt": "Are you sure you want to unsubscribe from <span>tiername</span>? You will <span>immediately</span> lose access to the perks associated with that tier.",
+		"unsubConfirm": "Unsubscribe",
+		"changeTier": "Change tier",
+		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class='oldtier'>oldtiername</span> and subscribe to <span class='newtier'>newtiername</span>?",
+		"changeTierConfirm": "Change tier",
+		"back": "Back"
+	},
+	"donation": {
+		"progress": "{totd} of {goald}/month, {perc} of the monthly goal.",
+		"upgradePushText": "To become a subscriber and gain access to cool perks, visit the {link}.",
+		"upgradePushLinkText": "upgrade page"
+	},
+	"miiEditor": {
+		"nickname": "Nickname",
+		"creator": "Creator",
+		"birthday": "Birthday",
+		"clickToSet": "Click to set",
+		"favorite": "Favorite",
+		"sharing": "Sharing",
+		"copying": "Copying",
+		"save": "Save",
+		"saveCaption": "Saving your Mii will kill the previous one.",
+		"noCanvas": "Your browser does not support the canvas element.",
+		"corruptedData": "Found corrupted Mii data. Would you like to start from scratch?",
+		"miiSaved": "Your Mii has been updated! Changes may take some time to reflect across all platforms and services.",
+		"loading": "Loading Mii editor..."
+	},
+	"localizationPage": {
+		"title": "Let's localize",
+		"description": "Paste a link to a publicly accessible JSON locale to test it on the website",
+		"instructions": "View localization instructions",
+		"fileInput": "File to test",
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"button": "Test file"
+	},
+	"docs": {
+		"missingInLocale": "This page is unavailable in your locale. Please check the English version below.",
+		"quickLinks": {
+			"header": "Quick links",
+			"links": [
+				{
+					"header": "Install Pretendo",
+					"caption": "View the setup instructions"
+				},
+				{
+					"header": "Got an error?",
+					"caption": "Search for it here"
+				}
+			]
+		},
+		"search": {
+			"title": "Got an error code?",
+			"caption": "Type it in the box below to get information on your issue!",
+			"label": "Error code",
+			"no_match": "No matches found"
+		},
+		"sidebar": {
+			"getting_started": "Getting started",
+			"welcome": "Welcome",
+			"install_extended": "Install Pretendo",
+			"install": "Install",
+			"search": "Search",
+			"juxt_err": "Error codes - Juxt"
+		}
+	},
+	"modals": {
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"close": "Close"
+	},
+	"errorPage": {
+		"500": {
+			"title": "Server error!",
+			"description": "Please try again later."
+		}
+	},
+	"notfound": {
+		"description": "Oops! We could not find this page."
+	}
+}

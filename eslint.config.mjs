@@ -1,26 +1,45 @@
+import pluginVue from 'eslint-plugin-vue';
 import eslintConfig from '@pretendonetwork/eslint-config';
 import globals from 'globals';
+import withNuxt from './.nuxt/eslint.config.mjs';
 
-export default [
+export default withNuxt([
 	...eslintConfig,
+	...pluginVue.configs['flat/recommended'],
 	{
-		files: ['public/**'],
+		rules: {
+			'@typescript-eslint/explicit-function-return-type': 'off',
+			'@eslint-community/eslint-comments/disable-enable-pair': 'off',
+			'no-restricted-imports': 'off'
+		}
+	},
+	{
+		files: ['*.vue', '**/*.vue'],
 		languageOptions: {
+			parserOptions: {
+				parser: '@typescript-eslint/parser'
+			},
 			globals: {
-				...globals.browser,
-				...globals.node
+				...globals.browser
+			}
+		},
+		rules: {
+			'vue/multi-word-component-names': 'off'
+		}
+	},
+	{
+		settings: {
+			'import/resolver': {
+				typescript: {
+					alwaysTryTypes: true,
+					project: [
+						'./.nuxt/tsconfig.json'
+					]
+				}
 			}
 		}
 	},
 	{
-		files: ['src/**'],
-		languageOptions: {
-			globals: {
-				...globals.node
-			}
-		}
-	},
-	{
-		ignores: ['**/*.bundled.js']
+		ignores: ['.output', '.nuxt', '.old']
 	}
-];
+]);

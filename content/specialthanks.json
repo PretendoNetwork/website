@@ -1,0 +1,83 @@
+{
+	"people": [
+		{
+			"name": "superwhiskers",
+			"captionKey": "forCrunch",
+			"picture": "https://github.com/superwhiskers.png",
+			"github": "https://github.com/superwhiskers"
+		},
+		{
+			"name": "Stary",
+			"captionKey": "forCtrDev",
+			"picture": "https://github.com/Stary2001.png",
+			"github": "https://github.com/Stary2001"
+		},
+		{
+			"name": "rverse",
+			"captionKey": "forMiiverseHelp",
+			"picture": "https://github.com/rverseTeam.png",
+			"github": "https://twitter.com/rverseClub"
+		},
+		{
+			"name": "Kinnay",
+			"isSpecial": true,
+			"captionKey": "forResearch",
+			"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
+			"github": "https://github.com/Kinnay"
+		},
+		{
+			"name": "NinStar",
+			"captionKey": "forIcons",
+			"picture": "https://github.com/ninstar.png",
+			"github": "https://github.com/ninstar"
+		},
+		{
+			"name": "Rambo6Glaz",
+			"captionKey": "forServerDev",
+			"picture": "https://github.com/EpicUsername12.png",
+			"github": "https://github.com/EpicUsername12"
+		},
+		{
+			"name": "GaryOderNichts",
+			"captionKey": "forPatches",
+			"picture": "https://github.com/GaryOderNichts.png",
+			"github": "https://github.com/GaryOderNichts"
+		},
+		{
+			"name": "zaksabeast",
+			"captionKey": "forPatches",
+			"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
+			"github": "https://github.com/zaksabeast"
+		},
+		{
+			"name": "mrjvs",
+			"captionKey": "forServers",
+			"picture": "https://github.com/mrjvs.png",
+			"github": "https://github.com/mrjvs"
+		},
+		{
+			"name": "binaryoverload",
+			"captionKey": "forServers",
+			"picture": "https://github.com/binaryoverload.png",
+			"github": "https://github.com/binaryoverload"
+		},
+		{
+			"name": "Simonx22",
+			"captionKey": "forSplatoon",
+			"picture": "https://github.com/Simonx22.png",
+			"github": "https://github.com/Simonx22"
+		},
+		{
+			"name": "OatmealDome",
+			"captionKey": "forSplatoon",
+			"picture": "https://github.com/OatmealDome.png",
+			"github": "https://github.com/OatmealDome"
+		},
+		{
+			"name": "GitHub contributors",
+			"captionKey": "general",
+			"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+			"github": "https://github.com/PretendoNetwork"
+		}
+	]
+}
