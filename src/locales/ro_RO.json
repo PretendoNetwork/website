@@ -181,9 +181,9 @@
 	},
 	"blogPage": {
 		"title": "Blog",
-		"description": "",
 		"published": "Publicată de",
-		"publishedOn": "pe"
+		"publishedOn": "pe",
+		"description": ""
 	},
 	"localizationPage": {
 		"title": "Hai să localizăm",
