@@ -1,0 +1,70 @@
+{
+	"nav": {
+		"progress": "adhartas",
+		"blog": "bloga",
+		"forum": "fòram",
+		"accountWidget": {
+			"settings": "roghainnean",
+			"logout": "log a-mach"
+		}
+	},
+	"progress": {
+		"title": "adhartas"
+	},
+	"blogPage": {
+		"title": "bloga",
+		"publishedOn": "air"
+	},
+	"account": {
+		"account": "cunntas",
+		"loginForm": {
+			"login": "clàraich a-steach",
+			"register": "leabhar-clàraidh",
+			"username": "ainm-cleachdaidh",
+			"password": "facal-faire",
+			"email": "post-d",
+			"birthdate": "co-là breith"
+		},
+		"resetPassword": {
+			"password": "facal-faire"
+		},
+		"settings": {
+			"settingCards": {
+				"nickname": "far-ainm",
+				"birthDate": "co-là breith",
+				"gender": "gnè",
+				"country": "dùthaich/roinn-dùthcha",
+				"timezone": "raon-ama",
+				"production": "cinneasachadh",
+				"beta": "Beta",
+				"email": "post-d",
+				"password": "facal-faire",
+				"discord": "Discord"
+			}
+		},
+		"accountLevel": [
+			"bun-tomhas",
+			"feuchadair",
+			"modaràtair",
+			"leasaichear"
+		],
+		"banned": "toirmisgte"
+	},
+	"upgrade": {
+		"month": "mìos",
+		"back": "air ais"
+	},
+	"docs": {
+		"sidebar": {
+			"welcome": "fàilte",
+			"install_extended": "stàlaich pretendo",
+			"install": "stàlaich",
+			"search": "putan luirg"
+		}
+	},
+	"modals": {
+		"cancel": "cuir dheth",
+		"confirm": "deimhnich",
+		"close": "dùin"
+	}
+}

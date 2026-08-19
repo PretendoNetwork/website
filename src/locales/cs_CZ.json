@@ -1,0 +1,305 @@
+{
+	"nav": {
+		"account": "Účet",
+		"accountWidget": {
+			"settings": "Nastavení",
+			"logout": "Odhlásit se"
+		},
+		"faq": "FAQ",
+		"about": "O nás",
+		"docs": "Dokumentace",
+		"credits": "Poděkování",
+		"progress": "Progres",
+		"blog": "Blog",
+		"donate": "Přispět",
+		"dropdown": {
+			"captions": {
+				"progress": "Podívejte se na progres a cíle projektu",
+				"faq": "Často kladené dotazy",
+				"about": "O projektu",
+				"blog": "Souhrn nejnovějších aktualizací",
+				"credits": "Seznamte se s týmem",
+				"forum": "Pro podporu a chatování s ostatními uživateli"
+			}
+		},
+		"forum": "Fórum"
+	},
+	"hero": {
+		"subtitle": "Herní servery",
+		"buttons": {
+			"readMore": "Číst dál"
+		},
+		"text": "Pretendo je svobodná a open-source náhrada za Nintendo servery pro jak 3DS, tak Wii U, umožňující online konektivitu všem, i po deaktivaci původních serverů",
+		"title": "Znovuzrozeny"
+	},
+	"aboutUs": {
+		"title": "O nás",
+		"paragraphs": [
+			"Pretendo je open-source projekt, jehož cílem je reimplementovat Nintendo Network pro 3DS a Wii U pomocí legálního reverse engineeringu.",
+			"Jelikož jsou naše služby svobodný a open-source software, nehrozí, že budou náhle ukončeny."
+		]
+	},
+	"credits": {
+		"title": "Náš tým",
+		"text": "Seznamte se s týmem, co za projektem stojí"
+	},
+	"specialThanks": {
+		"text": "Bez nich by Pretendo nebylo tam, kde je dnes.",
+		"title": "Zvláštní poděkování"
+	},
+	"faq": {
+		"QAs": [
+			{
+				"question": "Co je Pretendo?",
+				"answer": "Pretendo je open-source náhrada za Nintendo Network, jejíž cílem je vytvořit vlastní servery pro rodinu konzolí Wii U a 3DS. Chceme zachovat online konektivitu těchto zařízení a umožnit tak hráčům nadále hrát své oblíbené Wii U a 3DS tituly."
+			},
+			{
+				"answer": "Bohužel ne. Již existující NNID na Pretendu nebudou fungovat, protože Vaše uživatelská data vlastní pouze Nintendo. Přestože by migrace účtů byla teoreticky možná, byla by riskantní a vyžadovala citlivé osobní údaje, které si nepřejeme držet.",
+				"question": "Bude na Pretendu fungovat moje současné NNID?"
+			},
+			{
+				"question": "Jak začnu s používáním Pretenda?",
+				"answer": "Pokud chcete začít používat Pretendo Network má 3DS, Wii U nebo jejich emulátorech, navštivte náš <a href=\"/docs/install\">návod k nastavení</a>!"
+			},
+			{
+				"answer": "To nevíme. Mnohé služby a funkce Pretenda jsou vyvíjeny nezávisle na sobě (například, na Miiverse může pracovat jeden vývojář, zatímco druhý pracuje na účtech a seznamu přátel) a proto nemůžeme poskytnout odhady, kdy bude něco hotové.",
+				"question": "Kdy bude [nějaká služba/funkce] hotová?"
+			},
+			{
+				"question": "Kdy přidáte další hry?",
+				"answer": "Na nových hrách pracujeme, jakmile máme pocit, že na to jsou naše backendové knihovny dostatečně připraveny, a některý z vývojářů má čas se této hře věnovat. Mnoho naší práce připadá na stabilizaci a dokončování našich existujících her - chceme v nich nabídnout co nejlepší zážitek, než se přesuneme na nové tituly. Protože se nová práce objevuje neustále, nemůžeme poskytnout odhad, kdy se to stane."
+			},
+			{
+				"question": "Bude mi na používání služeb Pretenda stačit emulátor?",
+				"answer": "Ne. Pokud si přejete používat emulátor, budete potřebovat opravdovou konzoli. Tím můžeme zajistit zvýšenou bezpečnost a efektivnější vynucování pravidel, které jsou klíčové pro poskytování bezpečných a příjemných služeb."
+			},
+			{
+				"question": "Funguje Pretendo na Cemu/emulátorech?",
+				"answer": "Cemu 2.1 oficiálně podporuje Pretendo v nastavení účtu. Pro informace jak začít s Cemu navštivte <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaci</a>.<br>Některé 3DS emulátory mohou nabízet podporu, ale v současnosti nemáme oficiální doporučení ani návod k nastavení. Citra ve své poslední vydané verzi Pretendo nepodporuje."
+			},
+			{
+				"question": "Bude Pretendo podporovat Wii/Switch?",
+				"answer": "Pro Wii již existují vlastní servery, které poskytuje <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. V současnosti neplánujeme vyvíjet pro Switch, protože online služby Switche jsou placené a od Nintendo Network se zásadně liší."
+			},
+			{
+				"question": "Budu pro připojení potřebovat modifikovanou konzoli?",
+				"answer": "Pro nejlepší výsledek budete svou konzoli muset modifikovat - přesněji pomocí Aroma na Wii U a Luma3DS na 3DS. Nicméně, na Wii U je dostupná metoda SSSL, která, byť s omezenou funkcionalitou, nabízí připojení bez modifikací. Pro podrobnosti navštivte <a href=\"/docs/install\">návod k nastavení</a>."
+			},
+			{
+				"question": "Pokud jsem zabanován(a) na Nintendo Network, přenese se můj ban do Pretenda?",
+				"answer": "Nemáme přístup k seznamu banů na Nintendo Network, takže nikdo z uživatelů Nintendo Network ban na Pretendu nemá. Máme však vlastní zásady pro používání naší služby, jejichž porušení by mohlo vyústit v ban na Pretendu."
+			},
+			{
+				"question": "Můžu na Pretendu používat mody a cheaty?",
+				"answer": "Pouze v soukromých zápasech - narušování online her lidem, kteří s tím nesouhlasili (tedy ve veřejných zápasech) je proti zásadám. Bany konzolím a účtům udělujeme pravidelně. Pretendo dále používá dodatečná bezpečnostní opatření, která brání v obcházení banů např. změnou sériového čísla."
+			}
+		],
+		"text": "Zde je pár častých otázek, které často slyšíme, abyste byli v obraze.",
+		"title": "Často kladené dotazy"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "Přinášíme zpět Vaše oblíbené hry a obsah pomocí vlastních serverů.",
+				"title": "Herní servery"
+			},
+			{
+				"caption": "Nové pojetí Miiverse, jako by bylo vytvořeno v moderní éře.",
+				"title": "Juxtaposition"
+			},
+			{
+				"caption": "Hrajte své oblíbené Wii U tituly i bez konzole!",
+				"title": "Podpora Cemu"
+			}
+		],
+		"text": "Náš projekt má mnohé komponenty. Zde jsou některé z nich.",
+		"title": "Co vytváříme"
+	},
+	"progress": {
+		"githubRepo": "Github repozitář",
+		"title": "Progres"
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"email": "Email",
+				"signInSecurity": "Přihlášení a zabezpečení",
+				"userSettings": "Uživatelské nastavení",
+				"birthDate": "Datum narození",
+				"removeDiscord": "Odpojit Discord účet",
+				"profile": "Profil",
+				"timezone": "Časová zóna",
+				"password": "Heslo",
+				"gender": "Pohlaví",
+				"discord": "Discord",
+				"newsletterPrompt": "Posílat aktualizace projektu emailem (lze kdykoli zrušit)",
+				"nickname": "Přezdívka",
+				"signInHistory": "Historie přihlášení",
+				"beta": "Beta",
+				"serverEnv": "Prostředí serveru",
+				"noDiscordLinked": "Není připojen žádný Discord účet.",
+				"fullSignInHistory": "Zobrazit celou historii přihlášení",
+				"production": "Produkční",
+				"linkDiscord": "Připojit Discord účet",
+				"country": "Země/region",
+				"no_newsletter_notice": "Newsletter v současnosti není dostupný. Podívejte se sem později",
+				"passwordPrompt": "Vložte Vaše PNID heslo ke stažení Cemu souborů",
+				"no_signins_notice": "Historie přihlášení není aktuálně sledována. Podívejte se sem později!",
+				"upgradePrompt": "Beta servery jsou dostupné pouze beta testerům. <br> Abyste se stal(a) beta testerem, upgradujte Váš účet na vyšší tier.",
+				"connectedToDiscord": "Připojeno k Discordu jako",
+				"newsletter": "Newsletter",
+				"hasAccessPrompt": "Váš aktuální tier Vám dává přístup k beta serverům. Super!",
+				"passwordResetNotice": "Po změně hesla budete odhlášen(a) ze všech zařízení.",
+				"otherSettings": "Ostatní nastavení",
+				"no_edit_from_dashboard": "Úprava PNID nastavení z uživatelského panelu není aktuálně dostupná. Změňte prosím Vaše uživatelské nastavení z připojené herní konzole."
+			},
+			"unavailable": "Nedostupné",
+			"upgrade": "Upgradovat účet",
+			"delete": {
+				"button": "Smazat účet",
+				"modalTitle": "Smazat PNID",
+				"modalDescription": "Jste si jisti, že chcete smazat Vaše PNID? Zvažte prosím následující, než budete pokračovat:\n\nData spojená s Vaším účtem napříč službami Pretendo Network (včetně fóra a Juxtaposition) budou smazána.\nVaše předplatné bude zrušeno a data na platební bráně Stripe odstraněna.\nVytvoříte-li si v budoucnu nový účet, nebudete si na něm moct nastavit stejné uživatelské jméno.\nSmazání účtu nevyřeší problémy s bany a/nebo technickou podporou. Pokud máte potíže, požádejte o pomoc na fóru.",
+				"modalCaution": "Tento úkon nelze vrátit zpět.",
+				"modalConfirm": "Ano, smazat"
+			}
+		},
+		"accountLevel": [
+			"Standardní",
+			"Tester",
+			"Moderátor",
+			"Vývojář"
+		],
+		"forgotPassword": {
+			"submit": "Odeslat",
+			"header": "Zapomenuté heslo",
+			"input": "Email nebo PNID",
+			"sub": "Zadejte níže Váš email/PNID"
+		},
+		"loginForm": {
+			"password": "Heslo",
+			"email": "Email",
+			"detailsPrompt": "Zadejte údaje vašeho účtu níže.",
+			"login": "Přihlásit se",
+			"register": "Registrace",
+			"confirmPassword": "Potvrzení hesla",
+			"forgotPassword": "Zapomněli jste heslo?",
+			"username": "Uživatelské jméno",
+			"loginPrompt": "Již máte účet?",
+			"registerPrompt": "Nemáte účet?",
+			"miiName": "Jméno Miička",
+			"birthdate": "Datum narození"
+		},
+		"resetPassword": {
+			"confirmPassword": "Potvrzení hesla",
+			"header": "Obnovení hesla",
+			"password": "Heslo",
+			"submit": "Odeslat",
+			"sub": "Zadejte nové heslo níže"
+		},
+		"account": "Účet",
+		"banned": "Zabanován"
+	},
+	"upgrade": {
+		"back": "Zpět",
+		"unsub": "Zrušit předplatné",
+		"changeTier": "Změnit tier",
+		"month": "měsíc",
+		"changeTierConfirm": "Změnit tier",
+		"unsubConfirm": "Zrušit předplatné",
+		"tierSelectPrompt": "Vyberte si tier",
+		"changeTierPrompt": "Jste si jisti, že chcete zrušit předplatné <span class=\"oldtier\">oldtiername</span> a předplácet <span class=\"newtier\">newtiername</span>?",
+		"unsubPrompt": "Jste si jisti, že chcete zrušit předplatné <span>tiername</span>? S <span>okamžitou platností</span> přijdete o všechny výhody spojené s tímto tierem.",
+		"title": "Upgradovat",
+		"description": "Dosažení měsíčního cíle pomůže Pretendu s hrazením provozu serverů a umožní našemu vedoucímu vývojáři, Jonovi, na projektu pracovat plnohodnotně, jelikož je jeho hlavním zdrojem příjmů."
+	},
+	"docs": {
+		"quickLinks": {
+			"header": "Rychlé odkazy",
+			"links": [
+				{
+					"caption": "Zobrazit instalační instrukce",
+					"header": "Nainstalovat Pretendo"
+				},
+				{
+					"caption": "Hledejte řešení zde",
+					"header": "Máte problém?"
+				}
+			]
+		},
+		"sidebar": {
+			"getting_started": "Začínáme",
+			"install_extended": "Nainstalovat Pretendo",
+			"install": "Instalace",
+			"welcome": "Vítejte",
+			"search": "Hledat",
+			"juxt_err": "Chybové kódy - Juxt"
+		},
+		"search": {
+			"no_match": "Nenalezeny žádné shody",
+			"title": "Máte chybový kód?",
+			"caption": "Napište jej do políčka níže pro zobrazení informací k Vašemu problému!",
+			"label": "Chybový kód"
+		},
+		"missingInLocale": "Tato stránka je nedostupná ve Vaší lokalizaci. Podívejte se prosím na Anglickou verzi níže."
+	},
+	"localizationPage": {
+		"filePlaceholder": "https://a.link.to/the_file.json",
+		"fileInput": "Soubor k otestování",
+		"title": "Pojďme lokalizovat",
+		"button": "Otestovat soubor",
+		"instructions": "Zobrazit instrukce k lokalizaci",
+		"description": "Vložte link k veřejně dostupné JSON lokalizaci pro otestování na stránce"
+	},
+	"modals": {
+		"cancel": "Zrušit",
+		"confirm": "Potvrdit",
+		"close": "Zavřít"
+	},
+	"progressPage": {
+		"title": "Progres projektu",
+		"description": "Podívejte se na pokrok a cíle projektu! (Aktualizováno přibližně každou hodinu, nezobrazuje VŠECHNY cíle a pokroky projektu)"
+	},
+	"blogPage": {
+		"publishedOn": "dne",
+		"title": "Blog",
+		"description": "Nejnovější aktualizace v krátkých souhrnech. Jestli chcete vidět častější aktualizace, můžete nás <a href=\"/account/upgrade\" target=\"_blank\">podpořit</a>.",
+		"published": "Publikoval(a)"
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"Jsem mýval Bandwidth a rád hryžu kabely zapojené do serverů Pretenda. Mňamka!",
+			"Hodně lidí se nás ptá, jestli se kvůli tomuhle dostaneme do legálních potíží; s radostí můžu říct, že moje teta pracuje u Nintenda a řekla, že to bude v pořádku.",
+			"Webkit v537 je nejlepší verze Webkitu pro Wii U. Ne, nebudeme na Wii U portovat Chrome.",
+			"Už se nemůžu dočkat, až na hodinách bude 19. ledna 2038 03:14:08 UTC!",
+			"Wii U je tak nedoceněné zařízení: reklamy byly, jako, fakt špatný, ale ta konzole je skvělá. Huh, počkej chvilku, nevím proč se mi Gamepad nepřipojuje k Wiičku.",
+			"Úvodní hudba Super Mario World 2 - Yoshi's Island je slast pro moje uši a nikdo mě nepřesvědčí o opaku.",
+			"Moje oblíbená vydání Switche byly Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack a Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Ten Virtual Console titul pro Wii U se ti fakt líbil, tak ho přinášíme zpátky\" Pack. Je fakt zřejmý, že nás má Nintendo rádo.",
+			"Když moravák řekne \"Znáš přéce Kip, taký zlatíčko, je tak moc UwU\", snaží se neurážlivě říct \"Kip pořád UwUuje a je to fakt divný a hloupý, kéž by to nedělala\"",
+			"Muj prvni videjko na mem kanale!! Uz dlouho jsem si chtel delat videa, ale muj laptop byl docela spatni a nemohl jsem spustit fraps, skype a majnkraft najednou. Ale ted je to už minulost! S pomoci sveho ajty učitele mi notebuk beži lepe a ted muzu nahravat! Doufam, ze se vam to bude libit a pokud ano, tak prosim dejte lajk a odbjer!!!\"",
+			"to vypadá mega vyfeleně"
+		],
+		"usefulLinks": "Užitečné odkazy",
+		"widget": {
+			"captions": [
+				"Chcete být v obraze?",
+				"Přidejte se k našemu Discord serveru!"
+			],
+			"button": "Připojte se nyní!"
+		},
+		"socials": "Sociální sítě"
+	},
+	"discordJoin": {
+		"title": "Zůstaňte v obraze",
+		"text": "Připojte se na náš Discord server a získejte nejnovější informace o projektu.",
+		"widget": {
+			"text": "Dostávejte aktualizace o našem progresu",
+			"button": "Připojit se"
+		}
+	},
+	"donation": {
+		"progress": "{totd} z měsíčního cíle ${goald}  vybráno ({perc} měsíčního cíle)"
+	},
+	"notfound": {
+		"description": "Jejda! Tuto stránku jsme nenalezli."
+	}
+}

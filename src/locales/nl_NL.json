@@ -1,0 +1,308 @@
+{
+	"nav": {
+		"about": "Over ons",
+		"faq": "FAQ",
+		"docs": "Docs",
+		"credits": "Bijdragers",
+		"progress": "Vooruitgang",
+		"blog": "Blog",
+		"account": "Account",
+		"accountWidget": {
+			"settings": "Instellingen",
+			"logout": "Uitloggen"
+		},
+		"donate": "Doneer",
+		"dropdown": {
+			"captions": {
+				"credits": "Ontmoet het team",
+				"blog": "Onze laatste updates, samengevat",
+				"progress": "Bekijk onze voortgang en doelen",
+				"about": "Over het project",
+				"faq": "Veelgestelde vragen",
+				"forum": "Praat met andere en krijg hulp"
+			}
+		},
+		"forum": "Forum"
+	},
+	"hero": {
+		"subtitle": "Game servers",
+		"title": "Hermaakt",
+		"text": "Pretendo is een gratis en open source vervanger voor de servers van Nintendo voor de 3DS en Wii U, zodat iedereen online kan spelen, zelfs als de Nintendo-servers permanent gestopt worden",
+		"buttons": {
+			"readMore": "Lees meer"
+		}
+	},
+	"aboutUs": {
+		"title": "Over ons",
+		"paragraphs": [
+			"Pretendo is een open source project met het doel om het Nintendo Network voor de 3DS en Wii U na te maken met clean-room reverse engineering.",
+			"Omdat onze diensten gratis en openbaar zijn, kunnen ze lang na het sluiten van Nintendo Network bestaan."
+		]
+	},
+	"progress": {
+		"title": "Vooruitgang",
+		"githubRepo": "GitHub-repository"
+	},
+	"faq": {
+		"title": "Veelgestelde vragen",
+		"text": "Hier zijn een aantal vragen die vaak worden gesteld.",
+		"QAs": [
+			{
+				"question": "Wat is Pretendo?",
+				"answer": "Pretendo is een open source Nintendo Network vervanging met als doel om custom servers voor de Wii U en 3DS familie te maken. Ons doel is om de online functionaliteit van deze consoles te behouden, zodat spelers hun favoriete Wii U en 3DS games kunnen blijven spelen."
+			},
+			{
+				"question": "Blijft mijn bestaande NNID werken op Pretendo?",
+				"answer": "Jammer genoeg niet. Bestande NNIDs zullen niet gaan werken op Pretendo, omdat enkel Nintendo je informatie heeft; Al is een NNID-naar-PNID migratie technisch mogelijk, toch is het wel gevaarlijk en zouden we gevoelige gebruikers informatie krijgen die we niet willen bewaren."
+			},
+			{
+				"question": "Hoe installeer ik Pretendo?",
+				"answer": "Om te beginnen met het gebruik van Pretendo op een 3DS, Wii U of emulator, raadpleeg onze <a href='/docs/install'>installatie-instructies</a>!"
+			},
+			{
+				"question": "Wanneer is feature/dienst klaar?",
+				"answer": "Dat weten we niet. Veel Pretendo diensten worden apart ontwikkeld (Miiverse wordt bijvoorbeeld door één ontwikkelaar ontwikkeld, en Accounts / Vrienden door een andere). Daardoor kunnen we geen datum geven voor wanneer het af is."
+			},
+			{
+				"question": "Wanneer voegen jullie meer games toe?",
+				"answer": "We werken aan nieuwe games zodra we vinden dat onze backendbibliotheken klaar zijn om ze te ondersteunen en er ontwikkelaarstijd beschikbaar is om ze te onderhouden. Veel van ons werk gaat naar het stabiliseren en voltooien van onze bestaande games - we willen de best mogelijke ervaring in die games voordat we doorgaan naar nieuwe titels. Omdat er voortdurend nieuw werk opduikt, kunnen we geen schatting maken van wanneer dat zou zijn."
+			},
+			{
+				"question": "Als ik een emulator gebruik, is dat genoeg om Pretendo te gebruiken?",
+				"answer": "Nee,  Voor extra beveiliging en veiligheid, als je een emulator gebruikt. Moet je nog steeds een echte spelcomputer hebben. Dit zorgt voor betere beveiliging en snelle werkzaamheden met de regels voor een leuke en veilige speelervaring op onze servers."
+			},
+			{
+				"question": "Gaat Pretendo ook op Cemu/Emulators werken?",
+				"answer": "Cemu 2.1 ondersteunt officieel Pretendo bij network account opties in de emulator. Voor informatie hoe je moet beginnen op Cemu, Zie de <a href=\"https://pretendo.network/docs/install/cemu\">documentatie</a>.<br> Sommige 3DS emulator of forks worden misschien ondersteunt door ons, maar we hebben geen officiële aanbeveling of instell intructies op dit moment. The laatste versie van Citra ondersteunt geen Pretendo Network"
+			},
+			{
+				"question": "Gaat Pretendo ooit de Wii of Switch ondersteunen?",
+				"answer": "De Wii heeft al custom servers dankzij  <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We hebben momenteel geen plan om de Switch te ondersteunen, omdat betaald is en een compleet ander netwerk is."
+			},
+			{
+				"answer": "Voor de beste ervaring op console, moet jij je systeem modden - vooral voor Aroma op Wii U en Luma3DS op 3DS. Hoewel, op Wii u, de Modloze SSSL methode is ook beschikbaar maar met gelimiteerde funties. Zie <a href=\"/docs/install\">setup instructions</a> voor meer informatie.",
+				"question": "Heb ik hacks nodig om te verbinden?"
+			},
+			{
+				"question": "Als ik gebannen bent op Nintendo Netwerk, blijf ik dan ook verbannen warneer ik Pretendo gebruik?",
+				"answer": "Wij hebben geen toegang tot Nintendo Netwerk's lijst van bannen, zo alle Nintendo Netwerk gebruikers zijn niet gebannen. Maar we hebben regels om te volgen warneer je de service gebruikt en als je de regels niet volgt dan kan het uiteindelijk veroorzaken tot een ban."
+			},
+			{
+				"question": "Kan ik cheats of mods online gebruiken met Pretendo?",
+				"answer": "Alleen maar in prive wedstrijden; want een oneerlijk voordeel krijgen of het verstoren van de online-ervaring met mensen die geen toestemming hebben gegeven (zoals bij openbare wedstrijden) is een strafbaar vergrijp. Wij bannen regulier Accounts, de Wii u en de 3DS systemen. Pretendo gebruikt extra beveiligings maatregelen waardoor traditionele 'onbannen' methoden bijvoorbeeld je seriële nummer te veranderen niet werkt."
+			}
+		]
+	},
+	"credits": {
+		"title": "Het team",
+		"text": "Ontmoet het team achter het project",
+		"roles": {
+			"owner": "Projecteigenaar en hoofdontwikkelaar"
+		}
+	},
+	"specialThanks": {
+		"title": "Speciale dank",
+		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is."
+	},
+	"progressPage": {
+		"title": "Onze vooruitgang",
+		"description": "Zie hier onze vooruitgang! (Wordt elk uur ververst, geeft niet ALLE vooruitgang en doelen weer)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "De meest recente update samenvattingen. Als je vaker nieuws wil, overweeg ons <a href=\"/account/upgrade\" target=\"_blank\">ondersteunen</a>.",
+		"published": "Gepubliceerd door",
+		"publishedOn": "op"
+	},
+	"localizationPage": {
+		"title": "Laten we lokaliseren",
+		"description": "Plak een link naar een openbaar toegankelijke JSON-landinstelling om deze op de website te testen",
+		"instructions": "Bekijk lokalisatie-instructies",
+		"fileInput": "Bestand om te testen",
+		"filePlaceholder": "https://a.link.to_file.json",
+		"button": "Test bestand"
+	},
+	"donation": {
+		"progress": "{totd} van {goald}/maand, {perc} van de maandelijkse doelstelling."
+	},
+	"upgrade": {
+		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
+		"back": "Terug",
+		"title": "Upgraden",
+		"description": "Het behalen van het maandelijkse doel zal de ontwikkeling van Pretendo Network ondersteunen door zowel onze serverinfrastructuur te financieren als onze hoofdontwikkelaar, Jon, in staat te stellen fulltime aan het project te werken.",
+		"month": "Maand",
+		"tierSelectPrompt": "Selecteer een tier",
+		"unsub": "Opzeggen",
+		"unsubPrompt": "Weet je zeker dat je je wilt afmelden voor <span>tiername</span>? Je verliest dan <span>onmiddellijk</span> de toegang tot de voordelen die bij dat abonnement horen.",
+		"unsubConfirm": "Opzeggen",
+		"changeTier": "Verander tier",
+		"changeTierConfirm": "Verander van tier"
+	},
+	"showcase": {
+		"cards": [
+			{
+				"title": "Spelservers",
+				"caption": "Wij brengen jouw favoriete games en content terug via custom servers."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Een nieuwe versie van Miiverse, alsof het in de moderne tijd is gemaakt."
+			},
+			{
+				"caption": "Speel jouw favoriete Wii U spellen, zelfs zonder een console!",
+				"title": "Cemu ondersteuning"
+			}
+		],
+		"title": "Wat wij maken",
+		"text": "Ons project heeft veel onderdelen. Hier zijn een paar voorbeelden."
+	},
+	"discordJoin": {
+		"text": "Word lid van onze Discord server om de laatste updates over het project te ontvangen.",
+		"title": "Blijf up-to-date",
+		"widget": {
+			"text": "Krijg realtime updates over onze voortgang",
+			"button": "Word lid van de server"
+		}
+	},
+	"footer": {
+		"socials": "Socialmedia profielen",
+		"usefulLinks": "Nuttige links",
+		"widget": {
+			"captions": [
+				"Wil je up-to-date blijven?",
+				"Word lid van onze Discord server!"
+			],
+			"button": "Word nu lid!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Ik ben Bandwidth de Wasbeer en ik houd ervan om kabels die naar Pretendo Network's servers gaan kapot te bijten. Jammie!",
+			"Veel mensen vragen ons of we een rechtszaak van Nintendo aan onze broek kunnen krijgen over dit project. Ik ben blij jullie mee te delen dat mijn tante bij Nintendo werkt en dat ze zegt dat dit niet gaat gebeuren.",
+			"WebKit v537 is de beste versie van WebKit voor de Wii U. Nee, we gaan Chrome niet porten naar de Wii U.",
+			"Ik kan niet wachten totdat de klok 03:14:08 UTC slaat op de 19e van januari 2038!",
+			"De Wii U is in werkelijkheid een ondergewaardeerd systeem: de reclames waren inderdaad zeer slecht, maar het systeem is geweldig. Huh, wacht eens even, ik snap niet waarom mijn Gamepad niet wil verbinden met mijn Wii U.",
+			"Super Mario World 2 - Yoshi's Island's main theme is een geweldig muziek nummer en niemand kan mij van het tegendeel overtuigen.",
+			"Mijn favoriete Nintendo Switch titels zijn Nintendo Switch Online + Uitbreidingspakket, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Speel pakket, Nintendo Switch Online+ Nog Een Port Pakket en Nintendo Switch Online + Dr. Kawashima's Brain Training: Hoe oud is jouw brein? \"jullie hielden veel van de Wii U Virtual Console versie, dus brengen we het terug\" pakket. Je kan zien dat Nintendo er veel om geeft.",
+			"Je weet toch dat \"je kent Kip, prijs haar ziel, ze UwUt elke dag\" de zuidelijke Verenigde Staten hun aardige manier om \"Kip UwUt elke dag en het is raar en gek en ik wil dat ze dat niet deed\" te zeggen",
+			"Mijn eerste videoo op dit kannaal. ik wildu al langur videos make maar me laptop draaidu slecht en ik kon geen fraps en Skype en meincraft draaie op hetzelfdu moment. maar dat is klaar! met wat hellup van mijn IT leraar mijn laptop draaid veel beter en ik kan nu opnemen! Ik hoop jullie genietun ervan en als dat O is, leik en abbonneer!!!",
+			"Ziet er goed uit"
+		]
+	},
+	"account": {
+		"loginForm": {
+			"login": "Login",
+			"register": "Registreer",
+			"detailsPrompt": "Voor jouw account gegevens hieronder in",
+			"username": "Gebruikersnaam",
+			"password": "Wachtwoord",
+			"confirmPassword": "Bevestig wachtwoord",
+			"email": "E-mail adres",
+			"miiName": "Mii naam",
+			"forgotPassword": "Wachtwoord vergeten?",
+			"registerPrompt": "Nog geen account?",
+			"loginPrompt": "Heb je al een account?",
+			"birthdate": "Geboortedatum"
+		},
+		"settings": {
+			"upgrade": "Account upgraden",
+			"settingCards": {
+				"nickname": "Bijnaam",
+				"profile": "Profiel",
+				"birthDate": "Geboortedatum",
+				"gender": "Geslacht",
+				"country": "Land/regio",
+				"timezone": "Tijdszone",
+				"serverEnv": "Serveromgeving",
+				"production": "Productie",
+				"beta": "Beta",
+				"upgradePrompt": "Beta servers zijn exclusief voor beta testers.<br>Om een beta tester te worden, upgrade naar een hogere account tier.",
+				"hasAccessPrompt": "Jouw huidige tier geeft je beta server toegang. Cool!",
+				"email": "E-mail adres",
+				"password": "Wachtwoord",
+				"signInSecurity": "Aanmeldgegevens en beveiliging",
+				"otherSettings": "Andere instellingen",
+				"discord": "Discord",
+				"connectedToDiscord": "Verbonden met Discord als",
+				"removeDiscord": "Verwijder Discord account",
+				"noDiscordLinked": "Geen Discord account gekoppeld.",
+				"linkDiscord": "Koppel Discord account",
+				"newsletter": "Nieuwsbrief",
+				"newsletterPrompt": "Ontvang project updates via e-mail (je kan je op elk moment afmelden)",
+				"passwordPrompt": "Voer je PNID wachtwoord in om Cemu bestanden te downloaden",
+				"passwordResetNotice": "Na het wijzigen van je wachtwoord, word je uitgelogd van al je apparaten.",
+				"fullSignInHistory": "Bekijk volledige aanmeld geschiedenis",
+				"signInHistory": "Aanmeld geschiedenis",
+				"no_signins_notice": "Log in geschiedenis wordt momenteel niet opgeslagen. Kom later weer terug!",
+				"userSettings": "Gebruikers instellingen",
+				"no_newsletter_notice": "Nieuwsbrief is momenteel niet beschikbaar. Kom later weer terug",
+				"no_edit_from_dashboard": "Het aanpassen van PNID instellingen via het gebruikers dashboard is momenteel niet mogelijk. Pas de gebruikers instellingen aan via je gelinkte game console"
+			},
+			"unavailable": "Niet beschikbaar",
+			"delete": {
+				"button": "Verwijder Account",
+				"modalTitle": "Verwijder PNID",
+				"modalDescription": "Weet je zeker dat je je PNID wilt verwijderen? zie eerst de informatie hier onder voordat je het verwijderd:\n\nAlle account data van alle Pretendo Network services (inclusief Forum and Juxtaposition) word verwijderd.\nJe Stripe data en abonnement wordt automatisch verwijdert.\nJe kan in de toekomst dit PNID niet meer gebruiken op een nieuw account.\nJe account verwijderen lost geen problemen op gerelateerd aan bans of technische support. Als je een probleem hebt gebruik a.u.b het forum voor ondersteuning.",
+				"modalCaution": "Deze actie kan niet ongedaan gemaakt worden.",
+				"modalConfirm": "Ja, verwijder"
+			}
+		},
+		"accountLevel": [
+			"Standaard",
+			"Testapparaat",
+			"Moderator",
+			"Ontwikkelaar"
+		],
+		"banned": "Gebanned",
+		"account": "Account",
+		"forgotPassword": {
+			"header": "Wachtwoord vergeten",
+			"sub": "Vul hieronder uw e-mailadres/PNID in",
+			"input": "E-mailadres of PNID",
+			"submit": "Dien in"
+		},
+		"resetPassword": {
+			"header": "Wachtwoord resetten",
+			"sub": "Voer hieronder een nieuw wachtwoord in",
+			"password": "Wachtwoord",
+			"confirmPassword": "Wachtwoord bevestigen",
+			"submit": "Dien in"
+		}
+	},
+	"modals": {
+		"cancel": "Annuleren",
+		"confirm": "Bevestigen",
+		"close": "Sluiten"
+	},
+	"docs": {
+		"missingInLocale": "Deze pagina is niet beschikbaar in uw taal. Controleer de Engelse versie hieronder.",
+		"quickLinks": {
+			"header": "Snelkoppelingen",
+			"links": [
+				{
+					"header": "Installeer Pretendo",
+					"caption": "Bekijk de installatie instructies"
+				},
+				{
+					"header": "Heb je een foutmelding gekregen?",
+					"caption": "Bekijk het hier"
+				}
+			]
+		},
+		"search": {
+			"no_match": "Geen wedstrijden gevonden",
+			"label": "Foutcode",
+			"caption": "Voer het hieronder in om informatie over je fout te krijgen!",
+			"title": "Heb je een foutcode?"
+		},
+		"sidebar": {
+			"getting_started": "Startinstructies",
+			"search": "Zoek",
+			"welcome": "Welkom",
+			"install_extended": "Installeer Pretendo",
+			"install": "Installeer",
+			"juxt_err": "Foutcodes - Juxt"
+		}
+	},
+	"notfound": {
+		"description": "Oeps! We konden deze pagina niet vinden."
+	}
+}

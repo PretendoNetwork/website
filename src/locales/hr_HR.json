@@ -1,0 +1,305 @@
+{
+	"nav": {
+		"about": "Informacije",
+		"faq": "ČPP",
+		"docs": "Dokumenti",
+		"credits": "Zahvale",
+		"progress": "Napredak",
+		"blog": "Blog",
+		"account": "Račun",
+		"donate": "Doniraj",
+		"accountWidget": {
+			"settings": "Postavke",
+			"logout": "Odjava"
+		},
+		"dropdown": {
+			"captions": {
+				"credits": "Upoznaj tim",
+				"about": "O projektu",
+				"faq": "Često postavljena pitanja",
+				"blog": "Naša najnovija aktualiziranja, sažeto",
+				"progress": "Pregledaj napredak i ciljeve projekta",
+				"forum": "Raspravljaj s drugima i dobij podršku"
+			}
+		},
+		"forum": "Forum"
+	},
+	"hero": {
+		"subtitle": "Serveri za igre",
+		"title": "Ponovo stvoreni",
+		"text": "Pretendo je besplatna aplikacija otvorenog koda, koja služi kao zamjena za Nintendo servere za 3DS i Wii U, omogućujući online povezivanje za sve, čak i nakon što se izvorni serveri ukinu",
+		"buttons": {
+			"readMore": "Saznaj više"
+		}
+	},
+	"aboutUs": {
+		"title": "O nama",
+		"paragraphs": [
+			"Pretendo je projekt otvorenog coda koji ima za cilj rekreirati Nintendo Network za 3DS i Wii U koristeći obrnutog inženjeringa u čistim sobama.",
+			"Budući da su naše usluge besplatne i otvorenog koda, postojat će još dugo u budućnosti."
+		]
+	},
+	"progress": {
+		"title": "Napredak",
+		"githubRepo": "Github repozitorij"
+	},
+	"faq": {
+		"title": "Često postavljena pitanja",
+		"text": "Evo nekoliko često postavljanih pitanja s jednostavnim odgovorima.",
+		"QAs": [
+			{
+				"question": "Što je Pretendo?",
+				"answer": "Pretendo je projekt otvorenog koda koji predstavlja zamjenu za Nintendo Network i ima za cilj izgraditi prilagođene poslužitelje za konzole iz obitelji Wii U i 3DS. Naš cilj je očuvati mrežnu funkcionalnost tih konzola kako bismo igračima omogućili da i dalje igraju svoje omiljene Wii U i 3DS igre u njihovom punom opsegu."
+			},
+			{
+				"question": "Hoće li će moji postojeći NNID-evi raditi na Pretendu?",
+				"answer": "Nažalost, ne. Postojeći NNID-ovi neće raditi na Pretendu jer samo Nintendo posjeduje tvoje korisničke podatke; iako je migracija s NNID-a na PNID teoretski moguća, bila bi rizična te bi zahtijevala osjetljive korisničke podatke koje ne želimo spremati."
+			},
+			{
+				"question": "Kako koristiti Pretendo?",
+				"answer": "Za korištenje Pretendo Networka na 3DS-u, Wii U-u ili emulatorima, pogledaj naše <a href='/docs/install'>upute za instalaciju</a>!"
+			},
+			{
+				"question": "Znaš li kada će funkcija/usluga biti spremna?",
+				"answer": "Ne. Mnoge Pretendo funkcionalnosti i usluge razvijaju se neovisno (na primjer, Miiverse može razvijati jedan programer, dok drugi rade na projektima Računi i Prijatelji), stoga ne možemo dati opću procjenu koliko dugo će to trajati."
+			},
+			{
+				"question": "Kada ćete dodati još igra?",
+				"answer": "Nove igre stvaramo tek kada procijenimo da su naše pozadinske (backend) biblioteke spremne za njihovu podršku i kada imamo dovoljno vremena za njihovo održavanje. Velik dio našeg rada usmjeren je na stabilizaciju i dovršavanje postojećih igara – želimo osigurati najbolje moguće iskustvo u njima prije nego što prijeđemo na izgradnju novih igri. Budući da se stalno pojavljuju novi zadaci, ne možemo procijeniti kada bi se to moglo dogoditi."
+			},
+			{
+				"question": "Ako koristim emulator, hoće li to biti dovoljno za korištenje Pretendoa?",
+				"answer": "Ne. Iz sigurnosnih razloga i moderiranja, ako koristiš emulator i dalje trebaš pravu konzolu. To omogućuje poboljšanu sigurnost i učinkovitije provođenje pravila kako bi se osiguralo sigurno i ugodno iskustvo s našom uslugom."
+			},
+			{
+				"question": "Radi li Pretendo na Cemu/emulatorima?",
+				"answer": "Cemu 2.1 službeno podržava Pretendo putem opcija mrežnog računa unutar emulatora. Za informacije o tome kako početi koristiti Cemu, pogledaj <a href=\"https://pretendo.network/docs/install/cemu\">dokumentaciju</a>.<br>Neki 3DS emulatori ili njihove izvedenice (forkovi) mogli bi nas podržavati, ali trenutačno nemamo službenu preporuku niti upute za postavljanje. Završne verzije Citra emulatora ne podržavaju Pretendo."
+			},
+			{
+				"question": "Hoće li Pretendo podržavati Wii/Switch?",
+				"answer": "Wii već ima prilagođene servere koje pruža <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Trenutačno ne planiramo usmjeriti razvoj na Switch jer je riječ o plaćenoj usluzi i sustavu koji je potpuno drugačiji od Nintendo Networka."
+			},
+			{
+				"question": "Hoću li za povezivanje morati nešto modificirati?",
+				"answer": "Za najbolje iskustvo na konzolama morat ćeš modificirati svoj sustav – konkretno Aroma za Wii U i Luma3DS za 3DS. Međutim, na Wii U je dostupna i metoda bez modifikacija (SSSL), ali s ograničenom funkcionalnošću. Za više detalja pogledaj naše <a href=\"/docs/install\">upute za instalaciju</a>."
+			},
+			{
+				"question": "Ako sam isključen/a na Nintendo Networku, hoću li ostati isključen/a i kada koristim Pretendo?",
+				"answer": "Nemamo pristup zabranama (banovima) na Nintendo Networku, tako da nijedan korisnik Nintendo Networka nije unaprijed zabranjen. Međutim, imamo vlastita pravila korištenja usluge i nepridržavanje tih pravila može rezultirati zabranom."
+			},
+			{
+				"question": "Mogu li koristiti cheatove ili modove online s Pretendom?",
+				"answer": "Samo u privatnim mečevima – stjecanje nepravedne prednosti ili ometanje online iskustva s ljudima koji na to nisu pristali (kao u javnim mečevima) kažnjivo je zabranom. Redovito primjenjujemo zabrane računa i konzole za Wii U i Nintendo 3DS sustave. Pretendo koristi dodatne sigurnosne mjere koje čine tradicionalne metode „ponovnog uključivanja”, poput mijenjanja serijskog broja, neučinkovitima."
+			}
+		]
+	},
+	"showcase": {
+		"title": "Što stvaramo",
+		"text": "Naš projekt ima mnogo komponenti. Evo nekih od njih.",
+		"cards": [
+			{
+				"title": "Serveri za igre",
+				"caption": "Vraćanje tvojih omiljenih igri i sadržaja putem prilagođenih servera."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Novo zamišljanje Miiversea, kao da je nastalo u modernom dobu."
+			},
+			{
+				"title": "Podrška za Cemu",
+				"caption": "Igraj svoje omiljene Wii U naslove čak i bez konzole!"
+			}
+		]
+	},
+	"credits": {
+		"title": "Tim",
+		"text": "Upoznaj tim projekta"
+	},
+	"specialThanks": {
+		"title": "Posebna zahvala",
+		"text": "Bez njih, Pretendo ne bi bio gdje je danas."
+	},
+	"discordJoin": {
+		"title": "Budi u tijeku",
+		"text": "Pridruži se našem Discord serveru za dobivanje najnovijih informacija o projektu.",
+		"widget": {
+			"text": "Primaj aktualiziranja u stvarnom vremenu o našem napretku",
+			"button": "Pridruži se serveru"
+		}
+	},
+	"footer": {
+		"socials": "Druženja",
+		"usefulLinks": "Korisne poveznice",
+		"widget": {
+			"captions": [
+				"Želiš biti u tijeku?",
+				"Pridruži se našem Discord serveru!"
+			],
+			"button": "Pridruži se sada!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Ja sam Bandwidth rakun i volim grickati kablove koji vode u Pretendo Networkove servere. Baš fino!",
+			"Mnogi nas pitaju hoćemo li zbog ovoga imati pravnih problema s Nintendom; drago mi je što mogu reći da moja teta radi u Nintendu i ona kaže da je sve u redu.",
+			"WebKit v537 je najbolja verzija WebKita za Wii U. Ne, nećemo portirati Google Chrome na Wii U.",
+			"Jedva čekam da sat dosegne 03:14:08 UTC, 19. siječnja 2038.!",
+			"Wii U je zapravo podcijenjen sustav: reklame su bile stvarno loše, ali konzola je odlična. Hm, čekaj malo, nisam siguran zašto, ali moj GamePad se ne povezuje s mojim Wii-jem.",
+			"Super Mario World 2 – Glavna tema od Yoshi Island je apsolutni hit i nema šanse da me uvjeriš u suprotno.",
+			"Moja omiljena izdanja za Nintendo Switch su Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack i Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age „You Really Liked The Nintendo Wii U Virtual Console Title, So We're Bringing It Back”. Stvarno se vidi da je Nintendu stalo.",
+			null,
+			"Moj prvi video na mom kanalu!! Već dugo želim snimati videa, ali je moj laptop radio prilično loše i nisam mogao pokrenuti Fraps, Skype i Minecraft odjednom. Ali sada je to sve prošlo! Uz pomoć mog učitelja informatike moj laptop radi puno bolje i sada mogu snimati! Nadam se da ćeš uživati, te ako da, lajkaj i pretplati se!!!",
+			"Što se mene tiče izgleda dobro"
+		]
+	},
+	"progressPage": {
+		"title": "Naš napredak",
+		"description": "Provjeri napredak i ciljeve projekta! (Aktualizira se otprilike svakih sat vremena, ne odražava SVE ciljeve ili sav napredak projekta)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Najnovija aktualiziranja u sažetim dijelovima. Ako želiš češće novosti <a href=\"/account/upgrade\" target=\"_blank\">podrži nas</a>.",
+		"published": "Izdavač:",
+		"publishedOn": ","
+	},
+	"account": {
+		"account": "Račun",
+		"loginForm": {
+			"login": "Prijava",
+			"register": "Registriraj se",
+			"detailsPrompt": "Dolje unesi podatke o svom računu",
+			"username": "Korisničko ime",
+			"password": "Lozinka",
+			"confirmPassword": "Potvrdi lozinku",
+			"email": "E-mail adresa",
+			"miiName": "Ime Mii-a",
+			"forgotPassword": "Ne sjećaš se lozinke?",
+			"registerPrompt": "Nemaš račun?",
+			"loginPrompt": "Već imaš račun?",
+			"birthdate": "Datum rođenja"
+		},
+		"forgotPassword": {
+			"header": "Zaboravljena lozinka",
+			"sub": "Doule unesi svoju e-mail adresu/PNID",
+			"input": "E-mail adresa ili PNID",
+			"submit": "Pošalji"
+		},
+		"resetPassword": {
+			"header": "Resetiraj lozinku",
+			"sub": "Dolje unesi novu lozinku",
+			"password": "Lozinka",
+			"confirmPassword": "Potvrdi lozinku",
+			"submit": "Pošalji"
+		},
+		"settings": {
+			"upgrade": "Nadogradi račun",
+			"unavailable": "Nedostupno",
+			"settingCards": {
+				"userSettings": "Korisničke postavke",
+				"profile": "Profil",
+				"nickname": "Nadimak",
+				"birthDate": "Datum rođenja",
+				"gender": "Spol",
+				"country": "Zemlja/regija",
+				"timezone": "Vremenska zona",
+				"serverEnv": "Okruženje servera",
+				"production": "Proizvodnja",
+				"beta": "Beta",
+				"upgradePrompt": "Beta serveri su ekskluzivni za beta testere.<br>Ako želiš postati beta tester, nadogradi na višu razinu računa.",
+				"hasAccessPrompt": "Tvoja trenutačna razina ti daje pristup beta serveru. Super!",
+				"signInSecurity": "Prijava i sigurnost",
+				"email": "E-mail adresa",
+				"password": "Lozinka",
+				"passwordResetNotice": "Nakon promjene lozinke, bit ćeš odjavljen/a sa svih uređaja.",
+				"signInHistory": "Povijest prijava",
+				"fullSignInHistory": "Pogledaj cijelu povijest prijava",
+				"otherSettings": "Druge postavke",
+				"discord": "Discord",
+				"connectedToDiscord": "Povezan na Discord kao",
+				"removeDiscord": "Ukloni Discord račun",
+				"noDiscordLinked": "Nema povezanog Discord računa.",
+				"linkDiscord": "Poveži Discord račun",
+				"newsletter": "Bilten",
+				"newsletterPrompt": "Primaj aktualiziranja o projektu putem e-pošte (možeš se odjaviti u bilo kojem trenutku)",
+				"passwordPrompt": "Unesi svoju PNID lozinku za preuzimanje Cemu datoteka",
+				"no_signins_notice": "Povijest prijava se trenutačno ne prati. Navrati kasnije!",
+				"no_newsletter_notice": "Bilten trenutačno nije dostupan. Navrati kasnije",
+				"no_edit_from_dashboard": "Uređivanje postavki PNID-a s korisničke nadzorne ploče trenutačno nije dostupno. Aktualiziraj korisničke postavke s tvoje povezane konzole za igre"
+			},
+			"delete": {
+				"button": "Izbriši račun",
+				"modalTitle": "Izbriši PNID",
+				"modalDescription": "Stvarno želiš izbrisati svoj PNID? Razmotri sljedeće prije brisanja:\n\nTvoji podaci o računu na svim Pretendo Network uslugama (uključujući Forum i Juxtaposition) će se izbrisati.\nTvoji Stripe podaci i pretplata će se automatski izbrisati.\nU budućnosti nećeš moći koristiti isti PNID na novom računu.\nBrisanje računa ne rješava probleme s isključivanjima ili tehničkom podrškom. Ako imaš problem, koristi Forum za pomoć.",
+				"modalCaution": "Ova je nepovratna radnja.",
+				"modalConfirm": "Da, izbriši"
+			}
+		},
+		"accountLevel": [
+			"Standardno",
+			"Tester",
+			"Voditelj",
+			"Programer"
+		],
+		"banned": "Isključen"
+	},
+	"upgrade": {
+		"title": "Nadogradi",
+		"description": "Postizanje mjesečnog cilja pomoći će razvoju Pretendo Networka financiranje naše serverske infrastrukture i omogućavanje našem glavnom programeru, Jonu, da radi na projektu kao zaposlenik s punim radnim vremenom.",
+		"month": "mjesec",
+		"tierSelectPrompt": "Odaberi razinu",
+		"unsub": "Otkaži pretplatu",
+		"unsubPrompt": "Stvarno se želiš odjaviti s <span>tiername</span>? <span>Odmah</span> ćeš izgubiti pristup pogodnostima",
+		"unsubConfirm": "Otkaži pretplatu",
+		"changeTier": "Promijeni razinu",
+		"changeTierPrompt": "Stvarno se želiš odjaviti s <span class=\"oldtier\">oldtiername</span> i pretplatiti se na <span class=\"newtier\">newtiername</span>?",
+		"changeTierConfirm": "Promijeni razinu",
+		"back": "Natrag"
+	},
+	"donation": {
+		"progress": "{totd} od {goald}/mjesečno, {perc} % mjesečnog cilja."
+	},
+	"localizationPage": {
+		"title": "Lokalizirajmo",
+		"description": "Umetni poveznicu na javno dostupnu JSON lokaciju za testiranje na web-stranici",
+		"instructions": "Pogledaj upute za lokalizaciju",
+		"fileInput": "Datoteka za testiranje",
+		"filePlaceholder": "https://poveznica.do/datoteke.json",
+		"button": "Testiraj datoteku"
+	},
+	"docs": {
+		"missingInLocale": "Ova stranica nije dostupna u tvom području. Dolje pogledaj englesku verziju.",
+		"quickLinks": {
+			"header": "Brze poveznice",
+			"links": [
+				{
+					"header": "Instaliraj Pretendo",
+					"caption": "Pogledaj upute za postavljanje"
+				},
+				{
+					"header": "Dogodila se greška?",
+					"caption": "Potraži je ovdje"
+				}
+			]
+		},
+		"search": {
+			"title": "Imaš li kod greške?",
+			"caption": "Upiši taj kod greške u okvir ispod za dobivanje informacija o tvom problemu!",
+			"label": "Kod greške",
+			"no_match": "Nema podudaranja"
+		},
+		"sidebar": {
+			"getting_started": "Kako započeti",
+			"welcome": "Dobro došao, dobro došla",
+			"install_extended": "Instaliraj Pretendo",
+			"install": "Instaliraj",
+			"search": "Traži",
+			"juxt_err": "Kodovi grešaka – Juxt"
+		}
+	},
+	"modals": {
+		"cancel": "Odustani",
+		"confirm": "Potvrdi",
+		"close": "Zatvori"
+	},
+	"notfound": {
+		"description": "Nažalost nismo uspjeli pronaći ovu stranicu."
+	}
+}

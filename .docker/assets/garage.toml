@@ -1,0 +1,17 @@
+metadata_dir = "/var/lib/garage/meta"
+data_dir = "/var/lib/garage/data"
+
+replication_factor = 1
+db_engine = "sqlite"
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+rpc_secret = "fbb4c8c25cdb7766ef9c2913cee0a6b52a927c03fafea2aa21e8658c68cc14c7"
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+
+[s3_web]
+bind_addr = "[::]:3902"
+root_domain = ".localhost"

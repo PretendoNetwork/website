@@ -1,0 +1,305 @@
+{
+	"nav": {
+		"about": "Über Pretendo",
+		"faq": "FAQ",
+		"docs": "Dokumentation",
+		"credits": "Mitwirkende",
+		"progress": "Fortschritt",
+		"blog": "Blog",
+		"account": "Konto",
+		"accountWidget": {
+			"settings": "Einstellungen",
+			"logout": "Abmelden"
+		},
+		"donate": "Spenden",
+		"dropdown": {
+			"captions": {
+				"credits": "Lerne das Team kennen",
+				"about": "Über das Projekt",
+				"faq": "Häufig gestellte Fragen",
+				"blog": "Unsere neuesten Updates, zusammengefasst",
+				"progress": "Überprüfe den Projektfortschritt und die Ziele",
+				"forum": "Schreibe mit anderen und erhalte Hilfe"
+			}
+		},
+		"forum": "Forum"
+	},
+	"hero": {
+		"subtitle": "Spielserver",
+		"title": "Rekonstruiert",
+		"text": "Pretendo ist ein kostenloser, Open-Source-Ersatz für Nintendo-Server für den 3DS und die Wii U, der die Onlineverbindung für alle, auch nach der Einstellung der offiziellen Server, ermöglicht",
+		"buttons": {
+			"readMore": "Mehr lesen"
+		}
+	},
+	"aboutUs": {
+		"title": "Über uns",
+		"paragraphs": [
+			"Pretendo ist ein Open-Source-Projekt, welches das Nintendo Network für den 3DS und die Wii U durch Clean-Room-Reverse-Engineering rekonstruiert.",
+			"Da unsere Dienste kostenlos und Open-Source sind, werden diese auch zukünftig weiterhin existieren."
+		]
+	},
+	"progress": {
+		"title": "Fortschritt",
+		"githubRepo": "Github-Repository"
+	},
+	"faq": {
+		"title": "Häufig gestellte Fragen",
+		"text": "Hier sind einige Fragen, die wir häufiger gestellt bekommen, zur schnellen Informationsbeschaffung.",
+		"QAs": [
+			{
+				"question": "Was ist Pretendo?",
+				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen beizubehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
+			},
+			{
+				"question": "Werden meine vorhandenen NNIDs mit Pretendo weiterhin funktionieren?",
+				"answer": "Leider nicht. Vorhandene NNIDs werden nicht mit Pretendo funktionieren, da nur Nintendo deine Nutzerdaten hat. Auch wenn eine NNID-zu-PNID Migration theoretisch möglich ist, wäre es riskant und würde sensible Nutzerdaten erfordern, die wir nicht speichern möchten."
+			},
+			{
+				"question": "Wie benutze ich Pretendo?",
+				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>!"
+			},
+			{
+				"question": "Weißt du, wann [Funktion/Dienst] bereit ist?",
+				"answer": "Nein. Die verschiedenen Funktionen und Dienste von Pretendo werden unabhängig voneinander entwickelt, z. B. arbeitet ein Entwickler am Miiverse, während ein anderer an Accounts und der Freundesliste arbeitet. Daher können wir keine genauen Angaben zur jeweiligen Fertigstellung machen."
+			},
+			{
+				"question": "Wann werdet ihr neue Spiele hinzufügen?",
+				"answer": "Wir arbeiten am Hinzufügen neuer Spiele, sobald unsere Backend-Libraries bereit dazu sind, diese zu unterstützen und sobald unsere Entwickler Zeit haben, diese instand zu halten. Eine Menge unserer Zeit fließt in die Stabilisierung und Abschließen der bereits existierenden Spiele. Wir möchten euch die besten Spielerfahrungen möglich machen, bevor wir uns neuen Spieltiteln widmen. Aufgrund von ständiger neu auftauchender Arbeit können wir keine Angaben machen, wann wir neue Spiele hinzufügen werden."
+			},
+			{
+				"question": "Reicht ein Emulator aus, um Pretendo zu nutzen?",
+				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
+			},
+			{
+				"question": "Ist Pretendo mit Cemu oder anderen Emulatoren kompatibel?",
+				"answer": "Cemu 2.1 unterstützt Pretendo offiziell unter den Account Einstellungen in den Allgemeinen Einstellungen im Emulator. Weitere Informationen zum Eirichten von Cemu findet man in der <a href=\"„https://pretendo.network/docs/install/cemu“\">Dokumentation</a>. Einige 3DS-Emulatoren oder deren Forks könnten zwar mit Pretendo kompatibel sein, jedoch wir haben derzeit keine offizielle Empfehlung oder gar eine Setup-Anleitung. Bitte beachte, das die finalen Citra Versionen unterstützen Pretendo nicht."
+			},
+			{
+				"question": "Wird Pretendo die Wii oder die Switch unterstützen?",
+				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir aktuell nicht an, da es sich bei Nintendo Switch Online um ein gebührenpflichtiges Netzwerk handelt, welches sich fundamental vom Nintendo Network unterscheidet."
+			},
+			{
+				"question": "Werde ich meine Konsole modifizieren müssen, um mich verbinden zu können?",
+				"answer": "Für die beste Nutzererfahrung auf der Konsole musst du dein System modifizieren. Spezifisch mit Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist allerdings die SSSL Methode verfügbar, die zwar eingeschränkte Funktionen bietet, es aber nicht erfordert die Konsole zu modifizieren. Für weitere Informationen: <a href=\"/docs/install\">Pretendo installieren</a>."
+			},
+			{
+				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo gebannt sein?",
+				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind diese Nutzer nicht automatisch gebannt. Wir haben jedoch unsere eigenen Regeln, die Nichtbeachtung dieser kann zu einen Bann führen."
+			},
+			{
+				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
+				"answer": "Nur in privaten Matches, bei denen alle Teilnehmer einverstanden sind. Sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche Entbannungsmethoden, wie das Ändern der Seriennummer, unwirksam machen."
+			}
+		]
+	},
+	"showcase": {
+		"title": "Was wir machen",
+		"text": "Unser Projekt umfasst verschiedene Bestandteile, von denen einige im Folgenden aufgeführt sind.",
+		"cards": [
+			{
+				"title": "Spiel-Server",
+				"caption": "Bringt dir deine Lieblingsspiele und Inhalte zurück, mithilfe eigener Server."
+			},
+			{
+				"title": "Juxtaposition",
+				"caption": "Eine moderne Neuinterpretation des Miiverse, als ob es heute entwickelt worden wäre."
+			},
+			{
+				"title": "Cemu-Unterstützung",
+				"caption": "Spiele deine lieblings Wii U-Spiele, sogar ohne eine Konsole!"
+			}
+		]
+	},
+	"credits": {
+		"title": "Das Team",
+		"text": "Lerne das Team hinter dem Projekt kennen"
+	},
+	"specialThanks": {
+		"title": "Besonderer Dank",
+		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist."
+	},
+	"discordJoin": {
+		"title": "Bleib auf dem Laufenden",
+		"text": "Tritt unserem Discord-Server bei, um die neuesten Updates zum Projekt zu erhalten.",
+		"widget": {
+			"text": "Erhalte Echtzeitinformationen über unseren Fortschritt",
+			"button": "Tritt dem Server bei"
+		}
+	},
+	"footer": {
+		"socials": "Soziale Medien",
+		"usefulLinks": "Nützliche Links",
+		"widget": {
+			"captions": [
+				"Du möchtest auf dem Laufenden bleiben?",
+				"Tritt dem Discord-Server bei!"
+			],
+			"button": "Tritt noch heute bei!"
+		},
+		"bandwidthRaccoonQuotes": [
+			"Ich bin Bandwidth der Waschbär und ich liebe es, in die Kabel der Server des Pretendo Networks zu beißen. Lecker!",
+			"Viele Leute fragen uns ob wir für das hier in legale Schwierigkeiten mit Nintendo kommen; voller Freude berichte ich, dass meine Tante bei Nintendo arbeitet, und sagt es ist in Ordnung.",
+			"Webkit v537 ist die beste Webkit-Version für die Wii U. Nein, wir werden Chrome nicht auf die Wii U bringen.",
+			"Ich kann es kaum erwarten, dass die Uhr am 19. Januar 2038 03:14:08 UTC erreicht!",
+			"Die Wii U ist ein unterschätztes System. Die Werbespots waren zwar eine Katastrophe, aber die Konsole selbst ist großartig. Hey, moment mal, ich bin mir nicht sicher, warum, aber mein Gamepad verbindet sich nicht mit meiner Wii.",
+			"Die Titelmusik von \"Super Mario World 2 - Yoshi's Island\" ist ein absoluter Hit und niemand kann mir das Gegenteil beweisen.",
+			"Meine Lieblingsveröffentlichungen für die Nintendo Switch sind Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Noch Ein Port Pack und Nintendo Switch Online + Dr. Kawashimas Gehirnjogging / Brain Age \"Ihr Mochtet Den Nintendo Wii U Virtual Console-Titel Sehr, Also Bringen Wir Ihn Zurück\" Pack. Man merkt, dass es Nintendo am Herzen liegt.",
+			"So etwas wie \"Du kennst Kip, Gott segne ihr Herz, sie schreibt den ganzen Tag UwU\" ist die südländische Art zu sagen \"Kip schreibt die ganze Zeit UwU und es ist wirklich seltsam und dumm und ich wünschte, sie würde es nicht tun\"",
+			"Mein erstes Video auf meinem kanal!! Ich wolte schon lange viedeos machen, aber mein leptop wahr zu schwach um Fraps, Skipe und Minekraft gleichzeitieg laufen zu laßen. aber dass ist jetzt vorbei. mit etwas hilfe von meinen informatiklerer läüft mein leptop jetzt fiel besser und ich kan aufnemen. ich hoffe ihr alle mögt dass video und fals ihr das tut bite gebt einen daumen nach oben und aboniert!!!",
+			"Sieht gut für mich aus"
+		]
+	},
+	"progressPage": {
+		"title": "Unser Fortschritt",
+		"description": "Prüfe den Projektfortschritt und die Ziele! (Wird stündlich aktualisiert, reflektiert nicht ALLE Projekte oder Ziele)"
+	},
+	"blogPage": {
+		"title": "Blog",
+		"description": "Die letzten Updates in Kurzform. Wenn du Updates häufiger sehen möchtest, kannst du uns gerne <a href=\"/account/upgrade\" target=\"_blank\">unterstützen</a>.",
+		"published": "Veröffentlicht von",
+		"publishedOn": "am"
+	},
+	"account": {
+		"accountLevel": [
+			"Standard",
+			"Tester*in",
+			"Moderator*in",
+			"Entwickler*in"
+		],
+		"loginForm": {
+			"login": "Anmelden",
+			"detailsPrompt": "Gib deine Kontodaten unten ein",
+			"register": "Registrieren",
+			"username": "Benutzername",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"email": "E-Mail",
+			"miiName": "Mii Name",
+			"forgotPassword": "Passwort vergessen?",
+			"registerPrompt": "Du hast noch kein Konto?",
+			"loginPrompt": "Du hast schon ein Konto?",
+			"birthdate": "Geburtsdatum"
+		},
+		"settings": {
+			"settingCards": {
+				"profile": "Profil",
+				"nickname": "Spitzname",
+				"birthDate": "Geburtsdatum",
+				"gender": "Geschlecht",
+				"country": "Land/Region",
+				"timezone": "Zeitzone",
+				"production": "Produktion",
+				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, benötigst du ein Upgrade auf eine höhere Konto-Stufe.",
+				"signInSecurity": "Anmeldung und Sicherheit",
+				"signInHistory": "Anmeldeverlauf",
+				"fullSignInHistory": "Vollständigen Anmeldeverlauf anzeigen",
+				"otherSettings": "Andere Einstellungen",
+				"discord": "Discord",
+				"connectedToDiscord": "Verbunden mit Discord als",
+				"linkDiscord": "Discord-Konto verknüpfen",
+				"newsletter": "Newsletter",
+				"newsletterPrompt": "Erhalte Projekt-Updates per E-Mail (Du kannst sie jederzeit abbestellen)",
+				"passwordPrompt": "Gib dein PNID-Passwort ein, um Cemu-Dateien herunterzuladen",
+				"hasAccessPrompt": "Mit deiner aktuellen Stufe hast du Zugang zu den Beta-Servern. Cool!",
+				"noDiscordLinked": "Kein Discord-Konto verknüpft.",
+				"serverEnv": "Serverumgebung",
+				"beta": "Beta",
+				"email": "E-Mail",
+				"password": "Passwort",
+				"passwordResetNotice": "Nachdem du dein Passwort geändert hast, wirst du von allen Geräten abgemeldet.",
+				"removeDiscord": "Discord-Konto entfernen",
+				"no_signins_notice": "Der Anmeldeverlauf wird momentan nicht gespeichert. Schau später nochmal vorbei!",
+				"no_edit_from_dashboard": "Die PNID-Einstellungen sind derzeit nicht über das Benutzer-Dashboard verfügbar. Bitte aktualisiere deine Benutzereinstellungen über deine verknüpfte Konsole",
+				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
+				"userSettings": "Benutzereinstellungen"
+			},
+			"upgrade": "Konto upgraden",
+			"unavailable": "Nicht verfügbar",
+			"delete": {
+				"modalConfirm": "Ja, löschen",
+				"modalDescription": "Bist du dir sicher, dass du deine PNID löschen möchtest? Bitte beachte folgende Sachen vor der Löschung:\n\nAll deine Daten (Miiverse/Juxtaposition, Forums, etc.) werden gelöscht.\nDeine Stripe Daten und Abonnement werden auch automatisch gelöscht.\nEs wird nicht möglich sein die gleiche PNID für einen neuen Account zu nutzen.\nDie Accountlöschung löst keine Probleme mit Banns oder Technischem Support. Wenn es Probleme gibt, wende dich bitte zum Forum für Support.",
+				"button": "Konto löschen",
+				"modalTitle": "PNID löschen",
+				"modalCaution": "Dieser Vorgang kann nicht rückgängig gemacht werden."
+			}
+		},
+		"banned": "Gesperrt",
+		"account": "Konto",
+		"forgotPassword": {
+			"sub": "Gib deine E-Mail Adresse oder deine PNID ein",
+			"input": "E-Mail Adresse oder PNID",
+			"header": "Passwort vergessen",
+			"submit": "Bestätigen"
+		},
+		"resetPassword": {
+			"header": "Passwort zurücksetzen",
+			"sub": "Gib das neue Passwort ein",
+			"password": "Passwort",
+			"confirmPassword": "Passwort bestätigen",
+			"submit": "Bestätigen"
+		}
+	},
+	"upgrade": {
+		"title": "Upgraden",
+		"description": "Das Erreichen des monatlichen Ziels hilft bei der Entwicklung von Pretendo Network, indem es die Server-Infrastruktur finanziert und unserem leitendem Entwickler Jon ermöglicht, in Vollzeit an dem Projekt zu arbeiten.",
+		"month": "Monat",
+		"tierSelectPrompt": "Wähle eine Stufe",
+		"unsub": "Abonnement kündigen",
+		"unsubPrompt": "Bist du dir wirklich sicher, dass du dich von <span>tiername</span> abmelden möchtest? Du wirst <span>sofort</span> den Zugriff auf die Vorteile dieser Stufe verlieren.",
+		"unsubConfirm": "Abonnement kündigen",
+		"changeTier": "Stufe ändern",
+		"changeTierPrompt": "Bist du dir sicher, dass du dein Abonnement von <span class=\"oldtier\">oldtiername</span> auf <span class=\"newtier\">newtiername</span> ändern möchtest?",
+		"back": "Zurück",
+		"changeTierConfirm": "Stufe ändern"
+	},
+	"donation": {
+		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels."
+	},
+	"localizationPage": {
+		"description": "Füge einen Link zu einem öffentlich zugänglichen JSON-Locale ein, um es auf der Website zu testen",
+		"filePlaceholder": "https://ein.link.zu/der_datei.json",
+		"button": "Test-Datei",
+		"title": "Lass uns lokalisieren",
+		"instructions": "Anweisungen zur Lokalisierung anzeigen",
+		"fileInput": "Zu testende Datei"
+	},
+	"docs": {
+		"missingInLocale": "Diese Seite ist nicht auf Deutsch verfügbar. Bitte schau dir die englische Version unten an.",
+		"quickLinks": {
+			"header": "Schnelle Links",
+			"links": [
+				{
+					"header": "Pretendo installieren",
+					"caption": "Einrichtungsanweisungen anzeigen"
+				},
+				{
+					"header": "Hast du einen Fehler?",
+					"caption": "Suche hier nach ihm"
+				}
+			]
+		},
+		"search": {
+			"title": "Hast du einen Fehlercode bekommen?",
+			"caption": "Schreibe ihn unten in die Box, um Infos zum Code zu erhalten!",
+			"label": "Fehler-Code",
+			"no_match": "Keine Ergebnisse gefunden"
+		},
+		"sidebar": {
+			"getting_started": "Erste Schritte",
+			"welcome": "Herzlich willkommen",
+			"install_extended": "Pretendo installieren",
+			"install": "Installieren",
+			"search": "Suchen",
+			"juxt_err": "Fehler-Codes - Juxt"
+		}
+	},
+	"modals": {
+		"cancel": "Abbrechen",
+		"confirm": "Bestätigen",
+		"close": "Schließen"
+	},
+	"notfound": {
+		"description": "Woops! Diese Seite konnte nicht gefunden werden."
+	}
+}

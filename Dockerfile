@@ -4,7 +4,7 @@ ARG app_dir="/home/node/app"
 
 
 # * Base Node.js image
-FROM node:20-alpine AS base
+FROM node:24-alpine AS base
 ARG app_dir
 WORKDIR ${app_dir}
 
@@ -27,25 +27,23 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 	npm ci
 
 COPY . .
-# TODO: re-enable after TypeScript migration
-#RUN npm run build
+
+RUN npm run build
 
 
 # * Running the final application
 FROM base AS final
 ARG app_dir
 
-RUN mkdir -p ${app_dir}/logs && chown node:node ${app_dir}/logs
-
-ENV NODE_ENV=production
 USER node
+ENV NODE_ENV=production
+ENV NITRO_HOST=0.0.0.0
+ENV NITRO_PORT=8080
+EXPOSE 8080
 
 COPY package.json .
 
 COPY --from=dependencies ${app_dir}/node_modules ${app_dir}/node_modules
-COPY --from=build ${app_dir} ${app_dir}
+COPY --chown=node:node --from=build ${app_dir}/.output ${app_dir}/.output
 
-# TODO: change back after TypeScript migration
-#COPY --from=build ${app_dir}/dist ${app_dir}/dist
-
-CMD ["node", "."]
+CMD ["node", "--enable-source-maps", ".output/server/index.mjs"]
