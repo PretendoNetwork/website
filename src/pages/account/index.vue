@@ -784,7 +784,7 @@ fieldset {
 	align-items: center;
 	flex: 50%;
 	color: var(--text-shade-1);
-	padding: 40px;
+	padding: 30px 10px;
 	justify-content: space-between;
 	cursor: pointer;
 }
