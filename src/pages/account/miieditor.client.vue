@@ -4,6 +4,7 @@ import BirthdaySetter from '@/components/BirthdaySetter/BirthdaySetter.vue';
 import { miiEditorJSON } from '@/utils/miieditor';
 import type { ApiAccountUpdateRequest } from '~~/shared/api-types';
 import type { Subtab, Tab } from '@/utils/miieditor';
+import { watchOnce } from '@vueuse/core';
 
 const { t } = useI18n();
 
@@ -187,7 +188,7 @@ async function renderMii(_e?: Event, sizeChange?: boolean) {
 	loadingCanvas.value = false;
 }
 
-onMounted(() => {
+watchOnce(miiCanvas, () => {
 	renderMii();
 });
 
