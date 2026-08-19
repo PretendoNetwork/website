@@ -98,7 +98,7 @@
 		"text": "Ontmoet het team achter het project",
 		"roles": {
 			"researchAndGameDev": "",
-			"owner": "",
+			"owner": "Projecteigenaar en hoofdontwikkelaar",
 			"ctrResearchAndPatchDev": "",
 			"preserveAndServerArch": "",
 			"devopsAndCommunityWork": "",
