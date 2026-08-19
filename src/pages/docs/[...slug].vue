@@ -25,7 +25,10 @@ definePageMeta({
 
 <template>
   <div class="content-inner">
-    <ContentRenderer :value="doc" />
+    <ContentRenderer
+      v-if="doc"
+      :value="doc"
+    />
   </div>
 </template>
 

@@ -201,9 +201,6 @@ export default defineNuxtConfig({
 		strategy: 'no_prefix',
 		defaultLocale: 'en-US',
 		vueI18n: '../i18n.config.ts',
-		bundle: {
-			optimizeTranslationDirective: false
-		},
 		locales: [
 			{ code: 'ar-AR', name: 'العربية', file: 'ar_AR.json' },
 			{ code: 'ast', name: 'Asturianu', file: 'ast.json' },

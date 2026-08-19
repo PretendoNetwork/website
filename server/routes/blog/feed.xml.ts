@@ -1,3 +1,4 @@
+import { queryCollection } from '@nuxt/content/server';
 import { Feed } from 'feed';
 
 export default defineEventHandler(async (event) => {

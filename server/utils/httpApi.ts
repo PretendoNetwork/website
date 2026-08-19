@@ -1,5 +1,6 @@
 import { request } from 'undici';
 import type { Dispatcher } from 'undici';
+import type { H3Event } from 'h3';
 
 export type HttpApiOptions = {
 	headers?: HeadersInit; body?: string; method?: Dispatcher.HttpMethod;
