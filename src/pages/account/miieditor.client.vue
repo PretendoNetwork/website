@@ -306,494 +306,496 @@ const { isLoading: isSaving, execute } = useAsync({
 </script>
 
 <template>
-  <div :class="{ 'miieditor-wrapper': true, saving: hasSaved }">
-    <svg
-      class="logotype"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 120 39.876"
-      preserveAspectRatio="xMinYMin meet"
-    >
-      <g
-        id="logo_type"
-        data-name="logo type"
-        transform="translate(-553 -467)"
+  <div>
+    <div :class="{ 'miieditor-wrapper': true, saving: hasSaved }">
+      <svg
+        class="logotype"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 120 39.876"
+        preserveAspectRatio="xMinYMin meet"
       >
         <g
-          id="logo"
-          transform="translate(553 467)"
+          id="logo_type"
+          data-name="logo type"
+          transform="translate(-553 -467)"
         >
-          <rect
-            id="XMLID_158_"
-            width="39.876"
-            height="39.876"
-            fill="#9d6ff3"
-            opacity="0"
-          />
           <g
-            id="XMLID_6_"
-            transform="translate(8.222 1.418)"
+            id="logo"
+            transform="translate(553 467)"
           >
-            <path
-              id="XMLID_15_"
-              d="M69.149,28.312c-1.051.553-.129,2.139.922,1.585a12.365,12.365,0,0,1,8.794-.571,10.829,10.829,0,0,1,6.342,4.166c.645,1,2.231.074,1.585-.922C83.308,27.169,74.7,25.436,69.149,28.312Z"
-              transform="translate(-64.246 -23.389)"
+            <rect
+              id="XMLID_158_"
+              width="39.876"
+              height="39.876"
               fill="#9d6ff3"
+              opacity="0"
             />
-            <path
-              id="XMLID_14_"
-              d="M82.64,14.608A15.565,15.565,0,0,0,73.5,8.45a17.535,17.535,0,0,0-12.647.9c-1.051.553-.129,2.139.922,1.585,3.411-1.788,7.6-1.714,11.209-.719,3.1.848,6.268,2.544,8.038,5.309C81.681,16.543,83.267,15.622,82.64,14.608Z"
-              transform="translate(-57.476 -7.693)"
-              fill="#9d6ff3"
-            />
-            <path
-              id="XMLID_9_"
-              d="M55.68,47.8a10.719,10.719,0,0,0-6.71,2.3H45.983A1.336,1.336,0,0,0,44.6,51.376V75.84a1.431,1.431,0,0,0,1.383,1.383h3.023a1.367,1.367,0,0,0,1.309-1.383V68.392A10.993,10.993,0,1,0,55.68,47.8Zm0,17.182a6.213,6.213,0,1,1,6.213-6.213A6.216,6.216,0,0,1,55.68,64.982Z"
-              transform="translate(-44.6 -40.406)"
-              fill="#9d6ff3"
-            />
-          </g>
-        </g>
-        <text
-          id="Pretendo"
-          transform="translate(593 492)"
-          fill="#fff"
-          font-size="17"
-          font-family="Poppins-Bold, Poppins"
-          font-weight="700"
-        >
-          <tspan
-            x="0"
-            y="0"
-          >Pretendo</tspan>
-        </text>
-      </g>
-    </svg>
-
-    <div class="canvas-wrapper">
-      <canvas
-        id="miiCanvas"
-        ref="miiCanvas"
-        width="512"
-        height="1080"
-        :class="{ loading: loadingCanvas }"
-      >
-        {{ $t("miiEditor.noCanvas") }}
-      </canvas>
-    </div>
-
-    <div class="params-wrapper">
-      <div class="params-resizer">
-        <div class="tabs">
-          <button
-            v-for="tab in miiEditorJSON.tabs"
-            :id="tab.name"
-            :key="tab.name"
-            :class="{ tabbtn: true, active: tab.name === activeTab }"
-            @click="
-              () => {
-                setActiveTab(tab.name);
-              }
-            "
-          >
-            <svg view-box="0 0 32 32">
-              <use
-                :href="`/assets/images/miieditor_symbols.svg#tab-${tab.name}`"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <form class="params">
-          <div
-            v-for="tab in miiEditorJSON.tabs.filter(
-              (t: Tab) => t.name === activeTab,
-            )"
-            :id="tab.name"
-            :key="tab.name"
-            :class="{ tab: true, active: tab.name === activeTab }"
-          >
-            <div class="subtabs-wrapper">
-              <div class="subtabs">
-                <button
-                  v-for="subtab in tab.subTabs"
-                  :id="`${subtab.name}-subtabbtn`"
-                  :key="subtab.name"
-                  :class="{
-                    subtabbtn: true,
-                    active: subtab.name === activeSubTab,
-                  }"
-                  @click.prevent="setActiveSubTab(subtab.name, tab.name)"
-                >
-                  <svg view-box="0 0 32 32">
-                    <use
-                      :href="`/assets/images/miieditor_symbols.svg#${getSpriteNameFromSubTab(
-                        subtab,
-                      )}`"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div
-                v-for="subtab in tab.subTabs
-                  ?.filter(
-                    (s) => s.name === activeSubTab && s.type !== 'slider',
-                  )
-                  ?.filter((s) => (s?.values?.length || 0) > 1)"
-                :key="subtab.name"
-                class="pagination"
-              >
-                <button
-                  :class="{
-                    previous: true,
-                    'page-btn': true,
-                    disabled: activeSubPage === 0,
-                  }"
-                  :disabled="activeSubPage === 0"
-                  @click.prevent="activeSubPage--"
-                >
-                  <Icon
-                    name="ph:caret-circle-left-fill"
-                    size="32"
-                  />
-                </button>
-                <span>
-                  <span class="current-page-index">{{
-                    activeSubPage + 1
-                  }}</span>
-                  /
-                  <span class="total-page-index">{{
-                    subtab?.values?.length
-                  }}</span>
-                </span>
-                <button
-                  :class="{
-                    next: true,
-                    'page-btn': true,
-                    disabled:
-                      (subtab?.values?.length || 0) - 1 === activeSubPage,
-                  }"
-                  :disabled="
-                    (subtab?.values?.length || 0) - 1 === activeSubPage
-                  "
-                  @click.prevent="activeSubPage++"
-                >
-                  <Icon
-                    name="ph:caret-circle-right-fill"
-                    size="32"
-                  />
-                </button>
-              </div>
-            </div>
-
-            <fieldset
-              v-for="subtab in tab.subTabs?.filter(
-                (t: Subtab) => t.name === activeSubTab,
-              )"
-              :key="subtab.name"
-              :class="`subtab active ${subtab.name}`"
+            <g
+              id="XMLID_6_"
+              transform="translate(8.222 1.418)"
             >
-              <template v-if="subtab.type === 'component'">
-                <template v-if="subtab.name === 'info'">
-                  <div class="full-width">
-                    <label for="miiName">{{ $t("miiEditor.nickname") }}</label>
-                    <input
-                      id="miiName"
-                      v-model="mii.miiName"
-                      type="text"
-                      name="miiName"
-                      minLength="1"
-                      maxLength="10"
-                    >
-                  </div>
-                  <div class="full-width">
-                    <label for="creatorName">{{
-                      $t("miiEditor.creator")
-                    }}</label>
-                    <input
-                      id="creatorName"
-                      v-model="mii.creatorName"
-                      type="text"
-                      name="creatorName"
-                      minLength="1"
-                      maxLength="10"
-                    >
-                  </div>
-                  <div class="birthdate">
-                    <label for="birthday">{{ $t("miiEditor.birthday") }}</label>
-                    <BirthdaySetter
-                      id="birthday"
-                      :day="mii.birthDay"
-                      :month="mii.birthMonth"
-                      @change="
-                        (e: { day: number; month: number }) => {
-                          mii.birthDay = e.day;
-                          mii.birthMonth = e.month;
-                        }
-                      "
-                    />
-                  </div>
-                  <div class="icons">
-                    <div class="input-wrapper">
-                      <label for="favorite">{{
-                        $t("miiEditor.favorite")
-                      }}</label>
-                      <div class="checkbox-wrapper">
-                        <input
-                          id="favorite"
-                          v-model="mii.favorite"
-                          type="checkbox"
-                          name="favorite"
-                        >
-                        <Icon
-                          name="ph:heart-fill"
-                          class="icon checked"
-                          size="32"
-                        />
-                        <Icon
-                          name="ph:heart-break-fill"
-                          class="icon unchecked"
-                          size="32"
-                        />
-                      </div>
-                    </div>
-                    <div class="input-wrapper">
-                      <label for="disableSharing">{{
-                        $t("miiEditor.sharing")
-                      }}</label>
-                      <div class="checkbox-wrapper">
-                        <input
-                          id="disableSharing"
-                          :checked="!mii.disableSharing"
-                          type="checkbox"
-                          name="disableSharing"
-                          @click="
-                            () => {
-                              mii.disableSharing = !mii.disableSharing;
-                            }
-                          "
-                        >
-                        <Icon
-                          name="ph:users-three-fill"
-                          class="icon checked"
-                          size="32"
-                        />
-                        <Icon
-                          name="ph:user-fill"
-                          class="icon unchecked"
-                          size="32"
-                        />
-                      </div>
-                    </div>
-                    <div class="input-wrapper">
-                      <label for="allowCopying">{{
-                        $t("miiEditor.copying")
-                      }}</label>
-                      <div class="checkbox-wrapper">
-                        <input
-                          id="allowCopying"
-                          v-model="mii.allowCopying"
-                          type="checkbox"
-                          name="allowCopying"
-                        >
-                        <Icon
-                          name="ph:copy-fill"
-                          class="icon checked"
-                          size="32"
-                        />
-                        <Icon
-                          name="ph:lock-key-fill"
-                          class="icon unchecked"
-                          size="32"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </template>
-                <template v-else-if="subtab.name === 'save'">
-                  <div
-                    id="saveTab"
-                    class="tab save"
-                  >
-                    <p class="save-prompt">
-                      {{ $t("miiEditor.saveCaption") }}
-                    </p>
-                    <div class="mii-comparison-animation-wrapper">
-                      <div class="mii-comparison unconfirmed">
-                        <img
-                          class="old-mii"
-                          :src="oldMiiNeutralUrl"
-                        >
-                        <Icon
-                          name="ph:arrow-fat-right-fill"
-                          class="icon"
-                          size="48"
-                        />
-                        <div class="new-mii-wrapper">
-                          <img
-                            class="new-mii"
-                            :src="newMiiNeutralUrl"
-                          >
-                        </div>
-                      </div>
-                      <div class="mii-comparison confirmed">
-                        <img
-                          class="old-mii"
-                          :src="oldMiiSorrowUrl"
-                        >
-                        <Icon
-                          name="ph:arrow-fat-right-fill"
-                          class="icon"
-                          size="48"
-                        />
-                        <div class="new-mii-wrapper">
-                          <img
-                            class="new-mii"
-                            :src="newMiiSmileUrl"
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      id="saveButton"
-                      :class="{ button: true, primary: true }"
-                      @click.prevent="execute()"
-                    >
-                      <Loader v-if="isSaving" />
-                      <span v-else>{{ $t("miiEditor.save") }}!</span>
-                    </button>
-                  </div>
-                </template>
-              </template>
-              <div
-                v-for="(subpage, i) in subtab.values?.filter(
-                  (_v: any, i: number) => i === activeSubPage,
-                )"
-                v-else
-                :key="i"
-                :class="{
-                  subpage: true,
-                  'has-sliders': subtab.type === 'slider',
-                }"
-              >
-                <template v-if="subtab.type === 'slider'">
-                  <template
-                    v-for="v in subpage"
-                    :key="v"
-                  >
-                    <div class="slider-wrapper">
-                      <!-- display icon from spritesheet -->
-                      <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
-                      <label :for="`${subtab.name}-${v.name}`"><svg view-box="0 0 32 32">
-                        <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
-                        <use
-                          :href="`/assets/images/miieditor_symbols.svg#slider-${getSpriteNameFromSlider(v.name)}`"
-                        /></svg></label>
-                      <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
-                      <input
-                        :id="`${subtab.name}-${v.name}`"
-                        :value="mii[v.name]"
-                        type="range"
-                        list="tickmarks"
-                        :name="v.name"
-                        :min="v.min"
-                        :max="v.max"
-                        :class="{
-                          invert:
-                            v.name.includes('YPosition') ||
-                            v.name.includes('Rotation'),
-                        }"
-                        @input="
-                          (e) => {
-                            mii[v.name] = parseInt(e.target.value);
+              <path
+                id="XMLID_15_"
+                d="M69.149,28.312c-1.051.553-.129,2.139.922,1.585a12.365,12.365,0,0,1,8.794-.571,10.829,10.829,0,0,1,6.342,4.166c.645,1,2.231.074,1.585-.922C83.308,27.169,74.7,25.436,69.149,28.312Z"
+                transform="translate(-64.246 -23.389)"
+                fill="#9d6ff3"
+              />
+              <path
+                id="XMLID_14_"
+                d="M82.64,14.608A15.565,15.565,0,0,0,73.5,8.45a17.535,17.535,0,0,0-12.647.9c-1.051.553-.129,2.139.922,1.585,3.411-1.788,7.6-1.714,11.209-.719,3.1.848,6.268,2.544,8.038,5.309C81.681,16.543,83.267,15.622,82.64,14.608Z"
+                transform="translate(-57.476 -7.693)"
+                fill="#9d6ff3"
+              />
+              <path
+                id="XMLID_9_"
+                d="M55.68,47.8a10.719,10.719,0,0,0-6.71,2.3H45.983A1.336,1.336,0,0,0,44.6,51.376V75.84a1.431,1.431,0,0,0,1.383,1.383h3.023a1.367,1.367,0,0,0,1.309-1.383V68.392A10.993,10.993,0,1,0,55.68,47.8Zm0,17.182a6.213,6.213,0,1,1,6.213-6.213A6.216,6.216,0,0,1,55.68,64.982Z"
+                transform="translate(-44.6 -40.406)"
+                fill="#9d6ff3"
+              />
+            </g>
+          </g>
+          <text
+            id="Pretendo"
+            transform="translate(593 492)"
+            fill="#fff"
+            font-size="17"
+            font-family="Poppins-Bold, Poppins"
+            font-weight="700"
+          >
+            <tspan
+              x="0"
+              y="0"
+            >Pretendo</tspan>
+          </text>
+        </g>
+      </svg>
 
-                            if (v.name !== 'build' && v.name !== 'height')
-                              return;
+      <div class="canvas-wrapper">
+        <canvas
+          id="miiCanvas"
+          ref="miiCanvas"
+          width="512"
+          height="1080"
+          :class="{ loading: loadingCanvas }"
+        >
+          {{ $t("miiEditor.noCanvas") }}
+        </canvas>
+      </div>
 
-                            renderMii(e, true);
-                          }
-                        "
-                        @change="renderMii"
-                      >
-                    </div>
-                  </template>
-                </template>
+      <div class="params-wrapper">
+        <div class="params-resizer">
+          <div class="tabs">
+            <button
+              v-for="tab in miiEditorJSON.tabs"
+              :id="tab.name"
+              :key="tab.name"
+              :class="{ tabbtn: true, active: tab.name === activeTab }"
+              @click="
+                () => {
+                  setActiveTab(tab.name);
+                }
+              "
+            >
+              <svg view-box="0 0 32 32">
+                <use
+                  :href="`/assets/images/miieditor_symbols.svg#tab-${tab.name}`"
+                />
+              </svg>
+            </button>
+          </div>
 
-                <template v-else-if="subtab.type === 'color'">
-                  <template
-                    v-for="(v, j) in subpage"
-                    :key="v"
+          <form class="params">
+            <div
+              v-for="tab in miiEditorJSON.tabs.filter(
+                (t: Tab) => t.name === activeTab,
+              )"
+              :id="tab.name"
+              :key="tab.name"
+              :class="{ tab: true, active: tab.name === activeTab }"
+            >
+              <div class="subtabs-wrapper">
+                <div class="subtabs">
+                  <button
+                    v-for="subtab in tab.subTabs"
+                    :id="`${subtab.name}-subtabbtn`"
+                    :key="subtab.name"
+                    :class="{
+                      subtabbtn: true,
+                      active: subtab.name === activeSubTab,
+                    }"
+                    @click.prevent="setActiveSubTab(subtab.name, tab.name)"
                   >
-                    <input
-                      :id="`${subtab.name}-${v}`"
-                      :value="v?.toString()"
-                      type="radio"
-                      :name="subtab.name"
-                      :checked="j === mii?.[subtab.name]"
-                      @click="
-                        () => {
-                          mii[subtab.name] = j;
-                          renderMii();
-                        }
-                      "
-                    >
-                    <!-- display color instead of icons -->
-                    <label
-                      :for="`${subtab.name}-${v}`"
-                      :class="{
-                        color: true,
-                        selected: j === mii?.[subtab.name],
-                      }"
-                      :style="`background: ${v}`"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 256 256"
-                      height="48"
-                      style="color: #fff"
-                    >
-                      <rect
-                        width="256"
-                        height="256"
-                        fill="none"
-                      />
-                      <path
-                        stroke="var(--bg-shade-2)"
-                        stroke-width="1rem"
-                        fill="currentColor"
-                        d="M243.31,90.91l-128.4,128.4a16,16,0,0,1-22.62,0l-71.62-72a16,16,0,0,1,0-22.61l20-20a16,16,0,0,1,22.58,0L104,144.22l96.76-95.57a16,16,0,0,1,22.59,0l19.95,19.54A16,16,0,0,1,243.31,90.91Z"
+                    <svg view-box="0 0 32 32">
+                      <use
+                        :href="`/assets/images/miieditor_symbols.svg#${getSpriteNameFromSubTab(
+                          subtab,
+                        )}`"
                       />
                     </svg>
-                    </label>
-                  </template>
-                </template>
-                <template v-else>
-                  <template
-                    v-for="v in subpage"
-                    :key="v"
+                  </button>
+                </div>
+                <div
+                  v-for="subtab in tab.subTabs
+                    ?.filter(
+                      (s) => s.name === activeSubTab && s.type !== 'slider',
+                    )
+                    ?.filter((s) => (s?.values?.length || 0) > 1)"
+                  :key="subtab.name"
+                  class="pagination"
+                >
+                  <button
+                    :class="{
+                      previous: true,
+                      'page-btn': true,
+                      disabled: activeSubPage === 0,
+                    }"
+                    :disabled="activeSubPage === 0"
+                    @click.prevent="activeSubPage--"
                   >
-                    <input
-                      :id="`${subtab.name}-${v}`"
-                      :value="v?.toString()"
-                      type="radio"
-                      :name="subtab.name"
-                      :checked="v === mii?.[subtab.name]"
-                      @click="
-                        () => {
-                          mii[subtab.name] = v;
-                          renderMii();
-                        }
-                      "
+                    <Icon
+                      name="ph:caret-circle-left-fill"
+                      size="32"
+                    />
+                  </button>
+                  <span>
+                    <span class="current-page-index">{{
+                      activeSubPage + 1
+                    }}</span>
+                    /
+                    <span class="total-page-index">{{
+                      subtab?.values?.length
+                    }}</span>
+                  </span>
+                  <button
+                    :class="{
+                      next: true,
+                      'page-btn': true,
+                      disabled:
+                        (subtab?.values?.length || 0) - 1 === activeSubPage,
+                    }"
+                    :disabled="
+                      (subtab?.values?.length || 0) - 1 === activeSubPage
+                    "
+                    @click.prevent="activeSubPage++"
+                  >
+                    <Icon
+                      name="ph:caret-circle-right-fill"
+                      size="32"
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <fieldset
+                v-for="subtab in tab.subTabs?.filter(
+                  (t: Subtab) => t.name === activeSubTab,
+                )"
+                :key="subtab.name"
+                :class="`subtab active ${subtab.name}`"
+              >
+                <template v-if="subtab.type === 'component'">
+                  <template v-if="subtab.name === 'info'">
+                    <div class="full-width">
+                      <label for="miiName">{{ $t("miiEditor.nickname") }}</label>
+                      <input
+                        id="miiName"
+                        v-model="mii.miiName"
+                        type="text"
+                        name="miiName"
+                        minLength="1"
+                        maxLength="10"
+                      >
+                    </div>
+                    <div class="full-width">
+                      <label for="creatorName">{{
+                        $t("miiEditor.creator")
+                      }}</label>
+                      <input
+                        id="creatorName"
+                        v-model="mii.creatorName"
+                        type="text"
+                        name="creatorName"
+                        minLength="1"
+                        maxLength="10"
+                      >
+                    </div>
+                    <div class="birthdate">
+                      <label for="birthday">{{ $t("miiEditor.birthday") }}</label>
+                      <BirthdaySetter
+                        id="birthday"
+                        :day="mii.birthDay"
+                        :month="mii.birthMonth"
+                        @change="
+                          (e: { day: number; month: number }) => {
+                            mii.birthDay = e.day;
+                            mii.birthMonth = e.month;
+                          }
+                        "
+                      />
+                    </div>
+                    <div class="icons">
+                      <div class="input-wrapper">
+                        <label for="favorite">{{
+                          $t("miiEditor.favorite")
+                        }}</label>
+                        <div class="checkbox-wrapper">
+                          <input
+                            id="favorite"
+                            v-model="mii.favorite"
+                            type="checkbox"
+                            name="favorite"
+                          >
+                          <Icon
+                            name="ph:heart-fill"
+                            class="icon checked"
+                            size="32"
+                          />
+                          <Icon
+                            name="ph:heart-break-fill"
+                            class="icon unchecked"
+                            size="32"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="disableSharing">{{
+                          $t("miiEditor.sharing")
+                        }}</label>
+                        <div class="checkbox-wrapper">
+                          <input
+                            id="disableSharing"
+                            :checked="!mii.disableSharing"
+                            type="checkbox"
+                            name="disableSharing"
+                            @click="
+                              () => {
+                                mii.disableSharing = !mii.disableSharing;
+                              }
+                            "
+                          >
+                          <Icon
+                            name="ph:users-three-fill"
+                            class="icon checked"
+                            size="32"
+                          />
+                          <Icon
+                            name="ph:user-fill"
+                            class="icon unchecked"
+                            size="32"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="allowCopying">{{
+                          $t("miiEditor.copying")
+                        }}</label>
+                        <div class="checkbox-wrapper">
+                          <input
+                            id="allowCopying"
+                            v-model="mii.allowCopying"
+                            type="checkbox"
+                            name="allowCopying"
+                          >
+                          <Icon
+                            name="ph:copy-fill"
+                            class="icon checked"
+                            size="32"
+                          />
+                          <Icon
+                            name="ph:lock-key-fill"
+                            class="icon unchecked"
+                            size="32"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <template v-else-if="subtab.name === 'save'">
+                    <div
+                      id="saveTab"
+                      class="tab save"
                     >
-                    <!-- display icon from spritesheet -->
-                    <label :for="`${subtab.name}-${v}`"><svg view-box="0 0 32 32">
-                      <use
-                        :href="`/assets/images/miieditor_symbols.svg#value-${subtab.name}-${v?.toString()}`"
-                      /></svg></label>
+                      <p class="save-prompt">
+                        {{ $t("miiEditor.saveCaption") }}
+                      </p>
+                      <div class="mii-comparison-animation-wrapper">
+                        <div class="mii-comparison unconfirmed">
+                          <img
+                            class="old-mii"
+                            :src="oldMiiNeutralUrl"
+                          >
+                          <Icon
+                            name="ph:arrow-fat-right-fill"
+                            class="icon"
+                            size="48"
+                          />
+                          <div class="new-mii-wrapper">
+                            <img
+                              class="new-mii"
+                              :src="newMiiNeutralUrl"
+                            >
+                          </div>
+                        </div>
+                        <div class="mii-comparison confirmed">
+                          <img
+                            class="old-mii"
+                            :src="oldMiiSorrowUrl"
+                          >
+                          <Icon
+                            name="ph:arrow-fat-right-fill"
+                            class="icon"
+                            size="48"
+                          />
+                          <div class="new-mii-wrapper">
+                            <img
+                              class="new-mii"
+                              :src="newMiiSmileUrl"
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        id="saveButton"
+                        :class="{ button: true, primary: true }"
+                        @click.prevent="execute()"
+                      >
+                        <Loader v-if="isSaving" />
+                        <span v-else>{{ $t("miiEditor.save") }}!</span>
+                      </button>
+                    </div>
                   </template>
                 </template>
-              </div>
-            </fieldset>
-          </div>
-        </form>
+                <div
+                  v-for="(subpage, i) in subtab.values?.filter(
+                    (_v: any, i: number) => i === activeSubPage,
+                  )"
+                  v-else
+                  :key="i"
+                  :class="{
+                    subpage: true,
+                    'has-sliders': subtab.type === 'slider',
+                  }"
+                >
+                  <template v-if="subtab.type === 'slider'">
+                    <template
+                      v-for="v in subpage"
+                      :key="v"
+                    >
+                      <div class="slider-wrapper">
+                        <!-- display icon from spritesheet -->
+                        <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
+                        <label :for="`${subtab.name}-${v.name}`"><svg view-box="0 0 32 32">
+                          <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
+                          <use
+                            :href="`/assets/images/miieditor_symbols.svg#slider-${getSpriteNameFromSlider(v.name)}`"
+                          /></svg></label>
+                        <!-- @vue-expect-error -- this will only run if the subtab type is slider -->
+                        <input
+                          :id="`${subtab.name}-${v.name}`"
+                          :value="mii[v.name]"
+                          type="range"
+                          list="tickmarks"
+                          :name="v.name"
+                          :min="v.min"
+                          :max="v.max"
+                          :class="{
+                            invert:
+                              v.name.includes('YPosition') ||
+                              v.name.includes('Rotation'),
+                          }"
+                          @input="
+                            (e) => {
+                              mii[v.name] = parseInt(e.target.value);
+
+                              if (v.name !== 'build' && v.name !== 'height')
+                                return;
+
+                              renderMii(e, true);
+                            }
+                          "
+                          @change="renderMii"
+                        >
+                      </div>
+                    </template>
+                  </template>
+
+                  <template v-else-if="subtab.type === 'color'">
+                    <template
+                      v-for="(v, j) in subpage"
+                      :key="v"
+                    >
+                      <input
+                        :id="`${subtab.name}-${v}`"
+                        :value="v?.toString()"
+                        type="radio"
+                        :name="subtab.name"
+                        :checked="j === mii?.[subtab.name]"
+                        @click="
+                          () => {
+                            mii[subtab.name] = j;
+                            renderMii();
+                          }
+                        "
+                      >
+                      <!-- display color instead of icons -->
+                      <label
+                        :for="`${subtab.name}-${v}`"
+                        :class="{
+                          color: true,
+                          selected: j === mii?.[subtab.name],
+                        }"
+                        :style="`background: ${v}`"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 256"
+                        height="48"
+                        style="color: #fff"
+                      >
+                        <rect
+                          width="256"
+                          height="256"
+                          fill="none"
+                        />
+                        <path
+                          stroke="var(--bg-shade-2)"
+                          stroke-width="1rem"
+                          fill="currentColor"
+                          d="M243.31,90.91l-128.4,128.4a16,16,0,0,1-22.62,0l-71.62-72a16,16,0,0,1,0-22.61l20-20a16,16,0,0,1,22.58,0L104,144.22l96.76-95.57a16,16,0,0,1,22.59,0l19.95,19.54A16,16,0,0,1,243.31,90.91Z"
+                        />
+                      </svg>
+                      </label>
+                    </template>
+                  </template>
+                  <template v-else>
+                    <template
+                      v-for="v in subpage"
+                      :key="v"
+                    >
+                      <input
+                        :id="`${subtab.name}-${v}`"
+                        :value="v?.toString()"
+                        type="radio"
+                        :name="subtab.name"
+                        :checked="v === mii?.[subtab.name]"
+                        @click="
+                          () => {
+                            mii[subtab.name] = v;
+                            renderMii();
+                          }
+                        "
+                      >
+                      <!-- display icon from spritesheet -->
+                      <label :for="`${subtab.name}-${v}`"><svg view-box="0 0 32 32">
+                        <use
+                          :href="`/assets/images/miieditor_symbols.svg#value-${subtab.name}-${v?.toString()}`"
+                        /></svg></label>
+                    </template>
+                  </template>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
