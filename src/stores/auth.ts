@@ -58,9 +58,9 @@ export function useAuthStore() {
 
 	function refresh() {
 		authState.value = authState.value;
-		accessTokenCookie.value = accessTokenCookie.value;
-		refreshTokenCookie.value = refreshTokenCookie.value;
-		tokenTypeCookie.value = tokenTypeCookie.value;
+		accessTokenCookie.value = authState.value?.accessToken ?? null;
+		refreshTokenCookie.value = authState.value?.refreshToken ?? null;
+		tokenTypeCookie.value = authState.value ? oldCookieTokenType : null;
 	}
 
 	function set(val: AuthState | null) {
