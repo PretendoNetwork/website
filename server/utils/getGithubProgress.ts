@@ -16,8 +16,6 @@ export type GithubProjectResponse = {
 };
 
 const orgName = 'PretendoNetwork';
-const cacheMaxAgeMs = 60 * 60 * 1000; // 1 hour
-let cache: { response: GithubProjectResponse; createdAt: Date } | null = null;
 
 const getProjectsWithItemsV2GQL = `
 query getProjectsV2($orgName: String!, $cursor: String) {
@@ -128,19 +126,24 @@ async function getGithubProjectsData(octokit: Octokit): Promise<GithubProjectRes
 	};
 }
 
-export async function getGithubProjects(octokit: Octokit | null, ignoreCache = false): Promise<GithubProjectResponse> {
-	if (!cache || new Date(cache.createdAt.getTime() + cacheMaxAgeMs) < new Date() || ignoreCache) {
-		// No github credentials, assume there are no projects
-		if (!octokit) {
-			return {
-				projects: []
-			};
-		}
+const cacheKey = 'githubProjects';
+const cacheMaxAgeMs = 60 * 60 * 1000; // 1 hour
 
-		cache = {
-			createdAt: new Date(),
-			response: await getGithubProjectsData(octokit)
+export async function getGithubProjects(cacher: Cacher, octokit: Octokit | null, ignoreCache = false): Promise<GithubProjectResponse> {
+	if (!octokit) {
+		return {
+			projects: []
 		};
 	}
-	return cache.response;
+
+	if (!ignoreCache) {
+		const cached = await cacher.get<GithubProjectResponse>(cacheKey);
+		if (cached) {
+			return cached;
+		}
+	}
+
+	const data = await getGithubProjectsData(octokit);
+	await cacher.set(cacheKey, data, cacheMaxAgeMs);
+	return data;
 }

@@ -1,5 +1,6 @@
 import { getGithubProjects } from '../utils/getGithubProgress';
 import { getStripeDonations } from '../utils/getStripeDonations';
+import { useCacher } from '../utils/cache';
 import type { GetProgress, ProgressItem } from '#shared/api-types';
 
 const donationGoalCents = 3000 * 100;
@@ -7,8 +8,9 @@ const donationGoalCents = 3000 * 100;
 export default defineEventHandler(async (event): Promise<GetProgress> => {
 	const octokit = useOctokit(event);
 	const stripe = useStripe(event);
-	const donationData = await getStripeDonations(stripe);
-	const { projects } = await getGithubProjects(octokit);
+	const cacher = useCacher(event);
+	const donationData = await getStripeDonations(cacher, stripe);
+	const { projects } = await getGithubProjects(cacher, octokit);
 
 	const items: ProgressItem[] = projects.map((v) => {
 		const totalTasks = v.tasks.length;

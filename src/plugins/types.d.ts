@@ -6,6 +6,8 @@ declare module '#app' {
 
 declare module 'nuxt/schema' {
 	interface RuntimeConfig {
+		trustProxy: boolean;
+
 		githubApiToken: string;
 
 		stripeSecretKey: string;
@@ -38,6 +40,8 @@ declare module 'nuxt/schema' {
 
 		apiBase: string;
 		apiBaseHost: string;
+
+		redisUrl: string;
 	}
 
 	interface PublicRuntimeConfig {

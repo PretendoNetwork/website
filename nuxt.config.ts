@@ -41,6 +41,7 @@ export default defineNuxtConfig({
 			envPrefix: 'PN_WEBSITE_'
 		},
 
+		trustProxy: false,
 		githubApiToken: '',
 		stripeSecretKey: '',
 		stripeWebhookSecret: '',
@@ -65,6 +66,7 @@ export default defineNuxtConfig({
 		discourseSsoSecret: '',
 		apiBase: 'https://api.pretendo.cc',
 		apiBaseHost: 'api.pretendo.cc',
+		redisUrl: '',
 
 		public: {
 			baseUrl: 'https://pretendo.network',

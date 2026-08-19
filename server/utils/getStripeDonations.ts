@@ -5,9 +5,6 @@ export type StripeDonationResponse = {
 	totalDonationsCents: number;
 };
 
-const cacheMaxAgeMs = 60 * 60 * 1000; // 1 hour
-let cache: { response: StripeDonationResponse; createdAt: Date } | null = null;
-
 async function getStripeDonationData(stripe: Stripe): Promise<StripeDonationResponse> {
 	const donationData: StripeDonationResponse = {
 		donatorCount: 0,
@@ -29,21 +26,26 @@ async function getStripeDonationData(stripe: Stripe): Promise<StripeDonationResp
 	return donationData;
 }
 
-export async function getStripeDonations(stripe: Stripe | null, ignoreCache = false): Promise<StripeDonationResponse> {
-	if (!cache || new Date(cache.createdAt.getTime() + cacheMaxAgeMs) < new Date() || ignoreCache) {
-		// No credentials, fill in blank data
-		if (!stripe) {
-			return {
-				donatorCount: 0,
-				totalDonationsCents: 0
-			};
-		}
+const cacheKey = 'stripeDonations';
+const cacheMaxAgeMs = 60 * 60 * 1000; // 1 hour
 
-		cache = {
-			createdAt: new Date(),
-			response: await getStripeDonationData(stripe)
+export async function getStripeDonations(cacher: Cacher, stripe: Stripe | null, ignoreCache = false): Promise<StripeDonationResponse> {
+	if (!stripe) {
+		// No credentials, fill in blank data
+		return {
+			donatorCount: 0,
+			totalDonationsCents: 0
 		};
 	}
 
-	return cache.response;
+	if (!ignoreCache) {
+		const cached = await cacher.get<StripeDonationResponse>(cacheKey);
+		if (cached) {
+			return cached;
+		}
+	}
+
+	const data = await getStripeDonationData(stripe);
+	await cacher.set(cacheKey, data, cacheMaxAgeMs);
+	return data;
 }
