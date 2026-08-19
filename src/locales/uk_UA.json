@@ -77,80 +77,19 @@
 	"credits": {
 		"title": "Команда",
 		"text": "Познайомтеся з командою проекту",
-		"people": [
-			{
-				"picture": "https://github.com/jonbarrow.png",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"github": "https://github.com/jonbarrow",
-				"caption": "Власник проєкту та головний розробник"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"caption": "Дослідження та розробка Miiverse"
-			},
-			{
-				"caption": "Дослідження та розробка патчів для Wii U",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky"
-			},
-			{
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom",
-				"caption": "Системні дослідження та архітектура серверів",
-				"name": "SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Веб-розробка",
-				"github": "https://github.com/limesdotpink",
-				"picture": "https://github.com/limesdotpink.png"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Системні дослідження та розробка серверів",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"caption": "Збереження та серверна архітектура",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra",
-				"name": "DaniElectra",
-				"caption": "Системні дослідження та розробка серверів"
-			},
-			{
-				"caption": "Веб та серверна розробка",
-				"picture": "https://github.com/hauntii.png",
-				"name": "niko",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"caption": "DevOps та робота з спільнотою",
-				"name": "MatthewL246",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"picture": "https://github.com/wolfendale.png",
-				"caption": "Розробка та оптимізація серверів",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "Розробка та дослідження патчів для 3DS",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"nav": {
 		"credits": "Титри",
@@ -171,9 +110,11 @@
 				"blog": "Наші останні оновлення, скорочено",
 				"progress": "Проверіти прогресс проєкту та цілі",
 				"about": "Про проєкт",
-				"faq": "Часті питання"
+				"faq": "Часті питання",
+				"forum": ""
 			}
-		}
+		},
+		"forum": ""
 	},
 	"hero": {
 		"subtitle": "Ігрові сервери",
@@ -190,93 +131,18 @@
 	"specialThanks": {
 		"title": "Особлива подяка",
 		"text": "Без них Pretendo не було б таким, яким воно є сьогодні.",
-		"people": [
-			{
-				"name": "Користувачі GitHub",
-				"caption": "Локалізації та інші внески",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers",
-				"caption": "Розробка кранч-бібліотек"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001",
-				"caption": "Розробка 3DS та дисектор NEX"
-			},
-			{
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"caption": "Поширення інформації про Miiverse"
-			},
-			{
-				"caption": "Дослідження структур даних Nintendo",
-				"name": "Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"special": "Особлива подяка",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Іконки для Mii Editor та реакцій Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"caption": "Дослідження консолей та ігрових серверів",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz"
-			},
-			{
-				"name": "GaryOderNichts",
-				"github": "https://github.com/GaryOderNichts",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"caption": "Розробка патчів для Wii U"
-			},
-			{
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"name": "zaksabeast",
-				"caption": "Розробник патчів для 3DS",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Архітектура сервера",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"caption": "Архітектура сервера",
-				"github": "https://github.com/binaryoverload",
-				"picture": "https://github.com/binaryoverload.png",
-				"name": "binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Ротації та дослідження Splatoon",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"github": "https://github.com/OatmealDome",
-				"name": "OatmealDome",
-				"caption": "Ротації та дослідження Splatoon",
-				"picture": "https://github.com/OatmealDome.png"
-			},
-			{
-				"caption": "Локалізації та інші внески",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"name": "Користувачі GitHub",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "Будьте в курсі подій",
@@ -327,7 +193,8 @@
 			"registerPrompt": "Немає акаунту?",
 			"loginPrompt": "Вже є акаунт?",
 			"detailsPrompt": "Введіть дані свого облікового запису нижче",
-			"forgotPassword": "Забули пароль?"
+			"forgotPassword": "Забули пароль?",
+			"birthdate": ""
 		},
 		"settings": {
 			"upgrade": "Прокачати акаунт",
@@ -363,7 +230,14 @@
 				"no_signins_notice": "Вхідна історія зараз не відстежується. Спробуйте пізніше!",
 				"no_edit_from_dashboard": "Редагування налаштувань PNID з інформаційної панелі користувача зараз не доступна. Будь ласка, оновіть налаштування користувача з прив'язаної ігрової консолі"
 			},
-			"unavailable": "Не доступно"
+			"unavailable": "Не доступно",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
 		},
 		"accountLevel": [
 			"Стандартний",
@@ -402,7 +276,8 @@
 	},
 	"donation": {
 		"progress": "{totd} з {goald}/місяць, {perc} місячної цілі.",
-		"upgradePush": "Щоб стати передплатником і отримати доступ до цікавих бонусів, відвідайте <a href=\"/account/upgrade\">сторінку прокачки</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"localizationPage": {
 		"title": "Давайте локалізуємо",
@@ -453,5 +328,26 @@
 	},
 	"notfound": {
 		"description": "Упс! Сторінка не знайдена."
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

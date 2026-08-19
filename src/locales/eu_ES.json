@@ -13,14 +13,16 @@
 				"credits": "Taldea ezagutu",
 				"progress": "Proiektuaren aurrerapenak eta helburuak ikusi",
 				"about": "Proiektuari buruz",
-				"faq": "Ohizko galderak"
+				"faq": "Ohizko galderak",
+				"forum": ""
 			}
 		},
 		"accountWidget": {
 			"settings": "Ezarpenak",
 			"logout": "Saioa amaitu"
 		},
-		"donate": "Dohaintza egin"
+		"donate": "Dohaintza egin",
+		"forum": ""
 	},
 	"hero": {
 		"subtitle": "Jokoaren zerbitzariak",
@@ -58,42 +60,36 @@
 				"answer": "Pretendokin hasteko 3DS, Wii U edo emuladoreetan, mesedez <a href='/docs/install'> instalatzeko gida ikusi </a>!"
 			},
 			{
-				"question": "Badakizue zerbitzu/ezaugarriak noiz egongo diren prest?"
+				"question": "Badakizue zerbitzu/ezaugarriak noiz egongo diren prest?",
+				"answer": ""
 			},
 			{
-				"question": "Noiz gehituko dituzue joko gehiago?"
+				"question": "Noiz gehituko dituzue joko gehiago?",
+				"answer": ""
 			},
 			{
-				"question": "Emuladore bat erabiltzen badut, nahikoa da Pretendo erabiltzeko?"
-			}
-		]
-	},
-	"specialThanks": {
-		"people": [
-			{},
-			{},
-			{},
-			{},
-			{
-				"github": "https://github.com/Kinnay"
+				"question": "Emuladore bat erabiltzen badut, nahikoa da Pretendo erabiltzeko?",
+				"answer": ""
 			},
 			{
-				"name": "NinStar",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
+				"question": "",
+				"answer": ""
 			},
 			{
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
+				"question": "",
+				"answer": ""
 			},
 			{
-				"name": "GaryOderNichts",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
+				"question": "",
+				"answer": ""
 			},
 			{
-				"name": "zaksabeast"
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
 			}
 		]
 	},
@@ -102,7 +98,8 @@
 	},
 	"modals": {
 		"confirm": "Baieztatu",
-		"cancel": "Ezeztatu"
+		"cancel": "Ezeztatu",
+		"close": ""
 	},
 	"docs": {
 		"sidebar": {
@@ -116,16 +113,241 @@
 		"search": {
 			"label": "Errore kodea",
 			"caption": "Beheko laukian, zure arazoa idatzi arazoaren informazioa eskuratzeko!",
-			"title": "Errore kode bat duzu?"
+			"title": "Errore kode bat duzu?",
+			"no_match": ""
 		},
 		"quickLinks": {
 			"links": [
-				{},
+				{
+					"caption": "",
+					"header": ""
+				},
 				{
 					"caption": "Hemen bilatu",
 					"header": "Errore bat eduki duzu?"
 				}
-			]
+			],
+			"header": ""
+		},
+		"missingInLocale": ""
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"email": "",
+				"serverEnv": "",
+				"noDiscordLinked": "",
+				"signInSecurity": "",
+				"fullSignInHistory": "",
+				"userSettings": "",
+				"production": "",
+				"linkDiscord": "",
+				"country": "",
+				"birthDate": "",
+				"no_newsletter_notice": "",
+				"removeDiscord": "",
+				"passwordPrompt": "",
+				"no_signins_notice": "",
+				"profile": "",
+				"upgradePrompt": "",
+				"timezone": "",
+				"connectedToDiscord": "",
+				"password": "",
+				"gender": "",
+				"discord": "",
+				"newsletterPrompt": "",
+				"newsletter": "",
+				"hasAccessPrompt": "",
+				"nickname": "",
+				"signInHistory": "",
+				"passwordResetNotice": "",
+				"otherSettings": "",
+				"no_edit_from_dashboard": "",
+				"beta": ""
+			},
+			"upgrade": "",
+			"unavailable": "",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
+		},
+		"accountLevel": [
+			"",
+			"",
+			"",
+			""
+		],
+		"forgotPassword": {
+			"submit": "",
+			"header": "",
+			"sub": "",
+			"input": ""
+		},
+		"loginForm": {
+			"password": "",
+			"forgotPassword": "",
+			"username": "",
+			"loginPrompt": "",
+			"birthdate": "",
+			"email": "",
+			"registerPrompt": "",
+			"detailsPrompt": "",
+			"miiName": "",
+			"login": "",
+			"register": "",
+			"confirmPassword": ""
+		},
+		"resetPassword": {
+			"confirmPassword": "",
+			"sub": "",
+			"header": "",
+			"password": "",
+			"submit": ""
+		},
+		"account": "",
+		"banned": ""
+	},
+	"upgrade": {
+		"back": "",
+		"changeTierPrompt": "",
+		"unsub": "",
+		"changeTier": "",
+		"month": "",
+		"unsubPrompt": "",
+		"changeTierConfirm": "",
+		"title": "",
+		"description": "",
+		"unsubConfirm": "",
+		"tierSelectPrompt": ""
+	},
+	"localizationPage": {
+		"instructions": "",
+		"filePlaceholder": "",
+		"fileInput": "",
+		"title": "",
+		"button": "",
+		"description": ""
+	},
+	"specialThanks": {
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		},
+		"text": "",
+		"title": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"showcase": {
+		"cards": [
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			}
+		],
+		"text": "",
+		"title": ""
+	},
+	"blogPage": {
+		"description": "",
+		"publishedOn": "",
+		"title": "",
+		"published": ""
+	},
+	"donation": {
+		"upgradePushText": "",
+		"progress": "",
+		"upgradePushLinkText": ""
+	},
+	"credits": {
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		},
+		"title": "",
+		"text": ""
+	},
+	"discordJoin": {
+		"title": "",
+		"text": "",
+		"widget": {
+			"text": "",
+			"button": ""
 		}
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"usefulLinks": "",
+		"widget": {
+			"captions": [
+				"",
+				""
+			],
+			"button": ""
+		},
+		"socials": ""
+	},
+	"progressPage": {
+		"title": "",
+		"description": ""
 	}
 }

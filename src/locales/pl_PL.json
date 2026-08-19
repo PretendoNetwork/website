@@ -114,18 +114,35 @@
 	"credits": {
 		"title": "Nasz zespół",
 		"text": "Poznaj zespół stojący za projektem",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"caption": "Właściciel projektu i główny twórca",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",
-		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz."
+		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz.",
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "Bądź na bieżąco",
@@ -154,7 +171,8 @@
 			"Główny motyw Super Mario World 2 - Yoshi's Island to absolutny bop i nie ma mowy, żebyś mnie przekonał, że jest inaczej.",
 			"Moimi ulubionymi wydaniami Nintendo Switch były Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack oraz Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Naprawdę podobał ci się ten tytuł na Virtual Console Nintendo Wii U, więc przywracamy go z powrotem\". Naprawdę widać, że Nintendo zależy.",
 			"\"Znasz kochaną Kip? UwUje cały dzień\" to po południowemu \"Kip UwUje cały czas i jest to naprawdę dziwne i głupie i chciałbym żeby tego nie robiłu\"",
-			"Mój pierwszy filmik na moim kanale!! Od dana chciałem robić filmiki, ale mój laptop był suaby i nie mogłem jednocześnie włączyć frapsa, skajpa i minecrafta. ale już po wszystkim! pomógł mi mój nauczyciel od infy i mój laptop działa dużo lepiej i mogę teraz nagrywać! Mam nadzieję, że wszystkim się podoba, a jeśli tak, łapka w górę i zasubskrybuj!!!"
+			"Mój pierwszy filmik na moim kanale!! Od dana chciałem robić filmiki, ale mój laptop był suaby i nie mogłem jednocześnie włączyć frapsa, skajpa i minecrafta. ale już po wszystkim! pomógł mi mój nauczyciel od infy i mój laptop działa dużo lepiej i mogę teraz nagrywać! Mam nadzieję, że wszystkim się podoba, a jeśli tak, łapka w górę i zasubskrybuj!!!",
+			""
 		]
 	},
 	"progressPage": {
@@ -218,7 +236,8 @@
 			"confirmPassword": "Potwierdź hasło",
 			"registerPrompt": "Nie masz konta?",
 			"loginPrompt": "Posiadasz już konto?",
-			"miiName": "Nazwa Mii"
+			"miiName": "Nazwa Mii",
+			"birthdate": ""
 		},
 		"settings": {
 			"unavailable": "Niedostępne",
@@ -254,7 +273,14 @@
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
 			},
-			"upgrade": "Ulepsz konto"
+			"upgrade": "Ulepsz konto",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
 		},
 		"accountLevel": [
 			"Standardowy",
@@ -292,11 +318,36 @@
 	},
 	"donation": {
 		"progress": "{totd} z {goald}/miesiąc, {perc} miesięcznego celu.",
-		"upgradePush": "Aby zostać subskrybentem i uzyskać dostęp do fajnych bonusów, odwiedź <a href=\"/account/upgrade\">stronę ulepszeń</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"modals": {
 		"cancel": "Anuluj",
 		"confirm": "Potwierdż",
 		"close": "Zamknij"
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

@@ -11,7 +11,8 @@
 				"about": "Σχετικά με το έργο μας",
 				"progress": "Κοίταξε την πρόοδο του έργου και τους στόχους του",
 				"blog": "Οι πιο πρόσφατες ενημερώσεις, συνοπτικά",
-				"faq": "Συχνές ερωτήσεις"
+				"faq": "Συχνές ερωτήσεις",
+				"forum": ""
 			}
 		},
 		"about": "Πληροφορίες",
@@ -63,26 +64,50 @@
 			},
 			{
 				"question": "Το Pretendo δουλεύει σε Cemu/emulators;",
-				"answer": "To Pretendo υποστηρίζει οποιονδήποτε client που μπορεί να αλληλεπιδράσει με το Nintendo Network. Αυτή τη στιγμή το μόνο emulator με αυτή τη λειτουργία είναι το Cemu. Το Cemu 2.0 υποστηρίζει το Pretendo μέσω των ρυθμίσεων του λογαριασμού δικτύου στο emulator. Για περαιτέρω πληροφορίες σχετικά με το Cemu, δες εδώ τις <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Το Citra δεν υποστηρίζει online play και άρα δεν δουλέυει με το Pretendo, και πιθανώς δεν θα το υποστηρίξει ποτέ. To Mikage, ενα 3DS emulator για κινητά, ίσως το υποστηρίζει στο μέλλον, κάτι όμως το οποίο είναι αβέβαιο."
+				"answer": "To Pretendo υποστηρίζει οποιονδήποτε client που μπορεί να αλληλεπιδράσει με το Nintendo Network. Αυτή τη στιγμή το μόνο emulator με αυτή τη λειτουργία είναι το Cemu. Το Cemu 2.0 υποστηρίζει το Pretendo μέσω των ρυθμίσεων του λογαριασμού δικτύου στο emulator. Για περαιτέρω πληροφορίες σχετικά με το Cemu, δες εδώ τις documentation.Το Citra δεν υποστηρίζει online play και άρα δεν δουλέυει με το Pretendo, και πιθανώς δεν θα το υποστηρίξει ποτέ. To Mikage, ενα 3DS emulator για κινητά, ίσως το υποστηρίζει στο μέλλον, κάτι όμως το οποίο είναι αβέβαιο."
 			},
 			{
 				"question": "Αν έχω αποκλειστεί στο Nintendo Network, θα παραμείνω αποκλεισμένος στο Pretendo;",
 				"answer": "Δεν έχουμε πρόσβαση στη λίστα αποκλεισμένων του Nintendo Network, άρα κανένας χρήστης δεν θα είναι αποκλεισμένος στην υπηρεσία μας. Παρ' όλα αυτά, θα υπάρχουν κανόνες κατά τη χρήση της υπηρεσίας μας και η μη τήρηση αυτών των κανόνων μπορεί να οδηγήσει σε αποκλεισμό."
 			},
 			{
-				"answer": "Το Wii ήδη έχει custom servers παρεχόμενους από το <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Αυτή τη στιγμή το Switch δεν είναι στο στόχαστρο μας αφού είναι υπηρεσία επί πληρωμή και τελείως διαφορετικό από το Nintendo Network.",
+				"answer": "Το Wii ήδη έχει custom servers παρεχόμενους από το <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Αυτή τη στιγμή το Switch δεν είναι στο στόχαστρο μας αφού είναι υπηρεσία επί πληρωμή και τελείως διαφορετικό από το Nintendo Network.",
 				"question": "Το Pretendo θα υποστηρίξει το Wii/Switch;"
 			},
 			{
 				"answer": "Ναι, θα χρειαστείς να τροποποιήσεις τη συσκευή σου για να συνδεθείς. Όμως, χρειάζεσαι μόνο πρόσβαση στο Homebrew Launcher (π.χ Haxchi, Coldboot Haxchi, ή web browser exploit) στο Wii U, με πληροφορίες στο πως θα συνδεθείςστο 3DS να έρχονται σε μελλοντική ημερομηνία.",
 				"question": "Θα χρειαστώ hacks για να συνδεθώ;"
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
 			}
 		],
 		"title": "Συχνές ερωτήσεις"
 	},
 	"specialThanks": {
 		"title": "Ιδιαίτερα ευχαριστώ",
-		"text": "Χωρίς αυτά τα άτομα, το Pretendo δεν θα ήταν εδώ που είναι τώρα."
+		"text": "Χωρίς αυτά τα άτομα, το Pretendo δεν θα ήταν εδώ που είναι τώρα.",
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"account": {
 		"settings": {
@@ -119,7 +144,14 @@
 				"linkDiscord": "Σύνδεση λογαριασμού Discord"
 			},
 			"unavailable": "Μη διαθέσιμο",
-			"upgrade": "Αναβάθμιση λογαριασμού"
+			"upgrade": "Αναβάθμιση λογαριασμού",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
 		},
 		"loginForm": {
 			"detailsPrompt": "Συμπλήρωσε τα στοιχεία του λογαριασμού παρακάτω",
@@ -132,7 +164,8 @@
 			"email": "Ηλεκτρονική διέυθυνση (E-Mail)",
 			"registerPrompt": "Δεν έχεις λογαριασμό;",
 			"miiName": "Όνομα Mii",
-			"loginPrompt": "Έχεις ήδη λογαριασμό;"
+			"loginPrompt": "Έχεις ήδη λογαριασμό;",
+			"birthdate": ""
 		},
 		"resetPassword": {
 			"sub": "Συμπλήρωσε παρακάτω το νέο κωδικό σου",
@@ -159,11 +192,19 @@
 	"credits": {
 		"text": "Γνώρισε την ομάδα που αναπτύσσει το project",
 		"title": "Η ομάδα",
-		"people": [
-			{
-				"caption": "Ιδιοκτήτης του έργου και κύριος προγραμματιστής"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"discordJoin": {
 		"text": "Μπές στον Discord server μας για να λαμβάνεις τις νεότερες ενημερώσεις μας πάνω στο project.",
@@ -190,7 +231,8 @@
 			"Το main theme του Super Mario World 2 - Yoshi's Island είναι ό,τι καλυτερο και δεν μεταπείθεις με την καμία.",
 			"Οι αγαπημένες μου κυκλοφορίες του Nintendo Switch είναι το Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, και Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Σου Αρεσε Πολύ Το Χ Παιχνίδι Wii U Virtual Console , Οπότε Το Φέρνουμε Πίσω\" Pack. Είναι προφανές πως η Nintendo ενδιαφέρεται.",
 			"Ήξερες ότι το \"Ξέρεις ότι η Kip, νά' ναι καλά η ψυχούλα, κάνει όλη μέρα UwU\" είναι ο ευγενικός τρόπος να πείς \"Η Kip κάνει UwU συνέχεια και είναι περίεργο και χαζό και μακάρι να μην το έκανε;\"",
-			"Το πρώτο βίντεω στο κανάλι μου!! περίμενα να κάνω βίντεος για πολι καιρό αλλά το λαπτοπ μου ετρεθε πολυ κακά και δεν μπορουσα να τρεχω το fraps, skype κι minecraft ολα μαζι. αλλα αυτο τελιωσε! με λιγο βοηθεια απο το δασκαλο πληροφορικισ μου το λαπτ0π μου τρεχι πολυ καλυτερα και μπορο να καταγράψω τορα! ευχομαι να το απολαυσετε και αν ναι, παρ{'@'}καλο καντε λαεκ και σαμπσκραϊμπ!"
+			"Το πρώτο βίντεω στο κανάλι μου!! περίμενα να κάνω βίντεος για πολι καιρό αλλά το λαπτοπ μου ετρεθε πολυ κακά και δεν μπορουσα να τρεχω το fraps, skype κι minecraft ολα μαζι. αλλα αυτο τελιωσε! με λιγο βοηθεια απο το δασκαλο πληροφορικισ μου το λαπτ0π μου τρεχι πολυ καλυτερα και μπορο να καταγράψω τορα! ευχομαι να το απολαυσετε και αν ναι, παρ{'@'}καλο καντε λαεκ και σαμπσκραϊμπ!",
+			""
 		],
 		"socials": "Κοινωνικά δίκτυα",
 		"usefulLinks": "Χρήσιμοι σύνδεσμοι"
@@ -216,7 +258,8 @@
 	},
 	"donation": {
 		"progress": "{totd} από{goald}/μήνα, {perc} του μηνιαίου στόχου.",
-		"upgradePush": "Για να γίνεις συνδρομητής και να αποκτήσεις πρόσβαση σε κούλ οφέλη, επισκέψου την <a href=\"/account/upgrade\">σελίδα αναβάθμισης</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"localizationPage": {
 		"description": "Επικόλλησε έναν σύνδεσμο σε μια δημόσια προσβάσιμη τοποθεσία JSON για να τη δοκιμάσεις στον ιστότοπο",
@@ -282,5 +325,29 @@
 		"cancel": "Ακύρωση",
 		"close": "Κλείσιμο",
 		"confirm": "Επιβεβαίωση"
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

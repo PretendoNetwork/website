@@ -114,72 +114,35 @@
 	"credits": {
 		"title": "개발 팀",
 		"text": "이 프로젝트 뒤에 있는 팀을 만나보세요",
-		"people": [
-			{
-				"caption": "프로젝트 제작자이자 프로젝트를 이끄는 개발자",
-				"name": "Jonathan Barrow (jonbarrow)",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"caption": "Miiverse 연구와 개발",
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "Wii U 연구 및 패치 개발",
-				"name": "quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "시스템 연구 및 서버 아키텍처 관리",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "웹 개발",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "시스템 연구 및 서버 개발",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "데이터 보존 및 서버 아키텍처 관리",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "시스템 연구 및 서버 개발",
-				"picture": "https://github.com/danielectra.png"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Special Thanks",
 		"text": "이들이 없었으면, Pretendo는 이 자리에 없었을 겁니다.",
-		"people": [
-			{},
-			{},
-			{},
-			{},
-			{
-				"caption": "닌텐도 자료구조 연구"
-			},
-			{},
-			{
-				"caption": "게임기 연구 및 게임 서버"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "최신 정보",
@@ -208,7 +171,8 @@
 			"슈퍼 마리오 월드 2 - 요시의 섬의 메인 테마는 정말 끝내주며, 그렇지 않다고 설득할 방법이 없습니다.",
 			"제가 가장 좋아하는 닌텐도 스위치 출시작은 닌텐도 스위치 온라인 + 확장팩, 닌텐도 스위치 온라인 + 럼블 팩, 닌텐도 스위치 온라인 + 오프라인 플레이 팩, 닌텐도 스위치 온라인 + 또 다른 포트 팩, 닌텐도 스위치 온라인 + 가와시마 박사의 두뇌 훈련/두뇌 나이 \"닌텐도 Wii U 가상 콘솔 타이틀을 정말 좋아해 주셔서 다시 가져왔습니다\" 팩입니다. 닌텐도가 정말 신경을 쓴다는 것을 알 수 있습니다.",
 			"\"애쉬 알잖아, 그녀의 마음을 축복해, 그녀는 하루 종일 우는 거야\"는 \"애쉬는 항상 우는데 정말 이상하고 멍청해서 그러지 않았으면 좋겠어\"라는 남부식 표현입니다.",
-			"내 채널의 첫 번째 비디오 !!! 나는 오랫동안 비디오를 만들고 싶었지만 노트북이 꽤 나빠서 프랩, 스카이프, 마인 크래프트를 한 번에 실행할 수 없었습니다. 하지만 이제 끝났습니다! IT 선생님의 도움으로 노트북이 훨씬 더 잘 실행되고 이제 녹화 할 수 있습니다! 모두 즐기시기 바랍니다 그리고 그렇게한다면 좋아요와 구독을 부탁드립니다!!!"
+			"내 채널의 첫 번째 비디오 !!! 나는 오랫동안 비디오를 만들고 싶었지만 노트북이 꽤 나빠서 프랩, 스카이프, 마인 크래프트를 한 번에 실행할 수 없었습니다. 하지만 이제 끝났습니다! IT 선생님의 도움으로 노트북이 훨씬 더 잘 실행되고 이제 녹화 할 수 있습니다! 모두 즐기시기 바랍니다 그리고 그렇게한다면 좋아요와 구독을 부탁드립니다!!!",
+			""
 		]
 	},
 	"progressPage": {
@@ -276,7 +240,8 @@
 			"username": "사용자 이름",
 			"forgotPassword": "비밀번호를 잊으셨나요?",
 			"registerPrompt": "계정이 없으신가요?",
-			"loginPrompt": "이미 계정을 가지고 계신가요?"
+			"loginPrompt": "이미 계정을 가지고 계신가요?",
+			"birthdate": ""
 		},
 		"account": "계정",
 		"settings": {
@@ -313,7 +278,14 @@
 				"no_signins_notice": "로그인 기록이 아직 기록되지 않았습니다. 나중에 다시 확인하세요!"
 			},
 			"upgrade": "계정 업그레이드",
-			"unavailable": "이용할 수 없음"
+			"unavailable": "이용할 수 없음",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
 		},
 		"forgotPassword": {
 			"header": "비밀번호 찾기",
@@ -346,10 +318,36 @@
 		"changeTier": "티어 변경",
 		"title": "업그레이드",
 		"changeTierPrompt": "정말로 <span class=\"oldtier\">oldtiername</span>를 취소하고 <span class=\"newtier\">newtiername</span>를 구독하시겠습니까?",
-		"month": "달"
+		"month": "달",
+		"description": ""
 	},
 	"donation": {
 		"progress": "{goald}/월 중에서 {totd} , 매달 목표의 {perc}.",
-		"upgradePush": "구독자가 되고 멋진 혜택을 받으시려면, <a href=\"/account/upgrade\">업그레이드 페이지</a>를 방문하세요."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

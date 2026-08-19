@@ -15,45 +15,83 @@
 				"credits": "Upoznaj tim",
 				"about": "O projektu",
 				"faq": "Najčešće postavljena pitanja",
-				"progress": "Proveri napredak i ciljeve projekta"
+				"progress": "Proveri napredak i ciljeve projekta",
+				"blog": "",
+				"forum": ""
 			}
 		},
 		"progress": "Napredak",
-		"about": "Opis"
+		"about": "Opis",
+		"forum": ""
 	},
 	"faq": {
 		"QAs": [
 			{
-				"question": "Šta je Pretendo?"
+				"question": "Šta je Pretendo?",
+				"answer": ""
 			},
 			{
-				"question": "Da li će moji postojeći NNID-evi raditi na Pretendu?"
+				"question": "Da li će moji postojeći NNID-evi raditi na Pretendu?",
+				"answer": ""
 			},
 			{
-				"question": "Kako da koristim Pretendo?"
-			},
-			{},
-			{},
-			{},
-			{
-				"question": "Da li će Pretendo podržavati Wii/Switch?"
+				"question": "Kako da koristim Pretendo?",
+				"answer": ""
 			},
 			{
-				"question": "Da li će mi trebati hakovi za povezivanje?"
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"question": "Da li će Pretendo podržavati Wii/Switch?",
+				"answer": ""
+			},
+			{
+				"question": "Da li će mi trebati hakovi za povezivanje?",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
 			}
 		],
-		"title": "Najčešće postavljena pitanja"
+		"title": "Najčešće postavljena pitanja",
+		"text": ""
 	},
 	"progress": {
-		"title": "Napredak"
+		"title": "Napredak",
+		"githubRepo": ""
 	},
 	"hero": {
 		"buttons": {
 			"readMore": "Pročitaj više"
-		}
+		},
+		"title": "",
+		"text": "",
+		"subtitle": ""
 	},
 	"aboutUs": {
-		"title": "O nama"
+		"title": "O nama",
+		"paragraphs": [
+			"",
+			""
+		]
 	},
 	"modals": {
 		"cancel": "Otkaži",
@@ -61,16 +99,255 @@
 		"confirm": "Potvrdi"
 	},
 	"showcase": {
-		"title": "Šta mi pravimo"
+		"title": "Šta mi pravimo",
+		"cards": [
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			}
+		],
+		"text": ""
 	},
 	"docs": {
 		"search": {
-			"label": "Kod greške"
+			"label": "Kod greške",
+			"title": "",
+			"no_match": "",
+			"caption": ""
 		},
 		"sidebar": {
 			"install": "Instaliraj",
 			"search": "Pretraga",
-			"welcome": "Dobrodošli"
+			"welcome": "Dobrodošli",
+			"getting_started": "",
+			"install_extended": "",
+			"juxt_err": ""
+		},
+		"quickLinks": {
+			"header": "",
+			"links": [
+				{
+					"caption": "",
+					"header": ""
+				},
+				{
+					"caption": "",
+					"header": ""
+				}
+			]
+		},
+		"missingInLocale": ""
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"email": "",
+				"serverEnv": "",
+				"noDiscordLinked": "",
+				"signInSecurity": "",
+				"fullSignInHistory": "",
+				"userSettings": "",
+				"production": "",
+				"linkDiscord": "",
+				"country": "",
+				"birthDate": "",
+				"no_newsletter_notice": "",
+				"removeDiscord": "",
+				"passwordPrompt": "",
+				"no_signins_notice": "",
+				"profile": "",
+				"upgradePrompt": "",
+				"timezone": "",
+				"connectedToDiscord": "",
+				"password": "",
+				"gender": "",
+				"discord": "",
+				"newsletterPrompt": "",
+				"newsletter": "",
+				"hasAccessPrompt": "",
+				"nickname": "",
+				"signInHistory": "",
+				"passwordResetNotice": "",
+				"otherSettings": "",
+				"no_edit_from_dashboard": "",
+				"beta": ""
+			},
+			"upgrade": "",
+			"unavailable": "",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
+		},
+		"accountLevel": [
+			"",
+			"",
+			"",
+			""
+		],
+		"forgotPassword": {
+			"submit": "",
+			"header": "",
+			"sub": "",
+			"input": ""
+		},
+		"loginForm": {
+			"password": "",
+			"forgotPassword": "",
+			"username": "",
+			"loginPrompt": "",
+			"birthdate": "",
+			"email": "",
+			"registerPrompt": "",
+			"detailsPrompt": "",
+			"miiName": "",
+			"login": "",
+			"register": "",
+			"confirmPassword": ""
+		},
+		"resetPassword": {
+			"confirmPassword": "",
+			"sub": "",
+			"header": "",
+			"password": "",
+			"submit": ""
+		},
+		"account": "",
+		"banned": ""
+	},
+	"upgrade": {
+		"back": "",
+		"changeTierPrompt": "",
+		"unsub": "",
+		"changeTier": "",
+		"month": "",
+		"unsubPrompt": "",
+		"changeTierConfirm": "",
+		"title": "",
+		"description": "",
+		"unsubConfirm": "",
+		"tierSelectPrompt": ""
+	},
+	"localizationPage": {
+		"instructions": "",
+		"filePlaceholder": "",
+		"fileInput": "",
+		"title": "",
+		"button": "",
+		"description": ""
+	},
+	"specialThanks": {
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		},
+		"text": "",
+		"title": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"blogPage": {
+		"description": "",
+		"publishedOn": "",
+		"title": "",
+		"published": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"donation": {
+		"upgradePushText": "",
+		"progress": "",
+		"upgradePushLinkText": ""
+	},
+	"credits": {
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		},
+		"title": "",
+		"text": ""
+	},
+	"discordJoin": {
+		"title": "",
+		"text": "",
+		"widget": {
+			"text": "",
+			"button": ""
 		}
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
+	},
+	"footer": {
+		"bandwidthRaccoonQuotes": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"usefulLinks": "",
+		"widget": {
+			"captions": [
+				"",
+				""
+			],
+			"button": ""
+		},
+		"socials": ""
+	},
+	"progressPage": {
+		"title": "",
+		"description": ""
 	}
 }

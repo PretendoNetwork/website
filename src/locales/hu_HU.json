@@ -114,80 +114,19 @@
 	"credits": {
 		"title": "A csapat",
 		"text": "Ismerd meg a csapatot a projekt mögött",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"github": "https://github.com/jonbarrow",
-				"picture": "https://github.com/jonbarrow.png",
-				"caption": "Project tulajdonos és fő fejlesztő"
-			},
-			{
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"name": "Jemma (CaramelKat)",
-				"caption": "Miiverse kutató és fejlesztő"
-			},
-			{
-				"name": "quarky",
-				"caption": "Wii U kutató és patch fejlesztő",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "Rendszer kutatás és szerver architektúra",
-				"github": "https://github.com/SuperMarioDaBom",
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png"
-			},
-			{
-				"picture": "https://github.com/limesdotpink.png",
-				"name": "limes.pink",
-				"caption": "Web fejlesztő",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Rendszer kutató és szerver fejlesztő",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"caption": "Prezervácionista és szerver architektúra"
-			},
-			{
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra",
-				"caption": "Rendszer kutatás és szerver fejlesztés"
-			},
-			{
-				"github": "https://github.com/hauntii",
-				"name": "niko",
-				"caption": "Web és szerver fejlesztés",
-				"picture": "https://github.com/hauntii.png"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps és közösségi munka",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Szerver fejlesztés és optimalizáció",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "3DS patch fejlesztés és kutatás",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -314,93 +253,18 @@
 	"specialThanks": {
 		"title": "Külön köszönet",
 		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van.",
-		"people": [
-			{
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHub hozzájárulók",
-				"caption": "Fordtások és egyéb hozzájárulások",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-			},
-			{
-				"caption": "crunch library fejlesztés",
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS fejlesztés és NEX darabokra szedés",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"caption": "Miiverse információ megosztás",
-				"picture": "https://github.com/rverseTeam.png",
-				"name": "rverse",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Különleges köszönet",
-				"caption": "Kutatás a Nintendo adatstruktúrákról",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Ikonok a Mii Editor-hoz és a Juxt reakciókhoz",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz",
-				"caption": "Konzol kutatás és játék szerverek"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Wii U patch fejlesztés",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS patch készítő",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Szerver architektúra",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload",
-				"name": "binaryoverload",
-				"caption": "Szerver architektúra"
-			},
-			{
-				"caption": "Splatoon forgatások és kutatás",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22",
-				"name": "Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon forgatások és kutatás",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "GitHub hozzájárulók",
-				"caption": "Fordítások és egyéb hozzájárulások",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "Maradj napra kész",
@@ -416,7 +280,8 @@
 	},
 	"donation": {
 		"progress": "{totd} a {goald}/hó, {perc} a havi célból.",
-		"upgradePush": "Hogy előfizetővé válhass, és hozzáférj király cuccokhoz, látogasd meg a <a href=\"/account/upgrade\">bővítés oldalt</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"localizationPage": {
 		"title": "Fordíts",
@@ -463,5 +328,26 @@
 	},
 	"notfound": {
 		"description": "Hoppá! Nem találjuk ezt az oldalt."
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

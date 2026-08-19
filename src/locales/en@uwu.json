@@ -16,7 +16,8 @@
 				"about": "seez infomations",
 				"faq": "frekuentwy askud kweshtunz",
 				"progress": "see projekt progrez",
-				"blog": "new thingzz, but smol"
+				"blog": "new thingzz, but smol",
+				"forum": ""
 			}
 		},
 		"progress": "eta wen",
@@ -113,171 +114,35 @@
 	"credits": {
 		"title": "dev kittehs",
 		"text": "see kittehz who maek pretender!!",
-		"people": [
-			{
-				"caption": "da big cheez",
-				"name": "jon pretender",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"caption": "miiveres kitteh!",
-				"name": "jem :3",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat"
-			},
-			{
-				"caption": "wii u foxish!!!!!",
-				"name": "lucakitteh!! ^^",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"caption": "rezearch kitteh",
-				"name": "supah marioh da vroom",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"caption": "onlien kitteh ^w^",
-				"name": "purple lemonzz :3",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"caption": "servah debeloper kitteh!!!",
-				"name": "camera creature 2k!!!!",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"caption": "gaem history saveh kiteh,,",
-				"name": "billeh!",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"caption": "server dev kitteh o.o",
-				"name": "daneh zappy...",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"caption": "website servah kitteh!! ^^",
-				"name": "og kitteh!!!!",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"caption": "deb..ops..? kitteh!",
-				"name": "matteh",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"caption": "servah kitteh n speedi kitteh!",
-				"name": "wolfiiii! ^^",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"caption": "duel screeh reseacha!!",
-				"name": "traceh bored &gt;:(",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "speshul thx",
 		"text": "theze kittehs helpd!!",
-		"people": [
-			{
-				"name": "geethub contrwibutahs!!!!! uwu",
-				"caption": "wocawizawitwions n moar!!!!",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"caption": "crunchii libwrary dev!!!",
-				"name": "uber whiskahs!!!!! (superwhiskers)",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"caption": "duel scweeen debeprobah and pachket takher-apahter!",
-				"name": "staweh :3 (Stary)",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"caption": "we steal their code :3",
-				"name": "green juxt!",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"special": "speshul thx",
-				"caption": "gawd of meanine weseawch!!!!",
-				"name": "kinneh!",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"caption": "icwn designah!!!!",
-				"name": "ninstah! ^w^",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"caption": "gaem reseawchhh n dev!",
-				"name": "rambeh &gt;:3",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"caption": "wiiuu pwatchy hacky! ^w^",
-				"name": "gary (cool one!)",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"caption": "duaaalsccween haxorz!!!! owo",
-				"name": "zak is da 3ds beast",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"caption": "servah maker!!! ^u^",
-				"name": "jvkitteh fr",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"caption": "g-gopah??? gopah??????",
-				"name": "binareh mcbinareh ^w^",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"caption": "splooner!",
-				"name": "slimon!!!",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"caption": "splooner,,,",
-				"name": "porridge creature :3",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "gwitwub fwends!!",
-				"caption": "dey maek langwage gud u.u",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"text": "entr de discord for new infoz from kittehs 4 pretender!!",
@@ -326,7 +191,8 @@
 			"username": "kitteh name",
 			"forgotPassword": "i forget secret kitteh word!! halp!",
 			"confirmPassword": "confirm secret kitteh words",
-			"registerPrompt": "maek a new kitteh"
+			"registerPrompt": "maek a new kitteh",
+			"birthdate": ""
 		},
 		"settings": {
 			"settingCards": {
@@ -362,7 +228,14 @@
 				"no_edit_from_dashboard": "changin yor kitteh opshuns from interwebs is nono!! do from yor konsole."
 			},
 			"unavailable": "no :(",
-			"upgrade": "become super kitteh"
+			"upgrade": "become super kitteh",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
 		},
 		"account": "kitteh",
 		"forgotPassword": {
@@ -450,9 +323,31 @@
 	},
 	"donation": {
 		"progress": "{totd} of {goald}/munth, {perc} of teh monthly goal",
-		"upgradePush": "u wanna become super kitteh and get kool perkz?? <a href=\"/account/upgrade\">upgrade now!!</a>"
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"notfound": {
 		"description": "uh oh! we did a widdle fucky wucky! oopsie daisie! oh noes!!!!!"
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

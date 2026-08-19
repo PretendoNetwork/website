@@ -18,9 +18,11 @@
 				"about": "このプロジェクトについて",
 				"blog": "最新のアップデート（簡易版）",
 				"progress": "プロジェクトの進行状況と目的を確認",
-				"faq": "よくある質問"
+				"faq": "よくある質問",
+				"forum": ""
 			}
-		}
+		},
+		"forum": ""
 	},
 	"hero": {
 		"subtitle": "ゲームサーバー",
@@ -112,171 +114,35 @@
 	"credits": {
 		"title": "開発チーム",
 		"text": "プロジェクトを支えるチームの紹介",
-		"people": [
-			{
-				"caption": "プロジェクトオーナーおよび主な開発者",
-				"picture": "https://github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow",
-				"name": "Jonathan Barrow (jonbarrow)"
-			},
-			{
-				"caption": "Miiverseの研究と開発",
-				"name": "Jemma (CaramelKat)",
-				"github": "https://github.com/CaramelKat",
-				"picture": "https://github.com/caramelkat.png"
-			},
-			{
-				"caption": "Wii Uの研究、パッチの開発",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "システムの研究とサーバーアーキテクチャ",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"caption": "Webの開発",
-				"github": "https://github.com/limesdotpink",
-				"name": "limes.pink",
-				"picture": "https://github.com/limesdotpink.png"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"caption": "システムの研究とサーバーの開発",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"github": "https://github.com/InternalLoss",
-				"caption": "プリザベーションとサーバーアーキテクチャ",
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy"
-			},
-			{
-				"caption": "システムの研究とサーバーの開発",
-				"github": "https://github.com/DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"name": "DaniElectra"
-			},
-			{
-				"caption": "Webとサーバーの開発",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii",
-				"name": "niko"
-			},
-			{
-				"caption": "DevOpsとコミュニティの活動",
-				"picture": "https://github.com/MatthewL246.png",
-				"name": "MatthewL246",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"caption": "サーバーの開発と最適化",
-				"name": "wolfendale",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains",
-				"caption": "3DSのパッチ開発と研究"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "スペシャルサンクス",
 		"text": "Pretendoのいまの姿を作り上げた方たちです。",
-		"people": [
-			{
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork",
-				"name": "GitHubでの貢献者",
-				"caption": "翻訳とその他の貢献"
-			},
-			{
-				"name": "superwhiskers",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers",
-				"caption": "Crunchのライブラリ開発"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"caption": "3DSの開発とNEXディセクター",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"caption": "Miiverseの情報共有"
-			},
-			{
-				"special": "スペシャルサンクス",
-				"name": "Kinnay",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"caption": "Nintendoのデータ構造に関する研究",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"caption": "アイコンの制作(MiiエディターとJuxtのリアクション)",
-				"name": "NinStar",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"caption": "コンソールの研究とゲームサーバー",
-				"name": "Rambo6Glaz",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"caption": "Wii Uパッチの開発",
-				"github": "https://github.com/GaryOderNichts",
-				"name": "GaryOderNichts",
-				"picture": "https://github.com/GaryOderNichts.png"
-			},
-			{
-				"caption": "3DSパッチの作者",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"name": "zaksabeast",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"caption": "サーバーアーキテクチャ",
-				"name": "mrjvs",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"caption": "サーバーアーキテクチャ",
-				"name": "binaryoverload",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"caption": "Splatoon のローテーションと研究",
-				"name": "Simonx22",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon ローテーションと研究",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"caption": "翻訳とその他の貢献",
-				"name": "GitHubの貢献者",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "最新情報を入手する",
@@ -419,7 +285,8 @@
 			"login": "ログイン",
 			"confirmPassword": "パスワードの確認",
 			"forgotPassword": "パスワードを忘れた場合",
-			"registerPrompt": "アカウントをお持ちでない場合"
+			"registerPrompt": "アカウントをお持ちでない場合",
+			"birthdate": ""
 		},
 		"account": "アカウント",
 		"forgotPassword": {
@@ -451,7 +318,8 @@
 	},
 	"donation": {
 		"progress": "{totd}/{goald}(寄付額/目標) ー 月間目標の {perc}の寄付を頂いています。",
-		"upgradePush": "サブスクライバーになってクールな特典にアクセスするには、<a href=\"/account/upgrade\">アップグレード ページ</a>にアクセスしてください。"
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"modals": {
 		"cancel": "キャンセル",
@@ -460,5 +328,26 @@
 	},
 	"notfound": {
 		"description": "おっと！このページは見つかりません。"
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

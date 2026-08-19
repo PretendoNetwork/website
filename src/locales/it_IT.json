@@ -114,171 +114,35 @@
 	"credits": {
 		"title": "Il team",
 		"text": "Incontra il team dietro al progetto",
-		"people": [
-			{
-				"name": "Jonathan Barrow (jonbarrow)",
-				"github": "https://github.com/jonbarrow",
-				"picture": "https://github.com/jonbarrow.png",
-				"caption": "Proprietario del progetto e sviluppatore principale"
-			},
-			{
-				"name": "Jemma (CaramelKat)",
-				"picture": "https://github.com/caramelkat.png",
-				"github": "https://github.com/CaramelKat",
-				"caption": "Ricercatore e sviluppo di Miiverse"
-			},
-			{
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky",
-				"name": "quarky",
-				"caption": "Ricercatore e sviluppo delle patch per Wii U"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"github": "https://github.com/SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"caption": "Ricerca di sistemi e architettura dei server"
-			},
-			{
-				"caption": "Sviluppo web",
-				"github": "https://github.com/limesdotpink",
-				"name": "limes.pink",
-				"picture": "https://github.com/limesdotpink.png"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000",
-				"caption": "Ricerca dei sistemi e sviluppo del server"
-			},
-			{
-				"picture": "https://github.com/InternalLoss.png",
-				"name": "Billy",
-				"github": "https://github.com/InternalLoss",
-				"caption": "Preservazionista e architettura server"
-			},
-			{
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra",
-				"caption": "Ricerca sui sistemi e sviluppo server"
-			},
-			{
-				"picture": "https://github.com/hauntii.png",
-				"name": "niko",
-				"caption": "Sviluppo dei server e web",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246",
-				"name": "MatthewL246",
-				"caption": "DevOps e lavoro nella community"
-			},
-			{
-				"name": "wolfendale",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale",
-				"caption": "Sviluppo e ottimizzazione dei server"
-			},
-			{
-				"github": "https://github.com/TraceEntertains",
-				"name": "TraceEntertains",
-				"caption": "Sviluppo patch 3DS e ricerca",
-				"picture": "https://github.com/TraceEntertains.png"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
 		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
-		"people": [
-			{
-				"caption": "Localizzazioni e altri contributi",
-				"name": "Contributori GitHub",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"github": "https://github.com/superwhiskers",
-				"name": "superwhiskers",
-				"caption": "Sviluppo libreria crunch",
-				"picture": "https://github.com/superwhiskers.png"
-			},
-			{
-				"name": "Stary",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001",
-				"caption": "Sviluppo 3DS e del dissettore NEX"
-			},
-			{
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub",
-				"name": "rverse",
-				"caption": "Condivisione di informazioni riguardo Miiverse"
-			},
-			{
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay",
-				"special": "Ringraziamenti speciali",
-				"name": "Kinnay",
-				"caption": "Ricerca sulle strutture dati Nintendo"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Icone per lo Studio Mii e reazioni Juxt",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"caption": "Ricerca console e server di gioco",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12",
-				"name": "Rambo6Glaz"
-			},
-			{
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts",
-				"name": "GaryOderNichts",
-				"caption": "Sviluppo patch Wii U"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "Creatore patch 3DS",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"picture": "https://github.com/mrjvs.png",
-				"name": "mrjvs",
-				"caption": "Architettura server",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload",
-				"name": "binaryoverload",
-				"caption": "Architettura server"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Rotazioni di Splatoon e ricerca",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Rotazioni di Splatoon e ricerca",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "Contributori GitHub",
-				"caption": "Localizzazioni e altri contributi",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "Tieniti aggiornato",
@@ -340,7 +204,8 @@
 			"loginPrompt": "Hai già un account?",
 			"confirmPassword": "Conferma password",
 			"email": "Email",
-			"registerPrompt": "Non hai un account?"
+			"registerPrompt": "Non hai un account?",
+			"birthdate": ""
 		},
 		"settings": {
 			"settingCards": {
@@ -458,9 +323,31 @@
 	},
 	"donation": {
 		"progress": "{totd} di {goald}/mese, {perc} del goal mensile.",
-		"upgradePush": "Per diventare un abbonato e accedere a ricompense speciali, visita la <a href=\"/account/upgrade\">pagina per fare l'upgrade</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"notfound": {
 		"description": "Oops! Non siamo riusciti a trovare questa pagina."
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

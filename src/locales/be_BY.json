@@ -17,10 +17,12 @@
 				"about": "Пра праект",
 				"faq": "Пытанні і адказы",
 				"progress": "Праверце ход і мэты праекта",
-				"blog": "Нашы апошнія абнаўленні, скарочаныя"
+				"blog": "Нашы апошнія абнаўленні, скарочаныя",
+				"forum": ""
 			}
 		},
-		"account": "Аккаунт"
+		"account": "Аккаунт",
+		"forum": ""
 	},
 	"hero": {
 		"title": "Адноўлены",
@@ -63,7 +65,7 @@
 			},
 			{
 				"question": "Працуе лі Pretendo на Cemu/эмуляторах?",
-				"answer": "Pretendo падтрымлівае любы кліент, які можа ўзаемадзейнічаць з Nintendo Network. На дадзены момант адзіным эмулятарам з такой функцыянальнасцю з'яўляецца Cemu. Cemu 2.0 афіцыйна падтрымлівае Pretendo ў параметрах вашага сеткавага ўліковага запісу ў эмулятары. Для атрымання інфармацыі аб тым, як пачаць працу з Cemu, праверце <a href=\"https://pretendo.network/docs/install/cemu\">дакументацыю</a>.<br>Citra не падтрымлівае сапраўдную анлайн-гульню і таму не працуе з Pretendo і ўвогуле не паказвае прыкмет падтрымкі сапраўднай онлайн-гульні. Mikage, эмулятар 3DS для мабільных прылад, можа забяспечыць падтрымку ў будучыні, хоць гэта далёка не пэўна."
+				"answer": "Pretendo падтрымлівае любы кліент, які можа ўзаемадзейнічаць з Nintendo Network. На дадзены момант адзіным эмулятарам з такой функцыянальнасцю з'яўляецца Cemu. Cemu 2.0 афіцыйна падтрымлівае Pretendo ў параметрах вашага сеткавага ўліковага запісу ў эмулятары. Для атрымання інфармацыі аб тым, як пачаць працу з Cemu, праверце дакументацыю.Citra не падтрымлівае сапраўдную анлайн-гульню і таму не працуе з Pretendo і ўвогуле не паказвае прыкмет падтрымкі сапраўднай онлайн-гульні. Mikage, эмулятар 3DS для мабільных прылад, можа забяспечыць падтрымку ў будучыні, хоць гэта далёка не пэўна."
 			},
 			{
 				"question": "Калі я забанен на Nintendo Network, буду я забанен на Pretendo?",
@@ -71,18 +73,48 @@
 			},
 			{
 				"question": "Ці будзе Pretendo падтрымліваць Wii/Switch?",
-				"answer": "У Wii ужо ёсць спецыяльныя серверы, прадастаўленыя <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. У цяперашні час мы не жадаем арыентавацца на камутатар, паколькі ён платны і цалкам адрозніваецца ад Nintendo Network."
+				"answer": "У Wii ужо ёсць спецыяльныя серверы, прадастаўленыя <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. У цяперашні час мы не жадаем арыентавацца на камутатар, паколькі ён платны і цалкам адрозніваецца ад Nintendo Network."
 			},
 			{
 				"question": "Ці спатрэбяцца мне мады для падключэння?",
 				"answer": "Так, вам трэба будзе ўзламаць прыладу для падлучэння; аднак на Wii U вам спатрэбіцца толькі доступ да Homebrew Launcher (напрыклад, Haxchi, Coldboot Haxchi або нават эксплойта вэб-браўзера), а інфармацыя пра тое, як 3DS будзе падключацца, будзе даступная пазней."
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
 			}
 		]
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
-			"Я енот Бэндвіф, і я люблю кусаць правада сервераў Pretendo Network. Ням!"
-		]
+			"Я енот Бэндвіф, і я люблю кусаць правада сервераў Pretendo Network. Ням!",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"usefulLinks": "",
+		"widget": {
+			"captions": [
+				"",
+				""
+			],
+			"button": ""
+		},
+		"socials": ""
 	},
 	"showcase": {
 		"title": "Што мы робім?",
@@ -104,10 +136,218 @@
 	},
 	"credits": {
 		"title": "Каманда",
-		"text": "Пазнаёмцеся з камандай, якая стаіць за праектам"
+		"text": "Пазнаёмцеся з камандай, якая стаіць за праектам",
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Асобнае дзякуй",
-		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння."
+		"text": "Без іх Pretendo не быў бы там, дзе ён ёсць сёння.",
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
+	},
+	"docs": {
+		"sidebar": {
+			"search": "",
+			"getting_started": "",
+			"install_extended": "",
+			"install": "",
+			"juxt_err": "",
+			"welcome": ""
+		},
+		"quickLinks": {
+			"header": "",
+			"links": [
+				{
+					"caption": "",
+					"header": ""
+				},
+				{
+					"caption": "",
+					"header": ""
+				}
+			]
+		},
+		"search": {
+			"title": "",
+			"no_match": "",
+			"caption": "",
+			"label": ""
+		},
+		"missingInLocale": ""
+	},
+	"account": {
+		"settings": {
+			"settingCards": {
+				"email": "",
+				"serverEnv": "",
+				"noDiscordLinked": "",
+				"signInSecurity": "",
+				"fullSignInHistory": "",
+				"userSettings": "",
+				"production": "",
+				"linkDiscord": "",
+				"country": "",
+				"birthDate": "",
+				"no_newsletter_notice": "",
+				"removeDiscord": "",
+				"passwordPrompt": "",
+				"no_signins_notice": "",
+				"profile": "",
+				"upgradePrompt": "",
+				"timezone": "",
+				"connectedToDiscord": "",
+				"password": "",
+				"gender": "",
+				"discord": "",
+				"newsletterPrompt": "",
+				"newsletter": "",
+				"hasAccessPrompt": "",
+				"nickname": "",
+				"signInHistory": "",
+				"passwordResetNotice": "",
+				"otherSettings": "",
+				"no_edit_from_dashboard": "",
+				"beta": ""
+			},
+			"upgrade": "",
+			"unavailable": "",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
+			}
+		},
+		"accountLevel": [
+			"",
+			"",
+			"",
+			""
+		],
+		"forgotPassword": {
+			"submit": "",
+			"header": "",
+			"sub": "",
+			"input": ""
+		},
+		"loginForm": {
+			"password": "",
+			"forgotPassword": "",
+			"username": "",
+			"loginPrompt": "",
+			"birthdate": "",
+			"email": "",
+			"registerPrompt": "",
+			"detailsPrompt": "",
+			"miiName": "",
+			"login": "",
+			"register": "",
+			"confirmPassword": ""
+		},
+		"resetPassword": {
+			"confirmPassword": "",
+			"sub": "",
+			"header": "",
+			"password": "",
+			"submit": ""
+		},
+		"account": "",
+		"banned": ""
+	},
+	"upgrade": {
+		"back": "",
+		"changeTierPrompt": "",
+		"unsub": "",
+		"changeTier": "",
+		"month": "",
+		"unsubPrompt": "",
+		"changeTierConfirm": "",
+		"title": "",
+		"description": "",
+		"unsubConfirm": "",
+		"tierSelectPrompt": ""
+	},
+	"localizationPage": {
+		"instructions": "",
+		"filePlaceholder": "",
+		"fileInput": "",
+		"title": "",
+		"button": "",
+		"description": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"blogPage": {
+		"description": "",
+		"publishedOn": "",
+		"title": "",
+		"published": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"donation": {
+		"upgradePushText": "",
+		"progress": "",
+		"upgradePushLinkText": ""
+	},
+	"discordJoin": {
+		"title": "",
+		"text": "",
+		"widget": {
+			"text": "",
+			"button": ""
+		}
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
+	},
+	"modals": {
+		"cancel": "",
+		"confirm": "",
+		"close": ""
+	},
+	"progressPage": {
+		"title": "",
+		"description": ""
 	}
 }

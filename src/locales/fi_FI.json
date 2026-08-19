@@ -19,7 +19,7 @@
 			},
 			{
 				"question": "Toimiiko Pretendo Cemu:lla/emulaattoreissa?",
-				"answer": "Pretendo tukee kaikkia asiakasohjelmia, jotka pystyvät keskustelemaan Nintendo Network:in kanssa. Tällä hetkellä ainoa emulaattori, jossa on nämä toiminnallisuudet on Cemu. Cemu 2.0 tukee Pretendoa virallisesti emulaattorin verkkotili-asetusten kautta. LIsäinformaatiota siitä, kuinka pääset alkuun Cemu:n kanssa löytyy <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Citra ei tue todellista online-pelaamista ja ei sikäli siis toimi Pretendon kanssa, myöskään tulevaisuuden suunnitelmissa ei näytä olevan todellista online-tukea. Mikage, 3DS-emulaattori mobiililaitteille saattaa tulevaisuudessa tukea verkkotoimintoja, mutta tämä on yhä hyvin epävarmaa."
+				"answer": "Pretendo tukee kaikkia asiakasohjelmia, jotka pystyvät keskustelemaan Nintendo Network:in kanssa. Tällä hetkellä ainoa emulaattori, jossa on nämä toiminnallisuudet on Cemu. Cemu 2.0 tukee Pretendoa virallisesti emulaattorin verkkotili-asetusten kautta. LIsäinformaatiota siitä, kuinka pääset alkuun Cemu:n kanssa löytyy documentation.Citra ei tue todellista online-pelaamista ja ei sikäli siis toimi Pretendon kanssa, myöskään tulevaisuuden suunnitelmissa ei näytä olevan todellista online-tukea. Mikage, 3DS-emulaattori mobiililaitteille saattaa tulevaisuudessa tukea verkkotoimintoja, mutta tämä on yhä hyvin epävarmaa."
 			},
 			{
 				"question": "Jos minut on bännätty Nintendo Networkista, pysynkö bännissä myös Pretendossa?",
@@ -27,14 +27,15 @@
 			},
 			{
 				"question": "Tuleeko Pretendo tukemaan Wii:tä/Switch:iä?",
-				"answer": "Wii:lle on jo omat palvelimensa jotka tarjoaa <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Meillä ei tällä hetkellä ole halua kohdentaa palveluitamme Switch:ille, sillä kyseessä on maksullinen täysin Nintendo Network:ista poikkeava palvelu."
+				"answer": "Wii:lle on jo omat palvelimensa jotka tarjoaa <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. Meillä ei tällä hetkellä ole halua kohdentaa palveluitamme Switch:ille, sillä kyseessä on maksullinen täysin Nintendo Network:ista poikkeava palvelu."
 			},
 			{
 				"question": "Tarvitsenko murretun konsolin?",
 				"answer": "Kyllä, sinun pitää murtaa konsolisi yhteyttä varten. Lisätietoja asentamisesta löydät &lt;a href=\"https://pretendo.network/docs/install/wiiu\"&gt;täältä&lt;/a&gt;."
 			},
 			{
-				"question": "Tarvitsenko modeja yhdistääkseni?"
+				"question": "Tarvitsenko modeja yhdistääkseni?",
+				"answer": ""
 			},
 			{
 				"question": "Jos minulla on Nintendo Network -kielto, pysyykö se voimassa käyttäessäni Pretendoa?",
@@ -55,7 +56,8 @@
 				"credits": "Tutustu tiimiin",
 				"about": "Tietoja projektista",
 				"faq": "Usein kysytyt kysymykset",
-				"progress": "Tutustu projektin edistymiseen ja tavoitteisiin"
+				"progress": "Tutustu projektin edistymiseen ja tavoitteisiin",
+				"forum": ""
 			}
 		},
 		"about": "Tietoja",
@@ -69,7 +71,8 @@
 		},
 		"donate": "Lahjoita",
 		"blog": "Blogi",
-		"credits": "Tekijät"
+		"credits": "Tekijät",
+		"forum": ""
 	},
 	"hero": {
 		"subtitle": "Pelipalvelimet",
@@ -111,78 +114,35 @@
 	"credits": {
 		"title": "Tiimi",
 		"text": "Tutustu tiimiin projektin takana",
-		"people": [
-			{
-				"caption": "Projektin omistaja ja johtava kehittäjä"
-			},
-			{},
-			{},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Web-kehitys"
-			},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
-			},
-			{
-				"caption": "Säilytystyö ja palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Järjestelmäntutkimus ja palvelinkehitys"
-			},
-			{
-				"caption": "Web- ja palvelinkehitys"
-			},
-			{},
-			{
-				"caption": "Palvelinkehitys ja -optimointi"
-			},
-			{
-				"caption": "3DS-patchikehitys ja -tutkimus"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Erityiskiitokset",
 		"text": "Ilman heitä Pretendo ei olisi siinä, missä olemme nyt.",
-		"people": [
-			{
-				"name": "GitHub-osalliset",
-				"caption": "Lokalisaatiot ja muu osallistuminen"
-			},
-			{
-				"caption": "crunch-kirjaston kehitys"
-			},
-			{
-				"caption": "3DS- ja NEX dissector -kehitys"
-			},
-			{},
-			{
-				"special": "Erityiskiitokset",
-				"caption": "Nintendon tietorakenteiden tutkimus"
-			},
-			{},
-			{
-				"caption": "Konsolitutkimus ja pelipalvelimet"
-			},
-			{
-				"caption": "Wii U -patchikehitys"
-			},
-			{},
-			{
-				"caption": "Palvelinarkkitehtuuri"
-			},
-			{
-				"caption": "Palvelinarkkitehtuuri"
-			},
-			{},
-			{},
-			{
-				"name": "GitHub-osalliset"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"discordJoin": {
 		"title": "Pysy ajan tasalla",
@@ -211,7 +171,8 @@
 			"Super Mario World 2 - Yoshi's Island:in pääteema on kuminta hottia, ja et voi millään saada minua muuttamaan mielipidettäni.",
 			"Omat lempi Switch-julkaisuni ovat Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack, and Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Piditte pelistä Wii U:lla niin paljon, että toimme sen takaisin\" Pack. Näkee selvästi, että Nintendo välittää.",
 			"\"Tiedäthän rakkaan Kipin, joka söpöilee koko ajan\" on kaunis tapa sanoa \"Kip söpöstelee koko ajan ja se on tosi outoa ja tyhmää ja toivoisin että ne eivät tekisi sitä\"",
-			"Munekavideomunomallakanavalla!! oon halunnut tehä viteoita jo kauan, mutta mun läppäri oli huono, eikä pyörittäny frapsia , skypeä ja minecrafia yhtaikaa! nyt se on ohi! mun ATK-maikka autto ja nytmun läppäri pyörii paljon paremmin ja voin nauhottaa! toivottavasti tykkäätte ja laittakaa tykkäykseen ja tilaukseen!!!"
+			"Munekavideomunomallakanavalla!! oon halunnut tehä viteoita jo kauan, mutta mun läppäri oli huono, eikä pyörittäny frapsia , skypeä ja minecrafia yhtaikaa! nyt se on ohi! mun ATK-maikka autto ja nytmun läppäri pyörii paljon paremmin ja voin nauhottaa! toivottavasti tykkäätte ja laittakaa tykkäykseen ja tilaukseen!!!",
+			""
 		]
 	},
 	"progressPage": {
@@ -236,7 +197,8 @@
 			"forgotPassword": "Unohditko salasanasi?",
 			"loginPrompt": "Onko tili jo luotu?",
 			"username": "Käyttäjänimi",
-			"registerPrompt": "Ei vielä tiliä?"
+			"registerPrompt": "Ei vielä tiliä?",
+			"birthdate": ""
 		},
 		"settings": {
 			"upgrade": "Nosta tililuokkaa",
@@ -272,6 +234,13 @@
 				"no_newsletter_notice": "Uutiskirje ei ole tällä hetkellä saatavilla. Palaa asiaan myöhemmin",
 				"no_signins_notice": "Kirjautumishistoriaa ei toistaiseksi seurata. Palaa asiaan myöhemmin!",
 				"no_edit_from_dashboard": "PNID -asetuksia ei toistaiseksi voi muokata koontinäytöltä. Päivitä asetukset linkitetyltä konsoliltasi"
+			},
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
 			}
 		},
 		"accountLevel": [
@@ -354,6 +323,31 @@
 	},
 	"donation": {
 		"progress": "{totd} tavoitteesta {goald}/kuussa, {perc} kuukausitavoitteesta.",
-		"upgradePush": "Tullaksesi tilaajaksi ja saadaksesi siistejä etuja, vieraile <a href=\"/account/upgrade\">tilityypin korotussivulla</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

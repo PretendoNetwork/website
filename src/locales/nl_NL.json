@@ -96,171 +96,35 @@
 	"credits": {
 		"title": "Het team",
 		"text": "Ontmoet het team achter het project",
-		"people": [
-			{
-				"caption": "Eigenaar en hoofdontwikkelaar",
-				"name": "Jonathan Barrow (Jonbarrow)",
-				"picture": "­https://www.github.com/jonbarrow.png",
-				"github": "https://github.com/jonbarrow"
-			},
-			{
-				"name": "Jеmma (CaramelKat)",
-				"caption": "Miiverse onderzoek en development",
-				"picture": "https://www.github.com/caramelkat.png",
-				"github": "https://www.github.com/CaramelKat"
-			},
-			{
-				"caption": "Wii U onderzoek en patch ontwikkeling",
-				"name": "Quarky",
-				"picture": "https://github.com/ashquarky.png",
-				"github": "https://github.com/ashquarky"
-			},
-			{
-				"name": "SuperMarioDaBom",
-				"caption": "Systeem onderzoek en server architectuur",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "pinklimes",
-				"caption": "Web ontwikkeling",
-				"picture": "https://github.com/gitlimes.png",
-				"github": "https://github.com/gitlimes"
-			},
-			{
-				"name": "Shutterbug2000",
-				"caption": "Systems research en server ontwikkeling",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"caption": "Behoudsgezinde en server architectuur",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"caption": "Systeem onderzoek en server developement",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko",
-				"caption": "Web en server developement",
-				"picture": "https://github.com/hauntii.png",
-				"github": "https://github.com/hauntii"
-			},
-			{
-				"name": "MatthewL246",
-				"caption": "DevOps en communitywerk",
-				"picture": "https://github.com/MatthewL246.png",
-				"github": "https://github.com/MatthewL246"
-			},
-			{
-				"name": "wolfendale",
-				"caption": "Serverontwikkeling en -optimalisatie",
-				"picture": "https://github.com/wolfendale.png",
-				"github": "https://github.com/wolfendale"
-			},
-			{
-				"name": "TraceEntertains",
-				"caption": "Ontwikkeling en onderzoek van 3DS-patches",
-				"picture": "https://github.com/TraceEntertains.png",
-				"github": "https://github.com/TraceEntertains"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		}
 	},
 	"specialThanks": {
 		"title": "Speciale dank",
 		"text": "Zonder hen zou Pretendo vandaag niet zijn wat het nu is.",
-		"people": [
-			{
-				"name": "GitHub-bijdragers",
-				"caption": "Lokalisaties en andere bijdragen",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			},
-			{
-				"name": "superwhiskers",
-				"caption": "crunch library development",
-				"picture": "https://github.com/superwhiskers.png",
-				"github": "https://github.com/superwhiskers"
-			},
-			{
-				"name": "Stary",
-				"caption": "3DS-ontwikkeling en NEX-dissector",
-				"picture": "https://github.com/Stary2001.png",
-				"github": "https://github.com/Stary2001"
-			},
-			{
-				"name": "rverse",
-				"caption": "Miiverse informatie delen",
-				"picture": "https://github.com/rverseTeam.png",
-				"github": "https://twitter.com/rverseClub"
-			},
-			{
-				"name": "Kinnay",
-				"special": "Speciale dank",
-				"caption": "Onderzoek naar Nintendo-datastructuren",
-				"picture": "https://cdn.discordapp.com/avatars/186572995848830987/b55c0d4e7bfd792edf0689f83a25d8ea.png?size=128",
-				"github": "https://github.com/Kinnay"
-			},
-			{
-				"name": "NinStar",
-				"caption": "Pictogrammen voor de Mii Editor en Juxt-reacties",
-				"picture": "https://github.com/ninstar.png",
-				"github": "https://github.com/ninstar"
-			},
-			{
-				"name": "Rambo6Glaz",
-				"caption": "Console onderzoek en spel servers",
-				"picture": "https://github.com/EpicUsername12.png",
-				"github": "https://github.com/EpicUsername12"
-			},
-			{
-				"name": "GaryOderNichts",
-				"caption": "Ontwikkeling van Wii U-patches",
-				"picture": "https://github.com/GaryOderNichts.png",
-				"github": "https://github.com/GaryOderNichts"
-			},
-			{
-				"name": "zaksabeast",
-				"caption": "3DS patch creator",
-				"picture": "https://cdn.discordapp.com/avatars/219324395707957248/c62573fbd4d26c8b4724f54413df6960.png?size=128",
-				"github": "https://github.com/zaksabeast"
-			},
-			{
-				"name": "mrjvs",
-				"caption": "Server architectuur",
-				"picture": "https://github.com/mrjvs.png",
-				"github": "https://github.com/mrjvs"
-			},
-			{
-				"name": "binaryoverload",
-				"caption": "Serverarchitectuur",
-				"picture": "https://github.com/binaryoverload.png",
-				"github": "https://github.com/binaryoverload"
-			},
-			{
-				"name": "Simonx22",
-				"caption": "Splatoon-rotaties en onderzoek",
-				"picture": "https://github.com/Simonx22.png",
-				"github": "https://github.com/Simonx22"
-			},
-			{
-				"name": "OatmealDome",
-				"caption": "Splatoon-rotaties en onderzoek",
-				"picture": "https://github.com/OatmealDome.png",
-				"github": "https://github.com/OatmealDome"
-			},
-			{
-				"name": "Github Bijdragers",
-				"caption": "Lokalisaties en andere bijdragen",
-				"picture": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-				"github": "https://github.com/PretendoNetwork"
-			}
-		]
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		}
 	},
 	"progressPage": {
 		"title": "Onze vooruitgang",
@@ -282,7 +146,8 @@
 	},
 	"donation": {
 		"progress": "{totd} van {goald}/maand, {perc} van de maandelijkse doelstelling.",
-		"upgradePush": "Om een abonnee te worden en toegang te krijgen tot coole voordelen, bezoek je de <a href=\"/account/upgrade\">upgrade pagina</a>."
+		"upgradePushText": "",
+		"upgradePushLinkText": ""
 	},
 	"upgrade": {
 		"changeTierPrompt": "Weet u zeker dat u zich wilt afmelden bij <span class=\"oldtier\">oldtiername</span> en wilt abonneren op <span class=\"newtier\">newtiername</span>?",
@@ -463,5 +328,26 @@
 	},
 	"notfound": {
 		"description": "Oeps! We konden deze pagina niet vinden."
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
 	}
 }

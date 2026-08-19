@@ -52,63 +52,115 @@
 				"answer": "Nie. Mnohé služby a funkcie Pretenda sú vyvíjané nezávisle od seba (napríklad, na Miiverse môže pracovať jeden vývojár, zatiaľ čo druhý pracuje na Účtoch a Priateľoch) a preto nevieme poskytnúť odhady, kedy bude niečo hotové."
 			},
 			{
-				"question": "Kedy pridáte dalšie hry?"
+				"question": "Kedy pridáte dalšie hry?",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"question": "",
+				"answer": ""
+			},
+			{
+				"answer": "",
+				"question": ""
+			},
+			{
+				"question": "",
+				"answer": ""
 			}
 		],
 		"text": "Tu je zopár častých otázok, ktoré sa nás ľudia často pýtajú, aby ste boli v obraze."
 	},
 	"showcase": {
-		"title": "Čo robíme"
+		"title": "Čo robíme",
+		"cards": [
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			},
+			{
+				"caption": "",
+				"title": ""
+			}
+		],
+		"text": ""
 	},
 	"credits": {
 		"title": "Tím",
-		"people": [
-			{},
-			{},
-			{},
-			{
-				"name": "SuperMarioDaBom",
-				"picture": "https://github.com/supermariodabom.png",
-				"github": "https://github.com/SuperMarioDaBom"
-			},
-			{
-				"name": "limes.pink",
-				"caption": "Webový vývoj",
-				"picture": "https://github.com/limesdotpink.png",
-				"github": "https://github.com/limesdotpink"
-			},
-			{
-				"name": "Shutterbug2000",
-				"picture": "https://cdn.discordapp.com/avatars/191370953807233024/0311b61e2009c1576828dd2e9a59d72e.png?size=128",
-				"github": "https://github.com/shutterbug2000"
-			},
-			{
-				"name": "Billy",
-				"picture": "https://github.com/InternalLoss.png",
-				"github": "https://github.com/InternalLoss"
-			},
-			{
-				"name": "DaniElectra",
-				"picture": "https://github.com/danielectra.png",
-				"github": "https://github.com/DaniElectra"
-			},
-			{
-				"name": "niko"
-			}
-		]
+		"roles": {
+			"researchAndGameDev": "",
+			"owner": "",
+			"ctrResearchAndPatchDev": "",
+			"preserveAndServerArch": "",
+			"devopsAndCommunityWork": "",
+			"webDevAndGameDev": "",
+			"miiverseDev": "",
+			"researchAndServerArch": "",
+			"gameDevAndOptimise": "",
+			"wiiuResearchAndPatchDev": "",
+			"webDev": ""
+		},
+		"text": ""
 	},
 	"footer": {
-		"usefulLinks": "Užitočné odkazy"
+		"usefulLinks": "Užitočné odkazy",
+		"bandwidthRaccoonQuotes": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"widget": {
+			"captions": [
+				"",
+				""
+			],
+			"button": ""
+		},
+		"socials": ""
 	},
 	"account": {
 		"loginForm": {
 			"register": "Registrovať sa",
 			"password": "Heslo",
-			"confirmPassword": "Potvrdiť heslo"
+			"confirmPassword": "Potvrdiť heslo",
+			"forgotPassword": "",
+			"username": "",
+			"loginPrompt": "",
+			"birthdate": "",
+			"email": "",
+			"registerPrompt": "",
+			"detailsPrompt": "",
+			"miiName": "",
+			"login": ""
 		},
 		"resetPassword": {
 			"password": "Heslo",
-			"confirmPassword": "Potvrdiť heslo"
+			"confirmPassword": "Potvrdiť heslo",
+			"sub": "",
+			"header": "",
+			"submit": ""
 		},
 		"settings": {
 			"unavailable": "Nedostupný",
@@ -121,32 +173,103 @@
 				"email": "Email",
 				"password": "Heslo",
 				"otherSettings": "Ostatné nastavenia",
-				"discord": "Discord"
+				"discord": "Discord",
+				"serverEnv": "",
+				"noDiscordLinked": "",
+				"signInSecurity": "",
+				"fullSignInHistory": "",
+				"userSettings": "",
+				"production": "",
+				"linkDiscord": "",
+				"no_newsletter_notice": "",
+				"removeDiscord": "",
+				"passwordPrompt": "",
+				"no_signins_notice": "",
+				"upgradePrompt": "",
+				"timezone": "",
+				"connectedToDiscord": "",
+				"newsletterPrompt": "",
+				"newsletter": "",
+				"hasAccessPrompt": "",
+				"nickname": "",
+				"signInHistory": "",
+				"passwordResetNotice": "",
+				"no_edit_from_dashboard": ""
+			},
+			"upgrade": "",
+			"delete": {
+				"modalDescription": "",
+				"modalCaution": "",
+				"modalTitle": "",
+				"modalConfirm": "",
+				"button": ""
 			}
 		},
 		"accountLevel": [
 			"Štandardný",
-			null,
+			"",
 			"Moderátor",
 			"Developer"
-		]
+		],
+		"forgotPassword": {
+			"submit": "",
+			"header": "",
+			"sub": "",
+			"input": ""
+		},
+		"account": "",
+		"banned": ""
 	},
 	"upgrade": {
 		"month": "mesiac",
-		"back": "Späť"
+		"back": "Späť",
+		"changeTierPrompt": "",
+		"unsub": "",
+		"changeTier": "",
+		"unsubPrompt": "",
+		"changeTierConfirm": "",
+		"title": "",
+		"description": "",
+		"unsubConfirm": "",
+		"tierSelectPrompt": ""
 	},
 	"localizationPage": {
-		"button": "Testovací súbor"
+		"button": "Testovací súbor",
+		"instructions": "",
+		"filePlaceholder": "",
+		"fileInput": "",
+		"title": "",
+		"description": ""
 	},
 	"docs": {
 		"quickLinks": {
-			"header": "Rýchle odkazy"
+			"header": "Rýchle odkazy",
+			"links": [
+				{
+					"caption": "",
+					"header": ""
+				},
+				{
+					"caption": "",
+					"header": ""
+				}
+			]
 		},
 		"sidebar": {
 			"welcome": "Vitajte",
 			"install": "Inštalovať",
-			"search": "Vyhľadať"
-		}
+			"search": "Vyhľadať",
+			"getting_started": "",
+			"install_extended": "",
+			"juxt_err": ""
+		},
+		"search": {
+			"title": "",
+			"no_match": "",
+			"caption": "",
+			"label": ""
+		},
+		"missingInLocale": ""
 	},
 	"modals": {
 		"cancel": "Zrušiť",
@@ -163,5 +286,68 @@
 	"progress": {
 		"title": "Progres",
 		"githubRepo": "Github repozitár"
+	},
+	"specialThanks": {
+		"reasons": {
+			"forMiiverseHelp": "",
+			"forResearch": "",
+			"forSplatoon": "",
+			"forServers": "",
+			"forCtrDev": "",
+			"forIcons": "",
+			"forPatches": "",
+			"forServerDev": "",
+			"forCrunch": "",
+			"general": ""
+		},
+		"text": "",
+		"title": ""
+	},
+	"miiEditor": {
+		"corruptedData": "",
+		"noCanvas": "",
+		"clickToSet": "",
+		"nickname": "",
+		"save": "",
+		"saveCaption": "",
+		"loading": "",
+		"miiSaved": "",
+		"copying": "",
+		"favorite": "",
+		"birthday": "",
+		"sharing": "",
+		"creator": ""
+	},
+	"blogPage": {
+		"description": "",
+		"publishedOn": "",
+		"title": "",
+		"published": ""
+	},
+	"notfound": {
+		"description": ""
+	},
+	"donation": {
+		"upgradePushText": "",
+		"progress": "",
+		"upgradePushLinkText": ""
+	},
+	"discordJoin": {
+		"title": "",
+		"text": "",
+		"widget": {
+			"text": "",
+			"button": ""
+		}
+	},
+	"errorPage": {
+		"500": {
+			"description": "",
+			"title": ""
+		}
+	},
+	"progressPage": {
+		"title": "",
+		"description": ""
 	}
 }
