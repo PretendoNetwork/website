@@ -1,6 +1,11 @@
 name: "pn-website-dev"
 
 services:
+  redis:
+    image: redis:8.2-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379" # Redis port
   mailpit:
     image: axllent/mailpit
     restart: unless-stopped

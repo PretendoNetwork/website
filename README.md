@@ -29,6 +29,8 @@ There are no fully required configuration variables, the app can runs minimally 
 | Core                         | `PN_WEBSITE_PUBLIC_BASE_URL`           | Base URL of the app                           | `https://pretendo.network`   |
 |                              | `PN_WEBSITE_PUBLIC_CDN_BASE_URL`       | Base URL for the CDN                          | `https://r2-cdn.pretendo.cc` |
 |                              | `PN_WEBSITE_PUBLIC_COOKIE_SECURE`      | Should Secure be enabled for auth cookies     | `true`                       |
+|                              | `PN_WEBSITE_TRUST_PROXY`               | Should X-Forwarded-* headers be trusted?      | `false`                      |
+|                              | `PN_WEBSITE_REDIS_URL`                 | Redis URL to use for caching & ratelimits     | (No distributed KV)          |
 |                              |                                        |                                               |                              |
 | Authentication               | `PN_WEBSITE_GRPC_HOST`                 | Account server GRPC host + port               | -                            |
 |                              | `PN_WEBSITE_GRPC_API_KEY`              | Account server GRPC API key                   | -                            |
