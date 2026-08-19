@@ -39,10 +39,7 @@ export function createRatelimitBucket(ops: RatelimitBucketOptions) {
 
 export async function enforceRatelimit(event: H3Event, bucket: RateLimiterAbstract): Promise<void> {
 	const config = useRuntimeConfig();
-	const ip = getRequestIP(event, { xForwardedFor: !!config.trustProxy });
-	if (!ip) {
-		throw new Error('Could not get IP for request');
-	}
+	const ip = getRequestIP(event, { xForwardedFor: !!config.trustProxy }) ?? '127.0.0.1'; // nuxt dev returns undefined
 
 	try {
 		await bucket.consume(ip, 1);
