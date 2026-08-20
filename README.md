@@ -62,7 +62,3 @@ There are no fully required configuration variables, the app can runs minimally 
 |                              | `PN_WEBSITE_PUBLIC_HCAPTCHA_SITE_KEY`  | HCaptcha site key                             | -                            |
 |                              |                                        |                                               |                              |
 | Discourse SSO                | `PN_WEBSITE_DISCOURSE_SSO_SECRET`      | Discourse SSO secret                          | -                            |
-
-TODO:
-
-account settings error handling
