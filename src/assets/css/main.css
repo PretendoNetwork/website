@@ -138,7 +138,7 @@ div.modal-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.75);
 
 	z-index: 100;
 }
@@ -146,11 +146,12 @@ div.modal-wrapper.hidden {
 	display: none;
 }
 div.modal {
-	background: var(--bg-shade-3);
+	background: var(--bg-shade-1);
 	padding: 48px;
 	border-radius: 8px;
 	text-align: left;
-	width: min(660px, 90%);
+	max-width: min(660px, 90%);
+	width: 100vw;
 	box-sizing: border-box;
 	margin: auto;
 }

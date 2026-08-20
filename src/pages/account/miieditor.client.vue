@@ -285,7 +285,7 @@ const { isLoading: isSaving, execute } = useAsync({
 		return apiFetch('/api/account/update', {
 			method: 'PATCH',
 			body: {
-				mii: { name: mii.value.miiName, primary: 'Y', data: mii.value.encode().toString('base64') }
+				mii: mii.value.encode().toString('base64')
 			} satisfies ApiAccountUpdateRequest
 		});
 	},

@@ -7,6 +7,7 @@ export type GetApiAuthMe = {
 	birthday: string;
 	gender: string;
 	country: string;
+	region: number;
 	timezone: string;
 	emailAddress: string;
 	serverAccessLevel: 'dev' | 'test' | 'prod';
@@ -107,12 +108,12 @@ export const RegisterSchema = z.object({
 export type ApiAuthRegisterRequest = z.infer<typeof RegisterSchema>;
 
 export const AccountUpdateSchema = z.object({
-	mii: z.object({
-		name: z.string(),
-		primary: z.enum(['Y', 'N']),
-		data: z.string()
-	}).optional(),
-	environment: z.enum(['prod', 'test', 'dev']).optional()
+	birthday: z.string().optional(),
+	mii: z.string().optional(),
+	serverAccessLevel: z.enum(['prod', 'test', 'dev']).optional(),
+	gender: z.enum(['F', 'M']).optional(),
+	region: z.number().optional(),
+	timezone: z.string().optional()
 });
 export type ApiAccountUpdateRequest = z.infer<typeof AccountUpdateSchema>;
 

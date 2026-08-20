@@ -18,7 +18,15 @@ const apiErrorCodes = {
 	MIINAME_TOO_LONG: 'Mii name too long',
 	INVALID_PASSWORD_INPUT: 'Password must be between 6 and 16 characters long',
 	INVALID_PASSWORD_NO_MATCH: 'Passwords do not match',
-	ACCOUNT_DELETED: 'Account has been deleted'
+	ACCOUNT_DELETED: 'Account has been deleted',
+	INVALID_ACCESS_LEVEL: 'Invalid access level',
+	BANNED: 'Account is banned',
+	INSUFFICIENT_ACCESS_LEVEL: 'Do not have permission to enter this environment',
+	INVALID_DATE: 'Invalid date',
+	INVALID_GENDER: 'Invalid gender',
+	INVALID_REGION: 'Invalid region',
+	INVALID_TIMEZONE: 'Invalid timezone',
+	INVALID_MII_DATA: 'Invalid mii data'
 } as const;
 
 export type ApiErrorCodes = keyof typeof apiErrorCodes;
@@ -43,7 +51,15 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	USERNAME_IN_USE: 400,
 	USERNAME_INVALID_CHARS: 400,
 	USERNAME_TOO_LONG: 400,
-	USERNAME_TOO_SHORT: 400
+	USERNAME_TOO_SHORT: 400,
+	INVALID_ACCESS_LEVEL: 400,
+	BANNED: 403,
+	INSUFFICIENT_ACCESS_LEVEL: 403,
+	INVALID_DATE: 400,
+	INVALID_GENDER: 400,
+	INVALID_REGION: 400,
+	INVALID_TIMEZONE: 400,
+	INVALID_MII_DATA: 400
 };
 
 export function getTextForApiErrorCode(code: ApiErrorCodes): string {
