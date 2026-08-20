@@ -367,6 +367,7 @@ useHead({
                     v-model="newBirthday"
                     :locale="locale"
                     granularity="day"
+                    close-on-select
                   >
                     <DatePicker.Field
                       v-slot="{ segments }"
@@ -1128,8 +1129,6 @@ useHead({
 }
 
 .modal-wrapper {
-	height: 100vh;
-	position: absolute;
 	padding: 1.5rem;
 	box-sizing: border-box;
 }
