@@ -74,7 +74,7 @@ const selectedServerEnv = ref<'dev' | 'test' | 'prod' | undefined>(
 	profile.value?.serverAccessLevel
 );
 
-const newBirthday = ref(parseDate(profile.value?.birthday || ''));
+const newBirthday = shallowRef(parseDate(profile.value?.birthday || ''));
 const newCountry = ref(((profile.value?.region || 0) >>> 24) & 0xff);
 const newRegion = ref(profile.value?.region);
 const newTimezone = ref(profile.value?.timezone);
