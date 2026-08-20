@@ -12,6 +12,12 @@ type TimezoneLanguageCollection = Record<string, Array<Timezone>>;
 type TimezoneCollection = Record<string, TimezoneLanguageCollection>;
 
 const timezones = timezoneData as TimezoneCollection;
+
+type languageName = 'japanese' | 'french' | 'german' | 'italian' | 'spanish' | 'korean' | 'dutch' | 'portuguese' | 'russian' | 'chinese_traditional' | 'chinese_simple' | 'english';
+type languageCode = 'ja' | 'fr' | 'de' | 'it' | 'es' | 'ko' | 'nl' | 'pt' | 'ru' | 'zh-Hant' | 'zh-Hans' | 'en';
+
+export function webLocaleToConsoleLocale(lo: string): languageName {
+	const convObj: Record<languageCode, languageName> = {
 		'ja': 'japanese',
 		'fr': 'french',
 		'de': 'german',
@@ -22,15 +28,18 @@ const timezones = timezoneData as TimezoneCollection;
 		'pt': 'portuguese',
 		'ru': 'russian',
 		'zh-Hant': 'chinese_traditional',
-		'zh-Hans': 'chinese_simple'
+		'zh-Hans': 'chinese_simple',
+		'en': 'english'
 	};
 
-	const l = lo.split('-');
+	const l = lo.split('-')[0]!;
 
-	return convObj[l[0]] || convObj[lo] || 'english';
+	const correspondence = convObj[l as languageCode];
+
+	return correspondence || convObj[lo as languageCode] || convObj.en;
 }
 
-export function webLocaleToTimezoneLocale(lo: string) {
+export function webLocaleToTimezoneLocale(lo: string): languageCode {
 	const l = lo.split('-');
 
 	switch (l[0]) {
@@ -81,11 +90,16 @@ export function getLocalizedRegionTimezones(localeCode: string, region: number |
 	}
 
 	const country = regionIdToCountryObject(region);
+
+	if (!country) {
+		return;
+	}
+
 	const l = webLocaleToTimezoneLocale(localeCode);
 
 	const countryTimezones = timezones[country.iso_code];
 
-	return countryTimezones[l] || countryTimezones.en || countryTimezones.ja;
+	return countryTimezones?.[l] || countryTimezones?.en || countryTimezones?.ja;
 }
 
 export function getLocalizedTimezoneString(localeCode: string | undefined, region: number | undefined, timezone: string | undefined) {
@@ -97,7 +111,7 @@ export function getLocalizedTimezoneString(localeCode: string | undefined, regio
 
 	let localizedTz = '';
 
-	const tzObj = tList.find((v) => {
+	const tzObj = tList?.find((v) => {
 		return (v.area === timezone);
 	});
 

@@ -118,7 +118,7 @@ watch(newRegion, (o, n) => {
 		return;
 	}
 
-	newTimezone.value = newLocalizedTimezoneList.value[0].area;
+	newTimezone.value = newLocalizedTimezoneList.value?.[0]?.area;
 });
 
 const {
