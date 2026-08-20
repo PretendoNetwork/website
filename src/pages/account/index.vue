@@ -108,10 +108,6 @@ watch(newCountry, () => {
 	newRegion.value = newCountry.value * (2 ** 24);
 });
 
-watchOnce(newRegion, () => {
-	newCountry.value = ((newRegion.value || 0) >>> 24) & 0xff;
-});
-
 watch(newRegion, (o, n) => {
 	if ((((o || 0) >>> 24) & 0xff) === (((n || 0) >>> 24) & 0xff)) {
 		// same country so we leave the timezone as is, else we might override the user's choice.
