@@ -59,8 +59,15 @@ export function webLocaleToTimezoneLocale(lo: string): languageCode {
 	}
 }
 
+export function regionIdToCountryId(region: number) {
+	return (region >>> 24) & 0xFF;
+}
+export function countryIdToUndefinedRegionId(region: number) {
+	return region * (2 ** 24);
+}
+
 export function regionIdToCountryObject(region: number) {
-	const countryId = (region >>> 24) & 0xFF;
+	const countryId = regionIdToCountryId(region);
 	return regions.find(r => r.id === countryId);
 }
 
