@@ -1,8 +1,17 @@
 import regions from '@/assets/json/regions.json';
-import timezones from '@/assets/json/timezones.json';
+import timezoneData from '@/assets/json/timezones.json';
 
-export function webLocaleToConsoleLocale(lo: string): 'japanese' | 'french' | 'german' | 'italian' | 'spanish' | 'korean' | 'dutch' | 'portuguese' | 'russian' | 'chinese_traditional' | 'chinese_simple' | 'english' {
-	const convObj = {
+type Timezone = {
+	area: string;
+	language: string;
+	name: string;
+	utc_offset: string;
+	order: string;
+};
+type TimezoneLanguageCollection = Record<string, Array<Timezone>>;
+type TimezoneCollection = Record<string, TimezoneLanguageCollection>;
+
+const timezones = timezoneData as TimezoneCollection;
 		'ja': 'japanese',
 		'fr': 'french',
 		'de': 'german',
