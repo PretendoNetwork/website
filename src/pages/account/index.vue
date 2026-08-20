@@ -114,7 +114,7 @@ watchOnce(newRegion, () => {
 
 watch(newRegion, (o, n) => {
 	if ((((o || 0) >>> 24) & 0xff) === (((n || 0) >>> 24) & 0xff)) {
-		// same country so we leave the timezone as is, or we might override the user's choice.
+		// same country so we leave the timezone as is, else we might override the user's choice.
 		return;
 	}
 
@@ -634,7 +634,10 @@ useHead({
                       })
                   "
                 >
-                  {{ $t("modals.confirm") }}
+                  <Loader v-if="isLoadingUpdateUserData" />
+                  <span v-else>{{
+                    $t("modals.confirm")
+                  }}</span>
                 </Dialog.Close>
               </div>
             </Dialog.Content>
