@@ -1,8 +1,7 @@
 <script setup lang="ts">
 /* eslint-disable vue/no-v-html -- locale files still have raw html */
 import { watchImmediate } from '@vueuse/core';
-import { AlertDialog, Dialog } from 'reka-ui/namespaced';
-import AccountInfoEditModal from '~/components/AccountInfoEditModal.vue';
+import { AlertDialog } from 'reka-ui/namespaced';
 import {
 	getLocalizedTimezoneString,
 	regionIdToLocalizedNames
@@ -155,18 +154,6 @@ const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 	}
 });
 
-function parseBirthday(iso: string): string {
-	const s = iso.split('-');
-
-	const y = Number(s[0]);
-	const m = Number(s[1]) - 1;
-	const d = Number(s[2]);
-
-	return new Date(Date.UTC(y, m, d)).toLocaleDateString(
-		locale.value
-	);
-}
-
 useHead({
 	title: `Account`
 });
@@ -281,62 +268,62 @@ useHead({
       >
         {{ $t("account.settings.settingCards.userSettings") }}
       </h2>
-      <Dialog.Root v-model:open="profileEditModalOpen">
-        <div class="setting-card">
-          <h2 class="header">
-            {{ $t("account.settings.settingCards.profile") }}
-          </h2>
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.settings.settingCards.profile") }}
+        </h2>
 
-          <AccountInfoEditModal
-            v-model="profileEditModalOpen"
-            :profile="profile"
-            :dialog-container="dialogContainer"
-            @change="refresh"
-          >
-            <button class="edit">
-              <Icon
-                name="ph:pencil"
-                size="26"
-              />
-            </button>
-          </AccountInfoEditModal>
+        <AccountInfoEditModal
+          v-model="profileEditModalOpen"
+          :profile="profile"
+          :dialog-container="dialogContainer"
+          @change="refresh"
+        >
+          <button class="edit">
+            <Icon
+              name="ph:pencil"
+              size="26"
+            />
+          </button>
+        </AccountInfoEditModal>
 
-          <ul class="setting-list">
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.birthDate") }}
-              </p>
-              <p class="value">
-                {{ parseBirthday(profile.birthday) }}
-              </p>
-            </li>
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.timezone") }}
-              </p>
-              <p class="value">
-                {{ timezoneString }}
-              </p>
-            </li>
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.country") }}
-              </p>
-              <p class="value">
-                {{ regionStrings?.country }}
-              </p>
-            </li>
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.region") }}
-              </p>
-              <p class="value">
-                {{ regionStrings?.region }}
-              </p>
-            </li>
-          </ul>
-        </div>
-      </Dialog.Root>
+        <ul class="setting-list">
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.birthDate") }}
+            </p>
+            <p class="value">
+              <ClientOnly>
+                {{ new Date(profile.birthday).toLocaleDateString(undefined, { timeZone: 'UTC'}) }}
+              </ClientOnly>
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.timezone") }}
+            </p>
+            <p class="value">
+              {{ timezoneString }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.country") }}
+            </p>
+            <p class="value">
+              {{ regionStrings?.country }}
+            </p>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.region") }}
+            </p>
+            <p class="value">
+              {{ regionStrings?.region }}
+            </p>
+          </li>
+        </ul>
+      </div>
 
       <div class="setting-card">
         <h2 class="header">
