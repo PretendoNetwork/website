@@ -67,7 +67,7 @@ services:
     volumes:
       - "./assets/garage-init.sh:/etc/init.sh"
   account:
-    image: ghcr.io/pretendonetwork/account:sha-edb4b02
+    image: ghcr.io/pretendonetwork/account:sha-81cbacf
     restart: unless-stopped
     networks:
       - net

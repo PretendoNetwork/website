@@ -13,6 +13,7 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 		birthday: data.birthday,
 		gender: data.gender,
 		country: data.country,
+		region: data.region,
 		timezone: data.timezone,
 		emailAddress: data.emailAddress,
 		serverAccessLevel: data.serverAccessLevel as any,
