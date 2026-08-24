@@ -89,7 +89,14 @@ const { execute: executeUpdateUserData, isLoading: isLoadingUpdateUserData } =
     </Dialog.Trigger>
     <Dialog.Portal :to="dialogContainer ?? undefined">
       <Dialog.Overlay />
-      <Dialog.Content class="modal">
+      <Dialog.Content
+        class="modal"
+        @interact-outside="(e) => {
+          if (isLoadingUpdateUserData) {
+            return e.preventDefault();
+          }
+        }"
+      >
         <Dialog.Title>
           {{ $t("account.settings.settingCards.userSettings") }}.
         </Dialog.Title>
