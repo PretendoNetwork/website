@@ -258,9 +258,9 @@
 		},
 		"accountLevel": [
 			"标准",
-			"测试人员",
+			"测试者",
 			"版主",
-			"开发人员"
+			"开发者"
 		],
 		"banned": "禁止",
 		"account": "账号",
@@ -292,7 +292,9 @@
 		"back": "退回"
 	},
 	"donation": {
-		"progress": "{totd} {goald}/月，{perc} 的每月目标。"
+		"progress": "{totd} {goald}/月，{perc} 的每月目标。",
+		"upgradePushText": "若要成为订阅者并获得超棒的福利，请访问{link}。",
+		"upgradePushLinkText": "升级页面"
 	},
 	"modals": {
 		"cancel": "取消",
@@ -301,5 +303,26 @@
 	},
 	"notfound": {
 		"description": "糟糕！我们找不到该页面。"
+	},
+	"miiEditor": {
+		"birthday": "生日",
+		"clickToSet": "点击设置",
+		"favorite": "设为最爱",
+		"sharing": "共享",
+		"copying": "复制中",
+		"save": "保存",
+		"saveCaption": "保存你的 Mii 虚拟形象会删除之前的 Mii 虚拟形象。",
+		"noCanvas": "您的浏览器不支持 canvas 元素。",
+		"corruptedData": "找到已损坏的 Mii 数据。是否要从头开始？",
+		"miiSaved": "您的 Mii 虚拟形象已更新！更改可能需要一些时间才能在所有平台和服务中生效。",
+		"loading": "正在加载 Mii 编辑器...",
+		"nickname": "昵称",
+		"creator": "创作者"
+	},
+	"errorPage": {
+		"500": {
+			"title": "服务器错误！",
+			"description": "请稍后再试。"
+		}
 	}
 }
