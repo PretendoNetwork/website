@@ -8,14 +8,10 @@ if (!termContent.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 
-useHead({
-	title: `${termContent.value.title} | Terms`,
-	meta: [
-		{ property: 'description', content: termContent.value.description },
-		{ property: 'og:description', content: termContent.value.description },
-		{ property: 'og:image:alt', content: '' },
-		{ name: 'twitter:description', content: termContent.value.description }
-	]
+customSeoMeta({
+	subsection: 'terms',
+	title: termContent.value.title,
+	description: termContent.value.description
 });
 </script>
 

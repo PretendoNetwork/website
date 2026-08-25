@@ -30,6 +30,8 @@ const { execute, isLoading } = useAsync({
 		});
 	}
 });
+
+customSeoMeta({ subsection: 'account', title: 'Reset passoword' });
 </script>
 
 <template>

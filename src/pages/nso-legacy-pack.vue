@@ -4,6 +4,7 @@ useHead({
 	link: [{ rel: 'stylesheet', href: 'https://use.typekit.net/gok5tsu.css' }]
 });
 
+customSeoMeta();
 </script>
 
 <template>

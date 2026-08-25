@@ -156,6 +156,7 @@ export default defineNuxtConfig({
 				{ name: 'application-name', content: 'Pretendo Network' },
 				{ name: 'msapplication-TileColor', content: '#1b1f3b' },
 				{ name: 'theme-color', content: '#1b1f3b' },
+				{ property: 'og:title', content: 'Pretendo Network' },
 				{
 					property: 'og:description',
 					content:

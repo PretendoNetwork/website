@@ -47,6 +47,8 @@ const { execute, isLoading } = useAsync({
 		});
 	}
 });
+
+customSeoMeta({ subsection: 'account', title: 'Login' });
 </script>
 
 <template>

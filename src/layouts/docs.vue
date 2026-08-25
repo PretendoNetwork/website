@@ -3,14 +3,6 @@
 const path = useRoute().fullPath;
 
 const isSidebarOpen = ref(false);
-
-useHead({
-	titleTemplate: (titleChunk) => {
-		return titleChunk
-			? `${titleChunk} | Docs | Pretendo Network`
-			: 'Docs | Pretendo Network';
-	}
-});
 </script>
 
 <template>
