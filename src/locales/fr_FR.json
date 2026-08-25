@@ -115,12 +115,22 @@
 		"title": "L'équipe",
 		"text": "Rencontrez l'équipe derrière le projet",
 		"roles": {
-			"researchAndGameDev": "Recherche de système et développment de serveur"
+			"researchAndGameDev": "Recherche de système et développment de serveur",
+			"miiverseDev": "Recherche et développement Miiverse",
+			"webDev": "Développement Web",
+			"devopsAndCommunityWork": "DevOps et travail de la communauté"
 		}
 	},
 	"specialThanks": {
 		"title": "Sincères remerciements",
-		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui."
+		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
+		"reasons": {
+			"general": "Traductions et autres contributions",
+			"forMiiverseHelp": "Partage d'informations sur Miiverse",
+			"forResearch": "Recherches sur l'architecture de données de Nintendo",
+			"forIcons": "Icônes pour l'éditeur Mii et les réactions Juxt",
+			"forServers": "Architecture du serveur"
+		}
 	},
 	"discordJoin": {
 		"title": "Rejoignez-nous",
@@ -222,11 +232,11 @@
 				"profile": "Profil",
 				"nickname": "Surnom",
 				"birthDate": "Date de naissance",
-				"country": "Pays/Région",
+				"country": "Pays",
 				"timezone": "Fuseau horaire",
 				"serverEnv": "Environment du Serveur",
 				"production": "Production",
-				"beta": "Beta",
+				"beta": "Bêta",
 				"upgradePrompt": "Les serveurs Beta sont exclusifs aux Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
 				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super !",
 				"newsletterPrompt": "Recevoir les mises à jour par mail (vous pouvez vous désinscrire à tout moment)",
@@ -247,7 +257,8 @@
 				"no_edit_from_dashboard": "La configuration des paramètres PNID depuis le menu utilisateur est actuellement indisponible. Veuillez procéder aux changements depuis votre console.",
 				"userSettings": "Paramètres du compte",
 				"no_signins_notice": "L'historique de connexion n'est pas encore implémenté. Revenez plus tard !",
-				"no_newsletter_notice": "La newsletter n'est pas encore disponible. Revenez plus tard"
+				"no_newsletter_notice": "La newsletter n'est pas encore disponible. Revenez plus tard",
+				"region": "Région"
 			},
 			"upgrade": "Mettre à Niveau le compte",
 			"unavailable": "Indisponible",
@@ -295,7 +306,8 @@
 		"back": "Retour"
 	},
 	"donation": {
-		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel."
+		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel.",
+		"upgradePushLinkText": "Page d’abonnement"
 	},
 	"modals": {
 		"cancel": "Annuler",
@@ -304,5 +316,23 @@
 	},
 	"notfound": {
 		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
+	},
+	"miiEditor": {
+		"nickname": "Surnom",
+		"creator": "Créateur",
+		"birthday": "Anniversaire",
+		"favorite": "Favori",
+		"sharing": "Partage",
+		"copying": "Copie",
+		"save": "Sauvegarder",
+		"saveCaption": "Sauvegarder votre Mii va tuer l'ancien.",
+		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
+		"loading": "Chargement de l'éditeur Mii..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Erreur du serveur !",
+			"description": "Merci de réessayer ultérieurement."
+		}
 	}
 }
