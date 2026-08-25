@@ -15,7 +15,7 @@
 				"about": "A projektről",
 				"faq": "Gyakran ismételt kérdések",
 				"blog": "A legutolsó frissítéseink, tömören",
-				"progress": "Ellenőrizd a projekt előrehaladást és célokat",
+				"progress": "Ellenőrizd a projekt előrehaladását és a célokat",
 				"credits": "Találkozz a team-mel",
 				"forum": "Csevegj másokkal és szerezz segítséget"
 			}
@@ -45,7 +45,7 @@
 	},
 	"faq": {
 		"title": "Gyakran Ismételt Kérdések",
-		"text": "Itt van néhány gyakori kérdés, amit tőlünk kérdeztek, a könnyű információhoz jutás érdekében.",
+		"text": "A könnyű információhoz jutás érdekében itt van néhány gyakori kérdés, amit tőlünk kérdeztek,.",
 		"QAs": [
 			{
 				"question": "Mi a Pretendo?",
@@ -65,7 +65,7 @@
 			},
 			{
 				"question": "Mikor adtok hozzá további játékokat?",
-				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Megakarjuk adni a legjobb élményt mielőtt egy új játékra megyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
+				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Meg akarjuk adni a legjobb élményt mielőtt egy új játékra rámegyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
 				"question": "Ha van egy emulátorom, az elég a Pretendo használatához?",
@@ -85,7 +85,7 @@
 			},
 			{
 				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?",
-				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok amiket ha nem követsz akkor az bannolást okozhat."
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok, amiket ha nem követsz akkor az bannolást okozhat."
 			},
 			{
 				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása.",
@@ -113,7 +113,20 @@
 	},
 	"credits": {
 		"title": "A csapat",
-		"text": "Ismerd meg a csapatot a projekt mögött"
+		"text": "Ismerd meg a csapatot a projekt mögött",
+		"roles": {
+			"owner": "Project tulajdonos és fő fejlesztő",
+			"miiverseDev": "Miiverse kutatás és fejlesztés",
+			"wiiuResearchAndPatchDev": "Wii U kutatás és patch fejlesztés",
+			"researchAndGameDev": "Rendszer kutatás és szerver fejlesztés",
+			"researchAndServerArch": "Rendszer kutatás és szerver architektúra",
+			"webDev": "Web fejlesztés",
+			"preserveAndServerArch": "Prezerválás és szerver architektúra",
+			"webDevAndGameDev": "Web és szerver fejlesztés",
+			"gameDevAndOptimise": "Szerverfejlesztés és optimalizálás",
+			"ctrResearchAndPatchDev": "3DS patch fejlesztés és kutatás",
+			"devopsAndCommunityWork": "DevOps és közösségi munka"
+		}
 	},
 	"footer": {
 		"bandwidthRaccoonQuotes": [
@@ -128,12 +141,12 @@
 			"Első videóm a csatornámon!! Már régóta szertem volna videókat készíteni, de a laptopom elég rosszul ment, és nem tudtam egyszerre futtatni a fraps-t, a skype-ot és a minecraftot. de most vége! informatika tanárom segítségével a laptopom sokkal jobban működik, és már tudok rögzíteni! remélem tetszeni fog és ha igen nyomj egy like-ot és iratkozz fel!!!",
 			"Jónak tűnik nekem"
 		],
-		"socials": "Szociális",
+		"socials": "Közösségi média",
 		"usefulLinks": "Hasznos linkek",
 		"widget": {
 			"captions": [
 				"Szeretnél naprakész lenni?",
-				"Csatlakozz a Discord szerverünkhöz."
+				"Csatlakozz a Discord szerverünkhöz!"
 			],
 			"button": "Csatlakozz most!"
 		}
@@ -176,11 +189,11 @@
 				"signInHistory": "Bejelentkezési előzmények",
 				"discord": "Discord",
 				"fullSignInHistory": "Teljes bejelentkezési előzmény megtekintése",
-				"newsletterPrompt": "A projekt frissítéseiről értesítés emailben (bármikor kikapcsolható)",
+				"newsletterPrompt": "A projekt frissítéseiről értesítés emailben (bármikor lemondható)",
 				"userSettings": "Felhasználói beállítások",
 				"birthDate": "Születési dátum",
 				"gender": "Nem",
-				"country": "Ország/régió",
+				"country": "Ország",
 				"timezone": "Időzóna",
 				"serverEnv": "Szerver környezet",
 				"production": "Éles",
@@ -197,7 +210,8 @@
 				"passwordPrompt": "Add meg a PNID jelszavad, hogy letölthesd a Cemu fájlokat",
 				"no_signins_notice": "A bejelentkezési előzmények jelenleg nem követettek. Nézz vissza később!",
 				"no_newsletter_notice": "A hírlevél jelenleg nem elérhető. Nézz vissza később!",
-				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról"
+				"no_edit_from_dashboard": "A PNID beállítások szerkesztése a vezérlőpultról jelenleg nem elérhető. Kérjük módosítsd a felhasználói beállításaid a csatlakoztatott játék konzolodról",
+				"region": "Régió"
 			},
 			"upgrade": "Fiók bővítése",
 			"unavailable": "Nem elérhető",
@@ -226,35 +240,49 @@
 	},
 	"upgrade": {
 		"title": "Bővítés",
-		"unsubPrompt": "Biztos, hogy le szeretnél iratkozni a <span>tiername</span> csomagról? <span>Azonnal</span> el fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
+		"unsubPrompt": "Biztos, hogy le szeretnéd mondani a <span>tiername</span> csomagot? <span>Azonnal</span> el fogod veszíteni a hozzáférést az ehhez a csomaghoz kapcsolódó cuccokhoz.",
 		"changeTier": "Csomag módosítása",
 		"description": "Ha havi cél elérése segíti a Pretendo Network fejlesztését, finanszírozva a szerver infrastruktúrát és lehetővé teszi vezető fejlesztőnknek Jon-nak, hogy teljes munkaidőben dolgozzon a projekten.",
 		"month": "hónap",
 		"tierSelectPrompt": "Válassz egy csomagot",
-		"unsub": "Leiratkozás",
-		"unsubConfirm": "Leiratkozás",
-		"changeTierPrompt": "Biztos, hogy le szeretnél iratkozni a(z) <span class=\"oldtier\">oldtiername</span> csomagról és feliratkozni a(z) <span class=\"newtier\">newtiername</span>csomagra?",
+		"unsub": "Lemondás",
+		"unsubConfirm": "Lemondás",
+		"changeTierPrompt": "Biztos, hogy le szeretnéd mondani a(z) <span class=\"oldtier\">oldtiername</span> csomagot és fel szeretnél iratkozni a(z) <span class=\"newtier\">newtiername</span>csomagra?",
 		"changeTierConfirm": "Csomag módosítása",
 		"back": "Vissza"
 	},
 	"specialThanks": {
 		"title": "Külön köszönet",
-		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van."
+		"text": "Nélkülük a Pretendo nem lenne ott ahol ma van.",
+		"reasons": {
+			"general": "Fordítások és egyéb hozzájárulások",
+			"forCrunch": "crunch library fejlesztés",
+			"forCtrDev": "3DS fejlesztés és NEX darabokra szedés",
+			"forMiiverseHelp": "Miiverse információ megosztás",
+			"forResearch": "Kutatás a Nintendo adatstruktúrákról",
+			"forServerDev": "Konzol kutatás és játék szerverek",
+			"forIcons": "Ikonok a Mii Editor-hoz és a Juxt reakciókhoz",
+			"forSplatoon": "Splatoon forgatások és kutatás",
+			"forPatches": "Konzol patch fejlesztés",
+			"forServers": "Szerver architektúra"
+		}
 	},
 	"discordJoin": {
 		"title": "Maradj napra kész",
-		"text": "Csatlakozz a Discord szerverünkhöz, hogy megszerezd a legutolsó frissítéseket a projektről.",
+		"text": "Csatlakozz a Discord szerverünkhöz, hogy megszerezd a legfrissebb információkat a projektről.",
 		"widget": {
-			"text": "Kapj valós időben frissítéseket az előrehaladásunkról",
+			"text": "Kapj valós időben értesítéseket az előrehaladásunkról",
 			"button": "Csatlakozz a szerverhez"
 		}
 	},
 	"progressPage": {
 		"title": "Előrehaladásunk",
-		"description": "Tekintsd meg a projekt előrehaladását és céljait! (Minden órában frissítve, így nem tükröz minden projekt célt vagy az előrehaladást."
+		"description": "Tekintsd meg a projekt előrehaladását és céljait! (Óránként frissítve, így nem tükröz MINDEN projekt célt vagy az előrehaladást)"
 	},
 	"donation": {
-		"progress": "{totd} a {goald}/hó, {perc} a havi célból."
+		"progress": "{totd} a {goald}/hó, {perc} a havi célból.",
+		"upgradePushText": "Ahhoz, hogy előfizetővé válj, és hozzáférjen a klassz extrákhoz, látogasd meg a {link} oldalt.",
+		"upgradePushLinkText": "bővítés oldal"
 	},
 	"localizationPage": {
 		"title": "Fordíts",
@@ -287,7 +315,7 @@
 		},
 		"sidebar": {
 			"getting_started": "Kezdeti lépések",
-			"welcome": "Köszöntjük",
+			"welcome": "Köszöntünk",
 			"install_extended": "Pretendo telepítése",
 			"install": "Telepítés",
 			"search": "Keresés",
@@ -301,5 +329,26 @@
 	},
 	"notfound": {
 		"description": "Hoppá! Nem találjuk ezt az oldalt."
+	},
+	"miiEditor": {
+		"nickname": "Becenév",
+		"creator": "Készítő",
+		"birthday": "Születésnap",
+		"clickToSet": "Kattints a beállításhoz",
+		"favorite": "Kedvenc",
+		"sharing": "Megosztás",
+		"copying": "Másolás",
+		"save": "Mentés",
+		"saveCaption": "A Mii-od mentése megöli az előzőt.",
+		"noCanvas": "A böngésződ nem támogatja a vászon (canvas) elemet.",
+		"corruptedData": "Sérült Mii adatot találtunk. Szeretnéd nulláról kezdeni?",
+		"miiSaved": "A Mii-od frissítésre került! A módosítások időt igényelhetnek, hogy átfussanak minden platformon és szolgáltatáson.",
+		"loading": "A Mii editor betöltése..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Szerver hiba!",
+			"description": "Kérjük, próbáld meg később."
+		}
 	}
 }
