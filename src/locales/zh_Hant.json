@@ -218,9 +218,9 @@
 		},
 		"accountLevel": [
 			"標準",
-			"測試人員",
-			"版主人員",
-			"開發人員"
+			"測試者",
+			"版主",
+			"開發者"
 		],
 		"banned": "已禁止",
 		"account": "帳號",
@@ -262,7 +262,9 @@
 		"publishedOn": "於"
 	},
 	"donation": {
-		"progress": "{totd}的{goald}/月，完成月度目標的{perc}"
+		"progress": "{totd}的{goald}/月，完成月度目標的{perc}",
+		"upgradePushText": "若要成為訂閱者並獲得超棒的福利，請造訪{link}。",
+		"upgradePushLinkText": "升級頁面"
 	},
 	"localizationPage": {
 		"title": "讓我們進行在地化",
@@ -300,6 +302,27 @@
 			"install": "安裝",
 			"search": "搜尋",
 			"juxt_err": "錯誤代碼 - Juxt"
+		}
+	},
+	"miiEditor": {
+		"birthday": "生日",
+		"clickToSet": "點觸設定",
+		"copying": "複製中",
+		"corruptedData": "找到已損壞的 Mii 資料。是否要從頭開始？",
+		"creator": "創作者",
+		"favorite": "設為最愛",
+		"loading": "正在載入 Mii 編輯器...",
+		"miiSaved": "你的 Mii 虛擬人偶已更新！更改可能需要一些時間才能在所有平台和服務中生效。",
+		"nickname": "暱稱",
+		"noCanvas": "您的瀏覽器不支援 canvas 元素。",
+		"save": "儲存",
+		"saveCaption": "儲存你的 Mii 虛擬人偶會刪除先前的 Mii 虛擬人偶。",
+		"sharing": "共享"
+	},
+	"errorPage": {
+		"500": {
+			"title": "伺服器錯誤！",
+			"description": "請稍後再試。"
 		}
 	}
 }

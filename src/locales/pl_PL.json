@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "Nasz zespół",
-		"text": "Poznaj zespół stojący za projektem"
+		"text": "Poznaj zespół stojący za projektem",
+		"roles": {
+			"owner": "Twórca projektu i główny deweloper",
+			"miiverseDev": "Badania i rozwój Miiverse",
+			"wiiuResearchAndPatchDev": "Badania oraz rozwój poprawek dla Wii U",
+			"researchAndGameDev": "Badania nad systemami i rozwój serwerów",
+			"researchAndServerArch": "Badania nad systemami i architektury serwerów",
+			"webDev": "Tworzenie witryn internetowych",
+			"preserveAndServerArch": "Archiwizacja i architektura serwerowa",
+			"webDevAndGameDev": "Tworzenie stron i serwerów",
+			"gameDevAndOptimise": "Rozwój i optymalizacja serwerów",
+			"ctrResearchAndPatchDev": "Badania i tworzenie poprawek dla 3DS",
+			"devopsAndCommunityWork": "DevOps i prace społecznościowe"
+		}
 	},
 	"specialThanks": {
 		"title": "Specjalne podziękowania",
-		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz."
+		"text": "Bez nich, Pretendo nie byłoby w takim stanie jak teraz.",
+		"reasons": {
+			"general": "Tłumaczenia i pozostałe zasługi",
+			"forServers": "Architektura serwerów",
+			"forCrunch": "Rozwój biblioteki crunch",
+			"forCtrDev": "Rozwój na 3DS oraz parser protokołu NEX",
+			"forMiiverseHelp": "Dzielenie się informacjami o Miiverse",
+			"forResearch": "Badania nad strukturami danych Nintendo",
+			"forServerDev": "Badania nad konsolami i serwerów gier",
+			"forIcons": "Ikony do edytora Mii oraz reakcji na Juxt",
+			"forSplatoon": "Rotacje i badania nad Splatoon",
+			"forPatches": "Tworzenie poprawek dla konsol"
+		}
 	},
 	"discordJoin": {
 		"title": "Bądź na bieżąco",
@@ -146,7 +171,8 @@
 			"Główny motyw Super Mario World 2 - Yoshi's Island to absolutny bop i nie ma mowy, żebyś mnie przekonał, że jest inaczej.",
 			"Moimi ulubionymi wydaniami Nintendo Switch były Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Yet Another Port Pack oraz Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Naprawdę podobał ci się ten tytuł na Virtual Console Nintendo Wii U, więc przywracamy go z powrotem\". Naprawdę widać, że Nintendo zależy.",
 			"\"Znasz kochaną Kip? UwUje cały dzień\" to po południowemu \"Kip UwUje cały czas i jest to naprawdę dziwne i głupie i chciałbym żeby tego nie robiłu\"",
-			"Mój pierwszy filmik na moim kanale!! Od dana chciałem robić filmiki, ale mój laptop był suaby i nie mogłem jednocześnie włączyć frapsa, skajpa i minecrafta. ale już po wszystkim! pomógł mi mój nauczyciel od infy i mój laptop działa dużo lepiej i mogę teraz nagrywać! Mam nadzieję, że wszystkim się podoba, a jeśli tak, łapka w górę i zasubskrybuj!!!"
+			"Mój pierwszy filmik na moim kanale!! Od dana chciałem robić filmiki, ale mój laptop był suaby i nie mogłem jednocześnie włączyć frapsa, skajpa i minecrafta. ale już po wszystkim! pomógł mi mój nauczyciel od infy i mój laptop działa dużo lepiej i mogę teraz nagrywać! Mam nadzieję, że wszystkim się podoba, a jeśli tak, łapka w górę i zasubskrybuj!!!",
+			"Dla mnie wygląda dobrze"
 		]
 	},
 	"progressPage": {
@@ -210,7 +236,8 @@
 			"confirmPassword": "Potwierdź hasło",
 			"registerPrompt": "Nie masz konta?",
 			"loginPrompt": "Posiadasz już konto?",
-			"miiName": "Nazwa Mii"
+			"miiName": "Nazwa Mii",
+			"birthdate": "Data urodzenia"
 		},
 		"settings": {
 			"unavailable": "Niedostępne",
@@ -246,7 +273,14 @@
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
 				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
 			},
-			"upgrade": "Ulepsz konto"
+			"upgrade": "Ulepsz konto",
+			"delete": {
+				"button": "Usuń konto",
+				"modalTitle": "Usuń PNID",
+				"modalDescription": "Czy na pewno chcesz usunąć swój PNID? Proszę rozważyć poniższe kwestie przed usunięciem:\n\nTwoje dane konta poprzez wszystkie usługi Pretendo Network (w tym Forum i Juxtaposition) zostaną usunięte.\nTwoje dane Stripe i subskrypcje zostaną automatycznie usunięte.\nNie będzie można użyć tego samego PNID na nowym koncie w przyszłości.\nUsunięcie konta nie rozwiąże problemów z banami lub wsparciem technicznym. Jeżeli masz jakiś problem, skorzystaj z Forum, aby uzyskać pomoc.",
+				"modalCaution": "Tej operacji nie można cofnąć.",
+				"modalConfirm": "Tak, usuń"
+			}
 		},
 		"accountLevel": [
 			"Standardowy",
@@ -283,11 +317,37 @@
 		"description": "Osiągnięcie celu miesięcznego sprawi, że Pretendo stanie się pracą na pełen etat, zapewniając aktualizacje lepszej jakości w szybszym tempie."
 	},
 	"donation": {
-		"progress": "{totd} z {goald}/miesiąc, {perc} miesięcznego celu."
+		"progress": "{totd} z {goald}/miesiąc, {perc} miesięcznego celu.",
+		"upgradePushText": "Aby zostać subskrybentem i zdobyć dostęp do fajnych dodatków, odwiedź {link}.",
+		"upgradePushLinkText": "strona subskrypcji"
 	},
 	"modals": {
 		"cancel": "Anuluj",
 		"confirm": "Potwierdż",
 		"close": "Zamknij"
+	},
+	"miiEditor": {
+		"nickname": "Pseudonim",
+		"creator": "Twórca",
+		"birthday": "Urodziny",
+		"clickToSet": "Kliknij, aby ustawić",
+		"favorite": "Ulubiony",
+		"sharing": "Udostępnianie",
+		"copying": "Kopiowanie",
+		"save": "Zapisz",
+		"saveCaption": "Zapisanie nowego Mii nadpisze poprzedniego.",
+		"noCanvas": "Twoja przeglądarka nie obsługuje elementu canvas.",
+		"corruptedData": "Znaleziono uszkodzone dane Mii. Czy chcesz zacząć od początku?",
+		"miiSaved": "Twój Mii został zaktualizowany! Widoczność zmian na wszystkich platformach i w usługach może chwilę potrwać.",
+		"loading": "Ładowanie edytora Mii..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Błąd serwera!",
+			"description": "Proszę spróbować później."
+		}
+	},
+	"notfound": {
+		"description": "Ups! Nie mogliśmy znaleść tej strony."
 	}
 }

@@ -9,7 +9,7 @@
 		"account": "Account",
 		"accountWidget": {
 			"settings": "Impostazioni",
-			"logout": "Logout"
+			"logout": "Disconnetti"
 		},
 		"donate": "Dona",
 		"dropdown": {
@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "Il team",
-		"text": "Incontra il team dietro al progetto"
+		"text": "Incontra il team dietro al progetto",
+		"roles": {
+			"owner": "Fondatore del progetto e sviluppatore principale",
+			"miiverseDev": "Ricerca e sviluppo Miiverse",
+			"wiiuResearchAndPatchDev": "Ricerca e sviluppo patch Wii U",
+			"researchAndGameDev": "Ricerca dei sistemi e sviluppo dei server",
+			"researchAndServerArch": "Ricerca dei sistemi e architettura dei server",
+			"webDev": "Sviluppo web",
+			"preserveAndServerArch": "Preservatore e architettura dei server",
+			"webDevAndGameDev": "Sviluppo web e server",
+			"gameDevAndOptimise": "Sviluppo e ottimizzazione server",
+			"ctrResearchAndPatchDev": "Sviluppo e ricerca patch 3DS",
+			"devopsAndCommunityWork": "DevOps e lavoro per la comunità"
+		}
 	},
 	"specialThanks": {
 		"title": "Ringraziamenti speciali",
-		"text": "Senza di loro, Pretendo non sarebbe dove è oggi."
+		"text": "Senza di loro, Pretendo non sarebbe dove è oggi.",
+		"reasons": {
+			"general": "Localizzazioni e altre contribuzioni",
+			"forCrunch": "Sviluppo libreria crunch",
+			"forCtrDev": "Sviluppo 3DS e dissettore NEX",
+			"forMiiverseHelp": "Condivisione informazioni Miiverse",
+			"forResearch": "Ricerca su strutture dati Nintendo",
+			"forServerDev": "Ricerca su console e server di gioco",
+			"forIcons": "Icone per l'editor Mii e reazioni su Juxt",
+			"forSplatoon": "Rotazione scenari di Splatoon e ricerca",
+			"forPatches": "Sviluppo patch per console",
+			"forServers": "Architettura dei server"
+		}
 	},
 	"discordJoin": {
 		"title": "Tieniti aggiornato",
@@ -179,12 +204,13 @@
 			"loginPrompt": "Hai già un account?",
 			"confirmPassword": "Conferma password",
 			"email": "Email",
-			"registerPrompt": "Non hai un account?"
+			"registerPrompt": "Non hai un account?",
+			"birthdate": "Data di nascita"
 		},
 		"settings": {
 			"settingCards": {
 				"profile": "Profilo",
-				"nickname": "Nickname",
+				"nickname": "Soprannome",
 				"birthDate": "Data di nascita",
 				"gender": "Genere",
 				"country": "Paese/regione",
@@ -212,7 +238,8 @@
 				"userSettings": "Impostazioni utente",
 				"no_signins_notice": "La cronologia degli accessi non è al momento tracciata. Ricontrolla più tardi!",
 				"no_edit_from_dashboard": "La modifica delle impostazioni PNID dalla pagina utente non è al momento disponibile. Per favore, aggiorna le impostazioni utente dalla tua console di giochi collegata",
-				"no_newsletter_notice": "La newsletter non è al momento disponibile. Ricontrolla più tardi"
+				"no_newsletter_notice": "La newsletter non è al momento disponibile. Ricontrolla più tardi",
+				"region": "Regione"
 			},
 			"upgrade": "Fai l'upgrade del tuo account",
 			"unavailable": "Non disponibile",
@@ -296,9 +323,32 @@
 		"close": "Chiudi"
 	},
 	"donation": {
-		"progress": "{totd} di {goald}/mese, {perc} del goal mensile."
+		"progress": "{totd} di {goald}/mese, {perc} del goal mensile.",
+		"upgradePushText": "Per iscriverti e ottenere accesso a cose cool, visita la {link}.",
+		"upgradePushLinkText": "pagina di upgrade"
 	},
 	"notfound": {
 		"description": "Oops! Non siamo riusciti a trovare questa pagina."
+	},
+	"miiEditor": {
+		"nickname": "Sopranome",
+		"creator": "Creatore",
+		"birthday": "Compleanno",
+		"clickToSet": "Clicca per impostare",
+		"favorite": "Preferito",
+		"sharing": "Condivisione",
+		"copying": "Copia",
+		"save": "Salva",
+		"saveCaption": "Salvare il tuo Mii ucciderà il precedente.",
+		"noCanvas": "Il tuo browser non supporta l'elemento canvas.",
+		"corruptedData": "Sono stati trovati dati Mii corrotti. Vuoi ricominciare da zero?",
+		"miiSaved": "Il tuo Mii è stato aggiornato! Potrebbe volerci un po' di tempo perché questo cambiamento si rifletta su tutte le piattaforme e servizi.",
+		"loading": "Caricando l'editor Mii..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Errore di server!",
+			"description": "Per favore, riprova più tardi."
+		}
 	}
 }
