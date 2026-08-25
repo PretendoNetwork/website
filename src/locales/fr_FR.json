@@ -113,7 +113,10 @@
 	},
 	"credits": {
 		"title": "L'équipe",
-		"text": "Rencontrez l'équipe derrière le projet"
+		"text": "Rencontrez l'équipe derrière le projet",
+		"roles": {
+			"researchAndGameDev": "Recherche de système et développment de serveur"
+		}
 	},
 	"specialThanks": {
 		"title": "Sincères remerciements",
