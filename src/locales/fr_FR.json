@@ -115,10 +115,13 @@
 		"title": "L'équipe",
 		"text": "Rencontrez l'équipe derrière le projet",
 		"roles": {
-			"researchAndGameDev": "Recherche de système et développment de serveur",
+			"researchAndGameDev": "Recherche de système et développement de serveur",
 			"miiverseDev": "Recherche et développement Miiverse",
 			"webDev": "Développement Web",
-			"devopsAndCommunityWork": "DevOps et travail de la communauté"
+			"devopsAndCommunityWork": "DevOps et travail de la communauté",
+			"wiiuResearchAndPatchDev": "Recherche et développement de patch Wii U",
+			"preserveAndServerArch": "Préservation et architecture serveur",
+			"gameDevAndOptimise": "Développement serveur et optimisation"
 		}
 	},
 	"specialThanks": {
@@ -129,7 +132,7 @@
 			"forMiiverseHelp": "Partage d'informations sur Miiverse",
 			"forResearch": "Recherches sur l'architecture de données de Nintendo",
 			"forIcons": "Icônes pour l'éditeur Mii et les réactions Juxt",
-			"forServers": "Architecture du serveur"
+			"forServers": "Architecture serveur"
 		}
 	},
 	"discordJoin": {
@@ -318,7 +321,7 @@
 		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
 	},
 	"miiEditor": {
-		"nickname": "Surnom",
+		"nickname": "Pseudonyme",
 		"creator": "Créateur",
 		"birthday": "Anniversaire",
 		"favorite": "Favori",
@@ -327,7 +330,8 @@
 		"save": "Sauvegarder",
 		"saveCaption": "Sauvegarder votre Mii va tuer l'ancien.",
 		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
-		"loading": "Chargement de l'éditeur Mii..."
+		"loading": "Chargement de l'éditeur Mii...",
+		"clickToSet": "Cliquer pour paramétrer"
 	},
 	"errorPage": {
 		"500": {
