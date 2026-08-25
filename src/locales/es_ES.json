@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "Equipo",
-		"text": "Conoce al equipo tras el proyecto"
+		"text": "Conoce al equipo tras el proyecto",
+		"roles": {
+			"owner": "Fundador del proyecto y desarrollador principal",
+			"miiverseDev": "Investigación de Miiverse y desarrollo",
+			"wiiuResearchAndPatchDev": "Investigación de Wii Un y desarrollo de parches",
+			"researchAndGameDev": "Investigación de sistemas y desarrollo de servidores",
+			"researchAndServerArch": "Investigación de sistemas y arquitectura de servidor",
+			"webDev": "Desarrollo web",
+			"preserveAndServerArch": "Preservador y arquitectura de servidor",
+			"webDevAndGameDev": "Desarrollo de servidor y de página web",
+			"gameDevAndOptimise": "Desarrollo de servidor y optimización",
+			"ctrResearchAndPatchDev": "Desarrollo de parches para 3DS y investigación",
+			"devopsAndCommunityWork": "DevOps y trabajo para la comunidad"
+		}
 	},
 	"specialThanks": {
 		"title": "Agradecimientos especiales",
-		"text": "Sin ellos, Pretendo no sería lo que es hoy."
+		"text": "Sin ellos, Pretendo no sería lo que es hoy.",
+		"reasons": {
+			"general": "Ubicaciones y otras contribuciones",
+			"forCrunch": "Desarrollo de librerias durante crunch",
+			"forCtrDev": "Desarrollo de 3DS y disector de NEX",
+			"forMiiverseHelp": "Se ha compartido info. de Miiverse",
+			"forResearch": "Investigación en estructuras de datos de Nintendo",
+			"forServerDev": "Investigación de consolas y de servidores de juegos",
+			"forIcons": "Íconos para el editor de Mii y reacciones de Juxt",
+			"forSplatoon": "Rotaciones de Splatoon y investigación",
+			"forPatches": "Desarrollo de parches para consolas",
+			"forServers": "Arquitectura de servidor"
+		}
 	},
 	"discordJoin": {
 		"title": "Mantente al día",
@@ -292,7 +317,9 @@
 		"title": "Subir rango"
 	},
 	"donation": {
-		"progress": "{totd} de {goald}/mes, {perc} del objetivo mensual."
+		"progress": "{totd} de {goald}/mes, {perc} del objetivo mensual.",
+		"upgradePushText": "Para ser suscriptor y tener acceso a cosas cool, visita el {link}.",
+		"upgradePushLinkText": "Actualiza la página"
 	},
 	"modals": {
 		"cancel": "Cancelar",
@@ -301,5 +328,26 @@
 	},
 	"notfound": {
 		"description": "¡Vaya! No hemos podido encontrar esta página."
+	},
+	"miiEditor": {
+		"nickname": "Nombre",
+		"creator": "Creador",
+		"birthday": "Cumple",
+		"clickToSet": "click para aplicar",
+		"favorite": "Favorito",
+		"sharing": "Compartir",
+		"copying": "Copiado",
+		"save": "Guardar",
+		"saveCaption": "Guardar tu Mii va a eliminar al anterior.",
+		"noCanvas": "Tu navegador no soporta el elemento de lienzo :( .",
+		"corruptedData": "Se encontraron datos de Mii corruptos. Quieres iniciar desde cero?",
+		"miiSaved": "Tu Mii se actualizó! Los cambios pueden tardar en reflejarse en todas las plataformas y servicios.",
+		"loading": "Cargando el Editor de Mii..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Error de servidor! :(",
+			"description": "Intenta más tarde."
+		}
 	}
 }
