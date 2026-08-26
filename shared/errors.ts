@@ -26,7 +26,10 @@ const apiErrorCodes = {
 	INVALID_GENDER: 'Invalid gender',
 	INVALID_REGION: 'Invalid region',
 	INVALID_TIMEZONE: 'Invalid timezone',
-	INVALID_MII_DATA: 'Invalid mii data'
+	INVALID_MII_DATA: 'Invalid mii data',
+	EMAIL_UNCHANGED: 'New email address must differ from current',
+	INVALID_EMAIL_TOKEN: 'Invalid email token',
+	MISSING_EMAIL_TOKEN: 'Missing email token'
 } as const;
 
 export type ApiErrorCodes = keyof typeof apiErrorCodes;
@@ -59,7 +62,10 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	INVALID_GENDER: 400,
 	INVALID_REGION: 400,
 	INVALID_TIMEZONE: 400,
-	INVALID_MII_DATA: 400
+	INVALID_MII_DATA: 400,
+	EMAIL_UNCHANGED: 400,
+	INVALID_EMAIL_TOKEN: 400,
+	MISSING_EMAIL_TOKEN: 400
 };
 
 export function getTextForApiErrorCode(code: ApiErrorCodes): string {

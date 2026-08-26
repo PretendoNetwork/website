@@ -365,7 +365,7 @@ button#openSidebar {
 	opacity: 1;
 }
 .docs-wrapper :deep(.content) .content-inner div.tip.yellow::after {
-	background: var(--yellow-shade-1);
+	background: var(--yellow-shade-2);
 }
 .docs-wrapper :deep(.content) .content-inner div.tip.red::after {
 	background: var(--red-shade-1);

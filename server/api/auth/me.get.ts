@@ -16,6 +16,7 @@ export default defineEventHandler(async (event): Promise<GetApiAuthMe> => {
 		region: data.region,
 		timezone: data.timezone,
 		emailAddress: data.emailAddress,
+		emailValidated: data.emailValidated,
 		serverAccessLevel: data.serverAccessLevel as any,
 		discordId: data.connections?.discord?.id ?? null,
 		stripeTier: data.connections?.stripe?.subscriptionId

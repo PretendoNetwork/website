@@ -10,6 +10,7 @@ export type GetApiAuthMe = {
 	region: number;
 	timezone: string;
 	emailAddress: string;
+	emailValidated: boolean;
 	serverAccessLevel: 'dev' | 'test' | 'prod';
 	discordId: string | null;
 	stripeTier: {
@@ -116,6 +117,16 @@ export const AccountUpdateSchema = z.object({
 	timezone: z.string().optional()
 });
 export type ApiAccountUpdateRequest = z.infer<typeof AccountUpdateSchema>;
+
+export const EmailUpdateSchema = z.object({
+	email: z.string()
+});
+export type ApiAccountEmailUpdateRequest = z.infer<typeof EmailUpdateSchema>;
+
+export const EmailVerifySchema = z.object({
+	token: z.string()
+});
+export type ApiAccountEmailVerifyRequest = z.infer<typeof EmailVerifySchema>;
 
 export const ResetPasswordSchema = z.object({
 	password: z.string(),

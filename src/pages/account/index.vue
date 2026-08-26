@@ -425,58 +425,51 @@ useHead({
       >
         {{ $t("account.settings.settingCards.signInSecurity") }}
       </h2>
-      <AlertDialog.Root v-model:open="emailEditModalOpen">
-        <div class="setting-card">
-          <h2 class="header">
-            {{ $t("account.account") }}
-          </h2>
-          <AlertDialog.Trigger class="edit">
-            <Icon
-              name="ph:pencil"
-              size="26"
+
+      <div class="setting-card">
+        <h2 class="header">
+          {{ $t("account.account") }}
+        </h2>
+
+        <ul class="setting-list">
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.email") }}
+              <span
+                v-if="profile.emailValidated"
+                class="tag"
+              ><Icon
+                name="ph:check-circle-fill"
+                size="16"
+              />{{ $t('account.settings.verified_email') }}</span>
+              <span
+                v-else
+                class="tag warn"
+              ><Icon
+                name="ph:warning-circle-fill"
+                size="16"
+              />{{ $t('account.settings.unverified_email') }}</span>
+            </p>
+            <p class="value">
+              {{ profile.emailAddress }}
+            </p>
+            <UpdateEmailModal
+              v-model="emailEditModalOpen"
+              :profile="profile"
+              :dialog-container="dialogContainer"
+              @change="refresh"
             />
-          </AlertDialog.Trigger>
-          <AlertDialog.Portal :to="dialogContainer ?? undefined">
-            <AlertDialog.Overlay />
-            <AlertDialog.Content class="modal">
-              <AlertDialog.Title>
-                {{ $t("account.settings.unavailable") }}.
-              </AlertDialog.Title>
-              <AlertDialog.Description class="modal-caption">
-                <p>
-                  {{
-                    $t("account.settings.settingCards.no_edit_from_dashboard")
-                  }}
-                </p>
-              </AlertDialog.Description>
-              <div class="modal-button-wrapper">
-                <AlertDialog.Cancel class="cancel">
-                  {{ $t("modals.close") }}
-                </AlertDialog.Cancel>
-              </div>
-            </AlertDialog.Content>
-          </AlertDialog.Portal>
-          <ul class="setting-list">
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.email") }}
-              </p>
-              <p class="value">
-                {{ profile.emailAddress }}
-              </p>
-            </li>
-            <li>
-              <p class="label">
-                {{ $t("account.settings.settingCards.password") }}
-              </p>
-              <p class="value">
-                ●●●●●●●●
-              </p>
-            </li>
-          </ul>
-          <p>{{ $t("account.settings.settingCards.passwordResetNotice") }}</p>
-        </div>
-      </AlertDialog.Root>
+          </li>
+          <li>
+            <p class="label">
+              {{ $t("account.settings.settingCards.password") }}
+            </p>
+            <p class="value">
+              ●●●●●●●●
+            </p>
+          </li>
+        </ul>
+      </div>
 
       <div class="setting-card sign-in-history">
         <h2 class="header">
@@ -520,7 +513,7 @@ useHead({
         </button>
         <p v-else>
           {{ $t("account.settings.settingCards.noDiscordLinked") }}
-          <NuxtLink
+          <br><NuxtLink
             :style="{ cursor: 'pointer' }"
             @click="executeLinkDiscord"
           >
@@ -773,8 +766,30 @@ useHead({
 	padding: 0;
 }
 .setting-card .setting-list p.label {
+	display: flex;
+	align-items: center;
+	gap: .5em;
 	color: var(--text-shade-3);
 	margin-bottom: 4px;
+}
+
+.setting-card .setting-list p.label .tag {
+	background: var(--bg-shade-0);
+	display: flex;
+	align-items: center;
+	gap: .3em;
+	border-radius: 9999px;
+	padding: 3px 10px 3px 6px;
+	font-size: .8em;
+}
+
+.setting-card .setting-list p.label .tag span {
+	color: var(--green-shade-1);
+	margin-top: 2px
+}
+
+.setting-card .setting-list p.label .tag.warn span {
+	color: var(--yellow-shade-1);
 }
 
 .modal-wrapper {
