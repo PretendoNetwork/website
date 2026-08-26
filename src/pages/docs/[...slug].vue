@@ -7,15 +7,10 @@ const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 if (!doc.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
-
-useHead({
-	title: `${doc.value.title}`,
-	meta: [
-		{ property: 'description', content: doc.value.description },
-		{ property: 'og:description', content: doc.value.description },
-		{ property: 'og:image:alt', content: '' },
-		{ name: 'twitter:description', content: doc.value.description }
-	]
+customSeoMeta({
+	subsection: 'docs',
+	title: doc.value.title,
+	description: doc.value.description
 });
 
 definePageMeta({

@@ -154,9 +154,7 @@ const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 	}
 });
 
-useHead({
-	title: `Account`
-});
+customSeoMeta({ subsection: 'account' });
 </script>
 
 <template>

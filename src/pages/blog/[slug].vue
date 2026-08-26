@@ -8,16 +8,11 @@ if (!post.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 
-useHead({
-	title: `${post.value.title} | Blog`,
-	meta: [
-		{ property: 'description', content: post.value.caption },
-		{ property: 'og:description', content: post.value.caption },
-		{ property: 'og:image', content: post.value.cover_image },
-		{ property: 'og:image:alt', content: '' },
-		{ name: 'twitter:description', content: post.value.caption },
-		{ name: 'twitter:image', content: post.value.cover_image }
-	]
+customSeoMeta({
+	subsection: 'blog',
+	title: post.value.title,
+	description: post.value.caption,
+	ogImage: post.value.cover_image
 });
 </script>
 
