@@ -31,7 +31,7 @@ const { execute, isLoading } = useAsync({
 	}
 });
 
-customSeoMeta({ subsection: 'account', title: 'Reset passoword' });
+customSeoMeta({ subsection: 'account', title: 'Reset Password' });
 </script>
 
 <template>

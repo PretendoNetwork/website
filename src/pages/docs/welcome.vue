@@ -2,8 +2,7 @@
 
 customSeoMeta({
 	subsection: 'docs',
-	description: 'Learn how to set up Pretendo on a variety of consoles and emulators.',
-	ogDescription: 'Learn how to set up Pretendo on a variety of consoles and emulators.'
+	description: 'Learn how to set up Pretendo Network on a variety of consoles and emulators.'
 });
 
 definePageMeta({
