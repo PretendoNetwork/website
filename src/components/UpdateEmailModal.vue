@@ -19,11 +19,11 @@ const {
 	execute: executeUpdateEmail,
 	isLoading: isLoadingUpdateEmail
 } = useAsync({
-	async handler(body: ApiAccountEmailUpdateRequest) {
+	async handler() {
 		await apiFetch('/api/account/update-email', {
 			method: 'PATCH',
 			body: {
-				email: body.email
+				email: newEmail.value
 			} satisfies ApiAccountEmailUpdateRequest
 		});
 
@@ -89,9 +89,7 @@ const {
           <button
             :class="{action: true, disabled: isLoadingUpdateEmail || !newEmail}"
             :disabled="isLoadingUpdateEmail || !newEmail"
-            @click="() => executeUpdateEmail({
-              email: newEmail
-            })"
+            @click="executeUpdateEmail"
           >
             <Loader v-if="isLoadingUpdateEmail" />
             <span v-else>{{
