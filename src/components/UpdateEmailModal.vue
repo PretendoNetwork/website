@@ -131,9 +131,7 @@ const {
                   isLoadingUpdateEmail
               }"
               :disabled="isLoadingUpdateEmail"
-              @click="() => executeUpdateEmail({
-                email: profile.emailAddress
-              })"
+              @click="executeUpdateEmail"
             >
               {{
                 $t("account.settings.unverifiedEmailModal.resend")
