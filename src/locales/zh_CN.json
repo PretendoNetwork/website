@@ -224,7 +224,7 @@
 				"nickname": "昵称",
 				"birthDate": "生日",
 				"gender": "性别",
-				"country": "国家/地区",
+				"country": "国家",
 				"timezone": "时区",
 				"serverEnv": "服务器环境",
 				"production": "生产环境",
@@ -244,7 +244,8 @@
 				"no_newsletter_notice": "电子报告目前不可用，请稍后再来查看。",
 				"userSettings": "用户设置",
 				"no_signins_notice": "目前没有任何登录历史。请稍后再试！",
-				"no_edit_from_dashboard": "目前无法从网站修改 PNID 设置。请通过已绑定的主机上修改用户设置。"
+				"no_edit_from_dashboard": "目前无法从网站修改 PNID 设置。请通过已绑定的主机上修改用户设置。",
+				"region": "地区"
 			},
 			"upgrade": "升级账号",
 			"unavailable": "无法使用",
@@ -309,7 +310,7 @@
 		"clickToSet": "点击设置",
 		"favorite": "设为最爱",
 		"sharing": "共享",
-		"copying": "复制中",
+		"copying": "允许复制",
 		"save": "保存",
 		"saveCaption": "保存你的 Mii 虚拟形象会删除之前的 Mii 虚拟形象。",
 		"noCanvas": "您的浏览器不支持 canvas 元素。",

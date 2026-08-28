@@ -180,7 +180,7 @@
 				"profile": "個人檔案",
 				"birthDate": "生日",
 				"gender": "性別",
-				"country": "國家/地區",
+				"country": "國家",
 				"timezone": "時區",
 				"serverEnv": "伺服器環境",
 				"production": "生產",
@@ -204,7 +204,8 @@
 				"passwordPrompt": "輸入你的 PNID 密碼以下載 Cemu 檔案",
 				"no_signins_notice": "登入歷史紀錄目前未記錄。請稍後再來查看！",
 				"no_newsletter_notice": "電子報告目前無法使用。請稍後再來查看！",
-				"no_edit_from_dashboard": "目前無法從網站編輯 PNID 設定。請通過已連結的主機上編輯使用者設定。"
+				"no_edit_from_dashboard": "目前無法從網站編輯 PNID 設定。請通過已連結的主機上編輯使用者設定。",
+				"region": "地區"
 			},
 			"upgrade": "升級帳號",
 			"unavailable": "無法使用",
@@ -307,7 +308,7 @@
 	"miiEditor": {
 		"birthday": "生日",
 		"clickToSet": "點觸設定",
-		"copying": "複製中",
+		"copying": "允許複製",
 		"corruptedData": "找到已損壞的 Mii 資料。是否要從頭開始？",
 		"creator": "創作者",
 		"favorite": "設為最愛",
