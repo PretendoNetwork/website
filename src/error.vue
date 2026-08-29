@@ -3,9 +3,11 @@ import { watchImmediate } from '@vueuse/core';
 import DefaultLayout from './layouts/default.vue';
 const { error } = defineProps<{ error: any }>();
 
-watchImmediate([error], () => {
-	console.error(error);
-});
+if (import.meta.client) {
+	watchImmediate([() => error], () => {
+		console.error(error);
+	});
+}
 </script>
 
 <template>
