@@ -273,6 +273,11 @@
 				"resend": "Resend verification email"
 			}
 		},
+		"emailVerification": {
+			"verifiedTitle": "Email successfully verified",
+			"verifiedCaption": "You may now close this tab.",
+			"failedTitle": "Failed to verify email"
+		},
 		"accountLevel": [
 			"Standard",
 			"Tester",

@@ -46,17 +46,16 @@ await callOnce(async () => {
     <div class="account-form-wrapper">
       <h1
         class="title dot"
-        data-title-suffix="!"
       >
-        Email successfully verified{{ '' }}
+        {{ $t('account.emailVerification.verifiedTitle') }}
       </h1>
-      <p>You may now close this tab.</p>
+      <p>{{ $t('account.emailVerification.verifiedCaption') }}</p>
     </div>
   </div>
   <div v-else>
     <div class="account-form-wrapper">
       <h1 class="title dot">
-        Failed to verify email{{ '' }}
+        {{ $t('account.emailVerification.failedTitle') }}
       </h1>
       <p>{{ errorMessage }}</p>
     </div>
