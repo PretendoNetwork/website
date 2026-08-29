@@ -27,7 +27,11 @@ export function useHttpApi(event: H3Event, token?: string): HttpApiFetch {
 		if (response.statusCode >= 400) {
 			const err = new Error(`Request failed with ${response.statusCode}`);
 			try {
-				(err as any).data = await response.body.text();
+				if (response.headers['content-type']?.includes('application/json')) {
+					(err as any).data = await response.body.json();
+				} else {
+					(err as any).data = await response.body.text();
+				}
 			} catch {
 				// It's already errored, we don't need to know the body
 			}
