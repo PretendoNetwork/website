@@ -13,19 +13,6 @@ export default defineNitroPlugin((nitroApp) => {
 		const where = event ? `${event.method} ${event.path}` : 'non-request';
 		const tag = error.unhandled ? '[unhandled]' : '';
 
-		console.error(`[server error] ${tag} ${where} -> ${statusCode} ${err.message}`);
-
-		if (error.data !== undefined) {
-			console.error('  data:', error.data);
-		}
-
-		if (err.cause) {
-			console.error('  cause:', err.cause);
-		}
-
-		if (err.stack) {
-			// Drop the first line (already printed above as the message).
-			console.error(err.stack.split('\n').slice(1).join('\n'));
-		}
+		console.error(`[server error] ${tag} ${statusCode} ${where}:`, err);
 	});
 });
