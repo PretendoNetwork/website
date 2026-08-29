@@ -36,25 +36,10 @@ const { data: searchResults } = await useAsyncData(
 );
 const results = computed(() => searchResults.value ?? []);
 
-useHead({
+customSeoMeta({
+	subsection: 'docs',
 	title: 'Search',
-	meta: [
-		{
-			name: 'description',
-			content:
-				'Got an error code? Find solutions here.'
-		},
-		{
-			name: 'og:description',
-			content:
-				'Got an error code? Find solutions here.'
-		},
-		{
-			name: 'twitter:description',
-			content:
-				'Got an error code? Find solutions here.'
-		}
-	]
+	description: 'Got an error code? Find solutions here.'
 });
 
 definePageMeta({

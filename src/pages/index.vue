@@ -32,6 +32,8 @@ function arraySplit<T>(array: Array<T>, groupCount: number): Array<Array<T>> {
 function titleSuffixHandler(path: string) {
 	return te(path) ? t(path) : null;
 }
+
+customSeoMeta();
 </script>
 
 <template>

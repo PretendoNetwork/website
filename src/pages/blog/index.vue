@@ -1,13 +1,12 @@
 <script setup lang="ts">
-useHead({
-	title: 'Blog'
-});
+customSeoMeta({ subsection: 'blog' });
 /* eslint-disable vue/no-v-html -- we might wanna avoid this by rewriting the locales to use variables */
 const { data: allPosts } = await useAsyncData('blog', () => queryCollection('blog').all());
 
 const posts = computed(() => allPosts.value?.filter(p => !p.path.startsWith('/blog/_')).sort((a, b) => {
 	return new Date(b.date).getTime() - new Date(a.date).getTime();
 }));
+
 </script>
 
 <template>

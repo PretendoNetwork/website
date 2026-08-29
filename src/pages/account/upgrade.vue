@@ -81,10 +81,7 @@ function hasSubscription(priceId: string) {
 		profile.value?.stripeTier && priceId === profile.value.stripeTier.priceId
 	);
 }
-
-useHead({
-	title: `Upgrade`
-});
+customSeoMeta({ subsection: 'account', title: 'Upgrade' });
 </script>
 
 <template>

@@ -8,14 +8,10 @@ if (!error.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
 
-useHead({
-	title: `${error.value.code} | Docs`,
-	meta: [
-		{ property: 'description', content: error.value.message },
-		{ property: 'og:description', content: error.value.message },
-		{ property: 'og:image:alt', content: '' },
-		{ name: 'twitter:description', content: error.value.message }
-	]
+customSeoMeta({
+	subsection: 'docs',
+	title: error.value.code,
+	description: error.value.message
 });
 
 definePageMeta({
