@@ -4,7 +4,7 @@ import type { ApiErrorCodes } from '~~/shared/errors';
 
 const bucket = createRatelimitBucket({
 	id: 'verify-email',
-	points: 3,
+	points: 20,
 	durationSec: 30 * 60, // 30 minutes
 	blockDurationSec: 1 * 60 * 60 // 1 hour
 });
