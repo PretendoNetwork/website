@@ -1,12 +1,5 @@
 import type { H3Error } from 'h3';
 
-/**
- * Logs server-side errors in a compact, readable format.
- *
- * Nitro fires the `error` hook for every request error, whatever the source
- * (API routes, server routes/middleware, SSR rendering). It also fires for
- * expected HTTP errors like 404s, so anything below a 500 is ignored here.
- */
 export default defineNitroPlugin((nitroApp) => {
 	nitroApp.hooks.hook('error', (err, { event }) => {
 		const error = err as Partial<H3Error>;
