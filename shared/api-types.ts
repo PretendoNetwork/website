@@ -123,6 +123,13 @@ export const EmailUpdateSchema = z.object({
 });
 export type ApiAccountEmailUpdateRequest = z.infer<typeof EmailUpdateSchema>;
 
+export const PasswordUpdateSchema = z.object({
+	oldPassword: z.string(),
+	newPassword: z.string(),
+	newPasswordConfirm: z.string()
+});
+export type ApiAccountPasswordUpdateRequest = z.infer<typeof PasswordUpdateSchema>;
+
 export const EmailVerifySchema = z.object({
 	token: z.string()
 });

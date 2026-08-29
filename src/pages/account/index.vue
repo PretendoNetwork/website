@@ -66,6 +66,7 @@ const dialogContainer = ref(null);
 const deleteModalOpen = ref(false);
 const profileEditModalOpen = ref(false);
 const emailEditModalOpen = ref(false);
+const passwordEditModalOpen = ref(false);
 const selectedServerEnv = ref<'dev' | 'test' | 'prod' | undefined>(
 	profile.value?.serverAccessLevel
 );
@@ -467,6 +468,10 @@ useHead({
             <p class="value">
               ●●●●●●●●
             </p>
+            <UpdatePasswordModal
+              v-model="passwordEditModalOpen"
+              :dialog-container="dialogContainer"
+            />
           </li>
         </ul>
       </div>
@@ -544,7 +549,8 @@ useHead({
         hidden: !(
           deleteModalOpen ||
           profileEditModalOpen ||
-          emailEditModalOpen
+          emailEditModalOpen ||
+          passwordEditModalOpen
         ),
       }"
     >

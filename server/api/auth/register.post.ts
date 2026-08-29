@@ -21,10 +21,10 @@ const errors: Record<string, ApiErrorCodes> = {
 	'INVALID_ARGUMENT: Two or more punctuation characters cannot be used in a row': 'USERNAME_INVALID_CHARS',
 	'INVALID_ARGUMENT: PNID already in use': 'USERNAME_IN_USE',
 	'INVALID_ARGUMENT: Mii name too long': 'MIINAME_TOO_LONG',
-	'INVALID_ARGUMENT: Password must be between 6 and 16 characters long': 'INVALID_PASSWORD_INPUT',
-	'INVALID_ARGUMENT: Password cannot be the same as username': 'INVALID_PASSWORD_INPUT',
-	'INVALID_ARGUMENT: Password must have combination of letters, numbers, and/or punctuation characters': 'INVALID_PASSWORD_INPUT',
-	'INVALID_ARGUMENT: Password may not have 3 repeating characters': 'INVALID_PASSWORD_INPUT',
+	'INVALID_ARGUMENT: Password must be between 6 and 16 characters long': 'INVALID_PASSWORD_LENGTH',
+	'INVALID_ARGUMENT: Password cannot be the same as username': 'INVALID_PASSWORD_USERNAME',
+	'INVALID_ARGUMENT: Password must have combination of letters, numbers, and/or punctuation characters': 'INVALID_PASSWORD_COMBOS',
+	'INVALID_ARGUMENT: Password may not have 3 repeating characters': 'INVALID_PASSWORD_REPEATING',
 	'INVALID_ARGUMENT: Passwords do not match': 'INVALID_PASSWORD_NO_MATCH'
 };
 
