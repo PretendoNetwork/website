@@ -27,19 +27,15 @@ const {
 	}
 });
 
-await callOnce(async () => {
-	await executeVerifyEmail();
+callOnce(() => {
+	executeVerifyEmail();
 });
 </script>
 
 <template>
   <div v-if="isLoadingVerifyEmail">
-    <div class="account-form-wrapper">
-      <form
-        class="account loading"
-      >
-        <Loader />
-      </form>
+    <div class="account-form-wrapper loading">
+      <Loader />
     </div>
   </div>
   <div v-else-if="success">
@@ -72,6 +68,9 @@ await callOnce(async () => {
   width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
+}
+.account-form-wrapper.loading {
+	justify-content: center;
 }
 .title {
 	font-size: 4rem;

@@ -220,7 +220,8 @@
 			"update": "Update",
 			"unverified_email": "Unverified",
 			"verified_email": "Verified",
-			"verify_email": "Verify email",
+			"verify_email_notice": "You haven't verified your email address yet.",
+			"verify_email_button": "Verify now",
 			"settingCards": {
 				"userSettings": "User settings",
 				"profile": "Profile",
