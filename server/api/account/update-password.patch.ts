@@ -10,11 +10,11 @@ const bucket = createRatelimitBucket({
 });
 
 const errors: Record<string, ApiErrorCodes> = {
-	'INVALID_ARGUMENT: Password must be between 6 and 16 characters long': 'INVALID_PASSWORD_LENGTH',
-	'INVALID_ARGUMENT: Password cannot be the same as username': 'INVALID_PASSWORD_USERNAME',
-	'INVALID_ARGUMENT: Password must have combination of letters, numbers, and/or punctuation characters': 'INVALID_PASSWORD_COMBOS',
-	'INVALID_ARGUMENT: Password may not have 3 repeating characters': 'INVALID_PASSWORD_REPEATING',
-	'INVALID_ARGUMENT: Passwords do not match': 'INVALID_PASSWORD_NO_MATCH',
+	'INVALID_ARGUMENT: Password must be between 6 and 16 characters long': 'PASSWORD_INVALID_LENGTH',
+	'INVALID_ARGUMENT: Password cannot be the same as username': 'PASSWORD_NOT_USERNAME',
+	'INVALID_ARGUMENT: Password must have combination of letters, numbers, and/or punctuation characters': 'PASSWORD_NEEDS_CHARS',
+	'INVALID_ARGUMENT: Password may not have 3 repeating characters': 'PASSWORD_REPEATED_CHARS',
+	'INVALID_ARGUMENT: Passwords do not match': 'PASSWORDS_DO_NOT_MATCH',
 	'INVALID_ARGUMENT: Password is incorrect': 'INVALID_PASSWORD'
 };
 
