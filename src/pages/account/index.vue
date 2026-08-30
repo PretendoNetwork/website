@@ -155,9 +155,7 @@ const { execute: executeUnlinkDiscord, isLoading: isLoadingUnlink } = useAsync({
 	}
 });
 
-useHead({
-	title: `Account`
-});
+customSeoMeta({ subsection: 'account' });
 </script>
 
 <template>
@@ -167,15 +165,27 @@ useHead({
   >
     <div class="account-sidebar">
       <div class="user">
-        <a
-          href="/account/miieditor"
-          class="mii"
-        >
-          <img
-            :src="profile.mii?.imageUrl"
-            alt="Mii image"
+        <div class="mii-wrapper">
+          <a
+            href="/account/miieditor"
+            class="mii"
           >
-        </a>
+            <img
+              :src="profile.mii?.imageUrl"
+              alt="Mii image"
+            >
+          </a>
+          <a
+            class="edit-button"
+            href="/account/miieditor"
+          >
+            <Icon
+              name="ph:pencil"
+              size="20"
+            />
+          </a>
+        </div>
+
         <p class="miiname">
           {{ profile.mii?.name }}
         </p>
@@ -641,36 +651,41 @@ useHead({
 	border-color: #5aff15;
 }
 
+.account-sidebar .user .mii-wrapper {
+	position: relative;
+}
+
 .account-sidebar .user a.mii {
 	position: relative;
 	display: block;
 	width: 128px;
 	height: 128px;
 	overflow: hidden;
-	border-radius: 100%;
+	border-radius: 9999px;
 	background: var(--bg-shade-3);
 }
-.account-sidebar .user a.mii::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background:
-		no-repeat center/50% url("@/public/assets/images/edit.svg"),
-		rgba(55, 60, 101, 0.7);
-	opacity: 0;
-	transition: opacity 150ms;
-}
-.account-sidebar .user a.mii:hover::after {
-	opacity: 1;
+.account-sidebar .user a.mii:hover,
+.account-sidebar .user .mii-wrapper a.edit-button:hover,
+.account-sidebar .user:has(a.edit-button:hover) a.mii,
+.account-sidebar .user:has(a.mii:hover) a.edit-button {
+	background: var(--bg-shade-4);
 }
 
-.account-sidebar .user .mii {
-	width: 100%;
-	height: 100%;
+.account-sidebar .user .mii-wrapper a.edit-button {
+	color: inherit;
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg-shade-3);
+	width: 32px;
+	height: 32px;
+	border: 2px solid var(--bg-shade-1);
+	border-radius: 9999px;
 }
+
 .account-sidebar .buttons {
 	display: grid;
 	grid-auto-flow: row;

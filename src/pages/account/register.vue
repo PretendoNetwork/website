@@ -55,6 +55,8 @@ const { execute, isLoading } = useAsync({
 		});
 	}
 });
+
+customSeoMeta({ subsection: 'account', title: 'Register' });
 </script>
 
 <template>

@@ -16,11 +16,11 @@ const apiErrorCodes = {
 	USERNAME_INVALID_CHARS: 'Username contains invalid characters',
 	USERNAME_IN_USE: 'PNID already in use',
 	MIINAME_TOO_LONG: 'Mii name too long',
-	INVALID_PASSWORD_LENGTH: 'Password must be between 6 and 16 characters long',
-	INVALID_PASSWORD_USERNAME: 'Password cannot be the same as username',
-	INVALID_PASSWORD_COMBOS: 'Password must have combination of letters, numbers, and/or punctuation characters',
-	INVALID_PASSWORD_REPEATING: 'Password may not have 3 repeating characters',
-	INVALID_PASSWORD_NO_MATCH: 'Passwords do not match',
+	PASSWORD_INVALID_LENGTH: 'Password must be between 6 and 16 characters long',
+	PASSWORD_NOT_USERNAME: 'Password cannot be the same as your username',
+	PASSWORD_NEEDS_CHARS: 'Password must have combination of letters, numbers, and/or punctuation characters',
+	PASSWORDS_DO_NOT_MATCH: 'Passwords do not match',
+	PASSWORD_REPEATED_CHARS: 'Password may not have 3 repeating characters',
 	ACCOUNT_DELETED: 'Account has been deleted',
 	INVALID_ACCESS_LEVEL: 'Invalid access level',
 	BANNED: 'Account is banned',
@@ -51,7 +51,11 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	UNDER_THIRTEEN: 400,
 	ACCOUNT_DELETED: 400,
 	INVALID_EMAIL: 400,
-	INVALID_PASSWORD_NO_MATCH: 400,
+	PASSWORD_INVALID_LENGTH: 400,
+	PASSWORD_NOT_USERNAME: 400,
+	PASSWORD_NEEDS_CHARS: 400,
+	PASSWORDS_DO_NOT_MATCH: 400,
+	PASSWORD_REPEATED_CHARS: 400,
 	MIINAME_TOO_LONG: 400,
 	USERNAME_IN_USE: 400,
 	USERNAME_INVALID_CHARS: 400,
@@ -67,11 +71,7 @@ export const apiErrorCodeStatus: Record<ApiErrorCodes, number> = {
 	INVALID_MII_DATA: 400,
 	EMAIL_UNCHANGED: 400,
 	INVALID_EMAIL_TOKEN: 400,
-	MISSING_EMAIL_TOKEN: 400,
-	INVALID_PASSWORD_LENGTH: 400,
-	INVALID_PASSWORD_USERNAME: 400,
-	INVALID_PASSWORD_COMBOS: 400,
-	INVALID_PASSWORD_REPEATING: 400
+	MISSING_EMAIL_TOKEN: 400
 };
 
 export function getTextForApiErrorCode(code: ApiErrorCodes): string {

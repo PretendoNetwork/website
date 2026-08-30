@@ -15,9 +15,7 @@ definePageMeta({
 
 const { data: profile } = await useApiFetch('/api/auth/me');
 
-useHead({
-	title: 'Mii Editor | Pretendo Network'
-});
+customSeoMeta({ subsection: 'account', title: 'Mii Editor' });
 
 const beforeUnload = (e: BeforeUnloadEvent) => {
 	e?.preventDefault();

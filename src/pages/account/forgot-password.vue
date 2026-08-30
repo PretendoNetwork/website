@@ -48,6 +48,8 @@ const { execute, isLoading } = useAsync({
 		});
 	}
 });
+
+customSeoMeta({ subsection: 'account', title: 'Forgot password' });
 </script>
 
 <template>

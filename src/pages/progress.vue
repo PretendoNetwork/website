@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
+customSeoMeta({
+	title: t('progressPage.title'),
+	description: t('progressPage.description')
+});
+
 const progress = await useFetch('/api/progress');
 const projects = computed(() => progress.data.value?.items ?? []);
 const donations = computed(() => progress.data.value?.donations);
