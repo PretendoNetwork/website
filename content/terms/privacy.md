@@ -49,13 +49,13 @@ This privacy notice describes how and why We might collect, store, use, and/or s
 
 **Do We receive any information from third parties?** We do not receive any information from third parties.
 
-**How do We process Your information?** We process Your information to provide, improve, and administer Our Services, communicate with You, for security and fraud prevention, and to comply with law. We may also process Your information for other purposes with Your consent. We process Your information only when We have a valid legal reason to do so. Learn more about [how We process Your information](#2-how-do-we-process-your-information).
+**How do We process Your information?** We process Your information to provide, improve, and administer Our Services, communicate with You, for security and fraud prevention, and to comply with law. We may also process Your information for other purposes with Your consent. We process Your information only when We have a valid legal reason to do so. Learn more about [how We process Your information](#_2-how-do-we-process-your-information).
 
-**In what situations and with which parties do We share personal information?** We may share information in specific situations and with specific third parties. Learn more about [when and with whom We share Your personal information](#4-when-and-with-whom-do-we-share-your-personal-information).
+**In what situations and with which parties do We share personal information?** We may share information in specific situations and with specific third parties. Learn more about [when and with whom We share Your personal information](#_4-when-and-with-whom-do-we-share-your-personal-information).
 
-**How do We keep Your information safe?** We have organizational and technical processes and procedures in place to protect Your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so We cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat Our security and improperly collect, access, steal, or modify Your information. Learn more about [how We keep Your information safe](#8-how-do-we-keep-your-information-safe).
+**How do We keep Your information safe?** We have organizational and technical processes and procedures in place to protect Your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so We cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat Our security and improperly collect, access, steal, or modify Your information. Learn more about [how We keep Your information safe](#_8-how-do-we-keep-your-information-safe).
 
-**What are Your rights?** Depending on where You are located geographically, the applicable privacy law may mean You have certain rights regarding Your personal information. Learn more about [Your privacy rights](#9-what-are-your-privacy-rights).
+**What are Your rights?** Depending on where You are located geographically, the applicable privacy law may mean You have certain rights regarding Your personal information. Learn more about [Your privacy rights](#_9-what-are-your-privacy-rights).
 
 **How do You exercise Your rights?** The easiest way to exercise Your rights is by contacting Us. We will consider and act upon any request in accordance with applicable data protection laws.
 
@@ -63,19 +63,19 @@ Want to learn more about what We do with any information We collect? [Review the
 
 ### TABLE OF CONTENTS
 
-1. [What Information Do We Collect?](#1-what-information-do-we-collect)
-2. [How Do We Process Your Information?](#2-how-do-we-process-your-information)
-3. [What Legal Bases Do We Rely on to Process Your Personal Information?](#3-what-legal-bases-do-we-rely-on-to-process-your-information)
-4. [When and With Whom Do We Share Your Personal Information?](#4-when-and-with-whom-do-we-share-your-personal-information)
-5. [Do We Use Cookies and Other Tracking Technologies?](#5-do-we-use-cookies-and-other-tracking-technologies)
-6. [Is Your Information Transferred Internationally?](#6-is-your-information-transferred-internationally)
-7. [How Long Do We Keep Your Information?](#7-how-long-do-we-keep-your-information)
-8. [How Do We Keep Your Information Safe?](#8-how-do-we-keep-your-information-safe)
-9. [What Are Your Privacy Rights?](#9-what-are-your-privacy-rights)
-10. [Controls for Do-not-track Features](#10-controls-for-do-not-track-features)
-11. [Do California Residents Have Specific Privacy Rights?](#11-do-california-residents-have-specific-privacy-rights)
-12. [Do Virginia Residents Have Specific Privacy Rights?](#12-do-virginia-residents-have-specific-privacy-rights)
-13. [Do We Make Updates to This Notice?](#13-do-we-make-updates-to-this-notice)
+1. [What Information Do We Collect?](#_1-what-information-do-we-collect)
+2. [How Do We Process Your Information?](#_2-how-do-we-process-your-information)
+3. [What Legal Bases Do We Rely on to Process Your Personal Information?](#_3-what-legal-bases-do-we-rely-on-to-process-your-information)
+4. [When and With Whom Do We Share Your Personal Information?](#_4-when-and-with-whom-do-we-share-your-personal-information)
+5. [Do We Use Cookies and Other Tracking Technologies?](#_5-do-we-use-cookies-and-other-tracking-technologies)
+6. [Is Your Information Transferred Internationally?](#_6-is-your-information-transferred-internationally)
+7. [How Long Do We Keep Your Information?](#_7-how-long-do-we-keep-your-information)
+8. [How Do We Keep Your Information Safe?](#_8-how-do-we-keep-your-information-safe)
+9. [What Are Your Privacy Rights?](#_9-what-are-your-privacy-rights)
+10. [Controls for Do-not-track Features](#_10-controls-for-do-not-track-features)
+11. [Do California Residents Have Specific Privacy Rights?](#_11-do-california-residents-have-specific-privacy-rights)
+12. [Do Virginia Residents Have Specific Privacy Rights?](#_12-do-virginia-residents-have-specific-privacy-rights)
+13. [Do We Make Updates to This Notice?](#_13-do-we-make-updates-to-this-notice)
 14. [Contact Us](#contact-us)
 
 ### 1. What Information Do We Collect?
@@ -146,7 +146,7 @@ Pretendo Network uses various 3rd party services as part of Our infrastructure. 
 
 The General Data Protection Regulation (GDPR) and UK GDPR require Us to explain the valid legal bases We rely on in order to process Your personal information. As such, We may rely on the following legal bases to process Your personal information:
 
-- **Consent.** We may process Your information if You have given Us permission (i.e., consent) to use Your personal information for a specific purpose. You can withdraw Your consent at any time. Learn more about [withdrawing Your consent](#9-what-are-your-privacy-rights).
+- **Consent.** We may process Your information if You have given Us permission (i.e., consent) to use Your personal information for a specific purpose. You can withdraw Your consent at any time. Learn more about [withdrawing Your consent](#_9-what-are-your-privacy-rights).
 - **Performance of a Contract.** We may process Your personal information when We believe it is necessary to fulfill Our contractual obligations to You, including providing Our Services or at Your request prior to entering into a contract with You.
 - **Legitimate Interests.** We may process Your information when We believe it is reasonably necessary to achieve Our legitimate business interests and those interests do not outweigh Your interests and fundamental rights and freedoms. For example, We may process Your personal information for some of the purposes described in order to:
   - Analyze how Our Services are used so We can improve them to engage and retain users
@@ -157,7 +157,7 @@ The General Data Protection Regulation (GDPR) and UK GDPR require Us to explain 
 
 ***If You are located in Canada, this section applies to You.***
 
-We may process Your information if You have given Us specific permission (i.e., express consent) to use Your personal information for a specific purpose, or in situations where Your permission can be inferred (i.e., implied consent). You can [withdraw Your consent](#9-what-are-your-privacy-rights) at any time.
+We may process Your information if You have given Us specific permission (i.e., express consent) to use Your personal information for a specific purpose, or in situations where Your permission can be inferred (i.e., implied consent). You can [withdraw Your consent](#_9-what-are-your-privacy-rights) at any time.
 
 In some exceptional cases, We may be legally permitted under applicable law to process Your information without Your consent, including, for example:
 
@@ -192,7 +192,7 @@ We may use cookies and similar tracking technologies (like web beacons and pixel
 
 ***In Short:*** *We may transfer, store, and process Your information in countries other than Your own.*
 
-We operate servers in various countries, including in the United States and Germany. If You are accessing Our Services from outside of the countries where Our Services are operating, please be aware that Your information may be transferred to, stored, and processed by Us in Our facilities and by those third parties with whom We may share Your personal information (see "[When and With Whom Do We Share Your Personal Information?](#4-when-and-with-whom-do-we-share-your-personal-information)" above), in and other countries.
+We operate servers in various countries, including in the United States and Germany. If You are accessing Our Services from outside of the countries where Our Services are operating, please be aware that Your information may be transferred to, stored, and processed by Us in Our facilities and by those third parties with whom We may share Your personal information (see "[When and With Whom Do We Share Your Personal Information?](#_4-when-and-with-whom-do-we-share-your-personal-information)" above), in and other countries.
 
 If You are a resident in the European Economic Area (EEA) or United Kingdom (UK), then these countries may not necessarily have data protection laws or other similar laws as comprehensive as those in Your country. However, We will take all necessary measures to protect Your personal information in accordance with this privacy notice and applicable law.
 
@@ -368,9 +368,9 @@ If this definition "consumer" applies to You, We must adhere to certain rights a
 
 The information We collect, use, and disclose about You will vary depending on how You interact with Us and Our Services. To find out more, please visit the following links:
 
-- [Personal data We collect](#1-what-information-do-we-collect)
-- [How We use Your personal data](#2-how-do-we-process-your-information)
-- [When and with whom We share Your personal data](#4-when-and-with-whom-do-we-share-your-personal-information)
+- [Personal data We collect](#_1-what-information-do-we-collect)
+- [How We use Your personal data](#_2-how-do-we-process-your-information)
+- [When and with whom We share Your personal data](#_4-when-and-with-whom-do-we-share-your-personal-information)
 
 *Your rights with respect to Your personal data*
 

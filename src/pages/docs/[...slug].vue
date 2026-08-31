@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { path, params } = useRoute();
-const slug = (params.slug as string[]).join('/');
+import MdLink from '~/components/MdLink.vue';
+
+const slug = (useRoute().params.slug as string[]).join('/');
 
 const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 	return queryCollection('docs').path(`/docs/${slug}`).first();
@@ -8,24 +9,6 @@ const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 
 if (!doc.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
-}
-
-function fixFragmentLinks(e: MouseEvent) {
-	const targetEl = e.target as HTMLAnchorElement;
-	const to = targetEl?.getAttribute('href');
-
-	if (targetEl?.tagName !== 'A' || !to?.startsWith('#')) {
-		return;
-	}
-
-	// nuxt content just drops dashes at the start of the fragment, so we do the same
-	const sanitizedTo = to.replace(/^#-*/, '');
-
-	// a fragment cannot start with a number, so nuxt content prefixes it with an underscore.
-	const newPath = /^[0-9]/.test(sanitizedTo) ? `${path}#_${sanitizedTo}` : `${path}#${sanitizedTo}`;
-
-	e.preventDefault();
-	return navigateTo(newPath, { external: true });
 }
 
 customSeoMeta({
@@ -44,7 +27,7 @@ definePageMeta({
     <ContentRenderer
       v-if="doc"
       :value="doc"
-      @click="fixFragmentLinks"
+      :components="{ 'a': MdLink }"
     />
   </div>
 </template>
