@@ -168,7 +168,7 @@
 			"detailsPrompt": "Enter your account details below",
 			"username": "Username",
 			"password": "Password",
-			"email": "E-mail",
+			"email": "Email",
 			"miiName": "Mii nickname",
 			"forgotPassword": "Forgot your password?",
 			"registerPrompt": "Don't have an account?",
@@ -179,8 +179,8 @@
 		"forgotPassword": {
 			"submit": "Submit",
 			"header": "Forgot Password",
-			"sub": "Enter your e-mail address/PNID below",
-			"input": "E-mail address or PNID"
+			"sub": "Enter your email address/PNID below",
+			"input": "Email address or PNID"
 		},
 		"resetPassword": {
 			"header": "Reset Password",
@@ -198,7 +198,7 @@
 				"nickname": "Nickname",
 				"birthDate": "Birth date",
 				"gender": "Gender",
-				"country": "Country/region",
+				"country": "Country",
 				"timezone": "Timezone",
 				"serverEnv": "Server environment",
 				"production": "Production",
@@ -222,7 +222,8 @@
 				"no_signins_notice": "Sign in history not currently tracked. Check back again later!",
 				"no_newsletter_notice": "Newsletter not currently available. Check back again later",
 				"upgradePrompt": "Beta servers are exclusive to beta testers.<br>To become a beta tester, upgrade to a higher account tier.",
-				"no_edit_from_dashboard": "Editing PNID settings from the user dashboard is currently unavailable. Please update user settings from your linked game console"
+				"no_edit_from_dashboard": "Editing PNID settings from the user dashboard is currently unavailable. Please update user settings from your linked game console",
+				"region": "Region"
 			},
 			"delete": {
 				"button": "Delete Account",
