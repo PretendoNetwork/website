@@ -88,7 +88,7 @@ function handleOpenUpdate(id: number, open: boolean) {
 
 <style>
 .toast-viewport {
-	z-index: 55;
+	z-index: 105;
 	display: flex;
 	justify-content: center;
 	position: fixed;

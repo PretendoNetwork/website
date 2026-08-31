@@ -25,7 +25,9 @@
 
   --red-shade-2: #e84059;
   --red-shade-1: #a9375b;
-  --yellow-shade-1: #ffd966;
+
+  --yellow-shade-2: #ffd966;
+  --yellow-shade-1: #daa401;
 
   --border: rgba(255, 255, 255, 0.1);
 }
@@ -184,6 +186,10 @@ div.modal h2 {
 }
 .modal-button-wrapper button.action {
 	background: var(--green-shade-0);
+}
+.modal-button-wrapper button.action.disabled {
+	filter:saturate(0.7) brightness(0.8);
+	pointer-events: none;
 }
 
 .purple-card {
