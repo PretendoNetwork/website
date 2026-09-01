@@ -65,7 +65,7 @@ Want to learn more about what We do with any information We collect? [Review the
 
 1. [What Information Do We Collect?](#_1-what-information-do-we-collect)
 2. [How Do We Process Your Information?](#_2-how-do-we-process-your-information)
-3. [What Legal Bases Do We Rely on to Process Your Personal Information?](#_3-what-legal-bases-do-we-rely-on-to-process-your-information)
+3. [What Legal Bases Do We Rely on to Process Your Personal Information?](#_3-what-legal-bases-do-we-rely-on-to-process-your-personal-information)
 4. [When and With Whom Do We Share Your Personal Information?](#_4-when-and-with-whom-do-we-share-your-personal-information)
 5. [Do We Use Cookies and Other Tracking Technologies?](#_5-do-we-use-cookies-and-other-tracking-technologies)
 6. [Is Your Information Transferred Internationally?](#_6-is-your-information-transferred-internationally)
@@ -265,7 +265,7 @@ The rights described above are extended to all users regardless of California re
 
 We have collected the following categories of personal information in the past twelve (12) months:
 
-| **Category*-                                                                       | **Examples*-                                                                                                                                                                                           | **Collected** |
+| **Category**                                                                       | **Examples**                                                                                                                                                                                           | **Collected** |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | A. Identifiers                                                                       | Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name | YES           |
 | B. Personal information categories listed in the California Customer Records statute | Name, contact information, education, employment, employment history, and financial information                                                                                                          | NO            |
