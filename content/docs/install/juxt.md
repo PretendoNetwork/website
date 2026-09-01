@@ -13,7 +13,7 @@ Juxtaposition is the Pretendo Network replacement for the now defunct Miiverse s
 ## Select your console
 
 - ### [Wii U](#wii-u)
-- ### [3DS](#3ds-1)
+- ### [3DS](#_3ds-1)
 
 # Wii U
 
