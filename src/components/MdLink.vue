@@ -8,7 +8,7 @@ function fixFragmentLinks(e: MouseEvent) {
 	}
 
 	e.preventDefault();
-	document.getElementById(to.slice(1))?.scrollTo();
+	document.getElementById(to.slice(1))?.scrollIntoView();
 }
 </script>
 
