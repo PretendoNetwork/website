@@ -26,6 +26,7 @@ const errors: Record<string, ApiErrorCodes> = {
 	'INVALID_ARGUMENT: Password must have combination of letters, numbers, and/or punctuation characters': 'PASSWORD_NEEDS_CHARS',
 	'INVALID_ARGUMENT: Password may not have 3 repeating characters': 'PASSWORD_REPEATED_CHARS',
 	'INVALID_ARGUMENT: Passwords do not match': 'PASSWORDS_DO_NOT_MATCH'
+
 };
 
 function getCutoffDateForAge(today: Date, age: number) {
