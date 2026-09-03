@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import MdLink from '~/components/MdLink.vue';
+
 const slug = (useRoute().params.slug as string[]).join('/');
+
 const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 	return queryCollection('docs').path(`/docs/${slug}`).first();
 });
@@ -7,6 +10,7 @@ const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 if (!doc.value) {
 	throw createError({ statusCode: 404, statusMessage: 'Page Not Found' });
 }
+
 customSeoMeta({
 	subsection: 'docs',
 	title: doc.value.title,
@@ -23,6 +27,7 @@ definePageMeta({
     <ContentRenderer
       v-if="doc"
       :value="doc"
+      :components="{ 'a': MdLink }"
     />
   </div>
 </template>

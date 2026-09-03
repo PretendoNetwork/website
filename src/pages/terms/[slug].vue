@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import MdLink from '~/components/MdLink.vue';
+
 const slug = useRoute().params.slug;
 const { data: termContent } = await useAsyncData(`terms-${slug}`, () => {
 	return queryCollection('terms').path(`/terms/${slug}`).first();
@@ -21,6 +23,7 @@ customSeoMeta({
       <ContentRenderer
         v-if="termContent"
         :value="termContent"
+        :components="{ 'a': MdLink }"
       />
     </div>
   </div>

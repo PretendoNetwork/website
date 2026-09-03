@@ -5,6 +5,16 @@ import type { ApiAccountEmailUpdateRequest, GetApiAuthMe } from '~~/shared/api-t
 const toasts = useToasts();
 const open = defineModel<boolean>();
 
+const updateOpen = ref(false);
+const verifyOpen = ref(false);
+
+watch(updateOpen, () => {
+	open.value = updateOpen.value;
+});
+watch(verifyOpen, () => {
+	open.value = verifyOpen.value;
+});
+
 const newEmail = ref('');
 
 const { profile } = defineProps<{
@@ -47,8 +57,7 @@ const {
 
 <template>
   <Dialog.Root
-    v-if="profile.emailValidated"
-    v-model:open="open"
+    v-model:open="updateOpen"
   >
     <Dialog.Portal :to="dialogContainer ?? undefined">
       <Dialog.Overlay />
@@ -106,8 +115,8 @@ const {
   </Dialog.Root>
 
   <Dialog.Root
-    v-else
-    v-model:open="open"
+    v-if="!profile.emailValidated"
+    v-model:open="verifyOpen"
   >
     <Dialog.Portal :to="dialogContainer ?? undefined">
       <Dialog.Overlay />
@@ -137,9 +146,12 @@ const {
                 email: profile.emailAddress
               })"
             >
-              {{
-                $t("account.settings.unverifiedEmailModal.resend")
-              }}
+              <Loader v-if="isLoadingUpdateEmail" />
+              <span v-else>
+                {{
+                  $t("account.settings.unverifiedEmailModal.resend")
+                }}
+              </span>
             </button>
           </p>
         </Dialog.Description>
@@ -153,9 +165,14 @@ const {
           </Dialog.Close>
         </div>
       </Dialog.Content>
-    </Dialog.Portal><Dialog.Trigger class="unverified">
-      {{ $t('account.settings.verify_email') }}
-    </Dialog.Trigger>
+    </Dialog.Portal>
+    <p class="notice">
+      {{ $t('account.settings.verify_email_notice') }}
+      <br>
+      <Dialog.Trigger class="unverified">
+        {{ $t('account.settings.verify_email_button') }}
+      </Dialog.Trigger>
+    </p>
   </Dialog.Root>
 </template>
 <style>
@@ -184,5 +201,10 @@ fieldset {
 	padding: 0;
 	gap: .25rem;
 	border: none;
+}
+
+.notice {
+	font-size: .9em;
+	margin-top: 1rem !important;
 }
 </style>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MdLink from '~/components/MdLink.vue';
+
 const slug = useRoute().params.slug;
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 	return queryCollection('blog').path(`/blog/${slug}`).first();
@@ -41,7 +43,10 @@ customSeoMeta({
         </span>
       </div>
 
-      <ContentRenderer :value="post" />
+      <ContentRenderer
+        :value="post"
+        :components="{ 'a': MdLink }"
+      />
     </div>
   </div>
 </template>

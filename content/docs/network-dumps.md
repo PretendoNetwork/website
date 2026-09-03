@@ -11,7 +11,7 @@ In order to make this easier, we have developed a suite of internal tools to cap
 1. [Submissions](#submissions)
 2. [Game Packets](#game-packets)
 	- [Wii U (HokakuCafe)](#wii-u-hokakucafe)
-	- [3DS (HokakuCTR)](#3ds-hokakuctr)
+	- [3DS (HokakuCTR)](#_3ds-hokakuctr)
 	- [All (WireShark)](#all-wireshark)
 3. [HTTP Packets](#http-packets)
 4. [SpotPass](#spotpass)
