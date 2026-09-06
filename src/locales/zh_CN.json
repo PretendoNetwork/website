@@ -228,8 +228,8 @@
 				"timezone": "时区",
 				"serverEnv": "服务器环境",
 				"production": "生产环境",
-				"beta": "Beta 版本",
-				"upgradePrompt": "Beta 服务器仅供 Beta 测试人员使用。<br>要成为 Beta 测试人员，请升级到更高的帐户等级。",
+				"beta": "测试版",
+				"upgradePrompt": "测试版服务器仅供测试人员使用。<br>要成为测试人员，请升级到更高的账号等级。",
 				"hasAccessPrompt": "您当前的等级为您提供 Beta 服务器访问权限。耶！",
 				"signInSecurity": "登录和安全",
 				"email": "邮件",
@@ -255,6 +255,22 @@
 				"modalDescription": "确定要删除您的 PNID 吗？删除前请注意以下事项：\n\n您的账号在整个 Pretendo Network 服务（包含论坛和 Juxtaposition）中的数据将被清除。\n您的 Stripe 支付数据和订阅信息将会被自动删除。\n您将不能再使用相同的 PNID 创建账号。\n删除账号并不能解决封禁或任何技术问题。如果您有任何问题，请使用论坛寻求帮助。",
 				"modalCaution": "此操作无法撤销。",
 				"modalConfirm": "删除"
+			},
+			"update": "更新",
+			"unverified_email": "未验证",
+			"verified_email": "已验证",
+			"verify_email_notice": "您尚未验证您的电子邮件地址。",
+			"verify_email_button": "立即验证",
+			"emailModal": {
+				"title": "更改电子邮件地址",
+				"caption": "输入新电子邮件地址。",
+				"label": "新电子邮件地址"
+			},
+			"unverifiedEmailModal": {
+				"title": "验证电子邮件",
+				"caption": "要验证您的电子邮件地址，请点击验证邮件中的链接。",
+				"lostEmail": "找不到吗？",
+				"resend": "重新发送验证邮件"
 			}
 		},
 		"accountLevel": [
@@ -277,6 +293,11 @@
 			"password": "密码",
 			"confirmPassword": "确认密码",
 			"submit": "提交"
+		},
+		"emailVerification": {
+			"verifiedTitle": "电子邮件已成功验证",
+			"verifiedCaption": "您现在可以关闭此标签页了。",
+			"failedTitle": "电子邮件验证失败"
 		}
 	},
 	"upgrade": {
