@@ -221,7 +221,23 @@
 				"modalCaution": "Ez nem visszafordítható.",
 				"modalConfirm": "Igen, töröld",
 				"modalDescription": "Biztosan törölni szeretnéd a PNID-ed? Gondold át a következőket a törlés előtt:\n\nAz adataid minden Pretendo Network szolgáltatásban (beleértve a Fórumot és a Juxtaposition-t) eltávolításra kerültnek.\nA Stripe adatod és előfizetésed is törlésre kerül.\nNem tudod használni ugyanezt a PNID-t egy új fiók számára a jövőben.\nA fiók törlése nem oldja meg a bannolást vagy a technikai problémákat. Ha problémád van, használd a Fórum-ot segítségért."
-			}
+			},
+			"verify_email_notice": "Még nem ellenőrizted az e-mail címed.",
+			"verify_email_button": "Ellenőrzés most",
+			"emailModal": {
+				"title": "Email cím módosítása",
+				"caption": "Add meg az új email címed.",
+				"label": "Új email cím"
+			},
+			"unverifiedEmailModal": {
+				"title": "Email cím ellenőrzése",
+				"caption": "Az email címed ellenőrzéséhez kattints a linkre az ellenőrző emailben.",
+				"lostEmail": "Nem találod?",
+				"resend": "Ellenőrző email újraküldése"
+			},
+			"update": "Frissítés",
+			"unverified_email": "Nem ellenőrzött",
+			"verified_email": "Ellenőrzött"
 		},
 		"accountLevel": [
 			"Normál",
@@ -230,7 +246,12 @@
 			"Fejlesztő"
 		],
 		"banned": "Kitiltott",
-		"account": "Fiók"
+		"account": "Fiók",
+		"emailVerification": {
+			"verifiedTitle": "Email cím sikeresen ellenőrizve",
+			"verifiedCaption": "Most már bezárhatod ezt az ablakot.",
+			"failedTitle": "Sikertelen email cím ellenőrzés"
+		}
 	},
 	"blogPage": {
 		"title": "Blog",
