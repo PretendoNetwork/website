@@ -1,6 +1,6 @@
 {
 	"nav": {
-		"about": "Informazioni",
+		"about": "Su di noi",
 		"faq": "FAQ",
 		"docs": "Documentazione",
 		"credits": "Riconoscimenti",
@@ -213,7 +213,7 @@
 				"nickname": "Soprannome",
 				"birthDate": "Data di nascita",
 				"gender": "Genere",
-				"country": "Paese/regione",
+				"country": "Paese",
 				"timezone": "Fuso orario",
 				"serverEnv": "Ambiente del server",
 				"production": "Produzione",
