@@ -215,6 +215,22 @@
 				"modalDescription": "確定要刪除您的 PNID 嗎？刪除前請考慮以下事項：\n\n您在所有 Pretendo Network 服務（包括論壇和 Juxtaposition）中的帳號資料將會被刪除。\n您的 Stripe 支付資料和訂閱將會自動刪除。\n您將無法在未來的新帳號中使用相同的 PNID。\n刪除帳號無法解決禁止或技術支援方面的問題。如果您遇到問題，請使用論壇尋求協助。",
 				"modalCaution": "此操作無法復原。",
 				"modalConfirm": "是，請刪除"
+			},
+			"update": "更新",
+			"unverified_email": "未驗證",
+			"verified_email": "已驗證",
+			"verify_email_notice": "您尚未驗證您的電子郵件地址。",
+			"verify_email_button": "立即驗證",
+			"emailModal": {
+				"title": "變更電子郵件地址",
+				"caption": "輸入新電子郵件地址。",
+				"label": "新電子郵件地址"
+			},
+			"unverifiedEmailModal": {
+				"title": "驗證電子郵件地址",
+				"caption": "若要驗證您的電子郵件地址，請點觸驗證郵件中的連結。",
+				"lostEmail": "找不到嗎？",
+				"resend": "重新發送驗證郵件"
 			}
 		},
 		"accountLevel": [
@@ -237,6 +253,11 @@
 			"password": "密碼",
 			"confirmPassword": "確認密碼",
 			"submit": "提交"
+		},
+		"emailVerification": {
+			"verifiedTitle": "電子郵件地址已成功驗證",
+			"verifiedCaption": "現在您可以關閉此標籤頁了。",
+			"failedTitle": "無法驗證電子郵件地址"
 		}
 	},
 	"upgrade": {
