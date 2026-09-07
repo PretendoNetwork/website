@@ -43,6 +43,8 @@ const {
 			text: t('account.settings.passwordModal.successNotice')
 		});
 
+		await new Promise(r => setTimeout(r, 3000));
+
 		emit('change');
 		authUtils.logout();
 	},
