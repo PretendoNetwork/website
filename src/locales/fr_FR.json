@@ -123,7 +123,8 @@
 			"preserveAndServerArch": "Préservation et architecture serveur",
 			"gameDevAndOptimise": "Développement serveur et optimisation",
 			"owner": "Propriétaire du projet et développeur principal",
-			"researchAndServerArch": "Recherche de systèmes et architecture de serveur"
+			"researchAndServerArch": "Recherche de systèmes et architecture de serveur",
+			"webDevAndGameDev": "Développement web et serveur"
 		}
 	},
 	"specialThanks": {
@@ -134,7 +135,8 @@
 			"forMiiverseHelp": "Partage d'informations sur Miiverse",
 			"forResearch": "Recherches sur l'architecture de données de Nintendo",
 			"forIcons": "Icônes pour l'éditeur Mii et les réactions Juxt",
-			"forServers": "Architecture serveur"
+			"forServers": "Architecture serveur",
+			"forServerDev": "Recherche console et serveurs de jeu"
 		}
 	},
 	"discordJoin": {
@@ -334,7 +336,8 @@
 		"saveCaption": "Sauvegarder votre Mii va tuer l'ancien.",
 		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
 		"loading": "Chargement de l'éditeur Mii...",
-		"clickToSet": "Cliquer pour paramétrer"
+		"clickToSet": "Cliquer pour paramétrer",
+		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas."
 	},
 	"errorPage": {
 		"500": {
