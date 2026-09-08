@@ -249,6 +249,30 @@
 				"modalDescription": "Sei sicuro di voler eliminare il tuo PNID? Prima di procedere, considera che:\n\nI dati del tuo account verranno eliminati da tutti i servizi di Pretendo Network (inclusi Forum e Juxtaposition).\nI dati Stripe e la tua inscrizione verranno eliminati automaticamente.\nNon potrai creare un nuovo account con lo stesso PNID in futuro.\nEliminare un account non risolve problemi relativi a ban o supporto tecnico. Se hai un problema di questo genere, per favore usa il Forum per ricevere assistenza.",
 				"modalCaution": "Questa azione non può essere annullata.",
 				"modalConfirm": "Sì, elimina"
+			},
+			"update": "Aggiorna",
+			"unverified_email": "Non verificato",
+			"verified_email": "Verificato",
+			"verify_email_notice": "Non hai ancora verificato il tuo indirizzo email.",
+			"verify_email_button": "Verifica ora",
+			"emailModal": {
+				"title": "Cambia email",
+				"caption": "Inserisci il tuo nuovo indirizzo email.",
+				"label": "Nuova mail"
+			},
+			"unverifiedEmailModal": {
+				"title": "Verifica email",
+				"caption": "Per verificare il tuo indirizzo email, clicca sul link nella email di verifica.",
+				"lostEmail": "Non riesci a trovarla?",
+				"resend": "Invia nuovamente la mail di verifica"
+			},
+			"passwordModal": {
+				"title": "Cambia password",
+				"caption": "Inserisci la tua nuova password.",
+				"oldPassword": "Password attuale",
+				"newPassword": "Nuova password",
+				"newPasswordConfirm": "Conferma nuova password",
+				"successNotice": "Password aggiornata correttamente"
 			}
 		},
 		"account": "Account",
@@ -264,6 +288,11 @@
 			"password": "Password",
 			"submit": "Invia",
 			"confirmPassword": "Conferma password"
+		},
+		"emailVerification": {
+			"verifiedTitle": "Email verificata correttamente",
+			"verifiedCaption": "È ora possibile chiudere questa scheda.",
+			"failedTitle": "Impossibile verificare email"
 		}
 	},
 	"localizationPage": {

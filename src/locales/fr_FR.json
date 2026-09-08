@@ -121,7 +121,11 @@
 			"devopsAndCommunityWork": "DevOps et travail de la communauté",
 			"wiiuResearchAndPatchDev": "Recherche et développement de patch Wii U",
 			"preserveAndServerArch": "Préservation et architecture serveur",
-			"gameDevAndOptimise": "Développement serveur et optimisation"
+			"gameDevAndOptimise": "Développement serveur et optimisation",
+			"owner": "Propriétaire du projet et développeur principal",
+			"researchAndServerArch": "Recherche de systèmes et architecture de serveur",
+			"webDevAndGameDev": "Développement web et serveur",
+			"ctrResearchAndPatchDev": "Recherche et développement de patch 3DS"
 		}
 	},
 	"specialThanks": {
@@ -129,10 +133,15 @@
 		"text": "Sans eux, Pretendo ne serait pas ce qu'il est aujourd'hui.",
 		"reasons": {
 			"general": "Traductions et autres contributions",
-			"forMiiverseHelp": "Partage d'informations sur Miiverse",
+			"forMiiverseHelp": "Partage d'informations de Miiverse",
 			"forResearch": "Recherches sur l'architecture de données de Nintendo",
 			"forIcons": "Icônes pour l'éditeur Mii et les réactions Juxt",
-			"forServers": "Architecture serveur"
+			"forServers": "Architecture serveur",
+			"forServerDev": "Recherche console et serveurs de jeu",
+			"forCrunch": "développement de la bibliothèque crunch",
+			"forCtrDev": "Développement 3DS et dissecteur NEX",
+			"forSplatoon": "rotations de stages dans Splatoon et recherche",
+			"forPatches": "Developpement de patch console"
 		}
 	},
 	"discordJoin": {
@@ -271,6 +280,22 @@
 				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID ? Veuillez tenir compte des éléments suivants avant la suppression :\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
 				"modalCaution": "Cette action ne peut pas être annulée.",
 				"modalConfirm": "Oui, supprimez mon compte"
+			},
+			"update": "Mise à jour",
+			"unverified_email": "Non vérifié",
+			"verified_email": "Vérifié",
+			"verify_email_notice": "Vous n'avez pas encore vérifié votre adresse mail.",
+			"verify_email_button": "Vérifier maintenant",
+			"emailModal": {
+				"title": "Changer de mail",
+				"caption": "Entrez votre nouvelle adresse mail.",
+				"label": "Nouveau mail"
+			},
+			"unverifiedEmailModal": {
+				"title": "Vérifier le mail",
+				"caption": "Pour vérifier votre adresse mail, cliquez sur le lien du mail de vérification.",
+				"lostEmail": "Vous ne le trouvez pas ?",
+				"resend": "Envoyer à nouveau le mail de vérification"
 			}
 		},
 		"banned": "Banni",
@@ -293,6 +318,11 @@
 			"password": "Mot de passe",
 			"confirmPassword": "Confirmez le mot de passe",
 			"submit": "Soumettre"
+		},
+		"emailVerification": {
+			"failedTitle": "Echec de la vérifiacation de l'adresse mail",
+			"verifiedCaption": "Vous pouvez fermer cet onglet.",
+			"verifiedTitle": "Email vérifié"
 		}
 	},
 	"upgrade": {
@@ -310,7 +340,8 @@
 	},
 	"donation": {
 		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel.",
-		"upgradePushLinkText": "Page d’abonnement"
+		"upgradePushLinkText": "Page d’abonnement",
+		"upgradePushText": "Pour devenir abonné et avoir acccès à des avantages cools, visitez {link}."
 	},
 	"modals": {
 		"cancel": "Annuler",
@@ -331,7 +362,9 @@
 		"saveCaption": "Sauvegarder votre Mii va tuer l'ancien.",
 		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
 		"loading": "Chargement de l'éditeur Mii...",
-		"clickToSet": "Cliquer pour paramétrer"
+		"clickToSet": "Cliquer pour paramétrer",
+		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas.",
+		"corruptedData": "Données de Mii corrompues. Voulez vous repartir de zéro ?"
 	},
 	"errorPage": {
 		"500": {
