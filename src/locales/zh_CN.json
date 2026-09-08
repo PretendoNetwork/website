@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "团队",
-		"text": "认识一下项目背后的团队"
+		"text": "认识一下项目背后的团队",
+		"roles": {
+			"owner": "项目所有者和首席开发人员",
+			"miiverseDev": "Miiverse 研究和开发",
+			"wiiuResearchAndPatchDev": "Wii U 研究和补丁开发",
+			"researchAndGameDev": "系统研究与服务器开发",
+			"researchAndServerArch": "系统研究与服务器架构",
+			"webDev": "网站开发",
+			"preserveAndServerArch": "保护主义者和服务器架构",
+			"webDevAndGameDev": "网站和服务器开发",
+			"gameDevAndOptimise": "服务器开发与优化",
+			"ctrResearchAndPatchDev": "3DS 补丁开发与研究",
+			"devopsAndCommunityWork": "DevOps 和社区工作"
+		}
 	},
 	"specialThanks": {
 		"title": "特别感谢",
-		"text": "没有他们，Pretendo 就不会是今天的样子。"
+		"text": "没有他们，Pretendo 就不会是今天的样子。",
+		"reasons": {
+			"general": "本地化和其他贡献",
+			"forCrunch": "核心库开发",
+			"forCtrDev": "3DS 开发和 NEX 解剖器",
+			"forMiiverseHelp": "Miiverse 信息共享",
+			"forResearch": "任天堂数据结构研究",
+			"forServerDev": "主机研究和游戏服务器",
+			"forIcons": "Mii 编辑器和 Juxt 反应的图标",
+			"forSplatoon": "Splatoon 场景变换与研究",
+			"forPatches": "主机补丁开发",
+			"forServers": "服务器架构"
+		}
 	},
 	"discordJoin": {
 		"title": "得到我们的动态与更新",
@@ -275,9 +300,9 @@
 		},
 		"accountLevel": [
 			"标准",
-			"测试者",
+			"测试人员",
 			"版主",
-			"开发者"
+			"开发人员"
 		],
 		"banned": "禁止",
 		"account": "账号",
