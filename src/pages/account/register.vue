@@ -116,6 +116,8 @@ customSeoMeta({ subsection: 'account', title: 'Register' });
             v-model="registerForm.password"
             name="password"
             type="password"
+            minlength="6"
+            maxlength="16"
             autocomplete="new-password"
             required
             passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];"
@@ -129,8 +131,12 @@ customSeoMeta({ subsection: 'account', title: 'Register' });
             v-model="registerForm.password_confirm"
             name="password_confirm"
             type="password"
+            minlength="6"
+            maxlength="16"
             autocomplete="new-password"
             required
+            passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];"
+            pattern="[-!-~]{6,16}"
           >
         </div>
         <Captcha
