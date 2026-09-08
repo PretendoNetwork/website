@@ -66,6 +66,7 @@ const dialogContainer = ref(null);
 const deleteModalOpen = ref(false);
 const profileEditModalOpen = ref(false);
 const emailEditModalOpen = ref(false);
+const passwordEditModalOpen = ref(false);
 const selectedServerEnv = ref<'dev' | 'test' | 'prod' | undefined>(
 	profile.value?.serverAccessLevel
 );
@@ -477,6 +478,10 @@ customSeoMeta({ subsection: 'account' });
             <p class="value">
               ●●●●●●●●
             </p>
+            <UpdatePasswordModal
+              v-model="passwordEditModalOpen"
+              :dialog-container="dialogContainer"
+            />
           </li>
         </ul>
       </div>
@@ -554,7 +559,8 @@ customSeoMeta({ subsection: 'account' });
         hidden: !(
           deleteModalOpen ||
           profileEditModalOpen ||
-          emailEditModalOpen
+          emailEditModalOpen ||
+          passwordEditModalOpen
         ),
       }"
     >

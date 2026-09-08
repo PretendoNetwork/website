@@ -272,6 +272,14 @@
 				"caption": "To verify your email address, click on the link in the verification email.",
 				"lostEmail": "Can't find it?",
 				"resend": "Resend verification email"
+			},
+			"passwordModal": {
+				"title": "Change password",
+				"caption": "Input your new password.",
+				"oldPassword": "Current password",
+				"newPassword": "New password",
+				"newPasswordConfirm": "Confirm new password",
+				"successNotice": "Password updated successfully"
 			}
 		},
 		"emailVerification": {
