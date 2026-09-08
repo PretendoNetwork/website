@@ -49,8 +49,12 @@ customSeoMeta({ subsection: 'account', title: 'Reset Password' });
             id="password"
             v-model="form.password"
             type="password"
+            minlength="6"
+            maxlength="16"
             required
             name="password"
+            passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];"
+            pattern="[-!-~]{6,16}"
             autocomplete="new-password"
           >
         </div>
@@ -61,7 +65,11 @@ customSeoMeta({ subsection: 'account', title: 'Reset Password' });
             v-model="form.passwordConfirm"
             name="password_confirm"
             type="password"
+            minlength="6"
+            maxlength="16"
             autocomplete="new-password"
+            passwordrules="minlength: 6; maxlength: 16; max-consecutive: 2; allowed: [-!-~];"
+            pattern="[-!-~]{6,16}"
             required
           >
         </div>
