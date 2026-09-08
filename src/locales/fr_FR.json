@@ -121,7 +121,9 @@
 			"devopsAndCommunityWork": "DevOps et travail de la communauté",
 			"wiiuResearchAndPatchDev": "Recherche et développement de patch Wii U",
 			"preserveAndServerArch": "Préservation et architecture serveur",
-			"gameDevAndOptimise": "Développement serveur et optimisation"
+			"gameDevAndOptimise": "Développement serveur et optimisation",
+			"owner": "Propriétaire du projet et développeur principal",
+			"researchAndServerArch": "Recherche de systèmes et architecture de serveur"
 		}
 	},
 	"specialThanks": {
@@ -310,7 +312,8 @@
 	},
 	"donation": {
 		"progress": "{totd} sur {goald}/mois, {perc} du but mensuel.",
-		"upgradePushLinkText": "Page d’abonnement"
+		"upgradePushLinkText": "Page d’abonnement",
+		"upgradePushText": "Pour devenir abonné et avoir acccès à des avantages, visiter {link}."
 	},
 	"modals": {
 		"cancel": "Annuler",
