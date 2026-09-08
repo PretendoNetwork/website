@@ -363,7 +363,8 @@
 		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
 		"loading": "Chargement de l'éditeur Mii...",
 		"clickToSet": "Cliquer pour paramétrer",
-		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas."
+		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas.",
+		"corruptedData": "Données de Mii corrompues. Voulez vous repartir de zéro ?"
 	},
 	"errorPage": {
 		"500": {
