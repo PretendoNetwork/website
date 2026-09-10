@@ -37,7 +37,7 @@
 		"mlly": "^1.8.2",
 		"mongodb": "^7.5.0",
 		"nice-grpc": "^2.1.17",
-		"nodemailer": "^9.0.5",
+		"nodemailer": "^9.1.1",
 		"nuxt": "^4.5.2",
 		"octokit": "^5.0.5",
 		"papr": "^17.1.1",
