@@ -296,6 +296,14 @@
 				"caption": "Pour vérifier votre adresse mail, cliquez sur le lien du mail de vérification.",
 				"lostEmail": "Vous ne le trouvez pas ?",
 				"resend": "Envoyer à nouveau le mail de vérification"
+			},
+			"passwordModal": {
+				"successNotice": "Le mot de passe a été mis à jour",
+				"title": "Changer le mot de passe",
+				"caption": "Tapez votre nouveau mot de passe.",
+				"oldPassword": "Mot de passe actuel",
+				"newPassword": "Nouveau mot de passe",
+				"newPasswordConfirm": "Confirmer le nouveau mot de passe"
 			}
 		},
 		"banned": "Banni",
@@ -320,8 +328,8 @@
 			"submit": "Soumettre"
 		},
 		"emailVerification": {
-			"failedTitle": "Echec de la vérifiacation de l'adresse mail",
-			"verifiedCaption": "Vous pouvez fermer cet onglet.",
+			"failedTitle": "Échec de la vérifiacation de l'adresse mail",
+			"verifiedCaption": "Vous pouvez maintenant fermer cet onglet.",
 			"verifiedTitle": "Email vérifié"
 		}
 	},
