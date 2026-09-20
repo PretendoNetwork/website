@@ -256,6 +256,14 @@
 				"caption": "若要驗證您的電子郵件地址，請點觸驗證郵件中的連結。",
 				"lostEmail": "找不到嗎？",
 				"resend": "重新發送驗證郵件"
+			},
+			"passwordModal": {
+				"title": "變更密碼",
+				"caption": "輸入你的新密碼。",
+				"oldPassword": "目前密碼",
+				"newPassword": "新密碼",
+				"newPasswordConfirm": "確認新密碼",
+				"successNotice": "密碼已成功更新"
 			}
 		},
 		"accountLevel": [
