@@ -111,8 +111,8 @@ We may automatically collect certain information when You visit, use, or navigat
 The information We collect includes:
 
 - *Log and Usage Data.* Log and usage data is service-related, diagnostic, usage, and performance information Our servers automatically collect when You access or use Our Services and which We record in log files. Depending on how You interact with Us, this log data may include Your IP address, device information, browser type, and settings and information about Your activity in the Services (such as the date/time stamps associated with Your usage, pages and files viewed, searches, and other actions You take such as which features You use), device event information (such as system activity, error reports (sometimes called "crash dumps"), and hardware settings). This information is used to ensure compatibility with devices and locate areas of Our Services which may be having issues.
-- *Device Data.* We may collect data about the device You use to access the Services. Depending on the device used, this device data may include information such as Your IP address (or proxy server), device and application identification numbers (console serial numbers), location, browser type, hardware model, and system configuration information. This data is uses for moderation and to ensure valid clients are reaching the expected Services.
-- *Location Data.* We do not collect location data, either either precise or imprecise, directly. Games may at times send location based data, for the intent of geolocation and region locking purposes, however this is not stored or processed by Our Services.
+- *Device Data.* We may collect data about the device You use to access the Services. Depending on the device used, this device data may include information such as Your IP address (or proxy server), device and application identification numbers (console serial numbers), location, browser type, hardware model, and system configuration information. This data is used for moderation and to ensure valid clients are reaching the expected Services.
+- *Location Data.* We do not collect location data, either precise or imprecise, directly. Games may at times send location based data, for the intent of geolocation and region locking purposes, however this is not stored or processed by Our Services.
 
 Pretendo Network uses various 3rd party services as part of Our infrastructure. These 3rd parties may collect additional information outside of our control, but are required for the operation of Our Services. Please refer to the relevant parties policies:
 
@@ -180,7 +180,7 @@ In some exceptional cases, We may be legally permitted under applicable law to p
 We may need to share Your personal information in the following situations:
 
 - **Other Users.** When You share personal information (for example, by posting comments, contributions, or other content to the Services) or otherwise interact with public areas of the Services, such personal information may be viewed by all users and may be publicly made available outside the Services in perpetuity. Similarly, other users will be able to view descriptions of Your activity, communicate with You within Our Services, and view Your profile.
-- **3rd Parties.** When using Our Services, Your data may be automatically collected by the various 3rd party services in use as part of Our infrasture. Pretendo Network does not share or sell Your data to these 3rd parties. The data collected is automatic, through normal usage of Our Services and is required for the operation of Our Services.
+- **3rd Parties.** When using Our Services, Your data may be automatically collected by the various 3rd party services in use as part of Our infrastructure. Pretendo Network does not share or sell Your data to these 3rd parties. The data collected is automatic, through normal usage of Our Services and is required for the operation of Our Services.
 
 ### 5. Do We Use Cookies and Other Tracking Technologies?
 
@@ -192,7 +192,7 @@ We may use cookies and similar tracking technologies (like web beacons and pixel
 
 ***In Short:*** *We may transfer, store, and process Your information in countries other than Your own.*
 
-We operate servers in various countries, including in the United States and Germany. If You are accessing Our Services from outside of the countries where Our Services are operating, please be aware that Your information may be transferred to, stored, and processed by Us in Our facilities and by those third parties with whom We may share Your personal information (see "[When and With Whom Do We Share Your Personal Information?](#_4-when-and-with-whom-do-we-share-your-personal-information)" above), in and other countries.
+We operate servers in various countries, including in the United States and Germany. If You are accessing Our Services from outside of the countries where Our Services are operating, please be aware that Your information may be transferred to, stored, and processed by Us in Our facilities and by those third parties with whom We may share Your personal information (see "[When and With Whom Do We Share Your Personal Information?](#_4-when-and-with-whom-do-we-share-your-personal-information)" above), in the United States, Germany, and other countries.
 
 If You are a resident in the European Economic Area (EEA) or United Kingdom (UK), then these countries may not necessarily have data protection laws or other similar laws as comprehensive as those in Your country. However, We will take all necessary measures to protect Your personal information in accordance with this privacy notice and applicable law.
 
@@ -296,7 +296,7 @@ We may also collect other personal information outside of these categories throu
 
 More information about Our data collection and sharing practices can be found in this privacy notice.
 
-You may contact Us or by referring to the contact details at the bottom of this document.
+You may contact Us by referring to the contact details at the bottom of this document.
 
 If You are using an authorized agent to exercise Your right to opt out We may deny a request if the authorized agent does not submit proof that they have been validly authorized to act on Your behalf.
 
@@ -310,7 +310,7 @@ We have not disclosed, sold, or shared any personal information to third parties
 
 *Right to request deletion of the data — Request to delete*
 
-You can ask for the deletion of Your personal information. If You ask Us to delete Your personal information, We will respect Your request and delete Your personal information, subject to certain exceptions provided by law, such as (but not limited to) the exercise by another consumer of his or her right to free speech, Our compliance requirements resulting from a legal obligation, or any processing that may be required to protect against illegal activities. Additionally, we operate several archives of historical data prior to the shutdown of Nintendo Network. The data held in these archives may be viewed publicly and are exempt from various GDPR and related laws regarding data deletion as they are archived for the interest of the public. See each archives respective policies for how dtaa retention is handled.
+You can ask for the deletion of Your personal information. If You ask Us to delete Your personal information, We will respect Your request and delete Your personal information, subject to certain exceptions provided by law, such as (but not limited to) the exercise by another consumer of his or her right to free speech, Our compliance requirements resulting from a legal obligation, or any processing that may be required to protect against illegal activities. Additionally, we operate several archives of historical data prior to the shutdown of Nintendo Network. The data held in these archives may be viewed publicly and are exempt from various GDPR and related laws regarding data deletion as they are archived for the interest of the public. See each archive's respective policies for how data retention is handled.
 
 *Right to be informed — Request to know*
 
@@ -348,7 +348,7 @@ We will only use personal information provided in Your request to verify Your id
 - You can designate an authorized agent to make a request under the CCPA on Your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on Your behalf in accordance with the CCPA.
 - You may request to opt out from future selling or sharing of Your personal information to third parties. Upon receiving an opt-out request, We will act upon the request as soon as feasibly possible, but no later than fifteen (15) days from the date of the request submission.
 
-To exercise these rights, You can contact Us or by referring to the contact details at the bottom of this document. If You have a complaint about how We handle Your data, We would like to hear from You.
+To exercise these rights, You can contact Us by referring to the contact details at the bottom of this document. If You have a complaint about how We handle Your data, We would like to hear from You.
 
 ### 12. Do Virginia Residents Have Specific Privacy Rights?
 
@@ -401,7 +401,7 @@ Upon receiving Your request, We will respond without undue delay, but in all cas
 
 *Right to appeal*
 
-If We decline to take action regarding Your request, We will inform You of Our decision and reasoning behind it. If You wish to appeal Our decision, please email Us at privacy@pretendo.network. Within sixty (60) days of receipt of an appeal, We will inform You in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If Your appeal if denied, You may contact the [Attorney General to submit a complaint](https://www.oag.state.va.Us/consumer-protection/index.php/file-a-complaint).
+If We decline to take action regarding Your request, We will inform You of Our decision and reasoning behind it. If You wish to appeal Our decision, please email Us at privacy@pretendo.network. Within sixty (60) days of receipt of an appeal, We will inform You in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If Your appeal is denied, You may contact the [Attorney General to submit a complaint](https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint).
 
 ### 13. Do We Make Updates to This Notice?
 
