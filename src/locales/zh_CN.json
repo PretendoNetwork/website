@@ -296,6 +296,14 @@
 				"caption": "要验证您的电子邮件地址，请点击验证邮件中的链接。",
 				"lostEmail": "找不到吗？",
 				"resend": "重新发送验证邮件"
+			},
+			"passwordModal": {
+				"title": "更改密码",
+				"caption": "输入你的新密码。",
+				"oldPassword": "目前密码",
+				"newPassword": "新密码",
+				"newPasswordConfirm": "确认新密码",
+				"successNotice": "密码已成功更新"
 			}
 		},
 		"accountLevel": [

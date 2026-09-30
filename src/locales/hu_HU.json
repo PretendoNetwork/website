@@ -237,7 +237,15 @@
 			},
 			"update": "Frissítés",
 			"unverified_email": "Nem ellenőrzött",
-			"verified_email": "Ellenőrzött"
+			"verified_email": "Ellenőrzött",
+			"passwordModal": {
+				"title": "Jelszó módosítása",
+				"caption": "Add meg az új jelszavad.",
+				"oldPassword": "Aktuális jelszó",
+				"newPassword": "Új jelszó",
+				"newPasswordConfirm": "Új jelszó megerősítése",
+				"successNotice": "A jelszó módosítása sikeres"
+			}
 		},
 		"accountLevel": [
 			"Normál",
