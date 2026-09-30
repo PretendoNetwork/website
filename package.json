@@ -37,7 +37,7 @@
 		"mlly": "^1.8.2",
 		"mongodb": "^7.5.0",
 		"nice-grpc": "^2.1.17",
-		"nodemailer": "^9.0.5",
+		"nodemailer": "^10.0.13",
 		"nuxt": "^4.5.2",
 		"octokit": "^5.0.5",
 		"papr": "^17.1.1",
@@ -53,7 +53,6 @@
 		"@iconify-json/fa7-brands": "^1.2.4",
 		"@iconify-json/ph": "^1.2.2",
 		"@pretendonetwork/eslint-config": "^0.1.4",
-		"@types/nodemailer": "^8.0.1",
 		"eslint-plugin-vue": "^10.0.0",
 		"sass-embedded": "^1.86.3",
 		"vue-tsc": "^3.3.10"
