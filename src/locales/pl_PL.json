@@ -252,7 +252,7 @@
 				"profile": "Profil",
 				"nickname": "Nick",
 				"upgradePrompt": "Serwery beta są przeznaczone wyłącznie dla testerów wersji beta.<br>Aby zostać betatesterem, przejdź na wyższy poziom konta.",
-				"country": "Kraj/region",
+				"country": "Kraj",
 				"timezone": "Strefa czasowa",
 				"beta": "Beta",
 				"hasAccessPrompt": "Twój obecny poziom zapewnia dostęp do serwera beta. Fajnie!",
@@ -271,7 +271,8 @@
 				"newsletter": "Biuletyn",
 				"linkDiscord": "Połącz konto Discord",
 				"newsletterPrompt": "Otrzymuj aktualizacje o projekcie przez email (możesz zrezygnować w dowolnym momencie)",
-				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu"
+				"passwordPrompt": "Wprowadź swoje hasło Pretendo Network ID, aby pobrać pliki Cemu",
+				"region": "Region"
 			},
 			"upgrade": "Ulepsz konto",
 			"delete": {
@@ -280,6 +281,30 @@
 				"modalDescription": "Czy na pewno chcesz usunąć swój PNID? Proszę rozważyć poniższe kwestie przed usunięciem:\n\nTwoje dane konta poprzez wszystkie usługi Pretendo Network (w tym Forum i Juxtaposition) zostaną usunięte.\nTwoje dane Stripe i subskrypcje zostaną automatycznie usunięte.\nNie będzie można użyć tego samego PNID na nowym koncie w przyszłości.\nUsunięcie konta nie rozwiąże problemów z banami lub wsparciem technicznym. Jeżeli masz jakiś problem, skorzystaj z Forum, aby uzyskać pomoc.",
 				"modalCaution": "Tej operacji nie można cofnąć.",
 				"modalConfirm": "Tak, usuń"
+			},
+			"update": "Uaktualnij",
+			"unverified_email": "Niezweryfikowany",
+			"verified_email": "Zweryfikowany",
+			"verify_email_notice": "Twój adres email jeszcze nie został zweryfikowany.",
+			"verify_email_button": "Zweryfikuj teraz",
+			"emailModal": {
+				"title": "Zmień adres email",
+				"caption": "Podaj swój nowy adres email.",
+				"label": "Nowy adres email"
+			},
+			"unverifiedEmailModal": {
+				"title": "Zweryfikuj adres email",
+				"caption": "Aby zweryfikować twój adres email, wejdź w link podany w wiadomości weryfikacji.",
+				"lostEmail": "Nie możesz go znaleść?",
+				"resend": "Wyślij email weryfikacyjny ponownie"
+			},
+			"passwordModal": {
+				"title": "Zmień hasło",
+				"caption": "Podaj swoje nowe hasło.",
+				"oldPassword": "Aktualne hasło",
+				"newPassword": "Nowe hasło",
+				"newPasswordConfirm": "Potwierdź nowe hasło",
+				"successNotice": "Hasło zostało pomyślnie zaktualizowane"
 			}
 		},
 		"accountLevel": [
@@ -301,6 +326,11 @@
 			"submit": "Potwierdź",
 			"confirmPassword": "Potwierdź hasło",
 			"password": "Hasło"
+		},
+		"emailVerification": {
+			"verifiedTitle": "Adres e-mail został pomyślnie zweryfikowany",
+			"verifiedCaption": "Możesz zamknąć tą kartę.",
+			"failedTitle": "Nie udało się zweryfikować adresu e-mail"
 		}
 	},
 	"upgrade": {
