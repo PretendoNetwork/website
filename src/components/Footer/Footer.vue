@@ -130,6 +130,7 @@ function bandwidthClickHandler() {
     </div>
     <div>
       <h1>{{ $t("footer.usefulLinks") }}</h1>
+			<a href="/terms/terms-of-service">Terms of Service</a>
       <a href="/terms/privacy">Privacy Policy</a>
       <!-- TODO - Add this to weblate.Quick and dirty for now, just to get something out the door -->
       <a href="/docs">{{ $t("nav.docs") }}</a>
