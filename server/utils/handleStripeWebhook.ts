@@ -308,5 +308,13 @@ export async function handleStripeEvent(event: H3Event, stripe: Stripe, webhook:
 				body: `${pnid.username}'s ${product.name} tier subscription status has been changed to ${subscription.status}`
 			});
 		}
+
+		try {
+			if (await discourseUserExists(pid)) {
+				await syncDiscourseSso(userData);
+			}
+		} catch (error) {
+			console.error(`Error syncing user Discourse SSO | ${pid} |`, error);
+		}
 	}
 }
