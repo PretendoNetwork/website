@@ -60,23 +60,23 @@
 				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
-				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt(e)  à être utilisé(e) ?",
-				"answer": "Pas du tout ! Si les grands axes du projet ont été fixés en début de développement, beaucoup de sous-objectifs restent indéfinis temporellement et chronologiquement. Le développement des fonctionnalités étant assez libre, nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
+				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt(e) ?",
+				"answer": "Non. Étant donné que la majorité des fonctionnalités et des services de Pretendo sont développés de façon indépendante (par exemple, un développeur pourrait être en charge de Miiverse tandis qu'un autre s'occupe des Comptes et des Amis), nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
 				"question": "Quand est-ce que d'autres jeux seront pris en charge ?",
 				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo ?",
-				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
+				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo?",
+				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas: vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
-				"question": "Est-ce que Pretendo fonctionne sur Cemu ou un autre émulateur ?",
-				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
+				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autre émulateurs?",
+				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur: pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
-				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
+				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch?",
 				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler, car ses services sont payants et complètement différents du Nintendo Network."
 			},
 			{
@@ -89,7 +89,7 @@
 			},
 			{
 				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles).",
-				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo ?"
+				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo?"
 			}
 		]
 	},
@@ -118,14 +118,14 @@
 			"researchAndGameDev": "Recherche de système et développement de serveur",
 			"miiverseDev": "Recherche et développement Miiverse",
 			"webDev": "Développement Web",
-			"devopsAndCommunityWork": "DevOps et travail de la communauté",
-			"wiiuResearchAndPatchDev": "Recherche et développement de patch Wii U",
+			"devopsAndCommunityWork": "DevOps et travail de communauté",
+			"wiiuResearchAndPatchDev": "Recherche et développement de correctifs Wii U",
 			"preserveAndServerArch": "Préservation et architecture serveur",
 			"gameDevAndOptimise": "Développement serveur et optimisation",
-			"owner": "Propriétaire du projet et développeur principal",
-			"researchAndServerArch": "Recherche de systèmes et architecture de serveur",
+			"owner": "Fondateur du projet et développeur en chef",
+			"researchAndServerArch": "Recherche systèmes et architecture du serveur",
 			"webDevAndGameDev": "Développement web et serveur",
-			"ctrResearchAndPatchDev": "Recherche et développement de patch 3DS"
+			"ctrResearchAndPatchDev": "Recherche et développement de correctifs 3DS"
 		}
 	},
 	"specialThanks": {
@@ -134,18 +134,18 @@
 		"reasons": {
 			"general": "Traductions et autres contributions",
 			"forMiiverseHelp": "Partage d'informations de Miiverse",
-			"forResearch": "Recherches sur l'architecture de données de Nintendo",
+			"forResearch": "Recherches sur les structures de données de Nintendo",
 			"forIcons": "Icônes pour l'éditeur Mii et les réactions Juxt",
 			"forServers": "Architecture serveur",
 			"forServerDev": "Recherche console et serveurs de jeu",
-			"forCrunch": "développement de la bibliothèque crunch",
+			"forCrunch": "Développement de la bibliothèque crunch",
 			"forCtrDev": "Développement 3DS et dissecteur NEX",
-			"forSplatoon": "rotations de stages dans Splatoon et recherche",
-			"forPatches": "Developpement de patch console"
+			"forSplatoon": "Recherches sur Splatoon et les rotations de stages",
+			"forPatches": "Développement de correctifs pour console"
 		}
 	},
 	"discordJoin": {
-		"title": "Rejoignez-nous",
+		"title": "Restez à jour",
 		"text": "Rejoignez notre serveur Discord pour obtenir les dernières mises à jour sur le projet.",
 		"widget": {
 			"text": "Recevez des mises à jour en temps réel",
@@ -157,7 +157,7 @@
 		"usefulLinks": "Liens utiles",
 		"widget": {
 			"captions": [
-				"Vous voulez rester à jour ?",
+				"Voulez-vous rester à jour ?",
 				"Rejoignez notre serveur Discord !"
 			],
 			"button": "Rejoignez-nous maintenant !"
@@ -167,12 +167,12 @@
 			"Beaucoup de gens nous demandent si on aura des problèmes juridiques avec Nintendo... J'aime leur répondre que ma tante travaille chez Nintendo et qu'elle m'a dit que ça allait.",
 			"Webkit v537 est la meilleure version de Webkit pour la Wii U. Non, on ne portera pas Chrome sur la Wii U.",
 			"J'ai hâte qu'on soit le 19 Janvier 2038 à 3h14 !",
-			"La Wii U n'était pas si nulle que ça, en vrai, c'est juste que les pubs étaient vraiment désastreuses... Hum, c'est étrange, j'ai l'impression que mon Gamepad n'arrive pas à se connecter à ma Wii.",
+			"La Wii U n'était pas si nulle que ça, en vrai, c'est juste que les pubs étaient vraiment désastreuses... Hum, c'est étrange, j'ai l'impression que mon GamePad n'arrive pas à se connecter à ma Wii.",
 			"La musique principale de Super Mario World 2 - Yoshi's Island est la meilleure musique du monde et tu ne peux pas changer mon avis.",
 			"Mes dernières sorties préférée sont le Nintendo Switch Online + Expansion Pack, Nintendo Switch Online + Rumble Pak, Nintendo Switch Online + Offline Play Pack, Nintendo Switch Online + Un Port Sans Importance et Nintendo Switch Online + Dr. Kawashima's Brain Training / Brain Age \"Vous l'aimiez vraiment beaucoup sur la Console Virtuelle de la Wii U\" Pack. On voit que Nintendo a de la passion.",
 			"\"Tu vois qui c'est Kip ? C'est fou elle dit souvent UwU, tu trouves pas ?\" : c'est vraiment la plus douce des façons de dire \"Kip dit H24 UwU, c'est trop chiant et chelou : à l'aide\".",
 			"Ma premièr video ! ! ! !1 ! G toujour voulu en fair mais mon PC étè tou pouri alor ma maman ma aidé a améliorer ses performans et mintenan je peu fair dé vidéos ! alor aboné vou é liké SVP !11 ! !",
-			"Cela me semble correct"
+			"LGTM – Cela me semble bon"
 		]
 	},
 	"progressPage": {
@@ -200,24 +200,24 @@
 			"links": [
 				{
 					"header": "Installer Pretendo",
-					"caption": "Afficher les instructions d'installation"
+					"caption": "Consulter le guide d'installation"
 				},
 				{
-					"header": "Vous avez une erreur ?",
+					"header": "Vous recevez une erreur ?",
 					"caption": "Recherchez-la ici !"
 				}
 			]
 		},
 		"search": {
-			"title": "Avez-vous un code d'erreur ?",
+			"title": "Vous recevez un code d'erreur ?",
 			"label": "Code d'erreur",
-			"caption": "Inscrivez-le ci-dessous pour de plus amples informations !",
+			"caption": "Saisissez-le ici pour en savoir plus sur l'erreur que vous rencontrez !",
 			"no_match": "Aucun résultat trouvé"
 		},
 		"sidebar": {
 			"search": "Recherche",
 			"juxt_err": "Codes d'erreur - Juxt",
-			"install_extended": "Installation de Pretendo",
+			"install_extended": "Installer Pretendo",
 			"welcome": "Bienvenue",
 			"getting_started": "Débuter",
 			"install": "Installation"
@@ -246,13 +246,13 @@
 				"birthDate": "Date de naissance",
 				"country": "Pays",
 				"timezone": "Fuseau horaire",
-				"serverEnv": "Environment du Serveur",
+				"serverEnv": "Environnement de serveur",
 				"production": "Production",
 				"beta": "Bêta",
-				"upgradePrompt": "Les serveurs Beta sont exclusifs aux Beta Testeurs. <br>Pour devenir un Beta Testeur, mettez à niveau votre compte à un niveau plus élevé.",
+				"upgradePrompt": "Les serveurs bêta sont réservés aux testeurs bêta.<br>Pour rejoindre les serveurs bêta, mettez à niveau votre compte à un niveau plus élevé.",
 				"hasAccessPrompt": "Votre niveau actuel vous donne accès au serveurs beta. Super !",
 				"newsletterPrompt": "Recevoir les mises à jour par mail (vous pouvez vous désinscrire à tout moment)",
-				"signInSecurity": "Inscription et sécurité",
+				"signInSecurity": "Connexion et sécurité",
 				"email": "Email",
 				"password": "Mot de passe",
 				"passwordResetNotice": "Une fois votre mot de passe changé, vous serez déconnecté de tous les appareils.",
@@ -276,31 +276,31 @@
 			"unavailable": "Indisponible",
 			"delete": {
 				"button": "Supprimer le compte",
-				"modalTitle": "Supprimer votre compte",
+				"modalTitle": "Supprimer votre compte Pretendo",
 				"modalDescription": "Êtes-vous sûr de vouloir supprimer votre PNID ? Veuillez tenir compte des éléments suivants avant la suppression :\n\nLes données de votre compte sur tous les services Pretendo Network (incluant le Forum et Juxtaposition) seront effacées.\nVos données Stripe et votre abonnement seront automatiquement supprimées.\nVous ne pourrez plus utiliser le même PNID sur un nouveau compte à l'avenir.\nSupprimer un compte ne résout pas les problèmes techniques ou les bans. Si vous avez un problème, merci d'utiliser le Forum pour obtenir de l'aide.",
 				"modalCaution": "Cette action ne peut pas être annulée.",
 				"modalConfirm": "Oui, supprimez mon compte"
 			},
-			"update": "Mise à jour",
+			"update": "Mettre à jour",
 			"unverified_email": "Non vérifié",
 			"verified_email": "Vérifié",
-			"verify_email_notice": "Vous n'avez pas encore vérifié votre adresse mail.",
+			"verify_email_notice": "Vous n'avez pas encore vérifié votre adresse email.",
 			"verify_email_button": "Vérifier maintenant",
 			"emailModal": {
-				"title": "Changer de mail",
-				"caption": "Entrez votre nouvelle adresse mail.",
-				"label": "Nouveau mail"
+				"title": "Changer l'adresse e-mail",
+				"caption": "Entrez votre nouvelle adresse e-mail.",
+				"label": "Nouvelle adresse e-mail"
 			},
 			"unverifiedEmailModal": {
-				"title": "Vérifier le mail",
-				"caption": "Pour vérifier votre adresse mail, cliquez sur le lien du mail de vérification.",
+				"title": "Vérifier l'adresse e-mail",
+				"caption": "Pour vérifier votre adresse e-mail, cliquez sur le lien de vérification qui vous a été envoyé.",
 				"lostEmail": "Vous ne le trouvez pas ?",
-				"resend": "Envoyer à nouveau le mail de vérification"
+				"resend": "Renvoyer l'e-mail de vérification"
 			},
 			"passwordModal": {
 				"successNotice": "Le mot de passe a été mis à jour",
 				"title": "Changer le mot de passe",
-				"caption": "Tapez votre nouveau mot de passe.",
+				"caption": "Entrez votre nouveau mot de passe.",
 				"oldPassword": "Mot de passe actuel",
 				"newPassword": "Nouveau mot de passe",
 				"newPasswordConfirm": "Confirmer le nouveau mot de passe"
@@ -315,10 +315,10 @@
 		],
 		"account": "Compte",
 		"forgotPassword": {
-			"input": "Adresse mail ou PNID",
+			"input": "Adresse email ou PNID",
 			"submit": "Soumettre",
 			"header": "Mot de passe oublié",
-			"sub": "Entrez votre adresse email/PNID ci-dessous"
+			"sub": "Entrez votre adresse email ou votre nom d'utilisateur (PNID) ci-dessous"
 		},
 		"resetPassword": {
 			"header": "Réinitialiser le mot de passe",
@@ -328,15 +328,15 @@
 			"submit": "Soumettre"
 		},
 		"emailVerification": {
-			"failedTitle": "Échec de la vérifiacation de l'adresse mail",
+			"failedTitle": "Échec de la vérification de l'adresse e-mail",
 			"verifiedCaption": "Vous pouvez maintenant fermer cet onglet.",
-			"verifiedTitle": "Email vérifié"
+			"verifiedTitle": "E-mail vérifié"
 		}
 	},
 	"upgrade": {
 		"title": "Mise à Niveau",
 		"changeTierPrompt": "Êtes-vous sûr de vouloir vous désabonner de <span class=\"oldtier\">oldertiername</span> et vous abonner à <span class=\"newtier\">newtiername</span> ?",
-		"description": "Atteindre le but mensuel aidera Pretendo Network dans son développement, en participant au financement des infrastructures de serveurs et en permettant à Jon, notre développeur principal, de travailler sur le projet à temps-plein.",
+		"description": "Atteindre le but mensuel aidera Pretendo Network dans son développement, en participant au financement des infrastructures de serveurs et en permettant à Jon, notre développeur principal, de travailler sur le projet à temps plein.",
 		"month": "mois",
 		"tierSelectPrompt": "Sélectionnez un niveau",
 		"unsub": "Se désabonner",
@@ -360,19 +360,19 @@
 		"description": "Oups ! Nous n'arrivons pas à trouver cette page."
 	},
 	"miiEditor": {
-		"nickname": "Pseudonyme",
+		"nickname": "Surnom",
 		"creator": "Créateur",
 		"birthday": "Anniversaire",
 		"favorite": "Favori",
 		"sharing": "Partage",
 		"copying": "Copie",
 		"save": "Sauvegarder",
-		"saveCaption": "Sauvegarder votre Mii va tuer l'ancien.",
-		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un peu de temps avant de s'appliquer sur toutes les plateformes et services.",
+		"saveCaption": "Si vous sauvegardez ce Mii, l'ancien sera écrasé.",
+		"miiSaved": "Votre Mii à été mis à jour ! Les changements peuvent prendre un certain temps à s'appliquer à l'ensemble de nos services et plateformes.",
 		"loading": "Chargement de l'éditeur Mii...",
 		"clickToSet": "Cliquer pour paramétrer",
 		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas.",
-		"corruptedData": "Données de Mii corrompues. Voulez vous repartir de zéro ?"
+		"corruptedData": "Données de Mii corrompues. Voulez-vous repartir de zéro?"
 	},
 	"errorPage": {
 		"500": {
