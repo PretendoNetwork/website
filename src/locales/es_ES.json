@@ -269,7 +269,8 @@
 				"userSettings": "Ajustes de usuario",
 				"no_signins_notice": "El historial de inicios de sesión no es vigilado. ¡Vuelve más tarde!",
 				"no_newsletter_notice": "El boletín no disponible actualmente. Vuelve a intentarlo más tarde",
-				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualiza la configuración de usuario desde tu consola de juegos vinculada"
+				"no_edit_from_dashboard": "La edición de la configuración de PNID desde el panel del usuario no está disponible actualmente. Actualiza la configuración de usuario desde tu consola de juegos vinculada",
+				"region": "Region"
 			},
 			"upgrade": "Subir de rango",
 			"unavailable": "No disponible",
@@ -279,6 +280,30 @@
 				"modalDescription": "¿Estás seguro que quieres eliminar tu PNID? Por favor, ten esto en cuenta antes de eliminar:\n\nTus datos en los servicios de Pretendo Network como los foros y Juxt serán eliminados.\nTus datos y suscripción de Stripe serán automáticamente eliminados.\nNo podrás volver a usar el mismo PNID en una nueva cuenta en el futuro.\nEliminar una cuenta no solucionará las restricciones o el soporte técnico. Si tienes un problema y necesitas asistencia, consulta los foros.",
 				"modalCaution": "Está acción no se puede deshacer.",
 				"modalConfirm": "Sí, eliminar"
+			},
+			"update": "Actualización",
+			"unverified_email": "Sin verificar",
+			"verified_email": "Verificado",
+			"verify_email_notice": "Aún no has verificado tu correo electrónico.",
+			"verify_email_button": "Verifícate ahora",
+			"emailModal": {
+				"title": "Canbiar correo",
+				"caption": "Coloca tu correo electrónico.",
+				"label": "Nuevo correo"
+			},
+			"unverifiedEmailModal": {
+				"title": "Verificar correo",
+				"caption": "para verificar tu correo debes hacer click en el link dentro del email de verificación.",
+				"lostEmail": "¿no puedes encontrarlo?",
+				"resend": "Reenviar Email de verificacion"
+			},
+			"passwordModal": {
+				"title": "Cambiar contraseña",
+				"caption": "Pon tu nueva contraseña.",
+				"oldPassword": "Contraseña actual",
+				"newPassword": "Nueva contraseña",
+				"newPasswordConfirm": "confirmar nueva contraseña",
+				"successNotice": "Contraseña actualizada correctamente."
 			}
 		},
 		"accountLevel": [
@@ -301,6 +326,11 @@
 			"submit": "Enviar",
 			"header": "Restablecer la contraseña",
 			"sub": "Introduzca una nueva contraseña"
+		},
+		"emailVerification": {
+			"verifiedTitle": "Correo enviado correctamente.",
+			"verifiedCaption": "ya puedes cerrar esta pestaña.",
+			"failedTitle": "fallo en verificar el correo."
 		}
 	},
 	"upgrade": {
