@@ -122,7 +122,7 @@
 			"wiiuResearchAndPatchDev": "Recherche Wii U et développement de correctif",
 			"preserveAndServerArch": "Préservation et architecture serveur",
 			"gameDevAndOptimise": "Développement serveur et optimisation",
-			"owner": "Propriétaire du projet et développeur principal",
+			"owner": "Propriétaire du projet et développeur en chef",
 			"researchAndServerArch": "Recherche systèmes et architecture du serveur",
 			"webDevAndGameDev": "Développement web et serveur",
 			"ctrResearchAndPatchDev": "Recherche et développement de correctif 3DS"
@@ -141,7 +141,7 @@
 			"forCrunch": "développement de la bibliothèque crunch",
 			"forCtrDev": "Développement 3DS et dissecteur NEX",
 			"forSplatoon": "rotations de stages dans Splatoon et recherche",
-			"forPatches": "Developpement de patch console"
+			"forPatches": "Développement de correctifs pour console"
 		}
 	},
 	"discordJoin": {
