@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "The team",
-		"text": "Meet the team behind the project"
+		"text": "Meet the team behind the project",
+		"roles": {
+			"owner": "Project owner and lead developer",
+			"miiverseDev": "Miiverse research and development",
+			"wiiuResearchAndPatchDev": "Wii U research and patch development",
+			"researchAndGameDev": "Systems research and server development",
+			"researchAndServerArch": "Systems research and server architecture",
+			"webDev": "Web development",
+			"preserveAndServerArch": "Preservationist and server architecture",
+			"webDevAndGameDev": "Web and server development",
+			"gameDevAndOptimise": "Server development and optimisation",
+			"ctrResearchAndPatchDev": "3DS patch development and research",
+			"devopsAndCommunityWork": "DevOps and community work"
+		}
 	},
 	"specialThanks": {
 		"title": "Special thanks",
-		"text": "Without these people. Pretendo wouldn't be where it is today."
+		"text": "Without these people. Pretendo wouldn't be where it is today.",
+		"reasons": {
+			"general": "Localisations and other contributions",
+			"forCrunch": "crunch library development",
+			"forCtrDev": "3DS development and NEX dissector",
+			"forMiiverseHelp": "Miiverse information sharing",
+			"forResearch": "Research on Nintendo data structures",
+			"forServerDev": "Console research and game servers",
+			"forIcons": "Icons for the Mii Editor and Juxt reactions",
+			"forSplatoon": "Splatoon rotations and research",
+			"forPatches": "Console patch development",
+			"forServers": "Server architecture"
+		}
 	},
 	"discordJoin": {
 		"title": "Stay up to date",
@@ -231,6 +256,30 @@
 				"modalDescription": "Are you sure you want to delete your PNID? Please consider the following before deletion:\n\nYour account data across all Pretendo Network services (this includes Forum and Juxtaposition) will be erased.\nYour Stripe data and subscription will be automatically deleted.\nYou will not be able to use the same PNID on a new account in the future.\nDeleting an account does not solve issues with bans or technical support. If you have an issue please use the Forum for assistance.",
 				"modalCaution": "This action cannot be undone.",
 				"modalConfirm": "Yes, delete"
+			},
+			"update": "Update",
+			"unverified_email": "Unverified",
+			"verified_email": "Verified",
+			"verify_email_notice": "You haven't verified your email address yet.",
+			"verify_email_button": "Verify now",
+			"emailModal": {
+				"title": "Change email",
+				"caption": "Input your new email address.",
+				"label": "New email"
+			},
+			"unverifiedEmailModal": {
+				"title": "Verify email",
+				"caption": "To verify your email address, click on the link in the verification email.",
+				"lostEmail": "Can't find it?",
+				"resend": "Resend verification email"
+			},
+			"passwordModal": {
+				"title": "Change password",
+				"caption": "Input your new password.",
+				"oldPassword": "Current password",
+				"newPassword": "New password",
+				"newPasswordConfirm": "Confirm new password",
+				"successNotice": "Password updated successfully"
 			}
 		},
 		"accountLevel": [
@@ -239,7 +288,12 @@
 			"Moderator",
 			"Developer"
 		],
-		"banned": "Banned"
+		"banned": "Banned",
+		"emailVerification": {
+			"verifiedTitle": "Email successfully verified",
+			"verifiedCaption": "You may now close this tab.",
+			"failedTitle": "Failed to verify email"
+		}
 	},
 	"upgrade": {
 		"title": "Upgrade",
@@ -255,7 +309,9 @@
 		"changeTierPrompt": "Are you sure you want to unsubscribe from <span class=\"oldtier\">oldtiername</span> and subscribe to <span class=\"newtier\">newtiername</span>?"
 	},
 	"donation": {
-		"progress": "{totd} of {goald}/month, {perc} of the monthly goal."
+		"progress": "{totd} of {goald}/month, {perc} of the monthly goal.",
+		"upgradePushText": "To become a subscriber and gain access to cool perks, visit the {link}.",
+		"upgradePushLinkText": "upgrade page"
 	},
 	"localizationPage": {
 		"title": "Let's localise",
@@ -302,5 +358,26 @@
 	},
 	"notfound": {
 		"description": "Oops! We could not find this page."
+	},
+	"miiEditor": {
+		"nickname": "Nickname",
+		"creator": "Creator",
+		"birthday": "Birthday",
+		"clickToSet": "Click to set",
+		"favorite": "Favourite",
+		"sharing": "Sharing",
+		"copying": "Copying",
+		"save": "Save",
+		"saveCaption": "Saving your Mii will kill the previous one.",
+		"noCanvas": "Your browser does not support the canvas element.",
+		"corruptedData": "Found corrupted Mii data. Would you like to start from scratch?",
+		"miiSaved": "Your Mii has been updated! Changes may take some time to reflect across all platforms and services.",
+		"loading": "Loading Mii editor..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Server error!",
+			"description": "Please try again later."
+		}
 	}
 }
