@@ -16,7 +16,8 @@
 				"about": "seez infomations",
 				"faq": "frekuentwy askud kweshtunz",
 				"progress": "see projekt progrez",
-				"blog": "new thingzz, but smol"
+				"blog": "new thingzz, but smol",
+				"forum": "twk 2 fellow kittehs n gt help"
 			}
 		},
 		"progress": "eta wen",
@@ -112,7 +113,10 @@
 	},
 	"credits": {
 		"title": "dev kittehs",
-		"text": "see kittehz who maek pretender!!"
+		"text": "see kittehz who maek pretender!!",
+		"roles": {
+			"owner": "da big cheez"
+		}
 	},
 	"specialThanks": {
 		"title": "speshul thx",
