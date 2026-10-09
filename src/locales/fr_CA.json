@@ -23,8 +23,8 @@
 		}
 	},
 	"hero": {
-		"subtitle": "Serveurs de Jeux",
-		"title": "Recréé",
+		"subtitle": "Serveurs de jeux",
+		"title": "Recréés",
 		"buttons": {
 			"readMore": "En savoir plus"
 		},
@@ -52,7 +52,7 @@
 			},
 			{
 				"answer": "Afin de commencer l'installation de Pretendo sur 3DS, Wii U ou un émulateur, veuillez consulter notre <a href='/docs/install'>guide d'installation</a>!",
-				"question": "Comment puis-je utiliser Pretendo ?"
+				"question": "Comment puis-je utiliser Pretendo?"
 			},
 			{
 				"question": "Savez-vous quand tel service ou telle fonctionnalité sera prêt(e)?",
@@ -91,7 +91,7 @@
 		"text": "Voici quelques questions fréquemment posées."
 	},
 	"progress": {
-		"githubRepo": "Répertoire Github",
+		"githubRepo": "Répertoire GitHub",
 		"title": "Progression"
 	},
 	"showcase": {
