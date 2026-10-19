@@ -48,35 +48,35 @@
 		"text": "Here are some common questions we're asked for easy information.",
 		"QAs": [
 			{
-				"question": "What is Pretendo?",
-				"answer": "Pretendo is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
+				"question": "What is Pretendo Network?",
+				"answer": "Pretendo Network is an open source Nintendo Network replacement that aims to build custom servers for the Wii U and 3DS family of consoles. Our goal is to preserve the online functionality of these consoles, to allow players to continue to play their favorite Wii U and 3DS games to their fullest capacity."
 			},
 			{
-				"question": "Will my existing NNIDs work on Pretendo?",
-				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
+				"question": "Will my existing NNIDs work on Pretendo Network?",
+				"answer": "Sadly, no. Existing NNIDs will not work on Pretendo Network, as only Nintendo holds your user data; while an NNID-to-PNID migration is theoretically possible, it would be risky and require sensitive user data we do not wish to hold."
 			},
 			{
-				"question": "How do I use Pretendo?",
+				"question": "How do I use Pretendo Network?",
 				"answer": "To get started with Pretendo Network on 3DS, Wii U or emulators, please see our <a href='/docs/install'>setup instructions</a>!"
 			},
 			{
 				"question": "Do you know when feature/service will be ready?",
-				"answer": "No. Lots of Pretendo's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
+				"answer": "No. Lots of Pretendo Network's features/services are developed independently (for example, Miiverse may be worked on by one developer while Accounts and Friends is being worked on by another) and therefore we cannot give an overall ETA for how long this will take."
 			},
 			{
 				"question": "When will you add more games?",
 				"answer": "We work on new games once we feel that our backend libraries are ready to support it, and there is developer time available to maintain it. A lot of our work goes into stabilizing and completing our existing games - we want to get the best experience possible in those before we move on to new titles. Since new work comes up all the time, we cannot make any estimate of when that would be."
 			},
 			{
-				"question": "If I use an emulator, will that be enough to use Pretendo?",
+				"question": "If I use an emulator, will that be enough to use Pretendo Network?",
 				"answer": "No. For purposes of security and moderation, if you are using an emulator, you still need a real console. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service."
 			},
 			{
-				"question": "Does Pretendo work on Cemu/emulators?",
+				"question": "Does Pretendo Network work on Cemu/emulators?",
 				"answer": "Cemu 2.1 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Some 3DS emulators or forks might support us, but we do not have any official recommendation or setup instructions at this time. The final builds of Citra do not support Pretendo."
 			},
 			{
-				"question": "Will Pretendo support the Wii/Switch?",
+				"question": "Will Pretendo Network support the Wii/Switch?",
 				"answer": "The Wii already has custom servers provided by <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. We currently do not wish to target the Switch as it is both paid and completely different to Nintendo Network."
 			},
 			{
@@ -84,7 +84,7 @@
 				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
 			},
 			{
-				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo?",
+				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo Network?",
 				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban.<br/><br/>Please refer to the <a href=https://preten.do/network-rules>Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network."
 			},
 			{
