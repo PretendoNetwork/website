@@ -73,7 +73,7 @@
 			},
 			{
 				"question": "Does Pretendo Network work on Cemu/emulators?",
-				"answer": "Cemu 2.1 officially supports Pretendo under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br>Some 3DS emulators or forks might support us, but we do not have any official recommendation or setup instructions at this time. The final builds of Citra do not support Pretendo."
+				"answer": "Cemu 2.1 officially supports Pretendo Network under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br/><br/>Azahar officially supports Pretendo Network after setting up the emulator with your console. For information on how to get started with Azahar, check out the <a href='https://pretendo.network/docs/install/azahar'>documentation</a>."
 			},
 			{
 				"question": "Will Pretendo Network support the Wii/Switch?",
