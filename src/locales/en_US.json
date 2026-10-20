@@ -57,7 +57,7 @@
 			},
 			{
 				"question": "How do I use Pretendo Network?",
-				"answer": "To get started with Pretendo Network on 3DS, Wii U or emulators, please see our <a href='/docs/install'>setup instructions</a>!"
+				"answer": "To get started with Pretendo Network on 3DS, Wii U or emulators, please see our <a href=\"/docs/install\">setup instructions</a>!"
 			},
 			{
 				"question": "Do you know when feature/service will be ready?",
@@ -73,7 +73,7 @@
 			},
 			{
 				"question": "Does Pretendo Network work on emulators?",
-				"answer": "Cemu 2.1 officially supports Pretendo Network under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br/><br/>Azahar officially supports Pretendo Network after setting up the emulator with your console. For information on how to get started with Azahar, check out the <a href='https://pretendo.network/docs/install/azahar'>documentation</a>."
+				"answer": "Cemu 2.1 officially supports Pretendo Network under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br/><br/>Azahar officially supports Pretendo Network after setting up the emulator with your console. For information on how to get started with Azahar, check out the <a href=\"https://pretendo.network/docs/install/azahar\">documentation</a>."
 			},
 			{
 				"question": "Will Pretendo Network support the Wii/Switch?",
@@ -81,15 +81,15 @@
 			},
 			{
 				"question": "Will I need hacks to connect?",
-				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href='/docs/install'>setup instructions</a> for details."
+				"answer": "For the best experience on consoles, you will need to hack your system - specifially Aroma for Wii U and Luma3DS for 3DS. However, on Wii U, the hackless SSSL method is also available with limited functionality. See our <a href=\"/docs/install\">setup instructions</a> for details."
 			},
 			{
 				"question": "If I am banned on Nintendo Network, will I stay banned when using Pretendo Network?",
-				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban.<br/><br/>Please refer to the <a href=https://preten.do/network-rules>Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network."
+				"answer": "We do not have access to Nintendo Network's bans, so all Nintendo Network users are not banned. However, we have rules to follow when using the service and failing to follow these rules could result in a ban.<br/><br/>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network."
 			},
 			{
 				"question": "Can I use cheats or mods online with Pretendo?",
-				"answer": "While cosmetic-only cheats/mods are generally okay, kinds that affect gampeplay are only allowed in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense.<br/><br/>Please refer to the <a href=https://preten.do/network-rules>Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br/><br/>We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
+				"answer": "While cosmetic-only cheats/mods are generally okay, kinds that affect gampeplay are only allowed in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense.<br/><br/>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br/><br/>We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
 			}
 		]
 	},
