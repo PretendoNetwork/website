@@ -55,19 +55,10 @@ export default defineEventHandler(async (event) => {
 	}
 
 	// Build final payload for discourse
-	const returnPayload = new URLSearchParams({
-		nonce: nonce,
-		external_id: userData.pid.toString(),
-		email: `${userData.pid}@invalid.com`, // Don't change, used by other systems
-		username: userData.username,
-		name: userData.username,
-		avatar_url: `${config.public.cdnBaseUrl}/mii/${userData.pid}/normal_face.png`,
-		avatar_force_update: 'true'
-	});
-	const encodedReturnPayload = Buffer.from(returnPayload.toString()).toString('base64');
+	const returnPayload = await createDiscoursePayload(nonce, userData);
 
 	const url = new URL(returnSsoUrl);
-	url.searchParams.append('sso', encodedReturnPayload);
-	url.searchParams.append('sig', getDicourseSignature(secret, encodedReturnPayload));
+	url.searchParams.append('sso', returnPayload);
+	url.searchParams.append('sig', getDicourseSignature(secret, returnPayload));
 	return sendRedirect(event, url.toString());
 });
