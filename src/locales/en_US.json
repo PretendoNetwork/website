@@ -72,7 +72,7 @@
 				"answer": "No. For purposes of security and moderation, if you are using an emulator, you still need a real console. This allows for improved security and more effective enforcement of rules in order to provide a safe and enjoyable experience with our service."
 			},
 			{
-				"question": "Does Pretendo Network work on Cemu/emulators?",
+				"question": "Does Pretendo Network work on emulators?",
 				"answer": "Cemu 2.1 officially supports Pretendo Network under your network account options in the emulator. For information on how to get started with Cemu, check out the <a href='https://pretendo.network/docs/install/cemu'>documentation</a>.<br/><br/>Azahar officially supports Pretendo Network after setting up the emulator with your console. For information on how to get started with Azahar, check out the <a href='https://pretendo.network/docs/install/azahar'>documentation</a>."
 			},
 			{
@@ -89,7 +89,7 @@
 			},
 			{
 				"question": "Can I use cheats or mods online with Pretendo?",
-				"answer": "Only in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense.<br/><br/>Please refer to the <a href=https://preten.do/network-rules>Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br/><br/>We regularly apply account and console bans to both Wii U and 3DS systems.Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
+				"answer": "While cosmetic-only cheats/mods are generally okay, kinds that affect gampeplay are only allowed in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense.<br/><br/>Please refer to the <a href=https://preten.do/network-rules>Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br/><br/>We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
 			}
 		]
 	},
