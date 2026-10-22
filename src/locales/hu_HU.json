@@ -48,47 +48,47 @@
 		"text": "A könnyű információhoz jutás érdekében itt van néhány gyakori kérdés, amit tőlünk kérdeztek,.",
 		"QAs": [
 			{
-				"question": "Mi a Pretendo?",
-				"answer": "A Pretendo egy nyílt forrású helyettesítője a Nintendo Network-nek aminek célja, hogy egyedi szervereket készítsen a Wii U és a 3DS család konzoljai számára. Célunk, hogy megőrizzük a funkcionalitását ezen konzoloknak, és lehetővé tegyük a játékosok számára, hogy folytathassák a játékot kedvenc Wii U és 3DS játékaikkal, azok teljes kapacitásával."
+				"question": "Mi a Pretendo Network?",
+				"answer": "A Pretendo Network egy nyílt forrású helyettesítője a Nintendo Network-nek aminek célja, hogy egyedi szervereket készítsen a Wii U és a 3DS család konzoljai számára. Célunk, hogy megőrizzük a funkcionalitását ezen konzoloknak, és lehetővé tegyük a játékosok számára, hogy folytathassák a játékot kedvenc Wii U és 3DS játékaikkal, azok teljes kapacitásával."
 			},
 			{
-				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo-n, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
-				"question": "Működik a mostani NNID-m a Pretendón?"
+				"answer": "Sajnos nem. A létező NNID-k nem működnek a Pretendo Network-ön, mert a Nintendo birtokolja a felhasználói adatot; habár egy NNID&gt;PNID migráció elméletben lehetséges, kockázatos lenne és szenzitív felhasználói adatot igényel, amit nem szeretnénk birtokolni.",
+				"question": "Működik a mostani NNID-m a Pretendo Network-ön?"
 			},
 			{
-				"question": "Hogyan használhatom a Pretendo-t?",
-				"answer": "A Pretendo használatának elkezdéséhez 3DS-en, Wii U-n vagy emulátoron, kérjük tekintsd meg a <a href=\"/docs/install\">telepítési útmutatónkat</a>!"
+				"question": "Hogyan használhatom a Pretendo Network-öt?",
+				"answer": "A Pretendo Network használatának elkezdéséhez 3DS-en, Wii U-n vagy emulátoron, kérjük tekintsd meg a <a href=\"/docs/install\">telepítési útmutatónkat</a>!"
 			},
 			{
 				"question": "Tudjuk mikor lesz a funkció/szolgáltatás kész?",
-				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo-nak függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
+				"answer": "Nem. Sok funkciója/szolgáltatása a Pretendo Network-nek függetlenül fejlesztett (például a Miiverse-en egy fejlesztő dolgozik, míg a Accounts and Friends-en egy másik), és így nem tudunk egy általános becslést adni, hogy mikorra fog ez elkészülni."
 			},
 			{
 				"question": "Mikor adtok hozzá további játékokat?",
 				"answer": "Akkor fogunk új játékokon dolgozni amikor azt érezzük hogy a backend könyvtárunk támogatja, és van egy fejlesztő aki karbantartja. Sok munka megy bele abba hogy stabilizáljuk és befejezzük a meglévő játékokat - Meg akarjuk adni a legjobb élményt mielőtt egy új játékra rámegyünk. Mivel mindig jön új munka, ezért nem tudjuk megmondani mikor lesz ez."
 			},
 			{
-				"question": "Ha van egy emulátorom, az elég a Pretendo használatához?",
+				"question": "Ha van egy emulátorom, az elég a Pretendo Network használatához?",
 				"answer": "Nem. A könnyebb moderáció és biztonság érdekében, az emulátor használatához szükséged lesz egy valódi konzolra is. Ez lehetővé tesz egy biztosabb rendszert és a szabályok hatékonyabb betartattatását, egy élvezetesebb és megbízhatóbb élmény érdekében."
 			},
 			{
-				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo-t a hálózati profil fül alatt az emulátorban. Több információért, hogy hogyan kezdj bele a Cemu-val való online játékba, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br>Néhány 3DS emulátor vagy annak forkjai lehet támogatnak minket, de egyenlőre nincs semmilyen hivatalos ajánlásunk vagy telepítési útmutatónk hozzájuk. A Citra legújabb verziója nem támogatja a Pretendo-t.",
-				"question": "Működik a Pretendo a Cemu emulátoron/más emulátorokon?"
+				"answer": "Cemu 2.1 teljeskörűen támogatja a Pretendo Network-öt a hálózati profil fül alatt az emulátorban. Több információért, hogy hogyan kezdj bele a Cemu-val való online játékba, nézd meg a <a href=\"https://pretendo.network/docs/install/cemu\">dokumentációt</a>.<br><br>Az Azahar hivatalosan is támogatja a Pretendo Network szolgáltatást, miután az emulátort beállítottad a konzolodhoz. Az Azahar használatának megkezdéséhez szükséges információkat a <a href=\"https://pretendo.network/docs/install/azahar\">dokumentációban</a> találod.",
+				"question": "Működik a Pretendo Network emulátorokon?"
 			},
 			{
 				"answer": "A Wii-nek már vannak saját szerverei, amit a <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> biztosít. Jelenleg nem célozzuk meg a Switch-et, mivel fizetős és teljesen más, mint a Nintendo Network.",
-				"question": "Fogja a Pretendo támogatni a Wii-t/Switch-et?"
+				"question": "Fogja a Pretendo Network támogatni a Wii-t/Switch-et?"
 			},
 			{
 				"answer": "A legjobb élményért a konzolokon, hackelned kell a konzolod - pontosabban Aromával a Wii U-hoz és Luma3DS-el a 3DS-hez, de a Wii U-hoz van hackelés nélküli SSSL megoldás, de limitált hozzáféréssel. Nézd meg a <a href=\"/docs/install\">telepítési lépéseket</a> a leírásért.",
 				"question": "Szükségem van hackelésre a csatlakozáshoz?"
 			},
 			{
-				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendón?",
-				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok, amiket ha nem követsz akkor az bannolást okozhat."
+				"question": "Ha bannolva vagyok a Nintendo hálózaton, ugyanúgy bannolva maradok Pretendo Network-ön?",
+				"answer": "Nincs hozzáférésünk a Nintendo hálózat ban listájához, szóval nem fogsz az maradni. De vannak szabályok, amiket ha nem követsz akkor az bannolást okozhat.<br><br>A hálózaton megengedett és tiltott tevékenységek részletes leírását a <a href=\"https://preten.do/network-rules\">Pretendo Network online szolgáltatások magatartási kódexében</a> találod."
 			},
 			{
-				"answer": "Csak privát meccseken - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel, akik nem járultak hozzá (mint a nyilvános meccseken), tiltás alá esik. Rendszeresen alkalmazunk fiók- és konzoltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása.",
+				"answer": "Habár a kozmetiaki csalások/modok általában rendben vannak, az olyan, amik befolyásolják a játékot csak privát meccseken engedélyezettek - a tisztességtelen előny megszerzése vagy az online élmény megzavarása olyan emberekkel szemben, akik nem járultak hozzá (mint a nyilvános meccseken) kitiltást eredményező cselekmény. <br><br>A hálózaton megengedett és tiltott tevékenységek részletes leírását a <a href=\"https://preten.do/network-rules\">Pretendo Network online szolgáltatások magatartási kódexében</a> találod..<br><br>Rendszeresen alkalmazunk fiók- és konzoltiltásokat mind a Wii U, mind a 3DS rendszereken. A Pretendo olyan extra biztonsági intézkedéseket alkalmaz, amelyek hatástalanná teszik a hagyományos „unban” módszereket, mint például a sorozatszám megváltoztatása.",
 				"question": "Lehet-e csalásokat vagy mod-okat online használni a Pretendo-val?"
 			}
 		]

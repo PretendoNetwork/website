@@ -113,11 +113,36 @@
 	},
 	"credits": {
 		"title": "Das Team",
-		"text": "Lerne das Team hinter dem Projekt kennen"
+		"text": "Lerne das Team hinter dem Projekt kennen",
+		"roles": {
+			"owner": "Projektinhaber und leitender Entwickler",
+			"miiverseDev": "Miiverse-Forschung und-Entwicklung",
+			"wiiuResearchAndPatchDev": "Wii U-Forschung und Patch-Entwicklung",
+			"researchAndGameDev": "Systemforschung und Serverentwicklung",
+			"researchAndServerArch": "Systemforschung und Serverarchitektur",
+			"webDev": "Webentwicklung",
+			"preserveAndServerArch": "Digitale Erhaltung von Serverarchitektur",
+			"webDevAndGameDev": "Web- und Serverentwickung",
+			"gameDevAndOptimise": "Serverentwicklung und -optimierung",
+			"ctrResearchAndPatchDev": "3ds Patch- Entwicklung und Forschung",
+			"devopsAndCommunityWork": "DevOps und Community-Arbeit"
+		}
 	},
 	"specialThanks": {
 		"title": "Besonderer Dank",
-		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist."
+		"text": "Ohne sie wäre Pretendo nicht da, wo es heute ist.",
+		"reasons": {
+			"general": "Lokalisierungen und weitere Beiträge",
+			"forCrunch": "Entwicklung der Crunch-Bibliothek",
+			"forCtrDev": "3DS-Entwicklung und NEX-Dissector",
+			"forMiiverseHelp": "Miiverse-Informationsaustausch",
+			"forResearch": "Forschung zu Nintendo-Datenstrukturen",
+			"forServerDev": "Konsolenforschung und Spieleserver",
+			"forIcons": "Symbole für den Mii-Editor und Juxt-Reaktionen",
+			"forSplatoon": "Splatoon-Rotationen und Forschung",
+			"forPatches": "Entwicklung von Konsolen-Patches",
+			"forServers": "Serverarchitektur"
+		}
 	},
 	"discordJoin": {
 		"title": "Bleib auf dem Laufenden",
@@ -187,7 +212,7 @@
 				"nickname": "Spitzname",
 				"birthDate": "Geburtsdatum",
 				"gender": "Geschlecht",
-				"country": "Land/Region",
+				"country": "Land",
 				"timezone": "Zeitzone",
 				"production": "Produktion",
 				"upgradePrompt": "Beta-Server sind exklusiv für Beta-Tester.<br>Um Beta-Tester zu werden, benötigst du ein Upgrade auf eine höhere Konto-Stufe.",
@@ -212,7 +237,8 @@
 				"no_signins_notice": "Der Anmeldeverlauf wird momentan nicht gespeichert. Schau später nochmal vorbei!",
 				"no_edit_from_dashboard": "Die PNID-Einstellungen sind derzeit nicht über das Benutzer-Dashboard verfügbar. Bitte aktualisiere deine Benutzereinstellungen über deine verknüpfte Konsole",
 				"no_newsletter_notice": "Newsletter ist momentan nicht verfügbar. Schau später nochmal vorbei",
-				"userSettings": "Benutzereinstellungen"
+				"userSettings": "Benutzereinstellungen",
+				"region": "Region"
 			},
 			"upgrade": "Konto upgraden",
 			"unavailable": "Nicht verfügbar",
@@ -222,6 +248,30 @@
 				"button": "Konto löschen",
 				"modalTitle": "PNID löschen",
 				"modalCaution": "Dieser Vorgang kann nicht rückgängig gemacht werden."
+			},
+			"update": "Aktualisierung",
+			"unverified_email": "Nicht verifiziert",
+			"verified_email": "Verifiziert",
+			"verify_email_notice": "Du hast deine E-Mail-Adresse noch nicht verifiziert.",
+			"verify_email_button": "Jetzt verifizieren",
+			"emailModal": {
+				"title": "E-Mail ändern",
+				"caption": "Gebe deine neue E-Mail-Adresse ein.",
+				"label": "Neue E-Mail"
+			},
+			"unverifiedEmailModal": {
+				"title": "verifizierte E-Mail",
+				"caption": "Um deine E-Mail-Adresse zu bestätigen, klicke auf den Link in der Bestätigungs-E-Mail.",
+				"lostEmail": "Kannst du es nicht finden?",
+				"resend": "Bestätigungs-E-Mail erneut senden"
+			},
+			"passwordModal": {
+				"title": "Passwort ändern",
+				"caption": "Gebe dein neues Passwort ein.",
+				"oldPassword": "Aktuelles Passwort",
+				"newPassword": "Neues Passwort",
+				"newPasswordConfirm": "Neues Passwort bestätigen",
+				"successNotice": "Passwort erfolgreich aktualisiert"
 			}
 		},
 		"banned": "Gesperrt",
@@ -238,6 +288,11 @@
 			"password": "Passwort",
 			"confirmPassword": "Passwort bestätigen",
 			"submit": "Bestätigen"
+		},
+		"emailVerification": {
+			"verifiedTitle": "E-Mail erfolgreich verifiziert",
+			"verifiedCaption": "Du kannst diesen Tab jetzt schließen.",
+			"failedTitle": "E-Mail konnte nicht verifiziert werden"
 		}
 	},
 	"upgrade": {
@@ -254,7 +309,9 @@
 		"changeTierConfirm": "Stufe ändern"
 	},
 	"donation": {
-		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels."
+		"progress": "{totd} von {goald}/Monat, {perc} des monatlichen Ziels.",
+		"upgradePushText": "Um Abonnent zu werden und Zugriff auf coole Vorteile zu erhalten, besuche den {link}.",
+		"upgradePushLinkText": "Upgrade-Seite"
 	},
 	"localizationPage": {
 		"description": "Füge einen Link zu einem öffentlich zugänglichen JSON-Locale ein, um es auf der Website zu testen",
@@ -301,5 +358,26 @@
 	},
 	"notfound": {
 		"description": "Woops! Diese Seite konnte nicht gefunden werden."
+	},
+	"miiEditor": {
+		"nickname": "Spitzname",
+		"creator": "Entwickler",
+		"birthday": "Geburtstag",
+		"clickToSet": "Klicke, um zu setzen",
+		"favorite": "Favorit",
+		"sharing": "Teilen",
+		"copying": "Kopieren",
+		"save": "Speichern",
+		"saveCaption": "Beim Speichern deines Mii wird das vorherige überschrieben.",
+		"noCanvas": "Ihr Browser unterstützt das Canvas-Element nicht.",
+		"corruptedData": "Beschädigte Mii-Daten gefunden. Möchtest du bei Null anfangen?",
+		"miiSaved": "Dein Mii wurde aktualisiert! Es kann einige Zeit dauern, bis sich Änderungen auf allen Plattformen und Diensten wiederspiegeln.",
+		"loading": "Mii-Editor wird geladen..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Serverfehler!",
+			"description": "Bitte versuche es später noch einmal."
+		}
 	}
 }
