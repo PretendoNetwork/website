@@ -48,27 +48,27 @@
 		"text": "Voici quelques réponses simples à des questions qui nous sont fréquemment posées.",
 		"QAs": [
 			{
-				"question": "Qu'est-ce que Pretendo ?",
-				"answer": "Pretendo est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
+				"question": "Qu'est-ce que Pretendo Network ?",
+				"answer": "Pretendo Network est une alternative open source du service Nintendo Network qui vise à créer des serveurs personnalisés pour la famille des consoles Wii U et 3DS. Notre objectif est de préserver les fonctionnalités en ligne de ces consoles, afin de permettre aux joueurs de continuer à jouer à leurs jeux Wii U et 3DS favoris à leur plein potentiel."
 			},
 			{
-				"question": "J'ai déjà un identifiant Nintendo Network, puis-je l'utiliser avec Pretendo ?",
+				"question": "J'ai déjà un identifiant Nintendo Network, puis-je l'utiliser avec Pretendo Network ?",
 				"answer": "Malheureusement, non. Nintendo est le seul détenteur des données propres à votre identifiant Nintendo Network. Bien qu'il soit théoriquement possible de migrer (transférer) ces données, cela reviendrait à stocker des milliers de données sensibles : chose que nous désapprouvons."
 			},
 			{
-				"question": "Comment utiliser Pretendo ?",
-				"answer": "Pour commencer à utiliser Pretendo avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
+				"question": "Comment utiliser Pretendo Network ?",
+				"answer": "Pour commencer à utiliser Pretendo Network avec une 3DS, une Wii U ou un émulateur, veuillez consulter notre <a href=\"/docs/install\">guide d'installation</a> !"
 			},
 			{
 				"question": "Savez-vous quand tel service ou fonctionnalité sera prêt(e) ?",
-				"answer": "Non. Étant donné que la majorité des fonctionnalités et des services de Pretendo sont développés de façon indépendante (par exemple, un développeur pourrait être en charge de Miiverse tandis qu'un autre s'occupe des Comptes et des Amis), nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
+				"answer": "Non. Étant donné que la majorité des fonctionnalités et des services Pretendo Network sont développés de façon indépendante (par exemple, un développeur pourrait être en charge de Miiverse tandis qu'un autre s'occupe des Comptes et des Amis), nous ne sommes pas en mesure d'estimer l'heure à laquelle le projet intégral aboutira."
 			},
 			{
 				"question": "Quand est-ce que d'autres jeux seront pris en charge ?",
 				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo ?",
+				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo Network ?",
 				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
@@ -76,7 +76,7 @@
 				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
-				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
+				"question": "Est-ce que Pretendo Network sera compatible avec la Wii/Switch ?",
 				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler, car ses services sont payants et complètement différents du Nintendo Network."
 			},
 			{
@@ -84,7 +84,7 @@
 				"question": "Dois-je modifier ma console pour me connecter ?"
 			},
 			{
-				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo ?",
+				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo Network ?",
 				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban."
 			},
 			{
