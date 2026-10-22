@@ -68,15 +68,15 @@
 				"answer": "Nous pourrons prendre en charge plus de jeux une fois que nous aurons jugé que nos bibliothèques internes seront prêtes à les supporter et qu'il y aura assez de temps de développement à y consacrer. Une grande partie de notre travail actuel consiste à améliorer la stabilité des jeux déjà pris en charge : nous souhaitons leur offrir la meilleure expérience possible avant de nous consacrer ensuite à d'autres jeux. Comme de nouvelles tâches surgissent constamment, nous ne sommes pas en mesure d'estimer le temps que cela prendra."
 			},
 			{
-				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo?",
-				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas: vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
+				"question": "Si j'utilise un émulateur, est-ce suffisant pour utiliser Pretendo ?",
+				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
-				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autre émulateurs?",
-				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur: pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
+				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autre émulateurs ?",
+				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
 			},
 			{
-				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch?",
+				"question": "Est-ce que Pretendo sera compatible avec la Wii/Switch ?",
 				"answer": "La Wii dispose déjà de serveurs personnalisés fournis par <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Concernant la Switch, nous ne souhaitons actuellement pas la cibler, car ses services sont payants et complètement différents du Nintendo Network."
 			},
 			{
@@ -89,7 +89,7 @@
 			},
 			{
 				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles).",
-				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo?"
+				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo ?"
 			}
 		]
 	},
@@ -372,7 +372,7 @@
 		"loading": "Chargement de l'éditeur Mii...",
 		"clickToSet": "Cliquer pour paramétrer",
 		"noCanvas": "Votre navigateur ne supporte pas les éléments canvas.",
-		"corruptedData": "Données de Mii corrompues. Voulez-vous repartir de zéro?"
+		"corruptedData": "Données de Mii corrompues. Voulez-vous repartir de zéro ?"
 	},
 	"errorPage": {
 		"500": {
