@@ -287,13 +287,13 @@
 			"verify_email_notice": "Aún no has verificado tu correo electrónico.",
 			"verify_email_button": "Verifícate ahora",
 			"emailModal": {
-				"title": "Canbiar correo",
-				"caption": "Coloca tu correo electrónico.",
+				"title": "Cambiar correo",
+				"caption": "Ingresa tu nueva dirección de correo electrónico.",
 				"label": "Nuevo correo"
 			},
 			"unverifiedEmailModal": {
 				"title": "Verificar correo",
-				"caption": "para verificar tu correo debes hacer click en el link dentro del email de verificación.",
+				"caption": "Para verificar tu dirección de correo electronico, debes hacer clic en el enlace dentro del correo de verificación.",
 				"lostEmail": "¿no puedes encontrarlo?",
 				"resend": "Reenviar Email de verificacion"
 			},
@@ -328,8 +328,8 @@
 			"sub": "Introduzca una nueva contraseña"
 		},
 		"emailVerification": {
-			"verifiedTitle": "Correo enviado correctamente.",
-			"verifiedCaption": "ya puedes cerrar esta pestaña.",
+			"verifiedTitle": "Correo electrónico verificado correctamente",
+			"verifiedCaption": "Ya puedes cerrar esta pestaña.",
 			"failedTitle": "fallo en verificar el correo."
 		}
 	},
