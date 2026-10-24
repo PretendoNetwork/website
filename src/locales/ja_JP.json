@@ -218,7 +218,7 @@
 				"passwordPrompt": "Cemu ファイルをダウンロードするには、PNID パスワードを入力してください",
 				"no_edit_from_dashboard": "現在、WebサイトからのPNID設定の編集には対応していません。ログインしているゲーム機から設定を編集してください。",
 				"gender": "性別",
-				"country": "国/地域",
+				"country": "国",
 				"production": "本番環境",
 				"hasAccessPrompt": "現在のレベルでは、ベータ サーバーへアクセスできます。",
 				"newsletter": "ニュースレター",
