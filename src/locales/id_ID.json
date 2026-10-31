@@ -15,12 +15,14 @@
 				"progress": "Lihat kemajuan dan tujuan proyek",
 				"faq": "Pertanyaan yang sering diajukan",
 				"about": "Tentang projek",
-				"blog": "Update terbaru kami, secara singkat"
+				"blog": "Update terbaru kami, secara singkat",
+				"forum": "Bicaralah dengan orang lain dan mintalah bantuan"
 			}
 		},
 		"faq": "Pertanyaan Umum",
 		"blog": "Berita",
-		"donate": "Donasi"
+		"donate": "Donasi",
+		"forum": "Forum"
 	},
 	"hero": {
 		"title": "Dibuat ulang",
@@ -116,11 +118,36 @@
 	},
 	"credits": {
 		"title": "Tim",
-		"text": "Temui tim di balik proyek ini"
+		"text": "Temui tim di balik proyek ini",
+		"roles": {
+			"owner": "Pemilik proyek dan pengembang utama",
+			"miiverseDev": "Penelitian dan pengembangan Miiverse",
+			"wiiuResearchAndPatchDev": "Penelitian dan pengembangan patch untuk Wii U",
+			"researchAndGameDev": "Penelitian sistem dan pengembangan server",
+			"researchAndServerArch": "Penelitian sistem dan arsitektur server",
+			"webDev": "Pengembangan web",
+			"preserveAndServerArch": "Ahli pelestarian dan arsitektur server",
+			"webDevAndGameDev": "Pengembangan web dan server",
+			"gameDevAndOptimise": "Pengembangan dan pengoptimalan server",
+			"ctrResearchAndPatchDev": "Pengembangan dan penelitian patch untuk 3DS",
+			"devopsAndCommunityWork": "DevOps dan kegiatan komunitas"
+		}
 	},
 	"specialThanks": {
 		"title": "Lebih banyak terimah kasih",
-		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini."
+		"text": "Tanpa mereka, Pretendo tidak akan menjadi seperti sekarang ini.",
+		"reasons": {
+			"general": "Lokalisasi dan kontribusi lainnya",
+			"forCrunch": "Pengembangan pustaka crunch",
+			"forCtrDev": "Pengembangan 3DS dan alat analisis NEX",
+			"forMiiverseHelp": "Berbagi informasi dari Miiverse",
+			"forResearch": "Penelitian mengenai struktur data Nintendo",
+			"forServerDev": "Penelitian konsol dan server game",
+			"forIcons": "Ikon untuk Mii Editor dan reaksi Juxt",
+			"forSplatoon": "Rotasi dan penelitian Splatoon",
+			"forPatches": "Pengembangan patch konsol",
+			"forServers": "Arsitektur server"
+		}
 	},
 	"discordJoin": {
 		"title": "Menikuti update",
@@ -176,7 +203,8 @@
 			"miiName": "Nama Mii",
 			"forgotPassword": "Lupa kata sandi?",
 			"registerPrompt": "Tidak punya akun?",
-			"loginPrompt": "Sudah punya akun?"
+			"loginPrompt": "Sudah punya akun?",
+			"birthdate": "Tanggal Lahir"
 		},
 		"forgotPassword": {
 			"header": "Lupa Kata Sandi",
@@ -200,7 +228,7 @@
 				"nickname": "Nama panggilan",
 				"birthDate": "Tanggal lahir",
 				"gender": "Jenis kelamin",
-				"country": "Negara/wilayah",
+				"country": "Negara",
 				"timezone": "Zona waktu",
 				"serverEnv": "Lingkungan server",
 				"production": "Produksi",
@@ -224,7 +252,8 @@
 				"passwordPrompt": "Masukkan kata sandi PNID untuk mengunduh berkas Cemu.",
 				"no_signins_notice": "Sejerah masuk saat ini tidak dilacak. Silakan cek kembali nanti!",
 				"no_newsletter_notice": "Surat kabar saat ini tidak dilacak. Silakan cek kembali nanti!",
-				"no_edit_from_dashboard": "Pengaturan PNID saat ini tidak dapat diubah melalui situs web. Silakan perbarui pengaturan pengguna dari konsol game yang terhubung."
+				"no_edit_from_dashboard": "Pengaturan PNID saat ini tidak dapat diubah melalui situs web. Silakan perbarui pengaturan pengguna dari konsol game yang terhubung.",
+				"region": "Wilayah"
 			},
 			"delete": {
 				"button": "Hapus Akun",
@@ -232,15 +261,44 @@
 				"modalDescription": "Apakah Anda yakin ingin menghapus PNID Anda? Pertimbangkan hal-hal berikut sebelum menghapus:\n\nData akun Anda di semua layanan Pretendo Network (termasuk Forum dan Juxtaposition) akan dihapus.\nData Stripe dan langganan Anda akan dihapus secara otomatis.\nAnda tidak akan dapat menggunakan PNID yang sama pada akun baru di masa depan.\nMenghapus akun tidak akan menyelesaikan masalah terkait larangan atau dukungan teknis. Jika Anda mengalami masalah, silakan gunakan Forum untuk mendapatkan bantuan.",
 				"modalCaution": "Tindakan ini tidak dapat dibatalkan.",
 				"modalConfirm": "Ya, hapus"
+			},
+			"update": "Perbarui",
+			"unverified_email": "Belum Diverifikasi",
+			"verified_email": "Sudah Terverifikasi",
+			"verify_email_notice": "Anda belum memverifikasi alamat email Anda.",
+			"verify_email_button": "Verifikasi sekarang",
+			"emailModal": {
+				"title": "Ganti email",
+				"caption": "Masukkan alamat email baru Anda.",
+				"label": "Email baru"
+			},
+			"unverifiedEmailModal": {
+				"title": "Verifikasi email",
+				"caption": "Untuk verifikasi alamat email Anda, klik tautan yang terdapat dalam email verifikasi.",
+				"lostEmail": "Tidak ketemu?",
+				"resend": "Kirim ulang email verifikasi"
+			},
+			"passwordModal": {
+				"title": "Ganti kata sandi",
+				"caption": "Masukkan kata sandi baru Anda.",
+				"oldPassword": "Kata sandi lama",
+				"newPassword": "Kata sandi baru",
+				"newPasswordConfirm": "Konfirmasi kata sandi baru",
+				"successNotice": "Kata sandi berhasil diganti"
 			}
 		},
 		"accountLevel": [
 			"Standar",
 			"Penguji",
-			"Moderator",
+			"Penjaga",
 			"Pengembang"
 		],
-		"banned": "Dilarang"
+		"banned": "Dilarang",
+		"emailVerification": {
+			"verifiedTitle": "Email berhasil diverifikasi",
+			"verifiedCaption": "Anda sekarang bisa menutup tab ini.",
+			"failedTitle": "Gagal memverifikasi email"
+		}
 	},
 	"upgrade": {
 		"title": "Upgrade Akun",
@@ -256,7 +314,9 @@
 		"back": "Kembali"
 	},
 	"donation": {
-		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan."
+		"progress": "{totd} dari {goald} per bulan, {perc} dari target bulanan.",
+		"upgradePushText": "Untuk menjadi pelanggan dan mendapatkan akses ke berbagai keuntungan menarik, kunjungi {link}.",
+		"upgradePushLinkText": "halaman peningkatan keanggotaan"
 	},
 	"localizationPage": {
 		"title": "Mari kita lokalkan",
@@ -298,5 +358,26 @@
 	},
 	"notfound": {
 		"description": "Maaf! Kami tidak dapat menemukan halaman ini."
+	},
+	"miiEditor": {
+		"nickname": "Nama panggilan",
+		"creator": "Pencipta",
+		"birthday": "Ulang Tahun",
+		"clickToSet": "Klik untuk mengatur",
+		"favorite": "Favorit",
+		"sharing": "Berbagian",
+		"copying": "Menyalinan",
+		"save": "Simpan",
+		"saveCaption": "Menyimpan Mii ini akan menghapus Mii sebelumnya.",
+		"noCanvas": "Browser web Anda tidak mendukung elemen canvas.",
+		"corruptedData": "Ditemukan data Mii yang rusak. Apakah Anda ingin memulai dari awal?",
+		"miiSaved": "Mii Anda telah diganti! Perubahan mungkin memerlukan waktu untuk muncul di semua platform dan layanan.",
+		"loading": "Sedang memuat Editor Mii..."
+	},
+	"errorPage": {
+		"500": {
+			"title": "Masalah server!",
+			"description": "Silakan coba lagi nanti."
+		}
 	}
 }

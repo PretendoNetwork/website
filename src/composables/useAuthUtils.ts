@@ -16,8 +16,9 @@ export function getSafeRedirectUrl(input: string | null, baseUrl: string, allowe
 		return null; // Not in the allowed hosts
 	}
 
-	// If on the same host as the website, only return the path. For internal redirects
-	if (url.host === parsedBaseUrl.host) {
+	// If on the same host as the website, only return the path. For internal redirects (cuz they load faster)
+	// Exception: SSO urls are routes and not pages, cant be an internal redirect
+	if (url.host === parsedBaseUrl.host && !url.pathname.includes('sso')) {
 		return {
 			url: url.pathname + url.search,
 			external: false
