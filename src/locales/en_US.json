@@ -90,8 +90,12 @@
 			{
 				"question": "Can I use cheats or mods online with Pretendo?",
 				"answer": "While cosmetic-only cheats/mods are generally okay, kinds that affect gampeplay are only allowed in private matches - gaining an unfair advantage or disrupting the online experience with people who didn't consent (as in public matches) is a bannable offense.<br/><br/>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br/><br/>We regularly apply account and console bans to both Wii U and 3DS systems. Pretendo uses extra security measures that make traditional 'unban' methods like changing your serial number ineffective."
+			},
+			{
+				"question": "Does Pretendo Network support decomp/recomp projects?",
+				"answer": "We do not officially support or condone the use of any existing Wii U/3DS recomp/decomp projects.<br/><br/>These projects may contain inaccuracies that affect others during online play, in which case we may take appropriate action as we would with any other unofficial clients (please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for more information).<br/><br/>The only unofficial clients we support are highly accurate, and well understood, emulators such as Cemu and Azahar.<br/><br/>Your use of any unapproved unofficial clients is done so at your own risk."
 			}
-		]
+			]
 	},
 	"showcase": {
 		"title": "What we make",
