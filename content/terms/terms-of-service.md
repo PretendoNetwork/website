@@ -1,6 +1,6 @@
 # Pretendo Network Terms of Service
 
-## Last updated: October 19, 2026
+## Last updated: November 3, 2026
 
 ## Agreements
 
@@ -38,7 +38,11 @@ By creating a Pretendo Network ID ("PNID") account and by using Pretendo Network
 
 8. You may delete your account and all associated data anytime on the account landing page (https://pretendo.network/account).
 
-9. Pretendo Network is not responsible for any issues that may arise from the use of third-party services. Any third-party service is neither endorsed nor reviewed for quality or secuirty. Any use of a third-party is done at the user's own risk.
+9. Pretendo Network is not responsible for any issues that may arise from the use of third-party services or any unauthorized/unsactioned clients. Any use of either is done at the user's own risk:
+    * No third-party service is either endorsed or reviewed for quality or security. 
+        * In such cases where console-unique data is sent to a third party service, it is possible that bad actors could use this data to impersonate your console.
+    * An unauthorized client, for example, may contain inaccuracies that affect others during online play, and in such cases we may take appropriate action as we would with any other violation of the Pretendo Network Online Services Code of Conduct as laid out above in Item (1).
+        * The only unofficial clients we support are highly accurate, and well understood, emulators such as **Cemu** (for Wii U) and **Azahar** (for Nintendo 3DS).
 
 10. You submit feedback (issues, questions, opinions) to Pretendo Network via the appropriate GitHub repositories (https://github.com/PretendoNetwork) or the Pretendo Network Community Forum (https://forum.pretendo.network).
 
