@@ -49,11 +49,11 @@
 		"QAs": [
 			{
 				"question": "Was ist Pretendo Network?",
-				"answer": "Pretendo ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen beizubehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
+				"answer": "Pretendo Network ist ein Open-Source-Ersatz für das Nintendo Network, mit dem eigene Server für die Wii U und der 3DS-Familie erstellt werden sollen. Unser Ziel ist es, die Online-Funktionalität der Konsolen beizubehalten, damit Spieler auch weiterhin ihre Lieblingsspiele für die Wii U und den 3DS vollständig spielen können."
 			},
 			{
 				"question": "Werden meine vorhandenen NNIDs mit Pretendo Network weiterhin funktionieren?",
-				"answer": "Leider nicht. Vorhandene NNIDs werden nicht mit Pretendo funktionieren, da nur Nintendo deine Nutzerdaten hat. Auch wenn eine NNID-zu-PNID Migration theoretisch möglich ist, wäre es riskant und würde sensible Nutzerdaten erfordern, die wir nicht speichern möchten."
+				"answer": "Leider nicht. Vorhandene NNIDs werden nicht mit Pretendo-Network funktionieren, da nur Nintendo deine Nutzerdaten hat. Auch wenn eine NNID-zu-PNID Migration theoretisch möglich ist, wäre es riskant und würde sensible Nutzerdaten erfordern, die wir nicht speichern möchten."
 			},
 			{
 				"question": "Wie benutze ich Pretendo Network?",
@@ -72,11 +72,11 @@
 				"answer": "Nein. Aus Sicherheits- und Moderationsgründen musst du, auch wenn du einen Emulator benutzt, trotzdem eine echte Konsole besitzen. Das ermöglicht erhöhte Sicherheit und ein einfacheres Umsetzen der Regeln, um ein sicheres und angenehmes Erlebnis mit unseren Diensten zu bieten."
 			},
 			{
-				"question": "Ist Pretendo mit Cemu oder anderen Emulatoren kompatibel?",
-				"answer": "Cemu 2.1 unterstützt Pretendo offiziell unter den Account Einstellungen in den Allgemeinen Einstellungen im Emulator. Weitere Informationen zum Eirichten von Cemu findet man in der <a href=\"„https://pretendo.network/docs/install/cemu“\">Dokumentation</a>. Einige 3DS-Emulatoren oder deren Forks könnten zwar mit Pretendo kompatibel sein, jedoch wir haben derzeit keine offizielle Empfehlung oder gar eine Setup-Anleitung. Bitte beachte, das die finalen Citra Versionen unterstützen Pretendo nicht."
+				"question": "Ist Pretendo Network-mit Cemu oder anderen Emulatoren kompatibel?",
+				"answer": "Cemu 2.1 unterstützt Pretendo Network-offiziell unter den Account Einstellungen in den Allgemeinen Einstellungen im Emulator. Weitere Informationen zum Eirichten von Cemu findet man in der <a href=\"„https://pretendo.network/docs/install/cemu“\">Dokumentation</a>. Einige 3DS-Emulatoren oder deren Forks könnten zwar mit Pretendo Network kompatibel sein, jedoch wir haben derzeit keine offizielle Empfehlung oder gar eine Setup-Anleitung. Bitte beachte, das die finalen Citra Versionen unterstützen Pretendo nicht."
 			},
 			{
-				"question": "Wird Pretendo die Wii oder die Switch unterstützen?",
+				"question": "Wird Pretendo Network die Wii oder die Switch unterstützen?",
 				"answer": "Inoffizielle Wii-Server werden bereits von <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> bereitgestellt. Eine Unterstützung der Switch streben wir aktuell nicht an, da es sich bei Nintendo Switch Online um ein gebührenpflichtiges Netzwerk handelt, welches sich fundamental vom Nintendo Network unterscheidet."
 			},
 			{
@@ -84,12 +84,12 @@
 				"answer": "Für die beste Nutzererfahrung auf der Konsole musst du dein System modifizieren. Spezifisch mit Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist allerdings die SSSL Methode verfügbar, die zwar eingeschränkte Funktionen bietet, es aber nicht erfordert die Konsole zu modifizieren. Für weitere Informationen: <a href=\"/docs/install\">Pretendo installieren</a>."
 			},
 			{
-				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo gebannt sein?",
-				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind diese Nutzer nicht automatisch gebannt. Wir haben jedoch unsere eigenen Regeln, die Nichtbeachtung dieser kann zu einen Bann führen."
+				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo-Network gebannt sein?",
+				"answer": "Wir haben keinen Zugriff auf die Bannliste des Nintendo Network, daher sind diese Nutzer nicht automatisch gebannt. Wir haben jedoch unsere eigenen Regeln, die Nichtbeachtung dieser kann zu einen Bann führen.<br><br>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network."
 			},
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
-				"answer": "Nur in privaten Matches, bei denen alle Teilnehmer einverstanden sind. Sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches), ist ein bannbarer Verstoß. Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche Entbannungsmethoden, wie das Ändern der Seriennummer, unwirksam machen."
+				"answer": "Während nur kosmetische Cheats/Mods im Allgemeinen in Ordnung sind, sind Arten, die das Gampeplay beeinflussen, nur erlaubt in privaten Matches, bei denen alle Teilnehmer einverstanden sind. Sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches) ist ein bannbarer Verstoß.<br><br>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br><br>Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche Entbannungsmethoden, wie das Ändern der Seriennummer, unwirksam machen."
 			}
 		]
 	},
