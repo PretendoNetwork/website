@@ -90,6 +90,10 @@
 			{
 				"question": "Posso usare cheat o mod online con Pretendo?",
 				"answer": "Mentre i cheat e le mod puramente cosmetici sono generalmente consentiti, quelli che influenzano i gameplay sono permessi solo nei match privati - ottenere un vantaggio ingiusto o compromettere l'esperienza online di persone che non hanno acconsentito (come ad esempio nei match pubblici) è un'infrazione punibile con un ban.<br><br>Consulta il <a href=\"https://preten.do/network-rules\">Codice di Condotta dei Servizi Online di Pretendo Network</a> per ottenere una spiegazione dettagliata di cosa sia consentito o meno sulla Rete.<br><br>Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi di \"unban\" tradizionali, come la modifica del numero di serie."
+			},
+			{
+				"question": "Pretendo Network supporta progetti di decompilazione/ricompilazione?",
+				"answer": "Non supportiamo né approviamo ufficialmente l'uso dei progetti esistenti di ricompilazione/decompliazione Wii U/3DS.<br><br>Questi progetti potrebbero contenere imprecisioni che influiscono sugli altri durante il gioco online; in tal caso potremmo adottare provvedimenti adeguati, come faremmo con qualsiasi altro client non ufficiale (per maggiori informazioni, consulta il <a href=\"https://preten.do/network-rules\">Codice di Condotta dei Servizi Online di Pretendo Network</a>).<br><br>Gli unici client non ufficiali da noi supportati sono emulatori altamente accurati e ben compresi, come Cemu e Azahar.<br><br>L’uso di client non ufficiali non approvati avviene a tuo rischio e pericolo."
 			}
 		]
 	},
