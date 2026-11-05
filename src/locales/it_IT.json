@@ -48,35 +48,35 @@
 		"text": "Ecco alcune domande frequenti.",
 		"QAs": [
 			{
-				"question": "Cos'è Pretendo?",
-				"answer": "Pretendo è un'alternativa open source a Nintendo Network con l'obiettivo di creare dei server custom per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, in modo che i giocatori possano continuare a giocare ai loro giochi Wii U e 3DS preferiti al massimo delle loro potenzialità."
+				"question": "Cos'è Pretendo Network?",
+				"answer": "Pretendo Network è un'alternativa open source a Nintendo Network con l'obiettivo di creare dei server custom per la famiglia di console 3DS e Wii U. Il nostro obiettivo è preservare le funzionalità online di queste console, in modo che i giocatori possano continuare a giocare ai loro giochi Wii U e 3DS preferiti al massimo delle loro potenzialità."
 			},
 			{
-				"question": "I miei NNID esistenti funzioneranno su Pretendo?",
-				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo, poiché solo Nintendo è in possesso dei tuoi dati utente; benché una migrazione da NNID a PNID sia teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che preferiremmo non avere."
+				"question": "I miei NNID esistenti funzioneranno su Pretendo Network?",
+				"answer": "Purtroppo, no. I NNID esistenti non funzioneranno su Pretendo Network, poiché solo Nintendo è in possesso dei tuoi dati utente; benché una migrazione da NNID a PNID sia teoricamente possibile, sarebbe rischiosa e richiederebbe dati personali dell'utente che preferiremmo non avere."
 			},
 			{
-				"question": "Come si usa Pretendo?",
-				"answer": "Per iniziare con Pretendo Network su 3DS, Wii U o emulatori, controlla le nostre <a href=\"/docs/install\">istruzioni di configurazione</a>!"
+				"question": "Come si usa Pretendo Network?",
+				"answer": "Per iniziare con Pretendo Network su 3DS, Wii U o emulatori, controlla la nostra <a href=\"/docs/install\">guida all'installazione</a>!"
 			},
 			{
 				"question": "Tra quanto tempo sarà pronta questa funzionalità/servizio?",
-				"answer": "Molte delle funzionalità/servizi di Pretendo sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
+				"answer": "Molte delle funzionalità e dei servizi di Pretendo Network sono sviluppate indipendentemente (per esempio, uno sviluppatore potrebbe lavorare su Miiverse mentre un altro sta lavorando su Account e Amici) e per questo non possiamo fornire una stima del tempo mancante al completamento."
 			},
 			{
 				"question": "Quando saranno aggiunti più giochi?",
 				"answer": "Lavoriamo su giochi nuovi quando riteniamo che le nostre librerie backend siano pronte per supportarli e che ci sia del tempo di sviluppo a disposizione per mantenerli. Gran parte del nostro lavoro consiste nel rendere stabili e completi i nostri giochi esistenti - vogliamo offrire la miglior esperienza possibile in quelli prima di passare a nuovi titoli. Poiché nuovi lavori sorgono costantemente, non possiamo fare alcuna stima di quando ciò potrebbe accadere."
 			},
 			{
-				"question": "Se utilizzo un emulatore, sarà sufficiente per utilizzare Pretendo?",
+				"question": "Se utilizzo un emulatore, sarà sufficiente per utilizzare Pretendo Network?",
 				"answer": "No. Per motivi di sicurezza e moderazione, anche se utilizzi un emulatore è comunque necessaria una console fisica. Questo ci permette di migliorare la sicurezza e di applicare meglio le regole al fine di fornire un'esperienza sicura e piacevole con il nostro servizio."
 			},
 			{
-				"question": "Pretendo funziona su Cemu/emulatori?",
-				"answer": "Cemu 2.1 supporta ufficialmente Pretendo nelle opzioni del tuo account di rete nell'emulatore. Per ulteriori informazioni su Cemu, dai un'occhiata alla <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>. Alcuni emulatori 3DS o loro fork potrebbero supportarci, ma non abbiamo nessuna raccomandazione ufficiale o istruzioni di configurazione in questo momento. Le ultime versioni di Citra non supportano pretendo."
+				"question": "Pretendo Network funziona su emulatori?",
+				"answer": "Cemu 2.1 supporta ufficialmente Pretendo Network nelle opzioni del tuo account di rete nell'emulatore. Per sapere come iniziare a usare Cemu, consulta la <a href=\"https://pretendo.network/docs/install/cemu\">documentazione</a>. <br><br>Azahar supporta ufficialmente Pretendo Network, dopo avere impostato l'emulatore con la tua console. Per sapere come iniziare a usare Azahar, consulta la <a href=\"https://pretendo.network/docs/install/azahar\">documentazione</a>."
 			},
 			{
-				"question": "Pretendo supporterà la Wii/Switch?",
+				"question": "Pretendo Network supporterà la Wii/Switch?",
 				"answer": "Esistono già server custom per la Wii, forniti da <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. Per quanto riguarda la Switch, non rientra nei nostri piani attuali, poiché i suoi servizi sono a pagamento e completamente diversi da quelli del Nintendo Network."
 			},
 			{
@@ -84,12 +84,12 @@
 				"answer": "Per la migliore esperienza sulle console, dovrai installare un custom firmware (CFW) - in particolare con Aroma su Wii U e Luma3DS su 3DS. Tuttavia, su Wii U, puoi utilizzare il metodo SSSL, senza modifiche ma con funzionalità limitate. Consulta la nostra <a href=\"/docs/install\">guida all'installazione</a> per maggiori dettagli."
 			},
 			{
-				"answer": "Non abbiamo accesso alla lista dei ban di Nintendo Network, quindi non sarai bannato automaticamente. Tuttavia, abbiamo regole da seguire per l'utilizzo del servizio e non rispettarle potrebbe comportare in un ban.",
-				"question": "Se sono stato bannato sul Nintendo Network, rimarrò bannato anche da Pretendo?"
+				"answer": "Non abbiamo accesso alla lista dei ban di Nintendo Network, quindi non verrai bannato automaticamente. Tuttavia, ci sono regole da rispettare per utilizzare il servizio: non rispettarle potrebbe comportare un ban.<br><br>Consulta il <a href=\"https://preten.do/network-rules\">Codice di Condotta dei Servizi Online di Pretendo Network</a> per ottenere una spiegazione dettagliata di cosa sia consentito o meno sulla Rete.",
+				"question": "Se sono stato bannato su Nintendo Network, rimarrò bannato anche su Pretendo Network?"
 			},
 			{
 				"question": "Posso usare cheat o mod online con Pretendo?",
-				"answer": "Soltanto nei match privati - ottenere un vantaggio ingiusto o rovinare l'esperienza online con persone che non hanno acconsentito (ad esempio nei match pubblici) è un'infrazione punibile con un ban. Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi tradizionali di evasione dei ban come cambiare il proprio numero di serie."
+				"answer": "Mentre i cheat e le mod puramente cosmetici sono generalmente consentiti, quelli che influenzano i gameplay sono permessi solo nei match privati - ottenere un vantaggio ingiusto o compromettere l'esperienza online di persone che non hanno acconsentito (come ad esempio nei match pubblici) è un'infrazione punibile con un ban.<br><br>Consulta il <a href=\"https://preten.do/network-rules\">Codice di Condotta dei Servizi Online di Pretendo Network</a> per ottenere una spiegazione dettagliata di cosa sia consentito o meno sulla Rete.<br><br>Banniamo regolarmente account e console sia su Wii U che su 3DS. Pretendo usa misure di sicurezza aggiuntive che rendono inefficaci i metodi di \"unban\" tradizionali, come la modifica del numero di serie."
 			}
 		]
 	},
