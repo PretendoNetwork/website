@@ -48,35 +48,35 @@
 		"text": "Aquí se muestran algunas preguntas frecuentes.",
 		"QAs": [
 			{
-				"question": "¿Qué es Pretendo?",
-				"answer": "Pretendo es un reemplazo gratuito y de código abierto de Nintendo Network que nace con el objetivo de crear servidores en línea personalizados para las consolas Wii U y 3DS. Nuestra meta es preservar las funcionalidades en línea de esas consolas, permitiendo a los jugadores seguir jugando sus juegos favoritos de Wii U y 3DS en su plena capacidad."
+				"question": "¿Qué es Pretendo Network?",
+				"answer": "Pretendo Network es un reemplazo gratuito de código abierto de Nintendo Network cuyo objetivo es crear servidores personalizados para la familia de consolas 3DS y Wii U. Nuestra meta es preservar la funcionalidad en línea de estas consolas para permitir que los jugadores sigan disfrutando de sus juegos favoritos de Wii U y 3DS en su plena capacidad."
 			},
 			{
-				"question": "¿Mi NNID actual funciona en Pretendo?",
-				"answer": "Tristemente, no. Los NNID no funcionan en Pretendo, ya que solo Nintendo almacena tus datos de usuario. Aunque una migración NNID-a-PNID es teóricamente posible, sería arriesgado y requiere datos de usuario sensibles que preferimos no almacenar."
+				"question": "¿Funcionarán mis NNID existentes en Pretendo Network?",
+				"answer": "Desafortunadamente, no. Los NNID existentes no funcionarán en Pretendo Network, ya que solo Nintendo posee tus datos de usuario; aunque una migración de NNID a PNID es teóricamente posible, sería riesgoso y requeriría datos personales sensibles que no deseamos almacenar."
 			},
 			{
-				"question": "¿Cómo uso Pretendo?",
+				"question": "¿Cómo uso Pretendo Network?",
 				"answer": "¡Para empezar a usar Pretendo Network en 3DS, Wii U o emuladores, consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a>!"
 			},
 			{
 				"question": "¿Sabéis cuándo determinada función/servicio estará listo/a?",
-				"answer": "No. Muchos/as funciones/servicios de Pretendo son desarrolladas independientemente (por ejemplo, un desarrollador puede estar trabajando en Miiverse mientras otro se encarga de las Cuentas y los Amigos) y, por lo tanto, no podemos dar una ETA exacta de cuánto puede tardar en estar listo."
+				"answer": "No. Muchas de las funciones y servicios de Pretendo Network se desarrollan de forma independiente (por ejemplo, es posible que un desarrollador trabaje en Miiverse mientras otro lo hace en Cuentas y Amigos) y, por lo tanto, no podemos ofrecer una fecha estimada de cuánto tiempo tomará esto."
 			},
 			{
 				"question": "¿Cuándo añadirán más juegos?",
 				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
 			},
 			{
-				"question": "¿Pretendo funciona en Cemu/emuladores? ¿Si uso un emulador, será eso suficiente para usar Pretendo?",
+				"question": "¿Si uso un emulador, ¿será eso suficiente para usar Pretendo Network?",
 				"answer": "No. Para efectos de seguridad y moderación, si usas un emulador, aún necesitas una consola real. Esto permite una mejor seguridad y aplicación más efectiva de reglas, para poder brindar una experiencia segura y placentera con nuestro servicio."
 			},
 			{
-				"question": "¿Pretendo funciona en Cemu/emuladores?",
-				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
+				"question": "¿Funciona Pretendo Network en emuladores?",
+				"answer": "Cemu 2.1 ofrece soporte oficial para Pretendo en las opciones de cuenta de red dentro del emulador. Para más información sobre cómo empezar a usar Cemu, consulta la <a href=\"https://pretendo.network/docs/install/cemu\">documentación</a>.<br><br>Azahar ofrece soporte oficial para Pretendo tras configurar el emulador con tu consola. Para más información sobre cómo empezar a usar Azahar, consulta la <a href=\"https://pretendo.network/docs/install/azahar\">documentación</a>."
 			},
 			{
-				"question": "¿Pretendo será compatible con la Wii/Switch?",
+				"question": "¿Pretendo Network será compatible con la Wii/Switch?",
 				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
@@ -84,12 +84,12 @@
 				"answer": "Para la mejor experiencia en consolas, necesitarás hackear tu sistema – específicamente Aroma para Wii U y Luma3DS para 3DS. No obstante, en Wii U también está disponible el método SSSL sin hackeo, aunque con funcionalidad limitada. Consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
 			},
 			{
-				"question": "Si se me ha suspendido el acceso a Nintendo Network, ¿se mantendrá el suspenso en Pretendo?",
-				"answer": "No tenemos acceso a las suspensiones de cuenta de Nintendo Network, entonces todos los usuarios de Nintendo Network no están baneados. Sin embargo, tenemos reglas a seguir al usar el servicio y el incumplimiento de estas reglas puede resultar en una suspensión."
+				"question": "Si estoy baneado en Nintendo Network, ¿se mantendrá la suspension en Pretendo Network?",
+				"answer": "No tenemos acceso a las suspensiones de Nintendo Network, por lo que ningún usuario de Nintendo Network estará baneado aquí. Sin embargo, tenemos normas que se deben cumplir al utilizar el servicio, y el incumplimiento de estas reglas podría resultar en una suspensión.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red."
 			},
 			{
 				"question": "¿Puedo usar trampas o mods con Pretendo?",
-				"answer": "Solo en partidas privadas: obtener una ventaja injusta o interrumpir la experiencia en línea con personas sin consentimiento (como en partidas públicas) es baneable. Regularmente, aplicamos baneos de cuentas y consolas tanto a Wii U como a 3DS. Pretendo utiliza medidas de seguridad adicionales que invalidan los métodos tradicionales de 'desbaneo', como cambiar el número de serie."
+				"answer": "Aunque los mods exclusivamente estéticos suelen estar permitidos, los que afectan a la jugabilidad solo se permiten en partidas privadas; obtener una ventaja injusta o interrumpir la experiencia en línea con personas que no dieron su consentimiento (como en las partidas públicas) es motivo de baneo.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red.<br><br>Aplicamos regularmente suspensiones de cuentas y consolas en los sistemas Wii U y 3DS. Pretendo utiliza medidas de seguridad adicionales que hacen que los métodos tradicionales de 'desbaneo' (como cambiar tu número de serie) no sean efectivos."
 			}
 		]
 	},
@@ -115,7 +115,7 @@
 		"title": "Equipo",
 		"text": "Conoce al equipo tras el proyecto",
 		"roles": {
-			"owner": "Fundador del proyecto y desarrollador principal",
+			"owner": "Propietario del proyecto y desarrollador principal",
 			"miiverseDev": "Investigación de Miiverse y desarrollo",
 			"wiiuResearchAndPatchDev": "Investigación de Wii Un y desarrollo de parches",
 			"researchAndGameDev": "Investigación de sistemas y desarrollo de servidores",
@@ -285,7 +285,7 @@
 			"unverified_email": "Sin verificar",
 			"verified_email": "Verificado",
 			"verify_email_notice": "Aún no has verificado tu correo electrónico.",
-			"verify_email_button": "Verifícate ahora",
+			"verify_email_button": "Verificar ahora",
 			"emailModal": {
 				"title": "Cambiar correo",
 				"caption": "Ingresa tu nueva dirección de correo electrónico.",
@@ -293,17 +293,17 @@
 			},
 			"unverifiedEmailModal": {
 				"title": "Verificar correo",
-				"caption": "Para verificar tu dirección de correo electronico, debes hacer clic en el enlace dentro del correo de verificación.",
+				"caption": "Para verificar tu dirección de correo electrónico, haz clic en el enlace del correo de verificación.",
 				"lostEmail": "¿no puedes encontrarlo?",
 				"resend": "Reenviar Email de verificacion"
 			},
 			"passwordModal": {
 				"title": "Cambiar contraseña",
-				"caption": "Pon tu nueva contraseña.",
+				"caption": "Introduce tu nueva contraseña.",
 				"oldPassword": "Contraseña actual",
 				"newPassword": "Nueva contraseña",
 				"newPasswordConfirm": "confirmar nueva contraseña",
-				"successNotice": "Contraseña actualizada correctamente."
+				"successNotice": "Contraseña actualizada correctamente"
 			}
 		},
 		"accountLevel": [
@@ -330,7 +330,7 @@
 		"emailVerification": {
 			"verifiedTitle": "Correo electrónico verificado correctamente",
 			"verifiedCaption": "Ya puedes cerrar esta pestaña.",
-			"failedTitle": "fallo en verificar el correo."
+			"failedTitle": "No se pudo verificar el correo electrónico"
 		}
 	},
 	"upgrade": {
@@ -376,7 +376,7 @@
 	},
 	"errorPage": {
 		"500": {
-			"title": "Error de servidor! :(",
+			"title": "Error de servidor!",
 			"description": "Intenta más tarde."
 		}
 	}
