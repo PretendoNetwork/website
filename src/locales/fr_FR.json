@@ -90,6 +90,10 @@
 			{
 				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles).",
 				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo ?"
+			},
+			{
+				"question": "Est-ce que Pretendo Network supporte les projets de décompilation/recompilation ?",
+				"answer": "On ne supporte ou ne condamne pas officiellement l'utilisation de projets de décompilation/recompilation existants.<br><br>Ces projets peuvent contenir des inexactitudes qui peuvent affecter les autres pendant des modes en ligne, dans ce cas-là, nous pourrions prendre les mesures appropriées comme tous les autres clients inofficiels (se référer au <a href=\"https://preten.do/network-rules\">Code de conduite des services en ligne du réseau Pretendo</a>pour plus d'informations).<br><br>Les seuls clients inofficiels que nous supportons sont très précis, et aussi bien compris par les développeurs, des émulateurs comme Cemu et Azahar.<br><br>Votre utilisation de clients inofficiels non approuvés est faite à votre propre risque."
 			}
 		]
 	},
