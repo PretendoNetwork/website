@@ -72,8 +72,8 @@
 				"answer": "Non. Pour des raisons de sécurité et de modération, un émulateur seul ne suffit pas : vous devez également posséder la console. Cela vise à sécuriser nos services et à les modérer plus efficacement afin que nos utilisateurs puissent continuer à profiter d'une expérience sûre et agréable avec Pretendo."
 			},
 			{
-				"question": "Est-ce que Pretendo fonctionne sur Cemu ou d'autre émulateurs ?",
-				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br>Il se peut que certains émulateurs 3DS (ou leurs forks) soient compatibles avec Pretendo, mais nous ne sommes pas en mesure de fournir à titre officiel un guide d'installation pour le moment. Les dernières versions de Citra ne sont pas compatibles."
+				"question": "Est-ce que Pretendo Network fonctionne sur des émulateurs ?",
+				"answer": "Cemu (depuis la version 2.1) intègre officiellement la prise en charge de Pretendo Network dans l'onglet « Compte » des paramètres généraux de l'émulateur : pour en savoir plus et débuter avec Cemu, consultez la <a href=\"https://pretendo.network/docs/install/cemu\">documentation</a>.<br><br>Azahar supporte officiellement Pretendo Network après configuration de l'émulateur avec votre console. Pour plus d'informations pour commencer à utiliser Pretendo Network avec Azahar, consultez la <a href=\"https://pretendo.network/docs/install/azahar\">documentation</a>."
 			},
 			{
 				"question": "Est-ce que Pretendo Network sera compatible avec la Wii/Switch ?",
@@ -85,11 +85,15 @@
 			},
 			{
 				"question": "Si je suis banni du Nintendo Network, est-ce que ce sera le cas avec Pretendo Network ?",
-				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de ban."
+				"answer": "Nous n'avons pas accès à la liste des bannissements du Nintendo Network, ce ne sera donc pas le cas. Il est cependant obligatoire de suivre les règles en vigueur sur notre réseau, sous peine de bannissement.<br><br>Merci de vous referrer au <a href=\"https://preten.do/network-rules\">Code de Conduite des services en ligne Pretendo Network</a> pour une explication détaillée de ce qui est autorisé ou pas sur le Network."
 			},
 			{
 				"answer": "Uniquement lors de parties privées. L'utilisation de triches en public afin d'obtenir (ou de conférer) un avantage déloyal ou de nuire à l'expérience de jeu d'autres joueurs, sans leur consentement, est interdite sous peine de bannissement. Nous bannissons régulièrement certains comptes et consoles parmi les utilisateurs Wii U et 3DS. Pretendo emploie de nouvelles mesures de sécurité, de sorte à rendre inefficaces les tentatives d'évasion de ban par changement de numéro de série (ou par d'autres méthodes traditionnelles).",
 				"question": "Autorisez-vous la triche ou l'utilisation de mods en ligne sur Pretendo ?"
+			},
+			{
+				"question": "Est-ce que Pretendo Network supporte les projets de décompilation/recompilation ?",
+				"answer": "On ne supporte ou ne condamne pas officiellement l'utilisation de projets de décompilation/recompilation existants.<br><br>Ces projets peuvent contenir des inexactitudes qui peuvent affecter les autres pendant des modes en ligne, dans ce cas-là, nous pourrions prendre les mesures appropriées comme tous les autres clients inofficiels (se référer au <a href=\"https://preten.do/network-rules\">Code de conduite des services en ligne du réseau Pretendo</a>pour plus d'informations).<br><br>Les seuls clients inofficiels que nous supportons sont très précis, et aussi bien compris par les développeurs, des émulateurs comme Cemu et Azahar.<br><br>Votre utilisation de clients inofficiels non approuvés est faite à votre propre risque."
 			}
 		]
 	},
