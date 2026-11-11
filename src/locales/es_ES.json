@@ -64,7 +64,7 @@
 				"answer": "No. Muchas de las funciones y servicios de Pretendo Network se desarrollan de forma independiente (por ejemplo, es posible que un desarrollador trabaje en Miiverse mientras otro lo hace en Cuentas y Amigos) y, por lo tanto, no podemos ofrecer una fecha estimada de cuánto tiempo tomará esto."
 			},
 			{
-				"question": "¿Cuándo añadirán más juegos?",
+				"question": "¿Cuándo añadiréis más juegos?",
 				"answer": "Trabajamos en nuevos juegos una vez que sentimos que nuestras bibliotecas de backend están listas para soportarlo, y hay tiempo disponible para mantenerlo. Gran parte de nuestro trabajo se dedica a estabilizar y completar nuestros juegos existentes - queremos obtener la mejor experiencia posible en los mismos antes de pasar a nuevos títulos. Dado que se presentan nuevos trabajos todo el tiempo, no podemos hacer ninguna estimación de cuándo sería esto."
 			},
 			{
@@ -80,16 +80,20 @@
 				"answer": "La Wii ya tiene servidores en línea personalizados por parte de <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a>. No tenemos planeado trabajar con la Switch ya que sus servicios son de pago y completamente diferentes a los de Nintendo Network."
 			},
 			{
-				"question": "¿Necesitaré usar hacks para conectarme?",
-				"answer": "Para la mejor experiencia en consolas, necesitarás hackear tu sistema – específicamente Aroma para Wii U y Luma3DS para 3DS. No obstante, en Wii U también está disponible el método SSSL sin hackeo, aunque con funcionalidad limitada. Consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
+				"question": "¿Necesitaré usar modificaciones para conectarme?",
+				"answer": "Para la mejor experiencia en consolas, necesitarás modificar tu sistema – específicamente Aroma para Wii U y Luma3DS para 3DS. No obstante, en Wii U también está disponible el método SSSL sin modificación, aunque con funcionalidad limitada. Consulta nuestras <a href=\"/docs/install\">instrucciones de instalación</a> para más detalles."
 			},
 			{
-				"question": "Si estoy baneado en Nintendo Network, ¿se mantendrá la suspension en Pretendo Network?",
-				"answer": "No tenemos acceso a las suspensiones de Nintendo Network, por lo que ningún usuario de Nintendo Network estará baneado aquí. Sin embargo, tenemos normas que se deben cumplir al utilizar el servicio, y el incumplimiento de estas reglas podría resultar en una suspensión.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red."
+				"question": "Si estoy suspendido en Nintendo Network, ¿se mantendrá la suspensión en Pretendo Network?",
+				"answer": "No tenemos acceso a las suspensiones de Nintendo Network, por lo que ningún usuario de Nintendo Network estará suspendido aquí. Sin embargo, tenemos normas que se deben cumplir al utilizar el servicio, y el incumplimiento de estas reglas podría resultar en una suspensión.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red."
 			},
 			{
-				"question": "¿Puedo usar trampas o mods con Pretendo?",
-				"answer": "Aunque los mods exclusivamente estéticos suelen estar permitidos, los que afectan a la jugabilidad solo se permiten en partidas privadas; obtener una ventaja injusta o interrumpir la experiencia en línea con personas que no dieron su consentimiento (como en las partidas públicas) es motivo de baneo.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red.<br><br>Aplicamos regularmente suspensiones de cuentas y consolas en los sistemas Wii U y 3DS. Pretendo utiliza medidas de seguridad adicionales que hacen que los métodos tradicionales de 'desbaneo' (como cambiar tu número de serie) no sean efectivos."
+				"question": "¿Puedo usar trucos o mods con Pretendo?",
+				"answer": "Aunque los mods exclusivamente estéticos suelen estar permitidos, los que afectan a la jugabilidad solo se permiten en partidas privadas; obtener una ventaja injusta o interrumpir la experiencia en línea con personas que no han dado su consentimiento (como en las partidas públicas) es motivo de suspensión.<br><br>Consulta el <a href=\"https://preten.do/network-rules\">Código de Conducta de los Servicios en Línea de Pretendo Network</a> para obtener una explicación detallada de lo que está permitido y lo que no en la red.<br><br>Aplicamos regularmente suspensiones de cuentas y consolas en los sistemas Wii U y 3DS. Pretendo utiliza medidas de seguridad adicionales que hacen que los métodos tradicionales de 'desbloqueo' (como cambiar tu número de serie) no sean efectivos."
+			},
+			{
+				"question": "¿Pretendo presta soporte a proyectos de descompiliación/recompilación?",
+				"answer": "No ofrecemos soporte oficial ni respaldamos el uso de ninguno de los proyectos existentes de recompilación o descompilación de Wii U y 3DS.<br><br>Estos proyectos pueden contener imprecisiones que afecten a otros usuarios durante las partidas en línea. En esos casos, podremos tomar las medidas oportunas, igual que haríamos con cualquier otro cliente no oficial. (Para más información, consulta nuestro <a href=\"https://preten.do/network-rules\"> Código de Conducta de los Servicios en Línea de Pretendo Network</a> . Los únicos clientes no oficiales a los que ofrecemos soporte son emuladores bien conocidos y de gran precisión, como Cemu y Azahar.<br><br> El uso de cualquier cliente no oficial que no esté aprobado corre por tu cuenta y riesgo."
 			}
 		]
 	},
