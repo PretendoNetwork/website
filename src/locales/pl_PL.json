@@ -90,6 +90,10 @@
 			{
 				"question": "Czy można korzystać z cheatów lub modów podczas gry online z Pretendo?",
 				"answer": "Tylko w meczach prywatnych - zdobywanie nieuczciwej przewagi lub zakłócanie rozgrywki online osób, które się na to nie zgodziły (tak jak w meczach publicznych), jest przewinieniem, za które można otrzymać bana. Regularnie nakładamy bany na konta i konsole zarówno w systemach Wii U, jak i 3DS. Pretendo korzysta z dodatkowych zabezpieczeń, które sprawiają, że tradycyjne metody „odbanowania” jak zmiana numeru seryjnego są nieskuteczne."
+			},
+			{
+				"question": "Czy Pretendo Network wspiera projekty dekompilacyjne/rekompilacyjne?",
+				"answer": "Oficjalnie nie zapewniamy wsparcia dla korzystania z istniejących projektów rekompilacji/dekompilacji Wii U/3DS ani nie popieramy ich używania.<br><br>Projekty te mogą zawierać nieścisłości, które mogą negatywnie wpływać na innych graczy podczas rozgrywki online. W takich przypadkach możemy podjąć odpowiednie działania, tak jak w przypadku każdego innego nieoficjalnego klienta (więcej informacji można znaleźć w <a href=\"https://preten.do/network-rules\">Kodeksie postępowania dotyczącym usług online Pretendo Network</a>).<br><br>Jedynymi nieoficjalnymi klientami, które wspieramy, są dobrze poznane emulatory o wysokiej dokładności, takie jak Cemu i Azahar.<br><br>Korzystanie z jakichkolwiek niezatwierdzonych, nieoficjalnych klientów odbywa się na własne ryzyko."
 			}
 		]
 	},
