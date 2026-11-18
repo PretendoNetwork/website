@@ -57,7 +57,7 @@
 			},
 			{
 				"question": "Wie benutze ich Pretendo Network?",
-				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href=\"/docs/install\">setup instructions</a>!"
+				"answer": "Um Pretendo Network auf der 3DS-Familie, der Wii U oder Emulatoren zu nutzen, sollten sie den Installationsanweisungen folgen: <a href='\"/docs/install'\">setup instructions</a>!"
 			},
 			{
 				"question": "Weißt du, wann [Funktion/Dienst] bereit ist?",
@@ -81,7 +81,7 @@
 			},
 			{
 				"question": "Werde ich meine Konsole modifizieren müssen, um mich verbinden zu können?",
-				"answer": "Für die beste Nutzererfahrung auf der Konsole musst du dein System modifizieren. Spezifisch mit Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist allerdings die SSSL Methode verfügbar, die zwar eingeschränkte Funktionen bietet, es aber nicht erfordert die Konsole zu modifizieren. Für weitere Informationen: <a href=\"/docs/install\">Pretendo installieren</a>."
+				"answer": "Für die beste Nutzererfahrung auf der Konsole musst du dein System modifizieren. Spezifisch mit Aroma für die Wii U und Luma3DS für den 3DS. Auf der Wii U ist allerdings die SSSL Methode verfügbar, die zwar eingeschränkte Funktionen bietet, es aber nicht erfordert die Konsole zu modifizieren. Für weitere Informationen: <a href=\"&quot;/docs/install\">Pretendo installieren</a>."
 			},
 			{
 				"question": "Ich bin im Nintendo Network gebannt, werde ich auch bei Pretendo-Network gebannt sein?",
@@ -90,6 +90,10 @@
 			{
 				"question": "Kann ich Cheats oder Mods online mit Pretendo verwenden?",
 				"answer": "Während nur kosmetische Cheats/Mods im Allgemeinen in Ordnung sind, sind Arten, die das Gampeplay beeinflussen, nur erlaubt in privaten Matches, bei denen alle Teilnehmer einverstanden sind. Sich einen unfairen Vorteil zu verschaffen oder das Online-Erlebnis anderer ohne deren Zustimmung zu stören (z. B. in öffentlichen Matches) ist ein bannbarer Verstoß.<br><br>Please refer to the <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Code of Conduct</a> for a detailed explanation of what is and is not allowed on the Network.<br><br>Wir verhängen regelmäßig Account- und Konsolensperren für Wii U- und 3DS-Systeme. Pretendo nutzt zusätzliche Sicherheitsmaßnahmen, die herkömmliche Entbannungsmethoden, wie das Ändern der Seriennummer, unwirksam machen."
+			},
+			{
+				"question": "Unterstützt Pretendo Network decomp/recomp Projekte?",
+				"answer": "Wir unterstützen oder dulden die Verwendung bestehender Wii U/3DS recomp/decomp-Projekte nicht offiziell.<br><br>Diese Projekte können Ungenauigkeiten enthalten, die sich während des Online-Spiels auf andere auswirken. In diesem Fall können wir geeignete Maßnahmen ergreifen, wie wir es bei anderen inoffiziellen Kunden tun würden (bitte beachten Sie den <a href=\"https://preten.do/network-rules\">Pretendo Network Online Services Verhaltenskodex</a> für weitere Informationen). <br><br>Die einzigen inoffiziellen Clients, die wir unterstützen, sind hochgenaue und gut verstandene Emulatoren wie Cemu und Azahar.<br><br>Ihre Verwendung nicht genehmigter inoffizieller Kunden Clients auf Ihr eigenes Risiko."
 			}
 		]
 	},
