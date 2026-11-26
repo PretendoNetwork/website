@@ -70,19 +70,19 @@
 	"faq": {
 		"QAs": [
 			{
-				"question": "什麼是 Pretendo?",
-				"answer": "Pretendo 是一個開源的 Nintendo Network 取代方案，為了 Wii U 和 3DS 系列遊戲機建立自訂伺服器。我們的目標是保留這些遊戲機的線上功能，讓玩家能夠繼續暢玩他們喜愛的 Wii U 和 3DS 遊戲，並獲得最佳的遊戲體驗。"
+				"question": "什麼是 Pretendo Network?",
+				"answer": "Pretendo Network 是一個開源的 Nintendo Network 取代方案，為了 Wii U 和 3DS 系列遊戲機建立自訂伺服器。我們的目標是保留這些遊戲機的線上功能，讓玩家能夠繼續暢玩他們喜愛的 Wii U 和 3DS 遊戲，並獲得最佳的遊戲體驗。"
 			},
 			{
-				"question": "我現有的 NNID 可以用在 Pretendo 上嗎?",
-				"answer": "很抱歉，不行。你現有的 NNID 不能用於 Pretendo，你的帳號資料都在任天堂手上，雖然 NNID 到 PNID 的轉移理論上是能做到的，但是存在風險並且會包含我們不想知道的個人隱私。"
+				"question": "我現有的 NNID 可以用在 Pretendo Network 上嗎?",
+				"answer": "很抱歉，不行。你現有的 NNID 不能用於 Pretendo Network，你的帳號資料都在任天堂手上，雖然 NNID 到 PNID 的轉移理論上是能做到的，但是存在風險並且會包含我們不想知道的個人隱私。"
 			},
 			{
-				"question": "如何使用 Pretendo ?",
-				"answer": "若要開始在 3DS、Wii U 或模擬器上使用 Pretendo Network，請首先參閱我們的<a href='/docs/install'>設定說明</a>！"
+				"question": "如何使用 Pretendo Network?",
+				"answer": "若要開始在 3DS、Wii U 或模擬器上使用 Pretendo Network，請首先參閱我們的<a href=\"/docs/install\">設定說明</a>！"
 			},
 			{
-				"answer": "不知道。許多 Pretendo 功能都是獨立開發的（例如 : Miiverse 可能由一位人員開發，而 Accounts 和 Friends 正在由另一位人員開發），因此我們無法告訴你確切的完成時間。",
+				"answer": "不知道。許多 Pretendo Network 功能都是獨立開發的（例如 : Miiverse 可能由一位人員開發，而 Accounts 和 Friends 正在由另一位人員開發），因此我們無法告訴你確切的完成時間。",
 				"question": "這些功能/服務什麼時候才會完成？"
 			},
 			{
@@ -90,28 +90,32 @@
 				"question": "你們什麼時候會新增更多遊戲？"
 			},
 			{
-				"question": "如果我使用模擬器，是否足以使用 Pretendo？",
+				"question": "如果我使用模擬器，是否足以使用 Pretendo Network?",
 				"answer": "不行。為了安全和監管的考慮，如果您使用的是模擬器，您仍然需要一台真正的主機。這樣可以提高安全性並更有效地執行規則，從而為我們的服務提供安全愉快的體驗。"
 			},
 			{
-				"answer": "Cemu 2.1 已在模擬器的網路帳號選項中正式支援 Pretendo。有關如何開始使用 Cemu 的資訊，請參閱<a href=\"https://pretendo.network/docs/install/cemu\">文件</a>。 <br>部分 3DS 模擬器或衍生版本可能支援 Pretendo，但目前我們尚無任何官方推薦或設定說明。 Citra 的最終版本不支援 Pretendo。",
-				"question": "Pretendo 可以在 Cemu 或其他模擬器上執行嗎？"
+				"answer": "Cemu 2.1 已在模擬器的網路帳號選項中正式支援 Pretendo。有關如何開始使用 Cemu 的資訊，請參閱<a href=\"https://pretendo.network/docs/install/cemu\">文件</a>。 <br><br>在將模擬器與您的主機連接後，Azahar 將正式支援 Pretendo Network。有關如何開始使用 Azahar 的資訊，請參閱<a href=\"https://pretendo.network/docs/install/azahar\">文件</a>。",
+				"question": "Pretendo Network 可以在 Cemu 或其他模擬器上執行嗎？"
 			},
 			{
 				"answer": "Wii 已擁有由 <a href=\"https://wiimmfi.de/\" target=\"_blank\">Wiimmfi</a> 提供的自訂伺服器。我們目前不打算為 Switch 推出自訂伺服器，因為需要付費，而且與 Nintendo Network 完全不同。",
-				"question": "Pretendo 會支援 Wii/Switch 嗎？"
+				"question": "Pretendo Network 會支援 Wii/Switch 嗎？"
 			},
 			{
 				"question": "我需要破解主機進行連線嗎？",
-				"answer": "為了在主機上獲得最佳體驗，您需要破解您的主機 - 特別是 Wii U 的 Aroma 和 3DS 的 Luma3DS。不過在 Wii U 上，無需破解的 SSSL 方法也可用，但功能有限。詳情請參閱我們的<a href=\"/docs/install\">安裝說明</a>。"
+				"answer": "為了在主機上獲得最佳體驗，您需要破解您的主機—特別是 Wii U 的 Aroma 和 3DS 的 Luma3DS。不過在 Wii U 上，無需破解的 SSSL 方法也可用，但功能有限。詳情請參閱我們的<a href=\"/docs/install\">設定說明</a>。"
 			},
 			{
-				"question": "如果我在 Nintendo Network 上被禁止，那麼使用 Pretendo 時我是否仍會被禁止？",
-				"answer": "我們無法存取 Nintendo Network 的禁止系統，因此並非所有 Nintendo Network 使用者都會被禁止。不過，使用我們的服務時我們必須遵守相關規則，不遵守這些規則可能會導致被禁止。"
+				"question": "如果我在 Nintendo Network 上被禁止，那麼使用 Pretendo Network 時我是否仍會被禁止？",
+				"answer": "我們無法存取 Nintendo Network 的禁止系統，因此並非所有 Nintendo Network 使用者都會被禁止。不過，使用我們的服務時我們必須遵守相關規則，不遵守這些規則可能會導致被禁止。<br><br>請參閱<a href=\"https://preten.do/network-rules\">Pretendo 網路線上服務行為準則</a>，詳細瞭解網路上允許和不允許的行為。"
 			},
 			{
 				"question": "我可以在 Pretendo 上使用外掛或模組嗎？",
 				"answer": "只能在私人比賽中才可以使用 — 獲得不公平優勢或擾亂未經同意的玩家的線上體驗（例如在公開比賽中）屬於可禁止的違規行為。我們會定期對 Wii U 和 3DS 主機實施帳號和主機封鎖。 Pretendo 採用了額外的安全措施，使更改序號等傳統的「解禁」方法失效。"
+			},
+			{
+				"question": "Pretendo Network 是否支援反編譯/重編譯專案？",
+				"answer": "我們官方不認可或支持使用任何現有的 Wii U/3DS 重編譯/反編譯專案。 <br><br>這些專案可能包含影響其他玩家線上遊戲體驗的錯誤訊息，在這種情況下，我們將採取與處理其他非官方客戶端相同的相應措施（更多資訊請參閱<a href=\"https://preten.do/network-rules\">Pretendo Network 線上服務行為準則</a>）。 <br><br>我們僅支援高度精確且易於理解的非官方模擬器，例如 Cemu 和 Azahar。 <br><br>您使用任何未經核准的非官方用戶端均需自行承擔風險。"
 			}
 		],
 		"title": "常見問題",
@@ -136,14 +140,14 @@
 	"footer": {
 		"widget": {
 			"captions": [
-				"想了解最新動態嗎？",
+				"想瞭解最新動態嗎？",
 				"加入我們的 Discord 伺服器！"
 			],
 			"button": "立即加入 !"
 		},
 		"usefulLinks": "相關連結",
 		"bandwidthRaccoonQuotes": [
-			"我是浣熊\"頻寬\" ! 我最愛咬連上 Pretendo Network 的線路，真美味 !",
+			"我是浣熊「頻寬」 ! 我最愛咬連上 Pretendo Network 伺服器的線路，真美味 !",
 			"很多人問我們是否會因此與任天堂發生法律糾紛；我很高興我的阿姨在任天堂工作，她說是合法的。",
 			"Webkit v537 是用於 Wii U 的最佳 Webkit 版本。然而，我們並不會移植 Chrome 轉到 Wii U。",
 			"迫不及待地等待時鐘到達2038年1月19日03:14:08 UTC !",
